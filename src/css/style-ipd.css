@@ -1554,13 +1554,16 @@ ul.bon-1 li:nth-of-type(2) {
 /*关于我页面end-------------------------------------------------------------------------------------*/
 
 /*详情页start*/
-#details {
+.search_result .continar-left {
   border-radius: 0.1rem;
-  background: #fff;
   width: auto !important;
   overflow: hidden;
   border-radius: 0;
   padding: 0 0.25rem;
+  border:0; 
+  padding:0; 
+  float:none;
+  background: transparent;
 }
 div.nav-s {
   width: 820px;
@@ -2411,7 +2414,7 @@ div.jy p {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding: 0.7rem 0;
+  padding: 0.7rem 0 0.9rem;
   text-align: -moz-center;
   text-align: center;
 }
