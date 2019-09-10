@@ -41,14 +41,14 @@
     </style>
 </head>
 
-<body id="ajax_centent">
+<body>
     <!--头部文件引用start-->
     <?php get_header();?>
     <!--头部文件引用end-->
 
     <!-- 正文区域start -->
     <div class="continar">
-        <div class="continar-left" id="details" style="border:0; padding:0; float:none;background: transparent;">
+        <div class="continar-left" id="ajax_centent details" style="border:0; padding:0; float:none;background: transparent;">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
                 <?php wheatv_breadcrumbs(); ?>
