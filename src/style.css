@@ -2600,18 +2600,21 @@ ul.bon-1 li:nth-of-type(2) {
   display: block;
 }
 
-#details {
+.search_result .continar-left{
   border-radius: 5px;
-  background: #fff;
   padding: 15px;
   border: 1px solid #e6e6e6;
   overflow: hidden;
   float: none;
   margin: 0 auto 50px;
   width: 1200px;
+  border:0; 
+  padding:0; 
+  float:none;
+  background: transparent;
 }
-#details > div:nth-of-type(1){
-margin-bottom:20px;
+.search_result .continar-left > div:nth-of-type(1){
+  margin-bottom:20px;
 }
 div.nav-s {
   width: 820px;
