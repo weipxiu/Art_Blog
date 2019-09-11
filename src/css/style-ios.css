@@ -1794,10 +1794,6 @@ ul.bon-1 li:nth-of-type(2) {
   overflow: hidden;
   border-radius: 0;
   padding: 0 0.25rem;
-  border:0; 
-  padding:0; 
-  float:none;
-  background: transparent;
 }
 div.nav-s {
   width: 820px;
