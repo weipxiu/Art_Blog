@@ -2616,6 +2616,21 @@ ul.bon-1 li:nth-of-type(2) {
 .search_result .continar-left > div:nth-of-type(1){
   margin-bottom:20px;
 }
+#details{
+  border-radius: 0.1rem;
+  background: #fff;
+  width: auto !important;
+  overflow: hidden;
+  border-radius: 0;
+  padding: 0 0.25rem;
+  border:0; 
+  padding:0; 
+  float:none;
+  background: transparent;
+}
+#details > div:nth-of-type(1){
+  margin-bottom:20px;
+}
 div.nav-s {
   width: 820px;
   height: 40px;
