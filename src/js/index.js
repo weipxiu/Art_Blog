@@ -9,12 +9,12 @@ $(function () {
             console.log("当前浏览器IE内核，部分效果不可展现！")
         } else {
             //首页轮播下sd导航start
-            $(".mod-index__feature .img_list_6pic a").mouseenter(function () {
+            $("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
                 $(this).addClass("word_display")
-            });
-            $(".mod-index__feature .img_list_6pic a").mouseleave(function () {
-                $(this).removeClass("word_display");
-            });
+            })
+            $("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
+                $(this).removeClass("word_display")
+            })
             //首页轮播下sd导航end
         }
         //IE浏览器屏蔽部分动效end
