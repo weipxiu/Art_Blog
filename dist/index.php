@@ -149,8 +149,13 @@
 						</a>
 					</h1>
 					<span>
-						<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 300, "..."); ?>
-						<!--文章内容简介-->
+							<?php if (has_excerpt()) {
+									//文章编辑中的摘要
+									echo $description = get_the_excerpt(); 
+							}else {
+									//文章编辑中若无摘要，自定截取文章内容字数做为摘要
+									echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 300,"..."); 
+							} ?>
 					</span>
 				<?php }
 			wp_reset_query(); ?>
@@ -237,12 +242,13 @@
 									echo "<img src='". catch_that_image()."'"." alt='".get_the_title()."'>";
 							?>
 							<h3>
-									<?php if ($post->post_excerpt) {
-									$description = $post->post_excerpt;
-									} else {
-									$description = mb_substr(strip_tags($post->post_content),0,190,'utf-8');
-									}
-									echo $description ?>
+									<?php if (has_excerpt()) {
+											//文章编辑中的摘要
+											echo $description = get_the_excerpt(); 
+									}else {
+											//文章编辑中若无摘要，自定截取文章内容字数做为摘要
+											echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); 
+									} ?>
 							</h3>
 							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
 							<p class="l">
