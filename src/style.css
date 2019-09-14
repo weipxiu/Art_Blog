@@ -4699,15 +4699,7 @@ ul.post-categories li:first-child {
 /*文章加密内容start*/
 
 .e-secret {
-  display: block;
-  width: calc(100% + 30px);
   text-align: center;
-  min-height: 40px;
-  background: #f8f8f8;
-  padding: 0 20px;
-  margin-left: -15px;
-  color: #fe5187;
-  margin-top: -15px;
 }
 
 .e-secret label {
@@ -4718,8 +4710,6 @@ ul.post-categories li:first-child {
 
 .e-secret input {
   display: inline-block;
-  height: 38px;
-  line-height: 38px;
   box-sizing: border-box;
   vertical-align: middle;
   outline: none;
@@ -4763,13 +4753,12 @@ ul.post-categories li:first-child {
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
 }
 .e-secret input.euc-y-s {
   color: #fff;
   background-color: #409eff;
   border-color: #409eff;
-  margin-left: -2px;
 }
 
 .continar-left .log-text .e-secret p a,
