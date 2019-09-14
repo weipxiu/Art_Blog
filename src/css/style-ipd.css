@@ -2795,11 +2795,8 @@ span.post-like,
   transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
 }
 .euc-y-s{
-  width: 98px;
   display: inline-block;
   line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
   background: #fff;
   border: 1px solid #dcdfe6;
   border-color: #dcdfe6;
