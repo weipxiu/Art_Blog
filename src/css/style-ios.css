@@ -3185,6 +3185,89 @@ div.btn {
   display: none;
 }
 
+/*文章加密内容start*/
+
+.e-secret {
+  display: block;
+  width: calc(100% + 30px);
+  text-align: center;
+  min-height: 40px;
+  background: #f8f8f8;
+  padding: 0 20px;
+  margin-left: -15px;
+  color: #fe5187;
+  margin-top: -15px;
+}
+
+.e-secret label {
+  font-size: 14px;
+  line-height: 47px;
+  font-weight: normal;
+}
+
+.e-secret input {
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  outline: none;
+}
+
+.e-secret input.euc-y-i {
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 1;
+  outline: none;
+  padding: 0 15px;
+  transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+}
+.euc-y-s{
+  width: 98px;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  border-color: #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.e-secret input.euc-y-s {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+  margin-left: -2px;
+}
+
+.continar-left .log-text .e-secret p a,
+.continar-left .e-secret p a:hover i {
+  color: #fff;
+}
+
+/*文章加密内容end*/
+
 .continar-right .aside,
 .text .new-icon,
 #divStayTopright,
