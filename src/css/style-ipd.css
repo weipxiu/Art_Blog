@@ -2769,8 +2769,6 @@ span.post-like,
 .e-secret label {
   font-size: 0.3rem;
   font-weight: 400;
-  display: block;
-  margin-bottom: 0.2rem;
 }
 
 .e-secret input {
@@ -2790,7 +2788,7 @@ span.post-like,
   color: #606266;
   display: inline-block;
   font-size: inherit;
-  height: 40px;
+  height: 0.8rem;
   line-height: 1;
   outline: none;
   padding: 0 15px;
@@ -2816,9 +2814,10 @@ span.post-like,
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 12px 20px;
-  font-size: 14px;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.28rem;
   border-radius: 0 4px 4px 0;
+  text-indent: 0;
 }
 .e-secret input.euc-y-s {
   color: #fff;
