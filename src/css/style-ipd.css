@@ -2767,9 +2767,10 @@ span.post-like,
 }
 
 .e-secret label {
-  font-size: 14px;
-  line-height: 47px;
-  font-weight: normal;
+  font-size: 0.3rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 0.2rem;
 }
 
 .e-secret input {
