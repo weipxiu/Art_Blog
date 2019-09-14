@@ -4570,7 +4570,7 @@ ul.post-categories li:first-child {
 .e-secret {
   display: block;
   width: calc(100% + 30px);
-  height: 105px;
+  min-height: 105px;
   background: #f8f8f8;
   padding: 0 20px;
   margin-left: -15px;
