@@ -2995,12 +2995,6 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
 
 /*后台上传图片大小位置限制end*/
 
-iframe {
-  height: 80px;
-  display: none;
-}
-
-
 .bdshare-slide-button-box {
   display: none;
 }
