@@ -3291,7 +3291,9 @@ canvas,
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.log-text .iframe{
+  height:4.5rem;
+}
 .log-text h3,.log-text h5 {
   text-indent: 0;
   font-weight: normal;
