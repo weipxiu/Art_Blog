@@ -2510,7 +2510,6 @@ div.com-art ul li {
   text-indent: 2em;
   line-height: 36px;
   font-size: 14px;
-  padding: 0 20px;
   margin-bottom: 10px;
   color: #666;
 }
@@ -2721,12 +2720,12 @@ ul.bon-1 li:nth-of-type(2) {
 }
 
 #details {
-  border-radius: 0.1rem;
+  border-radius: 4px;
   background: #fff;
   width: auto !important;
   overflow: hidden;
   border-radius: 0;
-  padding: 0 0.25rem;
+  padding: 0 15px;
   float: none;
 }
 
@@ -5119,7 +5118,6 @@ box-shadow:0 5px 0 rgba(0,0,0,0.1);
   position: relative;
   width: 100%;
   margin: 0px auto 6px;
-  border-bottom: 5px solid #fff;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.46);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.46);
 }
