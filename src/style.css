@@ -2975,10 +2975,10 @@ p.data-l span.recommend a:hover {
   height: auto;
   opacity: 1;
   cursor: pointer;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; 禁止css选中文字
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
 .continar-left .log-text ul li {
