@@ -474,7 +474,7 @@ i {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
   display: none;
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .container {
