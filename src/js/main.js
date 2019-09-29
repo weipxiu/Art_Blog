@@ -185,15 +185,6 @@ $(function () {
     }*/
     var searchShow = true;
     $(".navto-search a").click(function () {
-        $(".site-search.active.pc").stop(true, true).slideToggle(150, function () {
-            if ($(this).is(":visible") && $(".nav ul.music-nav li>p").css("opacity") == 1) {
-                //$('.mod-header_music-icon').trigger("click");
-            } else if ($(this).is(":hidden") && $(".nav ul.music-nav li>p").css("opacity") == 0) {
-                //$('.mod-header_music-icon').trigger("click");
-            } else if ($(".nav ul.music-nav li>p").css("opacity") == 0) {
-                return false;
-            }
-        });
         if (searchShow) {
             $('.header').css('z-index', '11');
             searchShow = false;
@@ -201,8 +192,9 @@ $(function () {
             $('.header').css('z-index', '10');
             searchShow = true;
         }
-        $(this).find("i").toggleClass("fa-search");
-        $(this).find("i").toggleClass("fa-remove");
+        $(".site-search.active.pc").stop(true, true).slideToggle(150);
+        $(".site-search.active.pc").find('input').focus();
+        $(this).find("i").toggleClass("icon-guanbi3");
     });
 
     $(".header").addClass("Top");

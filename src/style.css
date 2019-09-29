@@ -497,7 +497,7 @@ i {
   line-height: 40px;
   padding: 5px 12px;
   border-right: none;
-  border-radius: 5px 0 0 5px;
+  border-radius: 4px 0 0 4px;
   outline: 0;
   margin: 15px 0;
 }
@@ -515,7 +515,7 @@ i {
 .search-btn {
   border: none;
   background: #1890ff;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 4px 4px 0;
   width: 6%;
   cursor: pointer;
   height: 40px;
@@ -1131,15 +1131,10 @@ i {
   color: #666;
 }
 
-.navto-search .fa {
-  width: 18px;
-  font-size: 16px;
-  color: #666;
+.navto-search .icon-guanbi3 {
+  font-weight: bold;
 }
 
-.navto-search .fa:hover {
-  color: #1890ff;
-}
 
 @keyframes Top {
   0% {
@@ -1828,10 +1823,6 @@ i {
   float: right;
 }
 
-.continar-right a:hover {
-  text-decoration: underline;
-}
-
 .continar-right .aside {
   background: #fff;
   margin-bottom: 10px;
@@ -2326,8 +2317,8 @@ div.com-art ul li {
 
 .container a:hover,
 .container p a.highlight {
-  color: #28d0e9 !important;
-  text-decoration: none;
+  color: #1890ff !important;
+  text-decoration: underline;
 }
 
 .container p {
