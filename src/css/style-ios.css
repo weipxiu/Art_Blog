@@ -1090,7 +1090,9 @@ ul.post-categories li:first-child {
   color: #009cee;
 }
 /* 相关文章推荐end */
-
+.mod-category__article-time{
+  display: none;
+}
 .continar-left p.l>span a{
   display: block;
   height: 100%
@@ -1117,6 +1119,12 @@ display: none
     max-width: 1.8rem;
     max-height: 1.2rem;
     float: left;
+}
+.continar-left p.l > span.p_time {
+  display: none;
+}
+.continar-left p.l>span.i_time{
+  display: inline-block;
 }
 /*右侧区域start*/
 

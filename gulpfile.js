@@ -17,7 +17,7 @@ const browserSync = require('browser-sync'); //热更新模块
 // 环境变量
 const env = process.env.NODE_ENV
 
-let target = env === 'production' ? './dist' : './pre'
+let target = env === 'production' ? './dist' : 'D:/PHPTutorial/WWW/wp-content/themes/Art_Blog'
 console.log('当前环境：'+env+'对应打包地址：'+target)
 
 /*
@@ -202,7 +202,7 @@ gulp.task("Watch", function () {
     gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/**.css"], ["copyHtml"]);
     gulp.watch(['src/*.html'], ["miniHtml"]);
     gulp.watch(["src/**.css"], ["minCss"]);
-    gulp.watch([target+"/**.css"], ["themesVer"]);
+    // gulp.watch([target+"/**.css"], ["themesVer"]);
     gulp.watch(["src/js/main.js","src/js/ajax_wordpress.js"], ["jsConcat"]);
 })
 

@@ -1439,11 +1439,15 @@ div.com-art ul li {
   color: #009cee;
 }
 /* 相关文章推荐end */
-
+.mod-category__article-time{
+  display: none;
+}
 .continar-left p.l {
   font-size: 0.26rem;
   margin: 0 auto;
   height: 0.5rem;
+  line-height: 0.5rem;
+  margin-bottom:0.1rem;
   overflow: hidden;
   width: 100%;
 }
@@ -1466,21 +1470,30 @@ div.com-art ul li {
   color: #666;
   font-size: 0.26rem;
 }
-.continar-left p.l > span:nth-of-type(1) {
+.continar-left p.l > span:nth-of-type(2) {
   width: 100%;
   text-align: left;
   font-size: 0.24rem;
   text-indent: 5px;
 }
-.continar-left p.l > span:nth-of-type(2) {
-  width: 27%;
+.continar-left p.l>span.i_time{
+  display: inline-block;
 }
 .continar-left p.l > span:nth-of-type(3) {
+  width: 27%;
+}
+.continar-left p.l > span:nth-of-type(4) {
   width: 30%;
   text-align: right;
 }
-.continar-left p.l > span:nth-of-type(4) {
+.continar-left p.l > span:nth-of-type(5) {
   display: none;
+}
+.continar-left p.l > span.p_time {
+  display: none;
+}
+.continar-left p.l>span.i_time{
+  display: inline-block;
 }
 div.key-w {
   margin: 10px 0;

@@ -218,6 +218,10 @@
 				if(have_posts()): while(have_posts()):the_post();
 				?>
 					<article class="text">
+						<div class="mod-category__article-time">
+							<span><?php the_time('d') ?></span>
+							<span><?php the_time('Y-m') ?></span>
+						</div>
 						<div class="img-left">
 							<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
 								<?php
@@ -257,7 +261,8 @@
 												<i class="">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
 											</a>
 										</span> -->
-								<span><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日') ?></span>
+								<span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 G:i:s D') ?></span>
+								<span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
 								<span>
 									<a href="<?php the_permalink(); ?> ">
 										<i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
