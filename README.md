@@ -52,10 +52,10 @@
 
 ## 如何使用它
 
-I、本项目采用gulp自动化构建，建议通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
-  到`dist`文件夹。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
+I、本项目采用gulp自动化构建，推荐通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
+  到`dist`文件夹（很显然，这一切需要你电脑安装了Node.js以及git工具）。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
 
-II、将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下，然后启用主题
+II、将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下。也可以将改好名字的Art_Blog文件夹压缩成Zip文件通过后台主题上传，最后启用主题
 
 III、运行环境条件：服务器选用Apache，wordPress版本≥4.6，≥5.3服务器php版本≤php7.2，如果出现报错，请尝试切换php版本，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
 
