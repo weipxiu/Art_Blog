@@ -1,0 +1,125 @@
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.left-wrap{
+  cursor: default;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.highlighted {
+  background: #d4d4d4;
+  color: #d8296d;
+}
+
+input, textarea {
+  vertical-align: middle;
+}
+textarea{
+  padding:5px;
+}
+.url-inp {
+  width: 60%;
+}
+
+
+/* 导航切换页面 */
+
+.nav-wrap {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.nav-wrap .nav-list {
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 8px 20px;
+  border-radius: 2px;
+  background: #409eff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-wrap .nav-list.on {
+  background: #67c23a;
+}
+
+
+/*  */
+
+.content-wrap {
+  display: none;
+}
+
+.content-wrap:first-of-type {
+  display: block;
+}
+
+.row {
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ccc;
+  line-height: 26px;
+  margin: 5px 0;
+}
+
+.row .left-wrap {
+  width: 125px;
+  text-align: right;
+}
+
+.row .right-wrap {
+  width: calc(100% - 135px);
+}
+
+.row .right-wrap input[type="text"] {
+  width: 80%;
+}
+.row .fixed-wrap input[type="text"] {
+  width: 565px;
+}
+
+.btn-wrap {
+  border: 0;
+}
+
+.submit-btn {
+  display: block;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background: #67c23a;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 30px 0 0;
+}
+.warn{
+  color: #e6a23c;
+  transform: translateY(2px);
+  display: inline-block;
+}
+.danger{
+  color: #f56c6c;
+}
+input[type=checkbox], input[type=radio]{
+  margin-top:0
+}
+.border_none{
+  border-bottom:none;
+}
+input[type=radio]{
+  margin-right: 7px;
+}
