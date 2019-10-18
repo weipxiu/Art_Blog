@@ -1,6 +1,6 @@
 $(function () {
     var domain_name = window.location.protocol + "//" + window.location.host;
-    function speak(text){
+    function speak(text) {
         new Audio(
             'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + text
         ).play();
@@ -8,31 +8,31 @@ $(function () {
 
     //特色图片懒加载
     $("img.Lazy_load").lazyload({
-        effect:"show"  
+        effect: "show"
     });
 
     //文章分类没有资源时候404提示
-    if($(".continar-left .article_not").length > 0){
-        $("body").css({"background":"#fff"});
+    if ($(".continar-left .article_not").length > 0) {
+        $("body").css({ "background": "#fff" });
     }
 
     // 通过js改造导航栏DOM结构start
     var node_list = $(".header .music-nav").children('li');
-    for(var i=0; i<node_list.length; i++){
+    for (var i = 0; i < node_list.length; i++) {
         var text = node_list.eq(i).children('a').text();
         node_list.eq(i).children('a').text('');
-        node_list.eq(i).children('a').append("<span>"+ text +"</span>");
-        node_list.eq(i).children('a').append("<span>"+ text +"</span>");
+        node_list.eq(i).children('a').append("<span>" + text + "</span>");
+        node_list.eq(i).children('a').append("<span>" + text + "</span>");
 
         //高亮
-        if(node_list.eq(i).hasClass('current-menu-item')){
+        if (node_list.eq(i).hasClass('current-menu-item')) {
             node_list.eq(i).addClass('action');
         }
     }
     //追加音乐标签
-    node_list.append("<audio src='' autoplay='autoplay'></audio>"+"<p style='opacity: 0'></p>");
+    node_list.append("<audio src='' autoplay='autoplay'></audio>" + "<p style='opacity: 0'></p>");
     //二级菜单父级禁止跳转
-    $("#nav_list .sub-menu").siblings('a').attr('href','javascript:void(0);');
+    $("#nav_list .sub-menu").siblings('a').attr('href', 'javascript:void(0);');
     //追加icon
     $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
     $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
@@ -40,7 +40,7 @@ $(function () {
     $(".header .sub-menu").addClass('nav-min');
     $(".os-herder .sub-menu").addClass('slide_slect');
     //追加音乐开关
-    var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon'>"+"<audio src='' autoplay='autoplay'></audio>"+"<i></i><i></i><i></i><i></i><i></i></li>"
+    var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
     $(".header .music-nav").append(dom_node);
     //通过js改造导航栏DOM结构end
 
@@ -218,15 +218,15 @@ $(function () {
             localStorage.setItem("off_y", 1);
             layer.msg('全站音频已开启~', {
                 time: 2000 //2秒关闭（如果不配置，默认是3秒）
-            }, function(){
+            }, function () {
                 layer.msg('无需鼠标，导航音乐键盘A-K也可以体验哦~~');
             });
-            speak("全站音频已开启~") 
+            speak("全站音频已开启~")
         } else {
             $(this).removeClass("hover");
             $(".nav ul.music-nav li > p").css("opacity", "0");
             localStorage.setItem("off_y", 0);
-            layer.msg('全站音频已关闭，期待您的下次体验！',{
+            layer.msg('全站音频已关闭，期待您的下次体验！', {
                 time: 4000
             });
             speak("全站音频已关闭，期待您的下次体验！")
@@ -235,18 +235,18 @@ $(function () {
     // 跳动音符end
 
     //导航音乐title设置start
-    $('.js_piano_nav_icon').mouseenter(function(){
+    $('.js_piano_nav_icon').mouseenter(function () {
         if (localStorage.getItem("off_y") != 1) {
             layer.tips('开启全站音频', '.js_piano_nav_icon', {
                 tips: 3, //3表示下面
                 tipsMore: false,
-                time:2000
+                time: 2000
             });
-        }else{
+        } else {
             layer.tips('关闭全站音频', '.js_piano_nav_icon', {
                 tips: 3,
-                tipsMore: false, 
-                time:2000
+                tipsMore: false,
+                time: 2000
             });
         }
     })
@@ -273,7 +273,7 @@ $(function () {
             "visibility": "hidden",
             "top": "70px"
         });
-        
+
         $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
         $index = $(this).index();
         musicObj = $(".nav ul.music-nav > li:not(.mod-header_music-icon)").eq($index).find('audio');
@@ -287,9 +287,9 @@ $(function () {
     },
         function () {
             clearTimeout(time);
-            time = setTimeout(()=>{
+            time = setTimeout(() => {
                 //如果出现搜索的情况下，头部层级自然还是要比轮播高
-                if (!$(".site-search").is(":visible")){
+                if (!$(".site-search").is(":visible")) {
                     $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
                 }
                 $(this).removeClass("active");
@@ -303,8 +303,8 @@ $(function () {
 
     function musicdown(number) {
         if (number <= musicList.length) {
-            musicList.eq(number-1).find('audio').get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + (number) + ".mp3";
-            musicList.eq(number-1).addClass("active")
+            musicList.eq(number - 1).find('audio').get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + (number) + ".mp3";
+            musicList.eq(number - 1).addClass("active")
         }
     }
 
@@ -344,27 +344,27 @@ $(function () {
         $(this).animate({
             "bottom": "0",
             "opacity": "1"
-        },100,
-        function(){
-            setTimeout(function(){
-                $('body,html').animate({
-                    scrollTop: 0
-                },1200);
-                $(".aircraft").animate({
-                    "top": "0",
-                    "bottom": "auto",
-                    "opacity": "0"
-                },700,function(){
-                    setTimeout(function () {
-                        $(".aircraft").css({
-                            "bottom": "50px",
-                            "top":"auto",
-                            "opacity": "1"
-                        })
-                    },500)
-                })
-            },300)
-        })
+        }, 100,
+            function () {
+                setTimeout(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 1200);
+                    $(".aircraft").animate({
+                        "top": "0",
+                        "bottom": "auto",
+                        "opacity": "0"
+                    }, 700, function () {
+                        setTimeout(function () {
+                            $(".aircraft").css({
+                                "bottom": "50px",
+                                "top": "auto",
+                                "opacity": "1"
+                            })
+                        }, 500)
+                    })
+                }, 300)
+            })
     })
 
     //客服
@@ -378,7 +378,7 @@ $(function () {
                 "right": "-196px"
             }, 500)
         });
-    
+
     //回到顶部
     var scrollTop = $(document).scrollTop();
     if (scrollTop > 500) {
@@ -517,20 +517,20 @@ $(function () {
 
     if ($(document).width() >= 1200) {
         // 底部悬浮登录注册start
-        if(sessionStorage.getItem("off_login") != 1){
-            setTimeout(()=>{
+        if (sessionStorage.getItem("off_login") != 1) {
+            setTimeout(() => {
                 $(".login_alert").slideDown();
-            },1000)
+            }, 1000)
         }
-        $(".login_alert_close").click(()=>{
+        $(".login_alert_close").click(() => {
             $(".login_alert").slideUp();
-            sessionStorage.setItem("off_login",1)
+            sessionStorage.setItem("off_login", 1)
         })
         // 底部悬浮登录注册end
-        
+
         //文章分类没有资源时候404提示
-        if($(".continar-left .article_not").length > 0){
-            $("body > .continar").css({"height": "calc(100% - 280px)"});
+        if ($(".continar-left .article_not").length > 0) {
+            $("body > .continar").css({ "height": "calc(100% - 280px)" });
         }
         //点击页面出现爱心
         if (!!window.ActiveXObject || "ActiveXObject" in window) {
@@ -728,9 +728,9 @@ $(function () {
                         $(this).stop(true, false).animate({
                             top: 0 + "px" //源代码：top: positionArr[index].top + "px"
                         }, {
-                                duration: opt.duration,
-                                easing: "easeOutElastic"
-                            });
+                            duration: opt.duration,
+                            easing: "easeOutElastic"
+                        });
                     });
                 });
             };
@@ -752,7 +752,7 @@ $(function () {
 
         //特色图片懒加载，移动端需要设置滚动事件
         $("img.Lazy_load").lazyload({
-            container: $("body > .continar")  
+            container: $("body > .continar")
         });
     }
 
@@ -781,13 +781,13 @@ $(function () {
         var delSetInterval = null; //定时器
         //var ISvideo = false; //当前是否全屏
         var myPlayer = videojs('my-video');
-        
+
         //播放失败时候处理
-        var errVideo=document.getElementById('my-video_html5_api');
-        errVideo.onerror = function() {
-            layer.alert('通常是由于视频地址错误引起，请检查！',{
+        var errVideo = document.getElementById('my-video_html5_api');
+        errVideo.onerror = function () {
+            layer.alert('通常是由于视频地址错误引起，请检查！', {
                 skin: 'layui',
-                title:"播放失败",
+                title: "播放失败",
                 closeBtn: 0,
                 anim: 4 //动画类型
             })
