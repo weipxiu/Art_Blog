@@ -45,7 +45,7 @@
 | [福利社](https://www.fulijs.net) | www.fulijs.net
 | [梦想霞](http://www.mxxia.com) | www.mxxia.com 
 | [端彤资源博客](http://www.0ddt.com) | www.0ddt.com 
-| [程序员的自我修炼](http://www.0ddt.com) | java.weiaiyan.xyz 
+| [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
 <!-- | [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com   -->
@@ -57,7 +57,7 @@
 I、本项目采用gulp自动化构建，推荐通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
   到`dist`文件夹（很显然，这一切需要你电脑安装了Node.js以及git工具）。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
 
-II、将dist文件名命名为`Art_Blog`,然后将整个文件夹上传到线上：`/htdocs/wp-content/themes/`目录下。也可以将改好名字的Art_Blog文件夹压缩成Zip文件通过后台主题上传，最后启用主题
+II、将dist文件名命名为`Art_Blog`(这是必须的),将整个`文件夹`上传到线上：`/htdocs/wp-content/themes/`目录下。也可以将改好名字的Art_Blog文件夹压缩成`Zip文件`通过后台主题上传，最后后台启用主题
 
 III、运行环境条件：虚拟主机/云主机环境选优先用Apache、wordPress版本≥4.6，≥5.3服务器php版本≤php7.2，如果出现报错，请尝试切换php版本，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)
 
@@ -67,7 +67,7 @@ V、在后台>外观>菜单中管理你的导航栏
 
 VI、更多详细教程点击：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
-Ⅶ、如果喜欢，请多多打赏。
+Ⅶ、如若喜欢，请多多打赏，您的认可与支持将是我前进的最大动力！
 
 ![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
 
