@@ -1401,7 +1401,7 @@ i {
   width: 1200px;
   margin: 86px auto 10px;
   min-height: calc(100% - 214px);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .deviation {
