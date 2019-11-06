@@ -257,13 +257,17 @@ $(function () {
     var $index = null;
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
-    $('header.header').hover(function(){
-        $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
-    },function(){
+    $('.header').hover(function () {
+        $(this).css("z-index", "11"); //默认下方轮播层级高于头部
+    }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
-        if (!$(".site-search").is(":visible")) {
-            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
-        }
+        clearTimeout(time);
+        time = setTimeout(() => {
+            if (!$(".site-search").is(":visible")) {
+                $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+            }
+        }, 500);
+
     })
     $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function (event) {
         clearTimeout(time);
