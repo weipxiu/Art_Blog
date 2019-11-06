@@ -67,24 +67,6 @@ $(function () {
         }
         // 桌面提醒功能
 
-        // setTimeout(function(){
-        // 	var swiper = new Swiper('.swiper-container', {
-        // 	    pagination: '.swiper-pagination',//是否出现小圆点
-        // 	    nextButton: '.swiper-button-next',//上一张
-        // 	    prevButton: '.swiper-button-prev',//下一张
-        // 	    slidesPerView: 1,//每一屏幕排几张图片
-        // 	    effect: 'slide',//轮播方式，左右切换
-        // 	    paginationClickable: true,//小圆点是否可点击
-        // 	    spaceBetween: 0,//图片间距
-        // 	    autoplay: 4500,//自动轮播时间
-        // 	    speed:350,//切换一张所需要的时间
-        // 	    keyboardControl : true,//键盘左右按钮切换
-        // 	    mousewheelControl : false,//鼠标滚轮切换
-        // 	    autoplayDisableOnInteraction : false,//表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
-        // 	    loop: true//循环
-        // 	});
-        // },3000);
-
         // console.log---start
         if (window.console && window.console.log) {
             setTimeout(function () {

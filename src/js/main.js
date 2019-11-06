@@ -257,6 +257,14 @@ $(function () {
     var $index = null;
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
+    $('header.header').hover(function(){
+        $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
+    },function(){
+        //如果出现搜索的情况下，头部层级自然还是要比轮播高
+        if (!$(".site-search").is(":visible")) {
+            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+        }
+    })
     $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function (event) {
         clearTimeout(time);
         $(this).find('.nav-min').css({
@@ -273,8 +281,6 @@ $(function () {
             "visibility": "hidden",
             "top": "70px"
         });
-
-        $(this).parents(".header").css("z-index", "11"); //默认下方轮播层级高于头部
         $index = $(this).index();
         musicObj = $(".nav ul.music-nav > li:not(.mod-header_music-icon)").eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
@@ -288,10 +294,6 @@ $(function () {
         function () {
             clearTimeout(time);
             time = setTimeout(() => {
-                //如果出现搜索的情况下，头部层级自然还是要比轮播高
-                if (!$(".site-search").is(":visible")) {
-                    $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
-                }
                 $(this).removeClass("active");
                 $(".header-conter .nav-min").css({
                     "opacity": "0",
