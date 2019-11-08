@@ -129,7 +129,12 @@ $(function () {
                 }
             });
     } else {
-        alert("爷，现在都什么时代了，你还在用这么土的浏览器~~");
+        layer.alert('爷，现在都什么时代了，你还在用这么土的浏览器~~', {
+            skin: 'layui',
+            title: "请更换浏览器",
+            closeBtn: 0,
+            anim: 4 //动画类型
+        })
     }
     //点击图片放大全屏end
 
@@ -253,7 +258,8 @@ $(function () {
     //导航音乐title设置end
 
     //PC二级菜单，钢琴导航start
-    var time = null;
+    var time1 = null;
+    var time2 = null;
     var $index = null;
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
@@ -261,16 +267,16 @@ $(function () {
         $(this).css("z-index", "11"); //默认下方轮播层级高于头部
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
-        clearTimeout(time);
-        time = setTimeout(() => {
+        clearTimeout(time1);
+        time1 = setTimeout(() => {
             if (!$(".site-search").is(":visible")) {
                 $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
             }
         }, 500);
 
     })
-    $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function (event) {
-        clearTimeout(time);
+    $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function(event){
+        clearTimeout(time2);
         $(this).find('.nav-min').css({
             "opacity": "1",
             "visibility": "visible",
@@ -294,18 +300,18 @@ $(function () {
             musicObj.get(0).src = "";
         }
         event.stopPropagation();
-    },
-        function () {
-            clearTimeout(time);
-            time = setTimeout(() => {
-                $(this).removeClass("active");
-                $(".header-conter .nav-min").css({
-                    "opacity": "0",
-                    "visibility": "hidden",
-                    "top": "70px"
-                });
-            }, 500);
-        });
+    },function(){
+        clearTimeout(time2);
+        time2 = setTimeout(() => {
+            console.log(123)
+            $(this).removeClass("active");
+            $(".header-conter .nav-min").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "top": "70px"
+            });
+        }, 500);
+    });
 
     function musicdown(number) {
         if (number <= musicList.length) {
@@ -314,27 +320,14 @@ $(function () {
         }
     }
 
+    // 键盘按下
     $(document).keydown(function (event) {
         if (localStorage.getItem("off_y") == 1) {
             //a65 s83 d68 f70 g71 h72 j74 k75 l76
-            if (event.keyCode == 65) {
-                musicdown(1)
-            } else if (event.keyCode == 83) {
-                musicdown(2)
-            } else if (event.keyCode == 68) {
-                musicdown(3)
-            } else if (event.keyCode == 70) {
-                musicdown(4)
-            } else if (event.keyCode == 71) {
-                musicdown(5)
-            } else if (event.keyCode == 72) {
-                musicdown(6)
-            } else if (event.keyCode == 74) {
-                musicdown(7)
-            } else if (event.keyCode == 75) {
-                musicdown(8)
-            } else if (event.keyCode == 76) {
-                musicdown(9)
+            var keyArr = [65,83,68,70,71,72,74,75,76]
+            var _index = event.keyCode.indexOf(keyArr)
+            if(_index >= 0){
+                musicdown(_index + 1)
             }
         }
     });
