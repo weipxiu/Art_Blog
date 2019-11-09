@@ -1563,14 +1563,14 @@ i {
   padding: 10px;
   border-radius: 3px 0 0 3px;
   background: #fff;
-  border: 1px solid #1ed0e1;
+  border: 1px solid #1890ff;
   outline: none;
   height: 38px;
   float: left;
 }
 
 .wpm_form .wpm_submit input {
-  background: #1ed0e1;
+  background: #1890ff;
   color: #fff;
   padding: 9px 15px 10px;
   border: none;

@@ -303,7 +303,6 @@ $(function () {
     },function(){
         clearTimeout(time2);
         time2 = setTimeout(() => {
-            console.log(123)
             $(this).removeClass("active");
             $(".header-conter .nav-min").css({
                 "opacity": "0",

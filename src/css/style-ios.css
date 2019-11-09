@@ -891,13 +891,13 @@ img {
   margin-right: 0;
   border-radius: 0.06rem 0 0 0.06rem;
   background: #fff;
-  border: 1px solid #1ed0e1;
+  border: 1px solid #1890ff;
   padding-left: 0;
   text-indent: 0.1rem;
 }
 
 .wpm_form .wpm_submit input {
-  background: #1ed0e1;
+  background: #1890ff;
   color: #fff;
   border: none;
   border-radius: 0 0.06rem 0.06rem 0;
