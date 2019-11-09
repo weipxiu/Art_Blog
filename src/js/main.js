@@ -272,7 +272,7 @@ $(function () {
             if (!$(".site-search").is(":visible")) {
                 $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
             }
-        }, 500);
+        }, 100);
 
     })
     $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function(event){
@@ -311,7 +311,7 @@ $(function () {
                 "visibility": "hidden",
                 "top": "70px"
             });
-        }, 500);
+        }, 100);
     });
 
     function musicdown(number) {
