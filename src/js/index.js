@@ -79,9 +79,6 @@ $(function () {
         // console.log---end
 
         $("#hide").show();
-        $("html,body").css({
-            "overflow-y": "visible"
-        });
         $(".buffer").fadeOut();
         $(".buffer .bar").hide();
 
