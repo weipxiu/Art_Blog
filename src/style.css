@@ -1563,7 +1563,8 @@ i {
   padding: 10px;
   border-radius: 3px 0 0 3px;
   background: #fff;
-  border: 1px solid #1890ff;
+  border: 1px solid #d9d9d9;
+  border-right: 0;
   outline: none;
   height: 38px;
   float: left;
@@ -1578,6 +1579,16 @@ i {
   cursor: pointer;
   height: 38px;
 }
+.wpm_form .wpm_email input:focus {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+  box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+}
+.wpm_form .wpm_email input::-webkit-input-placeholder{color:#bfbfbf}
+.wpm_form .wpm_email input::-moz-input-placeholder{color:#bfbfbf}
+.wpm_form .wpm_email input::-ms-input-placeholder{color:#bfbfbf}
 
 .continar-left>.text {
   background: #fff;

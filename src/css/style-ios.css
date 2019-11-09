@@ -891,7 +891,8 @@ img {
   margin-right: 0;
   border-radius: 0.06rem 0 0 0.06rem;
   background: #fff;
-  border: 1px solid #1890ff;
+  border: 1px solid #d9d9d9;
+  border-right: 0;
   padding-left: 0;
   text-indent: 0.1rem;
 }
@@ -905,6 +906,16 @@ img {
   line-height: 0.8rem;
   padding: 0 0.25rem;
 }
+.wpm_form .wpm_email input:focus {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+  box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+}
+.wpm_form .wpm_email input::-webkit-input-placeholder{color:#bfbfbf}
+.wpm_form .wpm_email input::-moz-input-placeholder{color:#bfbfbf}
+.wpm_form .wpm_email input::-ms-input-placeholder{color:#bfbfbf}
 
 /*邮件订阅end*/
 
