@@ -264,7 +264,7 @@ $(function () {
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
     $('.header').hover(function () {
-        $(this).css("z-index", "11"); //默认下方轮播层级高于头部
+        $(this).css("z-index", "11"); 
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
         clearTimeout(time1);
@@ -277,6 +277,7 @@ $(function () {
     })
     $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function(event){
         clearTimeout(time2);
+        $(this).css("z-index", "11"); 
         $(this).find('.nav-min').css({
             "opacity": "1",
             "visibility": "visible",
@@ -304,6 +305,7 @@ $(function () {
         clearTimeout(time2);
         time2 = setTimeout(() => {
             $(this).removeClass("active");
+            $(this).css("z-index", "10"); 
             $(".header-conter .nav-min").css({
                 "opacity": "0",
                 "visibility": "hidden",
