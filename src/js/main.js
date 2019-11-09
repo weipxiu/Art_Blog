@@ -277,7 +277,7 @@ $(function () {
     })
     $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function(event){
         clearTimeout(time2);
-        $(this).css("z-index", "11"); 
+        $(".header").css("z-index", "11"); 
         $(this).find('.nav-min').css({
             "opacity": "1",
             "visibility": "visible",
@@ -305,7 +305,7 @@ $(function () {
         clearTimeout(time2);
         time2 = setTimeout(() => {
             $(this).removeClass("active");
-            $(this).css("z-index", "10"); 
+            $(".header").css("z-index", "10");
             $(".header-conter .nav-min").css({
                 "opacity": "0",
                 "visibility": "hidden",
