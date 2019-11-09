@@ -325,7 +325,7 @@ $(function () {
         if (localStorage.getItem("off_y") == 1) {
             //a65 s83 d68 f70 g71 h72 j74 k75 l76
             var keyArr = [65,83,68,70,71,72,74,75,76]
-            var _index = event.keyCode.indexOf(keyArr)
+            var _index = keyArr.indexOf(event.keyCode)
             if(_index >= 0){
                 musicdown(_index + 1)
             }
