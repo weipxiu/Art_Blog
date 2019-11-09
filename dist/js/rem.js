@@ -1,5 +1,8 @@
 function defaultfont() {
   var sw = $(window).width();
+  if(sw > 1200){
+    return false
+  }
   var pw = 750;
   var f = 100 * sw / pw;
   if (sw>767 && sw<1000) { f = 70 }
