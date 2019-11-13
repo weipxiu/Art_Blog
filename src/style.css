@@ -19,7 +19,6 @@
 
 html {
   width: 100%;
-  height: 100%;
   font-size: inherit !important;
 }
 
@@ -36,7 +35,6 @@ body {
   overflow-x: hidden;
   border-top: 1px solid transparent;
   width: 100%;
-  height: 100%;
   /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3740,7 +3738,7 @@ div.jy p {
   text-decoration: none;
   background-color: #ddd;
   color: #666;
-  padding: 6px 10px;
+  padding: 6px 12px;
   margin: 0 2px;
   border-radius: 2px;
   font-size: 12px;
@@ -3768,7 +3766,7 @@ span.extend {
 .wp-pagenavi a.current {
   background-color: #1890ff;
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 6px 12px;
   margin: 0 2px;
   border: 0;
   color: #fff;
