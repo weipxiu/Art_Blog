@@ -36,6 +36,7 @@
 |  网站名称 | 网站地址 | 
 | :----: | :----: | 
 | [西狂部落阁](http://www.xikuang.ren) | www.xikuang.ren
+| [苍衣社](https://www.cangyishe.cn) | www.cangyishe.cn 
 | [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
 | [码云笔记](https://www.mybj123.com) | www.mybj123.com 
 | [Pets配资知识网](http://www.jing11.net) | www.jing11.net
@@ -47,12 +48,11 @@
 | [端彤资源博客](http://www.0ddt.com) | www.0ddt.com 
 | [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz
 | [Newbe的博客](http://newbe.fun) | http://newbe.fun
-| [码农小G](http://www.xicon.top) | http://www.xicon.top
+| [码农小G](http://www.xicon.top) | www.xicon.top
+| [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
-<!-- | [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com   -->
 <!-- | [小兴的个人博客](http://www.cyxlove.cn) | www.cyxlove.com  -->
-<!-- | [苍衣社](https://www.cangyishe.cn) | www.cangyishe.cn  -->
 
 ## 如何使用它
 
