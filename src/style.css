@@ -1563,19 +1563,19 @@ i {
   background: #fff;
   border: 1px solid #d9d9d9;
   border-right: 0;
-  outline: none;
-  height: 38px;
+  outline: 0;
+  height: 34px;
   float: left;
 }
 
 .wpm_form .wpm_submit input {
   background: #1890ff;
   color: #fff;
-  padding: 9px 15px 10px;
+  padding: 7px 15px 8px;
   border: none;
   border-radius: 0 3px 3px 0;
   cursor: pointer;
-  height: 38px;
+  height: 34px;
 }
 .wpm_form .wpm_email input:focus {
   border-color: #40a9ff;
