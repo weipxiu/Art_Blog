@@ -52,6 +52,7 @@
 | [码农小G](http://www.xicon.top) | www.xicon.top
 | [小兴的个人博客](http://www.cyxlove.cn) | www.cyxlove.cn
 | [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com
+| [开源NetCore](http://www.netcore.pub) | http://netcore.pub
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
 ## 如何使用它
