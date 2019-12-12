@@ -40,14 +40,10 @@
 | [苍衣社](https://www.cangyishe.cn) | www.cangyishe.cn 
 | [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
 | [码云笔记](https://www.mybj123.com) | www.mybj123.com 
-<!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
-<!-- | [屌丝写代码](http://www.uytools.com) | www.uytools.com  -->
 | [青幽](http://moxiaofei.com) | http://moxiaofei.com
 | [智慧博客网](https://www.llg.design) | www.llg.design 
 | [福利社](https://www.fulijs.net) | www.fulijs.net
 | [梦想霞](http://www.mxxia.com) | www.mxxia.com 
-<!-- | [段彤资源博客](http://www.0ddt.com) | www.0ddt.com  -->
-<!-- | [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz -->
 | [Newbe的博客](http://newbe.fun) | http://newbe.fun
 | [码农小G](http://www.xicon.top) | www.xicon.top
 | [小兴的个人博客](http://www.cyxlove.cn) | www.cyxlove.cn
@@ -57,6 +53,11 @@
 | [99shopcn](http://99shopcn.com) | http://99shopcn.com
 | [PC再现](http://pczaixian.com) | http://www.pczaixian.com
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
+
+<!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
+<!-- | [屌丝写代码](http://www.uytools.com) | www.uytools.com  -->
+<!-- | [段彤资源博客](http://www.0ddt.com) | www.0ddt.com  -->
+<!-- | [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz -->
 
 ## 如何使用它
 
@@ -115,22 +116,22 @@ IV、源码开放供大家使用并修改，但在使用过程中底部请保留
 │  theme-options.php  //主题配置文件
 │  
 ├─css
-│      PingFangSC-Regular.woff   //一些字体文件
+│      PingFangSC-Regular.woff   //字体文件
 │      sf-pro-display_medium.woff2
 │      sf-pro-display_regular.woff2
 │      sf-pro-display_semibold.woff2
 │      sf-pro-text_bold.woff2
 │      sf-pro-text_regular.woff2
 │      sf-pro-text_semibold.woff2
-│      style-ios.css    //针对手机端样式
-│      style-ipd.css    //针对ipd平板样式
+│      style-ios.css    //手机端样式
+│      style-ipd.css    //ipd平板样式
 │      swiper.min.css   //移动端轮播swiper样式
 │      video-js.css    //视频插件样式     
 │          
 ├─images    //图片资源
 │      
 ├─js
-│  │  ajax_wordpress.js    //分页ajaxs刷新
+│  │  ajax_wordpress.js    //分页ajax刷新
 │  │  canvas-nest.min.js //canvas背景图插件
 │  │  date.js  //时光机数据
 │  │  index.js    //整个网站的js全局
@@ -152,6 +153,6 @@ IV、源码开放供大家使用并修改，但在使用过程中底部请保留
 │          jquery.min.js
 │          utils.js
 │          
-└─music  /导航音频文件
+└─music  //导航音频文件
  ```       
 
