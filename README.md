@@ -40,19 +40,22 @@
 | [苍衣社](https://www.cangyishe.cn) | www.cangyishe.cn 
 | [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
 | [码云笔记](https://www.mybj123.com) | www.mybj123.com 
-| [Pets配资知识网](http://www.jing11.net) | www.jing11.net
-| [屌丝写代码](http://www.uytools.com) | www.uytools.com 
+<!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
+<!-- | [屌丝写代码](http://www.uytools.com) | www.uytools.com  -->
 | [青幽](http://moxiaofei.com) | http://moxiaofei.com
 | [智慧博客网](https://www.llg.design) | www.llg.design 
 | [福利社](https://www.fulijs.net) | www.fulijs.net
 | [梦想霞](http://www.mxxia.com) | www.mxxia.com 
-| [端彤资源博客](http://www.0ddt.com) | www.0ddt.com 
-| [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz
+<!-- | [段彤资源博客](http://www.0ddt.com) | www.0ddt.com  -->
+<!-- | [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz -->
 | [Newbe的博客](http://newbe.fun) | http://newbe.fun
 | [码农小G](http://www.xicon.top) | www.xicon.top
 | [小兴的个人博客](http://www.cyxlove.cn) | www.cyxlove.cn
 | [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com
 | [开源NetCore](http://www.netcore.pub) | http://netcore.pub
+| [贾修强的个人博客](http://www.jxqzq.cn) | http://www.jxqzq.cn
+| [99shopcn](http://99shopcn.com) | http://99shopcn.com
+| [PC再现](http://pczaixian.com) | http://www.pczaixian.com
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
 ## 如何使用它
