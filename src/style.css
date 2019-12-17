@@ -1547,7 +1547,7 @@ i {
 }
 
 .rssbook form {
-  margin: 0 auto;
+  margin: 0 auto 1px;
   display: block;
 }
 
@@ -2068,6 +2068,9 @@ i {
 
 .friendship .daily-list ul {
   padding: 0 15px 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .friendship .daily-list ul li {
@@ -2079,7 +2082,7 @@ i {
   border-radius: 5px;
   animation-delay: 0.1s;
   float: left;
-  margin: 0 1% 10px 0;
+  margin-bottom: 8px;
   padding: 0px 6px;
   width: auto;
   border-bottom: 0;
@@ -6474,7 +6477,7 @@ label {
 }
 
 #primary-sidebar ul:after,
-.widget ul:before {
+.widget:not('.friendship') ul:before {
   display: table;
   content: '';
   line-height: 0;

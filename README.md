@@ -52,6 +52,7 @@
 | [贾修强的个人博客](http://www.jxqzq.cn) | http://www.jxqzq.cn
 | [99shopcn](http://99shopcn.com) | http://99shopcn.com
 | [PC再现](http://pczaixian.com) | http://www.pczaixian.com
+| [北漂程序员](http://blog.zoux.xin) | http://blog.zoux.xin
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
 <!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
