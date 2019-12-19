@@ -58,7 +58,6 @@
 <!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
 <!-- | [屌丝写代码](http://www.uytools.com) | www.uytools.com  -->
 <!-- | [段彤资源博客](http://www.0ddt.com) | www.0ddt.com  -->
-<!-- | [程序员的自我修炼](https://java.weiaiyan.xyz) | https://java.weiaiyan.xyz -->
 
 ## 如何使用它
 
