@@ -64,7 +64,7 @@
                       'post_password' => '',
                       'post_status' => 'publish', // 只选公开的文章.
                       'post__not_in' => array($post->ID),//排除当前文章
-                      'caller_get_posts' => 1, // 排除置頂文章.
+                    //   'caller_get_posts' => 1, // 排除置頂文章.
                       'orderby' => 'modified', // 依ID排序.
                       'posts_per_page' => 5 // 设置调用条数
                   );
@@ -106,7 +106,7 @@
                   'post_password' => '',
                   'post_status' => 'publish', // 只选公开的文章.
                   'post__not_in' => array($post->ID),//排除当前文章
-                  'caller_get_posts' => 1, // 排除置頂文章.
+                //   'caller_get_posts' => 1, // 排除置頂文章.
                   'orderby' => 'rand', // 随机排序.
                   'posts_per_page' => 10 // 设置调用条数
               );
