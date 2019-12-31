@@ -26,10 +26,10 @@
   </a>
 </p>
 
-一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.5.1，[主题介绍](https://www.weipxiu.com/about)
+一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.6.0，[主题介绍](https://www.weipxiu.com/about)
 
 ## 主题后台配置预览
-![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/wp-theme-options.png)
+![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp-theme-options.png)
 
 ## 哪些网站在使用(据不完全统计)
 
