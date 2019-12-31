@@ -1,35 +1,6 @@
 <?php
-
-/**
- * 名称：WordPress后台添加顶级菜单
- */
-// my_add_pages() 为 'admin_menu' 钩子的回调函数
-function my_add_pages() {
-    // 第一个参数'Design page'为菜单名称，第二个参数'网站设计'为菜单标题(可以是链接)
-    // 'manage_options' 参数为用户权限
-    // 'my_toplevel_page' 参数用于调用my_toplevel_page()函数，来显示菜单内容
-    add_menu_page('design page', '<a href="include/wp-theme-options.php">唯品秀主题设置</a>', 'manage_options', __FILE__, 'my_toplevel_page');
-}
-// my_toplevel_page() 用于显示菜单的内容，填写菜单页面的HTML代码即可
-function my_toplevel_page() {
-    echo '这里填菜单页面的HTML代码';
- 
-    // 如以下示例代码。 wrap 类是WordPress构建好的css类，可以在你的HTML代码中使用
-    /*
-    echo '
-    <div class="wrap">
-    <h2>使用帮助</h2>
-    <p>这里是使用帮助，通过阅读本文你将了解本程序的使用！有事请<a href="#">与我联系</a></p>
-    </div>
-    ';
-    */
-}
-// 通过add_action来自动调用my_add_pages函数
-add_action('admin_menu', 'my_add_pages');
-
-
 // 引入模板主题设置文件
-// if (is_admin()) require ('include/wp-theme-options.php');
+if (is_admin()) require ('include/wp-theme-options.php');
 
 //注册菜单
 register_nav_menus(array(

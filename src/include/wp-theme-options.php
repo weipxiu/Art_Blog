@@ -1,7 +1,7 @@
 <?php
 function themeoptions_admin_menu() {
 	// 在控制面板的侧边栏添加设置选项页链接
-	add_theme_page('唯品秀主题设置', '唯品秀主题设置','edit_themes', basename(__FILE__), 'themeoptions_page');
+	add_menu_page('唯品秀主题设置', '唯品秀主题设置','edit_themes', basename(__FILE__), 'themeoptions_page');
 }
 if ( isset($_POST['update_themeoptions']) && $_POST['update_themeoptions'] == 'true' ) themeoptions_update();
 function themeoptions_page() {
