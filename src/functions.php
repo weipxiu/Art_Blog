@@ -29,7 +29,7 @@ add_action('admin_menu', 'my_add_pages');
 
 
 // 引入模板主题设置文件
-if (is_admin()) require ('include/wp-theme-options.php');
+// if (is_admin()) require ('include/wp-theme-options.php');
 
 //注册菜单
 register_nav_menus(array(
