@@ -2,7 +2,7 @@
 function themeoptions_admin_menu() {
   // 在控制面板的侧边栏添加设置选项页链接
   // add_theme_page(添加到外观下) add_menu_page(添加到主菜单下)
-	add_menu_page('唯品秀主题设置', '唯品秀主题设置','edit_themes', basename(__FILE__), 'themeoptions_page', plugins_url('/images/icon.png'),75);
+	add_menu_page('唯品秀主题配置', '唯品秀主题配置','edit_themes', basename(__FILE__), 'themeoptions_page', '',80);
 }
 if ( isset($_POST['update_themeoptions']) && $_POST['update_themeoptions'] == 'true' ) themeoptions_update();
 function themeoptions_page() {
