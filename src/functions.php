@@ -8,7 +8,7 @@ function my_add_pages() {
     // 第一个参数'Design page'为菜单名称，第二个参数'网站设计'为菜单标题(可以是链接)
     // 'manage_options' 参数为用户权限
     // 'my_toplevel_page' 参数用于调用my_toplevel_page()函数，来显示菜单内容
-    add_menu_page('design page', '<a href="/wp-admin/themes.php?page=wp-theme-options.php">唯品秀主题设置</a>', 'manage_options', __FILE__, 'my_toplevel_page');
+    add_menu_page('design page', '<a href="include/wp-theme-options.php">唯品秀主题设置</a>', 'manage_options', __FILE__, 'my_toplevel_page');
 }
 // my_toplevel_page() 用于显示菜单的内容，填写菜单页面的HTML代码即可
 function my_toplevel_page() {
