@@ -75,7 +75,7 @@ VI、更多详细教程点击：[唯品秀前端技术博客主题使用教程](
 
 Ⅶ、如若喜欢，请多多打赏，您的认可与支持将是我前进的最大动力！
 
-![avatar](https://raw.githubusercontent.com/weipxiu/weipxiu/master/src/images/zhiwei.png)
+![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/zhiwei.png)
 
 ## 碎言碎语
 
