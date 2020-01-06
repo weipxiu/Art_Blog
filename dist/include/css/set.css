@@ -29,9 +29,25 @@ input, textarea {
 }
 textarea{
   padding:5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+textarea::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f1f1ef;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1ef;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #eee;
 }
 .url-inp {
-  width: 60%;
+  width: calc(100% - 290px);
 }
 
 
@@ -83,11 +99,8 @@ textarea{
   width: calc(100% - 135px);
 }
 
-.row .right-wrap input[type="text"] {
-  width: 80%;
-}
 .row .fixed-wrap input[type="text"] {
-  width: 565px;
+  border: 1px solid #ccc;
 }
 
 .btn-wrap {
