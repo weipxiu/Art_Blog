@@ -21,7 +21,7 @@ jQuery(function () {
 
   // 导航切换
   jQuery('.nav-list').click(function () {
-    localStorage.setItem("active_index",$(this).index())
+    localStorage.setItem("active_index",jQuery(this).index())
     jQuery(this).addClass('on').siblings().removeClass('on');
     jQuery('.content-wrap').eq(jQuery(this).index()).show().siblings('.content-wrap').hide();
   });
