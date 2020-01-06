@@ -44,7 +44,7 @@ textarea::-webkit-scrollbar-track {
 
 textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #eee;
+  background-color: #bbb;
 }
 .url-inp {
   width: calc(100% - 290px);
@@ -97,6 +97,9 @@ textarea::-webkit-scrollbar-thumb {
 
 .row .right-wrap {
   width: calc(100% - 135px);
+}
+.row .right-wrap input.url-inp{
+  border: 1px solid #ccc;
 }
 
 .row .fixed-wrap input[type="text"] {
