@@ -2070,13 +2070,13 @@ i {
   padding: 0 15px 4px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .friendship .daily-list ul li {
   line-height: 26px;
   height: 27px;
-  margin: 0 0 10px 0;
+  margin: 0 4px 10px 0;
   padding: 5px;
   text-align: center;
   border-radius: 5px;
