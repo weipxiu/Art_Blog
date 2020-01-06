@@ -320,7 +320,7 @@
 
 	<!-- 底部悬浮窗start -->
 	<?php
-			if (get_option('weipxiu_options')['login_reg'] == 'on') {
+			if (get_option('weipxiu_options')['login_reg'] == 'on' && !is_user_logged_in()) {
 					?>
 					<div class="login_alert">
 						<div class="login_alert_close">

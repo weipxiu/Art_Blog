@@ -2990,8 +2990,6 @@ p.data-l span.recommend a:hover {
   margin: 10px auto;
   text-indent: 2em;
   color: #666;
-  text-align: justify;
-  text-align-last: left;
 }
 
 .log-text p .beCareful {

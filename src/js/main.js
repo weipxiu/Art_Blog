@@ -515,14 +515,14 @@ $(function () {
 
     if ($(document).width() >= 1200) {
         // 底部悬浮登录注册start
-        if (sessionStorage.getItem("off_login") != 1) {
+        if (localStorage.getItem("off_login") != 1) {
             setTimeout(() => {
                 $(".login_alert").slideDown();
             }, 1000)
         }
         $(".login_alert_close").click(() => {
             $(".login_alert").slideUp();
-            sessionStorage.setItem("off_login", 1)
+            localStorage.setItem("off_login", 1)
         })
         // 底部悬浮登录注册end
 
