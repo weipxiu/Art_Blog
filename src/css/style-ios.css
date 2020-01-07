@@ -1123,8 +1123,12 @@ ul.post-categories li:first-child {
   font-size: 0.2rem;
   color: #d0d0d0!important;
 }
-.continar-left p.l .iconfont,.continar-left p.l .fa{
+.continar-left p.l .fa{
 display: none
+}
+.continar-left p.l .iconfont{
+  color: #e0e0e0;
+  font-size: 0.24rem;
 }
 .text_right>h2 + img{
     max-width: 1.8rem;
@@ -1383,9 +1387,7 @@ div.com-art ul li {
   margin: 0;
   padding: 0;
   line-height: 24px;
-}
-.friendship .daily-list ul li i.iconfont {
-  display: none;
+  color: #fff;
 }
 
 .widget ul li:nth-child(1) em {
@@ -3595,6 +3597,42 @@ p.reward-p {
 }
 
 /* ajax loading动画end */
+
+
+/* 随机背景颜色start */
+.continar-right .color-1 {
+  background: #f3a683;
+}
+
+.continar-right .color-2 {
+  background: #778beb;
+}
+
+.continar-right .color-3 {
+  background: #e77f67;
+}
+
+.continar-right .color-4 {
+  background: #f5cd79;
+}
+
+.continar-right .color-5 {
+  background: #0fb9b1;
+}
+
+.continar-right .color-6 {
+  background: #f8a5c2;
+}
+
+.continar-right .color-7 {
+  background: #596275;
+}
+
+.continar-right .color-8 {
+  background: #20bf6b;
+}
+
+/* 随机背景颜色end */
 
 /* 文章评论框start */
 .post_content h3.comments-title {

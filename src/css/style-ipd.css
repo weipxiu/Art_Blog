@@ -1106,7 +1106,28 @@ div.com-art ul li {
 }
 .friendship ul li a {
   margin-left: 0.5rem;
-  font-size: 0.26rem;
+}
+
+.friendship .daily-list ul li {
+  line-height: 24px;
+  border: 1px solid #eee;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  text-align: center;
+  border-radius: 0.08rem;
+  animation-delay: 0.1s;
+  float: left;
+  margin: 0 1% 10px 0;
+  padding: 0.04rem 0.14rem;
+  width: auto;
+}
+.friendship .daily-list ul li a{
+  margin-left:0;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+  color: #fff;
 }
 .widget ul li:nth-child(1) em {
   background: #fd8c84;
@@ -3141,6 +3162,42 @@ canvas,
 }
 
 /* ajax loading动画end */
+
+
+/* 随机背景颜色start */
+.continar-right .color-1 {
+  background: #f3a683;
+}
+
+.continar-right .color-2 {
+  background: #778beb;
+}
+
+.continar-right .color-3 {
+  background: #e77f67;
+}
+
+.continar-right .color-4 {
+  background: #f5cd79;
+}
+
+.continar-right .color-5 {
+  background: #0fb9b1;
+}
+
+.continar-right .color-6 {
+  background: #f8a5c2;
+}
+
+.continar-right .color-7 {
+  background: #596275;
+}
+
+.continar-right .color-8 {
+  background: #20bf6b;
+}
+
+/* 随机背景颜色end */
 
 /* 文章评论框start */
 .post_content h3.comments-title {

@@ -138,9 +138,6 @@ $(function () {
     }
     //点击图片放大全屏end
 
-    //给友情链接列表增加iconfont
-    $("ul.friendsChain li a").before("<i class='iconfont'>&#xe64a;</i>");
-
     // 文章详情页点赞
     setInterval(function () {
         $(".page-reward .page-reward-btn .tooltip-item font,.page-reward .page-reward-btn .tooltip-item a").toggleClass("s_show");
