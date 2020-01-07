@@ -2177,12 +2177,6 @@ div.com-art ul li {
   font-family: 'georgia', 'STHeiti', 'Microsoft YaHei', 'simsun', 'sans-serif', Arial;
 }
 
-.widget ul li i.icon-octicon-eye {
-  font-size: 12px;
-  color: #e0e0e0;
-  position: static;
-}
-
 .widget ul li a {
   margin-left: 30px;
   display: block;
@@ -5843,6 +5837,12 @@ p.data-l span {
   font-size: 12px;
   float: right;
   line-height: 20px;
+}
+
+.hot_time  i.iconfont{
+  font-size: 12px;
+  color: #e0e0e0;
+  position: static;
 }
 
 .hot_rticles ul li img {
