@@ -69,7 +69,7 @@
 								<span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
 								<span>
 									<a href="<?php the_permalink(); ?> ">
-										<i class="iconfont icon-yanjing1"></i><?php echo getPostViews(get_the_ID()); ?>℃
+										<i class="iconfont icon-icon-eyes"></i><?php echo getPostViews(get_the_ID()); ?>
 									</a>
 								</span>
 								<span class="comm">
@@ -78,7 +78,7 @@
 								</span>
 								<span class="post-like">
 									<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-xingxing"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
-									} ?></span>喜欢
+									} ?></span>
 									</a>
 								</span>
 								<span class="r"></span>

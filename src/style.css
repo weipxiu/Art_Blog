@@ -2177,8 +2177,8 @@ div.com-art ul li {
   font-family: 'georgia', 'STHeiti', 'Microsoft YaHei', 'simsun', 'sans-serif', Arial;
 }
 
-.widget ul li i.iconfont {
-  font-size: 14px;
+.widget ul li i.icon-octicon-eye {
+  font-size: 12px;
   color: #e0e0e0;
   position: static;
 }
@@ -2657,10 +2657,11 @@ div.com-art ul li {
 }
 
 .continar-left p.l>span {
-  margin: 0 8px;
+  margin: 0 2px;
 }
 .continar-left p.l > span.p_time {
   display: inline-block;
+  margin-right: 15px;
 }
 .continar-left p.l>span.i_time{
   display: none;
@@ -2668,6 +2669,7 @@ div.com-art ul li {
 
 .continar-left p.l .iconfont {
   margin-right: 3px;
+  font: 13px;
   color: #e0e0e0;
 }
 
