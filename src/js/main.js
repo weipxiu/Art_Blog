@@ -512,11 +512,11 @@ $(function () {
 
     if ($(document).width() >= 1200) {
         // 底部悬浮登录注册start
-        if (localStorage.getItem("off_login") != 1) {
-            setTimeout(() => {
-                $(".login_alert").slideDown();
-            }, 1000)
-        }
+        // if (localStorage.getItem("off_login") != 1) {
+        //     setTimeout(() => {
+        //         $(".login_alert").slideDown();
+        //     }, 1000)
+        // }
         $(".login_alert_close").click(() => {
             $(".login_alert").slideUp();
             localStorage.setItem("off_login", 1)
