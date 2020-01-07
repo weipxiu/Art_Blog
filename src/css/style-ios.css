@@ -1130,6 +1130,7 @@ display: none
   color: #e0e0e0;
   font-size: 0.24rem;
   margin-right: 3px;
+  vertical-align: middle;
 }
 .continar-left p.l .icon-icon-eyes{
   transform: scale(0.9);
