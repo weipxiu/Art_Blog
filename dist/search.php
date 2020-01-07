@@ -103,15 +103,15 @@
                         <span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
                         <span>
                             <a href="<?php the_permalink(); ?> ">
-                                <i class="iconfont icon-liulan"></i><?php echo getPostViews(get_the_ID()); ?>℃
+                                <i class="iconfont icon-yanjing1"></i><?php echo getPostViews(get_the_ID()); ?>℃
                             </a>
                         </span>
                         <span class="comm">
-                            <a href="<?php the_permalink(); ?> "><i class="iconfont icon-pinglun2"></i><?php echo number_format_i18n(get_comments_number()); ?>条评论
+                            <a href="<?php the_permalink(); ?> "><i class="iconfont icon-liuyan1"></i><?php echo number_format_i18n(get_comments_number()); ?>
                             </a>
                         </span>
                         <span class="post-like">
-                            <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-damuzhi1"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
+                            <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-xingxing"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
                             } ?></span>喜欢
                             </a>
                         </span>

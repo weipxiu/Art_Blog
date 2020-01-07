@@ -2178,17 +2178,9 @@ div.com-art ul li {
 }
 
 .widget ul li i.iconfont {
-  color: #f78585;
-  line-height: 20px;
-  width: 16px;
-  height: 20px;
-  font-style: normal;
-  display: inline-block;
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  text-align: center;
   font-size: 14px;
+  color: #e0e0e0;
+  position: static;
 }
 
 .widget ul li a {
@@ -2676,6 +2668,7 @@ div.com-art ul li {
 
 .continar-left p.l .iconfont {
   margin-right: 3px;
+  color: #e0e0e0;
 }
 
 .continar-left p.l * {

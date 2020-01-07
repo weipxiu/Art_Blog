@@ -57,11 +57,11 @@
                             </span>
                             <!--<span>
                                  <a href="<?php the_permalink(); ?> ">
-                                    <i class="iconfont icon-pinglun2"></i>
+                                    <i class="iconfont icon-liuyan1"></i>
                                     <span id="url::<?php the_permalink(); ?>" class="cy_cmt_count"></span>
                                     <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2b1NqT">
                                     </script>
-                                    条评论
+                                    
                                 </a> 
                             </span>-->
                         </p>
@@ -81,7 +81,7 @@
                         <div class="post-actions">
                             <span class="post-like action action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                    <i class="iconfont icon-damuzhi1"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+                                    <i class="iconfont icon-xingxing"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
                                             } else {
                                                 echo '0';
@@ -119,7 +119,7 @@
                                     <span class="tooltip-item">
                                         <font class="s_show">赏</font>
                                         <a href="javascript:;" style="color: #f78585" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                            <i class="iconfont icon-damuzhi1" style="color: #fff"></i>
+                                            <i class="iconfont icon-xingxing" style="color: #fff"></i>
                                             <span class="tog_show">
                                                 <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                         echo get_post_meta($post->ID,'bigfa_ding',true);

@@ -86,7 +86,7 @@
                         <?php the_title(); ?>
                     </a>
                     <time class="hot_time"><?php the_time('Y年m月d日') ?>
-                        <span>阅读(<?php echo getPostViews(get_the_ID()); ?>)</span>
+                        <span><i class="iconfont icon-yanjing1"></i><?php echo getPostViews(get_the_ID()); ?></span>
                     </time>
                 </div>
             </li>

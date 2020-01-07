@@ -4,7 +4,7 @@ if ( post_password_required() )
 ?>
 <div id="comments" class="responsesWrapper">
     <meta content="UserComments:<?php echo number_format_i18n( get_comments_number() );?>" itemprop="interactionCount">
-    <h3 class="comments-title">共有 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span> 条评论 - <?php the_title(); ?></h3>
+    <h3 class="comments-title">共有 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span>  - <?php the_title(); ?></h3>
     <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<?php the_ID();?>">
     <?php paginate_comments_links(array('prev_next'=>true)); ?>
     </nav>
