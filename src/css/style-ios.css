@@ -1129,6 +1129,12 @@ display: none
 .continar-left p.l .iconfont{
   color: #e0e0e0;
   font-size: 0.24rem;
+  margin-right: 3px;
+}
+.continar-left p.l .icon-icon-eyes{
+  transform: scale(0.9);
+  display: inline-block;
+  margin-right: 0;
 }
 .text_right>h2 + img{
     max-width: 1.8rem;
