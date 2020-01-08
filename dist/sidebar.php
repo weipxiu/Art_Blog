@@ -243,9 +243,9 @@
                 <li>标签总数：
                     <?php echo $count_tags = wp_count_terms('post_tag'); ?> 个
                 </li>
-                <li>建站时间：
+                <!-- <li>建站时间：
                     <?php echo floor((time()-strtotime("2016-12-15"))/86400);?> 天
-                </li>
+                </li> -->
                 <li>注册用户：
                     <?php $users = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users"); echo $users; ?> 人
                 </li>
