@@ -100,19 +100,19 @@ IV、源码开放供大家使用并修改，但在使用过程中底部请保留
 │  category.php   //通用列表模板
 │  comments.php   //评论模块
 │  favicon.ico  //网页浏览器标签icon
-│  footer.php  //底部
-│  functions.php   //主题核心函数
-│  header.php  //头部
+│  footer.php  //公共底部
+│  functions.php  //主题核心函数
+│  header.php  //公共头部
 │  index.html  //测试页面
 │  index.php   //首页
-│  page.php    //注册
+│  page.php    //通用单页模板
 │  screenshot.png //wordpress主题展示图片
 │  search.php  //搜索模板
 │  sidebar.php    //右侧栏目
 │  single.php  //文章详情
 │  style.css   //PC端样式
-│  thanks.php  //特别鸣谢
-│  theme-options.php  //主题配置文件
+│  thanks.php  //特别鸣谢（单页）
+│  theme-options.php  //主题后台配置
 │  
 ├─css
 │      PingFangSC-Regular.woff   //字体文件
@@ -127,16 +127,16 @@ IV、源码开放供大家使用并修改，但在使用过程中底部请保留
 │      swiper.min.css   //移动端轮播swiper样式
 │      video-js.css    //视频插件样式     
 │          
-├─images    //图片资源
+├─images    //公共图片资源
 │      
 ├─js
 │  │  ajax_wordpress.js    //分页ajax刷新
 │  │  canvas-nest.min.js //canvas背景图插件
 │  │  date.js  //时光机数据
-│  │  index.js    //整个网站的js全局
-│  │  javascript.js  //只针对首页的js文件
-│  │  jquery-2.1.4.min.js 
-│  │  rem.js
+│  │  index.js    //整个网站全局js
+│  │  javascript.js  //只针对首页js文件
+│  │  jquery-2.1.4.min.js // 公共js库
+│  │  rem.js //移动端自适应适配
 │  │  swiper.min.js  //移动端的swiper轮播插件
 │  │  
 │  ├─video.js 
