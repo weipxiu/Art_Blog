@@ -2239,14 +2239,14 @@ div.com-art ul li {
   overflow: hidden;
   padding: 5px 15px 12px 15px;
 }
-.items a:nth-of-type(2n + 1){
+.items a:nth-of-type(3n-1){
   margin:0 4px 4px;
 }
 .items a {
   color: #999;
   background-color: #f6f6f6;
   float: left;
-  width: calc(330px / 3);
+  width: 100px;
   margin-bottom: 4px;
   padding: 0 8px;
   font-size: 12px;
