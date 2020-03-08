@@ -1394,7 +1394,7 @@ i {
 /* 主题内容区域start */
 .continar {
   width: 1200px;
-  margin: 86px auto 10px;
+  margin: 86px auto 40px;
   min-height: calc(100% - 214px);
   overflow: hidden;
 }
@@ -3727,7 +3727,7 @@ div.jy p {
   line-height: 36px;
   overflow: hidden;
   display: block;
-  padding: 35px 0 70px;
+  padding: 30px 0 70px;
   box-sizing: border-box;
   text-align: center;
   background: #fff;
@@ -3737,7 +3737,7 @@ div.jy p {
 
 .wp-pagenavi a {
   text-decoration: none;
-  background-color: #ddd;
+  background-color: #f6f6f6;
   color: #666;
   padding: 8px 14px;
   margin: 0 2px;
