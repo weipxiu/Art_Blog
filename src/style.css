@@ -3725,24 +3725,25 @@ div.jy p {
   width: 100%;
   height: 36px;
   line-height: 36px;
-  text-align: left;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
   display: block;
-  margin: 35px 0 25px;
-  text-align: -moz-center;
+  padding: 35px 0 70px;
+  box-sizing: border-box;
   text-align: center;
+  background: #fff;
+  margin-top: -10px;
+  border-top: 1px solid #f2f2f2;
 }
 
 .wp-pagenavi a {
   text-decoration: none;
   background-color: #ddd;
   color: #666;
-  padding: 6px 12px;
+  padding: 8px 14px;
   margin: 0 2px;
   border-radius: 2px;
   font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
 span.extend {
@@ -3767,7 +3768,7 @@ span.extend {
 .wp-pagenavi a.current {
   background-color: #1890ff;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 8px 14px;
   margin: 0 2px;
   border: 0;
   color: #fff;

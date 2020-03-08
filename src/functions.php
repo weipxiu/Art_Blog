@@ -125,7 +125,7 @@ function lingfeng_pagenavi( $range = 4 ) {
         next_posts_link('下一页');
         if($paged != $max_page){
             //echo '<a href=".get_pagenum_link($max_page) ." class="extend" title='跳转到最后一页'>共'.$max_page.'页</a>';
-            echo '<a href='.get_pagenum_link($max_page) .' class="last">共'.$max_page.'页</a>';
+            echo '<a href='.get_pagenum_link($max_page) .' class="last">共 '.$max_page.' 页</a>';
         }
         //echo '<span class="last">共'.$max_page.'页</span>';
         echo "</div>\n";  
