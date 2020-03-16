@@ -31,15 +31,18 @@ gulp.watch -- 观察文件是否发生改变
 */
 
 //清空dist目录
-gulp.task("clean", function () {
-    console.log('清空/'+target+'目录下的资源')
-   return gulp.src(target+'/*', {
-        read: false
+var clear = function(href){
+    gulp.task("clean", function () {
+       console.log('清空'+(href || target)+'目录下的资源')
+       return gulp.src((href || target+'/*'), {
+            read: false //设置参数read:false可以阻止访问文件,加快删除速度
+        })
+         .pipe(clean({
+            force: true
+        }));
     })
-     .pipe(clean({
-        force: true
-    }));
-})
+}
+clear()
 
 // 拷贝文件
 gulp.task("copyHtml", function () {
@@ -202,8 +205,8 @@ gulp.task("Watch", function () {
     gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/**.css"], ["copyHtml"]);
     gulp.watch(['src/*.html'], ["miniHtml"]);
     gulp.watch(["src/**.css"], ["minCss"]);
-    // gulp.watch([target+"/**.css"], ["themesVer"]);
-    gulp.watch(["src/js/main.js","src/js/ajax_wordpress.js"], ["jsConcat"]);
+    gulp.watch([target+"/**.css"], ["themesVer"]);
+    gulp.watch(["src/*.js"], ["jsConcat"]);
 })
 
 
