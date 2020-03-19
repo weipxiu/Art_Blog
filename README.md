@@ -31,7 +31,7 @@
 ## 主题后台配置预览
 ![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp-theme-options.png)
 
-## 哪些网站在使用(据不完全统计)
+## 哪些网站在使用(据百度手访问域名不完全统计，并非后门)
 
 |  网站名称 | 网站地址 | 
 | :----: | :----: | 
@@ -49,6 +49,7 @@
 | [PC再现](http://pczaixian.com) | http://www.pczaixian.com
 | [北漂程序员](http://blog.zoux.xin) | http://blog.zoux.xin
 | [郑鹏鑫博客](http://blog.quandaquan.cn) | http://blog.quandaquan.cn
+| [苏州特个人博客](http://www.sutee.cn) | http://www.sutee.cn
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
 <!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
