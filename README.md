@@ -26,12 +26,12 @@
   </a>
 </p>
 
-一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.6.0，[主题介绍](https://www.weipxiu.com/about)
+一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.6.1，[主题介绍](https://www.weipxiu.com/about)
 
 ## 主题后台配置预览
 ![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp-theme-options.png)
 
-## 哪些网站在使用(据百度手访问域名不完全统计，并非后门)
+## 哪些网站在使用(据百度受访问域名不完全统计，并非后门)
 
 |  网站名称 | 网站地址 | 
 | :----: | :----: | 
@@ -60,11 +60,6 @@
 <!-- | [码农小G](http://www.xicon.top) | www.xicon.top -->
 <!-- | [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com -->
 <!-- | [Newbe的博客](http://newbe.fun) | http://newbe.fun -->
-
-
-
-
-
 
 ## 如何使用它
 
