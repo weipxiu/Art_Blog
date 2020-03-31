@@ -70,7 +70,7 @@ Template Name: 升级浏览器
 			href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">Explorer 11</a>
 	</h3>
 	<p>
-		<a href="https://rj.baidu.com/soft/detail/14744.html?ald" target="_blank"><img alt="chrome"
+		<a href="https://www.google.cn/chrome/" target="_blank"><img alt="chrome"
 				src="<?php bloginfo('template_url'); ?>/images/chrome.png"></a>
 		<a href="https://www.firefox.com/" target="_blank"><img alt="safari"
 				src="<?php bloginfo('template_url'); ?>/images/firefox.png"></a>
@@ -79,7 +79,7 @@ Template Name: 升级浏览器
 		<a href="https://www.opera.com/zh-cn" target="_blank"><img alt="safari"
 				src="<?php bloginfo('template_url'); ?>/images/opera.png"></a>
 	</p>
-	<h4>Copyright © 2016-2019 <a href="/">WEIPXIU.COM</a> · 版权所有</h4>
+	<h4>Copyright © 2016-2020 <a href="/">WEIPXIU.COM</a> · 版权所有</h4>
 </body>
 
 </html>
