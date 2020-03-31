@@ -59,7 +59,7 @@ Template Name: 升级浏览器
 <body>
 	<h2>温馨提示：<br /><br /><strong>您的浏览器版本实在过低，需要更新才能访问哦 ^_^</strong></h2>
 	<h3>建议使用
-		<strong><a href="https://rj.baidu.com/soft/detail/14744.html?ald" target="_blank">Chrome</a></strong>、<strong><a
+		<strong><a href="https://www.google.cn/chrome/" target="_blank">Chrome</a></strong>、<strong><a
 				href="https://www.firefox.com/" target="_blank">firefox</a></strong>、<strong><a
 				href="https://www.apple.com/safari" target="_blank">Safari</a></strong>、<strong><a
 				href="https://www.opera.com/zh-cn" target="_blank">opera</a></strong>
