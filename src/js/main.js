@@ -283,8 +283,11 @@ $(function () {
     })
     musicList.mouseleave(function(){
         clearTimeout(time2);
+        //避免在正常时候下方轮播分割旋转时候被遮盖 
         if (!$(".site-search").is(":visible")) {
-            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+            setTimeout(() => {
+                $(".header").css("z-index", "10");
+            }, 500);
         }
         time2 = setTimeout(() => {
             $(".header-conter .nav-min").hide();

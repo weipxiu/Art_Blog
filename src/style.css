@@ -890,6 +890,7 @@ i {
 
 .nav ul.music-nav li {
   cursor: pointer;
+  z-index: 13;
 }
 
 .nav ul li:hover a span {
@@ -919,7 +920,7 @@ i {
   height: auto;
   left: calc(50% - 50px);
   top: 49px;
-  z-index: 3;
+  z-index: 13;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
   border: 1px solid #ddd;
