@@ -259,9 +259,10 @@ $(function () {
     var $index = null;
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
-    $('.header').hover(function () {
+    $('.header').mouseenter(function () {
         $(this).css("z-index", "12"); 
-    }, function () {
+    })
+    $('.header').mouseleave(function(){
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
         if (!$(".site-search").is(":visible")) {
             setTimeout(() => {
