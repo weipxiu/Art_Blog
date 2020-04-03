@@ -3097,7 +3097,8 @@ div.btn {
 }
 .os-herder ul.slide-left li .slide_slect {
   display: none;
-  /* height: 5.3rem; */
+  max-height: 3.81rem;
+  overflow-y: auto;
 }
 
 .os-herder ul.slide-left li .slide_slect a {
