@@ -926,9 +926,9 @@ i {
   border: 1px solid #ddd;
   border-top: 0;
   background: rgba(255, 255, 255, 0.9);
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   opacity: 0;
   visibility: hidden;
   border-top: 3px solid #1890ff;
@@ -942,6 +942,7 @@ i {
   opacity: 1 !important;
   top: 49px !important;
   visibility: visible !important;
+  z-index: 11;
 }
 
 .nav .nav-min::before {

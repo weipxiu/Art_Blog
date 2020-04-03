@@ -295,13 +295,12 @@ $(function () {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
         time2 = setTimeout(() => {
-            $(this).removeClass("active");
             $(".header-conter .nav-min").css({
                 "opacity": "0",
                 "visibility": "hidden",
                 "top": "70px"
             });
-        }, 100);
+        }, 500);
     });
 
     function musicdown(number) {
