@@ -267,16 +267,10 @@ $(function () {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
     })
-    musicList.hover(function(event){
+    musicList.mouseenter(function(){
         clearTimeout(time2);
         $(".header").css("z-index", "11"); 
-        $(this).find('.nav-min').css({
-            "display": "block",
-            "top": "49px"
-        }).parent('li').siblings('li').children('.nav-min').css({
-            "display": "none",
-            "top": "70px"
-        });
+        $(this).find('.nav-min').show().parent('li').siblings('li').children('.nav-min').show();
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
@@ -285,20 +279,16 @@ $(function () {
         } else {
             musicObj.get(0).src = "";
         }
-        event.stopPropagation();
-    },function(){
+    })
+    musicList.mouseleave(function(){
         clearTimeout(time2);
         if (!$(".site-search").is(":visible")) {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
         time2 = setTimeout(() => {
-            $(".header-conter .nav-min").css({
-                "display": "none",
-                "top": "70px"
-            });
+            $(".header-conter .nav-min").show();
         }, 500);
-        event.stopPropagation();
-    });
+    })
 
     function musicdown(number) {
         if (number <= musicList.length) {
