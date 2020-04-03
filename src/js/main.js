@@ -37,7 +37,7 @@ $(function () {
     $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
     $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
     //追加二级菜单父级class
-    $(".header .sub-menu").addClass('nav-min');
+    $(".header .sub-menu").hide().addClass('nav-min');
     $(".os-herder .sub-menu").addClass('slide_slect');
     //追加音乐开关
     var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
@@ -267,10 +267,11 @@ $(function () {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
     })
-    musicList.mouseover(function(){
+    musicList.mouseenter(function(){
         clearTimeout(time2);
         $(".header").css("z-index", "11"); 
-        $(this).find('ul.nav-min').show().parent('li').siblings('li').find('ul.nav-min').hide();
+        $(".header-conter .nav-min").hide();
+        $(this).find('ul.nav-min').show()
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
@@ -280,7 +281,7 @@ $(function () {
             musicObj.get(0).src = "";
         }
     })
-    musicList.mouseout(function(){
+    musicList.mouseleave(function(){
         clearTimeout(time2);
         if (!$(".site-search").is(":visible")) {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
