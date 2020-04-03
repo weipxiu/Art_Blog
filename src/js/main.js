@@ -273,11 +273,11 @@ $(function () {
         $(".header").css("z-index", "11"); 
         $(this).find('.nav-min').css({
             "opacity": "1",
-            "visibility": "visible",
+            "display": "block",
             "top": "49px"
         }).parent('li').siblings('li').children('.nav-min').css({
             "opacity": "0",
-            "visibility": "hidden",
+            "display": "none",
             "top": "70px"
         });
         $index = $(this).index();
@@ -297,7 +297,7 @@ $(function () {
         time2 = setTimeout(() => {
             $(".header-conter .nav-min").css({
                 "opacity": "0",
-                "visibility": "hidden",
+                "display": "none",
                 "top": "70px"
             });
         }, 500);
