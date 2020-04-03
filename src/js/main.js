@@ -267,10 +267,10 @@ $(function () {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
     })
-    musicList.mouseenter(function(){
+    musicList.mouseover(function(){
         clearTimeout(time2);
         $(".header").css("z-index", "11"); 
-        $(this).find('.nav-min').show().parent('li').siblings('li').find('.nav-min').hide();
+        $(this).find('ul.nav-min').show().parent('li').siblings('li').find('ul.nav-min').hide();
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
@@ -280,7 +280,7 @@ $(function () {
             musicObj.get(0).src = "";
         }
     })
-    musicList.mouseleave(function(){
+    musicList.mouseout(function(){
         clearTimeout(time2);
         if (!$(".site-search").is(":visible")) {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
