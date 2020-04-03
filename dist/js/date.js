@@ -1,6 +1,10 @@
 // JavaScript Document
 var date=[	
 	{
+		message:"2020 - 04 - 03",
+		reply:"修复一个只会出现在mac电脑Chrome浏览器上的陈年老bug"
+	},
+	{
 		message:"2019 - 10 - 09",
 		reply:"文章列表页修改时间展示格式样式"
 	},
