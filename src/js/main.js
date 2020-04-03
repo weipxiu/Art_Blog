@@ -270,7 +270,7 @@ $(function () {
     musicList.mouseenter(function(){
         clearTimeout(time2);
         $(".header").css("z-index", "11"); 
-        $(this).find('.nav-min').show().parent('li').siblings('li').children('.nav-min').show();
+        $(this).find('.nav-min').show().parent('li').siblings('li').find('.nav-min').hide();
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
@@ -286,7 +286,7 @@ $(function () {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
         time2 = setTimeout(() => {
-            $(".header-conter .nav-min").show();
+            $(".header-conter .nav-min").hide();
         }, 500);
     })
 
