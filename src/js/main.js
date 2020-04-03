@@ -37,7 +37,7 @@ $(function () {
     $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
     $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
     //追加二级菜单父级class
-    $(".header .sub-menu").hide().addClass('nav-min');
+    $(".header .sub-menu").addClass('nav-min');
     $(".os-herder .sub-menu").addClass('slide_slect');
     //追加音乐开关
     var dom_node = "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
@@ -260,7 +260,7 @@ $(function () {
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
     $('.header').hover(function () {
-        $(this).css("z-index", "11"); 
+        $(this).css("z-index", "12"); 
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
         if (!$(".site-search").is(":visible")) {
@@ -269,7 +269,7 @@ $(function () {
     })
     musicList.mouseenter(function(){
         clearTimeout(time2);
-        $(".header").css("z-index", "11"); 
+        $(".header").css("z-index", "12"); 
         $(".header-conter .nav-min").hide();
         $(this).find('ul.nav-min').show()
         $index = $(this).index();

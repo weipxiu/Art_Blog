@@ -931,6 +931,9 @@ i {
   display: none;
   border-top: 3px solid #1890ff;
 }
+.header .sub-menu{
+  display: none;
+}
 
 .nav .nav-min a.action {
   color: #1890ff;
