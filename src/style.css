@@ -928,7 +928,6 @@ i {
   /* -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; */
-  opacity: 0;
   display: none;
   border-top: 3px solid #1890ff;
 }

@@ -255,6 +255,7 @@ $(function () {
     //导航音乐title设置end
 
     //PC二级菜单，钢琴导航start
+    var time2 = null;
     var $index = null;
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
@@ -267,13 +268,12 @@ $(function () {
         }
     })
     musicList.hover(function(event){
+        clearTimeout(time2);
         $(".header").css("z-index", "11"); 
         $(this).find('.nav-min').css({
-            "opacity": "1",
             "display": "block",
             "top": "49px"
         }).parent('li').siblings('li').children('.nav-min').css({
-            "opacity": "0",
             "display": "none",
             "top": "70px"
         });
@@ -287,14 +287,16 @@ $(function () {
         }
         event.stopPropagation();
     },function(){
+        clearTimeout(time2);
         if (!$(".site-search").is(":visible")) {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
-        $(".header-conter .nav-min").css({
-            "opacity": "0",
-            "display": "none",
-            "top": "70px"
-        });
+        time2 = setTimeout(() => {
+            $(".header-conter .nav-min").css({
+                "display": "none",
+                "top": "70px"
+            });
+        }, 500);
         event.stopPropagation();
     });
 
