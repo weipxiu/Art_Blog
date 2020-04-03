@@ -268,7 +268,7 @@ $(function () {
             $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
         }
     })
-    $(".nav ul.music-nav > li:not(.mod-header_music-icon)").hover(function(event){
+    musicList.hover(function(event){
         clearTimeout(time2);
         $(".header").css("z-index", "11"); 
         $(this).find('.nav-min').css({
@@ -280,13 +280,8 @@ $(function () {
             "visibility": "hidden",
             "top": "70px"
         });
-        $(this).siblings('li').children('.nav-min').css({
-            "opacity": "0",
-            "visibility": "hidden",
-            "top": "70px"
-        });
         $index = $(this).index();
-        musicObj = $(".nav ul.music-nav > li:not(.mod-header_music-icon)").eq($index).find('audio');
+        musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
             $(this).addClass("active").siblings('li').removeClass('active');
             musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
