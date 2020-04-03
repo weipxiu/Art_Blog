@@ -264,7 +264,9 @@ $(function () {
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
         if (!$(".site-search").is(":visible")) {
-            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+            setTimeout(() => {
+                $(".header").css("z-index", "10");
+            }, 500);//避免在正常时候下方轮播分割旋转时候被遮盖 
         }
     })
     musicList.mouseenter(function(){
