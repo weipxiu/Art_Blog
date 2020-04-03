@@ -301,6 +301,7 @@ $(function () {
                 "top": "70px"
             });
         }, 500);
+        event.stopPropagation();
     });
 
     function musicdown(number) {

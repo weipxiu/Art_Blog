@@ -938,12 +938,12 @@ i {
   color: #1890ff;
 }
 
-.nav .nav-min:hover {
+/* .nav .nav-min:hover {
   opacity: 1 !important;
   top: 49px !important;
   visibility: visible !important;
   z-index: 11;
-}
+} */
 
 .nav .nav-min::before {
   content: '';
