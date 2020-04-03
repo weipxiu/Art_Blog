@@ -255,6 +255,7 @@ $(function () {
     //导航音乐title设置end
 
     //PC二级菜单，钢琴导航start
+    var time1 = null;
     var time2 = null;
     var $index = null;
     var musicObj = null;
@@ -263,8 +264,12 @@ $(function () {
         $(this).css("z-index", "12"); 
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
+        clearTimeout(time1);
         if (!$(".site-search").is(":visible")) {
-            $(".header").css("z-index", "10"); //避免在正常时候下方轮播分割旋转时候被遮盖 
+            time1 = setTimeout(() => {
+                //避免在正常时候下方轮播分割旋转时候被遮盖 
+                $(".header").css("z-index", "10"); 
+            }, 500);
         }
     })
     musicList.mouseenter(function(){
@@ -421,6 +426,11 @@ $(function () {
         event.stopPropagation();
     });
     //移动端禁止侧边导航上下滚动end
+    
+    //子元素允许局部滚动
+    $('.os-herder ul.slide-left li .slide_slect').addEventListener('touchmove', function (event) {
+        window.event.returnValue = true;
+    }, false);
 
     //禁止ios11自带浏览器缩放功能start
     document.addEventListener('touchstart', function (event) {
