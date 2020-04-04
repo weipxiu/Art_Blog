@@ -10,17 +10,6 @@
 
 <!-- 底部半透明遮盖层 -->
 <div class="footer-banner__navi">
-  <div class="js_banner_nav mod-banner_nav">
-    <a class="js_nav current" href="javascript:;"></a>
-    <a class="js_nav" href="javascript:;"></a>
-    <a class="js_nav" href="javascript:;"></a>
-    <a class="js_nav" href="javascript:;"></a>
-    <a class="js_nav" href="javascript:;"></a>
-    <a class="js_nav" href="javascript:;"></a>
-  </div>
-  <span class="mod-banner__nav-dot">
-    <canvas id="dotCanvas"></canvas>
-  </span>
 </div>
 
 <!-- 小飞机start -->

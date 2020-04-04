@@ -4906,7 +4906,7 @@ ul.post-categories li:first-child {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 14;
   background: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 1));
 }
 
