@@ -421,13 +421,11 @@ $(function () {
     //移动端禁止侧边导航上下滚动start
     $(".os-herder,.site-search").on("touchmove", function (event) {
         event.preventDefault();
-        event.stopPropagation();
     });
     //移动端禁止侧边导航上下滚动end
 
     //子元素允许局部滚动
     $('.os-herder ul.slide-left li .slide_slect').on('touchmove', function (event) {
-        event.stopPropagation();
         return true;
     }, false);
 
