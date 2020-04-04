@@ -47,6 +47,7 @@ body {
   -ms-user-select: none;
   /*chrome、safari*/
   -moz-osx-font-smoothing: grayscale;
+  filter: grayscale(100%);
 }
 img {
   transition: all 0.2s;

@@ -427,7 +427,7 @@ $(function () {
 
     //子元素允许局部滚动
     $('.os-herder ul.slide-left li .slide_slect').on('touchmove', function (event) {
-        window.event.returnValue = true;
+        event.returnValue = true;
     }, false);
 
     //禁止ios11自带浏览器缩放功能start

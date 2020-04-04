@@ -1,10 +1,5 @@
 <!-- 头部start -->
 <!-- 移动端头部start -->
-<style>
-	body{
-		filter: grayscale(100%);
-	}
-</style>
 <div class="os-headertop">
 		<div class="btn_menu"></div>
 		<a href="/" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
