@@ -265,7 +265,7 @@ $(function () {
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
         clearTimeout(time1);
-        if (!$(".site-search").is(":visible")) {
+        if (!time2 && !$(".site-search").is(":visible")) {
             time1 = setTimeout(() => {
                 //避免在正常时候下方轮播分割旋转时候被遮盖 
                 $(".header").css("z-index", "10"); 
@@ -288,14 +288,12 @@ $(function () {
     })
     musicList.mouseleave(function(){
         clearTimeout(time2);
-        //避免在正常时候下方轮播分割旋转时候被遮盖 
-        if (!$(".site-search").is(":visible")) {
-            setTimeout(() => {
-                $(".header").css("z-index", "10");
-            }, 500);
-        }
         time2 = setTimeout(() => {
             $(".header-conter .nav-min").hide();
+            //避免在正常时候下方轮播分割旋转时候被遮盖 
+            if (!$(".site-search").is(":visible")) {
+                $(".header").css("z-index", "10");
+            }
         }, 500);
     })
 
@@ -426,9 +424,9 @@ $(function () {
         event.stopPropagation();
     });
     //移动端禁止侧边导航上下滚动end
-    
+
     //子元素允许局部滚动
-    $('.os-herder ul.slide-left li .slide_slect').addEventListener('touchmove', function (event) {
+    $('.os-herder ul.slide-left li .slide_slect').on('touchmove', function (event) {
         window.event.returnValue = true;
     }, false);
 
