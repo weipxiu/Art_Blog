@@ -49,6 +49,7 @@
 | [PC再现](http://pczaixian.com) | http://www.pczaixian.com
 | [北漂程序员](http://blog.zoux.xin) | http://blog.zoux.xin
 | [郑鹏鑫博客](http://blog.quandaquan.cn) | http://blog.quandaquan.cn
+| [阿Q博客](http://qblog.org) | http://qblog.org
 | [苏州特个人博客](http://www.sutee.cn) | http://www.sutee.cn
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
