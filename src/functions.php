@@ -53,6 +53,22 @@ function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
     }
 }
 set_post_thumbnail_size(220, 140, true); // 图片宽度与高度
+
+// 屏蔽纯英文评论和纯日文
+function refused_english_comments($incoming_comment) {
+  $pattern = '/[一-龥]/u';
+  // 禁止全英文评论
+  if(!preg_match($pattern, $incoming_comment['comment_content'])) {
+    wp_die( "您的评论中必须包含汉字!" );
+  }
+  $pattern = '/[あ-んア-ン]/u';
+  // 禁止日文评论
+  if(preg_match($pattern, $incoming_comment['comment_content'])) {
+    wp_die( "评论禁止包含日文!" );
+  }
+  return( $incoming_comment );
+}
+add_filter('preprocess_comment', 'refused_english_comments');
 ?>
 <?php //控制分页页面，每个页面所显示的文章数量
 // function custom_posts_per_page($query){
