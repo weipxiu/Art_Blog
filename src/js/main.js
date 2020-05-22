@@ -287,6 +287,7 @@ $(function () {
         }
     })
     musicList.mouseleave(function(){
+        $(this).removeClass('active');
         clearTimeout(time2);
         time2 = setTimeout(() => {
             $(".header-conter .nav-min").hide();
