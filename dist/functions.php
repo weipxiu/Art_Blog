@@ -414,7 +414,7 @@ add_action( 'add_security_question','register_form' );
 
 //添加百度是否收录(php baidu_record())
 function baidu_check($url){
-    $url='http://www.baidu.com/s?wd='.$url;
+    $url='https://www.baidu.com/s?wd='.$url;
     $curl=curl_init();
     curl_setopt($curl,CURLOPT_URL,$url);
     curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);

@@ -5,9 +5,9 @@
 */
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
 <title>站点地图 - <?php bloginfo('name'); ?></title>
 <meta name="keywords" content="站点地图,<?php bloginfo('name'); ?>" />

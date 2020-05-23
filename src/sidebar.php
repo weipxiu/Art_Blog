@@ -160,10 +160,10 @@
         </h3>
         <ul class="uk-list uk-padding-small tuts_comments_user_avatars">
             <!-- wordPress原生评论头像获取get_avatar(get_comment_author_email(), 50) -->
-            <!-- 获取QQ昵称和头像（jsonp）http://users.qzone.qq.com/fcg-bin/cgi_get_portrait.fcg?uins=343049466
+            <!-- 获取QQ昵称和头像（jsonp）https://users.qzone.qq.com/fcg-bin/cgi_get_portrait.fcg?uins=343049466
              -->
-            <!-- 获取QQ昵称http://q1.qlogo.cn/g?b=qq&nk=843977358&s=40
-                 http://q2.qlogo.cn/headimg_dl?dst_uin=843977358&spec=40 -->
+            <!-- 获取QQ昵称https://q1.qlogo.cn/g?b=qq&nk=843977358&s=40
+                 https://q2.qlogo.cn/headimg_dl?dst_uin=843977358&spec=40 -->
             <?php
             global $wpdb;
             $my_email = get_bloginfo ('admin_email'); // AND comment_author_email != '$my_email' 不展示管理员回复
