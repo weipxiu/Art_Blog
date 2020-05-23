@@ -265,20 +265,20 @@ $(function () {
     var musicObj = null;
     var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
     $('.header').hover(function () {
-        $(this).css("z-index", "12"); 
+        $(this).css("z-index", "12");
     }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
         clearTimeout(time1);
         if (!time2 && !$(".site-search").is(":visible")) {
             time1 = setTimeout(() => {
                 //避免在正常时候下方轮播分割旋转时候被遮盖 
-                $(".header").css("z-index", "10"); 
+                $(".header").css("z-index", "10");
             }, 500);
         }
     })
-    musicList.mouseenter(function(){
+    musicList.mouseenter(function () {
         clearTimeout(time2);
-        $(".header").css("z-index", "12"); 
+        $(".header").css("z-index", "12");
         $(".header-conter .nav-min").hide();
         $(this).find('ul.nav-min').show()
         $index = $(this).index();
@@ -290,7 +290,7 @@ $(function () {
             musicObj.get(0).src = "";
         }
     })
-    musicList.mouseleave(function(){
+    musicList.mouseleave(function () {
         $(this).removeClass('active');
         clearTimeout(time2);
         time2 = setTimeout(() => {
@@ -313,9 +313,9 @@ $(function () {
     $(document).keydown(function (event) {
         if (localStorage.getItem("off_y") == 1) {
             //a65 s83 d68 f70 g71 h72 j74 k75 l76
-            var keyArr = [65,83,68,70,71,72,74,75,76]
+            var keyArr = [65, 83, 68, 70, 71, 72, 74, 75, 76]
             var _index = keyArr.indexOf(event.keyCode)
-            if(_index >= 0){
+            if (_index >= 0) {
                 musicdown(_index + 1)
             }
         }
@@ -530,7 +530,7 @@ $(function () {
         } else {
             ! function (e, t, a) {
                 function r() {
-                    for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y-- ,
+                    for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--,
                         s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e]
                             .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
                         ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
@@ -769,7 +769,7 @@ $(function () {
     //友情链接随机数颜色end
 
     //视频播放start
-    videojs(document.getElementById('my-video'), {}, function() {
+    if ($("#my-video").length) {
         // var delSetInterval = null; //定时器
         var myPlayer = videojs('my-video');
         // videojs.addLanguage("zh-CN",{
@@ -921,6 +921,6 @@ $(function () {
                 myPlayer.pause();
             }, 500);
         });
-    });
+    }
     //视频播放end
 })
