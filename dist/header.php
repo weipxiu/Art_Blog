@@ -9,7 +9,7 @@
 		<div class="site-search active">
 			<div class="container">
 				<form role="search" method="get" id="searchform_os" class="site-search-form" action="<?php echo home_url(); ?>/">
-					<input class="search-input" name="s" id="s" value="" placeholder="输入关键字搜索" type="text" />
+					<input class="search-input" name="s" value="" placeholder="输入关键字搜索" type="text" />
 					<button class="search-btn" type="submit" id="searchsubmit_os">
 						<i class="iconfont icon-sousuo"></i>
 					</button>
@@ -68,7 +68,7 @@
 	<div class="site-search active pc">
 		<div class="container">
 			<form role="search" method="get" id="searchform_pc" class="site-search-form" action="<?php echo home_url(); ?>/">
-				<input class="search-input" name="s" id="s" type="text" value="" placeholder="输入关键字搜索">
+				<input class="search-input" name="s" type="text" value="" placeholder="输入关键字搜索">
 				<button class="search-btn" type="submit" id="searchsubmit_pc"><i class="iconfont icon-sousuo"></i></button>
 			</form>
 		</div>

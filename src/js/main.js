@@ -769,10 +769,10 @@ $(function () {
     //友情链接随机数颜色end
 
     //视频播放start
-    var myPlayer = videojs('my-video');
-    if (myPlayer.length) {
+    if ($("#my-video").length) {
         // var delSetInterval = null; //定时器
-        myPlayer.addLanguage("zh-CN",{
+        var myPlayer = videojs('my-video');
+        videojs.addLanguage("zh-CN",{
             "Play": "播放",
             "Pause": "暂停",
             "Current Time": "当前时间",
