@@ -785,7 +785,7 @@ $(function () {
         var eleFull = document.querySelector("#my-video"); //视频对象
 
         //视频全屏方法
-        var runPrefixMethod = function (element, method) {
+        var fullScreen = function (element, method) {
             var usablePrefixMethod;
             ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
                 if (usablePrefixMethod) return;
@@ -807,10 +807,10 @@ $(function () {
         };
         if (typeof window.screenX === "number") {
             eleFull.addEventListener("dblclick", function () {
-                if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
-                    runPrefixMethod(document, "CancelFullScreen");
+                if (fullScreen(document, "FullScreen") || fullScreen(document, "IsFullScreen")) {
+                    fullScreen(document, "CancelFullScreen");
                     this.title = this.title.replace("退出", "");
-                } else if (runPrefixMethod(this, "RequestFullScreen")) {
+                } else if (fullScreen(this, "RequestFullScreen")) {
                     this.title = this.title.replace("点击", "点击退出");
                 }
             });
@@ -830,7 +830,6 @@ $(function () {
         */
         //当视频播放完成后，重新加载渲染，随时准备第二次重播
         myPlayer.on("ended", function () {
-            //alert("视频已播放完成");
             myPlayer.play();
             setTimeout(function () {
                 myPlayer.pause();
