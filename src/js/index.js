@@ -1,3 +1,7 @@
+/**
+ * @license
+ * 首页js
+ */
 $(function () {
     //var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
     var domain_name = window.location.protocol + "//" + window.location.host;
