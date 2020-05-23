@@ -5641,9 +5641,9 @@ code {
 transition: opacity 0.35s!important;
 } */
 
-.video-js:hover .vjs-control-bar {
+/* .video-js:hover .vjs-control-bar {
   opacity: 1 !important;
-}
+} */
 
 /* video视频播放器插件自定义end */
 
