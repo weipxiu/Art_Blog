@@ -5622,7 +5622,7 @@ code {
 /* 雪花end */
 
 /* video视频播放器插件样式自定义start */
-
+/* 
 .vjs-poster {
   background-size: 100% 100% !important;
 }
@@ -5635,7 +5635,7 @@ code {
 .video-js .vjs-big-play-button {
   width: 1.5em !important;
   font-size: 4em !important;
-}
+} */
 
 /* .video-js .vjs-control-bar{
 transition: opacity 0.35s!important;
