@@ -2967,10 +2967,14 @@ p.data-l span.recommend a:hover {
 .continar-left .log-text a:hover {
   text-decoration: underline;
 }
-
+.log-text ul{
+  padding-left:0.3rem
+}
 .log-text li {
   margin: 10px 0;
-  line-height: 28px;
+  line-height: 1.8;
+  list-style-type: disc;
+  text-indent: 5px;
 }
 
 .log-text li+p,
@@ -3028,8 +3032,7 @@ p.data-l span.recommend a:hover {
 }
 
 .continar-left .log-text ul li {
-  line-height: 30px;
-  margin-bottom: 15px;
+  padding-left: 2rem;
 }
 
 .continar-left .log-text .copy {

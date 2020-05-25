@@ -1815,8 +1815,12 @@ td.line-numbers {
   text-align: justify;
   text-align-last: left;
 }
+.log-text ul{
+  padding-left:0.3rem
+}
 .continar-left .log-text p,
 .continar-left .log-text li {
+  list-style-type: disc;
   margin: 10px 0;
 }
 .continar-left .log-text p.reward-p{

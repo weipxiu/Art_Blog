@@ -2027,6 +2027,10 @@ td.line-numbers {
   font-size: 0.28rem;
 }
 
+.log-text li {
+  list-style-type: disc;
+}
+
 .log-text p {
   text-indent: 2em;
   text-align: justify;
