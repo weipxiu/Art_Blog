@@ -344,7 +344,7 @@ add_action('after_wp_tiny_mce', 'add_button_mce');
 function add_button_mce($mce_settings) { 
 ?>
     <script type="text/javascript">
-        QTags.addButton( '注意', '注意', "<span class='beCareful'>", "</span>" );
+        QTags.addButton( '重点', '重点', "<span class='beCareful'>", "</span>" );
         QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
         QTags.addButton( '视频', '视频', "[embed]", "[/embed]" );
         QTags.addButton( '登录可见', '登录可见', "[login_success]", "[/login_success]" );
