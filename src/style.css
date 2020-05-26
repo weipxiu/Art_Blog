@@ -3010,7 +3010,7 @@ p.data-l span.recommend a:hover {
   color: #666;
 }
 
-.log-text p .beCareful {
+.log-text .beCareful {
   color: #d14;
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
