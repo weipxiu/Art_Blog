@@ -5695,6 +5695,10 @@ transition: opacity 0.35s!important;
 
 .post-actions .action.action-like {
   background-color: #1890ff;
+  font-size: 12px;
+  padding: 0px 15px;
+  height: 32px;
+  line-height: 32px;
 }
 
 .post-actions .action.action-like a .iconfont {
@@ -5724,15 +5728,15 @@ transition: opacity 0.35s!important;
 
 .post-actions .action {
   display: inline-block;
-  opacity: 0.8;
-  padding: 6px 15px;
-  height: 21px;
+  opacity: .8;
+  padding: 8px 15px;
   border-radius: 15px;
   color: #fff;
   font-size: 14px;
   margin: 0 7px;
   box-sizing: content-box;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
+  font-size: 12px;
 }
 
 .post-actions .action.action-rewards {
@@ -6493,12 +6497,12 @@ label {
 }
 
 .commentBtn .btn {
-  padding: 7px 0;
-  width: 138px !important;
+  padding: 8px 15px;
   text-align: center;
   background: #1890ff;
   color: #fff;
   border: 0;
+  font-size: 12px;
 }
 
 .commentBtn[role='group'] {
