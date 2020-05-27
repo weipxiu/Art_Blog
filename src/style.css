@@ -4786,6 +4786,7 @@ ul.post-categories li:first-child {
   font-size: 14px;
   line-height: 47px;
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 .e-secret input {
@@ -4805,21 +4806,21 @@ ul.post-categories li:first-child {
   color: #606266;
   display: inline-block;
   font-size: inherit;
-  height: 40px;
+  height: 32px;
   line-height: 1;
   outline: none;
   padding: 0 15px;
+  background-color:transparent!important;
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .euc-y-s {
-  width: 98px;
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
   background: #fff;
-  border: 1px solid #dcdfe6;
+  border: none;
   border-color: #dcdfe6;
   color: #606266;
   -webkit-appearance: none;
@@ -4832,7 +4833,7 @@ ul.post-categories li:first-child {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 12px 20px;
+  padding: 9px 15px;
   font-size: 14px;
   border-radius: 0 4px 4px 0;
 }
