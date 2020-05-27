@@ -2976,6 +2976,7 @@ p.data-l span.recommend a:hover {
   margin: 10px 0;
   line-height: 1.8;
   list-style-type: disc;
+  text-align: left;
 }
 
 .log-text li + p,
