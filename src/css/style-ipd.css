@@ -1,7 +1,9 @@
 ﻿@charset "utf-8";
 @font-face {
-  font-family: sf-pro-text_regular;
-  src: url(./font/sf-pro-text_regular.woff2);
+    font-family: sf-pro-text_regular;
+    font-style:normal;
+	  font-weight:400;
+    src: local('☺︎'), url("./font/sf-pro-text_regular.woff2") format("woff2"), url("./font/sf-pro-display_regular.woff2") format("woff2");
 }
 * {
   margin: 0;
