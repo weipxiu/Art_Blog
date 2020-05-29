@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
-    font-family: HiraginoSansGB-W3;
-    src: url(./font/HiraginoSansGB-W3.woff);
+    font-family: sf-pro-text_regular;
+    src: url(./font/sf-pro-text_regular-W3.woff2);
 }
 
 * {
@@ -12,7 +12,7 @@
   color: #666;
   text-decoration: none;
   /* font: 14px play, PingFangSC-Regular, Microsoft Yahei; */
-  font: 14px HiraginoSansGB-W3, Montserrat, Microsoft Yahei;
+  font: 14px sf-pro-text_regular, Montserrat, Microsoft Yahei;
   font-weight: normal;
   /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
 }
@@ -1831,6 +1831,7 @@ i {
   overflow: hidden;
   width: 100%;
   margin-top: 16px;
+  color: #aaa;
 }
 
 .read-more {

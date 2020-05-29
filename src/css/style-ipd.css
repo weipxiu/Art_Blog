@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 @font-face {
-  font-family: HiraginoSansGB-W3;
-  src: url(./font/HiraginoSansGB-W3.woff);
+  font-family: sf-pro-text_regular;
+  src: url(./font/sf-pro-text_regular-W3.woff2);
 }
 * {
   margin: 0;
@@ -9,7 +9,7 @@
   list-style: none;
   box-sizing: border-box;
   color: #666;
-  font: 0.28rem HiraginoSansGB-W3, Montserrat, Microsoft Yahei;
+  font: 0.28rem sf-pro-text_regular, Montserrat, Microsoft Yahei;
   text-decoration: none;
   /*touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
