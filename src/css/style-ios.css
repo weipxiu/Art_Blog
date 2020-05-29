@@ -1,13 +1,16 @@
 ﻿@charset "utf-8";
+@font-face {
+  font-family: HiraginoSansGB-W3;
+  src: url(./font/HiraginoSansGB-W3.woff);
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   list-style: none;
   box-sizing: border-box;
   color: #666;
-  font-size: 0.24rem;
+  font: 0.24rem HiraginoSansGB-W3, Montserrat, Microsoft Yahei;
   text-decoration: none;
   /*-webkit-touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/

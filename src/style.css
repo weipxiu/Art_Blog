@@ -1,8 +1,8 @@
-/* @font-face {
-    font-display: swap;
-    font-family: play;
-    src: url(./css/play_font.ttf);
-} */
+@charset "utf-8";
+@font-face {
+    font-family: HiraginoSansGB-W3;
+    src: url(./font/HiraginoSansGB-W3.woff);
+}
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@
   color: #666;
   text-decoration: none;
   /* font: 14px play, PingFangSC-Regular, Microsoft Yahei; */
-  font: 14px Montserrat, Microsoft Yahei;
+  font: 14px HiraginoSansGB-W3, Montserrat, Microsoft Yahei;
   font-weight: normal;
   /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
 }
@@ -1734,11 +1734,12 @@ i {
 .text h2 {
   margin-bottom: 5px;
   padding-top: 2px;
-  width: 540px;
+  height: 48px;
   overflow: hidden;
-  white-space: nowrap;
-  -o-text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
   text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
 }
 
 .text h2 a {
@@ -1829,7 +1830,7 @@ i {
   box-orient: vertical;
   overflow: hidden;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .read-more {
