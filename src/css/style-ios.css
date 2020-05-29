@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 @font-face {
   font-family: sf-pro-text_regular;
-  src: url(./font/sf-pro-text_regular-W3.woff2);
+  src: url(./font/sf-pro-text_regular.woff2);
 }
 
 * {
