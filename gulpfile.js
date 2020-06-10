@@ -119,11 +119,11 @@ gulp.task("imageMin", function () {
         .pipe(gulp.dest(target+'/images'))
 })
 
-// ES6转换转ES5(babel-v7版本)
+// ES6转换转ES5(babel-v8版本)
 // gulp.task('babel', () =>{
 //       return  gulp.src('src/js/*.js')
 //         .pipe(babel({
-//             presets: ['@babel/env']
+//             presets: ['@babel/preset-env']
 //         }))
 //         .pipe(scriptmin()) //转换后进行压缩
 //         .pipe(gulp.dest(target+'/js'))
@@ -131,16 +131,15 @@ gulp.task("imageMin", function () {
 // );
 
 
-//ES6转换转ES5(babel-v7版本)、代码合并
+//ES6转换转ES5(babel-v8版本)、代码合并
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
     //公共
      gulp.src(["src/js/main.js","src/js/ajax_wordpress.js"])
         .pipe(plumber())
         .pipe(babel({
-            presets: ['@babel/env']
+            presets: ['@babel/preset-env']
         }))
-        .pipe(scriptmin()) //转换后进行压缩
         .pipe(concat("main_min.js"))
         .pipe(scriptmin()) //在合并的时候压缩js
         .pipe(gulp.dest(target+"/js"))
@@ -152,7 +151,7 @@ gulp.task("jsConcat", function () {
     //首页
     return gulp.src(["src/js/index.js","src/js/swiper.min.js"])
         .pipe(babel({
-            presets: ['@babel/env']
+            presets: ['@babel/preset-env']
         }))
         .pipe(scriptmin()) //转换后进行压缩
         .pipe(concat("index_min.js"))
@@ -184,20 +183,6 @@ gulp.task("jsConcat", function () {
 //         next();
 //     }
 // });
-
-// gulp.watch('src/*.html').on('change', function () {
-//     browserSync.reload('*.html');
-// });
-// gulp.watch('src/*.php').on('change', function () {
-//     browserSync.reload('*.php');
-// });
-// gulp.watch('src/css/**/*.scss').on('change', function () {
-//     browserSync.reload('*.css');
-// });
-// gulp.watch('src/js/**/*.js').on('change', function () {
-//     browserSync.reload('*.js');
-// });
-// browserSync.reload();
 
 
 //监听文件是否发生改变

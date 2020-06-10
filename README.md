@@ -35,6 +35,8 @@
 
 |  网站名称 | 网站地址 | 
 | :----: | :----: | 
+| [故城县历史](http://www.gaojibo.com/) | http://www.gaojibo.com
+| [肖文杰个人博客](https://www.goodjayson.com/) | https://www.goodjayson.com
 | [前端笔记](http://younglee666.com/) | http://younglee666.com
 | [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
 | [大川渝个人博客](https://www.dcydz.com) | www.dcydz.com

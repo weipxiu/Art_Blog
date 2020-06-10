@@ -42,6 +42,8 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "browserslist": "^4.12.0",
+    "caniuse-lite": "^1.0.30001081",
     "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.1"
   }
