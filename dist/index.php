@@ -347,7 +347,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/index_min.js"></script>
 <script type="text/javascript">
-if(!"<?php bloginfo('template_url'); ?>".includes('wp-content/themes/Art_Blog')){
+if(!"<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') > -1){
 		layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{
 		skin: 'layui',
 		title:"提示",
