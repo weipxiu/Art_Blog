@@ -10,6 +10,22 @@ $(function () {
         ).play();
     }
 
+    // 根据缓存状态初始化音乐
+    function music_storage(){
+        if (localStorage.getItem("off_y") != 1) {
+            $(".nav ul.music-nav li > p").css("opacity", "0");
+            localStorage.setItem("off_y", 0);
+        } else {
+            $(".nav ul.music-nav li > p").css("opacity", "1");
+            localStorage.setItem("off_y", 1);
+            $(".mod-header_music-icon").addClass('hover');
+        }
+    }
+    music_storage()
+    window.onstorage = (e) => {
+        music_storage()
+    }
+
     //特色图片懒加载
     $("img.Lazy_load").lazyload({
         effect: "show"
@@ -204,16 +220,6 @@ $(function () {
     });
 
     $(".header").addClass("Top");
-
-    // 根据缓存状态初始化音乐
-    if (localStorage.getItem("off_y") != 1) {
-        $(".nav ul.music-nav li > p").css("opacity", "0");
-        localStorage.setItem("off_y", 0);
-    } else {
-        $(".nav ul.music-nav li > p").css("opacity", "1");
-        localStorage.setItem("off_y", 1);
-        $(".mod-header_music-icon").addClass('hover');
-    }
 
     // 跳动音符start
     $(".mod-header_music-icon").click(function () {
@@ -508,18 +514,6 @@ $(function () {
     //留言板手风琴end
 
     if ($(document).width() >= 1200) {
-        // 底部悬浮登录注册start
-        // if (localStorage.getItem("off_login") != 1) {
-        //     setTimeout(() => {
-        //         $(".login_alert").slideDown();
-        //     }, 1000)
-        // }
-        $(".login_alert_close").click(() => {
-            $(".login_alert").slideUp();
-            localStorage.setItem("off_login", 1)
-        })
-        // 底部悬浮登录注册end
-
         //文章分类没有资源时候404提示
         if ($(".continar-left .article_not").length > 0) {
             $("body > .continar").css({ "height": "calc(100% - 280px)" });
