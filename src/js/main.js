@@ -10,22 +10,6 @@ $(function () {
         ).play();
     }
 
-    // 根据缓存状态初始化音乐
-    function music_storage(){
-        if (localStorage.getItem("off_y") != 1) {
-            $(".nav ul.music-nav li > p").css("opacity", "0");
-            localStorage.setItem("off_y", 0);
-        } else {
-            $(".nav ul.music-nav li > p").css("opacity", "1");
-            localStorage.setItem("off_y", 1);
-            $(".mod-header_music-icon").addClass('hover');
-        }
-    }
-    music_storage()
-    window.onstorage = (e) => {
-        music_storage()
-    }
-
     //特色图片懒加载
     $("img.Lazy_load").lazyload({
         effect: "show"
@@ -149,7 +133,7 @@ $(function () {
                 }
             });
     } else {
-        layer.alert('爷，现在都什么时代了，你还在用这么土的浏览器~~', {
+        layer.alert('亲，现在都什么时代了，你还在用这么土的浏览器~~', {
             skin: 'layui',
             title: "请更换浏览器",
             closeBtn: 0,
@@ -220,6 +204,16 @@ $(function () {
     });
 
     $(".header").addClass("Top");
+
+    // 根据缓存状态初始化音乐
+    if (localStorage.getItem("off_y") != 1) {
+        $(".nav ul.music-nav li > p").css("opacity", "0");
+        localStorage.setItem("off_y", 0);
+    } else {
+        $(".nav ul.music-nav li > p").css("opacity", "1");
+        localStorage.setItem("off_y", 1);
+        $(".mod-header_music-icon").addClass('hover');
+    }
 
     // 跳动音符start
     $(".mod-header_music-icon").click(function () {
@@ -514,13 +508,25 @@ $(function () {
     //留言板手风琴end
 
     if ($(document).width() >= 1200) {
+        // 底部悬浮登录注册start
+        // if (localStorage.getItem("off_login") != 1) {
+        //     setTimeout(() => {
+        //         $(".login_alert").slideDown();
+        //     }, 1000)
+        // }
+        $(".login_alert_close").click(() => {
+            $(".login_alert").slideUp();
+            localStorage.setItem("off_login", 1)
+        })
+        // 底部悬浮登录注册end
+
         //文章分类没有资源时候404提示
         if ($(".continar-left .article_not").length > 0) {
             $("body > .continar").css({ "height": "calc(100% - 280px)" });
         }
         //点击页面出现爱心
         if (!!window.ActiveXObject || "ActiveXObject" in window) {
-            console.log("天啦，偶买噶，你竟然还在用IE？")
+            console.log("天啦，偶买噶，您竟然还在用IE？")
         } else {
             ! function (e, t, a) {
                 function r() {
