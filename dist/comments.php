@@ -4,11 +4,11 @@ if ( post_password_required() )
 ?>
 <div id="comments" class="responsesWrapper">
     <meta content="UserComments:<?php echo number_format_i18n( get_comments_number() );?>" itemprop="interactionCount">
-    <h3 class="comments-title">共有 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span>  - <?php the_title(); ?></h3>
+    <h3 class="comments-title">共 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span> 条评论关于"<?php the_title(); ?>"</h3>
     <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<?php the_ID();?>">
     <?php paginate_comments_links(array('prev_next'=>true)); ?>
     </nav>
-    <?php if(comments_open()) : ?>
+    <?php if(comments_open() || is_page()) : ?>
         <div class="respond" role="form">
             <h2 id="reply-title" class="comments-title"><?php comment_form_title( '', '回复给 %s' ); ?> 
                 <small>

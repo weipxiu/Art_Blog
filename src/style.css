@@ -6357,11 +6357,14 @@ textarea#comment:focus {
 
 .commentform-info {
   float: left;
+  width: calc(100% - 80px);
 }
-
-.commentform-info input {
+.commentform-info label{
+  width: 32%;
   margin-right: 10px;
-  width: 230px;
+}
+.commentform-info input {
+  width: 100%;
   border: 0;
   border-radius: 4px;
   box-shadow: none;

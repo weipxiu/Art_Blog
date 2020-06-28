@@ -152,27 +152,10 @@ Template Name: 给我留言
     <!-- 正文区域start -->
     <div class="continar deviation">
          <div class="continar-left" id="details">
-              <div class="nav-s1">
-                    <a href="#">
-                          给我留言
-                    </a>
+              <!-- 评论 -->
+              <div class="post_content">
+                  <?php comments_template( '', true ); ?>
               </div>
-              <div class="jy">
-                  <p>有些话不一定要说出来，但一定要记录在某个地方！欢迎来到我的博客访问，可以尽情在这里留下您的脚印。。。</p>
-              </div>
-              <!-- 留言区域start -->
-              <!-- 畅言公共JS代码 start (一个网页只需插入一次) -->
-              <!--PC和WAP自适应版-->
-              <div id="SOHUCS" ></div> 
-              <script type="text/javascript"> 
-              (function(){ 
-              var appid = 'cyt2b1NqT'; 
-              var conf = 'prod_e79629aa8857fdb6c56e09f73bed95b4'; 
-              var width = window.innerWidth || document.documentElement.clientWidth; 
-              if (width < 960) { 
-              window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-              <!-- 畅言公共JS代码 end -->
-              <!-- 留言区域end -->
          </div>
          <!-- 左侧区域end -->
     </div>
