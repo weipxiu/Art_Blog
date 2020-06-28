@@ -8,7 +8,7 @@ if ( post_password_required() )
     <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<?php the_ID();?>">
     <?php paginate_comments_links(array('prev_next'=>true)); ?>
     </nav>
-    <?php if(comments_open() || is_page()) : ?>
+    <?php if(comments_open()) : ?>
         <div class="respond" role="form">
             <h2 id="reply-title" class="comments-title"><?php comment_form_title( '', '回复给 %s' ); ?> 
                 <small>
