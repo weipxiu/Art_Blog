@@ -177,7 +177,7 @@
 							<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
 						</li>
 						<li class="email">
-							<a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number']; ?>@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
+							<a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number']; ?>@qq.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>
 						</li>
 						<li class="weixin">
 							<a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i class="iconfont icon-weixin"></i>微信</a>
