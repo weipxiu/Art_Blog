@@ -3160,6 +3160,8 @@ div.btn {
 }
 .os-herder #nav_list .sub-menu li a {
   padding: 0;
+  height: 100%;
+  line-height: 0.76rem;
 }
 .os-headertop {
   width: 100%;
