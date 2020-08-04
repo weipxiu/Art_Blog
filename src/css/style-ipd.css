@@ -2725,6 +2725,7 @@ div.btn {
 }
 .os-herder ul.slide-left li a {
   display: block;
+  height: 0.82rem;
   width: 100%;
   font-size: 0.28rem;
   color: rgba(255, 255, 255, 0.8);
