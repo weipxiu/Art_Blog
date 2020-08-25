@@ -174,7 +174,7 @@
 							<a href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes" target="_blank" class="top-tip" title="加QQ为好友"><i class="iconfont icon-qq"></i>会话</a>
 						</li>
 						<li class="qq">
-							<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=EmI2xoTz" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
+							<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=aU2c7W76" rel="nofollow" class="top-tip" title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
 						</li>
 						<li class="email">
 							<a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number']; ?>@qq.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i class="iconfont icon-youxiang"></i>邮件</a>

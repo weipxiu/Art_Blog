@@ -36,7 +36,7 @@ $(function () {
                         })
 
                         notification.onclick = function () {
-                            window.open("https://jq.qq.com/?_wv=1027&k=EmI2xoTz")
+                            window.open("https://jq.qq.com/?_wv=1027&k=aU2c7W76")
                             notification.close();
                         }
                         layer.ready(function(){
