@@ -148,7 +148,7 @@ input[type='radio'] {
   margin-right: 7px;
 }
 
-.fixed-wrap input[name='img-upload'] {
+.row input[name='img-upload'] {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
