@@ -61,7 +61,7 @@ textarea::-webkit-scrollbar-thumb {
 .nav-wrap .nav-list {
   float: left;
   margin: 0 10px 0 0;
-  padding: 8px 20px;
+  padding: 5px 20px;
   border-radius: 2px;
   background: #409eff;
   color: #fff;
@@ -112,15 +112,15 @@ textarea::-webkit-scrollbar-thumb {
 
 .submit-btn {
   display: block;
-  width: 150px;
-  height: 40px;
+  padding: 5px 15px;
+  font-size: 14px;
   border: 0;
   outline: 0;
   color: #fff;
   background: #67c23a;
   cursor: pointer;
   border-radius: 4px;
-  margin: 30px 0 0;
+  margin: 30px 0 0 30px;
 }
 .warn{
   color: #e6a23c;
@@ -138,4 +138,46 @@ input[type=checkbox], input[type=radio]{
 }
 input[type=radio]{
   margin-right: 7px;
+}
+.el-upload{
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  display: inline;
+}
+.el-upload button{
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 7px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+  position: absolute;
+}
+.el-upload input {
+  display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 80px;
+    height: 28px;
 }
