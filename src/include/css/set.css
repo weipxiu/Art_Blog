@@ -139,15 +139,8 @@ input[type=checkbox], input[type=radio]{
 input[type=radio]{
   margin-right: 7px;
 }
-.el-upload{
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  display: inline;
-}
-.el-upload button{
+
+.img-upload{
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -157,27 +150,15 @@ input[type=radio]{
   text-align: center;
   box-sizing: border-box;
   outline: none;
-  margin: 0;
-  transition: .1s;
-  font-weight: 500;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  padding: 7px 15px;
+  padding: 7px 12px;
+  margin:1px 0 0 5px;
   font-size: 12px;
   border-radius: 3px;
   color: #fff;
   background-color: #409eff;
-  border-color: #409eff;
-  position: absolute;
-}
-.el-upload input {
-  display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    cursor: pointer;
-    width: 80px;
-    height: 28px;
+  border: 1px solid #409eff;
+  box-shadow: none;
 }

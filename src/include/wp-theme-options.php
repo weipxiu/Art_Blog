@@ -246,10 +246,7 @@ function themeoptions_page() {
                   id="video_cover"
                   value="<?php echo $a_options['video_cover']; ?>"
                 >
-                <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+                <input type="button" name="img-upload" value="选择文件">
               </div>
             </div>
             <div class="margin-top-15 clearfix">
@@ -337,10 +334,7 @@ function themeoptions_page() {
                 id="logo"
                 value="<?php echo $a_options['logo']; ?>"
               >
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
@@ -365,10 +359,7 @@ function themeoptions_page() {
                 id="label-logo"
                 value="<?php echo $a_options['label_logo']; ?>"
               >
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
@@ -392,10 +383,7 @@ function themeoptions_page() {
 								name="thumbnail-img"
                 id="thumbnail-img"
                 value="<?php echo $a_options['thumbnail']; ?>">
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
@@ -420,10 +408,7 @@ function themeoptions_page() {
                 id="big-banner"
                 value="<?php echo $a_options['banner']['big_banner']['path']; ?>"
               >
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
@@ -473,10 +458,7 @@ function themeoptions_page() {
 	                id="small-banner-<?php echo $i; ?>"
 	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['path']; ?>"
 	              >
-	              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+	              <input type="button" name="img-upload" value="选择文件">
 	            </div>
 	          </div>
 	          <div class="margin-top-15 clearfix">
@@ -556,10 +538,7 @@ function themeoptions_page() {
                 id="weChat-number"
                 value="<?php echo $a_options['weChat-number']; ?>"
               >
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
@@ -596,10 +575,7 @@ function themeoptions_page() {
                 id="alipay"
                 value="<?php echo $a_options['alipay']; ?>"
               >
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
@@ -625,10 +601,7 @@ function themeoptions_page() {
                 id="wechatpay"
                 value="<?php echo $a_options['wechatpay']; ?>"
               >
-              <div tabindex="0" class="el-upload"><button type="button">
-                  <span>点击上传</span></button>
-                  <input type="button" name="img-upload" value="选择文件">
-                </div>
+              <input type="button" name="img-upload" value="选择文件">
             </div>
           </div>
           <div class="margin-top-15 clearfix">
