@@ -53,7 +53,7 @@ textarea::-webkit-scrollbar-thumb {
 
 /* 导航切换页面 */
 .wrap h2 {
-  font-size: 24px;
+  font-size: 24px!important;
   text-align: center;
 }
 .nav-wrap {
@@ -67,7 +67,7 @@ textarea::-webkit-scrollbar-thumb {
   float: left;
   font-size: 12px;
   margin: 0 10px 0 0;
-  padding: 5px 20px;
+  padding: 6px 20px;
   border-radius: 2px;
   background: #409eff;
   color: #fff;
@@ -118,7 +118,8 @@ textarea::-webkit-scrollbar-thumb {
 
 .submit-btn {
   display: block;
-  padding: 5px 15px;
+  padding: 9px 15px;
+  line-height: 1;
   font-size: 14px;
   border: 0;
   outline: 0;
@@ -147,7 +148,7 @@ input[type='radio'] {
   margin-right: 7px;
 }
 
-.img-upload {
+.fixed-wrap button[name='img-upload'] {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -168,4 +169,7 @@ input[type='radio'] {
   background-color: #409eff;
   border: 1px solid #409eff;
   box-shadow: none;
+}
+.update-nag {
+  display: none;
 }
