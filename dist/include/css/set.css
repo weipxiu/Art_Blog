@@ -5,11 +5,11 @@
 .fr {
   float: right;
 }
-.left-wrap{
+.left-wrap {
   cursor: default;
 }
 .clearfix:after {
-  content: "";
+  content: '';
   display: block;
   height: 0;
   clear: both;
@@ -24,11 +24,12 @@
   color: #d8296d;
 }
 
-input, textarea {
+input,
+textarea {
   vertical-align: middle;
 }
-textarea{
-  padding:5px;
+textarea {
+  padding: 5px;
   border: 1px solid #ccc;
   width: 100%;
 }
@@ -50,29 +51,33 @@ textarea::-webkit-scrollbar-thumb {
   width: calc(100% - 290px);
 }
 
-
 /* 导航切换页面 */
-
+.wrap h2 {
+  font-size: 24px;
+  text-align: center;
+}
 .nav-wrap {
-  border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-wrap .nav-list {
   float: left;
-  font-size:12px;
+  font-size: 12px;
   margin: 0 10px 0 0;
   padding: 5px 20px;
   border-radius: 2px;
   background: #409eff;
   color: #fff;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .nav-wrap .nav-list.on {
   background: #67c23a;
 }
-
 
 /*  */
 
@@ -99,11 +104,11 @@ textarea::-webkit-scrollbar-thumb {
 .row .right-wrap {
   width: calc(100% - 135px);
 }
-.row .right-wrap input.url-inp{
+.row .right-wrap input.url-inp {
   border: 1px solid #ccc;
 }
 
-.row .fixed-wrap input[type="text"] {
+.row .fixed-wrap input[type='text'] {
   border: 1px solid #ccc;
 }
 
@@ -121,27 +126,28 @@ textarea::-webkit-scrollbar-thumb {
   background: #67c23a;
   cursor: pointer;
   border-radius: 4px;
-  margin: 30px 0 0 30px;
+  margin: 30px auto;
 }
-.warn{
+.warn {
   color: #e6a23c;
   transform: translateY(2px);
   display: inline-block;
 }
-.danger{
+.danger {
   color: #f56c6c;
 }
-input[type=checkbox], input[type=radio]{
-  margin-top:0
+input[type='checkbox'],
+input[type='radio'] {
+  margin-top: 0;
 }
-.border_none{
-  border-bottom:none;
+.border_none {
+  border-bottom: none;
 }
-input[type=radio]{
+input[type='radio'] {
   margin-right: 7px;
 }
 
-.img-upload{
+.img-upload {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -155,7 +161,7 @@ input[type=radio]{
   -webkit-user-select: none;
   -ms-user-select: none;
   padding: 7px 12px;
-  margin:1px 0 0 5px;
+  margin: 1px 0 0 5px;
   font-size: 12px;
   border-radius: 3px;
   color: #fff;
