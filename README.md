@@ -51,11 +51,11 @@
 
 ## 如何使用它
 
-I、本项目采用gulp自动化构建，推荐通过git克隆到本地（node版本控制在v8.x为宜），然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（很显然，这一切需要你电脑安装了Node.js以及git工具）。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
+I、本项目采用gulp自动化构建，推荐通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v8.x为宜）。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
 
 II、将dist文件名命名为`Art_Blog`(这是必须的)，将整个`文件夹`上传到线上：`/htdocs/wp-content/themes/`目录下。也可以将改好名字的Art_Blog文件夹压缩成`Zip文件`通过后台主题上传，最后后台启用主题
 
-III、运行环境条件：虚拟主机/云主机环境选优先用Apache、wordPress版本≥4.6，≥5.3服务器php版本≤php7.2，如果出现报错，请尝试切换php版本，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)，注意：[请尽可能使用云服务器而不要使用虚拟主机](https://www.weipxiu.com/3246.html)
+III、运行环境条件：虚拟主机/云主机环境选优先用Apache、wordPress版本≥4.6，≥5.3服务器php版本≤php7.2，如果出现报错，请尝试切换php版本，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)，注意：[请尽可能使用云服务器而不是虚拟主机](https://www.weipxiu.com/3246.html)
 
 IV、启用唯品秀Art_Blog主题后，在设置>常规中设置自己网站标题、副标题、邮箱等信息，然后到外观>唯品秀主题设置，设置站点域名地址、公告、底部等信息
 
