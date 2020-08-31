@@ -42,32 +42,16 @@
 | [大川渝个人博客](https://www.dcydz.com) | www.dcydz.com
 | [青幽](http://moxiaofei.com) | http://moxiaofei.com
 | [智慧博客网](https://www.llg.design) | www.llg.design 
-| [梦想霞](http://www.mxxia.com) | www.mxxia.com 
-| [小兴的个人博客](http://www.cyxlove.cn) | www.cyxlove.cn
 | [开源NetCore](http://www.netcore.pub) | http://netcore.pub
-| [贾修强的个人博客](http://www.jxqzq.cn) | http://www.jxqzq.cn
-| [99shopcn](http://99shopcn.com) | http://99shopcn.com
-| [PC再现](http://pczaixian.com) | http://www.pczaixian.com
+| [狗蛋博客](https://www.xiaole.biz) | https://www.xiaole.biz
+| [海诗查题](https://www.bswhs.cn) | https://www.bswhs.cn  
 | [北漂程序员](http://blog.zoux.xin) | http://blog.zoux.xin
-| [郑鹏鑫博客](http://blog.quandaquan.cn) | http://blog.quandaquan.cn
-| [阿Q博客](http://qblog.org) | http://qblog.org
 | [苏州特个人博客](http://www.sutee.cn) | http://www.sutee.cn
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
-<!-- | [Pets配资知识网](http://www.jing11.net) | www.jing11.net -->
-<!-- | [DCEP日志](http://www.dceplog.com) | www.dceplog.com -->
-<!-- | [屌丝写代码](http://www.uytools.com) | www.uytools.com  -->
-<!-- | [西狂部落阁](http://www.xikuang.ren) | www.xikuang.ren -->
-<!-- | [福利社](https://www.fulijs.net) | www.fulijs.net -->
-<!-- | [苍衣社](https://www.cangyishe.cn) | www.cangyishe.cn  -->
-<!-- | [码农小G](http://www.xicon.top) | www.xicon.top -->
-<!-- | [小小白](http://xn--rss348b7f076j.com) | http://xn--rss348b7f076j.com -->
-<!-- | [Newbe的博客](http://newbe.fun) | http://newbe.fun -->
-
 ## 如何使用它
 
-I、本项目采用gulp自动化构建，推荐通过git克隆到本地，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目
-  到`dist`文件夹（很显然，这一切需要你电脑安装了Node.js以及git工具）。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
+I、本项目采用gulp自动化构建，推荐通过git克隆到本地（node版本控制在v8.x为宜），然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（很显然，这一切需要你电脑安装了Node.js以及git工具）。当然，如不需要打包压缩代码等一系列工具功能可直接下载即可，同样找到项目文件的dist目录，里面即是已打包好的主题源码
 
 II、将dist文件名命名为`Art_Blog`(这是必须的)，将整个`文件夹`上传到线上：`/htdocs/wp-content/themes/`目录下。也可以将改好名字的Art_Blog文件夹压缩成`Zip文件`通过后台主题上传，最后后台启用主题
 
@@ -87,13 +71,11 @@ VI、更多详细教程点击：[唯品秀前端技术博客主题使用教程](
 
 
 I、wordPress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则主题视为"不完整"，无法安装。
-因此不用觉得某些文件摆放不合理，存在必定有意义
+因此不用觉得某些文件摆放不合理，存在即有意义
 
-II、为了用户最佳浏览体验，该主题对≤IE8作了屏蔽跳转，≥IE9版本可能无法完整展示CSS3效果，但会尽量兼容
-到不影响阅读
+II、为了用户最佳浏览体验，该主题对≤IE8作了屏蔽跳转，≥IE9版本可能无法完整展示CSS3效果，但会尽量兼容到不影响阅读
 
-III、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-ios.css、style-ipd.css
-两个文件，没错，三端样式完全独立，不重用，有利有弊，不做过多评论
+III、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-ios.css、style-ipd.css两个文件，没错，三端样式完全独立，不重用，有利有弊，不予置评
 
 IV、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
@@ -151,8 +133,8 @@ IV、源码开放供大家使用并修改，但在使用过程中底部请保留
 │  │      zh-CN.js
 │  │      zh-CN.json
 │  │      
-│  └─xfg_banner   //PC端首页banner
-│          banner-effect.js
+│  └─xfg_banner
+│          banner-effect.js //PC端首页banner
 │          banner.js
 │          effect.js
 │          jquery.min.js

@@ -26,7 +26,7 @@
 		<div class="header-conter">
 			<nav class="nav">
 					<a href="/" class="t-logo" id="Logo">
-							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>" onerror="this.src='https:\/\/www.weipxiu.com/wp-content/uploads/2019/06/weipxiu_logo_2.png';">
+							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>">
 					</a>
 					<div class="nav-left"></div>
 					<div class="brand">

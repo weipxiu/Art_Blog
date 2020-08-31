@@ -21,7 +21,6 @@ function themeoptions_page() {
       <li class="nav-list">SEO</li>
       <li class="nav-list">图片</li>
       <li class="nav-list">社交</li>
-      <!-- <li class="nav-list">自定义代码</li> -->
     </ul>
     <form method="post" action="">
       <input type="hidden" name="update_themeoptions" value="true">
