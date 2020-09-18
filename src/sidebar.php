@@ -36,7 +36,7 @@
                         title="QQ临时会话"><i class="iconfont icon-qq"></i>会话</a>
                 </li>
                 <li class="email">
-                    <a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i
+                    <a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i
                             class="iconfont icon-youxiang"></i>邮件</a>
                 </li>
                 <li class="weixin">
@@ -174,7 +174,7 @@
             $output = $pre_HTML;
             foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
                 if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
-                $output .= "\n<li>". '<img src=https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=100&id='.rand(1,1000).' onerror="this.src=\'https://www.weipxiu.com/wp-content/themes/Art_Blog/images/head_portrait.jpg\';">' .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
+                $output .= "\n<li>". '<img src=https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=100&id='.rand(1,1000).' onerror="this.src=\'/wp-content/themes/Art_Blog/images/head_portrait.jpg\';">' .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
             $output .= $post_HTML;
             $output = convert_smilies($output);
             echo $output;
