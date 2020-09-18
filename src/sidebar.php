@@ -167,10 +167,7 @@
                  https://q2.qlogo.cn/headimg_dl?dst_uin=343049466&spec=40 
             -->
             <?php
-            global $wpdb;
-            $my_email = get_bloginfo ('admin_email'); // AND comment_author_email != '$my_email' 不展示管理员回复
-            $sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,100) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT 6";
-            $comments = $wpdb->get_results($sql);
+            $comments = get_comments('status=approve&number=5&order=asc');
             $output = $pre_HTML;
             foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
                 if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
