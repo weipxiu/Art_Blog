@@ -1001,6 +1001,7 @@ ul.post-categories li:first-child {
   font-weight: normal;
   color: #444;
   transition: all 0.35s;
+  color: #333;
 }
 
 .text em {
@@ -1047,7 +1048,7 @@ ul.post-categories li:first-child {
   width: calc(100% - 2rem);
   float: right;
   line-height: 0.38rem;
-  color: #999;
+  color: #666;
   font-size: 0.26rem;
   font-weight: normal;
   display: -webkit-box;
