@@ -142,18 +142,6 @@
 
 <!-- 评论模块start -->
 <div class="classif" id="primary-sidebar">
-    <!-- <div class="com-s com">
-        <h3 class="widget-title">
-            <a href="javascript:()"><i class="fa fa-bars" aria-hidden="true"></i>精彩评论</a>
-        </h3>
-        代码1：放在页面需要展示的位置  -->
-        <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
-        <!-- <div id="cyReping" role="cylabs" data-use="reping"></div> -->
-        <!-- 代码2：用来读取评论框配置，此代码需放置在代码1之后。 -->
-        <!-- 如果当前页面有评论框，代码2请勿放置在评论框代码之前。 -->
-        <!-- 如果页面同时使用多个实验室项目，以下代码只需要引入一次，只配置上面的div标签即可 -->
-        <!-- 评论模块end --
-    </div> -->
     <div class="com-s com">
         <h3 class="widget-title">
             <a href="javascript:()"><i class="iconfont icon-pinglun3"></i>精彩评论</a>
@@ -167,7 +155,12 @@
                  https://q2.qlogo.cn/headimg_dl?dst_uin=343049466&spec=40 
             -->
             <?php
-            $comments = get_comments('status=approve&number=5&order=asc');
+
+            global $wpdb;
+            $my_email = get_bloginfo ('admin_email'); // AND comment_author_email != '$my_email' 不展示管理员回复
+            $sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,100) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT 6";
+            $comments = $wpdb->get_results($sql);
+
             $output = $pre_HTML;
             foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
                 if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';

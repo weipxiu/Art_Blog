@@ -3071,13 +3071,6 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
   display: none;
 }
 
-/* #hide {
-    display: block;
-    position: relative;
-    border-top:1px solid transparent;
-    box-sizing: border-box;
-} */
-
 .cs-circleslight .br-previous,
 .cs-circleslight .br-next {
   width: 0;

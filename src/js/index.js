@@ -26,8 +26,6 @@ $(function () {
         // 桌面提醒功能
         var set_desktop = function () {
             if (window.Notification) {
-                // var button = document.getElementById('button'), text = document.getElementById('text');
-
                 var popNotice = function () {
                     if (Notification.permission == "granted") {
                         var notification = new Notification("友情提示：", {
@@ -71,7 +69,7 @@ $(function () {
         }
         // 桌面提醒功能
 
-        // console.log---start
+        // 控制台打印start
         if (window.console && window.console.log) {
             setTimeout(function () {
                 console.log("\n %c 当前主题由唯品秀前端技术博客免费提供 %c  © Jun Li  https://www.weipxiu.com  \n",
@@ -80,7 +78,7 @@ $(function () {
                 );
             }, 1500);
         }
-        // console.log---end
+        // 控制台打印end
 
         $("#hide").show();
         $(".buffer").fadeOut();
@@ -142,5 +140,4 @@ $(function () {
         }
     });
     // 当窗口改变时候end
-
 })
