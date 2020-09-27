@@ -30,7 +30,7 @@ $(function () {
                     if (Notification.permission == "granted") {
                         var notification = new Notification("友情提示：", {
                             body: '欢迎点击立即加入"Vue.js3.0技术栈"群互相学习、交流！',
-                            icon: '/wp-content/themes/Art_Blog/images/tishi.png'
+                            icon: '/wp-content/themes/Art_Blog/images/notification.png'
                         })
 
                         notification.onclick = function () {

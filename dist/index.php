@@ -97,7 +97,7 @@
 							<h3 class="img_txt_title">MV</h3>
 							<p class="img_p">时光<br>在画面里穿梭</p>
 						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/time.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
+						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/time_shuttle.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
 					</a>
 					<a href="/609.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
 						<div class="carousel_small_str txt_bg05">
