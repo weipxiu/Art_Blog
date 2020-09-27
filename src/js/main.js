@@ -200,8 +200,10 @@ $(function () {
         }
         $(".site-search.active.pc").stop(true, true).slideToggle(150);
         $(".site-search.active.pc").find('input').focus();
-        $(this).find("i").toggleClass("icon-guanbi3");
     });
+    $(".xis,.navto-search a").click(function(){
+        $(this).find("i").toggleClass("icon-guanbi3");
+    })
 
     $(".header").addClass("Top");
 
