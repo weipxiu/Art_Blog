@@ -29,7 +29,7 @@
 一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割比例，努力把控每个元素每一个像素差的wordpress主题，[主题介绍](https://www.weipxiu.com/about)
 
 ## 主题后台配置预览
-![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp-theme-options.png)
+![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp-theme-config.png)
 
 ## 哪些网站在使用(据百度受访问域名不完全统计，并非后门)
 
