@@ -875,14 +875,14 @@ img {
 }
 
 .rssbook form {
-  margin: 0px auto;
-  display: block;
-  font-size: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .wpm_form .wpm_email,
 .wpm_form .wpm_submit {
-  display: inline-block;
+  margin:0
 }
 
 .wpm_form .wpm_email input {
