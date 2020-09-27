@@ -1,8 +1,8 @@
 // JavaScript Document
-var date=[	
+var date = [	
 	{
 		message:"2020 - 09 - 25",
-		reply:"主题兼容wordPress v5.5.1，修复升级后侧边栏最新留言模块异常，建议所有升级该模块，仅需要更新search.php文件"
+		reply:"主题兼容wordPress最新版本v5.5.1，修复升级后侧边栏最新留言模块异常，建议所有用户升级该模块，仅需更新search.php文件"
 	},
 	{
 		message:"2020 - 04 - 03",
