@@ -185,20 +185,19 @@ img {
 
 .search-input {
   float: left;
-  color: #999;
-  border: solid 1px #ddd;
+  color: #606266;
+  border: 1px solid #dcdfe6;
   width: calc(100% - 50px);
-  height: 45px;
+  height: 0.64rem;
   padding: 4px 12px;
   border-right: none;
   font-size: 16px;
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
   outline: none;
   pointer-events: auto;
 }
 
 .search-btn .iconfont {
-  font-size: 16px;
   width: 16px;
   color: #fff;
 }
@@ -214,7 +213,7 @@ img {
   height: 45px;
   font-size: 16px;
   padding: 0 12px;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
   width: 1rem;
   cursor: pointer;
   float: left;

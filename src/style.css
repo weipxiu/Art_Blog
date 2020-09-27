@@ -493,8 +493,9 @@ i {
 
 .search-input {
   float: left;
-  border: 1px solid #ddd;
-  width: 94%;
+  color: #606266;
+  border: 1px solid #dcdfe6;
+  width: 93%;
   height: 40px;
   line-height: 40px;
   padding: 5px 12px;
@@ -518,7 +519,7 @@ i {
   border: none;
   background: #1890ff;
   border-radius: 0 4px 4px 0;
-  width: 6%;
+  width: 7%;
   cursor: pointer;
   height: 40px;
   line-height: 40px;
