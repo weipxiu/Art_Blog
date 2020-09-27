@@ -1115,21 +1115,21 @@ div.com-art ul li {
 }
 
 .friendship .daily-list ul li {
-  line-height: 24px;
-  margin: 0 0 10px 0;
-  padding: 5px;
+  line-height: normal;
+  height: auto;
   text-align: center;
-  border-radius: 0.08rem;
-  animation-delay: 0.1s;
+  border-radius: .08rem;
+  animation-delay: .1s;
   float: left;
-  margin: 0 2% 10px 0;
-  padding: 0.04rem 0.14rem;
-  width: auto;
+  margin: 0 2% 0.2rem 0;
+  padding: .16rem .2rem;
 }
 .friendship .daily-list ul li a {
   margin: 0;
   padding: 0;
   color: #fff;
+  display: inline;
+  line-height: normal;
 }
 .widget ul li:nth-child(1) em {
   background: #fd8c84;
