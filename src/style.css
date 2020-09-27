@@ -29,7 +29,6 @@ html {
 }
 
 body {
-  /*background:#fff url(images/bj_banner.jpg); url(images/body.png)*/
   background: #f6f6f6;
   background-repeat: repeat;
   background-attachment: scroll;
@@ -2338,15 +2337,6 @@ div.com-art ul li {
   font-size: 12px;
   line-height: 12px;
   text-align: center;
-  /* background: #2e2e2e url(images/footerBg.png) repeat;
-  -webkit-box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
-  border-top: 1px solid transparent;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  -ms-transform: translateY(0);
-  opacity: 1;
-  overflow: hidden; */
   width: 100%;
   background: url(images/footer_bg.jpg) center center repeat-x;
   position: relative;

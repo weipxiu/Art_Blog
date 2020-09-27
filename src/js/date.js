@@ -1,6 +1,10 @@
 // JavaScript Document
 var date=[	
 	{
+		message:"2020 - 09 - 25",
+		reply:"主题兼容wordPress v5.5.1，修复升级后侧边栏最新留言模块异常，建议所有升级该模块，仅需要更新search.php文件"
+	},
+	{
 		message:"2020 - 04 - 03",
 		reply:"修复一个只会出现在mac电脑Chrome浏览器上的陈年老bug"
 	},

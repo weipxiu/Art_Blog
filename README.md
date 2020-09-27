@@ -26,7 +26,7 @@
   </a>
 </p>
 
-一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割定律，把控每个元素每一个像素差的wordpress主题v2.6.1，[主题介绍](https://www.weipxiu.com/about)
+一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割比例，努力把控每个元素每一个像素差的wordpress主题，[主题介绍](https://www.weipxiu.com/about)
 
 ## 主题后台配置预览
 ![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp-theme-options.png)
@@ -103,18 +103,15 @@ IV、源码开放供大家使用并修改，但在使用过程中底部请保留
 │  theme-options.php  //主题后台配置
 │  
 ├─css
-│      PingFangSC-Regular.woff   //字体文件
-│      sf-pro-display_medium.woff2
-│      sf-pro-display_regular.woff2
-│      sf-pro-display_semibold.woff2
-│      sf-pro-text_bold.woff2
-│      sf-pro-text_regular.woff2
-│      sf-pro-text_semibold.woff2
 │      style-ios.css    //手机端样式
 │      style-ipd.css    //ipd平板样式
 │      swiper.min.css   //移动端轮播swiper样式
 │      video-js.css    //视频插件样式     
-│          
+│   
+├─font //字体文件 
+│      sf-pro-display_regular.woff2
+│      sf-pro-text_regular.woff2
+│ 
 ├─images    //公共图片资源
 │      
 ├─js
