@@ -3,7 +3,7 @@
     font-family: "sf-pro-text_regular";
     font-style:normal;
 	  font-weight:400;
-    src: local('☺︎'), url("./font/sf-pro-text_regular.woff2") format("woff2"), url("./font/sf-pro-display_regular.woff2") format("woff2");
+    src: local('☺︎'), url("../font/sf-pro-text_regular.woff2") format("woff2"), url("../font/sf-pro-display_regular.woff2") format("woff2");
 }
 * {
   margin: 0;
@@ -960,8 +960,8 @@ p.clearfix a {
   justify-content: space-between;
 }
 .social li {
-  padding: 0 0.6rem;
-  border-radius: 0.1rem;
+  padding: 0.16rem .6rem;
+    border-radius: .1rem;
 }
 .social .weibo {
   background: #fc8bd2;
@@ -979,12 +979,8 @@ p.clearfix a {
   background: #49cc5b;
 }
 .social li a {
-  content: '';
-  display: block;
   width: 100%;
-  height: 0.76rem;
   color: #fff;
-  line-height: 0.72rem;
 }
 .social li a i {
   font-size: 0.36rem;
@@ -1242,7 +1238,7 @@ div.com-art ul li {
   position: relative;
   z-index: 9;
   clear: both;
-  padding: 10px 15px 15px;
+  padding: 0.2rem 0;
   font-size: 12px;
   line-height: 12px;
   background: rgba(24, 144, 255, 0.8);

@@ -133,6 +133,7 @@ textarea::-webkit-scrollbar-thumb {
   color: #e6a23c;
   transform: translateY(2px);
   display: inline-block;
+  color: darkgoldenrod;
 }
 .danger {
   color: #f56c6c;
