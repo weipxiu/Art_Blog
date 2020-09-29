@@ -772,6 +772,10 @@ $(function () {
 
     //视频播放start
     if ($("#my-video").length) {
+        if($('#my-video').is(':hidden')){
+            $('#my-video').remove()
+            return
+        }
         // var delSetInterval = null; //定时器
         var myPlayer = videojs('my-video');
         // videojs.addLanguage("zh-CN",{
