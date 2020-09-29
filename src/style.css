@@ -792,6 +792,7 @@ i {
   -ms-transform-origin: center center -14px;
   transform-origin: center center -14px;
   height: 32px;
+  line-height: 32px;
   z-index: 2;
 }
 
