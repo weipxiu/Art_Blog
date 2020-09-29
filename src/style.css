@@ -700,7 +700,6 @@ i {
   font-size: 14px;
   color: #bbb;
   -webkit-transition: all 0.6s;
-  -o-transition: all 0.6s;
   transition: all 0.6s;
 }
 
@@ -726,9 +725,11 @@ i {
   transform: rotateY(90deg);
   transition: opacity .4s,transform .5s;
 }
+
 .nav ul .sub-menu li:last-of-type a{
   border:0
 }
+
 .nav ul .sub-menu li a {
   height: 40px;
   line-height: 40px;
