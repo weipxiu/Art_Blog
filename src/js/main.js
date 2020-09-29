@@ -281,8 +281,8 @@ $(function () {
     musicList.mouseenter(function () {
         clearTimeout(time2);
         $(".header").css("z-index", "12");
-        $(".header-conter .nav-min").hide();
-        $(this).find('ul.nav-min').show()
+        // $(".header-conter .nav-min").hide();
+        // $(this).find('ul.nav-min').show()
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
@@ -296,7 +296,7 @@ $(function () {
         $(this).removeClass('active');
         clearTimeout(time2);
         time2 = setTimeout(() => {
-            $(".header-conter .nav-min").hide();
+            // $(".header-conter .nav-min").hide();
             //避免在正常时候下方轮播分割旋转时候被遮盖 
             if (!$(".site-search").is(":visible")) {
                 $(".header").css("z-index", "10");
