@@ -723,7 +723,7 @@ i {
   height: 40px;
   box-sizing: content-box;
   display: block;
-  background: rgba(255, 255, 255, 0.9);
+  background: #d4d7db;
   opacity: 0;
   transform: rotateY(90deg);
   transition: opacity 0.4s, transform 0.5s;
@@ -930,22 +930,12 @@ i {
   left: calc(50% - 50px);
   top: 49px;
   z-index: 13;
-  /* -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03);
-  border: 1px solid #ddd;
-  border-top: 0;
-  background: rgba(255, 255, 255, 0.9); */
-  opacity: 0;
-  border-top: 3px solid #1890ff;
 }
 
 .nav ul.music-nav li:hover .sub-menu li,
 .nav ul.music-nav li:focus .sub-menu li {
   opacity: 1;
   transform: none;
-}
-.nav ul.music-nav li:hover .sub-menu{
-  opacity: 1;
 }
 .nav ul.music-nav li:hover .sub-menu li:nth-child(1) {
   transition-delay: 0s;
@@ -978,34 +968,34 @@ i {
   transition-delay: 450ms;
 }
 
-.nav ul.music-nav li .sub-menu li:nth-child(10) {
+.nav ul.music-nav li .sub-menu li:nth-child(1) {
   transition-delay: 450ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(9) {
+.nav ul.music-nav li .sub-menu li:nth-child(2) {
   transition-delay: 400ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(8) {
+.nav ul.music-nav li .sub-menu li:nth-child(3) {
   transition-delay: 350ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(7) {
+.nav ul.music-nav li .sub-menu li:nth-child(4) {
   transition-delay: 300ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(6) {
+.nav ul.music-nav li .sub-menu li:nth-child(5) {
   transition-delay: 250ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(5) {
+.nav ul.music-nav li .sub-menu li:nth-child(6) {
   transition-delay: 200ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(4) {
+.nav ul.music-nav li .sub-menu li:nth-child(7) {
   transition-delay: 150ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(3) {
+.nav ul.music-nav li .sub-menu li:nth-child(8) {
   transition-delay: 100ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(2) {
+.nav ul.music-nav li .sub-menu li:nth-child(9) {
   transition-delay: 50ms;
 }
-.nav ul.music-nav li .sub-menu li:nth-child(1) {
+.nav ul.music-nav li .sub-menu li:nth-child(10) {
   transition-delay: 0s;
 }
 
@@ -1013,14 +1003,7 @@ i {
   color: #1890ff;
 }
 
-/* .nav .nav-min:hover {
-  opacity: 1 !important;
-  top: 49px !important;
-  visibility: visible !important;
-  z-index: 11;
-} */
-
-.nav .nav-min::before {
+/* .nav .nav-min::before {
   content: '';
   height: 0;
   width: 0;
@@ -1029,7 +1012,7 @@ i {
   top: -16px;
   left: 30px;
   border-bottom-color: #1890ff;
-}
+} */
 
 /*跳动的音符start*/
 
