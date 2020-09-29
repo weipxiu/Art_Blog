@@ -901,12 +901,6 @@ i {
   z-index: 13;
 }
 
-.nav ul.music-nav li:hover .sub-menu li,
-.nav ul.music-nav li:focus .sub-menu li {
-  opacity: 1;
-  transform: none;
-}
-
 .nav ul li:hover a span {
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
@@ -944,10 +938,15 @@ i {
   opacity: 0;
   border-top: 3px solid #1890ff;
 }
-.header .sub-menu {
-  display: none;
-}
 
+.nav ul.music-nav li:hover .sub-menu li,
+.nav ul.music-nav li:focus .sub-menu li {
+  opacity: 1;
+  transform: none;
+}
+.nav ul.music-nav li:hover .sub-menu{
+  opacity: 1;
+}
 .nav ul.music-nav li:hover .sub-menu li:nth-child(1) {
   transition-delay: 0s;
 }
