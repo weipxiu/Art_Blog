@@ -720,15 +720,15 @@ i {
 
 .nav ul .sub-menu li {
   float: none;
-  height: 40px;
-  box-sizing: content-box;
-  display: block;
+  overflow: hidden;
   background: #d4d7db;
   opacity: 0;
   transform: rotateY(90deg);
-  transition: opacity 0.4s, transform 0.5s;
+  transition: opacity .4s,transform .5s;
 }
-
+.nav ul .sub-menu li:last-of-type a{
+  border:0
+}
 .nav ul .sub-menu li a {
   height: 40px;
   line-height: 40px;
