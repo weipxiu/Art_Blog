@@ -43,11 +43,9 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<?php 
-					$dataList = get_option('weipxiu_options')['mobile_banner'];
-					foreach ( eval("return $dataList;") as $item) { ?>
-							<div class="swiper-slide" style="background:url('<?php echo $item['url']?>') no-repeat center top; background-size:100% 100%"><a href="<?php echo $item['link']?>"></a></div>
-					<?php } ?>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner1.png') no-repeat center top; background-size:100% 100%"><a href="/video_2019.mp4"></a></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner2.png') no-repeat center top; background-size:100% 100%"><a href="/3355.html"></a></div>
+					<div class="swiper-slide" style="background:url('/wp-content/themes/Art_Blog/images/banner3.png') no-repeat center top; background-size:100% 100%"><a href="/video_2019.mp4"></a></div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
