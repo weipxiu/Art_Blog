@@ -96,7 +96,7 @@
 							$('footer.footer').css({
 									"position": "fixed",
 									"bottom": "0",
-									"left":  "0";
+									"left":  "0"
 							})
 					}
 					layer.alert('Sorry，当前分类没有任何文章！',{

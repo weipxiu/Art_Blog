@@ -290,7 +290,7 @@
 							$('footer.footer').css({
 									"position": "fixed",
 									"bottom": "0",
-									"left":  "0";
+									"left":  "0"
 							})
 					}
 					layer.ready(function(){
