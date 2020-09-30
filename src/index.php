@@ -377,7 +377,27 @@ var banner = new Banner({
 		autoplay: 8000,
 		width: 1200,
 		height: 300,
-		images: <?php echo get_option('weipxiu_options')['mobile_banner']; ?>,
+		images:[{
+    url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
+    link: '/category/frontend/holdall'
+  }, {
+    url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
+    link: '/3355.html'
+  }, {
+    url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
+    link: '/1332.html'
+  }, {
+    url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
+    link: 'https://github.com/weipxiu/Art_Blog'
+  }, {
+    url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
+    link: '/658.html'
+  },
+  {
+    url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
+    link: '/1313.html'
+  }
+],
 
 		preloadImages: true, // 预加载所有图片
 
