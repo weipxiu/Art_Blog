@@ -43,8 +43,10 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<?php foreach (get_option('weipxiu_options')['mobile_banner'] as $item) { ?>
-							<div class="swiper-slide" style="background:url('<?php echo $value['url']?>') no-repeat center top; background-size:100% 100%"><a href="<?php echo $value['link']?>"></a></div>
+					<?php 
+					$dataList = get_option('weipxiu_options')['mobile_banner'];
+					foreach ( $dataList as $item) { ?>
+							<div class="swiper-slide" style="background:url('<?php echo $item['url']?>') no-repeat center top; background-size:100% 100%"><a href="<?php echo $item['link']?>"></a></div>
 					<?php } ?>
 				</div>
 				<div class="swiper-pagination"></div>
