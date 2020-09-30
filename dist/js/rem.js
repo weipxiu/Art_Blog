@@ -1,12 +1,12 @@
 function defaultfont() {
-  var sw = $(window).width();
-  if(sw > 1200){
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     return false
   }
+  var sw = $(window).width();
   var pw = 750;
   var f = 100 * sw / pw;
-  if (sw>767 && sw<1000) { f = 70 }
-  if (sw>1000 && sw<1200) { f = 100 }
+  if (sw > 767 && sw < 1000) { f = 70 }
+  if (sw > 1000 && sw < 1200) { f = 100 }
   $('html').css({
     'fontSize': f + 'px',
     'transtion': '0.35s'

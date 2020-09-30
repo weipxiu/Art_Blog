@@ -608,7 +608,7 @@ img {
   overflow: hidden;
 }
 .continar .search_404{
-  max-width: 1000px;
+  max-width: 90%;
   position:fixed;
   top:50%;
   left:50%;

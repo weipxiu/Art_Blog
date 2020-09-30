@@ -128,6 +128,13 @@
                 $(".mod-breadcrumb").hide();
                 $("body, html").css("height","100%");
                 $(".search_404").show();
+                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                    $('footer.footer').css({
+                        "position": "fixed",
+                        "bottom": "0",
+                        "left":  "0";
+                    })
+                }
                 layer.alert('Sorry，当前关键词下未找到相关信息！',{
                     skin: 'layui',
                     title:"提示",

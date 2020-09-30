@@ -6,7 +6,7 @@ $(function () {
     //var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
     var domain_name = window.location.protocol + "//" + window.location.host;
     //网站预加载运动start
-    if ($(document).width() >= 1200) {
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         //IE浏览器屏蔽部分动效start
         $(".mod-index__feature .img_list_6pic a").removeClass("word_display");
         if (!!window.ActiveXObject || "ActiveXObject" in window) {
