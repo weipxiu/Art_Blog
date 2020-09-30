@@ -745,9 +745,8 @@ img {
   overflow-y: scroll;
 }
 .continar .search_404{
+  max-width: 1000px;
   position:fixed;
-  width:100px;
-  height:50px;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);

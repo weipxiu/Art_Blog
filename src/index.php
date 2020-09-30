@@ -38,7 +38,7 @@
 
 	<!-- 正文区域start -->
 	<section class="continar" id="lazycontainer">
-		<img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.jpg" alt="">
+		<img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.png" alt="">
 		<div id="mobil">
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
