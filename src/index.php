@@ -278,14 +278,13 @@
 								<span class="r"></span>
 							</p>
 							<?php if (is_sticky()) echo '<em><a href="">顶</a></em>'; ?>
-							<!-- <span class="new-icon">NEW</span> -->
 						</div>
 					</article>
 				<?php endwhile;
 				else : ?>
 				<script>
 					layer.ready(function(){
-						layer.alert('抱歉，当前分类下没有一篇文章，去后台发布？',{
+						layer.alert('Sorry，当前分类下没有任何文章，去后台发布？',{
 							skin: 'layui',
 							title:"提示",
 							closeBtn: 1, //是否展示关闭x按钮
@@ -297,7 +296,7 @@
 						})
 						if (localStorage.getItem("off_y") == 1) {
 							new Audio(
-									'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + '抱歉，当前分类下没有一篇文章，是否去后台发布？'
+									'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + 'Sorry，当前分类下没有一篇文章，是否去后台发布？'
 							).play();                        
 						}
 					}); 

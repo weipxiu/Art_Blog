@@ -1734,10 +1734,6 @@ i {
   width: 100%;
 }
 
-.text .new-icon {
-  display: none;
-}
-
 .text img {
   width: 220px;
   border: 0;
@@ -4903,23 +4899,6 @@ ul.post-categories li:first-child {
 }
 
 /*文章加密内容end*/
-
-.new-icon {
-  background: #1890ff;
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  line-height: 20px;
-  color: #fff;
-  padding: 0 5px;
-  border-radius: 0 2px 0 0;
-  -webkit-animation: fade-in;
-  animation: fade-in;
-  -webkit-animation-duration: 1.2s;
-  animation-duration: 1.2s;
-  -webkit-animation: fade-in 1.2s;
-  font-size: 12px;
-}
 
 #web-tj,
 #web-tj .daily-list {

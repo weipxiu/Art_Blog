@@ -468,8 +468,7 @@ $(function () {
     for (var i = 0; i <= $(".mouseover ul li").length; i++) {
         $(".mouseover ul li").eq(i).find("em").html(i + 1)
     }
-    $(".text:lt(3) .new-icon").show();
-
+    
     // 移动端二级菜单导航start
     $("ul.slide-left li a").on("touchstart", function (e) {
         $(this).parents('li').siblings('li').find('.slide_slect').slideUp();
