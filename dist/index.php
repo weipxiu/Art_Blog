@@ -377,7 +377,7 @@ var banner = new Banner({
 		autoplay: 8000,
 		width: 1200,
 		height: 300,
-		images: <?php echo get_option('weipxiu_options')['mobile_banner']; ?>,
+		images: <?php echo get_option('weipxiu_options')['pc_banner']; ?>,
 
 		preloadImages: true, // 预加载所有图片
 
