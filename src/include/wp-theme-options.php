@@ -399,16 +399,16 @@ function themeoptions_page() {
         <div class="row clearfix popular_show">
           <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
           <div class="fr right-wrap">
-            <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{img_url:'图片地址',img_href:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
-            <span class="warn" style="display:block">*多组数据用,分开，例如[{img_url:'图片地址1', img_href:'跳转地址1'},{img_url:'图片地址2', img_href:'跳转地址2'}]；注意，所有字符都需要在英文状态输入</span>
+            <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
+            <span class="warn" style="display:block">*多组数据用,分开，例如[{url:'图片地址1', link:'跳转地址1'},{url:'图片地址2', link:'跳转地址2'}]；注意，所有字符都需要在英文状态输入</span>
           </div>
         </div>
 
         <div class="row clearfix popular_show">
           <label class="fl left-wrap" for="mobile_banner">移动端端Banner图：</label>
           <div class="fr right-wrap">
-            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;[{img_url:'图片地址',img_href:'跳转地址'}]"><?php echo $a_options['mobile_banner']; ?></textarea>
-            <span class="warn" style="display:block">*多组数据用,分开，例如：[{img_url:'图片地址1', img_href:'跳转地址1'},{img_url:'图片地址2', img_href:'跳转地址2'}]；注意，所有字符都需要在英文状态输入</span>
+            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['mobile_banner']; ?></textarea>
+            <span class="warn" style="display:block">*多组数据用,分开，例如[{url:'图片地址1', link:'跳转地址1'},{url:'图片地址2', link:'跳转地址2'}]；注意，所有字符都需要在英文状态输入</span>
           </div>
         </div>
 
