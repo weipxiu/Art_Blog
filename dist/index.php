@@ -45,9 +45,10 @@
 				<div class="swiper-wrapper">
 					<?php 
 					$dataList = get_option('weipxiu_options')['mobile_banner'];
-					foreach($dataList as $item){
-						echo $item["url"];
-				}
+					
+					
+						echo is_array($dataList);
+
 					 ?>
 				</div>
 				<div class="swiper-pagination"></div>
