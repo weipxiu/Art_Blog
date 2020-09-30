@@ -254,7 +254,7 @@ function themeoptions_page() {
               </div>
               <div class="fr right-wrap">
                 <img src="<?php echo $a_options['video_cover']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-                <span class="warn" style="display:block">*封面最佳尺寸308*174</span>
+                <span class="warn" style="display:block">*封面最佳尺寸308*174（如若感觉不够清晰，可使用2倍尺寸图片）</span>
               </div>
             </div>
           </div>
@@ -342,7 +342,7 @@ function themeoptions_page() {
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['logo']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*前台Logo最佳尺寸135*45（如若感觉不够清晰，可使用2倍尺寸图片，即270*90）</span>
+              <span class="warn" style="display:block">*前台Logo最佳尺寸135*45（如若感觉不够清晰，可使用2倍尺寸图片）</span>
             </div>
           </div>
         </div>
