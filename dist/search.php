@@ -48,7 +48,7 @@
 
     <!-- 正文区域start -->
     <div class="continar">
-        <img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.jpg" alt="">
+        <img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.png" alt="">
         <div class="continar-left" id="ajax_centent">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
