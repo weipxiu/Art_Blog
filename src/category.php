@@ -93,11 +93,13 @@
 					$("body, html").css("height","100%");
 					$(".search_404").show();
 					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+						setTimeout(fun(){
 							$('footer.footer').css({
 									"position": "fixed",
 									"bottom": "0",
 									"left":  "0"
 							})
+						}, 500);
 					}
 					layer.alert('Sorry，当前分类没有任何文章！',{
 						skin: 'layui',
