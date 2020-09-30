@@ -607,6 +607,14 @@ img {
   margin: 1rem auto 0 !important;
   overflow: hidden;
 }
+.continar .search_404{
+  position:fixed;
+  width:100px;
+  height:50px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
 /*左边区域start*/
 .continar .continar-left {
   width: 100%;

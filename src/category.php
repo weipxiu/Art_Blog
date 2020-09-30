@@ -16,6 +16,7 @@
 
 	<!-- 正文区域start -->
 	<div class="continar">
+		<img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.jpg" alt="">
 		<div class="continar-left" id="ajax_centent" style="border:0; padding:0; background: transparent;">
 			<!-- 文章start -->
 			<?php
@@ -89,6 +90,8 @@
 					</article>
 				<?php endwhile; else : ?>
 				<script>
+					$("body, html").css("height","100%");
+					$(".search_404").show();
 					layer.alert('Sorry，当前分类没有任何文章！',{
 						skin: 'layui',
 						icon: 5,

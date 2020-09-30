@@ -38,6 +38,7 @@
 
 	<!-- 正文区域start -->
 	<section class="continar" id="lazycontainer">
+		<img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.jpg" alt="">
 		<div id="mobil">
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
@@ -283,6 +284,8 @@
 				<?php endwhile;
 				else : ?>
 				<script>
+					$("body, html").css("height","100%");
+					$(".search_404").show();
 					layer.ready(function(){
 						layer.alert('Sorry，当前分类下没有任何文章，去后台发布？',{
 							skin: 'layui',

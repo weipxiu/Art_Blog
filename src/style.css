@@ -1458,8 +1458,17 @@ i {
 .continar {
   width: 1200px;
   margin: 86px auto 40px;
-  min-height: calc(100% - 214px);
+  min-height: calc(100% - 245px);
   overflow: hidden;
+}
+
+.continar .search_404{
+  position:fixed;
+  width:100px;
+  height:50px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
 
 .deviation {

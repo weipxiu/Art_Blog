@@ -744,6 +744,14 @@ img {
   bottom: 0;
   overflow-y: scroll;
 }
+.continar .search_404{
+  position:fixed;
+  width:100px;
+  height:50px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
 
 /*左边区域start*/
 

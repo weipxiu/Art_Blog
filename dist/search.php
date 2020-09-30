@@ -48,6 +48,7 @@
 
     <!-- 正文区域start -->
     <div class="continar">
+        <img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.jpg" alt="">
         <div class="continar-left" id="ajax_centent">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
@@ -125,6 +126,8 @@
             <?php endwhile; else: ?>
             <script>
                 $(".mod-breadcrumb").hide();
+                $("body, html").css("height","100%");
+                $(".search_404").show();
                 layer.alert('Sorry，当前关键词下未找到相关信息！',{
                     skin: 'layui',
                     title:"提示",
