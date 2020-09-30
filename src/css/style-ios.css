@@ -1238,6 +1238,7 @@ p.clearfix a {
 .social li a {
   width: 100%;
   color: #fff;
+  vertical-align: top;
 }
 
 .social li a i {

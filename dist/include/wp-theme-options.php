@@ -293,8 +293,8 @@ function themeoptions_page() {
         <div class="row clearfix popular_show" style="display:none">
           <label class="fl left-wrap" for="custom_label">自定义热门标签：</label>
           <div class="fr right-wrap">
-            <textarea id="custom_label" name="custom_label" rows="8" cols="100" placeholder="例如：<a href='https://www.weipxiu.com'>唯品秀前端技术博客</a>"><?php echo $a_options['custom_label']; ?></textarea>
-            <span class="warn" style="display:block">*每条链接占一行</span>
+            <textarea id="custom_label" name="custom_label" rows="8" cols="100" placeholder="例如：&#10;<a href='https://www.weipxiu.com'>唯品秀前端技术博客</a>"><?php echo $a_options['custom_label']; ?></textarea>
+            <span class="warn" style="display:block">*每条链接占一行，中间不需要逗号","衔接</span>
           </div>
         </div>
 
@@ -393,6 +393,22 @@ function themeoptions_page() {
               <img src="<?php echo $a_options['thumbnail']; ?>" class="preview-img" style="max-width: 100px;" alt="">
               <span class="warn" style="display:block">*默认信息流缩略图最佳尺寸220*140，展示规则：先取文章中设置的特色图片，如果没有，取文章内容首张图片，再没有将启用当前默认缩略图</span>
             </div>
+          </div>
+        </div>
+
+        <div class="row clearfix popular_show">
+          <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
+          <div class="fr right-wrap">
+            <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{img_url:'图片地址',img_href:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
+            <span class="warn" style="display:block">*多组数据用,分开，例如[{A},{B}...]</span>
+          </div>
+        </div>
+
+        <div class="row clearfix popular_show">
+          <label class="fl left-wrap" for="mobile_banner">移动端端Banner图：</label>
+          <div class="fr right-wrap">
+            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;[{img_url:'图片地址',img_href:'跳转地址'}]"><?php echo $a_options['mobile_banner']; ?></textarea>
+            <span class="warn" style="display:block">*多组数据用,分开，例如[{A},{B}...]</span>
           </div>
         </div>
 
@@ -661,6 +677,8 @@ function themeoptions_page() {
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
       'custom_label' => $_POST['custom_label'],
+      'pc_banner' => $_POST['pc_banner'],
+      'mobile_banner' => $_POST['mobile_banner'],
       'QQ-number' => $_POST['QQ-number'],
       'weChat-number' => $_POST['weChat-number'],
       'phone-number' => $_POST['phone-number'],
