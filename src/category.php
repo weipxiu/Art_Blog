@@ -93,7 +93,7 @@
 					$("body, html").css("height","100%");
 					$(".search_404").show();
 					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-						setTimeout(fun(){
+						setTimeout(function(){
 							$('footer.footer').css({
 									"position": "fixed",
 									"bottom": "0",
@@ -116,7 +116,6 @@
 				</script>
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
-
 		</div>
 		<!-- 左侧区域end -->
 
