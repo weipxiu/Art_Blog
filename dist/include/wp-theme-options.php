@@ -222,7 +222,7 @@ function themeoptions_page() {
         <div class="row clearfix row_content border_none" style="display:none">
           <div class="row clearfix border_none" >
             <label for="video-url" class="fl left-wrap">视频播放地址：</label>
-            <div class="fixed-wrap">
+            <div class="fixed-wrap fl right-wrap">
               <input
                 type="text"
                 class="url-inp"
@@ -237,7 +237,7 @@ function themeoptions_page() {
           <div class="row clearfix">
             <div class="margin-top-15 clearfix">
               <label class="fl left-wrap" for="">视频封面图片：</label>
-              <div class="fixed-wrap">
+              <div class="fixed-wrap fl right-wrap">
                 <input
                   type="text"
                   class="url-inp"

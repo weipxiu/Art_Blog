@@ -48,7 +48,7 @@ textarea::-webkit-scrollbar-thumb {
   background-color: #bbb;
 }
 .url-inp {
-  width: calc(100% - 290px);
+  width: calc(100% - 100px);
 }
 
 /* 导航切换页面 */
