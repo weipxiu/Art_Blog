@@ -45,7 +45,7 @@
 				<div class="swiper-wrapper">
 					<?php 
 					$dataList = get_option('weipxiu_options')['mobile_banner'];
-					foreach ( $dataList as $item) { ?>
+					foreach ( (array)$dataList as $item) { ?>
 							<div class="swiper-slide" style="background:url('<?php echo $item['url']?>') no-repeat center top; background-size:100% 100%"><a href="<?php echo $item['link']?>"></a></div>
 					<?php } ?>
 				</div>
