@@ -128,7 +128,7 @@
                 $(".mod-breadcrumb").hide();
                 $("body, html").css("height","100%");
                 $(".search_404").show();
-                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
                     $('footer.footer').css({
                         "position": "fixed",
                         "bottom": "0",
