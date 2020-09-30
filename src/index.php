@@ -43,7 +43,7 @@
 			<!--移动端轮播start-->
 			<div class="swiper-container1">
 				<div class="swiper-wrapper">
-					<?php foreach (echo get_option('weipxiu_options')['mobile_banner'] as $item) { ?>
+					<?php foreach (get_option('weipxiu_options')['mobile_banner'] as $item) { ?>
 							<div class="swiper-slide" style="background:url('<?php echo $value['url']?>') no-repeat center top; background-size:100% 100%"><a href="<?php echo $value['link']?>"></a></div>
 					<?php } ?>
 				</div>
@@ -377,27 +377,7 @@ var banner = new Banner({
 		autoplay: 8000,
 		width: 1200,
 		height: 300,
-		images:[{
-    url: '/wp-content/themes/Art_Blog/images/banner-1.jpg',
-    link: '/category/frontend/holdall'
-  }, {
-    url: '/wp-content/themes/Art_Blog/images/banner-2.jpg',
-    link: '/3355.html'
-  }, {
-    url: '/wp-content/themes/Art_Blog/images/banner-3.jpg',
-    link: '/1332.html'
-  }, {
-    url: '/wp-content/themes/Art_Blog/images/banner-4.jpg',
-    link: 'https://github.com/weipxiu/Art_Blog'
-  }, {
-    url: '/wp-content/themes/Art_Blog/images/banner-5.jpg',
-    link: '/658.html'
-  },
-  {
-    url: '/wp-content/themes/Art_Blog/images/banner-6.jpg',
-    link: '/1313.html'
-  }
-],
+		images: <?php echo get_option('weipxiu_options')['mobile_banner']; ?>,
 
 		preloadImages: true, // 预加载所有图片
 
