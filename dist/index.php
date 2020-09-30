@@ -47,7 +47,7 @@
 					$dataList = get_option('weipxiu_options')['mobile_banner'];
 					
 					
-						echo is_array($dataList);
+					var_dump(is_array($dataList));
 
 					 ?>
 				</div>
