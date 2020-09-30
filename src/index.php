@@ -412,7 +412,7 @@ var banner = new Banner({
 				'navi': 'pageEffect'
 		},
 });
-console.log(<?php echo get_option('weipxiu_options')['pc_banner']; ?>)
-console.log(<?php echo get_option('weipxiu_options')['mobile_banner']; ?>) 
+console.log(<?php echo get_option('weipxiu_options')['pc_banner']; ?>,Array.isArray(<?php echo get_option('weipxiu_options')['pc_banner']; ?>))
+console.log(<?php echo get_option('weipxiu_options')['mobile_banner']; ?>,Array.isArray(<?php echo get_option('weipxiu_options')['pc_banner']; ?>)) 
 </script>
 </html>
