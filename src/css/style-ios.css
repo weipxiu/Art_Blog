@@ -1211,7 +1211,7 @@ p.clearfix a {
   justify-content: space-between;
 }
 .social li {
-  padding: 0.14rem .36rem;
+  padding: .12rem .34rem;
   border-radius: .1rem;
 }
 
@@ -1240,6 +1240,7 @@ p.clearfix a {
   color: #fff;
   vertical-align: top;
   line-height: 0.36rem;
+  display: inline-flex;
 }
 
 .social li a i {
@@ -2855,6 +2856,7 @@ div.jy p {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
+  border-radius: 2px;
   border-left: 2px solid#fff;
 }
 .wp-pagenavi a.last {

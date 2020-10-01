@@ -990,6 +990,7 @@ p.clearfix a {
   color: #fff;
   vertical-align: top;
   line-height: 0.36rem;
+  display: inline-flex;
 }
 .social li a i {
   font-size: 0.36rem;
@@ -2513,6 +2514,7 @@ div.jy p {
   margin: 0;
   font-size: 0.32rem;
   line-height: 34px;
+  border-radius: 4px;
   border-left: 2px solid#fff;
 }
 .wp-pagenavi a.last {
