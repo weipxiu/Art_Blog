@@ -967,7 +967,7 @@ p.clearfix a {
   justify-content: space-between;
 }
 .social li {
-  padding: 0.16rem .6rem;
+  padding: 0.14rem .6rem;
     border-radius: .1rem;
 }
 .social .weibo {
@@ -989,6 +989,7 @@ p.clearfix a {
   width: 100%;
   color: #fff;
   vertical-align: top;
+  line-height: 0.36rem;
 }
 .social li a i {
   font-size: 0.36rem;
@@ -2485,8 +2486,6 @@ div.jy p {
 
 .wp-pagenavi {
   width: 100%;
-  height: 28px;
-  line-height: 28px;
   text-align: left;
   overflow: hidden;
   margin-left: auto;
@@ -2510,7 +2509,7 @@ div.jy p {
   text-decoration: none;
   background-color: #ddd;
   color: #666;
-  padding: 0.1rem 0.3rem;
+  padding: .2rem .5rem;
   margin: 0;
   font-size: 0.32rem;
   line-height: 34px;
@@ -2523,7 +2522,7 @@ div.jy p {
   background: #1890ff;
   text-decoration: none;
   color: #fff;
-  padding: 0.1rem 0.3rem;
+  padding: 0.8rem 0 .6rem;
   margin: 0 2px;
   line-height: 34px;
   border: 0;
