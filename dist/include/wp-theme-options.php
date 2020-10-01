@@ -407,8 +407,8 @@ function themeoptions_page() {
         <div class="row clearfix popular_show">
           <label class="fl left-wrap" for="mobile_banner">移动端端Banner图：</label>
           <div class="fr right-wrap">
-            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['mobile_banner']; ?></textarea>
-            <span class="warn" style="display:block">*多组数据用,分开，例如[{url:'图片地址1', link:'跳转地址1'},{url:'图片地址2', link:'跳转地址2'}]；注意，所有字符都需要在英文状态输入</span>
+            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;可将下方示例json数据格式化后贴进来细品"><?php echo $a_options['mobile_banner']; ?></textarea>
+            <span class="warn" style="display:block">*强调，该处数据格式相较pc端banner特殊，示例数据：[{"url":"\/wp-content\/themes\/Art_Blog\/images\/banner1.png","link":"\/video_2019.mp4"},{"url":"\/wp-content\/themes\/Art_Blog\/images\/banner2.png","link":"https://www.weipxiu.com\/3355.html"}]；注意双引号以及在目录层级需要加<span style="color:red">反斜杠\</span></span>
           </div>
         </div>
 
