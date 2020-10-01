@@ -1211,7 +1211,7 @@ p.clearfix a {
   justify-content: space-between;
 }
 .social li {
-  padding: .12rem .34rem;
+  padding: 0.14rem .36rem;
   border-radius: .1rem;
 }
 
@@ -1384,7 +1384,7 @@ div.com-art ul li {
   text-overflow: ellipsis;
   position: relative;
   color: #5e5e5e;
-  font-size: 0.24rem;
+  font-size: 0.28rem;
 }
 
 .friendship ul li a {
@@ -2858,6 +2858,9 @@ div.jy p {
   line-height: 16px;
   border-radius: 2px;
   border-left: 2px solid#fff;
+}
+.wp-pagenavi a.extend{
+  display: none;
 }
 .wp-pagenavi a.last {
   display: none;
