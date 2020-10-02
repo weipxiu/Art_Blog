@@ -2852,10 +2852,9 @@ div.jy p {
   text-decoration: none;
   background-color: #ddd;
   color: #666;
-  padding: 0.16rem 0.35rem;
+  padding: .12rem .34rem;
   margin: 0;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.28rem;
   border-radius: 2px;
   border-left: 2px solid#fff;
 }
@@ -2869,9 +2868,7 @@ div.jy p {
   background: #1890ff;
   text-decoration: none;
   color: #fff;
-  line-height: 16px;
   border: 0;
-  font-size: 12px;
 }
 
 .screen-reader-text {
