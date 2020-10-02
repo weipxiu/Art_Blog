@@ -715,9 +715,6 @@ img {
 .continar .rssbook {
   text-align: center;
 }
-.continar .rssbook p {
-  margin-bottom: 0rem;
-}
 .continar .rssbook h3 {
   font-size: 0.3rem;
   margin-bottom: 0.06rem;
@@ -2773,7 +2770,7 @@ div.btn {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 97;
   transition: all 0.25s;
 }
 .os-headertop .weipxiu_nav {
@@ -2822,10 +2819,10 @@ div.btn {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 98;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.3);
   display: none;
 }
 span.post-like,
