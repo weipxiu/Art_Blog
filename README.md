@@ -35,8 +35,9 @@
 
 |  网站名称 | 网站地址 | 
 | :----: | :----: | 
+| [张峰博客](http://www.feng01.top/) | http://www.feng01.top
+| [枯痕博客](https://www.xiaole.biz/) | https://www.xiaole.biz
 | [故城县历史](http://www.gaojibo.com/) | http://www.gaojibo.com
-| [肖文杰个人博客](https://www.goodjayson.com/) | https://www.goodjayson.com
 | [前端笔记](http://younglee666.com/) | http://younglee666.com
 | [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
 | [大川渝个人博客](https://www.dcydz.com) | www.dcydz.com
@@ -44,8 +45,6 @@
 | [智慧博客网](https://www.llg.design) | www.llg.design 
 | [开源NetCore](http://www.netcore.pub) | http://netcore.pub
 | [狗蛋博客](https://www.xiaole.biz) | https://www.xiaole.biz
-| [海诗查题](https://www.bswhs.cn) | https://www.bswhs.cn  
-| [北漂程序员](http://blog.zoux.xin) | http://blog.zoux.xin
 | [苏州特个人博客](http://www.sutee.cn) | http://www.sutee.cn
 | [某小健博客](http://www.mouxj.com) | www.mouxj.com |
 
@@ -78,6 +77,8 @@ II、为了用户最佳浏览体验，该主题对≤IE8作了屏蔽跳转，≥
 III、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-ios.css、style-ipd.css两个文件，没错，三端样式完全独立，不重用，有利有弊，不予置评
 
 IV、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
+
+V、主题不定期优化，如若在使用过程中出现问题自己无法解决可直接与我联系，免费在线技术支持QQ:343049466，微信同号，加好友请备注
 
 ## 项目文件说明
 ``` bash
