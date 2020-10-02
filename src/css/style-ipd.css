@@ -908,6 +908,55 @@ ul.post-categories li:first-child {
   display: none !important;
 }
 
+.mod-category__article-time {
+  display: none;
+}
+.continar-left p.l > span a {
+  display: block;
+  height: 100%;
+}
+.continar-left p.l {
+  width: calc(100% - 2rem);
+  height: 0.32rem;
+  line-height: 0.32rem;
+  float: right;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-top: 0.15rem;
+}
+.continar-left p.l span,
+.continar-left p.l a {
+  font-size: 0.2rem;
+  color: #d0d0d0 !important;
+}
+.continar-left p.l .fa {
+  display: none;
+}
+.continar-left p.l .iconfont {
+  color: #e0e0e0;
+  font-size: 0.24rem;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.continar-left p.l .icon-icon-eyes {
+  transform: scale(0.9);
+  display: inline-block;
+  margin-right: 0;
+}
+.text_right > h2 + img {
+  max-width: 1.8rem;
+  max-height: 1.2rem;
+  float: left;
+}
+.continar-left p.l > span.p_time {
+  display: none;
+}
+.continar-left p.l > span.i_time {
+  display: inline-block;
+}
+
 /*右侧区域start*/
 .continar-right {
   width: 100%;
