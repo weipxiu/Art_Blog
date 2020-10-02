@@ -864,9 +864,9 @@ $(function () {
         //播放失败时候处理
         var errVideo = document.getElementById('my-video_html5_api');
         errVideo.onerror = function () {
-            layer.alert('通常是由于视频地址错误引起，请检查！', {
+            layer.alert('通常是由于视频地址错误或未添加视频封面图引起，请检查！', {
                 skin: 'layui',
-                title: "播放失败",
+                title: "视频初始化失败",
                 closeBtn: 0,
                 anim: 4 //动画类型
             })
