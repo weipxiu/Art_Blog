@@ -1375,16 +1375,14 @@ div.com-art ul li {
 
 .widget ul li a {
   font-weight: normal;
-  height: 0.47rem;
-  line-height: 0.47rem;
+  line-height: 0.42rem;
   margin-left: 0.6rem;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
-  color: #5e5e5e;
-  font-size: 0.28rem;
+  font-size: 0.26rem;
 }
 
 .friendship ul li a {
@@ -1458,9 +1456,9 @@ div.com-art ul li {
   width: 31.3333%;
   margin: 0 1% 1% 1%;
   padding: 0 8px;
-  font-size: 0.24rem;
-  height: 0.56rem;
-  line-height: 0.56rem;
+  font-size: .26rem;
+  height: .65rem;
+  line-height: .65rem;
   overflow: hidden;
   transition: all 0.35s;
 }
@@ -3540,6 +3538,7 @@ p.reward-p {
   overflow: hidden;
   padding: 0.15rem 0;
   border-bottom: 1px solid #eee;
+  font-size: 0.28rem;
 }
 .tuts_comments_user_avatars li:last-of-type {
   border: none;
