@@ -1875,7 +1875,7 @@ i {
 }
 
 .text h2 + img {
-  display: none;
+  display: none!important;
 }
 
 .space,
