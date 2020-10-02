@@ -877,7 +877,7 @@ img {
 
 .rssbook p {
   font-size: 0.28rem !important;
-  margin: 0.1rem auto 10px;
+  margin: 0.1rem auto;
   line-height: 0.48rem;
   color: #666;
 }
@@ -1133,7 +1133,7 @@ ul.post-categories li:first-child {
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  margin-top: 0.19rem;
+  margin-top: 0.15rem;
 }
 .continar-left p.l span,
 .continar-left p.l a {

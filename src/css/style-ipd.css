@@ -772,47 +772,42 @@ img {
 }
 /*邮件订阅end*/
 
-.text {
+.continar-left .text {
   background: #fff;
   height: auto;
+  padding: 0 0.26rem 0.175rem;
+  margin-bottom: 0.2rem;
   overflow: hidden;
   position: relative;
   transition: all 0.35s;
-  width: calc(25% - 20px);
-  float: left;
-  margin: 10px;
 }
-.text .img-left img {
-  width: 100%;
-  height: 1.75rem;
-  border: 0;
+.continar-left .text:nth-of-type(1) {
+  margin-top: 0.2rem;
+}
+.continar-left .text .text_right {
   float: none;
+  width: 100%;
+}
+
+.continar-left .text .text_right > h2 {
+  word-wrap: break-word;
+  height: 0.7rem;
+  line-height: 0.7rem;
   display: block;
-  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
-.text .text_right {
-  float: none;
-  width: 100%;
-}
+
 ul.post-categories li {
   display: none;
 }
+
 ul.post-categories li:first-child {
   display: block;
 }
-.text .text_right > h2 {
-  /* word-wrap: break-word; */
-  display: block;
-  /* overflow: hidden; */
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  height: 0.9rem;
-  word-break: break-all;
-  word-wrap: break-word;
-  padding: 5px;
-}
+
 .text_right h2 span:nth-child(1) {
   color: #fff;
   background-color: #1890ff;
@@ -824,6 +819,7 @@ ul.post-categories li:first-child {
   margin-right: 6px;
   display: none;
 }
+
 .text_right h2 span:nth-child(1) i {
   position: absolute;
   top: 50%;
@@ -837,17 +833,21 @@ ul.post-categories li:first-child {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
 }
+
 .text_right h2 span:nth-child(1) a {
   color: #fff;
   font-size: 0.24rem;
   font-weight: normal;
-  display: none;
+  display: block;
 }
 .text h2 a {
-  font-size: 0.24rem;
+  font-size: 0.32rem;
   font-weight: normal;
+  color: #444;
+  transition: all 0.35s;
   color: #333;
 }
+
 .text em {
   position: absolute;
   right: 15px;
@@ -860,6 +860,7 @@ ul.post-categories li:first-child {
   display: block;
   display: none;
 }
+
 .text em a {
   display: block;
   height: 100%;
@@ -867,6 +868,7 @@ ul.post-categories li:first-child {
   color: #fff;
   padding: 2px 12px;
 }
+
 .text em:after {
   content: '';
   position: absolute;
@@ -879,36 +881,31 @@ ul.post-categories li:first-child {
   border-right-width: 0;
 }
 
-.text_right > h2 + img {
-  display: none !important;
-}
-.space,
 .sep,
 .space {
   padding: 0 0.2rem;
   color: #a5a5a5;
   font-style: normal;
 }
+
 .text h3 {
-  height: 0.8rem;
-  line-height: 0.4rem;
-  margin-bottom: 0.28rem;
+  width: calc(100% - 2rem);
+  float: right;
+  line-height: 0.38rem;
   font-size: 0.26rem;
   font-weight: normal;
-  display: flex;
-  line-clamp: 2;
-  box-orient: vertical;
-  -moz-line-clamp: 2;
-  -moz-box-orient: vertical;
-  line-clamp: 3;
-  box-orient: vertical;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  display: none;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  overflow: hidden;
+}
+.text .img-left img,
+.text .text_right .read-more {
+  display: none !important;
 }
 
 /*右侧区域start*/
@@ -1117,6 +1114,7 @@ div.com-art ul li {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 0.26rem;
+  line-height: 0.55rem;
 }
 .friendship ul li a {
   margin-left: 0.5rem;
@@ -2521,7 +2519,6 @@ div.jy p {
   background: #1890ff;
   text-decoration: none;
   color: #fff;
-  padding: 0.8rem 0 .6rem;
   margin: 0 2px;
   line-height: 34px;
   border: 0;
