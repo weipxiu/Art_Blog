@@ -261,9 +261,17 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label for="key-word" class="fl left-wrap">头部关键词：</label>
+          <div class="fr right-wrap">
+            <textarea id="key-word" name="key-word" rows="3" cols="100"><?php echo $a_options['key_word']; ?></textarea>
+            <span class="warn">*展示在PC端logo右侧的关键词、座右铭或经典语录，例如：<p>关注前端开发</p><p>Html5、Vue、Node、Koa</p></span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label for="sidebar-notice" class="fl left-wrap">侧边栏公告：</label>
           <div class="fr right-wrap">
-            <textarea id="sidebar-notice" name="sidebar-notice" rows="2" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
+            <textarea id="sidebar-notice" name="sidebar-notice" rows="3" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
           </div>
         </div>
 
@@ -670,6 +678,7 @@ function themeoptions_page() {
       'text_pic' => $_POST['text-pic'],
       'logo' => $_POST['logo'],
       'thumbnail' => $_POST['thumbnail-img'],
+      'key_word' => $_POST['key-word'],
       'sidebar_notice' => $_POST['sidebar-notice'],
       'footer_copyright' => $_POST['footer-copyright'],
       'login_css'  => $_POST['login-css'],

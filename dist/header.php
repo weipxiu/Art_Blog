@@ -30,8 +30,7 @@
 					</a>
 					<div class="nav-left"></div>
 					<div class="brand">
-					<p>关注前端开发</p>
-					<p>Html5、Vue、Node、Koa</p>
+					<?php echo get_option('weipxiu_options')['key_word']; ?>
 				</div>
 				<?php 
 					// 列出顶部导航菜单，只列出一级菜单
