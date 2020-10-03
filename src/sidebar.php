@@ -22,29 +22,6 @@
                 echo get_option('weipxiu_options')['sidebar_notice'];
             ?>
         </p>
-        <ul class="social">
-            <ul class="social">
-                <li class="weibo">
-                    <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php echo get_option('weipxiu_options')['QQ-number'];?>&site=qq&menu=yes"><i class="iconfont icon-qq"></i>QQ</a>
-                </li>
-                <li class="qq">
-                    <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=4BemYKg" rel="nofollow" class="top-tip"
-                        title="加入web前端QQ群"><i class="iconfont icon-qqqun"></i>Q群</a>
-                </li>
-                <li class="feed">
-                    <a target="_blank" href="tencent://message/?uin=<?php echo get_option('weipxiu_options')['QQ-number'];?>&Site=qq&Menu=yes" rel="nofollow" class="top-tip"
-                        title="QQ临时会话"><i class="iconfont icon-qq"></i>会话</a>
-                </li>
-                <li class="email">
-                    <a href="mailto:<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank" rel="nofollow" class="top-tip" title="给我发送qq邮件"><i
-                            class="iconfont icon-youxiang"></i>邮件</a>
-                </li>
-                <li class="weixin">
-                    <a href="javascript:;" target="_blank" rel="nofollow" class="top-tip" title="关注微信"><i
-                            class="iconfont icon-weixin"></i>微信</a>
-                </li>
-            </ul>
-        </ul>
     </div>
 </div>
 
