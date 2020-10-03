@@ -1004,41 +1004,7 @@ p.clearfix a {
   color: #1890ff;
   font-size: 0.3rem !important;
 }
-.social {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.social li {
-  padding: 0.14rem .6rem;
-    border-radius: .1rem;
-}
-.social .weibo {
-  background: #fc8bd2;
-}
-.social .qq {
-  background: #b663ff;
-}
-.social .feed {
-  background: #4cc6fa;
-}
-.social .email {
-  background: #ffb332;
-}
-.social .weixin {
-  background: #49cc5b;
-}
-.social li a {
-  width: 100%;
-  color: #fff;
-  vertical-align: top;
-  line-height: 0.36rem;
-  display: inline-flex;
-}
-.social li a i {
-  font-size: 0.36rem;
-  color: #fff;
-}
+
 /*热门文章start*/
 .widget {
   background: #fff;
@@ -1470,10 +1436,7 @@ div.com-art ul li {
 .continar-left p {
   line-height: 0.6rem;
 }
-.continar-left .textwidget > p {
-  line-height: 0.5rem;
-  color: #666;
-}
+
 .continar-left div.key-w {
   margin-bottom: 0.5rem;
 }

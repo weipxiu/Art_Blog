@@ -263,8 +263,8 @@ function themeoptions_page() {
         <div class="row clearfix">
           <label for="key-word" class="fl left-wrap">头部关键词：</label>
           <div class="fr right-wrap">
-            <textarea id="key-word" name="key-word" rows="3" cols="100"><?php echo $a_options['key_word']; ?></textarea>
-            <span class="warn">*展示在PC端logo右侧的关键词、座右铭或经典语录，例如：<p>关注前端开发</p><p>Html5、Vue、Node、Koa</p></span>
+            <textarea id="key-word" name="key-word" rows="3" cols="100" placeholder="例如：&#10;<p>关注前端开发</p>&#10;<p>Html5、Vue、Node、Koa</p>"><?php echo $a_options['key_word']; ?></textarea>
+            <span class="warn">*展示在PC端logo右侧的关键词、座右铭或经典语录</span>
           </div>
         </div>
 
