@@ -5,6 +5,9 @@
 	  font-weight:400;
     src: local('☺︎'), url("../font/sf-pro-text_regular.woff2") format("woff2"), url("../font/sf-pro-display_regular.woff2") format("woff2");
 }
+:root{
+  --color: #1890ff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -95,6 +98,7 @@ img {
 
 .swiper-pagination-bullet-active {
   background: #1890ff !important;
+  background: var(--color, #1890ff);
 }
 
 .swiper-container1,
@@ -209,6 +213,7 @@ img {
   color: #fff;
   border: none;
   background: #1890ff;
+  background: var(--color, #1890ff);
   height: 0.8rem;
   font-size: 16px;
   padding: 0 12px;
@@ -229,6 +234,7 @@ img {
   animation: box 0.5s linear;
   -ms-animation: box 0.5s linear;
   border-bottom: 1px solid #1890ff;
+  border-bottom: 1px solid var(--color, #1890ff);
   background: rgba(40, 40, 40, 0.9);
 }
 
@@ -405,10 +411,12 @@ img {
 
 .nav ul li a span.hover {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav ul li a span.hover i {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav {
@@ -725,6 +733,7 @@ img {
   line-height: 64px;
   text-align: center;
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 /*小飞机end*/
@@ -809,6 +818,7 @@ img {
 .continar .continar-left-top h1 span {
   margin-left: -8px;
   color: #1890ff;
+  color: var(--color, #1890ff);
   transition: all 0.25s;
   font-size: 0.32rem;
 }
@@ -908,6 +918,7 @@ img {
 
 .wpm_form .wpm_submit input {
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   border: none;
   border-radius: 0 0.06rem 0.06rem 0;
@@ -972,7 +983,8 @@ ul.post-categories li:first-child {
 
 .text_right h2 span:nth-child(1) {
   color: #fff;
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
   padding: 2px 6px;
   font-size: 12px;
   float: left;
@@ -992,6 +1004,7 @@ ul.post-categories li:first-child {
   height: 0;
   vertical-align: middle;
   border-left: 4px solid #1890ff;
+  border-left: 4px solid var(--color, #1890ff);
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
 }
@@ -1017,6 +1030,7 @@ ul.post-categories li:first-child {
   font-style: normal;
   transition: all 0.35s;
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   opacity: 0.8;
   display: block;
@@ -1040,6 +1054,7 @@ ul.post-categories li:first-child {
   top: 15px;
   border: 8px dashed transparent;
   border-left: 8px solid #1890ff;
+  border-left: 8px solid var(--color, #1890ff);
   border-right-width: 0;
 }
 
@@ -1202,6 +1217,7 @@ p.clearfix {
 
 p.clearfix a {
   color: #1890ff;
+  color: var(--color, #1890ff);
   font-size: 0.28rem;
 }
 
@@ -1247,6 +1263,7 @@ p.clearfix a {
 }
 .daily-list > p a {
   color: #1890ff;
+  color: var(--color, #1890ff);
   font-size: 0.28rem;
 }
 .widget ul li {
@@ -1374,6 +1391,7 @@ div.com-art ul li {
 
 .widget ul li:nth-child(3) em {
   background: #1890ff;
+  background: var(--color, #1890ff);
 }
 
 /*热门文章end*/
@@ -1561,6 +1579,7 @@ div.com-art ul li {
 
 #primary-sidebar #ds-recent-comments li.ds-comment div a {
   color: #1890ff;
+  color: var(--color, #1890ff);
   font-size: 12px;
 }
 
@@ -1613,11 +1632,13 @@ div.com-art ul li {
 
 #ds-recent-comments li.ds-comment a {
   color: #1890ff;
+  color: var(--color, #1890ff);
   font-size: 13px;
 }
 
 #ds-recent-comments li.ds-comment .ds-thread-title a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 /*评论模块end*/
@@ -1671,6 +1692,7 @@ div.com-art ul li {
 .continar-left .mod-breadcrumb a {
   font-size: 0.32rem;
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 .head_user_b {
   display: none;
@@ -1713,6 +1735,7 @@ div.key-w {
   margin: 0 5px;
   border-radius: 3px;
   background: #1890ff;
+  background: var(--color, #1890ff);
   float: left;
 }
 
@@ -1805,6 +1828,7 @@ div.nav-s a {
 
 div.nav-s a:nth-child(1) {
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   padding: 0px 25px 0px 35px;
   border-radius: 4px 0px 0px 4px;
@@ -1823,6 +1847,7 @@ div.nav-s a:nth-child(1):after {
   border-top: 20px solid transparent;
   border-right: 20px solid transparent;
   border-left: 20px solid #1890ff;
+  border-left: 20px solid var(--color, #1890ff);
   border-bottom: 20px solid transparent;
   position: absolute;
   top: 0px;
@@ -2021,6 +2046,7 @@ td.line-numbers {
 }
 .continar-left .log-text a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .codecolorer-container * {
@@ -2815,6 +2841,7 @@ div.jy p {
 }
 .wp-pagenavi a.current {
   background: #1890ff;
+  background: var(--color, #1890ff);
   text-decoration: none;
   color: #fff;
   border: 0;
@@ -3665,6 +3692,7 @@ p.reward-p {
 }
 .post_content #submit {
   background: #1890ff;
+  background: var(--color, #1890ff);
   border-radius: 0.08rem;
   color: #fff;
   width: 100%;

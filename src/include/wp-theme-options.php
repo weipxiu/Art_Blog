@@ -198,6 +198,21 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label for="replace-skin" class="fl left-wrap">网站换肤：</label>
+          <div class="fr right-wrap">
+            <input
+                type="text"
+                class="url-inp"
+                name="replace-skin"
+                id="replace-skin"
+                value="<?php echo $a_options['replace_skin']; ?>"
+                placeholder="请输入主题颜色值"
+              >
+            <span class="warn">*可输入任意颜色格式，例如十六进制:#ed145b，单词：red，甚至rgba，默认值：#1890ff</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label class="fl left-wrap">侧边栏视频：</label>
           <div class="fr right-wrap">
             <label for="video_on">开</label>
@@ -672,6 +687,7 @@ function themeoptions_page() {
       'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
+      'replace_skin' => $_POST['replace-skin'],
       'side_video' => $_POST['side_video'],
       'video_url' => $_POST['video_url'],
       'video_cover' => $_POST['video_cover'],

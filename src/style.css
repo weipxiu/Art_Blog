@@ -5,7 +5,9 @@
 	  font-weight:400;
     src: local('☺︎'), url("./font/sf-pro-text_regular.woff2") format("woff2"), url("./font/sf-pro-display_regular.woff2") format("woff2");
 }
-
+:root{
+  --color: #1890ff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +63,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #1890ff;
+  background-color: var(--color, #1890ff);
 }
 
 img {
@@ -517,6 +520,7 @@ i {
 .search-btn {
   border: none;
   background: #1890ff;
+  background: var(--color, #1890ff);
   border-radius: 0 4px 4px 0;
   width: 7%;
   cursor: pointer;
@@ -773,6 +777,7 @@ i {
   bottom: -17px;
   left: 0;
   background: #1890ff;
+  background: var(--color, #1890ff);
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -891,11 +896,13 @@ i {
 #nav_list li.current-category-parentt > a span,
 #nav_list li.current-menu-item a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav ul li.action i,
 .nav ul li.current-category-ancestor i {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav ul.music-nav li {
@@ -1003,6 +1010,7 @@ i {
 
 .nav .nav-min a.action {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 /* .nav .nav-min::before {
@@ -1164,10 +1172,9 @@ i {
   border: 0;
 }
 
-.header .nav-min a.hover,
 .header .nav-min a:hover {
   background: #ddd;
-  color: #000;
+  color: var(--color, #1890ff);
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
@@ -1448,6 +1455,7 @@ i {
   line-height: 64px;
   text-align: center;
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .aircraft:hover {
@@ -1525,10 +1533,12 @@ i {
 .continar .continar-left-top h1 a {
   font-size: 18px;
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar .continar-left-top h1 a:hover {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar .continar-left-top h1 a img {
@@ -1541,6 +1551,7 @@ i {
 .continar .continar-left-top h1 span {
   margin-left: -8px;
   color: #1890ff;
+  color: var(--color, #1890ff);
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
@@ -1646,6 +1657,7 @@ i {
 
 .wpm_form .wpm_submit input {
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   padding: 7px 15px 8px;
   border: none;
@@ -1734,6 +1746,7 @@ i {
   width: 0;
   height: 1px;
   background: #1890ff;
+  background: var(--color, #1890ff);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -1767,7 +1780,8 @@ i {
 
 .text_right h2 span:nth-child(1) {
   color: #fff;
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
   font-size: 12px;
   display: inline-block;
   position: relative;
@@ -1787,6 +1801,7 @@ i {
   height: 0;
   vertical-align: middle;
   border-left: 10px solid #1890ff;
+  border-left: 10px solid var(--color, #1890ff);
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
 }
@@ -1816,6 +1831,7 @@ i {
 
 .text h2 a:hover {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .con_info {
@@ -1833,6 +1849,7 @@ i {
   -o-transition: all 0.35s;
   transition: all 0.35s;
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   opacity: 0.8;
   display: block;
@@ -1871,6 +1888,7 @@ i {
   top: 8px;
   border: 8px dashed transparent;
   border-left: 8px solid #1890ff;
+  border-left: 8px solid var(--color, #1890ff);
   border-right-width: 0;
 }
 
@@ -1971,7 +1989,8 @@ i {
   display: inline-block;
   padding: 4px 15px;
   font-size: 14px;
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
 }
 
 .continar-right p.clearfix {
@@ -1986,10 +2005,12 @@ i {
   -o-transition: all 0.25s;
   transition: all 0.25s;
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar-right p.clearfix a:hover {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .widget {
@@ -2030,6 +2051,7 @@ i {
 
 .daily-list > p a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .widget-title {
@@ -2044,6 +2066,7 @@ i {
   width: 100px;
   height: 2px;
   background: #1890ff;
+  background: var(--color, #1890ff);
   left: 0;
   bottom: -1px;
 }
@@ -2165,6 +2188,7 @@ i {
 .widget ul li:hover h3,
 .widget ul li:hover span {
   color: #1890ff;
+  color: var(--color, #1890ff);
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
@@ -2172,7 +2196,9 @@ i {
 
 .widget ul li:hover span.daily-title:before {
   background: #1890ff;
+  background: var(--color, #1890ff);
   border: 2px solid #1890ff;
+  border: 2px solid var(--color, #1890ff);
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
@@ -2234,6 +2260,7 @@ div.com-art ul li {
 
 .widget ul li:nth-child(3) em {
   background: #1890ff;
+  background: var(--color, #1890ff);
 }
 
 .classif {
@@ -2278,6 +2305,7 @@ div.com-art ul li {
 .items a:hover {
   color: #fff;
   background: #1890ff;
+  background: var(--color, #1890ff);
 }
 
 .pagination {
@@ -2364,6 +2392,7 @@ div.com-art ul li {
 .container a:hover,
 .container p a.highlight {
   color: #1890ff !important;
+  color: var(--color, #1890ff)!important;
   text-decoration: underline;
 }
 
@@ -2529,11 +2558,13 @@ div.com-art ul li {
 
 #ds-recent-comments li.ds-comment a {
   color: #1890ff;
+  color: var(--color, #1890ff);
   font-size: 13px;
 }
 
 #ds-recent-comments li.ds-comment .ds-thread-title a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar-left ul.clearfix li {
@@ -2725,10 +2756,12 @@ div.com-art ul li {
 
 .continar-left .px a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar-left .px a:hover {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar-left p .px a {
@@ -2799,6 +2832,7 @@ div.nav-s a {
 
 div.nav-s a:nth-child(1) {
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   padding: 0 25px 0 35px;
   border-radius: 4px 0 0 4px;
@@ -2817,6 +2851,7 @@ div.nav-s a:nth-child(1):after {
   border-top: 20px solid transparent;
   border-right: 20px solid transparent;
   border-left: 20px solid #1890ff;
+  border-left: 20px solid var(--color, #1890ff);
   border-bottom: 20px solid transparent;
   position: absolute;
   top: 0;
@@ -2948,6 +2983,7 @@ p.data-l span.recommend a {
 
 p.data-l span.recommend a:hover {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar-left .log-text {
@@ -2956,6 +2992,7 @@ p.data-l span.recommend a:hover {
 
 .continar-left .log-text a {
   color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .continar-left .log-text a:hover {
@@ -3805,11 +3842,13 @@ span.extend {
 .wp-pagenavi a:hover,
 .wp-pagenavi a.current:hover {
   color: #fff;
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
 }
 
 .wp-pagenavi a.current {
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
   text-decoration: none;
   padding: 8px 14px;
   margin: 0 2px;
@@ -4290,6 +4329,7 @@ ul.post-categories li:first-child {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background: #1890ff;
+  background: var(--color, #1890ff);
   opacity: 0.8;
   text-align: center;
 }
@@ -5671,7 +5711,8 @@ transition: opacity 0.35s!important;
 }
 
 .post-actions .action.action-like {
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
   font-size: 12px;
   padding: 0px 15px;
   height: 32px;
@@ -5782,6 +5823,7 @@ transition: opacity 0.35s!important;
 
 .mod-breadcrumb a {
   color: #1890ff;
+  color: var(--color, #1890ff);
   font-size: 12px;
 }
 
@@ -6468,6 +6510,7 @@ label {
   padding: 8px 15px;
   text-align: center;
   background: #1890ff;
+  background: var(--color, #1890ff);
   color: #fff;
   border: 0;
   font-size: 12px;
@@ -6798,7 +6841,8 @@ label {
 
 .login_alert_box div a:nth-of-type(1) {
   color: #fff;
-  background-color: #1890ff;
+  background: #1890ff;
+  background: var(--color, #1890ff);
   margin-left: 5px;
 }
 

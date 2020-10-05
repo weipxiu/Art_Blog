@@ -1,6 +1,10 @@
 // JavaScript Document
 var date = [	
 	{
+		message:"2020 - 10 - 05",
+		reply:"新增主题换肤功能，在后台主题配置中根据个人喜好一键更换主题肤色，更个性、自由时尚"
+	},
+	{
 		message:"2020 - 09 - 25",
 		reply:"主题兼容wordPress最新版本v5.5.1，修复升级后侧边栏最新留言模块异常，建议所有用户升级该模块，仅需更新search.php文件"
 	},

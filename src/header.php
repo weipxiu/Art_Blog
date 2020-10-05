@@ -123,3 +123,9 @@
 <!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-start -->
 <div class="cover"></div>
 <!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-end -->
+
+<!-- 网站换肤start -->
+<script>
+	document.documentElement.style.setProperty('--color', '<?php echo get_option('weipxiu_options')['replace_skin']; ?>'.trim())
+</script>
+<!-- 网站换肤end -->
