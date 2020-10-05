@@ -3138,7 +3138,8 @@ div.btn {
   height: 1rem;
   line-height: 1rem;
   font-size: 0.44rem;
-  background: rgba(24, 144, 255, 0.8);
+  background: #1890ff;
+  background: var(--color, #1890ff);
   background-size: 100% 100%;
   line-height: 1rem;
   color: #fff;
