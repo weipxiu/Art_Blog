@@ -344,10 +344,9 @@ if("<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') ==
 //turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
 var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
 var randomNum = Math.floor(Math.random() * 3);
-var bannerData = if (<?php echo get_option('weipxiu_options')['pc_banner']; ?>){
-	<?php echo get_option('weipxiu_options')['pc_banner'] ?>
-}else{
-	<?php echo [] ?>
+var bannerData = [];
+bannerData = if (<?php echo get_option('weipxiu_options')['pc_banner']; ?>){
+	bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>
 }
 var banner = new Banner({
 		banner: '#banner_img',
