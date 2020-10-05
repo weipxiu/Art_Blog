@@ -419,7 +419,7 @@ function themeoptions_page() {
           </div>
         </div>
 
-        <div class="row clearfix popular_show">
+        <div class="row clearfix">
           <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
           <div class="fr right-wrap">
             <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
@@ -427,7 +427,7 @@ function themeoptions_page() {
           </div>
         </div>
 
-        <div class="row clearfix popular_show">
+        <div class="row clearfix">
           <label class="fl left-wrap" for="mobile_banner">移动端端Banner图：</label>
           <div class="fr right-wrap">
             <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;可将下方示例json数据格式化后贴进来细品"><?php echo $a_options['mobile_banner']; ?></textarea>
