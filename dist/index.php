@@ -19,7 +19,7 @@
 <body>
 	<?php get_header(); ?>
 	<section class="mod-banner" id="js_banner">
-		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background:url('/wp-content/themes/Art_Blog/images/banner-3.jpg') center center no-repeat;"></a>
+		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img"></a>
 		<div class="mod-banner__navi">
 			<div class="js_banner_nav mod-banner_nav"></div>
 			<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -350,7 +350,7 @@ var banner = new Banner({
 		autoplay: 8000,
 		width: 1200,
 		height: 300,
-		images: <?php echo get_option('weipxiu_options')['pc_banner']; ?>,
+		images: <?php echo get_option('weipxiu_options')['pc_banner']; ?> || [],
 
 		preloadImages: true, // 预加载所有图片
 
