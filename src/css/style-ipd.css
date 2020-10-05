@@ -1275,7 +1275,8 @@ div.com-art ul li {
   padding: 0.2rem 0;
   font-size: 12px;
   line-height: 12px;
-  background: rgba(24, 144, 255, 0.8);
+  background: #1890ff;
+  background: var(--color, #1890ff);
   border-top: 1px solid #eaeaea;
   transform: translateY(0px);
   -ms-transform: translateY(0px);
@@ -2666,7 +2667,8 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
 .os-herder {
   width: 160px;
   height: 100%;
-  background: rgba(24, 144, 255, 0.8);
+  background: #1890ff;
+  background: var(--color, #1890ff);
   background-size: 100% 100%;
   padding: 0 15px;
   position: fixed;
@@ -2733,7 +2735,8 @@ div.btn {
   min-height: 40px;
   height: 1rem;
   font-size: 0.44rem;
-  background: rgba(24, 144, 255, 0.8);
+  background: #1890ff;
+  background: var(--color, #1890ff);
   background-size: 100% 100%;
   line-height: 1rem;
   color: #fff;
@@ -2858,8 +2861,8 @@ div.btn {
 }
 .e-secret input.euc-y-s {
   color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
+  background-color: var(--color, #1890ff);
+  border-color: var(--color, #1890ff);
 }
 
 .continar-left .log-text .e-secret p a,

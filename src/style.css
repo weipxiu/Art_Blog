@@ -4874,8 +4874,8 @@ ul.post-categories li:first-child {
 
 .e-secret input.euc-y-s {
   color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
+  background-color: var(--color, #1890ff);
+  border-color: var(--color, #1890ff);
 }
 
 .continar-left .log-text .e-secret p a,
