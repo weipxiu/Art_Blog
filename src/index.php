@@ -345,7 +345,7 @@ if("<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') ==
 var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
 var randomNum = Math.floor(Math.random() * 3);
 var bannerData = [];
-bannerData = if (<?php echo get_option('weipxiu_options')['pc_banner']; ?>){
+if (<?php echo get_option('weipxiu_options')['pc_banner']; ?>){
 	bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>
 }
 var banner = new Banner({
