@@ -1,6 +1,6 @@
 {
   "name": "art_blog",
-  "version": "2.8.1",
+  "version": "2.8.2",
   "description": "一款基于jquery2.1.4开发的wordpress主题",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
+    "gulp-zip": "^5.0.2",
     "md5": "^2.2.1",
     "orchestrator": "^0.3.8",
     "run-sequence": "^2.2.1"

@@ -8,6 +8,7 @@ const gulp_minify_css = require('gulp-minify-css'); //压缩css
 const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
 const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
+const zip = require('gulp-zip');;//打包后压缩zip
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
 const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
 const plumber = require('gulp-plumber'); //阻止报错暂停
@@ -159,6 +160,12 @@ gulp.task("jsConcat", function () {
         .pipe(gulp.dest(target+"/js"))
 })
 
+gulp.task('compressZip', function () {
+    return gulp.src('./dist/*')
+        .pipe(zip('Art_Blog.zip'))
+        .pipe(gulp.dest('./'));
+});
+
 //初始化browserSync
 // browserSync.init({
 //     server: {
@@ -192,13 +199,14 @@ gulp.task("Watch", function () {
     gulp.watch(["src/**.css"], ["minCss"]);
     gulp.watch([target+"/**.css"], ["themesVer"]);
     gulp.watch(["src/*.js"], ["jsConcat"]);
+    // gulp.watch(["dist/**"], ["compressZip"]);
 })
 
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则打包太慢，图片压缩还是单独处理比较好
 gulp.task('default',function(){
-    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat", "Watch",function(){
+    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat","compressZip", "Watch",function(){
         console.log('\n恭喜你，编译打包已完成，所有文件在'+target+'文件夹！！！');
     })
 });
