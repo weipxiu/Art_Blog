@@ -52,3 +52,14 @@ jQuery(function () {
     jQuery(".row_content").slideUp();
   })
 });
+
+// 换肤
+var colorPicker = document.getElementById('colorPicker')
+var replaceSkin = document.getElementById('replace-skin')
+colorPicker.addEventListener("input", watchColorPicker, false);
+
+function watchColorPicker(event) {
+  document.querySelectorAll("p").forEach(function (p) {
+    replaceSkin.value = event.target.value;
+  });
+}

@@ -208,6 +208,7 @@ function themeoptions_page() {
                 value="<?php echo $a_options['replace_skin']; ?>"
                 placeholder="请输入主题颜色值"
               >
+              <input type="color" name="color" id="colorPicker" value="#1890ff">
             <span class="warn">*可输入任意颜色格式，例如十六进制:#ed145b，单词：red，甚至rgba，默认值：#1890ff</span>
           </div>
         </div>
@@ -237,7 +238,7 @@ function themeoptions_page() {
         <div class="row clearfix row_content border_none" style="display:none">
           <div class="row clearfix border_none" >
             <label for="video-url" class="fl left-wrap">视频播放地址：</label>
-            <div class="fixed-wrap fl right-wrap">
+            <div class="fixed-wrap fr right-wrap">
               <input
                 type="text"
                 class="url-inp"
@@ -252,7 +253,7 @@ function themeoptions_page() {
           <div class="row clearfix">
             <div class="margin-top-15 clearfix">
               <label class="fl left-wrap" for="">视频封面图片：</label>
-              <div class="fixed-wrap fl right-wrap">
+              <div class="fixed-wrap fr right-wrap">
                 <input
                   type="text"
                   class="url-inp"
