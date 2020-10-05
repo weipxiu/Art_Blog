@@ -422,7 +422,7 @@ function themeoptions_page() {
 
         <div class="row">
           <div class="margin-top-15 clearfix">
-						<label class="fl left-wrap" for="">默认PC_banner图：</label>
+						<label class="fl left-wrap" for="">默认PC_Banner图：</label>
             <div class="fr right-wrap">
               <input
                 type="text"
@@ -435,7 +435,7 @@ function themeoptions_page() {
           </div>
           <div class="margin-top-15 clearfix">
             <div class="fl left-wrap">
-              默认banner图预览：
+              默认Banner图预览：
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['pc_banner_default']; ?>" class="preview-img" style="max-width: 100px;" alt="">
@@ -448,15 +448,15 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
           <div class="fr right-wrap">
             <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
-            <span class="warn" style="display:block">*多组数据用,分开，例如[{url:'图片地址1', link:'跳转地址1'},{url:'图片地址2', link:'跳转地址2'}]；注意，所有字符都需要在英文状态输入</span>
+            <span class="warn" style="display:block">*多组数据用,分开，例如[{url:'图片地址1', link:'跳转地址1'},{url:'图片地址2', link:'跳转地址2'}]</span>
           </div>
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap" for="mobile_banner">移动端端Banner图：</label>
+          <label class="fl left-wrap" for="mobile_banner">移动端Banner图：</label>
           <div class="fr right-wrap">
-            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;可将下方示例json数据格式化后贴进来细品"><?php echo $a_options['mobile_banner']; ?></textarea>
-            <span class="warn" style="display:block">*强调，该处数据格式相较pc端banner特殊，示例数据：[{"url":"\/wp-content\/themes\/Art_Blog\/images\/banner1.png","link":"\/video_2019.mp4"},{"url":"\/wp-content\/themes\/Art_Blog\/images\/banner2.png","link":"https://www.weipxiu.com\/3355.html"}]；注意双引号以及在目录层级需要加<span style="color:red">反斜杠\</span></span>
+            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;可将下方示例json数据通过在线格式化后贴进来感受"><?php echo $a_options['mobile_banner']; ?></textarea>
+            <span class="warn" style="display:block">*强调，该处数据格式特殊，示例：[{"url":"https://www.weipxiu.com\/wp-content\/themes\/Art_Blog\/images\/banner1.png","link":"https://www.weipxiu.com\/video_2019.mp4"},{"url":"https://www.weipxiu.com\/wp-content\/themes\/Art_Blog\/images\/banner2.png","link":"https://www.weipxiu.com\/3355.html"}]；注意双引号以及在目录层级前需要加<span style="color:red">反斜杠\</span></span>
           </div>
         </div>
 
