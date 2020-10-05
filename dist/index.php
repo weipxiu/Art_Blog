@@ -350,7 +350,7 @@ var banner = new Banner({
 		autoplay: 8000,
 		width: 1200,
 		height: 300,
-		images: if (get_option('weipxiu_options')['pc_banner']){
+		images: if (<?php echo get_option('weipxiu_options')['pc_banner']; ?>){
 			<?php echo get_option('weipxiu_options')['pc_banner'] ?>
 		}else{
 			<?php echo [] ?>
