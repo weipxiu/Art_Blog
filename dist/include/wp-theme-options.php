@@ -419,6 +419,30 @@ function themeoptions_page() {
           </div>
         </div>
 
+        <div class="row">
+          <div class="margin-top-15 clearfix">
+						<label class="fl left-wrap" for="">默认PC_banner图：</label>
+            <div class="fr right-wrap">
+              <input
+                type="text"
+                class="url-inp"
+								name="pc_banner_default"
+                id="pc_banner_default"
+                value="<?php echo $a_options['pc_banner_default']; ?>">
+              <input type="button" name="img-upload" value="选择文件">
+            </div>
+          </div>
+          <div class="margin-top-15 clearfix">
+            <div class="fl left-wrap">
+              默认banner图预览：
+            </div>
+            <div class="fr right-wrap">
+              <img src="<?php echo $a_options['pc_banner_default']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+              <span class="warn" style="display:block">*PC端默认banner图最佳尺寸1200*300，如果不配置，PC轮播初始化后、正式播放之前页面将出现几秒钟的空白真空状态</span>
+            </div>
+          </div>
+        </div>
+
         <div class="row clearfix">
           <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
           <div class="fr right-wrap">
@@ -702,6 +726,7 @@ function themeoptions_page() {
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
       'custom_label' => $_POST['custom_label'],
+      'pc_banner_default' => $_POST['pc_banner_default'],
       'pc_banner' => $_POST['pc_banner'],
       'mobile_banner' => $_POST['mobile_banner'],
       'QQ-number' => $_POST['QQ-number'],

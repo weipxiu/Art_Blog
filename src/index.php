@@ -18,8 +18,9 @@
 
 <body>
 	<?php get_header(); ?>
+	<!-- pc端轮播start -->
 	<section class="mod-banner" id="js_banner">
-		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img"></a>
+		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
 		<div class="mod-banner__navi">
 			<div class="js_banner_nav mod-banner_nav"></div>
 			<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -35,6 +36,7 @@
 			</span>
 		</div>
 	</section>
+	<!-- pc端轮播end -->
 
 	<!-- 正文区域start -->
 	<section class="continar" id="lazycontainer">
