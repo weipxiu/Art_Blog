@@ -412,10 +412,14 @@ $(function () {
             $(".continar,.os-headertop").css({
                 "transform": "translateX(160px)"
             })
+            $(".weipxiu_nav").attr('href','javascript:void(0);')
         } else {
             $(".continar,.os-headertop").css({
                 "transform": "translateX(0)"
             })
+            setTimeout(function(){
+                $(".weipxiu_nav").attr('href','/')
+            },800)
         }
         if ($(".site-search").is(":visible")) {
             $(".os-headertop .site-search").slideToggle(100);
