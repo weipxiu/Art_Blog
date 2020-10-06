@@ -6203,21 +6203,35 @@ p.data-l span {
 comments
 */
 .comment {
-  padding: 5px 0;
   background: #f0f2f7;
-  margin: 10px 0;
+  margin: 15px 0;
+  padding: 10px 15px;
 }
-.commentlist {
-  padding-left: 50px;
+.commentlist{
+  padding-left:40px;
 }
 
 .commentlist .media {
-  padding: 10px 15px;
+  padding: 10px 15px 0;
   /* background: #f0f2f7; */
   /* border-bottom: 1px solid #eee; */
   /* border-bottom: 1px dashed #eee; */
 }
 
+.commentlist .children .media {
+  padding: 10px 15px 0;
+}
+
+.commentlist .children .comment {
+  padding: 0;
+  margin: 0;
+}
+
+.commentlist > .comment {
+  background: #f0f2f7;
+  margin: 15px 0;
+  padding: 10px 15px;
+}
 .commentlist ol {
   padding-left: 40px;
   list-style: none;
@@ -6267,12 +6281,11 @@ comments
   font-size: 14px;
   line-height: 1.5em;
   color: #777;
-  padding: 10px 0 0;
+  padding: 15px 0 9px;
 }
 .comment .comment-metadata{
-  width: calc(100% - 70px);
-  margin: 0 auto;
-  padding-bottom: 5px;
+  width: calc(100% - 50px);
+  margin: 2px auto 6px;
 }
 .comment .comment-metadata span {
   font-size: 12px;
@@ -6282,11 +6295,6 @@ comments
 .comment .comment-metadata span.comment-btn-reply a:hover {
   color: #bf1520;
   text-decoration: underline;
-  font-size: 12px;
-}
-
-.comment .comment-metadata span.comment-btn-reply i {
-  color: #d1d1d1;
   font-size: 12px;
 }
 
@@ -6492,8 +6500,8 @@ label {
 .comment .media-left img {
   width: 50px;
   height: 50px;
-  margin-left: -40px;
-  margin-top: -5px;
+  margin-left: -55px;
+  border-radius: 4px;
 }
 
 #commentform {

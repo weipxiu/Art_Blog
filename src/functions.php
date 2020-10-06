@@ -709,7 +709,7 @@ function simple_comment($comment, $args, $depth) {
                     echo get_comment_time('Y-m-d H:i'); ?>
             </span>
             <span class="comment-btn-reply">
-                <i class="fa fa-reply"></i> <?php
+                <?php
                 comment_reply_link(array_merge($args, array(
                     'reply_text' => '回复',
                     'depth' => $depth,
