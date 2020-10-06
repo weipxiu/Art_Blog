@@ -49,15 +49,26 @@
 </script>
 
 <!-- 百度统计 -->
-<script>
-	var _hmt = _hmt || [];
-	(function() {
-		var hm = document.createElement("script");
-		hm.src = "https://hm.baidu.com/hm.js?704cfdd415da41b2e884bbb16a5dd3f3";
-		var s = document.getElementsByTagName("script")[0]; 
-		s.parentNode.insertBefore(hm, s);
-	})();
-</script>
+<?php
+	if (get_option('weipxiu_options')['baidu_statistics']) {
+		?>
+		<?php echo get_option('weipxiu_options')['baidu_statistics']; ?>
+		<?php
+	}else
+	{
+		?>
+			<script>
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?704cfdd415da41b2e884bbb16a5dd3f3";
+					var s = document.getElementsByTagName("script")[0]; 
+					s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
+		<?php
+	}
+?>
 
 <!-- 自定义样式 -->
 <style>

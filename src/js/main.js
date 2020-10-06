@@ -202,6 +202,7 @@ $(function () {
         $(".site-search.active.pc").find('input').focus();
     });
     $(".xis,.navto-search a").click(function(){
+        $(this).find("i").toggleClass("icon-sousuo");
         $(this).find("i").toggleClass("icon-guanbi3");
     })
 

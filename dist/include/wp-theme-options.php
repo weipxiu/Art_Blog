@@ -335,13 +335,19 @@ function themeoptions_page() {
         <div class="row clearfix">
           <label for="keywords" class="fl left-wrap">网站关键词：</label>
           <div class="fr right-wrap">
-            <textarea id="keywords" name="keywords" rows="8" cols="100"><?php echo $a_options['keywords'] ?></textarea>
+            <textarea id="keywords" name="keywords" rows="5" cols="100" placeholder="关键词字数关键词字数最好控制在5个左右，每个长度最好别超过8个汉字！"><?php echo $a_options['keywords'] ?></textarea>
           </div>
         </div>
         <div class="row clearfix">
-          <label for="description" class="fl left-wrap">网站描述：</label>
+          <label for="description" class="fl left-wrap">网站描述信息：</label>
           <div class="fr right-wrap">
-            <textarea id="description" name="description" rows="8" cols="100"><?php echo $a_options['description'] ?></textarea>
+            <textarea id="description" name="description" rows="5" cols="100"  placeholder="网站描述字数网站描述尽量空制在80个汉字以内,160个字符之间!"><?php echo $a_options['description'] ?></textarea>
+          </div>
+        </div>
+        <div class="row clearfix">
+          <label for="baidu-statistics" class="fl left-wrap">百度统计代码：</label>
+          <div class="fr right-wrap">
+            <textarea id="baidu-statistics" name="baidu-statistics" rows="10" cols="100" placeholder="用于分析网站流量"><?php echo $a_options['baidu_statistics'] ?></textarea>
           </div>
         </div>
       </div>
@@ -705,7 +711,7 @@ function themeoptions_page() {
 <?php
 	}
 	function themeoptions_update() {
-    // 数据提交,key对应页面选中的key，_POST对应name
+    // 数据提交,key对应最终保存以及展示值，$_POST对应name
     $options = array(
       'update_themeoptions' => 'true',
       'wheel_banner' => $_POST['wheel-banner'],
@@ -730,6 +736,7 @@ function themeoptions_page() {
       'details_css'  => $_POST['details-css'],
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
+      'baidu_statistics' => $_POST['baidu-statistics'],
       'custom_label' => $_POST['custom_label'],
       'pc_banner_default' => $_POST['pc_banner_default'],
       'pc_banner' => $_POST['pc_banner'],

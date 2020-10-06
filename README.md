@@ -89,9 +89,10 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │  category.php   //通用列表模板
 │  comments.php   //评论模块
 │  favicon.ico  //网页浏览器标签icon
-│  footer.php  //公共底部
 │  functions.php  //主题核心函数
 │  header.php  //公共头部
+│  footer.php  //公共底部
+│  common.php  //公共引入文件（js、css）
 │  index.html  //测试页面
 │  index.php   //首页
 │  page.php    //通用单页模板
