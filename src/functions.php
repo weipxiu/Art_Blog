@@ -377,6 +377,8 @@ function add_button_mce($mce_settings) {
 // 自定义登录界面
 function custom_login() {
     echo '<link rel="stylesheet" type="text/css" href="/wp-content/themes/Art_Blog/css/login.css" />';
+    $login_css = get_option('weipxiu_options')['login_css'];
+    echo '<style>' . $login_css . ' </style>';
 }
 add_action('login_head', 'custom_login');
 function login_headerurl($url) {

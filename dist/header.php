@@ -1,7 +1,7 @@
 <!-- 头部start -->
 <!-- 移动端头部start -->
 <div class="os-headertop">
-		<div class="btn_menu"></div>
+		<div class="btn_menu"><i class="iconfont icon-caidanlan"></i></div>
 		<a href="/" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
 		<div class="xis">
 			<i class="iconfont icon-sousuo"></i>

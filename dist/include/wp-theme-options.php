@@ -21,6 +21,7 @@ function themeoptions_page() {
       <li class="nav-list">SEO</li>
       <li class="nav-list">图片</li>
       <li class="nav-list">社交</li>
+      <li class="nav-list">样式</li>
     </ul>
     <form method="post" action="">
       <input type="hidden" name="update_themeoptions" value="true">
@@ -677,21 +678,24 @@ function themeoptions_page() {
           </div>
         </div>
       </div>
-      <!-- 内容五 自定义代码 -->
-      <!-- <div class="content-wrap content5">
+
+      <!-- 内容五 自定义样式 -->
+      <div class="content-wrap content5">
         <div class="row clearfix">
-          <label class="fl left-wrap" for="login-css">后台登录页面css（不需要style标签）：</label>
+          <label for="details-css" class="fl left-wrap">前台页面样式：</label>
           <div class="fr right-wrap">
-            <textarea id="login-css" name="login-css" rows="8" cols="100"><?php echo $a_options['login_css']; ?></textarea>
+            <textarea id="details-css" name="details-css" rows="8" cols="100"><?php echo $a_options['details_css'] ?></textarea>
+            <span class="warn">*无需style标签，支持媒体查询，个别样式无法覆盖情况下可以考虑加!important加权重，该处仅供熟悉css用户使用，不懂的请忽略</span>
           </div>
         </div>
-				<div class="row clearfix">
-          <label class="fl left-wrap" for="details-css">文章详情页css（不需要style标签）：</label>
+        <div class="row clearfix">
+          <label for="login-css" class="fl left-wrap">登录页面样式：</label>
           <div class="fr right-wrap">
-            <textarea id="details-css" name="details-css" rows="8" cols="100"><?php echo $a_options['details_css']; ?></textarea>
+            <textarea id="login-css" name="login-css" rows="8" cols="100"><?php echo $a_options['login_css'] ?></textarea>
+            <span class="warn">*无需style标签，支持媒体查询，个别样式无法覆盖情况下可以考虑加!important加权重，该处仅供熟悉css用户使用，不懂的请忽略</span>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="row btn-wrap">
         <input type="submit" class="submit-btn" name="bcn-admin-options" value="保存更改">
       </div>

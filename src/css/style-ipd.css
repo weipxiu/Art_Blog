@@ -2528,114 +2528,6 @@ div.jy p {
 }
 /*发表文章插件样式end*/
 
-/*阿里图标库start*/
-@font-face {
-  font-family: 'iconfont';
-  src: url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574');
-  /* IE9*/
-  src: url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.eot?t=1484057152574#iefix')
-      format('embedded-opentype'),
-    /* IE6-IE8 */ url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.woff?t=1484057152574')
-      format('woff'),
-    /* chrome,firefox */ url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.ttf?t=1484057152574')
-      format('truetype'),
-    /* chrome,firefox,opera,Safari,Android,iOS 4.2+*/
-      url('https://at.alicdn.com/t/font_xozvftf5qlpzxgvi.svg?t=1484057152574#iconfont')
-      format('svg');
-  /* iOS 4.1- */
-}
-.iconfont {
-  font-family: 'iconfont' !important;
-  font-size: 16px;
-  font-style: normal;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-remen:before {
-  content: '\e622';
-}
-.icon-biaoqian:before {
-  content: '\e658';
-}
-.icon-zhuce:before {
-  content: '\e7cd';
-}
-.icon-close:before {
-  content: '\e616';
-}
-.icon-denglu:before {
-  content: '\e630';
-}
-.icon-biaoqian1:before {
-  content: '\e62a';
-}
-.icon-guanbi1:before {
-  content: '\e613';
-}
-.icon-pinglun:before {
-  content: '\e628';
-}
-.icon-wordpress:before {
-  content: '\e758';
-}
-.icon-html5:before {
-  content: '\e70f';
-}
-.icon-huiyuan:before {
-  content: '\e62f';
-}
-.icon-youqinglianjie1:before {
-  content: '\e694';
-}
-.icon-login:before {
-  content: '\e611';
-}
-.icon-sousuo:before {
-  content: '\e600';
-}
-.icon-huojian-copy:before {
-  content: '\e601';
-}
-.icon-iconfontmessage:before {
-  content: '\e60e';
-}
-.icon-lianjie:before {
-  content: '\e64a';
-}
-.icon-boke:before {
-  content: '\e604';
-}
-.icon-youqinglianjie:before {
-  content: '\e614';
-}
-.icon-huiyuan1:before {
-  content: '\e654';
-}
-.icon-xinqing:before {
-  content: '\e660';
-}
-.icon-lisimoshicaidandaohang:before {
-  content: '\e602';
-}
-.icon-guanyuwomen:before {
-  content: '\e603';
-}
-.icon-6huiyuanzhongxin:before {
-  content: '\e624';
-}
-.icon-shouyeshouye:before {
-  content: '\e632';
-}
-.icon-tags:before {
-  content: '\e757';
-}
-.icon-aixin:before {
-  content: '\e719';
-}
-.icon-youqinglianjie2:before {
-  content: '\e67f';
-}
-/*阿里图标库end*/
-
 /*后台上传图片大小位置限制start*/
 .wpuf-attachment-list img {
   margin: 15px auto;
@@ -2758,11 +2650,15 @@ div.btn {
   top: 0rem;
   left: 0px;
   z-index: 3;
-  background-image: url(../images/mobileicon.png);
-  background-repeat: no-repeat;
-  background-size: 9.4rem 5.6rem;
-  background-position: -8.5rem -1.72rem;
 }
+
+.btn_menu .iconfont{
+  color: #fff;
+  font-size: .46rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
 .os-headertop img {
   display: block;
   margin: 0 auto;
