@@ -1688,7 +1688,8 @@ div.com-art ul li {
   padding: 0.2rem 0.3rem;
   background: #fff;
   margin-bottom: 0.2rem;
-  color: #69bcf3;
+  color: #1890ff;
+  color: var(--color,#1890ff);
 }
 .continar-left .mod-breadcrumb a {
   font-size: 0.32rem;
@@ -3226,8 +3227,10 @@ canvas,
 
 .log-text h4:nth-of-type(5n + 4),
 .log-text h2:nth-of-type(5n + 4) {
-  border-left: 4px solid #69bcf3;
-  border-bottom: 1px solid #69bcf3;
+  border-left: 4px solid #1890ff;
+  border-left: 4px solid var(--color, #1890ff);
+  border-bottom: 1px solid #1890ff;
+  border-bottom: 1px solid var(--color, #1890ff);
 }
 
 .log-text ul {
@@ -3602,6 +3605,9 @@ ol.children {
   /* border-top: 1px solid #eee; */
   border-bottom: 1px solid #eee;
   padding-bottom: 0.2rem;
+}
+.commentlist ol {
+  padding-left: 0.8rem;
 }
 .commentlist .comment:last-of-type ol.children:last-of-type {
   border: 0;
