@@ -17,7 +17,7 @@ function themeoptions_page() {
   <div class="wrap">
     <h2>唯品秀主题设置</h2>
     <ul class="nav-wrap clearfix">
-      <li class="nav-list on">基本</li>
+      <li class="nav-list on">基础</li>
       <li class="nav-list">SEO</li>
       <li class="nav-list">图片</li>
       <li class="nav-list">社交</li>
@@ -137,7 +137,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边栏站点统计：</label>
+          <label class="fl left-wrap">站点信息统计：</label>
           <div class="fr right-wrap">
             <label for="aside-count-on">开</label>
             <input
@@ -157,7 +157,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">电子邮件订阅：</label>
+          <label class="fl left-wrap">电子邮箱订阅：</label>
           <div class="fr right-wrap">
             <label for="text-pic-on">开</label>
             <input
@@ -178,7 +178,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">开启https：</label>
+          <label class="fl left-wrap">全站https：</label>
           <div class="fr right-wrap">
             <label for="switch-https-on">开</label>
             <input
@@ -267,7 +267,7 @@ function themeoptions_page() {
             </div>
             <div class="margin-top-15 clearfix">
               <div class="fl left-wrap">
-                视频封面图片预览：
+                视频封面预览：
               </div>
               <div class="fr right-wrap">
                 <img src="<?php echo $a_options['video_cover']; ?>" class="preview-img" style="max-width: 100px;" alt="">
