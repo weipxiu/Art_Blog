@@ -420,7 +420,7 @@ function myplugin_add_login_fields() {
     $num1=rand(1,99);
     $num2=rand(1,99);
     //最终网页中的具体内容
-    echo "<p><label for='math' class='small'>Verification Code(验证码)：$num1 + $num2 = ? </label><input type='text' name='sum' class='input' value='' size='25'>"
+    echo "<p><label for='math' class='small'>验证码：$num1 + $num2 = ? </label><input type='text' name='sum' class='input' value='' size='25'>"
     ."<input type='hidden' name='num1' value='$num1'>"
     ."<input type='hidden' name='num2' value='$num2'></p>";}
 	add_action('login_form','myplugin_add_login_fields');
