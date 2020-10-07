@@ -3202,12 +3202,15 @@ ol.commentlist {
   overflow: hidden;
 }
 
-.commentlist .author_name a{
+.commentlist .author_name,.commentlist .author_name a{
   font-size: 0.3rem;
 }
 
+.system_box{
+  margin: 8px 0 2px;
+}
+
 .comment .media-body .system {
-  margin-left: 5px;
   vertical-align: initial;
   padding: 3px 4px;
   border-radius: 3px;

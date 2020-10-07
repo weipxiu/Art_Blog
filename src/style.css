@@ -6249,8 +6249,7 @@ comments
   vertical-align: top;
 }
 
-.commentlist .author_name a{
-  font-weight: bold;
+.commentlist .author_name,.commentlist .author_name a{
   font-size: 16px;
 }
 
@@ -6277,14 +6276,12 @@ comments
   color: #fff;
   font-weight: 300;
   font-size: 12px;
-  margin-left: 8px;
 }
 
 .comment .media-body p {
   font-size: 14px;
-  line-height: 1.5em;
   color: #777;
-  padding: 15px 0 9px;
+  padding: 10px 0 6px;
 }
 .comment .comment-metadata{
   width: calc(100% - 50px);
