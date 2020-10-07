@@ -540,12 +540,12 @@ function wheatv_breadcrumbs() {
 //评论 VIP 标志
 function get_author_class($comment_author_email, $comment_author_url) {
     global $wpdb;
-    $adminEmail = '343049466@qq.com';
+    $adminEmail = get_option('weipxiu_options')['QQ-number'] . '.com';
     $author_count = count($wpdb->get_results("SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
-    if ($comment_author_email == $adminEmail) echo '<a class="vp" target="_blank" href="/category/about" title="经鉴定，管理员"></a>';
+    if ($comment_author_email == $adminEmail) echo '<a class="vp vp_admin" target="_blank" href="/category/about" title="管理员"></a>';
     $linkurls = $wpdb->get_results("SELECT link_url FROM $wpdb->links WHERE link_url = '$comment_author_url'");
     foreach ($linkurls as $linkurl) {
-        if ($linkurl->link_url == $comment_author_url) echo '<a class="vip" target="_blank" href="/links.html" title="合作商或友情链接认证"><i class="wi wi-heart"></i></a>';
+        if ($linkurl->link_url == $comment_author_url) echo '<a class="vip" target="_blank" href="/" title="友情链接认证"><i class="wi wi-heart"></i></a>';
     }
     if ($author_count >= 1 && $author_count < 5 && $comment_author_email != $adminEmail) echo '<a class="vip1" target="_blank" href="/category/about" title="评论之星 LV.1"><i class="wi wi-level-1"></i></a>';
     else if ($author_count >= 5 && $author_count < 10 && $comment_author_email != $adminEmail) echo '<a class="vip2" target="_blank" href="/category/about" title="评论之星 LV.2"><i class="wi wi-level-2"></i></a>';
