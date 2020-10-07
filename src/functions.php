@@ -353,9 +353,9 @@ function add_button_mce($mce_settings) {
         QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
         QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='domo'>", "在线预览</a>" );
         QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "\n[/cc]" );
-        QTags.addButton( 'CSS代码]', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
+        QTags.addButton( 'CSS代码', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
         QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "\n[/cc]" );
-        QTags.addButton( 'PHP代码]', 'PHP代码', "[cc lang='php']\n", "\n[/cc]" );
+        QTags.addButton( 'PHP代码', 'PHP代码', "[cc lang='php']\n", "\n[/cc]" );
         QTags.addButton( 'p', 'p', "<p>", "</p>" );
         QTags.addButton( 'h2', 'h2', "<h2>", "</h2>" );
         QTags.addButton( 'h3', 'h3', "<h3>", "</h3>" );
