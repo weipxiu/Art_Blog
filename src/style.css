@@ -6249,9 +6249,13 @@ comments
   vertical-align: top;
 }
 
-.comment .media-body .author_name a{
+.commentlist .author_name a{
   font-weight: bold;
   font-size: 16px;
+}
+
+.system_box{
+  display: inline-block;
 }
 
 .comment .media-body .system {

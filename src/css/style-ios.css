@@ -3622,7 +3622,7 @@ ol.commentlist {
   overflow: hidden;
 }
 
-.comment .media-body .author_name a{
+.commentlist .author_name a{
   font-size: 0.3rem;
 }
 
@@ -3645,7 +3645,6 @@ ol.commentlist {
   color: #fff;
   font-weight: 300;
   font-size: 12px;
-  margin-left: 8px;
 }
 /* 文章评论框end */
 

@@ -3202,14 +3202,14 @@ ol.commentlist {
   overflow: hidden;
 }
 
-.comment .media-body .author_name a{
+.commentlist .author_name a{
   font-size: 0.3rem;
 }
 
 .comment .media-body .system {
   margin-left: 5px;
   vertical-align: initial;
-  padding: 2px 4px;
+  padding: 3px 4px;
   border-radius: 3px;
   font-size: 12px;
   color: #fff;
@@ -3219,13 +3219,12 @@ ol.commentlist {
 
 .comment .media-body .browser {
   vertical-align: initial;
-  padding: 2px 4px;
+  padding: 3px 4px;
   background: linear-gradient(90deg, #fc5c7d, #6a82fb);
   border-radius: 3px;
   color: #fff;
   font-weight: 300;
   font-size: 12px;
-  margin-left: 8px;
 }
 /* 文章评论框end */
 
