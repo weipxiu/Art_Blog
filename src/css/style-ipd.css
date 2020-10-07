@@ -13,11 +13,13 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  color: #666;
   font: 0.28rem sf-pro-text_regular, Montserrat, Microsoft Yahei;
   text-decoration: none;
   /*touch-callout: none;长时间按住页面出现闪退,
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
+}
+a{
+  color: #666;
 }
 html,
 body,

@@ -13,12 +13,15 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  color: #666;
   text-decoration: none;
   /* font: 14px play, PingFangSC-Regular, Microsoft Yahei; */
   font: 14px sf-pro-text_regular, Montserrat, Microsoft Yahei;
   font-weight: normal;
   /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
+}
+
+a{
+  color: #666;
 }
 
 img[src=""], img:not([src]) {
