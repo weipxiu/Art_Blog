@@ -542,7 +542,7 @@ function get_author_class($comment_author_email, $comment_author_url) {
     global $wpdb;
     $adminEmail = get_option('weipxiu_options')['QQ-number']."@qq.com";
     $author_count = count($wpdb->get_results("SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
-    if ($comment_author_email == $adminEmail) echo '<a class="vp vp_admin" target="_blank" href="/category/about" width="18" title="管理员"></a><img src="/wp-content/themes/Art_Blog/images/vp_admin.png">';
+    if ($comment_author_email == $adminEmail) echo '<a class="vp vp_admin" target="_blank" href="/category/about" title="管理员"></a><img src="/wp-content/themes/Art_Blog/images/vp_admin.png" width="18">';
     $linkurls = $wpdb->get_results("SELECT link_url FROM $wpdb->links WHERE link_url = '$comment_author_url'");
     foreach ($linkurls as $linkurl) {
         if ($linkurl->link_url == $comment_author_url) echo '<a class="vip" target="_blank" href="/" title="友情链接认证"><i class="wi wi-heart"></i></a>';
