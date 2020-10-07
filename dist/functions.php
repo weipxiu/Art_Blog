@@ -344,6 +344,7 @@ add_action('after_wp_tiny_mce', 'add_button_mce');
 function add_button_mce($mce_settings) { 
 ?>
     <script type="text/javascript">
+        QTags.addButton( 'a', 'a', "<a href='' target='_blank'>", "</a>" );
         QTags.addButton( 'span', 'span', "<span>", "</span>" );
         QTags.addButton( '重点', '重点', "<span class='beCareful'>", "</span>" );
         QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
@@ -351,11 +352,10 @@ function add_button_mce($mce_settings) {
         QTags.addButton( '登录可见', '登录可见', "[login_success]", "[/login_success]" );
         QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
         QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='domo'>", "在线预览</a>" );
-        QTags.addButton( 'a', 'a', "<a href='' target='_blank'>", "</a>" );
-        QTags.addButton( '[HTML代码]', '[HTML代码]', "[cc lang='html']\n", "\n[/cc]" );
-        QTags.addButton( '[CSS代码]', '[CSS代码]', "[cc lang='css']\n", "\n[/cc]" );
-        QTags.addButton( '[JavaScript代码]', '[JavaScript代码]', "[cc lang='javascript']\n", "\n[/cc]" );
-        QTags.addButton( '[PHP代码]', '[PHP代码]', "[cc lang='php']\n", "\n[/cc]" );
+        QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "\n[/cc]" );
+        QTags.addButton( 'CSS代码]', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
+        QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "\n[/cc]" );
+        QTags.addButton( 'PHP代码]', 'PHP代码', "[cc lang='php']\n", "\n[/cc]" );
         QTags.addButton( 'p', 'p', "<p>", "</p>" );
         QTags.addButton( 'h2', 'h2', "<h2>", "</h2>" );
         QTags.addButton( 'h3', 'h3', "<h3>", "</h3>" );
