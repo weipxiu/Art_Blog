@@ -593,8 +593,7 @@ function themeoptions_page() {
 							name="wangwang-link"
 							id="wangwang-link"
               placeholder="例如：https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
-							value="<?php echo $a_options['wangwang-link']; ?>
-              "
+							value="<?php echo $a_options['wangwang-link']; ?>"
 						>
             <span class="warn">*只需要旺旺的http链接，不需要a标签</span>
           </div>
