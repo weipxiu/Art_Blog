@@ -422,7 +422,7 @@ function themeoptions_page() {
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['thumbnail']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-              <span class="warn" style="display:block">*默认信息流缩略图最佳尺寸220*140，展示规则：先取文章中设置的特色图片，如果没有，取文章内容首张图片，再没有将启用当前默认缩略图</span>
+              <span class="warn" style="display:block">*默认信息流缩略图最佳尺寸220*140，展示规则：特色图片 > 内容首张图片 > 默认缩略图</span>
             </div>
           </div>
         </div>
@@ -592,7 +592,7 @@ function themeoptions_page() {
 							class="url-inp"
 							name="wangwang-link"
 							id="wangwang-link"
-              placeholder="例如：https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
+              placeholder="https://amos.alicdn.com/getcid.aw?&uid=xxx"
 							value="<?php echo $a_options['wangwang-link']; ?>"
 						>
             <span class="warn">*只需要旺旺的http链接，不需要a标签</span>
