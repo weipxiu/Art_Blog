@@ -29,6 +29,42 @@ a:hover{text-decoration: underline;}
 padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:center;text-indent: 0;}
 #messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:0;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
 .text{opacity: 1}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+	#message{
+		width: auto; */
+    margin: 0.9rem 0 0 0;
+    overflow: hidden;
+    padding: 0.3rem;
+	}
+	#messageList{
+		margin-left:0
+	}
+	#messageList .pic{
+		display:none
+	}
+	#messageList .text{
+		margin: 0 0 0 0.3rem;
+	}
+}
+
+@media screen and (max-width:767px) {
+	#message{
+		width: auto; */
+    margin: 0.9rem 0 0 0;
+    overflow: hidden;
+    padding: 0.3rem;
+	}
+	#messageList{
+		margin-left:0
+	}
+	#messageList .pic{
+		display:none
+	}
+	#messageList .text{
+		margin: 0 0 0 0.3rem;
+	}
+}
 </style>
 </head>
 <body>
