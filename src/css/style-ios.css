@@ -19,7 +19,7 @@
 	如果启用，那么图片默认长按存储到相册功能被禁止*/
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-a {
+:not(span){
   color: #666;
 }
 html,
