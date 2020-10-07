@@ -4737,11 +4737,11 @@ ul.post-categories li:first-child {
 }
 
 .customer-list {
-  background-color: #eee;
-  border: 1px solid #ccc !important;
+  background-color: #fff;
   min-height: 200px;
   margin-right: 41px;
   position: absolute;
+  border-radius: 4px 0 0 4px;
   left: -150px;
   top: -40px;
 }

@@ -585,6 +585,22 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label for="wangwang-link" class="fl left-wrap">旺旺链接：</label>
+          <div class="fr right-wrap">
+						<input
+							type="text"
+							class="url-inp"
+							name="wangwang-link"
+							id="wangwang-link"
+              placeholder="例如：https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
+							value="<?php echo $a_options['wangwang-link']; ?>
+              "
+						>
+            <span class="warn">*只需要旺旺的http链接，不需要a标签</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label for="phone-number" class="fl left-wrap">手机号码：</label>
           <div class="fr right-wrap">
 						<input
@@ -742,6 +758,7 @@ function themeoptions_page() {
       'pc_banner' => $_POST['pc_banner'],
       'mobile_banner' => $_POST['mobile_banner'],
       'QQ-number' => $_POST['QQ-number'],
+      'wangwang-link' => $_POST['wangwang-link'],
       'weChat-number' => $_POST['weChat-number'],
       'phone-number' => $_POST['phone-number'],
       'reward_text' => $_POST['reward-text'],

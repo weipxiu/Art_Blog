@@ -288,23 +288,22 @@
                     </div>
                   </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td>
                     <div class="qqSmall">
-                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
-                      echo get_option('weipxiu_options')['QQ-number'];
-                      ?>&site=qq&menu=yes">
-                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" />
+                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=343049466&site=qq&menu=yes">
+                        <img border="0" src="/images/zaixian_qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息" />
                       </a>
                     </div>
                   </td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td>
                     <p class="wangwang-names">&nbsp;旺旺在线</p>
                     <div class="qqSmall">
-                      <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
-                        style="position: relative; overflow: hidden;">
+                      <a target="_blank" href="<?php 
+                      echo get_option('weipxiu_options')['wangwang-link'];
+                      ?>"style="position: relative; overflow: hidden;">
                         <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
                         <span class="image-overlay overlay-type-extern" style="display: none;">
                           <span class="image-overlay-inside"></span>
@@ -313,19 +312,19 @@
                     </div>
                   </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td>
                     <div class="qqSmall">
                       <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=a1z10.1-c.0.0.LyS6rO&v=3&groupid=0&s=1&charset=utf-8&uid=可爱天使5202012&site=cntaobao&groupid=0&s=1&fromid=cntaobao可爱天使5202012"
                         style="position: relative; overflow: hidden;">
-                        <img src="<?php bloginfo('template_url'); ?>/images/lixian_ww.gif" alt="点击这里给我发消息" width="77" height="18" style="vertical-align:middle;">
+                        <img src="/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="18" style="vertical-align:middle;">
                         <span class="image-overlay overlay-type-extern" style="display: none;">
                           <span class="image-overlay-inside"></span>
                         </span>
                       </a>
                     </div>
                   </td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td>
                     <div class="line"></div>
