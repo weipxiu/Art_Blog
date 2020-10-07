@@ -3209,25 +3209,25 @@ ol.commentlist {
 .system_box{
   margin: 8px 0 2px;
 }
-
+.system_box{
+  padding-left:0.92rem
+}
 .comment .media-body .system {
   vertical-align: initial;
-  padding: 3px 4px;
+  padding: 0.05rem 0.05rem;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 0.24rem;
   color: #fff;
-  font-weight: 300;
   background: linear-gradient(90deg, #5087ec, #d95040, #f2bd42);
 }
 
 .comment .media-body .browser {
   vertical-align: initial;
-  padding: 3px 4px;
+  padding: 0.05rem 0.05rem;
   background: linear-gradient(90deg, #fc5c7d, #6a82fb);
   border-radius: 3px;
   color: #fff;
-  font-weight: 300;
-  font-size: 12px;
+  font-size: 0.24rem;
 }
 /* 文章评论框end */
 

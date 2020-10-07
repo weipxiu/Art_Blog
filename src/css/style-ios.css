@@ -3627,6 +3627,7 @@ ol.commentlist {
 }
 .system_box{
   margin: 8px 0 2px;
+  padding-left: 0.922rem;
 }
 .comment .media-body .system {
   vertical-align: initial;
