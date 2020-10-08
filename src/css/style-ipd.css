@@ -2975,13 +2975,14 @@ canvas,
 .tuts_comments_user_avatars li:last-of-type {
   border-bottom: 0;
 }
-.tuts_comments_user_avatars img {
+.tuts_comments_user_avatars img:not(.wp-smiley) {
   width: 0.72rem;
   height: 0.72rem;
   border-radius: 100%;
   float: left;
   margin-right: 0.2rem;
 }
+
 .tuts_comments_user_avatars li a,
 .tuts_comments_user_avatars li p {
   margin-top: 0.1rem;

@@ -3392,7 +3392,7 @@ p.reward-p {
 .tuts_comments_user_avatars li:last-of-type {
   border: none;
 }
-.tuts_comments_user_avatars img {
+.tuts_comments_user_avatars img:not(.wp-smiley) {
   width: 0.72rem;
   height: 0.72rem;
   border-radius: 100%;

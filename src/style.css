@@ -6436,7 +6436,7 @@ input#submit {
 }
 
 textarea#comment {
-  margin-bottom: 10px;
+  margin: 10px 0;
   background: #f0f2f7;
   color: #777;
   border: 0;
@@ -6566,7 +6566,7 @@ label {
   clear: both;
 }
 
-#primary-sidebar ul li img {
+#primary-sidebar ul li img:not(.wp-smiley) {
   float: left;
   width: 36px;
   height: 36px;
@@ -6574,6 +6574,10 @@ label {
   vertical-align: middle;
   margin-left: -10px;
   margin-right: 10px;
+}
+
+#primary-sidebar ul li img.wp-smiley{
+  vertical-align: sub;
 }
 
 #primary-sidebar ul li img + span {
