@@ -539,12 +539,54 @@ function wheatv_breadcrumbs() {
     }
 }
 
+//自定义表情路径和名称
+function custom_smilies_src($src, $img){return get_bloginfo('template_directory').'/images/smilies/' . $img;}
+add_filter('smilies_src', 'custom_smilies_src', 10, 2);
+    if ( !isset( $wpsmiliestrans ) ) {
+        $wpsmiliestrans = array(
+        ':cy:' => 'cy.gif',
+        ':hanx:' => 'hanx.gif',
+        ':huaix:' => 'huaix.gif',
+        ':tx:' => 'tx.gif',
+        ':se:' => 'se.gif',
+        ':wx:' => 'wx.gif',
+        ':zk:' => 'zk.gif',
+        ':shui:' => 'shui.gif',
+        ':kuk:' => 'kuk.gif',
+        ':lh:' => 'lh.gif',
+        ':gz:' => 'gz.gif',
+        ':ku:' => 'ku.gif',
+        ':kel:' => 'kel.gif',
+        ':yiw:' => 'yiw.gif',
+        ':yun:' => 'yun.gif',
+        ':jy:' => 'jy.gif',
+        ':dy:' => 'dy.gif',
+        ':gg:' => 'gg.gif',
+        ':fn:' => 'fn.gif',
+        ':fendou:' => 'fendou.gif',
+        ':shuai:' => 'shuai.gif',
+        ':kl:' => 'kl.gif',
+        ':pj:' => 'pj.gif',
+        ':fan:' => 'fan.gif',
+        ':lw:' => 'lw.gif',
+        ':qiang:' => 'qiang.gif',
+        ':ruo:' => 'ruo.gif',
+        ':ws:' => 'ws.gif',
+        ':ok:' => 'ok.gif',
+        ':gy:' => 'gy.gif',
+        ':qt:' => 'qt.gif',
+        ':cj:' => 'cj.gif',
+        ':aini:' => 'aini.gif',
+        ':bu:' => 'bu.gif',
+    );
+}
+
 //评论 VIP 标志
 function get_author_class($comment_author_email, $comment_author_url) {
     global $wpdb;
     $adminEmail = get_option('weipxiu_options')['QQ-number']."@qq.com";
     $author_count = count($wpdb->get_results("SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
-    if ($comment_author_email == $adminEmail) echo '<a class="vp vp_admin" target="_blank" href="/category/about" title="管理员"></a><img src="/wp-content/themes/Art_Blog/images/vp_admin.png" width="18">';
+    if ($comment_author_email == $adminEmail) echo '<a class="vp vp_admin" target="_blank" href="/category/about" title="管理员"></a><img src="/wp-content/themes/Art_Blog/images/vp_admin.png" width="16" height="12">';
     $linkurls = $wpdb->get_results("SELECT link_url FROM $wpdb->links WHERE link_url = '$comment_author_url'");
     foreach ($linkurls as $linkurl) {
         if ($linkurl->link_url == $comment_author_url) echo '<a class="vip" target="_blank" href="/" title="友情链接认证"><i class="wi wi-heart"></i></a>';
@@ -557,6 +599,7 @@ function get_author_class($comment_author_email, $comment_author_url) {
     else if ($author_count >= 100 && $author_count < 250 && $comment_author_email != $adminEmail) echo '<a class="vip6" target="_blank" href="/category/about" title="评论之星 LV.6"><i class="wi wi-level-6"></i></a>';
     else if ($author_count >= 250 && $comment_author_email != $adminEmail) echo '<a class="vip7" target="_blank" href="/category/about" title="评论之星 LV.7"><i class="wi wi-level-7"></i></a>';
 }
+
 //获取用户UA信息,包括浏览器和系统等 调用:echo user_agent($comment->comment_agent);
 function user_agent($ua) {
     //解析操作系统start
@@ -686,6 +729,7 @@ function user_agent($ua) {
     }
     return "<div class='system_box'><span class='system'>" . $os . "</span>  <span class='browser'>" . $browser . "</span></div>";
 }
+
 //自定义评论列表模板
 function dedewp_comment_add_at($comment_text, $comment = '') {
     if ($comment->comment_parent > 0) {

@@ -6260,6 +6260,7 @@ comments
 
 .system_box{
   display: inline-block;
+  transform: translateY(-2px);
 }
 
 .comment .media-body .system {

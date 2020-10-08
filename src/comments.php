@@ -15,6 +15,8 @@ if ( post_password_required() )
                     <?php cancel_comment_reply_link(); ?>
                 </small>
             </h2>
+            <!-- 加载表情包 -->
+            <?php include(TEMPLATEPATH . '/smiley.php'); ?>
             <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
                 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
             <?php else : ?>
