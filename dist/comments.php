@@ -44,6 +44,7 @@ if ( post_password_required() )
                 </form>
             <?php endif; ?>
         </div>
+        <p class="comment_title"><i class="iconfont icon-pinglun3"></i>最新评论</p>
         <ol class="commentlist">
             <?php
             wp_list_comments( array(

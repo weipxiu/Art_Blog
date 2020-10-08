@@ -6212,6 +6212,27 @@ comments
   margin: 15px 0;
   padding: 10px 15px;
 }
+.comment_title{
+  font-size: 16px;
+  color: #666;
+  border-bottom: 1px solid #f0f2f7;
+  padding: 10px 0 5px;
+}
+
+.comment_title:after {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background:#1890ff;
+  background: var(--color,#1890ff);
+  left: 0;
+  bottom: -1px;
+}
+
+.comment_title .iconfont{
+  margin: 0 5px 0 10px;
+}
+
 .commentlist{
   padding-left:40px;
 }

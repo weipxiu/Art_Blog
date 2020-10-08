@@ -3572,10 +3572,33 @@ p.reward-p {
   font-size: 0.3rem;
   padding: 0.14rem;
 }
+
+.comment_title{
+  font-size: 0.3rem;
+  color: #666;
+  border-bottom: 1px solid #f0f2f7;
+  padding: 10px 0 5px;
+}
+
+.comment_title:after {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background:#1890ff;
+  background: var(--color,#1890ff);
+  left: 0;
+  bottom: -1px;
+}
+
+.comment_title .iconfont{
+  margin: 0 5px 0 10px;
+}
+
 .commentlist .comment {
   overflow: hidden;
   padding-top: 0.2rem;
 }
+
 .commentlist .comment .media-left img {
   width: 0.72rem;
   height: 0.72rem;
