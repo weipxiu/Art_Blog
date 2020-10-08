@@ -3157,25 +3157,29 @@ canvas,
   padding: 0.14rem;
 }
 
-.comment_title{
+#comments .comment_title{
   font-size: 0.3rem;
   color: #666;
   border-bottom: 1px solid #f0f2f7;
-  padding: 10px 0 5px;
+  padding: 5px 0 5px;
+  position: relative;
 }
 
-.comment_title:after {
+#comments .comment_title:after {
+  content: '';
   display: block;
-  width: 100px;
+  width: 1.8rem;
   height: 2px;
   background:#1890ff;
   background: var(--color,#1890ff);
+  position: absolute;
   left: 0;
   bottom: -1px;
 }
 
-.comment_title .iconfont{
+#comments .comment_title .iconfont{
   margin: 0 5px 0 10px;
+  font-size: 0.32rem;
 }
 
 .commentlist .comment {
