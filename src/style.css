@@ -5555,10 +5555,11 @@ Inherited from div.head_avatar_c .head_avatar_c {
 }
 
 .accordion .accordion_center ul li .mask .mark_text span {
-  margin-left: 6px;
+  margin-left: 10px;
   color: #6ac0f0;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
+  vertical-align: sub;
 }
 
 .accordion .accordion_center ul li .mask .mark_text p {
@@ -6340,11 +6341,6 @@ comments
 .comment-navigation .page-numbers:hover {
   background: #e8e8e8;
   color: #666;
-}
-
-.comment-navigation .current,
-textarea#comment:focus {
-  background: #e9e9e9;
 }
 
 .commentform-info {
