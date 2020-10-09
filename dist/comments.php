@@ -9,6 +9,11 @@ if ( post_password_required() )
     <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<?php the_ID();?>">
     <?php paginate_comments_links(array('prev_next'=>true)); ?>
     </nav>
+    <!-- 加载表情包start -->
+        <div id="smilies_modal" style="display:none">
+        <?php include(TEMPLATEPATH . '/smiley.php'); ?>
+    </div>
+    <!-- 加载表情包end -->
     <?php if(comments_open()) : ?>
         <div class="respond" role="form">
             <h2 id="reply-title" class="comments-title"><?php comment_form_title( '', '回复给 %s' ); ?> 
@@ -21,11 +26,6 @@ if ( post_password_required() )
             <?php else : ?>
                 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="commentform" id="commentform">
                     <?php if ( $user_ID ) : ?>
-                        <!-- 加载表情包start -->
-                        <div id="smilies_modal" style="display:none">
-                            <?php include(TEMPLATEPATH . '/smiley.php'); ?>
-                        </div>
-                        <!-- 加载表情包end -->
                         <textarea class="form-control" rows="5" cols="100" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="请填写正确QQ邮箱，以便于更好的与您取得联系，否则您的留言可能会被删除！" class="form-control" tabindex="1" name="comment"></textarea>
                         <i class="iconfont icon-biaoqing"></i>
                         <span class="warning-text">通过<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>身份已登录&nbsp;|&nbsp;<a class="link-logout" href="<?php echo wp_logout_url(get_permalink()); ?>">注销</a></span>
