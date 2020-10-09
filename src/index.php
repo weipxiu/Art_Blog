@@ -19,23 +19,29 @@
 <body>
 	<?php get_header(); ?>
 	<!-- pc端轮播start -->
-	<section class="mod-banner" id="js_banner">
-		<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
-		<div class="mod-banner__navi">
-			<div class="js_banner_nav mod-banner_nav"></div>
-			<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
-		</div>
-		<div class="mod-banner__tool">
-			<span class="js_banner_prev mod-banner__tool-prev">
-				<span class="mod-banner__tool-white"></span>
-				<span class="mod-banner__tool-shadow"></span>
-			</span>
-			<span class="js_banner_next mod-banner__tool-next">
-				<span class="mod-banner__tool-white"></span>
-				<span class="mod-banner__tool-shadow"></span>
-			</span>
-		</div>
-	</section>
+	<?php
+		if (get_option('weipxiu_options')['pc_banner']) {
+		?>
+		<section class="mod-banner" id="js_banner">
+			<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
+			<div class="mod-banner__navi">
+				<div class="js_banner_nav mod-banner_nav"></div>
+				<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
+			</div>
+			<div class="mod-banner__tool">
+				<span class="js_banner_prev mod-banner__tool-prev">
+					<span class="mod-banner__tool-white"></span>
+					<span class="mod-banner__tool-shadow"></span>
+				</span>
+				<span class="js_banner_next mod-banner__tool-next">
+					<span class="mod-banner__tool-white"></span>
+					<span class="mod-banner__tool-shadow"></span>
+				</span>
+			</div>
+		</section>
+		<?php
+	}
+	?>
 	<!-- pc端轮播end -->
 
 	<!-- 正文区域start -->
@@ -353,28 +359,33 @@ if("<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') ==
 var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
 var randomNum = Math.floor(Math.random() * 3);
 var bannerData = [];
-if (<?php echo get_option('weipxiu_options')['pc_banner']; ?>){
-	bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>
-}
-var banner = new Banner({
-		banner: '#banner_img',
-		index: 0,
-		autoplay: 8000,
-		width: 1200,
-		height: 300,
-		images: bannerData,
-		preloadImages: true, // 预加载所有图片
 
-		// 分页及控制
-		pagination: '.js_banner_nav', // 分页dom
-		paginationClick: true, // 分页是否可点击
-		prevButton: '.js_banner_prev', // 下一张dom
-		nextButton: '.js_banner_next', // 上一张dom
-		Effects: {
-				'prev': 'turnEffect',
-				'next': Number(<?php echo get_option('weipxiu_options')['wheel_banner']; ?>) == ''?flippingMode[parseInt(Math.random()*(5),10)]:flippingMode[<?php echo get_option('weipxiu_options')['wheel_banner']; ?>-1],
-				'navi': 'pageEffect'
-		},
-});
+<?php
+	if (get_option('weipxiu_options')['pc_banner']) {
+	?>
+		bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>;
+		var banner =  new Banner({
+				banner: '#banner_img',
+				index: 0,
+				autoplay: 8000,
+				width: 1200,
+				height: 300,
+				images: bannerData,
+				preloadImages: true, // 预加载所有图片
+
+				// 分页及控制
+				pagination: '.js_banner_nav', // 分页dom
+				paginationClick: true, // 分页是否可点击
+				prevButton: '.js_banner_prev', // 下一张dom
+				nextButton: '.js_banner_next', // 上一张dom
+				Effects: {
+					'prev': 'turnEffect',
+					'next': Number(<?php echo get_option('weipxiu_options')['wheel_banner']; ?>) == ''?flippingMode[parseInt(Math.random()*(5),10)]:flippingMode[<?php echo get_option('weipxiu_options')['wheel_banner']; ?>-1],
+					'navi': 'pageEffect'
+				},
+		});
+	<?php
+	}
+?>
 </script>
 </html>
