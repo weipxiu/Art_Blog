@@ -461,7 +461,9 @@ i {
   -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
 }
-
+header.hover .header{
+  z-index: 12;
+}
 .header-body {
   height: 100%;
   border-top: 1px solid #fff;
@@ -547,8 +549,8 @@ i {
 
 .header-conter {
   width: 1200px;
-  margin: 13px auto 0;
-  border-top: 1px solid transparent;
+  height:100%;
+  margin: 0 auto;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -670,7 +672,7 @@ i {
 
 .nav {
   width: 100%;
-  height: 32px;
+  height:100%;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -678,27 +680,32 @@ i {
   justify-content: space-between;
 }
 
-.nav .nav-left {
-  font-size: 14px;
+.brand {
   float: left;
-  line-height: 16px;
-  color: #bbb;
-  padding-left: 6px;
-  position: relative;
-  top: 1px;
-  border-left: 1px solid #bbb;
-  margin-left: 151px;
-  height: 30px;
+  margin:15px 0 0 150px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  float: left\9;
 }
 
-.brand {
-  margin-right: auto;
-  float: left\9;
+header.hover .brand{
+  margin:7px 0 0 150px;
+}
+
+.brand::before{
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  content: '';
+  border-left: 1px solid #bbb;
+  height: 30px;
+  float: left;
 }
 
 .brand p {
   line-height: 16px;
-  padding-left: 10px;
+  padding-left: 15px;
   font-size: 14px;
   color: #999;
   -webkit-transition: all 0.6s;
@@ -726,6 +733,7 @@ i {
   opacity: 0;
   transform: rotateY(90deg);
   transition: opacity .4s,transform .5s;
+  padding:0;
 }
 
 .nav ul .sub-menu li:last-of-type a{
@@ -752,9 +760,14 @@ i {
   /* perspective:100px; 
 -ms-perspective:100px;  */
   position: relative;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  padding: 15px 0px;
+}
+
+header.hover .nav ul li{
+  padding: 7px 0;
 }
 
 .nav ul li.front a,
@@ -772,13 +785,13 @@ i {
   width: 100%;
   height: 3px;
   position: absolute;
-  bottom: -17px;
+  bottom: -0;
   left: 0;
   background: #1890ff;
   background: var(--color, #1890ff);
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav ul li > a {
@@ -868,7 +881,7 @@ i {
 }
 
 .nav ul.music-nav li:hover p,.nav ul.music-nav li.active p {
-  height: 64px;
+  height: 63px;
   border-radius: 0;
 }
 
@@ -876,8 +889,13 @@ i {
   height: 48px;
 }
 
-.nav ul li.on:hover a span,.nav ul li.active a span{
+.nav ul li.on:hover a span,.nav ul li.on:hover a span i{
   color:#fff
+}
+
+.nav ul li.off:hover a span{
+  color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav ul.music-nav li:hover a {
@@ -926,6 +944,8 @@ i {
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
+  color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav ul li:hover a span i {
@@ -937,6 +957,8 @@ i {
   transform: rotateX(180deg);
   -ms-transform: rotateX(180deg);
   transform: rotateX(180deg);
+  color: #1890ff;
+  color: var(--color, #1890ff);
 }
 
 .nav {
@@ -949,7 +971,7 @@ i {
   height: auto;
   max-height: 0;
   left: calc(50% - 50px);
-  top: 49px;
+  top: 64px;
   z-index: 13;
 }
 
@@ -1041,12 +1063,18 @@ i {
 .mod-header_music-icon {
   position: absolute !important;
   right: 35px;
-  top: 1px;
+  top: 15px;
   width: 30px;
   height: 30px !important;
   cursor: pointer;
 }
 
+header.hover .mod-header_music-icon{
+  top:7px;
+}
+header.hover .navto-search{
+  top:12px
+}
 .mod-header_music-icon i:nth-of-type(1) {
   left: 0;
   display: none;
@@ -1161,14 +1189,6 @@ i {
   top: 38px;
 }
 
-.header.hover .header-conter {
-  margin-top: 6px;
-}
-
-.header.hover .nav ul.music-nav li > p {
-  bottom: -8px;
-}
-
 .header .nav-min a {
   line-height: 32px;
   display: block;
@@ -1200,7 +1220,7 @@ i {
 .navto-search {
   position: absolute;
   right: 0px;
-  top: 5px;
+  top: 19px;
 }
 
 .navto-search a {
@@ -1407,15 +1427,20 @@ i {
   display: block;
   position: absolute;
   left: 0;
-  top: -14px;
+  top: -0;
   overflow: hidden;
 }
 
 #Logo > img {
   width: 100%;
   margin-top: 7px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
-
+header.hover #Logo > img{
+  margin-top:0
+}
 @-webkit-keyframes searchLights {
   0% {
     left: -100px;

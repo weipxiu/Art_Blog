@@ -28,7 +28,6 @@
 					<a href="/" class="t-logo" id="Logo">
 							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>">
 					</a>
-					<div class="nav-left"></div>
 					<div class="brand">
 					<?php echo get_option('weipxiu_options')['key_word']; ?>
 				</div>

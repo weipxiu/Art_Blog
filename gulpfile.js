@@ -16,10 +16,10 @@ const plumber = require('gulp-plumber'); //阻止报错暂停
 const browserSync = require('browser-sync'); //热更新模块
 
 // 环境变量
-const env = process.env.NODE_ENV
+const env = process.env.NODE_ENV === 'production' ? true : false
 
-let target = env === 'production' ? './dist' : 'D:/PHPTutorial/WWW/wp-content/themes/Art_Blog'
-console.log('当前环境：'+env+'对应打包地址：'+target)
+let target = env ? './dist' : 'D:/PHPTutorial/WWW/wp-content/themes/Art_Blog'
+console.log('当前环境：' + env + '对应打包地址：' + target)
 
 /*
 gulp.task -- 定义任务
@@ -32,15 +32,15 @@ gulp.watch -- 观察文件是否发生改变
 */
 
 //清空dist目录
-var clear = function(href){
+var clear = function (href) {
     gulp.task("clean", function () {
-       console.log('清空'+(href || target)+'目录下的资源')
-       return gulp.src((href || target+'/*'), {
+        console.log('清空' + (href || target) + '目录下的资源')
+        return gulp.src((href || target + '/*'), {
             read: false //设置参数read:false可以阻止访问文件,加快删除速度
         })
-         .pipe(clean({
-            force: true
-        }));
+            .pipe(clean({
+                force: true
+            }));
     })
 }
 clear()
@@ -54,22 +54,22 @@ gulp.task("copyHtml", function () {
 
 //压缩html
 gulp.task('miniHtml', () => {
-  return gulp.src(['src/*.html'])
-    .pipe(preprocess({
-        context: {
-        // 此处可接受来自调用命令的 NODE_ENV 参数，默认为 development 开发测试环境
-        NODE_ENV: process.env.NODE_ENV || 'development',
-        },
-    }))
-    .pipe(htmlmin({ 
-        collapseWhitespace: false, // 折叠html节点间的空白
-        minifyCSS: true, // 压缩css
-        minifyJS: true, // 压缩js
-        removeComments: true, // 去除注释
-        removeEmptyAttributes: true, // 去除空属性
-        removeRedundantAttributes: true // 去除与默认属性一致的属性值
-     }))
-    .pipe(gulp.dest(target));
+    return gulp.src(['src/*.html'])
+        .pipe(preprocess({
+            context: {
+                // 此处可接受来自调用命令的 NODE_ENV 参数，默认为 development 开发测试环境
+                NODE_ENV: process.env.NODE_ENV || 'development',
+            },
+        }))
+        .pipe(htmlmin({
+            collapseWhitespace: false, // 折叠html节点间的空白
+            minifyCSS: true, // 压缩css
+            minifyJS: true, // 压缩js
+            removeComments: true, // 去除注释
+            removeEmptyAttributes: true, // 去除空属性
+            removeRedundantAttributes: true // 去除与默认属性一致的属性值
+        }))
+        .pipe(gulp.dest(target));
 });
 
 // 压缩css
@@ -78,19 +78,19 @@ gulp.task("minCss", function () {
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
         .pipe(gulp_minify_css())
-        .pipe(gulp.dest(target+"/css"))
+        .pipe(gulp.dest(target + "/css"))
 
     //style.css压缩
     return gulp.src("src/style.css")
-    .pipe(gulp_minify_css())    
-    .pipe(gulp.dest(target))
+        .pipe(gulp_minify_css())
+        .pipe(gulp.dest(target))
 });
 
 //压缩完的style.css追加版本号
 gulp.task("themesVer", function () {
-    return gulp.src(["src/ver.css",target+"/style.css"])
-    .pipe(concat("style.css"))
-    .pipe(gulp.dest(target))
+    return gulp.src(["src/ver.css", target + "/style.css"])
+        .pipe(concat("style.css"))
+        .pipe(gulp.dest(target))
 })
 
 //图片压缩
@@ -109,15 +109,15 @@ gulp.task("imageMin", function () {
             }),
             imagemin.svgo({
                 plugins: [{
-                        removeViewBox: true
-                    },
-                    {
-                        cleanupIDs: false
-                    }
+                    removeViewBox: true
+                },
+                {
+                    cleanupIDs: false
+                }
                 ]
             })
         ]))
-        .pipe(gulp.dest(target+'/images'))
+        .pipe(gulp.dest(target + '/images'))
 })
 
 // ES6转换转ES5(babel-v8版本)
@@ -136,35 +136,37 @@ gulp.task("imageMin", function () {
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
     //公共
-     gulp.src(["src/js/main.js","src/js/ajax_wordpress.js"])
+    gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
         .pipe(concat("main_min.js"))
         .pipe(scriptmin()) //在合并的时候压缩js
-        .pipe(gulp.dest(target+"/js"))
-    
+        .pipe(gulp.dest(target + "/js"))
+
     //特例
-    gulp.src(["src/js/rem.js","src/js/date.js","src/js/jquery-2.1.4.min.js","src/js/jquery.lazyload.js"])
-        .pipe(gulp.dest(target+"/js"))
-    
+    gulp.src(["src/js/rem.js", "src/js/date.js", "src/js/jquery-2.1.4.min.js", "src/js/jquery.lazyload.js"])
+        .pipe(gulp.dest(target + "/js"))
+
     //首页
-    return gulp.src(["src/js/index.js","src/js/swiper.min.js"])
+    return gulp.src(["src/js/index.js", "src/js/swiper.min.js"])
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
         .pipe(scriptmin()) //转换后进行压缩
         .pipe(concat("index_min.js"))
         .pipe(scriptmin()) //在合并的时候压缩js
-        .pipe(gulp.dest(target+"/js"))
+        .pipe(gulp.dest(target + "/js"))
 })
 
-gulp.task('compressZip', function () {
-    return gulp.src('./dist/**')
-        .pipe(zip('Art_Blog.zip'))
-        .pipe(gulp.dest('./'));
-});
+if (env) {
+    gulp.task('compressZip', function () {
+        return gulp.src('./dist/**')
+            .pipe(zip('Art_Blog.zip'))
+            .pipe(gulp.dest('./'));
+    });
+}
 
 //初始化browserSync
 // browserSync.init({
@@ -197,16 +199,15 @@ gulp.task("Watch", function () {
     gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/**.css"], ["copyHtml"]);
     gulp.watch(['src/*.html'], ["miniHtml"]);
     gulp.watch(["src/**.css"], ["minCss"]);
-    gulp.watch([target+"/style.css"], ["themesVer"]);
+    // gulp.watch([target + "/style.css"], ["themesVer"]);
     gulp.watch(["src/**.js"], ["jsConcat"]);
     // gulp.watch(["dist/**"], ["compressZip"]);
 })
 
-
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则打包太慢，图片压缩还是单独处理比较好
-gulp.task('default',function(){
-    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat", "compressZip", "Watch",function(){
-        console.log('\n恭喜你，编译打包已完成，所有文件在'+target+'文件夹！！！');
+gulp.task('default', function () {
+    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat", "compressZip", "Watch", function () {
+        console.log('\n恭喜你，编译打包已完成，所有文件在' + target + '文件夹！！！');
     })
 });

@@ -280,30 +280,35 @@ $(function () {
             }, 500);
         }
     })
+
+    var queue = [];
     musicList.mouseenter(function () {
-        clearTimeout(time2);
+        $(this).addClass('active');
+
+        queue.push($(this).index())
         $(".header").css("z-index", "12");
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
             $(this).addClass("active");
-            setTimeout(()=>{
-                $(this).siblings().removeClass('active');
-            },350)
             musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
+            
         } else {
             musicObj.get(0).src = "";
         }
     })
     musicList.mouseleave(function () {
-        clearTimeout(time2);
-        time2 = setTimeout(() => {
-            $(this).removeClass('active');
-            //避免在正常时候下方轮播分割旋转时候被遮盖 
-            if (!$(".site-search").is(":visible")) {
-                $(".header").css("z-index", "10");
-            }
-        }, 500);
+        if(queue.length > 0){
+            setTimeout(()=>{
+                console.log('队列',queue[0])
+                musicList.eq(queue[0]).removeClass('active');
+                queue.shift();
+            },200)
+        }
+        //避免在正常时候下方轮播分割旋转时候被遮盖 
+        if (!$(".site-search").is(":visible")) {
+            $(".header").css("z-index", "10");
+        }
     })
 
     function musicdown(number) {
@@ -379,7 +384,8 @@ $(function () {
             "opacity": "1"
         })
     }
-    $(document).scroll(function () {
+
+    function scroll_height(){
         scrollTop = $(document).scrollTop();
         if (scrollTop > 500) {
             $(".aircraft").css({
@@ -399,7 +405,10 @@ $(function () {
             $(".header").removeClass("Top")
             $(".header").addClass("hover")
         }
-        //var se = document.documentElement.clientHeight;
+    }
+    scroll_height()
+    $(document).scroll(function () {
+        scroll_height()
     });
     var obtn = true;
     $(".btn_menu,.cover").on("touchmove", function (event) {
