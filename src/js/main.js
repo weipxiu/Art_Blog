@@ -303,7 +303,7 @@ $(function () {
                 console.log('队列',queue[0])
                 musicList.eq(queue[0]).removeClass('active');
                 queue.shift();
-            },200)
+            },250)
         }
         //避免在正常时候下方轮播分割旋转时候被遮盖 
         if (!$(".site-search").is(":visible")) {
