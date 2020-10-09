@@ -206,7 +206,7 @@ gulp.task("Watch", function () {
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则打包太慢，图片压缩还是单独处理比较好
 gulp.task('default',function(){
-    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat","compressZip", "Watch",function(){
+    runSequence("clean", "copyHtml", "miniHtml", "minCss", "themesVer", "jsConcat", "compressZip", "Watch",function(){
         console.log('\n恭喜你，编译打包已完成，所有文件在'+target+'文件夹！！！');
     })
 });

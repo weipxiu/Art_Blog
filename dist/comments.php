@@ -4,15 +4,17 @@ if ( post_password_required() )
 ?>
 
 <div id="comments" class="responsesWrapper">
-    <meta content="UserComments:<?php echo number_format_i18n( get_comments_number() );?>" itemprop="interactionCount">
     <h3 class="comments-title">共 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span> 条评论关于"<?php the_title(); ?>"</h3>
-    <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<?php the_ID();?>">
-    <?php paginate_comments_links(array('prev_next'=>true)); ?>
-    </nav>
+
+    <!-- <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<? /**php the_ID();*/ ?>">
+    <? /** php paginate_comments_links(array('prev_next'=>true)); */ ?>
+    </nav> -->
+
     <!-- 加载表情包start -->
         <div id="smilies_modal" style="display:none">
         <?php include(TEMPLATEPATH . '/smiley.php'); ?>
     </div>
+
     <!-- 加载表情包end -->
     <?php if(comments_open()) : ?>
         <div class="respond" role="form">
@@ -50,6 +52,7 @@ if ( post_password_required() )
                 </form>
             <?php endif; ?>
         </div>
+
         <p class="comment_title"><i class="iconfont icon-pinglun3"></i>最新评论</p>
         <ol class="commentlist">
             <?php

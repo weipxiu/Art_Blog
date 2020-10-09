@@ -554,10 +554,6 @@ i {
   transition: all 0.3s;
 }
 
-.header.hover .nav ul.music-nav li.active p {
-  height: 48px;
-}
-
 .topbar {
   width: 100%;
   height: 100%;
@@ -858,18 +854,26 @@ i {
 }
 
 .nav ul.music-nav li > p {
-  -webkit-transition: height 0.25s;
-  -o-transition: height 0.25s;
-  transition: height 0.25s;
+  -webkit-transition: height 0.2s ease-in-out;
+  -o-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
   z-index: 0;
   opacity: 0;
   display: block !important;
   pointer-events: none;
 }
 
-.nav ul.music-nav li.active p {
+.nav ul.music-nav li:hover p,.nav ul.music-nav li.active p {
   height: 64px;
   border-radius: 0;
+}
+
+.header.hover .nav ul.music-nav li:hover p,.header.hover .nav ul.music-nav li.active p {
+  height: 48px;
+}
+
+.nav ul li:hover a span,.nav ul li.active a span{
+  color:#fff
 }
 
 .nav ul.music-nav li:hover a {

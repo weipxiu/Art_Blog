@@ -282,22 +282,22 @@ $(function () {
     musicList.mouseenter(function () {
         clearTimeout(time2);
         $(".header").css("z-index", "12");
-        // $(".header-conter .nav-min").hide();
-        // $(this).find('ul.nav-min').show()
         $index = $(this).index();
         musicObj = musicList.eq($index).find('audio');
         if (localStorage.getItem("off_y") == 1) {
-            $(this).addClass("active").siblings('li').removeClass('active');
+            $(this).addClass("active");
+            setTimeout(()=>{
+                $(this).siblings().removeClass('active');
+            },350)
             musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
         } else {
             musicObj.get(0).src = "";
         }
     })
     musicList.mouseleave(function () {
-        $(this).removeClass('active');
         clearTimeout(time2);
         time2 = setTimeout(() => {
-            // $(".header-conter .nav-min").hide();
+            $(this).removeClass('active');
             //避免在正常时候下方轮播分割旋转时候被遮盖 
             if (!$(".site-search").is(":visible")) {
                 $(".header").css("z-index", "10");
