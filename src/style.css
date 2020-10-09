@@ -770,7 +770,7 @@ i {
 
 .nav ul li > p {
   width: 100%;
-  height: 4px;
+  height: 3px;
   position: absolute;
   bottom: -17px;
   left: 0;
@@ -863,6 +863,10 @@ i {
   pointer-events: none;
 }
 
+.nav ul.music-nav li.on > p{
+  opacity: 1;
+}
+
 .nav ul.music-nav li:hover p,.nav ul.music-nav li.active p {
   height: 64px;
   border-radius: 0;
@@ -872,7 +876,7 @@ i {
   height: 48px;
 }
 
-.nav ul li:hover a span,.nav ul li.active a span{
+.nav ul li.on:hover a span,.nav ul li.active a span{
   color:#fff
 }
 

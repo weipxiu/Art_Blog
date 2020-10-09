@@ -34,7 +34,7 @@ $(function () {
         }
     }
     //追加音乐标签
-    node_list.append("<audio src='' autoplay='autoplay'></audio>" + "<p style='opacity: 0'></p>");
+    node_list.append("<audio src='' autoplay='autoplay'></audio>" + "<p></p>");
     //二级菜单父级禁止跳转
     $("#nav_list .sub-menu").siblings('a').attr('href', 'javascript:void(0);');
     //追加icon
@@ -198,7 +198,7 @@ $(function () {
             $('.header').css('z-index', '10');
             searchShow = true;
         }
-        $(".site-search.active.pc").stop(true, true).slideToggle(150);
+        $(".site-search.active.pc").toggle();
         $(".site-search.active.pc").find('input').focus();
     });
     $(".xis,.navto-search a").click(function(){
@@ -210,10 +210,9 @@ $(function () {
 
     // 根据缓存状态初始化音乐
     if (localStorage.getItem("off_y") != 1) {
-        $(".nav ul.music-nav li > p").css("opacity", "0");
         localStorage.setItem("off_y", 0);
     } else {
-        $(".nav ul.music-nav li > p").css("opacity", "1");
+        $(".nav ul.music-nav li").addClass("on");
         localStorage.setItem("off_y", 1);
         $(".mod-header_music-icon").addClass('hover');
     }
@@ -223,7 +222,8 @@ $(function () {
         //clearInterval(time); //清除鼠标离开li时候的定时器
         if (localStorage.getItem("off_y") != 1) {
             $(this).addClass("hover");
-            $(".nav ul.music-nav li > p").css("opacity", "1");
+            $('.nav ul.music-nav li').addClass('on');
+            $('.nav ul.music-nav li').removeClass('off');
             localStorage.setItem("off_y", 1);
             layer.msg('全站音频已开启~', {
                 time: 2000 //2秒关闭（如果不配置，默认是3秒）
@@ -233,7 +233,8 @@ $(function () {
             speak("全站音频已开启~")
         } else {
             $(this).removeClass("hover");
-            $(".nav ul.music-nav li > p").css("opacity", "0");
+            $('.nav ul.music-nav li').addClass('off');
+            $('.nav ul.music-nav li').removeClass('on');
             localStorage.setItem("off_y", 0);
             layer.msg('全站音频已关闭，期待您的下次体验！', {
                 time: 4000

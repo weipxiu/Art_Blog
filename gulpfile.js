@@ -161,7 +161,7 @@ gulp.task("jsConcat", function () {
 })
 
 gulp.task('compressZip', function () {
-    return gulp.src('./dist/*')
+    return gulp.src('./dist/**')
         .pipe(zip('Art_Blog.zip'))
         .pipe(gulp.dest('./'));
 });
