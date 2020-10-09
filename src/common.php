@@ -17,8 +17,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-<!-- Force HTTPS mode to open -->
-<?php if (get_option('weipxiu_options')['text_pic'] == 'on'){ ?>
+<!-- 是否强制资源https加载 -->
+<?php if (get_option('weipxiu_options')['switch_https'] == 'on'){ ?>
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <?php } ?>
 
@@ -31,7 +31,7 @@
 <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
 <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
 <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
-<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_q2plhj9epcq.css">
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_4rh41j9lwjr.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
 
 <script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>

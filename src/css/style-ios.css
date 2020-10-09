@@ -3645,7 +3645,13 @@ ol.commentlist {
   margin: 0.2rem 0 0;
 }
 #comments .warning-text {
-  font-size: 0.28rem;
+  /* line-height: 0.5rem;
+  display: block;
+  font-size: 0.24rem; */
+  display: none;
+}
+#comments .warning-text a {
+  font-size: 0.24rem;
 }
 .media {
   overflow: hidden;
@@ -3677,6 +3683,15 @@ ol.commentlist {
   font-weight: 300;
   font-size: 12px;
 }
+#commentform{
+  position: relative;
+}
+#commentform .iconfont{
+  position: absolute;
+  bottom: 1.1rem;
+  left: 0.15rem;
+}
+
 /* 文章评论框end */
 
 .codecolorer,

@@ -933,4 +933,13 @@ $(function () {
         });
     }
     //视频播放end
+
+    // 表情包start
+    $("#commentform .iconfont").click(function(){
+        $('#smilies_modal').toggle()
+        $("#smilies_modal img").each(function(){
+            $(this).attr('src', $(this).attr('data-src'))
+        });
+    })
+    // 表情包end
 })

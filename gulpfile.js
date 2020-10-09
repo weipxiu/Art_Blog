@@ -197,8 +197,8 @@ gulp.task("Watch", function () {
     gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/**.css"], ["copyHtml"]);
     gulp.watch(['src/*.html'], ["miniHtml"]);
     gulp.watch(["src/**.css"], ["minCss"]);
-    gulp.watch([target+"/**.css"], ["themesVer"]);
-    gulp.watch(["src/*.js"], ["jsConcat"]);
+    gulp.watch([target+"/style.css"], ["themesVer"]);
+    gulp.watch(["src/**.js"], ["jsConcat"]);
     // gulp.watch(["dist/**"], ["compressZip"]);
 })
 

@@ -6343,6 +6343,16 @@ comments
 
 .warning-text {
   color: #999;
+  position: absolute;
+}
+
+.warning-text a{
+  color: #999;
+}
+
+.warning-text .link-logout{
+  color: #1890ff;
+  color: var(--color,#1890ff);
 }
 
 .link-logout {
@@ -6429,10 +6439,6 @@ input#submit {
   background: #f0f2f7;
 }
 
-.warning-text {
-  display: none;
-}
-
 .comment-navigation {
   width: 100%;
   margin: 0 auto;
@@ -6465,12 +6471,11 @@ textarea#comment {
   color: #777;
   border: 0;
   box-shadow: none;
-  height: 90px;
   padding: 10px;
-  resize: none;
   border-radius: 5px;
   transition: background 0.3s;
   outline: none;
+  height:100px;
 }
 
 .commentform-info {
@@ -6482,6 +6487,10 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: 700;
+}
+
+.commentform-info label{
+  margin-bottom: 0;
 }
 
 .form-control {
@@ -6531,6 +6540,14 @@ label {
 
 #commentform {
   overflow: hidden;
+  position: relative;
+}
+
+#commentform .iconfont{
+  position: absolute;
+  bottom: 50px;
+  left: 8px;
+  cursor: pointer;
 }
 
 /* 评论框end */
