@@ -891,7 +891,7 @@ header.hover .nav ul li{
   height: 48px;
 }
 
-.nav ul li.on:hover a span,.nav ul li.on:hover a span i{
+.nav ul li.on:hover a span,.nav ul li.on:hover a span i,header .nav ul li.keyboard_color > a span,header .nav ul li.keyboard_color > a span i{
   color:#fff
 }
 

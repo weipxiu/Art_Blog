@@ -212,8 +212,8 @@ $(function () {
     if (localStorage.getItem("off_y") != 1) {
         localStorage.setItem("off_y", 0);
     } else {
-        $(".nav ul.music-nav li").addClass("on");
         localStorage.setItem("off_y", 1);
+        $(".nav ul.music-nav li").addClass("on");
         $(".mod-header_music-icon").addClass('hover');
     }
 
@@ -316,6 +316,7 @@ $(function () {
         if (number <= musicList.length) {
             musicList.eq(number - 1).find('audio').get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + (number) + ".mp3";
             musicList.eq(number - 1).addClass("active")
+            musicList.eq(number - 1).addClass("keyboard_color");
         }
     }
 
@@ -333,6 +334,7 @@ $(function () {
     $(document).keyup(function () {
         setTimeout(function () {
             musicList.removeClass("active")
+            musicList.removeClass("keyboard_color")
         }, 150);
     });
     //钢琴导航end
