@@ -102,8 +102,7 @@ img {
   width: 100%;
   height: 100%;
 }
-#wowslider-container,
-.accordion {
+#wowslider-container {
   display: none;
 }
 #mobil {
@@ -3114,10 +3113,34 @@ canvas,
 
 /* 随机背景颜色end */
 
+/* 留言板寄语start */
+.leaving_message h1{
+  text-align: center;
+  color: #666;
+  font-size: 0.36rem;
+  font-weight: normal;
+  border-bottom: 1px solid #f0f2f7;
+  padding:0.2rem 0;
+  margin:0.1rem auto 0.4rem;
+}
+.leaving_message p{
+  font-size:0.28rem;
+  text-indent:2em;
+  line-height: 0.45rem;
+  margin-bottom:0.3rem;
+}
+
+.leaving_message p a{
+  font-size: 0.28rem;
+  color: #1890ff;
+  color: var(--color, #1890ff);
+}
+/* 留言板寄语end */
+
 /* 文章评论框start */
 .post_content h3.comments-title {
   text-align: center;
-  background: #eee;
+  background: #f0f2f7;
   border-radius: 0.08rem;
   margin: 0.1rem auto 0.22rem;
   padding: 0.1rem;
@@ -3272,8 +3295,9 @@ ol.commentlist {
 }
 #commentform .iconfont{
   position: absolute;
-  bottom: 1.1rem;
+  top: 1.8rem;
   left: 0.15rem;
+  font-size: 0.28rem;
 }
 /* 文章评论框end */
 

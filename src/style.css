@@ -1519,10 +1519,6 @@ header.hover #Logo > img{
   display: none;
 }
 
-.deviation {
-  margin-top: 20px !important;
-}
-
 .continar .continar-left {
   width: 850px;
   float: left;
@@ -5416,198 +5412,6 @@ Inherited from div.head_avatar_c .head_avatar_c {
 
 /*用户中心end*/
 
-/*手风琴start*/
-
-.accordion {
-  width: 1200px;
-  height: 500px;
-  margin: 0 auto;
-  background: #e4edf1;
-}
-
-.accordion .accordion_center {
-  width: 1200px;
-  height: 500px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.accordion .accordion_center ul {
-  width: 1900px;
-  height: 500px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.accordion .accordion_center ul li {
-  width: 200px;
-  height: 500px;
-  overflow: hidden;
-  box-sizing: border-box;
-  float: left;
-  position: relative;
-}
-
-.accordion .accordion_center ul li.accord_1 {
-  background: url('images/pd-bg-01.jpg') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.accordion .accordion_center ul li.accord_2 {
-  background: url('images/pd-bg-02.jpg') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.accordion .accordion_center ul li.accord_3 {
-  background: url('images/pd-bg-03.jpg') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.accordion .accordion_center ul li.accord_4 {
-  background: url('images/pd-bg-04.jpg') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.accordion .accordion_center ul li.accord_5 {
-  background: url('images/pd-bg-05.jpg') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.accordion .accordion_center ul li.accord_6 {
-  background: url('images/pd-bg-06.jpg') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.accordion .accordion_center ul li .mask {
-  position: absolute;
-  width: 340px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: none;
-  background: rgba(0, 152, 228, 0.9);
-}
-
-.accordion .accordion_center ul li .mask a {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ffffff;
-  border-radius: 4px;
-  width: 178px;
-  height: 38px;
-  display: block;
-  text-align: center;
-  line-height: 38px;
-  position: absolute;
-  left: 50%;
-  bottom: 72px;
-  margin-left: -89px;
-  font-size: 16px;
-  color: #0098e4;
-}
-
-.accordion .accordion_center ul li .slide-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.accordion .accordion_center ul li .slide-item h3 {
-  text-align: center;
-  color: #fff;
-  font-size: 28px;
-  margin: 100px 0 80px;
-}
-
-.accordion .accordion_center ul li .slide-item p {
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.accordion .accordion_center ul li .slide-item .iconfont {
-  position: absolute;
-  left: 50%;
-  bottom: 60px;
-  font-size: 32px;
-  color: #fff;
-  margin-left: -16px;
-  -webkit-animation: arrow_move 0.7s 0.5s infinite alternate;
-  animation: arrow_move 0.7s 0.5s infinite alternate;
-  opacity: 1;
-}
-
-/*首页箭头帧动画start*/
-
-@-webkit-keyframes arrow_move {
-  to {
-    bottom: 50px;
-    opacity: 0.5;
-  }
-}
-
-@keyframes arrow_move {
-  to {
-    bottom: 50px;
-    opacity: 0.5;
-  }
-}
-
-/*首页箭头帧动画end*/
-
-.accordion .accordion_center ul li .mask h3 {
-  color: #fff;
-  font-size: 32px;
-  text-align: center;
-  margin: 37px 0 35px;
-}
-
-.accordion .accordion_center ul li .mask > span {
-  color: #fff;
-  font-size: 22px;
-  display: block;
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.accordion .accordion_center ul li .mask .mark_text {
-  width: 300px;
-  margin: 10px auto;
-  overflow: hidden;
-}
-
-.accordion .accordion_center ul li .mask .mark_text h2 {
-  font-size: 14px;
-  color: #ffffff;
-  text-align: left;
-  margin-top: 22px;
-  width: 100%;
-  height: 32px;
-}
-
-.accordion .accordion_center ul li .mask .mark_text span {
-  margin-left: 10px;
-  color: #6ac0f0;
-  font-size: 16px;
-  line-height: 100%;
-  vertical-align: sub;
-}
-
-.accordion .accordion_center ul li .mask .mark_text p {
-  color: #fff;
-  font-size: 14px;
-  line-height: 22px;
-  float: right;
-  width: 263px;
-}
-
-/*手风琴end*/
-
 #mobil,
 .nav-s1,
 .jy {
@@ -6238,11 +6042,34 @@ p.data-l span {
 
 /* 首页3d轩枫导航end */
 
-/*comments留言评论*/
+/* 留言板寄语start */
+#leaving_message #details{
+  padding:0 30px;
+}
+.leaving_message h1{
+  text-align: center;
+  color: #666;
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 1px solid #f0f2f7;
+  padding:10px 0 25px;
+  margin:15px auto;
+}
+.leaving_message p{
+  font-size:14px;
+  text-indent:2em;
+  line-height: 30px;
+  margin-bottom:10px;
+}
 
-/*
-comments
-*/
+.leaving_message p a{
+  font-size: 14px;
+  color: #1890ff;
+  color: var(--color, #1890ff);
+}
+/* 留言板寄语end */
+
+/*comments留言评论框*/
 .comment {
   background: #f0f2f7;
   margin: 15px 0;

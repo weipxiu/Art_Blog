@@ -201,7 +201,7 @@ $(function () {
         $(".site-search.active.pc").toggle();
         $(".site-search.active.pc").find('input').focus();
     });
-    $(".xis,.navto-search a").click(function(){
+    $(".xis,.navto-search a").click(function () {
         $(this).find("i").toggleClass("icon-sousuo");
         $(this).find("i").toggleClass("icon-guanbi3");
     })
@@ -292,23 +292,23 @@ $(function () {
         if (localStorage.getItem("off_y") == 1) {
             $(this).addClass("active");
             musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
-            
+
         } else {
             musicObj.get(0).src = "";
         }
     })
     musicList.mouseleave(function () {
-        if(queue.length > 0){
-            setTimeout(()=>{
+        if (queue.length > 0) {
+            setTimeout(() => {
                 musicList.eq(queue[0]).removeClass('active');
                 queue.shift();
-            },250)
+            }, 250)
         }
         //避免在正常时候下方轮播分割旋转时候被遮盖 
         if (!$(".site-search").is(":visible")) {
-            time2 = setTimeout(()=>{
+            time2 = setTimeout(() => {
                 $(".header").css("z-index", "10");
-            },1000)
+            }, 1000)
         }
     })
 
@@ -388,7 +388,7 @@ $(function () {
         })
     }
 
-    function scroll_height(){
+    function scroll_height() {
         scrollTop = $(document).scrollTop();
         if (scrollTop > 500) {
             $(".aircraft").css({
@@ -426,14 +426,14 @@ $(function () {
             $(".continar,.os-headertop").css({
                 "transform": "translateX(160px)"
             })
-            $(".weipxiu_nav").attr('href','javascript:void(0);')
+            $(".weipxiu_nav").attr('href', 'javascript:void(0);')
         } else {
             $(".continar,.os-headertop").css({
                 "transform": "translateX(0)"
             })
-            setTimeout(function(){
-                $(".weipxiu_nav").attr('href','/')
-            },800)
+            setTimeout(function () {
+                $(".weipxiu_nav").attr('href', '/')
+            }, 800)
         }
         if ($(".site-search").is(":visible")) {
             $(".os-headertop .site-search").slideToggle(100);
@@ -486,7 +486,7 @@ $(function () {
     for (var i = 0; i <= $(".mouseover ul li").length; i++) {
         $(".mouseover ul li").eq(i).find("em").html(i + 1)
     }
-    
+
     // 移动端二级菜单导航start
     $("ul.slide-left li a").on("touchstart", function (e) {
         $(this).parents('li').siblings('li').find('.slide_slect').slideUp();
@@ -497,34 +497,6 @@ $(function () {
         $(this).parent().find(".iconfont_click").toggleClass("icon-shangjiantou");
     })
     // 移动端二级菜单导航end
-
-    //留言板手风琴start
-    $(".accordion .accordion_center ul li").hover(function () {
-        $(this).stop().animate({
-            "width": "340px"
-        }).siblings("li").stop().animate({
-            "width": "172px"
-        });
-        $(this).find(".slide-item").fadeOut();
-        $(this).find(".mask").stop(true, true).fadeIn();
-        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move1 1s .5s infinite alternate");
-        //上：暂停首页iconfont动画
-        return false;
-    }, function () {
-        $(this).find(".slide-item").stop(true, false).fadeIn();
-        $(this).find(".mask").stop(true, false).fadeOut(); //鼠标离开过后，动画暂停，且不需要完成
-    });
-
-    $(".accordion .accordion_center").mouseleave(function () {
-        $(".accordion .accordion_center ul li").stop().animate({
-            "width": "200px"
-        });
-        $(".accordion .accordion_center ul li").find(".slide-item").fadeIn();
-        $(".accordion .accordion_center ul li").find(".mask").fadeOut();
-        $(".accordion_center ul li .slide-item .iconfont").css("animation", "arrow_move 1s .5s infinite alternate");
-        //上：开启首页iconfont动画，修复因为鼠标放上li上去导致动画停止后的bug
-    });
-    //留言板手风琴end
 
     if ($(document).width() >= 1200) {
         // 底部悬浮登录注册start
@@ -763,7 +735,9 @@ $(function () {
 
         //特色图片懒加载，移动端需要设置滚动事件
         $("img.Lazy_load").lazyload({
-            container: $("body > .continar")
+            container: $("body > .continar"),
+            threshold :100,
+            effects: "show"
         });
     }
 
@@ -789,7 +763,7 @@ $(function () {
 
     //视频播放start
     if ($("#my-video").length) {
-        if($('#my-video').is(':hidden')){
+        if ($('#my-video').is(':hidden')) {
             $('#my-video').remove()
             return
         }
@@ -948,9 +922,9 @@ $(function () {
     //视频播放end
 
     // 表情包start
-    $("#commentform .iconfont").click(function(){
+    $("#commentform .iconfont").click(function () {
         $('#smilies_modal').toggle()
-        $("#smilies_modal img").each(function(){
+        $("#smilies_modal img").each(function () {
             $(this).attr('src', $(this).attr('data-src'))
         });
     })

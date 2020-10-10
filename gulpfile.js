@@ -154,10 +154,9 @@ gulp.task("jsConcat", function () {
 
 //监听文件是否发生改变
 gulp.task("Watch", function () {
+    gulp.watch(['./src/*.css','./src/css/**'], ['minCss']);
+    gulp.watch(['./src/**/**.js'], ['jsConcat']);
     gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);
-    gulp.watch("./src/*.html", ["miniHtml"]);
-    gulp.watch("./src/**.css", ["minCss"]);
-    gulp.watch("./src/**/**.js", ["jsConcat"]);
 })
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表

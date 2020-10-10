@@ -698,6 +698,13 @@ function themeoptions_page() {
             </div>
           </div>
         </div>
+
+        <div class="row clearfix">
+          <label for="leaving-message" class="fl left-wrap">留言板寄语：</label>
+          <div class="fr right-wrap">
+            <textarea id="leaving-message" name="leaving-message" rows="5" cols="100" placeholder="例如：&#10;<p>留言板寄语</p>"><?php echo $a_options['leaving_message'] ?></textarea>
+          </div>
+        </div>
       </div>
 
       <!-- 内容五 自定义样式 -->
@@ -748,6 +755,7 @@ function themeoptions_page() {
       'sidebar_notice' => $_POST['sidebar-notice'],
       'footer_copyright' => $_POST['footer-copyright'],
       'login_css'  => $_POST['login-css'],
+      'leaving_message'  => $_POST['leaving-message'],
       'details_css'  => $_POST['details-css'],
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
