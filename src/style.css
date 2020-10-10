@@ -974,7 +974,7 @@ header.hover .nav ul li{
   height: auto;
   max-height: 0;
   left: calc(50% - 50px);
-  top: 64px;
+  top: 63px;
   z-index: 13;
 }
 

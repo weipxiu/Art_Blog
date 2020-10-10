@@ -283,8 +283,8 @@ $(function () {
 
     var queue = [];
     musicList.mouseenter(function () {
+        clearTimeout(time2)
         $(this).addClass('active');
-
         queue.push($(this).index())
         $(".header").css("z-index", "12");
         $index = $(this).index();
@@ -306,7 +306,9 @@ $(function () {
         }
         //避免在正常时候下方轮播分割旋转时候被遮盖 
         if (!$(".site-search").is(":visible")) {
-            $(".header").css("z-index", "10");
+            time2 = setTimeout(()=>{
+                $(".header").css("z-index", "10");
+            },1000)
         }
     })
 
