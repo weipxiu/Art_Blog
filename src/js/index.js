@@ -90,7 +90,6 @@ $(function () {
         $(".header.Top").css("animation -duration", ".7s");
 
         //开场背景音乐
-        //$("#music").get(0).play();
         setTimeout(function () {
             $("#vedio").animate({
                 "bottom": "0"
