@@ -3,16 +3,15 @@ const clean = require('gulp-clean');//清空目录下资源
 const htmlmin = require('gulp-htmlmin');//压缩html
 const imagemin = require('gulp-imagemin'); //引入图片压缩模块
 const scriptmin = require('gulp-uglify'); //引入js压缩模块
-const gulpless = require('gulp-less'); //引入less转换模块
+//const gulpless = require('gulp-less'); //引入less转换模块
 const gulp_minify_css = require('gulp-minify-css'); //压缩css
 const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
-const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
-const zip = require('gulp-zip');;//打包后压缩zip
+//const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
 const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
 const plumber = require('gulp-plumber'); //阻止报错暂停
-const browserSync = require('browser-sync').create(); //热更新模块
+//const browserSync = require('browser-sync').create(); //热更新模块
 
 // 环境变量
 const env = process.env.NODE_ENV === 'production' ? true : false
@@ -146,16 +145,6 @@ gulp.task("jsConcat", function () {
         .pipe(gulp.dest(target + "/js"))
 })
 
-// 打包主题
-gulp.task('compressZip', function () {
-    gulp.src(target + '/**')
-        .pipe(gulp.dest('./主题压缩包/Art_Blog'))
-
-    return gulp.src(['./主题压缩包/**', '!./主题压缩包/*.zip'])
-        .pipe(zip('Art_Blog.zip'))
-        .pipe(gulp.dest('./主题压缩包'));
-});
-
 //初始化browserSync
 /* gulp.task('browser-sync', function() {
     browserSync.init({
@@ -182,7 +171,6 @@ gulp.task('default', function () {
         ["minCss"],
         ["themesVer"],
         ["jsConcat"],
-        ["compressZip"],
         ["Watch"],
         function () {
             console.log('\n恭喜您，编译打包已完成，打包好文件存放在' + target + '文件夹！！！');
