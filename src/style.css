@@ -5681,10 +5681,21 @@ p.data-l span {
 /* 面包屑导航end */
 
 /* 热门文章start */
-
+.hot_rticles ul {
+  padding: 2px 0 0 3px;
+}
 .hot_rticles ul li {
   padding: 10px 0;
   margin-bottom: 0;
+  border-left: 3px solid transparent;
+  margin-left: -3px;
+  transition: all 0.5s;
+  box-sizing: content-box;
+}
+
+.hot_rticles ul li:hover{
+  background-color: #fafff8;
+  border-left-color: #81c53f;
 }
 
 .hot_rticles ul li:last-of-type {
@@ -5695,7 +5706,7 @@ p.data-l span {
   width: 105px;
   height: 65px;
   float: left;
-  margin-left: 0;
+  margin-left: 12px;
   border-radius: 2px;
 }
 
@@ -5703,6 +5714,7 @@ p.data-l span {
   width: 190px;
   height: 65px;
   float: right;
+  margin-right: 15px;
   position: relative;
 }
 
@@ -6053,7 +6065,7 @@ p.data-l span {
   font-weight: normal;
   border-bottom: 1px solid #f0f2f7;
   padding: 20px 0 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .leaving_message p{
   font-size:14px;
