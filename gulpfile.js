@@ -110,8 +110,7 @@ gulp.task("imageMin", function () {
                 },
                 {
                     cleanupIDs: false
-                }
-                ]
+                }]
             })
         ]))
         .pipe(gulp.dest(target + '/images'))
