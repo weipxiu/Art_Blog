@@ -3123,8 +3123,8 @@ canvas,
   font-size: 0.36rem;
   font-weight: normal;
   border-bottom: 1px solid #f0f2f7;
-  padding:0.2rem 0;
-  margin:0.1rem auto 0.4rem;
+  padding:0.3rem 0;
+  margin-bottom:0.3rem;
 }
 .leaving_message p{
   font-size:0.28rem;

@@ -3531,7 +3531,7 @@ p.reward-p {
 
 /* 留言板寄语start */
 .leaving_message{
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .leaving_message h1{
   text-align: center;
@@ -3540,7 +3540,7 @@ p.reward-p {
   font-weight: normal;
   border-bottom: 1px solid #f0f2f7;
   padding:0.25rem 0;
-  margin:0.1rem auto 0.4rem;
+  margin-bottom:0.3rem;
 }
 .leaving_message p{
   font-size:0.28rem;

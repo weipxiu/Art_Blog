@@ -6052,8 +6052,7 @@ p.data-l span {
   font-size: 20px;
   font-weight: normal;
   border-bottom: 1px solid #f0f2f7;
-  padding:10px 0 25px;
-  margin:15px auto;
+  padding: 25px 0 25px;
 }
 .leaving_message p{
   font-size:14px;
