@@ -3530,19 +3530,22 @@ p.reward-p {
 /* 随机背景颜色end */
 
 /* 留言板寄语start */
+.leaving_message{
+  margin-bottom: 0.5rem;
+}
 .leaving_message h1{
   text-align: center;
   color: #666;
   font-size: 0.32rem;
   font-weight: normal;
   border-bottom: 1px solid #f0f2f7;
-  padding:0.2rem 0;
-  margin:0.1rem auto 0.3rem;
+  padding:0.25rem 0;
+  margin:0.1rem auto 0.4rem;
 }
 .leaving_message p{
   font-size:0.28rem;
   text-indent:2em;
-  line-height: 0.4rem;
+  line-height: 0.52rem;
   margin-bottom:0.2rem;
 }
 

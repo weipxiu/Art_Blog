@@ -3114,6 +3114,9 @@ canvas,
 /* 随机背景颜色end */
 
 /* 留言板寄语start */
+.leaving_message{
+  margin-bottom: 0.5rem;
+}
 .leaving_message h1{
   text-align: center;
   color: #666;
@@ -3126,7 +3129,7 @@ canvas,
 .leaving_message p{
   font-size:0.28rem;
   text-indent:2em;
-  line-height: 0.45rem;
+  line-height: 0.52rem;
   margin-bottom:0.3rem;
 }
 
