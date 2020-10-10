@@ -300,7 +300,6 @@ $(function () {
     musicList.mouseleave(function () {
         if(queue.length > 0){
             setTimeout(()=>{
-                console.log('队列',queue[0])
                 musicList.eq(queue[0]).removeClass('active');
                 queue.shift();
             },250)

@@ -735,7 +735,9 @@ header.hover .brand{
   transition: opacity .4s,transform .5s;
   padding:0;
 }
-
+header.hover .nav ul .sub-menu li{
+  padding:0;
+}
 .nav ul .sub-menu li:last-of-type a{
   border:0
 }
@@ -1187,7 +1189,7 @@ i {
 /*跳动的音符end*/
 
 .header.hover .nav .nav-min {
-  top: 38px;
+  top: 47px;
 }
 
 .header .nav-min a {
