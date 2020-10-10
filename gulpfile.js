@@ -194,11 +194,11 @@ gulp.task('compressZip', function () {
 
 //监听文件是否发生改变
 gulp.task("Watch", function () {
-    gulp.watch(["src/**", "!src/*.html", "!src/js/*", "!src/**.css"], ["copyHtml"]);
-    gulp.watch(['src/*.html'], ["miniHtml"]);
-    gulp.watch(["src/**.css"], ["minCss"]);
-    // gulp.watch([target + "/style.css"], ["themesVer"]);
-    gulp.watch(["src/**.js"], ["jsConcat"]);
+    gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);
+    gulp.watch("./src/*.html", ["miniHtml"]);
+    gulp.watch("./src/**.css", ["minCss"]);
+    gulp.watch("./src/**/**.js", ["jsConcat"]);
+    // gulp.watch(target + "/style.css", ["themesVer"]);
     // gulp.watch(["dist/**"], ["compressZip"]);
 })
 

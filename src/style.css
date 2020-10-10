@@ -923,6 +923,7 @@ header.hover .nav ul li{
 #nav_list li.current-category-ancestor > a span,
 #nav_list li.current-menu-ancestorm > a span,
 #nav_list li.current-menu-parent > a span,
+#nav_list li.current-menu-parent > a span i,
 #nav_list li.current-category-parentt > a span,
 #nav_list li.current-menu-item a {
   color: #1890ff;
@@ -6902,7 +6903,6 @@ label {
   color: #333;
   background-color: #999;
 }
-
 /* 底部悬浮窗end */
 
 /* 针对IE9做兼容处理 */
