@@ -130,17 +130,7 @@ gulp.task("jsConcat", function () {
         .pipe(gulp.dest(target + "/js"))
 
     //特例
-    gulp.src(["src/js/rem.js", "src/js/date.js", "src/js/jquery-2.1.4.min.js", "src/js/jquery.lazyload.js"])
-        .pipe(gulp.dest(target + "/js"))
-
-    //首页
-    return gulp.src(["src/js/index.js", "src/js/swiper.min.js"])
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(scriptmin()) //转换后进行压缩
-        .pipe(concat("index_min.js"))
-        .pipe(scriptmin()) //在合并的时候压缩js
+    return gulp.src(["src/js/rem.js", "src/js/date.js", "src/js/jquery-2.1.4.min.js","src/js/swiper.min.js", "src/js/jquery.lazyload.js"])
         .pipe(gulp.dest(target + "/js"))
 })
 

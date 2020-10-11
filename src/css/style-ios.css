@@ -3064,11 +3064,6 @@ div.btn {
 
 /*移动端导航end*/
 
-.hide,
-#vedio {
-  display: none;
-}
-
 .cover {
   position: fixed;
   top: 0;

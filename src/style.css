@@ -3913,28 +3913,6 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
   display: none;
 }
 
-.hide {
-  width: 30px;
-  height: 31px;
-  background: #0eaf52;
-  position: fixed;
-  bottom: 0;
-  right: 7px;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 100%;
-  font-size: 12px;
-  line-height: 30px;
-  text-align: center;
-}
-
-#vedio {
-  position: fixed;
-  bottom: -205px;
-  right: 12px;
-  z-index: 10;
-}
-
 .notice {
   width: 400px;
   height: 20px;

@@ -1,6 +1,6 @@
 <?php wp_head(); ?>
 
-<meta http-equiv="Cache-Control" content="max-age=120"/>
+<meta http-equiv="Cache-Control" content="max-age=60"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="baidu-site-verification" content="cNP7vhhXuw" />
 <meta name="Author" content="<?php echo get_bloginfo('description'); ?>" />
@@ -35,8 +35,8 @@
 <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_4rh41j9lwjr.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
 
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/layer/layer.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/layer/layer.js"></script>
 <!-- 判断低版本IE -->
 <script>
 	 /*if ((navigator.userAgent.indexOf('MSIE') >= 0) 

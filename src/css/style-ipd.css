@@ -2547,9 +2547,7 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
 .continar-right aside {
   display: none;
 }
-#hide {
-  display: block;
-}
+
 .cs-circleslight .br-previous,
 .cs-circleslight .br-next {
   width: 0;
@@ -2687,10 +2685,7 @@ div.btn {
   font-weight: normal;
 }
 /*移动端导航end*/
-.hide,
-#vedio {
-  display: none;
-}
+
 .cover {
   position: fixed;
   top: 0;
