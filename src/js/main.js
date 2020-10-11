@@ -3,7 +3,36 @@
  * 全局js
  */
 $(function () {
-    var domain_name = window.location.protocol + "//" + window.location.host;
+    // 移动端适配start
+    function defaultfont() {
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            return false
+        }
+        var sw = $(window).width();
+        var pw = 750;
+        var f = 100 * sw / pw;
+        if (sw > 767 && sw < 1000) { f = 70 }
+        if (sw > 1000 && sw < 1200) { f = 100 }
+        $('html').css({
+            'fontSize': f + 'px',
+            'transtion': '0.35s'
+        })
+    }
+    setTimeout(function () {
+        defaultfont()
+    },
+        100);
+    var w_height = $(window).width();
+    $(window).resize(function () {
+        if ($(window).width() != w_height) {
+            setTimeout(function () {
+                defaultfont()
+            },
+                100)
+        }
+    });
+    // 移动端适配end
+
     function speak(text) {
         new Audio(
             'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + text
@@ -736,7 +765,7 @@ $(function () {
         //特色图片懒加载，移动端需要设置滚动事件
         $("img.Lazy_load").lazyload({
             container: $("body > .continar"),
-            threshold :100,
+            threshold: 100,
             effects: "show"
         });
     }
@@ -767,7 +796,7 @@ $(function () {
             $('#my-video').remove()
             return
         }
-        var myPlayer = videojs('my-video');         
+        var myPlayer = videojs('my-video');
 
         //播放失败时候处理
         var errVideo = document.getElementById('my-video_html5_api');
