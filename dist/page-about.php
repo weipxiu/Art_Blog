@@ -23,9 +23,9 @@ Template Name: 关于博客
                     <div class="head_user_a"> 
                      <div class="head_avatar"> 
                       <a href="javascript:;"> 
-                       <m class="head_user_avatar_aa"> 
-                             <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
-                       </m> <span class="verify_1"></span></a> 
+                        <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
+                        <span class="verify_1"></span>
+                      </a> 
                      </div> 
                      <div class="head_avatar_a">
                       <p>Admin<i class="img-icon icon_male"></i><span title="等级：45级" style="vertical-align: 0px;" class="lv lv45"></span> <a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
