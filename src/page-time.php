@@ -22,7 +22,7 @@ a:hover{text-decoration: underline;}
 #messageList{padding:10px 0;margin-left:100px;border-left:1px solid #fff;height:0; transition:1s;}
 #messageList li{padding:5px 0; position:relative; min-height:100px; -webkit-perspective:800px; -webkit-perspective-origin:left 30px; }
 #messageList .box{ -webkit-transform-origin:left 30px; -webkit-transform:rotateY(90deg);-webkit-transform-style:preserve-3d; transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450);}
-#messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(<?php bloginfo('template_url'); ?>/images/head_portrait.jpg) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
+#messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(<?php echo get_option('weipxiu_options')['time_portrait'] ?>) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
 #messageList .ico{ width:12px;height:12px;background:#f7ebe6;border:3px solid #fff;border-radius:50%;box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); position:absolute;left:-6px;top:23px;}
 #messageList .text{margin:0 30px;background:#f7ebe6;line-height:26px;padding:10px;  height:auto;text-indent:2em; border:0}
 #messageList .content{height: 38px;background: #fff; border-radius: 4px 4px 0 0;box-shadow: 0 6px 10px -6px rgba(0,0,0,0.1);
@@ -77,8 +77,8 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
         	<div class="box">
             	<div class="pic"></div>
                 <div class="ico"></div>
-                <div class="content text">学习课程</div>
-                <div class="reply text">好好学习，天天做出好东西~~</div>
+                <div class="content text">好好学习</div>
+                <div class="reply text">好好学习，天天向上~~</div>
             </div>
         </li>-->
     </ul>
@@ -89,8 +89,18 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 <!-- 底部引用区域start -->
 <?php get_footer()?>
 <!-- 底部引用区域end -->
-<script src="<?php bloginfo('template_url'); ?>/js/date.js"></script>
 <script>
+var date = [{
+		message:"抱歉",
+		reply:"该板块暂无数据哦~"
+	}];
+<?php
+	if (get_option('weipxiu_options')['time_machine']) {
+		?>
+		date = <?php echo get_option('weipxiu_options')['time_machine'] ?>
+		<?php
+	}
+?>
 var iPage=8;
 var iNow=0;
 //IE浏览器兼容

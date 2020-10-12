@@ -883,7 +883,7 @@ header.hover .nav ul li{
 }
 
 .nav ul.music-nav li:hover p,.nav ul.music-nav li.active p {
-  height: 63px;
+  height: 64px;
   border-radius: 0;
 }
 
@@ -924,7 +924,7 @@ header.hover .nav ul li{
 .nav ul li.action > a span,
 #nav_list li.current-category-ancestor > a span,
 #nav_list li.current-menu-ancestorm > a span,
-#nav_list li.current-menu-parent > a span,
+header li.current-menu-parent > a span,
 #nav_list li.current-menu-parent > a span i,
 #nav_list li.current-category-parentt > a span,
 #nav_list li.current-menu-item a {
@@ -6087,6 +6087,15 @@ p.data-l span {
 
 .commentlist{
   padding-left:40px;
+}
+
+.not_message{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.commentlist li+.not_message{
+  display: none;
 }
 
 .commentlist .media {

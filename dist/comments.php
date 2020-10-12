@@ -64,6 +64,7 @@ if ( post_password_required() )
                 'callback'    =>'simple_comment',
             ) );
             ?>
+            <div class="not_message">暂无留言哦~~</div>
         </ol>
     <?php endif; ?>
 </div>

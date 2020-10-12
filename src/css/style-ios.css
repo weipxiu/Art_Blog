@@ -3623,6 +3623,15 @@ p.reward-p {
   padding-top: 0.2rem;
 }
 
+.not_message{
+  text-align: center;
+  margin-top: 0.35rem;
+}
+
+.commentlist li+.not_message{
+  display: none;
+}
+
 .commentlist .comment .media-left img {
   width: 0.72rem;
   height: 0.72rem;

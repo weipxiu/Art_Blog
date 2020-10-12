@@ -13,7 +13,7 @@ function themeoptions_page() {
   //加载css(wp自带)
   wp_enqueue_style('thickbox');
 ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/include/css/set.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/include/css/style.css">
   <div class="wrap">
     <h2>唯品秀主题设置</h2>
     <ul class="nav-wrap clearfix">
@@ -22,6 +22,7 @@ function themeoptions_page() {
       <li class="nav-list">图片</li>
       <li class="nav-list">社交</li>
       <li class="nav-list">样式</li>
+      <li class="nav-list">时光机</li>
     </ul>
     <form method="post" action="">
       <input type="hidden" name="update_themeoptions" value="true">
@@ -724,6 +725,42 @@ function themeoptions_page() {
           </div>
         </div>
       </div>
+
+      <!-- 内容六 时光机 -->
+      <div class="content-wrap content5">
+      <div class="row">
+          <div class="margin-top-15 clearfix">
+            <label class="fl left-wrap" for="">头像：</label>
+            <div class="fr right-wrap">
+              <input
+                type="text"
+                class="url-inp"
+                name="time-portrait"
+                id="time-portrait"
+                value="<?php echo $a_options['time_portrait']; ?>"
+              >
+              <input type="button" name="img-upload" value="选择文件">
+            </div>
+          </div>
+          <div class="margin-top-15 clearfix">
+            <div class="fl left-wrap">
+              头像预览：
+            </div>
+            <div class="fr right-wrap">
+              <img src="<?php echo $a_options['time_portrait']; ?>" class="preview-img" style="max-width: 50px;" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label for="time-machine" class="fl left-wrap">数据：</label>
+          <div class="fr right-wrap">
+            <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{message: '时间', reply:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
+            <span class="warn">*该功能仅供作者使用，暂不对外开放，如有需要，自行更改源码获取拓展
+          </div>
+        </div>
+      </div>
+
       <div class="row btn-wrap">
         <input type="submit" class="submit-btn" name="bcn-admin-options" value="保存更改">
       </div>
@@ -757,6 +794,8 @@ function themeoptions_page() {
       'login_css'  => $_POST['login-css'],
       'leaving_message'  => $_POST['leaving-message'],
       'details_css'  => $_POST['details-css'],
+      'time_portrait'  => $_POST['time-portrait'],
+      'time_machine'  => $_POST['time-machine'],
       'keywords' => $_POST['keywords'],
       'description' => $_POST['description'],
       'baidu_statistics' => $_POST['baidu-statistics'],
