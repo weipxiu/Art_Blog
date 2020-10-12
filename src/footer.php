@@ -80,7 +80,7 @@
                       <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
                       echo get_option('weipxiu_options')['QQ-number'];
                       ?>&site=qq&menu=yes">
-                        <img border="0" width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
+                        <img width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
                       </a>
                     </div>
@@ -93,7 +93,7 @@
                       <a target="_blank" href="<?php 
                       echo get_option('weipxiu_options')['wangwang-link'];
                       ?>"style="position: relative; overflow: hidden;">
-                        <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
+                        <img src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
                       </a>
                     </div>
                   </td>
