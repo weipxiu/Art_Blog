@@ -88,9 +88,9 @@ textarea::-webkit-scrollbar-thumb {
   display: none;
 }
 
-/* .content-wrap:first-of-type {
+.content-wrap:first-of-type {
   display: block;
-} */
+}
 
 .row {
   padding-bottom: 5px;

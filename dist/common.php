@@ -20,7 +20,7 @@
 
 <!-- 是否强制资源https加载 -->
 <?php if (get_option('weipxiu_options')['switch_https'] == 'on'){ ?>
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <?php } ?>
 
 <!-- Pre-parsing is currently on the site -->
@@ -50,24 +50,24 @@
 
 <!-- 百度统计 -->
 <?php
-	if (get_option('weipxiu_options')['baidu_statistics']) {
-		?>
-		<?php echo get_option('weipxiu_options')['baidu_statistics']; ?>
-		<?php
-	}else
-	{
-		?>
-			<script>
-				var _hmt = _hmt || [];
-				(function() {
-					var hm = document.createElement("script");
-					hm.src = "https://hm.baidu.com/hm.js?704cfdd415da41b2e884bbb16a5dd3f3";
-					var s = document.getElementsByTagName("script")[0]; 
-					s.parentNode.insertBefore(hm, s);
-				})();
-			</script>
-		<?php
-	}
+if (get_option('weipxiu_options')['baidu_statistics']) {
+?>
+<?php echo get_option('weipxiu_options')['baidu_statistics']; ?>
+<?php
+}else
+{
+?>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?704cfdd415da41b2e884bbb16a5dd3f3";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<?php
+}
 ?>
 
 <!-- 自定义样式 -->
