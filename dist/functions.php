@@ -745,7 +745,7 @@ function simple_comment($comment, $args, $depth) {
         <div class="media">
             <div class="media-left">
             <?php
-                echo '<img src=https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='. (get_comment_author_email()?get_comment_author_email():1) .'&src_uin=qq.feixue.me&fid=blog&spec=100>'
+                echo '<img src="https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='. (get_comment_author_email()?get_comment_author_email():1) .'&src_uin=qq.feixue.me&fid=blog&spec=100">'
                 //通过wordpress自身获取图像
                 // if (function_exists('get_avatar') && get_option('show_avatars')) {
                 //     echo get_avatar($comment, 48);

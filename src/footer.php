@@ -94,9 +94,6 @@
                       echo get_option('weipxiu_options')['wangwang-link'];
                       ?>"style="position: relative; overflow: hidden;">
                         <img border="0" src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
-                        <span class="image-overlay overlay-type-extern" style="display: none;">
-                          <span class="image-overlay-inside"></span>
-                        </span>
                       </a>
                     </div>
                   </td>
