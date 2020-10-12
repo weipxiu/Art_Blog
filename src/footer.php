@@ -124,7 +124,8 @@
   </div>
 </div>
 <!-- 在线客服end -->
-
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/layer/layer.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video/video.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>

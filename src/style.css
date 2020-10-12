@@ -6437,7 +6437,7 @@ label {
   font-size: 14px;
   float: right;
   line-height: 18px;
-  width: calc(100% - 37px);
+  width: calc(100% - 40px);
   text-align: justify;
   text-align-last: left;
 }
@@ -6467,8 +6467,8 @@ label {
 
 #primary-sidebar ul li img:not(.wp-smiley) {
   float: left;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 4px;
   vertical-align: middle;
   margin-left: -10px;

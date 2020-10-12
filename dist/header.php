@@ -2,7 +2,7 @@
 <!-- 移动端头部start -->
 <div class="os-headertop">
 		<div class="btn_menu"><i class="iconfont icon-caidanlan"></i></div>
-		<a href="/" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
+		<a href="<?php echo home_url(); ?>" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
 		<div class="xis">
 			<i class="iconfont icon-sousuo"></i>
 		</div>
@@ -25,7 +25,7 @@
 	<div class="header-body">
 		<div class="header-conter">
 			<nav class="nav">
-					<a href="/" class="t-logo" id="Logo">
+					<a href="<?php echo home_url(); ?>" class="t-logo" id="Logo">
 							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>">
 					</a>
 					<div class="brand">
