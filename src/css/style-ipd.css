@@ -3232,6 +3232,11 @@ canvas,
   font-size: 0.28rem;
   margin-bottom: 0;
 }
+.comment .media-body .wp-smiley{
+  height:auto!important;
+  max-height: 1.5em!important;
+  vertical-align: sub;
+}
 .commentlist .comment .media-body p a {
   font-size: 0.28rem;
   color: #9466ff;

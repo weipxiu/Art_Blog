@@ -6171,6 +6171,11 @@ p.data-l span {
   color: #777;
   padding: 10px 0 6px;
 }
+.comment .media-body .wp-smiley{
+  height:auto!important;
+  max-height: 1.5em!important;
+  vertical-align: sub;
+}
 .comment .comment-metadata{
   width: calc(100% - 50px);
   margin: 2px auto 6px;
