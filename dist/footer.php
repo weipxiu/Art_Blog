@@ -80,7 +80,7 @@
                       <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
                       echo get_option('weipxiu_options')['QQ-number'];
                       ?>&site=qq&menu=yes">
-                        <img width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.gif" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
+                        <img width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.png" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
                       </a>
                     </div>
