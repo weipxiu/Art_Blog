@@ -52,7 +52,7 @@ function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
     	//return catch_that_image()
     }
 }
-set_post_thumbnail_size(105, 65, true); // 侧边栏最近更新特色图片宽度与高度
+set_post_thumbnail_size(220, 140, true); // 侧边栏最近更新特色图片宽度与高度
 
 // 屏蔽纯英文评论和纯日文
 function refused_english_comments($incoming_comment) {
