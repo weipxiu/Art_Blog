@@ -2387,7 +2387,7 @@ div.com-art ul li {
 
 .footer {
   position: relative;
-  z-index: 9;
+  z-index: 100;
   clear: both;
   padding: 20px 0;
   font-size: 12px;
@@ -2398,12 +2398,25 @@ div.com-art ul li {
   position: relative;
 }
 
-.footer .container {
+.footer a {
+  text-decoration: underline;
+  -webkit-transition: .35s;
+  -o-transition: .35s;
+  transition: .35s;
   font-size: 12px;
 }
 
-.footer .container a {
+.footer a:hover{
+  color: #1890ff!important;
+  color: var(--color,#1890ff)!important;
   text-decoration: underline;
+}
+.footer span{
+  font-size: 12px;
+}
+.footer p{
+  margin-bottom: 15px;
+  font-size: 12px;
 }
 
 .container {

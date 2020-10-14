@@ -1273,8 +1273,8 @@ div.com-art ul li {
   position: relative;
   z-index: 9;
   clear: both;
-  padding: 0.2rem 0;
-  font-size: 12px;
+  padding: 0.1rem 0;
+  font-size: 0.24rem;
   line-height: 12px;
   background: #1890ff;
   background: var(--color, #1890ff);
@@ -1284,29 +1284,23 @@ div.com-art ul li {
   opacity: 1;
   overflow: hidden;
   width: 100%;
-}
-.footer .container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0.1rem 0;
-  text-align: center;
   color: #fff;
 }
-.footer .container a {
+
+.footer a {
   color: #fff;
   font-size: 0.26rem;
   text-decoration: underline;
 }
-.footer .container p,
-.footer .container span {
+.footer p,
+.footer span {
   margin: 0 0 10px;
   font-size: 0.26rem;
   color: #fff;
   line-height: 0.44rem;
   text-align: center;
 }
-.footer .container p:first-of-type {
+.footer p:first-of-type {
   margin-top: 0;
 }
 .footer_hide {

@@ -1498,8 +1498,8 @@ div.com-art ul li {
   display: none;
   clear: both;
   padding: 0.2rem 0;
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 0.24rem;
+  line-height: 0.4rem;
   background: #1890ff;
   background: var(--color, #1890ff);
   border-top: 1px solid #eaeaea;
@@ -1508,32 +1508,24 @@ div.com-art ul li {
   opacity: 1;
   overflow: hidden;
   width: 100%;
-}
-
-.footer .container {
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
   color: #fff;
-  line-height: 0.4rem;
 }
 
-.footer .container a {
+.footer a {
   font-size: 0.24rem;
   color: #fff;
   text-decoration: underline;
 }
 
-.footer .container p,
-.footer .container span {
+.footer p,
+.footer span {
   margin: 4px 0 5px;
   font-size: 0.24rem;
   color: #fff;
   line-height: 0.4rem;
   text-align: center;
 }
-.footer .container p:first-of-type {
+.footer p:first-of-type {
   margin-top: 0;
 }
 .footer_hide {
