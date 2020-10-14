@@ -1619,7 +1619,6 @@ div.com-art ul li {
 #ds-recent-comments li.ds-comment {
   font-size: 13px;
 }
-
 /*-----------*/
 
 #ds-recent-comments li.ds-comment a {
@@ -1632,7 +1631,6 @@ div.com-art ul li {
   color: #1890ff;
   color: var(--color, #1890ff);
 }
-
 /*评论模块end*/
 
 /*----------------------------------------------------------------------------------------------*/
