@@ -5496,10 +5496,6 @@ code {
 
 /* video视频播放器插件样式自定义start */
 
-.vjs-poster {
-  background-size: 100% 100% !important;
-}
-
 .vjs-big-play-centered .vjs-big-play-button {
   margin-left: -30px !important;
   border-radius: 100% !important;

@@ -74,12 +74,18 @@ gulp.task("minCss", function () {
     gulp.src("src/css/*.css")
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
-        .pipe(gulp_minify_css())
+        .pipe(gulp_minify_css({
+            advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
+            compatibility: '*'//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
+        }))
         .pipe(gulp.dest(target + "/css"))
 
     //style.css压缩
     return gulp.src("src/style.css")
-        .pipe(gulp_minify_css())
+        .pipe(gulp_minify_css({
+            advanced: false,
+            compatibility: '*'
+        }))
         .pipe(gulp.dest(target))
 });
 
