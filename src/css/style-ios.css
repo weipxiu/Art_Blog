@@ -3611,6 +3611,20 @@ p.reward-p {
   margin: 0 5px 0 10px;
 }
 
+#comments .respond .login_success{
+  text-align: center;
+  font-size: 0.28rem;
+  margin-bottom:0.2rem;
+  border-bottom: 1px solid #f1f1f1;
+  background: #f0f2f7;
+  padding:0.1rem 0;
+}
+#comments .respond .login_success a{
+  color: #1890ff;
+  color: var(--color,#1890ff);
+  font-size: 0.28rem;
+}
+
 .commentlist .comment {
   overflow: hidden;
   padding-top: 0.2rem;

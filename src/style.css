@@ -6098,6 +6098,16 @@ p.data-l span {
   margin: 0 5px 0 10px;
 }
 
+#comments .respond .login_success{
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+  background: #f0f2f7;
+  padding:5px 0;
+}
+#comments .respond .login_success a{
+  color: #1890ff;
+  color: var(--color,#1890ff);
+}
 .commentlist{
   padding-left:40px;
 }

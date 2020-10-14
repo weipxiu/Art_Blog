@@ -23,11 +23,11 @@ if ( post_password_required() )
                     <?php cancel_comment_reply_link(); ?>
                 </small>
             </h2>
-            <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-                <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
+            <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
+                <p class="login_success">您必须<a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">登录</a>才可以发表评论！</p>
             <?php else : ?>
                 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="commentform" id="commentform">
-                    <?php if ( $user_ID ) : ?>
+                    <?php if ( is_user_logged_in() ) : ?>
                         <textarea class="form-control" rows="5" cols="100" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="请填写正确QQ邮箱，以便于更好的与您取得联系，否则您的留言可能会被删除！" class="form-control" tabindex="1" name="comment"></textarea>
                         <i class="iconfont icon-biaoqing"></i>
                         <span class="warning-text">通过<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>身份已登录&nbsp;|&nbsp;<a class="link-logout" href="<?php echo wp_logout_url(get_permalink()); ?>">注销</a></span>
