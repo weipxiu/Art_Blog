@@ -8,6 +8,7 @@ const gulp_minify_css = require('gulp-minify-css'); //压缩css
 const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
 //const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
+const zip = require('gulp-zip');;//打包后压缩zip
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
 const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
 const plumber = require('gulp-plumber'); //阻止报错暂停
@@ -16,7 +17,7 @@ const plumber = require('gulp-plumber'); //阻止报错暂停
 // 环境变量
 const env = process.env.NODE_ENV === 'production' ? true : false
 
-let target = env ? './dist' : 'D:/PHPTutorial/WWW/wp-content/themes/Art_Blog'
+let target = env ? './dist/Art_Blog' : 'D:/PHPTutorial/WWW/wp-content/themes/Art_Blog'
 console.log('当前环境：' + env + '对应打包地址：' + target)
 
 /*
@@ -140,6 +141,13 @@ gulp.task("jsConcat", function () {
         .pipe(gulp.dest(target + "/js"))
 })
 
+//打包zip
+gulp.task('compressZip', function () {
+    return gulp.src('./dist/**')
+        .pipe(zip('Art_Blog.zip'))
+        .pipe(gulp.dest('./'));
+});
+
 //初始化browserSync
 /* gulp.task('browser-sync', function() {
     browserSync.init({
@@ -165,6 +173,7 @@ gulp.task('default', function () {
         ["minCss"],
         ["themesVer"],
         ["jsConcat"],
+        ["compressZip"],
         ["Watch"],
         function () {
             console.log('\n恭喜您，编译打包已完成，打包好文件存放在' + target + '文件夹！！！');

@@ -833,3 +833,12 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
   // 普通访客发表的评论，等博主审核后再发送提醒邮件
   add_action('wp_set_comment_status', 'ludou_comment_mail_notify', 20, 2);
 ?>
+
+
+
+if ($host ~ '^www.weipxiu.com'){
+        return 301 https://www.weipxiu.com$request_uri;
+}
+if ($host ~ '^weipxiu.com'){
+    return 301 https://www.weipxiu.com$request_uri;
+}

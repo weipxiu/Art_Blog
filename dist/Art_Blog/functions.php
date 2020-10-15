@@ -832,4 +832,7 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
   
   // 普通访客发表的评论，等博主审核后再发送提醒邮件
   add_action('wp_set_comment_status', 'ludou_comment_mail_notify', 20, 2);
+
+  //避免重定向
+  remove_filter('template_redirect', 'redirect_canonical'); 
 ?>
