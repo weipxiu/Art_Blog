@@ -3692,6 +3692,8 @@ ol.commentlist {
 }
 #comments .warning-text a {
   font-size: 0.24rem;
+  color: #1890ff;
+  color: var(--color,#1890ff);
 }
 .media {
   overflow: hidden;

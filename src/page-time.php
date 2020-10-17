@@ -95,11 +95,11 @@ var date = [{
 		reply:"该板块暂无数据哦~"
 	}];
 <?php
-	if (get_option('weipxiu_options')['time_machine']) {
-		?>
-		date = <?php echo get_option('weipxiu_options')['time_machine'] ?>
-		<?php
-	}
+if (get_option('weipxiu_options')['time_machine']) {
+?>
+date = <?php echo get_option('weipxiu_options')['time_machine'] ?>;
+<?php
+}
 ?>
 var iPage=8;
 var iNow=0;

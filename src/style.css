@@ -6229,7 +6229,8 @@ p.data-l span {
 }
 
 .warning-text a{
-  color: #999;
+  color: #1890ff;
+  color: var(--color,#1890ff);
 }
 
 .warning-text .link-logout{
