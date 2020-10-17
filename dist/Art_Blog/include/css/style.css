@@ -179,10 +179,16 @@ input[type='radio'] {
 }
 
 @media screen and (max-width:1199px) {
+  #wpbody-content{
+    padding-bottom:0;
+  }
   .row{
-    margin: 5px 0;
-    padding-top: 5px;
+    padding: 5px 0;
+    margin: 0;
     border-top: 1px solid #f0f2f7;
+  }
+  .row .row:nth-of-type(1){
+    border:0;
   }
   input[type='radio'] {
       margin-right: 7px;
@@ -197,8 +203,9 @@ input[type='radio'] {
     width:auto;
     float: none;
   }
-  .row .right-wrap input.url-inp{
-    width:100%
+  .row input.url-inp{
+    width:100%;
+    text-indent: 5px;
   }
   .row .left-wrap{
     width: auto;
@@ -213,7 +220,7 @@ input[type='radio'] {
     margin: 0 6px 0 0;
     padding: 6px 13px;
   }
-  input[name="replace-skin"]{
+  .row .right-wrap input[name="replace-skin"]{
     width: calc(100% - 55px);
   }
   input[type="text"]{
