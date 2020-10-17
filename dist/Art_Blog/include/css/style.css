@@ -177,3 +177,52 @@ input[type='radio'] {
 .update-nag {
   display: none;
 }
+
+@media screen and (max-width:1199px) {
+  .row{
+    margin: 5px 0;
+    padding-top: 5px;
+    border-top: 1px solid #f0f2f7;
+  }
+  input[type='radio'] {
+      margin-right: 7px;
+      width: 16px;
+      height: 16px;
+      min-width: auto;
+  }
+  input[type=radio]:checked::before{
+    margin: 3px;
+  }
+  .row .right-wrap{
+    width:auto;
+    float: none;
+  }
+  .row .right-wrap input.url-inp{
+    width:100%
+  }
+  .row .left-wrap{
+    width: auto;
+    min-width: 100px;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  .row input[name='img-upload']{
+    margin: 6px 0 0 5px;
+  }
+  .nav-wrap .nav-list{
+    margin: 0 6px 0 0;
+    padding: 6px 13px;
+  }
+  input[name="replace-skin"]{
+    width: calc(100% - 55px);
+  }
+  input[type="text"]{
+    padding:0;
+    min-height: 0;
+  }
+}
+
+/* @media screen and (min-width:768px) and (max-width:1199px) {
+	
+} */
+
