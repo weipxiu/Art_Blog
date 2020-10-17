@@ -93,7 +93,7 @@ function themeoptions_page() {
               name="friend-links"
               value="off" <?php if($a_options['friendlinks'] == 'off' || $a_options['friendlinks'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*默认只在首页侧边栏展示友情链接，开启后所有页面都会展示</span>
+            <span class="warn">*默认只在首页展示友情链接，开启后所有页面都会展示</span>
           </div>
         </div>
 
@@ -195,7 +195,7 @@ function themeoptions_page() {
               name="switch_https"
               value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*开启后所有资源强制以https方式加载，必须确保网站支持https</span>
+            <span class="warn">*所有资源强制以https方式加载，必须确保网站支持https</span>
           </div>
         </div>
 
@@ -312,7 +312,7 @@ function themeoptions_page() {
               name="popular"
               value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*开启后可自定义结构，以便于你更好的维护自己收藏的工具链接</span>
+            <span class="warn">*可自定义结构，以便于你更好的维护自己收藏的工具链接</span>
           </div>
         </div>
 

@@ -179,8 +179,11 @@ input[type='radio'] {
 }
 
 @media screen and (max-width:1199px) {
-  #wpbody-content{
-    padding-bottom:0;
+  .submit-btn{
+    margin: 30px auto -100px;
+  }
+  input, textarea{
+    font-size:14px;
   }
   .row{
     padding: 5px 0;
@@ -198,6 +201,8 @@ input[type='radio'] {
   }
   input[type=radio]:checked::before{
     margin: 3px;
+    width: 8px;
+    height: 8px;
   }
   .row .right-wrap{
     width:auto;
@@ -218,7 +223,9 @@ input[type='radio'] {
   }
   .nav-wrap .nav-list{
     margin: 0 6px 0 0;
-    padding: 6px 13px;
+    padding: 6px 0px;
+    width: 60px;
+    text-align: center;
   }
   .row .right-wrap input[name="replace-skin"]{
     width: calc(100% - 55px);
