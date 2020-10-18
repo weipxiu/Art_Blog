@@ -627,6 +627,8 @@ function user_agent($ua) {
         $os = "Mac OS";
     } elseif (preg_match('/Windows Phone/i', $ua)) {
         $os = "Windows Phone7";
+    }elseif (preg_match('/Windows NT 10/i', $ua)) {
+        $os = "Windows 10";
     } elseif (preg_match('/Windows NT 6.2/i', $ua)) {
         $os = "Windows 8";
     } elseif (preg_match('/Windows NT 4.0/i', $ua) || preg_match('/WinNT4.0/i', $ua)) {
@@ -645,24 +647,16 @@ function user_agent($ua) {
         $os = "iPhone";
     } elseif (preg_match('/PalmOS/i', $ua)) {
         $os = "Palm OS";
-    } elseif (preg_match('/QtEmbedded/i', $ua)) {
-        $os = "Qtopia";
-    } elseif (preg_match('/Ubuntu/i', $ua)) {
-        $os = "Ubuntu Linux";
-    } elseif (preg_match('/Gentoo/i', $ua)) {
-        $os = "Gentoo Linux";
-    } elseif (preg_match('/Fedora/i', $ua)) {
-        $os = "Fedora Linux";
-    } elseif (preg_match('/FreeBSD/i', $ua)) {
-        $os = "FreeBSD";
-    } elseif (preg_match('/NetBSD/i', $ua)) {
-        $os = "NetBSD";
-    } elseif (preg_match('/OpenBSD/i', $ua)) {
-        $os = "OpenBSD";
-    } elseif (preg_match('/SunOS/i', $ua)) {
-        $os = "SunOS";
-    } elseif (preg_match('/Linux/i', $ua)) {
-        $os = "Linux";
+    }  elseif (preg_match('/xiaomi/i', $ua)) {
+        $os = "xiaomi 发烧友";
+    }elseif (preg_match('/huawei/i', $ua)) {
+        $os = "HUAWEI";
+    }elseif (preg_match('/oppo/i', $ua)) {
+        $os = "OPPO";
+    }elseif (preg_match('/vivo/i', $ua)) {
+        $os = "VIVO";
+    }elseif (preg_match('/android/i', $ua)) {
+        $os = "Android";
     } elseif (preg_match('/Mac OS X/i', $ua)) {
         $os = "Mac OS X";
     } elseif (preg_match('/Macintosh/i', $ua)) {
