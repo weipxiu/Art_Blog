@@ -1487,7 +1487,7 @@ header.hover #Logo > img{
   height: 64px;
   font-size: 40px;
   display: none;
-  z-index: 9;
+  z-index: 1000;
 }
 
 .aircraft font {
@@ -3021,10 +3021,17 @@ p.data-l > span a {
   font-size: 12px;
   color: #666;
 }
-
+p.data-l span.recommend .iconfont{
+  color: #fff;
+  margin: 0;
+  vertical-align: middle;
+}
 p.data-l span.recommend a {
-  color: #1890ff;
-  color: var(--color, #1890ff);
+  background: #1890ff;
+  background: var(--color,#1890ff);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 50px;
 }
 
 p.data-l span.recommend a:hover {

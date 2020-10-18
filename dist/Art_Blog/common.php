@@ -31,7 +31,7 @@
 <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/style.css">
 <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">
 <link rel="stylesheet" type="text/css" media="screen and (min-width:768px) and (max-width:1199px)" href="<?php bloginfo('template_url'); ?>/css/style-ipd.css">
-<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_4rh41j9lwjr.css">
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_rarmoz9v1il.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/video-js.css">
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/layer/layer.js"></script>

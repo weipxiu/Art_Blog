@@ -441,7 +441,7 @@ add_action('login_form_login','login_val');
 
 //添加百度是否收录(php baidu_record())
 function baidu_check($url){
-    $url='https://www.baidu.com/s?wd='.$url;
+    $url='http://www.baidu.com/s?wd='.$url;
     $curl=curl_init();
     curl_setopt($curl,CURLOPT_URL,$url);
     curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);
@@ -454,11 +454,12 @@ function baidu_check($url){
     }
     }
     function baidu_record() {
-    if( is_single() && current_user_can( 'manage_options') )//判断管理员输出
+    // wp_get_current_user函数仅限在主题的functions.php中使用
+    $currentUser = wp_get_current_user(); //判断管理员身份
     if(baidu_check(get_permalink()) == 1) {
-    echo '<a target="_blank" title="点击查看" rel="external nofollow" href="https://www.baidu.com/s?wd='.get_the_title().'">百度已收录</a>';
+    echo '<a target="_blank" title="点击查看" rel="external nofollow" href="https://www.baidu.com/s?wd='.get_the_title().'"><i class="iconfont icon-baidu"></i>百度已收录</a>';
      } else {
-     echo '<a rel="external nofollow" title="一键帮忙提交给百度收录，谢谢哦！" target="_blank" href="https://zhanzhang.baidu.com/sitesubmit/index?sitename='.get_permalink().'">推荐给百度</a>';
+     echo '<a rel="external nofollow" title="一键帮忙提交给百度收录，谢谢哦！" target="_blank" href="https://zhanzhang.baidu.com/sitesubmit/index?sitename='.get_permalink().'"><i class="iconfont icon-baidu"></i>推荐给百度</a>';
      }
     }
 

@@ -465,7 +465,6 @@ $(function () {
         if ($(document).width() >= 1200) {
             if (window.location.href == domain_name || window.location.href == domain_name + '/') {
                 $("#js_banner").show();
-                $("body > .continar").css("margin-top", "10px");
             }
         } else {
 
