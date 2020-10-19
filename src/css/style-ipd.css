@@ -1398,36 +1398,25 @@ div.com-art ul li {
 /*----------------------------------------------------------------------------------------------*/
 
 /*关于我页面start*/
-.continar-left ul.clearfix li {
+#details ul{
+  padding-left: 0;
+}
+#details ul li {
   width: 100%;
-  line-height: 0.6rem;
-  font-size: 0.36rem;
+  font-size: 0.32rem;
   float: left;
   margin-bottom: 0.2rem;
+  text-indent: 2em;
+  list-style: none;
 }
-.continar-left ul.clearfix li.limit_w {
-  width: 50%;
-  margin-bottom: 0;
-}
-.continar-left ul.clearfix li span {
+
+#details ul li span {
   display: block;
   font-size: 0.36rem;
   line-height: 0.6rem;
 }
-.continar-left ul.clearfix li span.career {
-  font-size: 0.4rem;
-}
-.continar-left .px {
-  text-indent: 2em;
-  padding: 0 0.3rem 0.1rem;
-}
-.continar-left ul li.index {
-  text-indent: 2em;
-  clear: both;
-}
-.continar-left ul li.photo {
-  float: right;
-  padding-left: 0;
+#details ul li a{
+  font-size:0.32rem;
 }
 .continar-left .mod-breadcrumb {
   font-size: 0.32rem;
@@ -1798,11 +1787,6 @@ td.line-numbers {
 .continar-left .log-text p {
   text-align: justify;
   text-align-last: left;
-}
-.continar-left .log-text p,
-.continar-left .log-text li {
-  list-style-type: disc;
-  margin: 10px 0;
 }
 .continar-left .log-text p.reward-p {
   text-align-last: center;
@@ -2552,10 +2536,9 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
   display: none;
 }
 .os-herder {
-  width: 160px;
+  width: 3.2rem;
   height: 100%;
-  background: #1890ff;
-  background: var(--color, #1890ff);
+  background: #293038;
   background-size: 100% 100%;
   padding: 0 15px;
   position: fixed;
@@ -2566,7 +2549,7 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
   transition: all 0.25s;
 }
 div.btn {
-  transform: translateX(-160px);
+  transform: translateX(-3.2rem);
 }
 .os-herder ul.slide-left {
   margin-top: 1rem;
@@ -2630,7 +2613,6 @@ div.btn {
   background: var(--color, #1890ff);
   background-size: 100% 100%;
   line-height: 1rem;
-  color: #fff;
   text-align: center;
   position: absolute;
   top: 0;
@@ -2638,8 +2620,10 @@ div.btn {
   z-index: 97;
   transition: all 0.25s;
 }
-.os-headertop .weipxiu_nav {
+.os-headertop *{
   color: #fff;
+}
+.os-headertop .weipxiu_nav {
   font-size: 0.44rem;
 }
 .btn_menu {
@@ -2652,7 +2636,6 @@ div.btn {
 }
 
 .btn_menu .iconfont{
-  color: #fff;
   font-size: .46rem;
   line-height: 1rem;
   text-align: center;
@@ -2676,7 +2659,6 @@ div.btn {
   line-height: 1rem;
   text-align: center;
   font-size: 0.4rem;
-  color: #fff;
   font-weight: normal;
 }
 /*移动端导航end*/
@@ -2844,7 +2826,7 @@ canvas,
 .log-text ul li {
   text-indent: 0;
   margin-bottom: 0.5rem;
-  line-height: 0.6rem;
+  line-height: 0.7rem;
 }
 .reward-box img {
   width: 3.4rem;

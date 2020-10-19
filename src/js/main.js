@@ -453,7 +453,7 @@ $(function () {
         $(".cover").toggle();
         if (obtn) {
             $(".continar,.os-headertop").css({
-                "transform": "translateX(160px)"
+                "transform": "translateX(3.2rem)"
             })
             $(".weipxiu_nav").attr('href', 'javascript:void(0);')
         } else {

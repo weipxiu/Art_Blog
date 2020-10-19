@@ -2612,40 +2612,17 @@ div.com-art ul li {
   color: var(--color, #1890ff);
 }
 
-.continar-left ul.clearfix li {
-  line-height: 36px;
+#details .log-text{
+  padding-top:0;
+}
+#details ul{
+  padding-left: 0;
+}
+#details ul li {
+  line-height: 34px;
   font-size: 14px;
-  padding: 0 20px;
-}
-
-.continar-left .px {
+  list-style: none;
   text-indent: 2em;
-  line-height: 36px;
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #666;
-}
-
-.continar-left ul.clearfix li span:nth-child(1) {
-  width: 50%;
-  line-height: 36px;
-  float: left;
-}
-
-.continar-left ul.clearfix li span.career {
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.continar-left ul li.index {
-  text-indent: 2em;
-  clear: both;
-  margin-bottom: 10px;
-}
-
-.continar-left ul li.photo {
-  float: right;
-  margin-left: 50px;
 }
 
 .clearfix:after {
@@ -2799,20 +2776,6 @@ div.com-art ul li {
   padding-left: 0;
 }
 
-.continar-left .px a {
-  color: #1890ff;
-  color: var(--color, #1890ff);
-}
-
-.continar-left .px a:hover {
-  color: #1890ff;
-  color: var(--color, #1890ff);
-}
-
-.continar-left p .px a {
-  font-size: 14px;
-}
-
 ul.bon-1 {
   margin-bottom: 20px;
 }
@@ -2850,7 +2813,7 @@ ul.bon-1 li:nth-of-type(2) {
   width: auto !important;
   overflow: hidden;
   border-radius: 0;
-  padding: 0 15px;
+  padding: 0 30px;
   float: none;
 }
 
@@ -5410,11 +5373,6 @@ Inherited from div.head_avatar_c .head_avatar_c {
 .nav-s1,
 .jy {
   display: none;
-}
-
-.zw_li {
-  margin-top: 55px;
-  clear: both;
 }
 
 .data-l i.iconfont,

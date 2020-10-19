@@ -818,7 +818,7 @@ img {
   color: #1890ff;
   color: var(--color, #1890ff);
   transition: all 0.25s;
-  font-size: 0.32rem;
+  font-size: 0.3rem;
 }
 
 .continar .continar-left-top p {
@@ -1636,42 +1636,29 @@ div.com-art ul li {
 /*----------------------------------------------------------------------------------------------*/
 
 /*关于我页面start*/
-
-.continar-left ul.clearfix li {
+#details ul{
+  padding-left: 0;
+}
+#details ul li {
   width: 100%;
-  line-height: 0.6rem;
   float: left;
   margin-bottom: 0.2rem;
+  text-indent: 2em;
+  list-style: none;
 }
 
-.continar-left ul.clearfix li.limit_w {
-  width: 50%;
-  margin-bottom: 0;
-}
 
-.continar-left ul.clearfix li span {
+#details ul li span {
   display: block;
   font-size: 0.28rem;
   line-height: 0.6rem;
 }
 
-.continar-left .px {
-  text-indent: 2em;
-  font-size: 0.28rem;
-  line-height: 0.6rem;
-  margin-bottom: 0.2rem;
-}
-
-.continar-left ul li.index {
-  text-indent: 2em;
+#details ul li {
   clear: both;
   font-size: 0.28rem;
 }
 
-.continar-left ul li.photo {
-  float: right;
-  padding-left: 0;
-}
 .continar-left .mod-breadcrumb {
   font-size: 0.32rem;
   padding: 0.2rem 0.3rem;
@@ -2907,11 +2894,9 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
 }
 
 .os-herder {
-  width: 160px;
+  width: 3.2rem;
   height: 100%;
-  background: #1890ff;
-  background: var(--color, #1890ff);
-  background-size: 100% 100%;
+  background: #293038;
   padding: 0 15px;
   position: fixed;
   left: 0;
@@ -2994,9 +2979,7 @@ div.btn {
   font-size: 0.44rem;
   background: #1890ff;
   background: var(--color, #1890ff);
-  background-size: 100% 100%;
   line-height: 1rem;
-  color: #fff;
   text-align: center;
   position: fixed;
   top: 0;
@@ -3005,9 +2988,10 @@ div.btn {
   transition: all 0.25s;
   line-height: 1rem;
 }
-
-.os-headertop .weipxiu_nav {
+.os-headertop *{
   color: #fff;
+}
+.os-headertop .weipxiu_nav {
   font-size: 0.4rem;
   line-height: 1rem;
   display: inline-block;
@@ -3022,7 +3006,6 @@ div.btn {
 }
 
 .btn_menu .iconfont{
-  color: #fff;
   font-size: .46rem;
   line-height: 1rem;
   text-align: center;
@@ -3049,7 +3032,6 @@ div.btn {
   line-height: 1rem;
   text-align: center;
   font-size: 0.36rem;
-  color: #fff;
   font-weight: normal;
 }
 
