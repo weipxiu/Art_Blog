@@ -133,14 +133,11 @@
                  参数值：所有接口spec可选值:40、100、140、640
             -->
             <?php
-                global $wpdb;
-                // $my_email = get_bloginfo ('admin_email'); 
-                // AND comment_author_email != '$my_email' 不展示管理员回复
-                $sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,100) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = 'comment' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT 6";
-                $comments = $wpdb->get_results($sql);
-
+                $comments = get_comments('status=approve&number=6&order=modified');
                 $output = $pre_HTML;
-                foreach ($comments as $comment) { $com_excerpt = strip_tags($comment->com_excerpt); $excerpt_len = mb_strlen($com_excerpt, 'utf-8');
+                foreach ($comments as $comment) { 
+                    $com_excerpt = $comment->comment_content;
+                    $excerpt_len = mb_strlen($comment->comment_content, 'utf-8');
                     if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
                     $output .= "\n<li>". '<img src="https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=40"' . ' onerror="this.src=\'/wp-content/themes/Art_Blog/images/head_portrait.jpg\'">' .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_permalink($comment->ID) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
                 $output .= $post_HTML;
