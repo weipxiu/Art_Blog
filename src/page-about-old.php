@@ -28,7 +28,7 @@ Template Name: 关于博客-旧版
                       </a> 
                      </div> 
                      <div class="head_avatar_a">
-                      <p>Admin<i class="img-icon icon_male"></i><span title="等级：45级" style="vertical-align: 0px;" class="lv lv45"></span> <a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
+                      <p>Admin<i class="img-icon icon_male"></i><a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
                      </div> 
                      <div class="head_avatar_b">
                         <p> 管理员 </p>

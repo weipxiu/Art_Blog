@@ -5225,13 +5225,12 @@ box-shadow:0 5px 0 rgba(0,0,0,0.1);
 
 .head_avatar {
   text-align: center;
-  padding-top: 20px;
-  margin-bottom: 15px;
+  padding: 27px 0 15px;
 }
 
 .head_avatar_a {
   text-align: center;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 30px;
   color: #fff;
   position: relative;
@@ -5333,10 +5332,10 @@ span.follow-btn.unfollowed i {
 }
 
 .head_avatar_c span {
-  padding: 7px 12px;
+  padding: 4px 12px;
   background-color: #fafafa;
   margin: 15px;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 15px;
   border: 1px solid #2196f3;
   background: #2196f3;
