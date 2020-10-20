@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-@charset "utf-8";
+﻿@charset "utf-8";
 @font-face {
     font-family: "sf-pro-text_regular";
     font-style:normal;
 	  font-weight:400;
-    src: local('☺︎'), url("./font/sf-pro-text_regular.woff2") format("woff2"), url("./font/sf-pro-display_regular.woff2") format("woff2");
+    src: local('☺︎'), url("../font/sf-pro-text_regular.woff2") format("woff2"), url("../font/sf-pro-display_regular.woff2") format("woff2");
 }
 :root{
   --color: #1890ff;
@@ -260,7 +259,7 @@ i {
   top: 50%;
   margin-top: -25px;
   background-color: #27cfc3;
-  background-image: url(./images/xfg.png);
+  background-image: url(../images/xfg.png);
   background-position: -328px -18px;
   z-index: 2;
   width: 56px;
@@ -268,7 +267,7 @@ i {
 }
 
 .mod-banner__tool .mod-banner__tool-prev .mod-banner__tool-white {
-  background-image: url(./images/xfg.png);
+  background-image: url(../images/xfg.png);
   background-position: -268px -18px;
   width: 56px;
   height: 56px;
@@ -280,7 +279,7 @@ i {
 }
 
 .mod-banner__tool .mod-banner__tool-prev .mod-banner__tool-shadow {
-  background-image: url(./images/xfg.png);
+  background-image: url(../images/xfg.png);
   background-position: -113px -132px;
   width: 56px;
   height: 10px;
@@ -291,7 +290,7 @@ i {
   top: 50%;
   margin-top: -25px;
   background-color: #27cfc3;
-  background-image: url(./images/xfg.png);
+  background-image: url(../images/xfg.png);
   background-position: -148px -18px;
   z-index: 2;
   width: 56px;
@@ -299,7 +298,7 @@ i {
 }
 
 .mod-banner__tool .mod-banner__tool-next .mod-banner__tool-white {
-  background-image: url(./images/xfg.png);
+  background-image: url(../images/xfg.png);
   background-position: -208px -18px;
   width: 56px;
   height: 56px;
@@ -311,7 +310,7 @@ i {
 }
 
 .mod-banner__tool .mod-banner__tool-next .mod-banner__tool-shadow {
-  background-image: url(./images/xfg.png);
+  background-image: url(../images/xfg.png);
   background-position: -53px -132px;
   width: 56px;
   height: 10px;
@@ -1424,8 +1423,7 @@ i {
 
 #Logo {
   width: 135px;
-  height: 100%;
-  max-height: 100%;
+  height: 60px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1476,7 +1474,7 @@ header.hover #Logo > img{
   width: 45px;
   height: 100%;
   display: block;
-  background: url('./images/xfg.png') no-repeat 10px 1px;
+  background: url('../images/xfg.png') no-repeat 10px 1px;
   background-position: -10px -2px;
   background-size: 350px 175px;
 }
@@ -2396,7 +2394,7 @@ div.com-art ul li {
   line-height: 12px;
   text-align: center;
   width: 100%;
-  background: url(images/footer_bg.jpg) center center repeat-x;
+  background: url(../images/footer_bg.jpg) center center repeat-x;
   position: relative;
 }
 
@@ -2514,7 +2512,7 @@ div.com-art ul li {
   border-radius: 100%;
   animation: bar1 0.45s 1s linear infinite;
   -webkit-animation: bar1 0.45s 1s linear infinite;
-  background: url(images/load_06.png) no-repeat center center;
+  background: url(../images/load_06.png) no-repeat center center;
   background-size: 90px 90px;
 }
 
@@ -3666,7 +3664,7 @@ div.jy p {
   border: 1px solid #ccc;
   border-bottom: none;
   padding-right: 20px;
-  background: #fff url(images/bg_sprites.png) 0 -90px repeat-x;
+  background: #fff url(../images/bg_sprites.png) 0 -90px repeat-x;
   overflow: hidden;
 }
 
@@ -3726,7 +3724,7 @@ div.jy p {
   line-height: 16px;
   padding-left: 20px;
   display: block;
-  background: url(images/service-icons-color.png?v=2) no-repeat;
+  background: url(../images/service-icons-color.png?v=2) no-repeat;
   overflow: hidden;
 }
 
@@ -3752,7 +3750,7 @@ div.jy p {
   height: 19px;
   float: left;
   margin-right: 4px;
-  background: transparent url(images/sprites.png) no-repeat;
+  background: transparent url(../images/sprites.png) no-repeat;
   opacity: 0.6;
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
@@ -3775,7 +3773,7 @@ div.jy p {
   vertical-align: middle;
   display: inline-block;
   overflow: hidden;
-  background: transparent url(images/sprites.png) no-repeat;
+  background: transparent url(../images/sprites.png) no-repeat;
 }
 
 .ds-icon-reply {
@@ -4444,14 +4442,14 @@ ul.post-categories li:first-child {
 }
 
 #wuyousujian-kefuDv .kefu4 {
-  background: url(images/qq.png) center no-repeat;
+  background: url(../images/qq.png) center no-repeat;
   background-size: contain;
   width: 105px;
   height: 68px;
 }
 
 #wuyousujian-kefuDv .kefu4gray {
-  background: url(images/qq-grey.png) center no-repeat;
+  background: url(../images/qq-grey.png) center no-repeat;
   background-size: contain;
   width: 105px;
   height: 68px;
@@ -4612,7 +4610,7 @@ ul.post-categories li:first-child {
   margin: -1px 10px 0 2px;
   width: 19px;
   height: 19px;
-  background: url(images/collapse.png) no-repeat 0 0;
+  background: url(../images/collapse.png) no-repeat 0 0;
   float: left;
 }
 
@@ -4620,7 +4618,7 @@ ul.post-categories li:first-child {
   margin: -1px 10px 0 2px;
   width: 19px;
   height: 19px;
-  background: url(images/collapse.png) no-repeat 0 -19px;
+  background: url(../images/collapse.png) no-repeat 0 -19px;
   float: left;
 }
 
@@ -4757,7 +4755,7 @@ ul.post-categories li:first-child {
   border: none;
   border-top: 1px solid #ccc;
   text-align: center;
-  background: url(images/rocket.png) center center no-repeat;
+  background: url(../images/rocket.png) center center no-repeat;
 }
 
 #wuyousujian-kefuDv .qq-kefu-backUp-2 {
@@ -4766,7 +4764,7 @@ ul.post-categories li:first-child {
   height: 62px;
   border-top: 1px solid #ccc;
   text-align: center;
-  background: url(images/rocket.png) -8px center no-repeat;
+  background: url(../images/rocket.png) -8px center no-repeat;
   float: left;
   background-size: cover;
 }
@@ -5208,7 +5206,7 @@ box-shadow:0 5px 0 rgba(0,0,0,0.1);
 .head_user_b {
   width: 100%;
   margin: 0 auto;
-  background: url('./images/about_page.jpg') no-repeat center center;
+  background: url('../images/about_page.jpg') no-repeat center center;
   background-size: 100% 100%;
 }
 
@@ -5247,7 +5245,7 @@ box-shadow:0 5px 0 rgba(0,0,0,0.1);
 }
 
 span.verify_1 {
-  background-image: url(images/icon_a.png);
+  background-image: url(../images/icon_a.png);
   background-position: -50px -25px;
   width: 20px;
   height: 20px;
@@ -5287,7 +5285,7 @@ span.verify_1 {
   height: 18px;
   vertical-align: -2px;
   margin: 0 5px;
-  background-image: url('images/icon_a.png');
+  background-image: url('../images/icon_a.png');
 }
 
 .lv45 {
@@ -5296,7 +5294,7 @@ span.verify_1 {
 
 .lv {
   display: inline-block;
-  background: url(images/lv.png) no-repeat;
+  background: url(../images/lv.png) no-repeat;
   width: 33px;
   height: 17px;
   vertical-align: sub;
@@ -5451,7 +5449,7 @@ code {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url('./images/snow1.png'), url('./images/snow2.png');
+  background: url('../images/snow1.png'), url('../images/snow2.png');
   -webkit-animation: 10s snow linear infinite;
   animation: 10s snow linear infinite;
   pointer-events: none;
@@ -5868,7 +5866,7 @@ p.data-l span {
   position: absolute;
   height: 85px;
   width: 110px;
-  background-image: url('./images/min_nav_bg.png');
+  background-image: url('../images/min_nav_bg.png');
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -6490,7 +6488,7 @@ label {
   height: 14px;
   display: inline-block;
   background-position: -147px -70px;
-  background-image: url(./images/vip.png);
+  background-image: url(../images/vip.png);
 }
 
 .comment_vip a.vp {
@@ -6727,14 +6725,3 @@ label {
 .footer:after {
   display: none\9;
 }
-=======
-/*
-Theme Name:Art_Blog
-Theme URI:https://github.com/weipxiu/weipxiu
-Description:一款基于javaScript+jquery2.1.4+H5/CSS3开发的wordpress响应式主题，主题源码<a target="_blank" href="https://github.com/weipxiu/weipxiu">下载地址</a>
-Version:2.8.3
-Author:唯品秀前端技术博客开源提供
-Author URI: https://www.weipxiu.com/
-Tags:web前端，移动端，响应式，HTML5，CSS3，响应式、短代码、绿色、多彩、双栏、博客主题、代码高亮、强大、免费主题、CMS主题、卡片式、文章置顶、编辑器样式支持、边栏在左侧、边栏在右侧、顶部特色图像、特色图像、音乐导航、3D导航、酷炫3D轮播、swiper
-*/
->>>>>>> 7e63def8a4fd766f61ad235abe7c1051ce54f75a

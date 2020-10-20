@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const clean = require('gulp-clean');//清空目录下资源
 const htmlmin = require('gulp-htmlmin');//压缩html
-const imagemin = require('gulp-imagemin'); //引入图片压缩模块
+//const imagemin = require('gulp-imagemin'); //引入图片压缩模块
 const scriptmin = require('gulp-uglify'); //引入js压缩模块
 //const gulpless = require('gulp-less'); //引入less转换模块
 const gulp_minify_css = require('gulp-minify-css'); //压缩css
@@ -47,7 +47,7 @@ clear()
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    return gulp.src(["src/**", "!src/*.html", "!src/*.css", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
+    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
 });
 
 //压缩html
@@ -80,22 +80,7 @@ gulp.task("minCss", function () {
             compatibility: '*'//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
         }))
         .pipe(gulp.dest(target + "/css"))
-
-    //style.css压缩
-    return gulp.src("src/style.css")
-        .pipe(gulp_minify_css({
-            advanced: false,
-            compatibility: '*'
-        }))
-        .pipe(gulp.dest(target))
 });
-
-//压缩完的style.css追加版本号
-gulp.task("themesVer", function () {
-    return gulp.src(["src/ver.css", target + "/style.css"])
-        .pipe(concat("style.css"))
-        .pipe(gulp.dest(target))
-})
 
 //图片压缩
 //安装模块 npm install --save-dev gulp-imagemin
@@ -171,7 +156,6 @@ gulp.task('default', function () {
         ["copyHtml"],
         ["miniHtml",],
         ["minCss"],
-        ["themesVer"],
         ["jsConcat"],
         ["compressZip"],
         ["Watch"],
