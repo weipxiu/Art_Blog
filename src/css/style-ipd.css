@@ -1,14 +1,4 @@
-﻿@charset "utf-8";
-@font-face {
-    font-family: "sf-pro-text_regular";
-    font-style:normal;
-	  font-weight:400;
-    src: local('☺︎'), url("../font/sf-pro-text_regular.woff2") format("woff2"), url("../font/sf-pro-display_regular.woff2") format("woff2");
-}
-:root{
-  --color: #1890ff;
-}
-* {
+﻿* {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1799,10 +1789,11 @@ td.line-numbers {
   margin: 0;
   padding: 0.2em 0.4em;
 }
-.continar-left .copy {
+.continar-left .post-motto {
   text-align-last: center;
   background-color: #eee;
   color: #aaa;
+  margin-top:0.2rem;
 }
 .codecolorer-container * {
   text-indent: 0;

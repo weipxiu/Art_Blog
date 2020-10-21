@@ -1,23 +1,11 @@
-﻿@charset "utf-8";
-@font-face {
-    font-family: "sf-pro-text_regular";
-    font-style:normal;
-	  font-weight:400;
-    src: local('☺︎'), url("../font/sf-pro-text_regular.woff2") format("woff2"), url("../font/sf-pro-display_regular.woff2") format("woff2");
-}
-:root{
-  --color: #1890ff;
-}
-* {
+﻿* {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
   text-decoration: none;
-  /* font: 14px play, PingFangSC-Regular, Microsoft Yahei; */
   font: 14px sf-pro-text_regular, Montserrat, Microsoft Yahei;
   font-weight: normal;
-  /* font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif; */
 }
 
 :not(span){
@@ -2745,6 +2733,7 @@ div.com-art ul li {
 .continar-left div.key-w {
   font-size: 12px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .continar-left div.key-w .single_lable {
@@ -3072,7 +3061,7 @@ p.data-l span.recommend a {
   cursor: pointer;
 }
 
-.continar-left .copy {
+.continar-left .post-motto {
   margin: 25px 0;
   opacity: 0.8;
   text-align-last: center;
@@ -3084,7 +3073,7 @@ p.data-l span.recommend a {
   font-size: 12px;
   color: #aaa;
 }
-.continar-left .copy:hover{
+.continar-left .post-motto:hover{
   color:#fff;
   background: #1890ff;
   background: var(--color, #1890ff);
@@ -5488,7 +5477,7 @@ transition: opacity 0.35s!important;
 
 .post-actions {
   text-align: center;
-  margin: 30px 0 25px;
+  margin: 20px 0;
   clear: both;
 }
 
