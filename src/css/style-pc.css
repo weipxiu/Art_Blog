@@ -3073,7 +3073,7 @@ p.data-l span.recommend a {
 }
 
 .continar-left .copy {
-  margin-top: 25px;
+  margin: 25px 0;
   opacity: 0.8;
   text-align-last: center;
   transition: all 0.3s;
