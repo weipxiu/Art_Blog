@@ -190,13 +190,12 @@
                                         bdCustomStyle: "<?php bloginfo('template_url'); ?>/css/share.css"
                                     }]
                                 }
-                                with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion="+~(-new Date()/36e5)];
+                                with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js"];
                                 </script>
                         </div>
                         <?php
                     }
                     ?>
-
 
                     <p class="text-post text-post-top">
                         <?php if (get_previous_post()) { previous_post_link('<span  id="respond">上一篇：</span>%link');} else {echo "上一篇：没有了，已经是最后文章";} ?>
