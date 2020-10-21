@@ -178,7 +178,7 @@ function themeoptions_page() {
           </div>
         </div>
 
-        <div class="row clearfix">
+        <div class="row clearfix" style="display:none">
           <label class="fl left-wrap">全站https：</label>
           <div class="fr right-wrap">
             <label for="switch-https-on">开</label>
@@ -780,7 +780,7 @@ function themeoptions_page() {
       'snowflake' => $_POST['snow-flake'],
       'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],
-      'switch_https' => $_POST['switch_https'],
+      // 'switch_https' => $_POST['switch_https'],
       'replace_skin' => $_POST['replace-skin'],
       'side_video' => $_POST['side_video'],
       'video_url' => $_POST['video_url'],

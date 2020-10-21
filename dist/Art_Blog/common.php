@@ -17,11 +17,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-<!-- 是否强制资源https加载 -->
-<?php if (get_option('weipxiu_options')['switch_https'] == 'on'){ ?>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<?php } ?>
-
 <!-- Pre-parsing is currently on the site -->
 <meta http-equiv="x-dns-prefetch-control" content="on">
 
