@@ -1799,8 +1799,10 @@ td.line-numbers {
   margin: 0;
   padding: 0.2em 0.4em;
 }
-.continar-left .log-text .copy {
+.continar-left .copy {
   text-align-last: center;
+  background-color: #eee;
+  color: #aaa;
 }
 .codecolorer-container * {
   text-indent: 0;

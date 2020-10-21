@@ -75,7 +75,6 @@
                             <?php _e('Not Found'); ?>
                         </h2>
                         <?php endif; ?>
-                        <p class="copy">「梦想一旦被付诸行动，就会变得神圣，如果觉得我的文章对您有用，请帮助本站成长」</p>
                         <!--文章打赏start-->
                         <!-- PC端start -->
                         <div class="post-actions">
@@ -160,6 +159,38 @@
                             <i class="iconfont icon-biaoqian" style="padding-right:7px"></i>标签：</div>
                         <?php the_tags('','',''); ?>
                     </div>
+
+                    <p class="copy">「梦想一旦被付诸行动，就会变得神圣，如果觉得我的文章对您有用，请帮助本站成长」</p>
+                    <div class="action-share">
+                        <div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1603188228670">
+                            <span>分享到：</span>
+                            <a class="bds_qzone" target="_blank" data-cmd="qzone" title="分享到QQ空间"></a>
+                            <a class="bds_tsina" target="_blank" data-cmd="tsina" title="分享到新浪微博"></a>
+                            <a class="bds_weixin" target="_blank" data-cmd="weixin" title="分享到微信"></a>
+                            <a class="bds_tqq" target="_blank" data-cmd="tqq" title="分享到腾讯微博"></a>
+                            <a class="bds_sqq" target="_blank" data-cmd="sqq" title="分享到QQ好友"></a>
+                            <a class="bds_bdhome" target="_blank" data-cmd="bdhome" title="分享到百度新首页"></a>
+                            <a class="bds_tqf" target="_blank" data-cmd="tqf" title="分享到腾讯朋友"></a>
+                            <a class="bds_youdao" target="_blank" data-cmd="youdao" title="分享到有道云笔记"></a>
+                        </div>
+                        <script>
+                            window._bd_share_config = {
+                                common: {
+                                    "bdText"     : "",
+                                    "bdMini"     : "2",
+                                    "bdMiniList" : false,
+                                    "bdPic"      : "",
+                                    "bdStyle"    : "0",
+                                    "bdSize"     : "24"
+                                },
+                                share: [{
+                                    bdCustomStyle: "<?php bloginfo('template_url'); ?>/css/share.css"
+                                }]
+                            }
+                            with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion="+~(-new Date()/36e5)];
+                            </script>
+                    </div>
+
                     <p class="text-post text-post-top">
                         <?php if (get_previous_post()) { previous_post_link('<span  id="respond">上一篇：</span>%link');} else {echo "上一篇：没有了，已经是最后文章";} ?>
                     </p>

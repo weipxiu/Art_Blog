@@ -169,6 +169,7 @@
                             <i class="iconfont icon-biaoqian" style="padding-right:3px"></i>标签：</div>
                         <?php the_tags('','',''); ?>
                     </div>
+                    
                     <p class="text-post text-post-top">
                         <?php if (get_previous_post()) { previous_post_link('<span  id="respond">上一篇：</span>%link');} else {echo "上一篇：没有了，已经是最后文章";} ?>
                     </p>

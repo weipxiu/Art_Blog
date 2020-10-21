@@ -718,7 +718,7 @@ function themeoptions_page() {
           </div>
         </div>
         <div class="row clearfix">
-          <label for="login-css" class="fl left-wrap">登录页面样式：</label>
+          <label for="login-css" class="fl left-wrap">登录注册样式：</label>
           <div class="fr right-wrap">
             <textarea id="login-css" name="login-css" rows="8" cols="100"><?php echo $a_options['login_css'] ?></textarea>
             <span class="warn">*无需style标签，支持媒体查询，个别样式无法覆盖情况下可以加!important权重，该处仅供熟悉css用户使用，不懂的请忽略</span>
