@@ -12,6 +12,8 @@
             this.navPianoEffect();
             //移动端适配
             this.mobileAdaptation();
+            // 语音播报
+            this.readingAloud();
             //文章分类没有资源时候404提示
             this.isNotResources();
             //网站运行时间
@@ -170,7 +172,7 @@
                     }, function () {
                         layer.msg('无需鼠标，导航音乐键盘A-K也可以体验哦~~');
                     });
-                    that.speak("全站音频已开启~")
+                    that.readingAloud("全站音频已开启~")
                 } else {
                     $(this).removeClass("hover");
                     $('.nav ul.music-nav li').addClass('off');
@@ -179,7 +181,7 @@
                     layer.msg('全站音频已关闭，期待您的下次体验！', {
                         time: 4000
                     });
-                    that.speak("全站音频已关闭，期待您的下次体验！")
+                    that.readingAloud("全站音频已关闭，期待您的下次体验！")
                 }
             });
             // 跳动音符end
@@ -557,7 +559,6 @@
                     for (var k = 0; k < 38; k++) {
                         if (baseContent.gblen() < 38) {
                             baseContent = $ele.text().trim().slice(0, strLengh) + '...';
-                            //console.log(baseContent,baseContent.gblen())
                         } else {
                             break;
                         }
