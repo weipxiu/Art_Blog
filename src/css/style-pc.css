@@ -2947,35 +2947,33 @@ h1.title {
   transform: translateY(-15px);
 }
 
-p.data-l {
+.article-items {
   width: 750px;
-  height: 30px;
-  line-height: 30px;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 40px;
-  border-bottom: 1px dashed #bbb;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 
-p.data-l > span {
+.article-items > span {
   margin: 0 5px;
   color: #666;
 }
 
-p.data-l > span i {
+.article-items > span i {
   color: #666;
 }
 
-p.data-l > span a {
+.article-items > span a {
   font-size: 12px;
   color: #666;
 }
-p.data-l span.recommend .iconfont{
+.article-items span.recommend .iconfont{
   color: #fff;
   margin: 0;
   vertical-align: middle;
 }
-p.data-l span.recommend a {
+.article-items span.recommend a {
   background: #1890ff;
   background: var(--color,#1890ff);
   color: #fff;
@@ -3148,7 +3146,7 @@ div.key-w a {
   color: #fff;
   margin: 0 5px;
   padding: 2px 8px;
-  border-radius: 4px;
+  border-radius: 2px;
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
@@ -4067,89 +4065,6 @@ ul.wpuf-form li .wpuf-fields .wpuf-help {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
-}
-
-.tooltip-left .tooltip-content {
-  position: absolute;
-  background: rgba(36, 193, 246, 0.9);
-  z-index: 9999;
-  width: 200px;
-  bottom: 50%;
-  margin-bottom: -10px;
-  border-radius: 20px;
-  font-size: 1.1em;
-  text-align: center;
-  color: #fff;
-  opacity: 0;
-  cursor: default;
-  pointer-events: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, -webkit-transform 0.3s;
-  -o-transition: opacity 0.3s, transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
-}
-
-.tooltip-left .tooltip-west .tooltip-content {
-  left: 3.5em;
-  -webkit-transform-origin: -2em 50%;
-  -ms-transform-origin: -2em 50%;
-  transform-origin: -2em 50%;
-  -webkit-transform: translate3d(0, 50%, 0) rotate3d(1, 1, 1, 30deg);
-  transform: translate3d(0, 50%, 0) rotate3d(1, 1, 1, 30deg);
-}
-
-.tooltip-left .tooltip-east .tooltip-content {
-  right: 3.5em;
-  -webkit-transform-origin: calc(100% + 2em) 50%;
-  -ms-transform-origin: calc(100% + 2em) 50%;
-  transform-origin: calc(100% + 2em) 50%;
-  -webkit-transform: translate3d(0, 50%, 0) rotate3d(1, 1, 1, -30deg);
-  transform: translate3d(0, 50%, 0) rotate3d(1, 1, 1, -30deg);
-}
-
-.tooltip-left .tooltip:hover .tooltip-content {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 50%, 0) rotate3d(0, 0, 0, 0);
-  transform: translate3d(0, 50%, 0) rotate3d(0, 0, 0, 0);
-  pointer-events: auto;
-}
-
-.tooltip-left .tooltip-content:after,
-.tooltip-left .tooltip-content:before {
-  content: '';
-  position: absolute;
-}
-
-.tooltip-left .tooltip-content:before {
-  height: 100%;
-  width: 3em;
-}
-
-.tooltip-left .tooltip-content:after {
-  width: 2em;
-  height: 2em;
-  top: 50%;
-  margin: -1em 0 0;
-  background: url(/fonts/tooltip.4004ff.svg) no-repeat 50%;
-  background-size: 100%;
-}
-
-.tooltip-left .tooltip-west .tooltip-content:after,
-.tooltip-left .tooltip-west .tooltip-content:before {
-  right: 99%;
-}
-
-.tooltip-left .tooltip-east .tooltip-content:after,
-.tooltip-left .tooltip-east .tooltip-content:before {
-  left: 99%;
-}
-
-.tooltip-left .tooltip-east .tooltip-content:after {
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 
 .tooltip-top .tooltip {
@@ -5367,13 +5282,13 @@ Inherited from div.head_avatar_c .head_avatar_c {
   display: none;
 }
 
-.data-l i.iconfont,
+.article-items i.iconfont,
 i.icon-zuozhe {
   color: #666;
   font-size: 14px;
 }
 
-.data-l i.iconfont {
+.article-items i.iconfont {
   margin-right: 2px;
 }
 
@@ -5481,10 +5396,6 @@ transition: opacity 0.35s!important;
   clear: both;
 }
 
-.post-actions .action-rewards {
-  position: relative;
-}
-
 .continar-left .log-text .post-actions *,
 .continar-left .log-text .post-like a.done:hover span.count {
   color: #fff;
@@ -5494,15 +5405,7 @@ transition: opacity 0.35s!important;
   color: #fff !important;
 }
 
-.post-actions .action.action-like {
-  background: #1890ff;
-  background: var(--color, #1890ff);
-  font-size: 12px;
-  padding: 0px 15px;
-  line-height: 30px;
-}
-
-.post-actions .action.action-like a .iconfont {
+.post-actions .action-like a .iconfont {
   display: inline-block;
   margin-right: 3px;
   font-size: 12px;
@@ -5516,47 +5419,81 @@ transition: opacity 0.35s!important;
   font-size: 12px;
 }
 
-.post-actions .action .fa {
-  font-size: 14px;
-  position: relative;
-  margin-right: 2px;
-}
-
-.post-actions .action-like .fa {
-  margin-right: 7px;
-  top: 0;
-}
-
-.post-actions .action {
+.post-actions .reward {
   display: inline-block;
   opacity: .8;
-  padding: 7px 15px;
-  border-radius: 15px;
+  padding: 6px 12px 8px;
+  border-radius: 4px;
   color: #fff;
   font-size: 14px;
   margin: 0 7px;
   box-sizing: content-box;
   transition: opacity .5s;
   font-size: 12px;
+  cursor: pointer;
 }
 
-.post-actions .action.action-rewards {
+.post-actions .reward {
   background-color: #ec6149;
 }
-
-.post-actions .action:hover {
+.post-actions .reward .iconfont,.post-actions .reward a{
+  font-size: 12px;
+}
+.post-actions .reward:hover {
   opacity: 1;
   color: #fff;
 }
 
-.post-actions .action.action-rewards:hover .tooltip-content {
+.post-actions .reward:hover .tooltip-content {
   opacity: 1;
   pointer-events: auto;
   -webkit-transition-delay: 0s;
   -o-transition-delay: 0s;
   transition-delay: 0s;
 }
-
+.post-actions .action-like {
+  background: #1890ff;
+  background: var(--color, #1890ff);
+  font-size: 12px;
+}
+#reward-popup{
+  width: 100%;
+  height:100%;
+  padding:20px;
+  display: none;
+}
+#reward-popup .title{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height:30px;
+  line-height: 30px;
+  color:#333;
+  padding:10px 0 20px;
+  box-sizing: content-box;
+}
+#reward-popup .reward_item{
+  height: calc(100% - 60px);
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+#reward-popup .reward_item p{
+  font-size: 15px;
+  text-align: center;
+  color:#333;
+  margin: 0px 0 12px;
+  text-indent: 0;
+}
+#reward-popup .reward_item img{
+  display: block;
+  margin: 0 auto;
+  max-width: 85%;
+  border: 5px solid #eee;
+}
+#reward-popup .reward_item > div{
+  width: 50%;
+}
 /* PC详情页打赏end */
 
 /* 面包屑导航start */
@@ -5602,7 +5539,7 @@ transition: opacity 0.35s!important;
   color: #999;
 }
 
-p.data-l span {
+.article-items span {
   font-size: 12px;
   color: #666;
 }

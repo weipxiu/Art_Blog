@@ -28,21 +28,23 @@
             this.friendshipLink();
             // 表情包
             this.smiliesEmoticon();
-            // 播放视频
-            this.playVideo();
             // 随机文章增加序列号
             this.randomArticles();
             // 文章详情页底部评论区域样式兼容
             this.commentStyle();
             // 窗口改变事件
             this.winResize();
+            // 文章打赏
+            this.articleReward();
             // 终端独立事件方法
-            if ($(document).width() < 1200) {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 // 移动端执行函数
                 this.mobileFnAll();
             } else {
                 // pc端执行函数
                 this.pcFnAll();
+                // 侧边栏视频播放器
+                this.playVideo();
                 // 文字钢琴效果
                 this.stringEffect();
             }
@@ -369,7 +371,7 @@
         },
         // 文章详情页点赞
         pageDetailsFabulous: function () {
-            setInterval(function () {
+            setTimeout(function () {
                 $(".page-reward .page-reward-btn .tooltip-item font,.page-reward .page-reward-btn .tooltip-item a").toggleClass("s_show");
             }, 2000)
             //点赞
@@ -475,6 +477,28 @@
                         "right": "-196px"
                     }, 500)
                 });
+        },
+        // 文章打赏
+        articleReward: function () {
+            //文章内页打赏
+            $(".js_reward").click(function () {
+                layer.open({
+                    content: $("#reward-popup"),
+                    type: 1,
+                    title: false,
+                    skin: 'layui-layer-demo', //样式类名
+                    area: ['500px', '360px'], //宽高
+                    shadeClose: true, // 点击遮罩层关闭弹窗
+                    success: function (layero, index) {
+                        // layero[0].childNodes[1].childNodes[0].removeAttribute('href');
+                        // layero[0].childNodes[1].classList.add('cursorStyle');
+                        layero[0].childNodes[1].childNodes[0].removeAttribute('href');
+                        layero[0].childNodes[1].classList.add('cursorStyle');
+                        layero[0].childNodes[1].childNodes[0].classList.remove('layui-layer-close2');
+                        layero[0].childNodes[1].childNodes[0].classList.add('layui-layer-close1');
+                    }
+                });
+            });
         },
         // 文字钢琴效果
         stringEffect: function () {

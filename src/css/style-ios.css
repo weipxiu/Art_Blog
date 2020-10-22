@@ -193,10 +193,6 @@ img {
   color: #fff;
 }
 
-.fa-search:before {
-  content: '\f002';
-}
-
 .search-btn {
   color: #fff;
   border: none;
@@ -248,10 +244,6 @@ img {
 .header.hover .site-search.active {
   top: 80px;
   background: #eee;
-}
-
-.header.hover .navto-search .fa {
-  color: #e5e1e1;
 }
 
 .header.hover .navto-search a {
@@ -468,12 +460,6 @@ img {
 .navto-search a {
   display: block;
   padding: 0 15px;
-  color: #666;
-}
-
-.navto-search .fa {
-  width: 18px;
-  font-size: 16px;
   color: #666;
 }
 
@@ -1143,9 +1129,6 @@ ul.post-categories li:first-child {
   font-size: 0.2rem;
   color: #d0d0d0 !important;
 }
-.continar-left p.l .fa {
-  display: none;
-}
 .continar-left p.l .iconfont {
   color: #e0e0e0;
   font-size: 0.24rem;
@@ -1685,21 +1668,21 @@ div.com-art ul li {
 }
 
 .continar-left div.key-w .single_lable {
-  height: 0.8rem;
-  line-height: 0.8rem;
+  line-height: 0.6rem;
   width: 100%;
 }
 
 div.key-w {
   margin: 0rem 0 0.85rem;
 }
-
+div.key-w + .text-post{
+  margin-bottom:0.15rem;
+}
 .continar-left div.key-w a {
   text-indent: 0;
   line-height: 0.34rem;
   color: #fff;
   padding: 5px 0.3rem;
-  background: #f1f1f1;
   margin: 0 5px;
   border-radius: 3px;
   background: #1890ff;
@@ -1709,26 +1692,6 @@ div.key-w {
 
 div.key-w a:hover {
   color: #fff;
-}
-
-div.key-w a:nth-of-type(1) {
-  background: #5cb85c;
-}
-
-div.key-w a:nth-of-type(3) {
-  background: #f0ad4e;
-}
-
-div.key-w a:nth-of-type(1):hover {
-  background: #00a67c;
-}
-
-div.key-w a:nth-of-type(2):hover {
-  background: #d9534f;
-}
-
-div.key-w a:nth-of-type(3):hover {
-  background: #f0ad4e;
 }
 
 .continar-left > h2 {
@@ -1917,25 +1880,25 @@ h1.title {
   text-align: center;
 }
 
-p.data-l {
+.article-items {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  border-bottom: 1px dashed #bbb;
-  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #eee;
+  padding: 0.15rem 0 .25rem;
 }
 
-p.data-l > span {
+.article-items > span {
   margin: 0px 0.05rem;
   color: #666;
   font-size: 0.24rem;
 }
 
-p.data-l > span.recommend {
+.article-items > span.recommend {
   display: none;
 }
 
-p.data-l > span i {
+.article-items > span i {
   color: #666;
   font-size: 0.24rem;
 }
@@ -3203,33 +3166,8 @@ canvas,
   line-height: 0.5rem;
 }
 
-.reward-box {
-  overflow: hidden;
-  text-align: center;
-  text-indent: 0;
-}
-
-.reward-box img {
-  width: 100%;
-  /* height: 3.2rem; */
-  float: left;
-}
-
-.reward-box span {
-  text-indent: 0;
-  display: block;
-  text-align: center;
-}
-
-p.reward-p {
-  font-size: 0.3rem;
-  margin: 0.25rem 0;
-  text-indent: 0;
-  text-align-last: center;
-}
 
 .tooltip span,
-.reward-p,
 .tooltip-item {
   text-indent: 0;
   text-align: center;
@@ -3237,20 +3175,32 @@ p.reward-p {
 
 .tooltip-item {
   display: none;
-}
-
-.reward-box-item {
-  display: inline-block;
-  width: 49%;
-  text-indent: 0;
 }
 
 .map,
-.post-actions,
+.js_reward,
+.article-items .recommend,
 #default-searchbox {
   display: none;
 }
-
+.post-actions{
+  margin-top: 0.35rem;
+  text-align: center;
+}
+.continar-left .log-text .post-actions *{
+  color:#fff
+}
+.post-actions .action-like {
+  background: #1890ff;
+  background: var(--color,#1890ff);
+  font-size: .24rem;
+  margin: 0 auto;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.04rem;
+}
+.post-actions .action-like .iconfont{
+  font-size: 0.24rem;
+}
 #player > span.cover {
   display: block;
 }

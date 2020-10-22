@@ -153,9 +153,6 @@ img {
   width: 16px;
   color: #fff;
 }
-.fa-search:before {
-  content: '\f002';
-}
 .search-btn {
   color: #fff;
   border: none;
@@ -200,9 +197,6 @@ img {
 .header.hover .site-search.active {
   top: 80px;
   background: #eee;
-}
-.header.hover .navto-search .fa {
-  color: #e5e1e1;
 }
 .header.hover .navto-search a {
   margin-top: 2px;
@@ -387,11 +381,6 @@ img {
 .navto-search a {
   display: block;
   padding: 0 15px;
-  color: #666;
-}
-.navto-search .fa {
-  width: 18px;
-  font-size: 16px;
   color: #666;
 }
 /*搜索按钮end*/
@@ -937,9 +926,6 @@ ul.post-categories li:first-child {
   font-size: 0.2rem;
   color: #d0d0d0 !important;
 }
-.continar-left p.l .fa {
-  display: none;
-}
 .continar-left p.l .iconfont {
   color: #e0e0e0;
   font-size: 0.24rem;
@@ -1439,6 +1425,9 @@ div.com-art ul li {
 .continar-left div.key-w {
   margin-bottom: 0.5rem;
 }
+div.key-w + .text-post{
+  margin-bottom:0.15rem;
+}
 .continar-left p.text-post {
   margin: 0.3rem 0;
 }
@@ -1513,24 +1502,7 @@ div.key-w a {
 div.key-w a:hover {
   color: #fff;
 }
-div.key-w a:nth-of-type(1) {
-  background: #5cb85c;
-}
-div.key-w a:nth-of-type(2) {
-  background: #d9534f;
-}
-div.key-w a:nth-of-type(3) {
-  background: #f0ad4e;
-}
-div.key-w a:nth-of-type(1):hover {
-  background: #00a67c;
-}
-div.key-w a:nth-of-type(2):hover {
-  background: #d9534f;
-}
-div.key-w a:nth-of-type(3):hover {
-  background: #f0ad4e;
-}
+
 .continar-left > h2 {
   color: #666;
 }
@@ -1703,30 +1675,30 @@ h1.title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-p.data-l {
+.article-items {
   width: 100%;
   height: 30px;
   line-height: 30px;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 0.7rem;
-  border-bottom: 1px dashed #bbb;
+  border-bottom: 1px solid #eee;
 }
-p.data-l > span {
+.article-items > span {
   margin: 0px 5px;
   color: #666;
 }
-p.data-l > span.recommend {
+.article-items > span.recommend {
   display: none;
 }
-p.data-l span span {
+.article-items span span {
   margin: 0;
   font-size: 12px;
 }
-p.data-l span a {
+.article-items span a {
   color: #666;
 }
-p.data-l > span i {
+.article-items > span i {
   color: #999;
 }
 .codecolorer-container.solarized-dark table td.line-numbers {
@@ -1863,8 +1835,8 @@ p.text-post a {
 }
 div.key-w a {
   padding: 5px 15px;
-  background: #f1f1f1;
-  margin: 0 5px;
+  background: #1890ff;
+  background: var(--color, #1890ff);  margin: 0 5px;
   border-radius: 3px;
 }
 /*评论内容start*/
@@ -2821,40 +2793,35 @@ canvas,
   margin-bottom: 0.5rem;
   line-height: 0.7rem;
 }
-.reward-box img {
-  width: 3.4rem;
-  height: 3.4rem;
-  float: left;
-}
-.reward-box span {
-  text-indent: 0;
-  display: block;
-  text-align: center;
-}
 .tooltip span,
-.reward-p,
 .tooltip-item {
   text-indent: 0;
   text-align: center;
 }
-.reward-p {
-  font-size: 0.36rem;
-  margin: 0.25rem 0;
-}
+
 .tooltip-item {
   display: none;
 }
-.reward-box-item,
-.reward-box .reward-box-item:nth-child(2) {
-  display: inline-block;
-}
-.reward-box {
-  text-align: center;
-}
+
 .map,
-.post-actions,
+.js_reward,
 #default-searchbox {
   display: none;
+}
+.post-actions{
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.post-actions .action-like {
+  background: #1890ff;
+  background: var(--color,#1890ff);
+  font-size: .24rem;
+  margin: 0 auto;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.04rem;
+}
+.continar-left .log-text .post-actions *{
+  color:#fff
 }
 #player > span.cover {
   display: block;

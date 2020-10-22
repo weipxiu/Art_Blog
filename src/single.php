@@ -32,11 +32,11 @@
                             <?php wheatv_breadcrumbs(); ?>
                         </span>
                     </div>
-                    <div class="xiaob">
+                    <div class="article-meta">
                         <h1 class="title">
                             <?php the_title(); ?>
                         </h1>
-                        <p class="data-l">
+                        <div class="article-items">
                             <span>
                                 <?php echo the_time('Y-m-d')?>
                             </span>
@@ -55,7 +55,7 @@
                             <span class="recommend">
                                 <?php baidu_record(); ?>
                             </span>
-                        </p>
+                        </div>
                     </div>
 
                     <div class="log-text">
@@ -70,9 +70,8 @@
                         <p class="post-motto">「梦想一旦被付诸行动，就会变得神圣，如果觉得我的文章对您有用，请帮助本站成长」</p>
 
                         <!--文章打赏start-->
-                        <!-- PC端start -->
                         <div class="post-actions">
-                            <span class="post-like action action-like">
+                            <span class="post-like reward action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
                                     <i class="iconfont icon-xingxing"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
@@ -81,73 +80,28 @@
                                         }?></span>)  
                                 </a>   
                             </span>
-                            <a href="javascript:;" class="action action-rewards" data-event="rewards">
+                            <span class="reward js_reward">
                                 <i class="iconfont icon-jiage1"></i> 打赏
-                                <span class="tooltip-content">
-                                    <span class="tooltip-text">
-                                        <span class="tooltip-inner">
-                                            <p class="reward-p">
-                                                <i class="icon icon-quo-left"></i><?php echo get_option('weipxiu_options')['reward_text'];?>
-                                                <i class="icon icon-quo-right"></i>
-                                            </p>
-                                            <div class="reward-box">
-                                                <div class="reward-box-item">
-                                                    <img class="reward-img" src="<?php echo get_option('weipxiu_options')['alipay'];?>">
-                                                    <span class="reward-type">支付宝</span>
-                                                </div>
-                                                <div class="reward-box-item">
-                                                    <img class="reward-img" src="<?php echo get_option('weipxiu_options')['wechatpay'];?>">
-                                                    <span class="reward-type">微信</span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                        <!-- PC端end -->
-                        <div class="page-reward">
-                            <div class="page-reward-btn tooltip-top">
-                                <div class="tooltip tooltip-east">
-                                    <span class="tooltip-item">
-                                        <font class="s_show">赏</font>
-                                        <a href="javascript:;" style="color: #f78585" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                            <i class="iconfont icon-xingxing" style="color: #fff"></i>
-                                            <span class="tog_show">
-                                                <?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
-                                                        echo get_post_meta($post->ID,'bigfa_ding',true);
-                                                    } else {
-                                                        echo '0';
-                                                }?>
-                                            </span>
-                                        </a>
-                                    </span>
-                                    <span class="tooltip-content">
-                                        <span class="tooltip-text">
-                                            <span class="tooltip-inner">
-                                                <p class="reward-p">
-                                                    <i class="icon icon-quo-left"></i><?php echo get_option('weipxiu_options')['reward_text'];?>
-                                                    <i class="icon icon-quo-right"></i>
-                                                </p>
-                                                <div class="reward-box">
-                                                    <div class="reward-box-item">
-                                                        <img class="reward-img" src="<?php echo get_option('weipxiu_options')['alipay'];?>">
-                                                        <span class="reward-type">支付宝</span>
-                                                    </div>
-                                                    <div class="reward-box-item">
-                                                        <img class="reward-img" src="<?php echo get_option('weipxiu_options')['wechatpay'];?>">
-                                                        <span class="reward-type">微信</span>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </span>
-                                    </span>
+                            </span>
+                            <div id="reward-popup">
+                                <div class="title">
+                                    <?php echo get_option('weipxiu_options')['reward_text'];?>
+                                </div>
+                                <div class="reward_item">
+                                    <div>
+                                        <p>支付宝扫一扫打赏</p>
+                                        <img src="<?php echo get_option('weipxiu_options')['alipay'];?>" alt="">
+                                    </div>
+                                    <div>
+                                        <p>微信扫一扫打赏</p>
+                                        <img src="<?php echo get_option('weipxiu_options')['wechatpay'];?>" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!--文章打赏end-->
                     </div>
-
-                    <!--文章打赏end-->
+                    
                     <div class="key-w">
                         <div class="single_lable">
                             <i class="iconfont icon-biaoqian" style="padding-right:7px"></i>标签：</div>
@@ -162,45 +116,45 @@
                     </p>
                     
                     <!-- 相关文章推荐start -->
-                  <h3 class="cat-title"><span>你可能感兴趣</span></h3>
-                   <?php
-                    // 默认参数
-                    $args = array(
-                        'posts_per_page' => 10, // 要显示的项目数
-                        'post__not_in'   => array( get_the_ID() ), // 排除当前帖子
-                        'no_found_rows'  => true, 
-                    );
-
-                    // 检查当前的帖子类别，并将tax_query添加到查询参数中
-                    $cats = wp_get_post_terms( get_the_ID(), 'category' ); 
-                    $cats_ids = array();  
-                    foreach( $cats as $wpex_related_cat ) {
-                        $cats_ids[] = $wpex_related_cat->term_id; 
-                    }
-                    if ( ! empty( $cats_ids ) ) {
-                        $args['category__in'] = $cats_ids;
-                    }
-
-                    // 查询文章
-                    $wpex_query = new wp_query( $args );
-
-                    // 输出文章
-                    foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
-                    <div id="related_posts">
-                        <ul class="live">
-                            <li><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></li>
-                        </ul>
-                    </div>
+                    <h3 class="cat-title"><span>你可能感兴趣</span></h3>
                     <?php
-                    // 结束循环
-                    endforeach;
-                    wp_reset_postdata(); ?>
-                  	<!-- 相关文章推荐end -->
+                        // 默认参数
+                        $args = array(
+                            'posts_per_page' => 10, // 要显示的项目数
+                            'post__not_in'   => array( get_the_ID() ), // 排除当前帖子
+                            'no_found_rows'  => true, 
+                        );
 
-                    <!-- 评论 -->
-                    <div class="post_content">
-                        <?php comments_template( '', true ); ?>
-                    </div>
+                        // 检查当前的帖子类别，并将tax_query添加到查询参数中
+                        $cats = wp_get_post_terms( get_the_ID(), 'category' ); 
+                        $cats_ids = array();  
+                        foreach( $cats as $wpex_related_cat ) {
+                            $cats_ids[] = $wpex_related_cat->term_id; 
+                        }
+                        if ( ! empty( $cats_ids ) ) {
+                            $args['category__in'] = $cats_ids;
+                        }
+
+                        // 查询文章
+                        $wpex_query = new wp_query( $args );
+
+                        // 输出文章
+                        foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
+                        <div id="related_posts">
+                            <ul class="live">
+                                <li><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></li>
+                            </ul>
+                        </div>
+                        <?php
+                        // 结束循环
+                        endforeach;
+                        wp_reset_postdata(); ?>
+                        <!-- 相关文章推荐end -->
+
+                        <!-- 评论 -->
+                        <div class="post_content">
+                            <?php comments_template( '', true ); ?>
+                        </div>
                 </div>
                 <!-- 左侧区域end -->
 

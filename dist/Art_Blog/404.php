@@ -1,7 +1,7 @@
-<?php   
+<?php
 /*
 Template Name: 404页面  
-*/  
+*/
 ?>
 
 <!DOCTYPE html>
@@ -21,41 +21,41 @@ Template Name: 404页面
 			padding: 0px;
 		}
 
-		.erro {
+		.container {
 			width: 480px;
 			height: 500px;
 			margin: 40px auto;
 		}
 
-		.erro h3 {
+		.container h3 {
 			font-size: 24px;
 			font-family: "微软雅黑";
 			line-height: 55px;
 		}
 
-		.erro p {
+		.container p {
 			font-size: 13px;
 			color: #666;
 			font-family: "微软雅黑";
 			line-height: 25px;
 		}
 
-		.erro p font {
+		.container p font {
 			color: #FF00CC;
 			font-weight: bold;
 		}
 
-		.erro p a {
+		.container p a {
 			color: red;
 		}
 
-		.erro p span {
+		.container p span {
 			color: red;
 			font-weight: bold;
 			padding-left: 5px;
 		}
 
-		.xs {
+		.go_back {
 			color: red;
 			padding-right: 5px;
 		}
@@ -63,27 +63,28 @@ Template Name: 404页面
 </head>
 
 <body>
-	<div class="erro">
+	<div class="container">
 		<img src="<?php bloginfo('template_url'); ?>/images/404.png" />
 		<h3>很抱歉,未能找到你的女朋友</h3>
 		<p>请试试以下方法：</p>
 		<p>
-			<font>1、</font>检查身高、颜值、支付宝、微信或银行卡存款
+			<span>1、</span>检查身高、颜值、支付宝、微信或银行卡存款
 		</p>
 		<p>
-			<font>2、</font>重新降临到这个世界
+			<span>2、</span>重新降临到这个世界
 		</p>
 		<p>
-			<font>3、</font>页面将在<span class="autotime">5</span>
-			<font class="xs">s</font>后自动跳转到<a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('description'); ?></a>首页
+			<span>3、</span>页面将在<span class="autotime">5</span>
+			<span class="go_back">s</span>后自动跳转到<a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('description'); ?></a>首页
 		</p>
 		<div>
 </body>
 <script type="text/javascript">
-	var num = 5;
+	var num = 15;
 	var clearTime = null;
+
 	function autoPlay() {
-		clearTime = setInterval(function () {
+		clearTime = setInterval(function() {
 			num--;
 			$(".autotime").text(num);
 			if (num == 0) {
@@ -95,4 +96,5 @@ Template Name: 404页面
 	autoPlay();
 </script>
 <?php wp_footer(); ?>
+
 </html>
