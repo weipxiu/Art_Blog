@@ -1084,22 +1084,7 @@ div.com-art ul li {
   width: 95%;
   overflow: hidden;
 }
-.widget ul li em {
-  background: #ccc;
-  color: #fff;
-  border-radius: 0.04rem;
-  line-height: 0.4rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  font-style: normal;
-  display: inline-block;
-  position: absolute;
-  top: 0.08rem;
-  left: 0;
-  text-align: center;
-  font-weight: normal;
-  font-size: 0.26rem;
-}
+
 .widget ul li i.iconfont {
   color: #f78585;
   line-height: 0.4rem;
@@ -1156,6 +1141,45 @@ div.com-art ul li {
   background: #1890ff;
   background: var(--color, #1890ff);
 }
+
+.mouseover .widget-title{
+  margin-bottom:0.1rem;
+}
+.mouseover .daily-list{
+  margin-bottom: 0;
+}
+.mouseover ul li{
+  border-bottom: 1px solid #eee;
+  padding: .2rem 0;
+  margin-bottom:0;
+  box-sizing: content-box;
+  height: auto;
+  line-height:normal;
+}
+.mouseover ul li:last-of-type{
+  border:0;
+}
+.mouseover ul li em {
+  background: #ccc;
+  color: #fff;
+  border-radius: 0.04rem;
+  line-height: 0.4rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  font-style: normal;
+  display: inline-block;
+  position: absolute;
+  top: auto;
+  left: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.26rem;
+}
+
+.mouseover ul li a{
+  line-height: normal;
+  font-size: 0.28rem;
+}
 /*热门文章end*/
 
 /*技术分类start*/
@@ -1185,7 +1209,7 @@ div.com-art ul li {
 }
 .items a {
   color: #999;
-  background-color: #f6f6f6;
+  background-color: #eee;
   float: left;
   width: 31.3333%;
   margin: 0 1% 1%;

@@ -1128,6 +1128,8 @@ ul.post-categories li:first-child {
 .continar-left p.l a {
   font-size: 0.2rem;
   color: #d0d0d0 !important;
+  line-height: 0.32rem;
+  vertical-align: middle;
 }
 .continar-left p.l .iconfont {
   color: #e0e0e0;
@@ -1286,22 +1288,6 @@ div.com-art ul li {
   overflow: hidden;
 }
 
-.widget ul li em {
-  background: #ccc;
-  color: #fff;
-  border-radius: 0.04rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  line-height: 0.42rem;
-  font-style: normal;
-  position: absolute;
-  top: 0rem;
-  left: 0;
-  text-align: center;
-  font-weight: normal;
-  font-size: 0.26rem;
-}
-
 .widget ul li i.iconfont {
   color: #f78585;
   line-height: 0.4rem;
@@ -1326,7 +1312,7 @@ div.com-art ul li {
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
-  font-size: 0.26rem;
+  font-size: 0.28rem;
 }
 
 .friendship ul li a {
@@ -1365,6 +1351,41 @@ div.com-art ul li {
   background: var(--color, #1890ff);
 }
 
+.mouseover .widget-title{
+  margin-bottom:0.1rem;
+}
+.mouseover .daily-list{
+  margin-bottom: 0;
+}
+.mouseover ul li{
+  border-bottom: 1px solid #eee;
+  padding: .2rem 0;
+  margin-bottom:0;
+  box-sizing: content-box;
+  height: auto;
+  line-height:normal;
+}
+.mouseover ul li:last-of-type{
+  border:0;
+}
+.mouseover ul li em {
+  background: #ccc;
+  color: #fff;
+  border-radius: 0.04rem;
+  width: .38rem;
+  height: .38rem;
+  line-height: .4rem;
+  font-style: normal;
+  position: absolute;
+  top: auto;
+  left: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.26rem;
+}
+.mouseover ul li a{
+  line-height: normal;
+}
 /*热门文章end*/
 
 /*技术分类start*/
@@ -1396,7 +1417,7 @@ div.com-art ul li {
 
 .items a {
   color: #999;
-  background-color: #f6f6f6;
+  background-color: #eee;
   float: left;
   width: 31.3333%;
   margin: 0 1% 1% 1%;

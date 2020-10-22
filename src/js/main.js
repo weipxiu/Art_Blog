@@ -12,8 +12,6 @@
             this.navPianoEffect();
             //移动端适配
             this.mobileAdaptation();
-            // 语音播报
-            this.readingAloud();
             //文章分类没有资源时候404提示
             this.isNotResources();
             //网站运行时间
