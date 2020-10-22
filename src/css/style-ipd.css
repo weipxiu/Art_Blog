@@ -3296,6 +3296,6 @@ ol.commentlist {
 }
 
 /* 屏蔽底部登录注册悬浮窗 */
-.login_alert {
+.login_alert,.mod-index__feature {
   display: none;
 }

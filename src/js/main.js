@@ -22,6 +22,8 @@
             this.pageDetailsFabulous();
             //纸飞机
             this.paperPlane();
+            // 侧边栏视频播放器
+            this.playVideo();
             // 在线客服
             this.customerService();
             // 友情链接加背景颜色
@@ -43,8 +45,6 @@
                 this.pcFnAll();
                 // 文章打赏
                 this.articleReward();
-                // 侧边栏视频播放器
-                this.playVideo();
                 // 文字钢琴效果
                 this.stringEffect();
             }
@@ -731,12 +731,14 @@
                 $(".footer").css({ "display": "block" });
             }, 500)
 
-            //特色图片懒加载，移动端需要设置滚动事件
-            $("img.Lazy_load").lazyload({
-                container: $("body > .continar"),
-                threshold: 100,
-                effects: "show"
-            });
+            //特色图片懒加载，移动端需要设置滚动事件，在资源完全加载后执行
+            window.onload = function () {
+                $("img.Lazy_load").lazyload({
+                    container: $("body > .continar"),
+                    threshold: 100,
+                    effects: "show"
+                });
+            };
 
             var obtn = true;
             $(".btn_menu,.cover").on("touchmove", function (event) {
@@ -816,6 +818,11 @@
         },
         // PC端执行函数
         pcFnAll: function () {
+            //文章分类没有资源时候404提示
+            if ($(".continar-left .article_not").length > 0) {
+                $("body > .continar").css({ "height": "calc(100% - 280px)" });
+            }
+
             // 特色图片懒加载
             $("img.Lazy_load").lazyload({
                 effect: "show"
@@ -827,80 +834,6 @@
                 return false
             }
             //鼠标默认右键功能end
-
-            // 底部悬浮登录注册start
-            // if (localStorage.getItem("off_login") != 1) {
-            //     setTimeout(() => {
-            //         $(".login_alert").slideDown();
-            //     }, 1000)
-            // }
-
-            $(".login_alert_close").click(() => {
-                $(".login_alert").slideUp();
-                localStorage.setItem("off_login", 1)
-            })
-            // 底部悬浮登录注册end
-
-            //文章分类没有资源时候404提示
-            if ($(".continar-left .article_not").length > 0) {
-                $("body > .continar").css({ "height": "calc(100% - 280px)" });
-            }
-            //点击页面出现爱心
-            if (!!window.ActiveXObject || "ActiveXObject" in window) {
-                console.log("天啦，偶买噶，您竟然还在用IE？")
-            } else {
-                ! function (e, t, a) {
-                    function r() {
-                        for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--,
-                            s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e]
-                                .y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale +
-                            ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
-                        requestAnimationFrame(r)
-                    }
-
-                    function n() {
-                        var t = "function" == typeof e.onclick && e.onclick;
-                        e.onclick = function (e) {
-                            t && t(), o(e)
-                        }
-                    }
-
-                    function o(e) {
-                        var a = t.createElement("div");
-                        a.className = "heart", s.push({
-                            el: a,
-                            x: e.clientX - 5,
-                            y: e.clientY - 5,
-                            scale: 1,
-                            alpha: 1,
-                            color: c()
-                        }), t.body.appendChild(a)
-                    }
-
-                    function i(e) {
-                        var a = t.createElement("style");
-                        a.type = "text/css";
-                        try {
-                            a.appendChild(t.createTextNode(e))
-                        } catch (t) {
-                            a.styleSheet.cssText = e
-                        }
-                        t.getElementsByTagName("head")[0].appendChild(a)
-                    }
-
-                    function c() {
-                        return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-                    }
-
-                    var s = [];
-                    e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame ||
-                        e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-                            setTimeout(e, 1e3 / 60)
-                        }, i(
-                            ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
-                        ), n(), r()
-                }(window, document);
-            }
         }
     };
 
