@@ -52,9 +52,12 @@
                             <span>
                                 阅读（<?php echo getPostViews(get_the_ID()); ?>）
                             </span>
-                            <span class="recommend">
-                                <?php baidu_record(); ?>
+                            <!--
+                            检测改文章是否被百度收录，该功能谨慎开启，它将严重拖累详情页打开速度 
+                            <span class="recommend" style="display:none">
+                            <?php /* baidu_record(); */?>
                             </span>
+                            -->
                         </div>
                     </div>
 
@@ -116,11 +119,11 @@
                     </p>
                     
                     <!-- 相关文章推荐start -->
-                    <h3 class="cat-title"><span>你可能感兴趣</span></h3>
+                    <h3 class="cat-title"><span>相关推荐</span></h3>
                     <?php
                         // 默认参数
                         $args = array(
-                            'posts_per_page' => 10, // 要显示的项目数
+                            'posts_per_page' => 8, // 要显示的项目数
                             'post__not_in'   => array( get_the_ID() ), // 排除当前帖子
                             'no_found_rows'  => true, 
                         );
