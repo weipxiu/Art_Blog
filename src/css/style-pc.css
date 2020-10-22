@@ -2799,7 +2799,7 @@ ul.bon-1 li:nth-of-type(2) {
   width: auto !important;
   overflow: hidden;
   border-radius: 0;
-  padding: 0 30px;
+  padding: 0 30px 10px;
   float: none;
 }
 
@@ -5921,9 +5921,6 @@ transition: opacity 0.35s!important;
 /* 首页3d轩枫导航end */
 
 /* 留言板寄语start */
-#leaving_message #details{
-  padding:0 30px;
-}
 .leaving_message h1{
   text-align: center;
   color: #666;
