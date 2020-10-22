@@ -5663,7 +5663,6 @@ transition: opacity 0.35s!important;
 /* 首页3d轩枫导航start */
 
 .mod-index__feature {
-  display: block !important;
   width: 100%;
 }
 

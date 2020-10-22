@@ -16,13 +16,14 @@
 <meta name="format-detection" content="telephone=no"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-
+<!-- 是否强制资源https加载 -->
+<?php if (get_option('weipxiu_options')['switch_https'] == 'on'){ ?>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<?php } ?>
 <!-- Pre-parsing is currently on the site -->
 <meta http-equiv="x-dns-prefetch-control" content="on">
-
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('weipxiu_options')['label_logo']; ?>" />
 <link rel="dns-prefetch" href="<?php echo home_url(); ?>">
-
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.css">
 <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="<?php bloginfo('template_url'); ?>/css/style-pc.css">
 <link rel="stylesheet" type="text/css" media="screen and (max-width:767px)" href="<?php bloginfo('template_url'); ?>/css/style-ios.css">

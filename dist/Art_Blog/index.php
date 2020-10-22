@@ -70,7 +70,7 @@
 
 		<div class="continar-left" id="ajax_centent">
 			<!-- PC正文3d导航start -->
-			<div class="mod-index__feature" style="display: none">
+			<div class="mod-index__feature">
 				<div class="img_list_6pic ui-clearfix">
 					<div class="img_box">
 						<a href="/1212.html" target="_blank">
@@ -245,11 +245,6 @@
 							</h3>
 							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
 							<p class="l">
-								<!-- <span>
-											<a href="<?php /*the_permalink(); */?> ">
-												<i class="">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
-											</a>
-										</span> -->
 								<span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
 								<span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
 								<span>
@@ -346,177 +341,171 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript">
-/**
- * @license
- * 首页js
- */
-$(function () {
-    //var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
-    var domain_name = window.location.protocol + "//" + window.location.host;
-    //网站预加载运动start
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        //IE浏览器屏蔽部分动效start
-        $(".mod-index__feature .img_list_6pic a").removeClass("word_display");
-        if (!!window.ActiveXObject || "ActiveXObject" in window) {
-            console.log("当前浏览器IE内核，部分效果不可展现！")
-        } else {
-            //首页轮播下sd导航start
-            $("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
-                $(this).addClass("word_display")
-            })
-            $("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
-                $(this).removeClass("word_display")
-            })
-            //首页轮播下sd导航end
-        }
-        //IE浏览器屏蔽部分动效end
-
-        // 桌面提醒功能
-        var set_desktop = function () {
-            if (window.Notification) {
-                var popNotice = function () {
-                    if (Notification.permission == "granted") {
-                        var notification = new Notification("友情提示：", {
-                            body: '欢迎点击立即加入"Vue.js3.0技术栈"群互相学习、交流！',
-                            icon: '/wp-content/themes/Art_Blog/images/notification.png'
-                        })
-
-                        notification.onclick = function () {
-                            window.open("https://jq.qq.com/?_wv=1027&k=aU2c7W76")
-                            notification.close();
-                        }
-                        layer.ready(function(){
-                            if (localStorage.getItem("off_y") == 1) {
-                                new Audio(
-                                    'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=您有一条新的消息，请注意查收！'
-                                ).play();
-                            }
-                        }) 
-                    }
-                }
-
-                var desktop = function () {
-                    if (Notification.permission == "granted") {
-                        popNotice();
-                    } else if (Notification.permission != "denied") {
-                        Notification.requestPermission(function (permission) {
-                            popNotice();
-                        })
-                    }
-                }
-                desktop();
-            } // else {
-            //     alert('浏览器不支持Notification');    
-            // }
-        }
-        //set_desktop();
-        if (domain_name.indexOf('weipxiu.com') != '-1') {
-            setTimeout(function () {
-                set_desktop();
-            }, 2000);
-        }
-        // 桌面提醒功能
-
-        // 控制台打印start
-        if (window.console && window.console.log) {
-            setTimeout(function () {
-                console.log("\n %c 当前主题由唯品秀前端技术博客免费提供 %c  © Jun Li  https://www.weipxiu.com  \n",
-                    "color:#FFFFFB;background:#1890ff;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
-                    "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;"
-                );
-            }, 1500);
-        }
-        // 控制台打印end
-
-        $(".buffer").fadeOut();
-        $(".buffer .bar").hide();
-
-    } else {
-        //排除PC端执行下列代码
-        //移动端只在首页展示sidebar.php模块
-        $(".continar-right").show();
-
-        //swiper核心三要素：依赖swiper.js、swiper.css，外面父亲盒子高度
-        var swiper1 = new Swiper('.swiper-container1', {
-            pagination: '.swiper-pagination', //是否出现小圆点
-            //nextButton: '.swiper-button-next',//上一张
-            //prevButton: '.swiper-button-prev',//下一张
-            slidesPerView: 1, //每一屏幕排几张图片
-            effect: 'slide', //轮播方式，左右切换
-            paginationClickable: true, //小圆点是否可点击
-            spaceBetween: 0, //图片间距
-            autoplay: 4500, //自动轮播时间
-            speed: 500, //切换一张所需要的时间
-            // keyboardControl: true, //键盘左右按钮切换
-            // mousewheelControl: false, //鼠标滚轮切换
-            autoplayDisableOnInteraction: false, //表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
-            loop: true //循环
-        });
-        //navigator.vibrate([1000, 500, 1000]);
-        //手机震动功能，里面是数组-震动时间，第二个为间隔时间
-    }
-    //网站预加载运动end
-
-    //修改邮件订阅表单类型
-    $(".wpm_form .wpm_email input").attr("type", "email")
-
-    // 当窗口改变时候start
-    $(window).resize(function () {
-        if ($(document).width() >= 1200) {
-            if (window.location.href == domain_name || window.location.href == domain_name + '/') {
-                $("#js_banner").show();
-            }
-        } else {
-
-        }
-    });
-		// 当窗口改变时候end
-		
-		// pc轮播
-		if("<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') == -1){
-					layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{
-					skin: 'layui',
-					title:"提示",
-					closeBtn: 1, //是否展示关闭x按钮
-					anim: 4,
-					btn: ['确认'],
-					yes:function(){
-						location.href="https://github.com/weipxiu/Art_Blog"
+	$(function () {
+			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
+			var domain_name = window.location.protocol + "//" + window.location.host;
+			//网站预加载运动start
+			if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					//IE浏览器屏蔽部分动效start
+					$(".mod-index__feature .img_list_6pic a").removeClass("word_display");
+					if (!!window.ActiveXObject || "ActiveXObject" in window) {
+							console.log("当前浏览器IE内核，部分效果不可展现！")
+					} else {
+							//首页轮播下sd导航start
+							$("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
+									$(this).addClass("word_display")
+							})
+							$("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
+									$(this).removeClass("word_display")
+							})
+							//首页轮播下sd导航end
 					}
-				})
+					//IE浏览器屏蔽部分动效end
+
+					// 桌面提醒功能
+					var set_desktop = function () {
+							if (window.Notification) {
+									var popNotice = function () {
+											if (Notification.permission == "granted") {
+													var notification = new Notification("友情提示：", {
+															body: '欢迎点击立即加入"Vue.js3.0技术栈"群互相学习、交流！',
+															icon: '/wp-content/themes/Art_Blog/images/notification.png'
+													})
+
+													notification.onclick = function () {
+															window.open("https://jq.qq.com/?_wv=1027&k=aU2c7W76")
+															notification.close();
+													}
+													layer.ready(function(){
+															if (localStorage.getItem("off_y") == 1) {
+																	new Audio(
+																			'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=您有一条新的消息，请注意查收！'
+																	).play();
+															}
+													}) 
+											}
+									}
+
+									var desktop = function () {
+											if (Notification.permission == "granted") {
+													popNotice();
+											} else if (Notification.permission != "denied") {
+													Notification.requestPermission(function (permission) {
+															popNotice();
+													})
+											}
+									}
+									desktop();
+							}
+					}
+					//set_desktop();
+					if (domain_name.indexOf('weipxiu.com') != '-1') {
+							setTimeout(function () {
+									set_desktop();
+							}, 2000);
+					}
+					// 桌面提醒功能
+
+					// 控制台打印start
+					if (window.console && window.console.log) {
+							setTimeout(function () {
+									console.log("\n %c 当前主题由唯品秀前端技术博客免费提供 %c  © Jun Li  https://www.weipxiu.com  \n",
+											"color:#FFFFFB;background:#1890ff;padding:5px 0;border-radius:.5rem 0 0 .5rem;",
+											"color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;"
+									);
+							}, 1500);
+					}
+					// 控制台打印end
+
+					$(".buffer").fadeOut();
+					$(".buffer .bar").hide();
+
+			} else {
+					//排除PC端执行下列代码
+					//移动端只在首页展示sidebar.php模块
+					$(".continar-right").show();
+
+					//swiper核心三要素：依赖swiper.js、swiper.css，外面父亲盒子高度
+					var swiper1 = new Swiper('.swiper-container1', {
+							pagination: '.swiper-pagination', //是否出现小圆点
+							//nextButton: '.swiper-button-next',//上一张
+							//prevButton: '.swiper-button-prev',//下一张
+							slidesPerView: 1, //每一屏幕排几张图片
+							effect: 'slide', //轮播方式，左右切换
+							paginationClickable: true, //小圆点是否可点击
+							spaceBetween: 0, //图片间距
+							autoplay: 4500, //自动轮播时间
+							speed: 500, //切换一张所需要的时间
+							// keyboardControl: true, //键盘左右按钮切换
+							// mousewheelControl: false, //鼠标滚轮切换
+							autoplayDisableOnInteraction: false, //表示用户操作swiper之后，是否禁止autoplay。默认为 true：停止。false是播放
+							loop: true //循环
+					});
+					//navigator.vibrate([1000, 500, 1000]);
+					//手机震动功能，里面是数组-震动时间，第二个为间隔时间
 			}
-			//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-			var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
-			var randomNum = Math.floor(Math.random() * 3);
-			var bannerData = [];
+			//网站预加载运动end
 
-<?php
-	if (get_option('weipxiu_options')['pc_banner']) {
-	?>
-		bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>;
-		var banner =  new Banner({
-				banner: '#banner_img',
-				index: 0,
-				autoplay: 8000,
-				width: 1200,
-				height: 300,
-				images: bannerData,
-				preloadImages: true, // 预加载所有图片
+			//修改邮件订阅表单类型
+			$(".wpm_form .wpm_email input").attr("type", "email")
 
-				// 分页及控制
-				pagination: '.js_banner_nav', // 分页dom
-				paginationClick: true, // 分页是否可点击
-				prevButton: '.js_banner_prev', // 下一张dom
-				nextButton: '.js_banner_next', // 上一张dom
-				Effects: {
-					'prev': 'turnEffect',
-					'next': Number(<?php echo get_option('weipxiu_options')['wheel_banner']; ?>) == ''?flippingMode[parseInt(Math.random()*(5),10)]:flippingMode[<?php echo get_option('weipxiu_options')['wheel_banner']; ?>-1],
-					'navi': 'pageEffect'
-				},
-		});
+			// 当窗口改变时候start
+			$(window).resize(function () {
+					if ($(document).width() >= 1200) {
+							if (window.location.href == domain_name || window.location.href == domain_name + '/') {
+									$("#js_banner").show();
+							}
+					} else {
+
+					}
+			});
+			// 当窗口改变时候end
+			
+			// pc轮播
+			if("<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') == -1){
+						layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{
+						skin: 'layui',
+						title:"提示",
+						closeBtn: 1, //是否展示关闭x按钮
+						anim: 4,
+						btn: ['确认'],
+						yes:function(){
+							location.href="https://github.com/weipxiu/Art_Blog"
+						}
+					})
+				}
+				//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+				var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
+				var randomNum = Math.floor(Math.random() * 3);
+				var bannerData = [];
+
 	<?php
-	}
-?>
-})
+		if (get_option('weipxiu_options')['pc_banner']) {
+		?>
+			bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>;
+			var banner =  new Banner({
+					banner: '#banner_img',
+					index: 0,
+					autoplay: 8000,
+					width: 1200,
+					height: 300,
+					images: bannerData,
+					preloadImages: true, // 预加载所有图片
+
+					// 分页及控制
+					pagination: '.js_banner_nav', // 分页dom
+					paginationClick: true, // 分页是否可点击
+					prevButton: '.js_banner_prev', // 下一张dom
+					nextButton: '.js_banner_next', // 上一张dom
+					Effects: {
+						'prev': 'turnEffect',
+						'next': Number(<?php echo get_option('weipxiu_options')['wheel_banner']; ?>) == ''?flippingMode[parseInt(Math.random()*(5),10)]:flippingMode[<?php echo get_option('weipxiu_options')['wheel_banner']; ?>-1],
+						'navi': 'pageEffect'
+					},
+			});
+		<?php
+		}
+	?>
+	})
 </script>
 </html>
