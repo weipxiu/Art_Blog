@@ -1688,9 +1688,6 @@ h1.title {
   margin: 0px 5px;
   color: #666;
 }
-.article-items > span.recommend {
-  display: none;
-}
 .article-items span span {
   margin: 0;
   font-size: 12px;
@@ -2417,7 +2414,7 @@ div.jy p {
   clear: both;
 }
 .pages,
-.read_url {
+.read_url,.recommend,#reward-popup {
   display: none;
 }
 .wp-pagenavi a,

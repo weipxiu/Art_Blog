@@ -7,6 +7,37 @@ register_nav_menus(array(
     'MainNav' => '主导航',
 ));
 
+//RemoveOpenSans禁用谷歌字体start
+if (!function_exists('remove_wp_open_sans')) :
+    function remove_wp_open_sans() {
+        wp_deregister_style( 'open-sans' );
+        wp_register_style( 'open-sans', false );
+    }
+    add_action('wp_enqueue_scripts', 'remove_wp_open_sans');
+endif;
+
+function remove_open_sans() {    
+    wp_deregister_style( 'open-sans' );    
+    wp_register_style( 'open-sans', false );    
+    wp_enqueue_style('open-sans','');    
+}    
+add_action( 'init', 'remove_open_sans' );
+//RemoveOpenSans禁用谷歌字体end
+
+// 后台Ctrl+Enter提交评论回复
+add_action('admin_footer', '_admin_comment_ctrlenter');
+function _admin_comment_ctrlenter() {
+	echo '<script type="text/javascript">
+        jQuery(document).ready(function($){
+            $("textarea").keypress(function(e){
+                if(e.ctrlKey&&e.which==13||e.which==10){
+                    $("#replybtn").click();
+                }
+            });
+        });
+    </script>';
+};
+
 //注册小工具
 if ( function_exists('register_sidebar') )
 register_sidebar(array(
@@ -257,6 +288,7 @@ function e_secret($atts, $content = null) { //输入密码查看
         return '<form class="e-secret" action="' . get_permalink() . '" method="post" name="e-secret"><label>请输入密码：</label><input type="password" name="e_secret_key" class="euc-y-i" maxlength="50"><input type="submit" class="euc-y-s" value="确定"><div class="euc-clear"></div></form>';
     }
 }
+
 //取消内容转义
 remove_filter('the_content', 'wptexturize');
 //取消摘要转义
@@ -289,7 +321,6 @@ remove_action( 'wp_print_styles' , 'print_emoji_styles');
 remove_filter( 'the_content_feed' , 'wp_staticize_emoji');
 remove_filter( 'comment_text_rss' , 'wp_staticize_emoji');
 remove_filter( 'wp_mail' , 'wp_staticize_emoji_for_email');
-add_filter( 'emoji_svg_url', create_function( '', 'return false;' ) );//禁用emoji预解析
 
 add_filter('pre_option_link_manager_enabled', '__return_true'); //恢复wordpress删除的友情链接功能
 add_shortcode('secret', 'e_secret');
@@ -305,7 +336,7 @@ remove_action('publish_future_post', 'check_and_publish_future_post', 10, 1);
 remove_action('wp_head', 'noindex', 1);
 remove_action('wp_head', 'wp_print_styles', 8); //载入css
 remove_action('wp_head', 'wp_print_head_scripts', 9);
-//remove_action('wp_head', 'wp_generator'); //移除WordPress版本
+remove_action('wp_head', 'wp_generator'); //移除WordPress版本
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_footer', 'wp_print_footer_scripts');
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);

@@ -3180,6 +3180,7 @@ canvas,
 .map,
 .js_reward,
 .article-items .recommend,
+#reward-popup,
 #default-searchbox {
   display: none;
 }

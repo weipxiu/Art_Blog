@@ -34,8 +34,6 @@
             this.commentStyle();
             // 窗口改变事件
             this.winResize();
-            // 文章打赏
-            this.articleReward();
             // 终端独立事件方法
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 // 移动端执行函数
@@ -43,6 +41,8 @@
             } else {
                 // pc端执行函数
                 this.pcFnAll();
+                // 文章打赏
+                this.articleReward();
                 // 侧边栏视频播放器
                 this.playVideo();
                 // 文字钢琴效果
