@@ -721,7 +721,7 @@ img {
   transition: -webkit-transform 0.25s;
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   top: 0;
   bottom: 0;
@@ -1126,9 +1126,8 @@ ul.post-categories li:first-child {
 }
 .continar-left p.l span,
 .continar-left p.l a {
-  font-size: 0.2rem;
+  font-size: 0.24rem;
   color: #d0d0d0 !important;
-  line-height: 0.32rem;
   vertical-align: middle;
 }
 .continar-left p.l .iconfont {
@@ -1138,9 +1137,14 @@ ul.post-categories li:first-child {
   vertical-align: middle;
 }
 .continar-left p.l .icon-icon-eyes {
-  transform: scale(0.9);
+  transform: scale(0.8);
   display: inline-block;
   margin-right: 0;
+  margin-bottom: -1px;
+}
+.continar-left p.l .icon-liuyan1 {
+  display: inline-block;
+  margin-bottom: -1px;
 }
 .text_right > h2 + img {
   max-width: 1.8rem;
@@ -1489,7 +1493,6 @@ div.com-art ul li {
 /*底部区域start*/
 
 .footer {
-  display: none;
   clear: both;
   padding: 0.2rem 0;
   font-size: 0.24rem;

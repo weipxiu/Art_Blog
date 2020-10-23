@@ -725,11 +725,11 @@
         // 移动端执行函数
         mobileFnAll: function () {
             // 移动端固定导航fixed-bug
-            setTimeout(function () {
-                var objec = $('.footer').detach();
-                $("body > .continar").append(objec);
-                $(".footer").css({ "display": "block" });
-            }, 500)
+            // setTimeout(function () {
+            //     var objec = $('.footer').detach();
+            //     $("body > .continar").append(objec);
+            //     $(".footer").css({ "display": "block" });
+            // }, 500)
 
             //特色图片懒加载，移动端需要设置滚动事件，在资源完全加载后执行
             window.onload = function () {

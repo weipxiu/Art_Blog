@@ -246,22 +246,14 @@
 							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
 							<p class="l">
 								<span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
-								<span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
-								<span>
-									<a href="<?php the_permalink(); ?> ">
-										<i class="iconfont icon-icon-eyes"></i><?php echo getPostViews(get_the_ID()); ?>
-									</a>
+								<span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><span><?php the_time('Y-m-d D') ?></span>
 								</span>
-								<span class="comm">
-									<a href="<?php the_permalink(); ?> "><i class="iconfont icon-liuyan1"></i><?php echo number_format_i18n(get_comments_number()); ?>
-									</a>
-								</span>
-								<span class="post-like">
-									<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-xingxing"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
+								<span><a href="<?php the_permalink(); ?> "><i class="iconfont icon-icon-eyes"></i><span><?php echo getPostViews(get_the_ID()); ?></span></a></span>
+								<span class="comm"><a href="<?php the_permalink(); ?> "><i class="iconfont icon-liuyan1"></i><span><?php echo number_format_i18n(get_comments_number()); ?></span></a></span>
+								<span class="post-like"><a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-xingxing"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
 									} ?></span>
 									</a>
 								</span>
-								<span class="r"></span>
 							</p>
 							<?php if (is_sticky()) echo '<em><a href="">顶</a></em>'; ?>
 						</div>

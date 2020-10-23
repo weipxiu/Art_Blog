@@ -1493,7 +1493,7 @@ header.hover #Logo > img{
 /* 主题内容区域start */
 .continar {
   width: 1200px;
-  margin: 86px auto 40px;
+  margin: 86px auto 25px;
   min-height: calc(100% - 247px);
   overflow: hidden;
 }
@@ -2708,12 +2708,11 @@ div.com-art ul li {
 }
 
 .continar-left p.l > span {
-  margin: 0 2px;
+  margin: 0 5px;
 }
 
 .continar-left p.l > span.p_time {
   display: inline-block;
-  margin-right: 15px;
 }
 
 .continar-left p.l > span.i_time {
@@ -2721,9 +2720,15 @@ div.com-art ul li {
 }
 
 .continar-left p.l .iconfont {
-  margin-right: 3px;
+  margin-right: 5px;
   font-size: 13px;
   color: #e0e0e0;
+}
+
+.continar-left p.l .icon-icon-eyes{
+  display: inline-block;
+  transform: scale(0.9);
+  margin-right: 2px;
 }
 
 .continar-left p.l * {
