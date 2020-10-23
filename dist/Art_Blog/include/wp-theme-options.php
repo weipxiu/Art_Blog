@@ -472,7 +472,7 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="rotateNav_content">3D导航详细数据：</label>
           <div class="fr right-wrap">
             <textarea id="rotateNav_content" name="rotateNav_content" rows="10" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['rotateNav_content']; ?></textarea>
-            <span class="warn" style="display:block">*PC轮播下方3D导航，规则为：左侧一张大图，右侧分上下两栏，每个栏目4个小模块，每个栏目其中任意(仅)一个模块可指定为较大图，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/pc_slide.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
+            <span class="warn" style="display:block">*PC轮播下方3D导航，规则为：左侧一张大图，右侧分上下两栏，每个栏目4个小模块，每个栏目其中任意(仅)一个模块可指定为较大图，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/nav.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
           </div>
         </div>
 

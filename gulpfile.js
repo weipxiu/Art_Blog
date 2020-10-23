@@ -72,7 +72,7 @@ gulp.task('miniHtml', () => {
 
 // 压缩css
 gulp.task("minCss", function () {
-    gulp.src("src/css/*.css")
+    return gulp.src("src/css/*.css")
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
         .pipe(gulp_minify_css({
@@ -111,8 +111,12 @@ gulp.task("imageMin", function () {
 //ES6转换转ES5(babel-v8版本)、代码合并
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
+    //特例
+    gulp.src(["src/js/rem.js", 'src/js/share.js', "src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js", "src/js/jquery.lazyload.js"])
+        .pipe(gulp.dest(target + "/js"))
+
     //公共
-    gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
+    return gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/preset-env']
@@ -120,19 +124,14 @@ gulp.task("jsConcat", function () {
         .pipe(concat("main_min.js"))
         .pipe(scriptmin()) //在合并的时候压缩js
         .pipe(gulp.dest(target + "/js"))
-
-    //特例
-    return gulp.src(["src/js/rem.js", 'src/js/share.js', "src/js/jquery-2.1.4.min.js","src/js/swiper.min.js", "src/js/jquery.lazyload.js"])
-        .pipe(gulp.dest(target + "/js"))
 })
 
 //打包zip
 gulp.task('compressZip', function () {
-    setTimeout(function(){
-        return gulp.src(['./dist/**'], { base: '.', follow: true })
+    //,{ base: '.', follow: true }压缩当前dist文件夹
+    return gulp.src(['./dist/**'])
         .pipe(zip('Art_Blog.zip'))
         .pipe(gulp.dest('./'));
-    },2000)
 });
 
 //初始化browserSync
@@ -145,7 +144,7 @@ gulp.task('compressZip', function () {
 
 //监听文件是否发生改变
 gulp.task("Watch", function () {
-    gulp.watch(['./src/*.css','./src/css/**'], ['minCss']);
+    gulp.watch(['./src/*.css', './src/css/**'], ['minCss']);
     gulp.watch(['./src/**/**.js'], ['jsConcat']);
     gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);
 })
