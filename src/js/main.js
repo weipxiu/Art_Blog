@@ -6,12 +6,24 @@
     function App() { }
     App.prototype = {
         init: function () {
+            // 终端独立事件方法
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                //移动端适配
+                this.mobileAdaptation();
+                // 移动端执行函数
+                this.mobileFnAll();
+            } else {
+                // pc端执行函数
+                this.pcFnAll();
+                // 文章详情页打赏
+                this.articleReward();
+                // 随机文章列表钢琴效果
+                this.stringEffect();
+            }
             //头部3D导航DOM改造
             this.navReform();
             // 3D导航跳动音符
             this.navPianoEffect();
-            //移动端适配
-            this.mobileAdaptation();
             //文章分类没有资源时候404提示
             this.isNotResources();
             //网站运行时间
@@ -36,18 +48,6 @@
             this.commentStyle();
             // 窗口改变事件
             this.winResize();
-            // 终端独立事件方法
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                // 移动端执行函数
-                this.mobileFnAll();
-            } else {
-                // pc端执行函数
-                this.pcFnAll();
-                // 文章打赏
-                this.articleReward();
-                // 文字钢琴效果
-                this.stringEffect();
-            }
         },
         // 头部3D导航DOM改造
         navReform: function () {
@@ -478,7 +478,7 @@
                     }, 500)
                 });
         },
-        // 文章打赏
+        // 文章详情页打赏
         articleReward: function () {
             //文章内页打赏
             $(".js_reward").click(function () {
@@ -500,7 +500,7 @@
                 });
             });
         },
-        // 文字钢琴效果
+        // 随机文章列表钢琴效果
         stringEffect: function () {
             // 换算字符串长度所占字符
             String.prototype.gblen = function () {
