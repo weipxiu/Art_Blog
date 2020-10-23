@@ -49,7 +49,7 @@
                 <tr>
                   <td>
                     <div class="telNo" id="txtTelNo">&nbsp;<?php 
-                      echo get_option('weipxiu_options')['phone-number'];
+                      echo trim(get_option('weipxiu_options')['phone-number']);
                       ?>
                     </div>
                   </td>
@@ -64,7 +64,7 @@
                     <p class="wangwang-names" style="margin-bottom:7px">&nbsp;QQ在线交流</p>
                     <div class="qqSmall">
                       <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
-                      echo get_option('weipxiu_options')['QQ-number'];
+                      echo trim(get_option('weipxiu_options')['QQ-number']);
                       ?>&site=qq&menu=yes">
                         <img width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.png" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
@@ -77,7 +77,7 @@
                     <p class="wangwang-names">&nbsp;旺旺在线</p>
                     <div class="qqSmall">
                       <a target="_blank" href="<?php 
-                      echo get_option('weipxiu_options')['wangwang-link'];
+                      echo trim(get_option('weipxiu_options')['wangwang-link']);
                       ?>"style="position: relative; overflow: hidden;">
                         <img src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
                       </a>
@@ -93,7 +93,7 @@
                   <td>
                     <div class="qq-kefu-fun-box">
                       <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;">
-                        <img src="<?php echo get_option('weipxiu_options')['weChat-number'];?>" alt="">
+                        <img src="<?php echo trim(get_option('weipxiu_options')['weChat-number']); ?>" alt="">
                       </a>
                       <a class="qq-kefu-backUp-2" id="qq-kefu-backUp" href="javascript:;"></a>
                       <div class="qqkefu-qrcode-box" pos="2">

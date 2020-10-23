@@ -3234,39 +3234,6 @@ canvas,
   display: none;
 }
 
-#cyHotusers .hotusers-header {
-  display: none !important;
-}
-
-#cyHotusers .hotusers-list-item {
-  height: auto !important;
-}
-
-#cyHotusers .hotusers-list {
-  -webkit-margin-before: 1em !important;
-  -webkit-margin-after: 0em !important;
-}
-
-#cyReping a {
-  color: #333 !important;
-}
-
-#cyReping .reping-list .reping-nickname {
-  color: #333 !important;
-}
-
-#cyReping .list-item div:nth-of-type(1) > img {
-  border-radius: 100% !important;
-  width: 40px !important;
-  height: 40px !important;
-}
-
-#cyHotusers .hotusers-list .hotusers-list-item img {
-  border-radius: 100% !important;
-  width: 40px !important;
-  height: 40px !important;
-}
-
 #domo {
   display: block;
   width: 2rem;

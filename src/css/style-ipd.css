@@ -2847,33 +2847,7 @@ canvas,
 #player > span.cover {
   display: block;
 }
-#curriculu {
-  display: none;
-}
-#cyHotusers .hotusers-header {
-  display: none !important;
-}
-#cyHotusers .hotusers-list-item {
-  height: auto !important;
-}
 
-#cyReping a {
-  color: #fe5187 !important;
-}
-#cyReping .reping-list .reping-nickname {
-  color: #1890ff !important;
-  color: var(--color, #1890ff);
-}
-#cyReping .list-item div:nth-of-type(1) > img {
-  border-radius: 100% !important;
-  width: 40px !important;
-  height: 40px !important;
-}
-#cyHotusers .hotusers-list .hotusers-list-item img {
-  border-radius: 100% !important;
-  width: 40px !important;
-  height: 40px !important;
-}
 #domo {
   display: block;
   width: 2rem;

@@ -1,5 +1,5 @@
 body.login {
-    background-image: url(/wp-content/themes/Art_Blog/images/login_bg.jpg);
+    background-image: url(../images/login_bg.jpg);
     background-position: 0 0;
     height: 100%;
     width: 100%;
@@ -9,7 +9,7 @@ body.login {
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
-    zoom: 1
+    zoom: 1;
 }
 
 #login h1 {
@@ -18,7 +18,7 @@ body.login {
 
 .login h1:before {
     content: "";
-    background: url(/wp-content/themes/Art_Blog/images/login_logo.png) no-repeat;
+    background: url(../images/login_logo.png) no-repeat;
     width: 140px;
     height: 70px;
     display: inline-block;

@@ -5042,78 +5042,6 @@ box-shadow:0 5px 0 rgba(0,0,0,0.1);
 
 /*首页弹窗end*/
 
-/*畅言评论*/
-
-#SOHUCS #SOHU_MAIN .module-cmt-header .section-title-w,
-#SOHUCS #SOHU_MAIN .module-cmt-header .section-cbox-w .block-head-w {
-  z-index: 1 !important;
-}
-
-#cyHotusers .hotusers-header {
-  display: none !important;
-}
-
-#cyHotusers .hotusers-list-item {
-  height: auto !important;
-  padding: 0 !important;
-}
-
-#cyHotusers {
-  width: 335px !important;
-}
-
-#cyReping a {
-  color: #666 !important;
-  font-size: 13px;
-}
-
-#cyReping .reping-list .reping-avatar {
-  margin-top: 5px;
-}
-
-#cyReping .reping-list .reping-nickname {
-  color: #333 !important;
-}
-
-#cyReping .list-item div:nth-of-type(1) > img {
-  border-radius: 100% !important;
-  width: 40px !important;
-  height: 40px !important;
-}
-
-#cyHotusers .hotusers-list .hotusers-list-item img {
-  border-radius: 100% !important;
-  width: 40px !important;
-  height: 40px !important;
-}
-
-#cyReping .reping-list .reping-content,
-#cyReping .reping-list .reping-nickname {
-  font-size: 13px;
-}
-
-#cyReping a:hover {
-  text-decoration: underline;
-  color: #000 !important;
-}
-
-#cyReping .reping-list .reping-content {
-  margin: 0 0 5px;
-  display: block;
-  border-bottom: 1px dotted #ccc;
-  padding: 0 0 4px !important;
-}
-
-#cyReping .reping-list .list-item {
-  border-bottom: 1px solid #ccc !important;
-}
-
-#cyReping .reping-list .list-item:last-child {
-  border-bottom: none !important;
-}
-
-/*畅言评论end*/
-
 /*用户中心start*/
 
 .head_user_b {
@@ -5858,6 +5786,15 @@ transition: opacity 0.35s!important;
 .mod-index__feature .small_pic_wrap .txt_bg06 {
   background-position: 0 -514px;
 }
+
+/* 大图 */
+.mod-index__feature .small_pic_wrap_long .txt_bg01 {
+  background-position: 0 -210px;
+}
+
+/* .mod-index__feature .small_pic_wrap_long .txt_bg01 {
+  background-position: 0 -315px;
+} */
 
 .mod-index__feature .img_list_6pic .carousel_pic_wrap .carousel_small_str,
 .mod-index__feature .img_list_6pic .word_display .carousel_small_pic,

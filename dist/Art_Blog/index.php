@@ -20,7 +20,7 @@
 	<?php get_header(); ?>
 	<!-- pc端轮播start -->
 	<?php
-		if (get_option('weipxiu_options')['pc_banner']) {
+		if (trim(get_option('weipxiu_options')['pc_banner'])) {
 		?>
 		<section class="mod-banner" id="js_banner">
 			<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
@@ -50,7 +50,7 @@
 		
 			<!--移动端轮播start-->
 			<?php
-			if (get_option('weipxiu_options')['mobile_banner']) {
+			if (trim(get_option('weipxiu_options')['mobile_banner'])) {
 				?>
 				<div id="mobil">
 					<div class="swiper-container1">
@@ -72,72 +72,43 @@
 			<!-- PC正文3d导航start -->
 			<div class="mod-index__feature">
 				<div class="img_list_6pic ui-clearfix">
-					<div class="img_box">
-						<a href="/1212.html" target="_blank">
-							<img src="<?php bloginfo('template_url'); ?>/images/record.jpg" width="280" height="180" alt="<?php echo get_bloginfo('name'); ?>" class="ui-d-b">
-							<div class="img_bg"></div>
-							<div class="img_txt">
-								<p class="img_title">有些话不一定要说出来 | 但一定要记录在某个地方</p>
-							</div>
-							<i class="light"></i>
-						</a>
-					</div>
-					<a href="/404.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
-						<div class="carousel_small_str txt_bg01">
-							<h3 class="img_txt_title">404</h3>
-							<p class="img_p">路<br>在何方</p>
-						</div>
-						<img class="carousel_small_pic" width="110" height="85" alt="<?php echo get_bloginfo('name'); ?>" src="<?php bloginfo('template_url'); ?>/images/404.jpg">
-					</a>
-					<a href="/817.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
-						<div class="carousel_small_str txt_bg02">
-							<h3 class="img_txt_title">绘画板</h3>
-							<p class="img_p">描绘<br>在故事里的风景</p>
-						</div>
-						<img class="carousel_small_pic" width="110" height="85" alt="<?php echo get_bloginfo('name'); ?>" src="<?php bloginfo('template_url'); ?>/images/painting.jpg">
-					</a>
-					<a href="/802.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long word_display" target="_blank">
-						<div class="carousel_small_str txt_bg03">
-							<h3 class="img_txt_title">千里共良宵</h3>
-							<p class="img_p">岁月<br>在电波中流淌</p>
-						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/happy_night.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
-					</a>
-					<a href="/2075.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
-						<div class="carousel_small_str txt_bg02">
-							<h3 class="img_txt_title">忙碌</h3>
-							<p class="img_p">在喧闹<br>又孤独的城市</p>
-						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/be_busy.jpg" alt="<?php echo get_bloginfo('name'); ?>">
-					</a>
-					<a href="/time-machine" target="_blank" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_long">
-						<div class="carousel_small_str txt_bg04">
-							<h3 class="img_txt_title">MV</h3>
-							<p class="img_p">时光<br>在画面里穿梭</p>
-						</div>
-						<img class="carousel_small_pic" src="<?php bloginfo('template_url'); ?>/images/time_shuttle.jpg" width="160" height="85" alt="<?php echo get_bloginfo('name'); ?>">
-					</a>
-					<a href="/609.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display" target="_blank">
-						<div class="carousel_small_str txt_bg05">
-							<h3 class="img_txt_title">Music</h3>
-							<p class="img_p">心情<br>在音乐中释放</p>
-						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/mood_music.jpg" alt="<?php echo get_bloginfo('name'); ?>">
-					</a>
-					<a href="/913.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
-						<div class="carousel_small_str txt_bg06">
-							<h3 class="img_txt_title">情人节</h3>
-							<p class="img_p">一个单身<br>程序员的史诗</p>
-						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/valentine_day.jpg" alt="<?php echo get_bloginfo('name'); ?>">
-					</a>
-					<a href="/2166.html" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small" target="_blank">
-						<div class="carousel_small_str txt_bg06">
-							<h3 class="img_txt_title">直男癌</h3>
-							<p class="img_p">花花世界<br>谁在鄙视直男癌</p>
-						</div>
-						<img class="carousel_small_pic" width="110" height="85" src="<?php bloginfo('template_url'); ?>/images/straight_man.jpg" alt="<?php echo get_bloginfo('name'); ?>">
-					</a>
+					<!-- 大图 -->
+					<?php
+					if (trim(get_option('weipxiu_options')['pc_rotateNav_content'])) {
+						?>
+							<?php $pc_rotateNav_content = json_decode(get_option('weipxiu_options')['pc_rotateNav_content'], true); ?>
+									<?php foreach ($pc_rotateNav_content as $item) { ?>
+										<div class="img_box">
+											<a href="<?php echo $item['link']?>" target="_blank">
+												<img src="<?php echo $item['url']?>" width="280" height="180" alt="<?php echo get_bloginfo('name'); ?>" class="ui-d-b">
+												<div class="img_bg"></div>
+												<div class="img_txt">
+													<p class="img_title"><?php echo $item['title']?></p>
+												</div>
+												<i class="light"></i>
+											</a>
+										</div>
+									<?php } ?>
+						<?php
+					}
+					?>
+					<!-- 分栏数据 -->
+					<?php
+					if (trim(get_option('weipxiu_options')['rotateNav_content'])) {
+						?>
+						<?php $rotateNav_content = json_decode(get_option('weipxiu_options')['rotateNav_content'], true); ?>
+							<?php foreach ($rotateNav_content as $item) { ?>
+							<a href="<?php echo $item['link']?>" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display <?php if ($item['isWide']) { ?>small_pic_wrap_long<?php }?>" target="_blank">
+								<div class="carousel_small_str txt_bg01">
+									<h3 class="img_txt_title"><?php echo $item['top']?></h3>
+									<p class="img_p"><?php echo $item['bot']?></p>
+								</div>
+								<img class="carousel_small_pic" width="<?php $wide=$item['isWide'];if ($wide) {echo 160;} else {echo 110;}?>" height="85" src="<?php echo $item['url']?>">
+							</a>
+							<?php } ?>
+						<?php
+						}
+					?>
 				</div>
 			</div>
 			<!-- PC正文3d导航end -->
@@ -361,7 +332,7 @@
 											if (Notification.permission == "granted") {
 													var notification = new Notification("友情提示：", {
 															body: '欢迎点击立即加入"Vue.js3.0技术栈"群互相学习、交流！',
-															icon: '/wp-content/themes/Art_Blog/images/notification.png'
+															icon: '<?php bloginfo('template_url'); ?>/images/notification.png'
 													})
 
 													notification.onclick = function () {
@@ -472,7 +443,7 @@
 				var bannerData = [];
 
 	<?php
-		if (get_option('weipxiu_options')['pc_banner']) {
+		if (trim(get_option('weipxiu_options')['pc_banner'])) {
 		?>
 			bannerData = <?php echo get_option('weipxiu_options')['pc_banner'] ?>;
 			var banner =  new Banner({

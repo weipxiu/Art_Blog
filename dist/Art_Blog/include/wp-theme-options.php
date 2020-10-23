@@ -456,15 +456,31 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
           <div class="fr right-wrap">
             <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
-            <span class="warn" style="display:block">*多组数据用,分开，例如[{url:'图片地址1', link:'跳转地址1'},{url:'图片地址2', link:'跳转地址2'}]</span>
+            <span class="warn" style="display:block">*PC轮播图最佳尺寸：1200*300，多组数据用,分开，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/pc_slide.js">示例数据</a></span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap" for="pc_rotateNav_content">3D导航-左侧大图：</label>
+          <div class="fr right-wrap">
+            <textarea id="pc_rotateNav_content" name="pc_rotateNav_content" rows="5" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['pc_rotateNav_content']; ?></textarea>
+            <span class="warn" style="display:block">*PC轮播下方3D导航，指定左侧区域单图信息<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/nav_left.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap" for="rotateNav_content">3D导航详细数据：</label>
+          <div class="fr right-wrap">
+            <textarea id="rotateNav_content" name="rotateNav_content" rows="10" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['rotateNav_content']; ?></textarea>
+            <span class="warn" style="display:block">*PC轮播下方3D导航，规则为：左侧一张大图，右侧分上下两栏，每个栏目4个小模块，每个栏目其中任意(仅)一个模块可指定为较大图，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/pc_slide.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
           </div>
         </div>
 
         <div class="row clearfix">
           <label class="fl left-wrap" for="mobile_banner">移动端Banner图：</label>
           <div class="fr right-wrap">
-            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;可将下方示例json数据通过在线格式化后贴进来感受"><?php echo $a_options['mobile_banner']; ?></textarea>
-            <span class="warn" style="display:block">*强调，该处数据格式特殊，示例：[{"url":"https://www.weipxiu.com\/wp-content\/themes\/Art_Blog\/images\/banner1.png","link":"https://www.weipxiu.com\/video_2019.mp4"},{"url":"https://www.weipxiu.com\/wp-content\/themes\/Art_Blog\/images\/banner2.png","link":"https://www.weipxiu.com\/3355.html"}]；注意双引号以及在目录层级前需要加<span style="color:red">反斜杠\</span></span>
+            <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['mobile_banner']; ?></textarea>
+            <span class="warn" style="display:block">*强调，该处数据格式特殊，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/mobile_slide.json">示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span>，注意双引号以及在目录层级前需要加<span style="color:red">反斜杠\</span></span>
           </div>
         </div>
 
@@ -802,6 +818,8 @@ function themeoptions_page() {
       'custom_label' => $_POST['custom_label'],
       'pc_banner_default' => $_POST['pc_banner_default'],
       'pc_banner' => $_POST['pc_banner'],
+      'pc_rotateNav_content' => $_POST['pc_rotateNav_content'],
+      'rotateNav_content' => $_POST['rotateNav_content'],
       'mobile_banner' => $_POST['mobile_banner'],
       'QQ-number' => $_POST['QQ-number'],
       'wangwang-link' => $_POST['wangwang-link'],
