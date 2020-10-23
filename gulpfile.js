@@ -128,9 +128,11 @@ gulp.task("jsConcat", function () {
 
 //打包zip
 gulp.task('compressZip', function () {
-    return gulp.src('./dist/**')
+    setTimeout(function(){
+        return gulp.src(['./dist/**'], { base: '.', follow: true })
         .pipe(zip('Art_Blog.zip'))
         .pipe(gulp.dest('./'));
+    },2000)
 });
 
 //初始化browserSync
