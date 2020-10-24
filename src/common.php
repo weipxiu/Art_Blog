@@ -61,6 +61,28 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 }
 ?>
 
+<script>
+//移动端适配
+var sw = window.innerWidth;
+function setFontSize() {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		var pw = 750;
+		var f = 100 * sw / pw;
+		if (sw > 767 && sw < 1000) { f = 70 }
+		if (sw > 1000 && sw < 1200) { f = 100 }
+		document.documentElement.style.cssText = "font-size: "+f+'px'+";transtion: 0.15s";
+	}
+}
+setFontSize()
+// $(window).resize(function () {
+// 		if (window.innerWidth != sw) {
+// 				setTimeout(function () {
+// 						setFontSize()
+// 				},100)
+// 		}
+// });
+</script>
+
 <!-- 自定义样式 -->
 <style>
 	<?php echo get_option('weipxiu_options')['details_css']; ?>

@@ -76,7 +76,7 @@
 <!-- 头部end -->
 
 <!-- 移动端侧边栏导航start -->
-<div class="os-herder btn">
+<div class="os-herder">
 	<!-- <ul class="slide-left">
 		<li><a href="<?php echo home_url(); ?>"><i class="iconfont">&#xe632;</i>首页</a></li>
 		<li data-implement='element'>

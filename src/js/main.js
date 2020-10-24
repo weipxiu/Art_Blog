@@ -8,8 +8,6 @@
         init: function () {
             // 终端独立事件方法
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                //移动端适配
-                this.mobileAdaptation();
                 // 移动端执行函数
                 this.mobileFnAll();
             } else {
@@ -224,8 +222,7 @@
                 $(".site-search.active.pc").find('input').focus();
             });
             $(".xis,.navto-search a").click(function () {
-                $(this).find("i").toggleClass("icon-sousuo");
-                $(this).find("i").toggleClass("icon-guanbi3");
+                $(this).find("i").toggleClass("icon-sousuo icon-guanbi3");
             })
 
             $(".header").addClass("Top");
@@ -250,37 +247,6 @@
             if ($(".continar-left .article_not").length > 0) {
                 $("body").css({ "background": "#fff" });
             }
-        },
-        //移动端适配
-        mobileAdaptation: function () {
-            function defaultfont() {
-                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                    return false
-                }
-                var sw = $(window).width();
-                var pw = 750;
-                var f = 100 * sw / pw;
-                if (sw > 767 && sw < 1000) { f = 70 }
-                if (sw > 1000 && sw < 1200) { f = 100 }
-                $('html').css({
-                    'fontSize': f + 'px',
-                    'transtion': '0.35s'
-                })
-            }
-            setTimeout(function () {
-                defaultfont()
-            },
-                100);
-
-            var w_height = $(window).width();
-            $(window).resize(function () {
-                if ($(window).width() != w_height) {
-                    setTimeout(function () {
-                        defaultfont()
-                    },
-                        100)
-                }
-            });
         },
         //网站运行时间
         websiteRunningTime: function () {
@@ -747,14 +713,19 @@
             $(".btn_menu,.cover").on("touchstart", myFunction);
 
             function myFunction() {
-                $(".os-herder").get(0).classList.toggle("btn");
                 $(".cover").toggle();
                 if (obtn) {
+                    $(".os-herder").css({
+                        "transform": "translateX(0)"
+                    })
                     $(".continar,.os-headertop").css({
                         "transform": "translateX(3.2rem)"
                     })
                     $(".weipxiu_nav").attr('href', 'javascript:void(0);')
                 } else {
+                    $(".os-herder").css({
+                        "transform": "translateX(-3.21rem)"
+                    })
                     $(".continar,.os-headertop").css({
                         "transform": "translateX(0)"
                     })
@@ -762,12 +733,11 @@
                         $(".weipxiu_nav").attr('href', '/')
                     }, 800)
                 }
+                obtn = !obtn
                 if ($(".site-search").is(":visible")) {
                     $(".os-headertop .site-search").slideToggle(100);
-                    $(".xis").find("i").toggleClass("fa-search");
-                    $(".xis").find("i").toggleClass("fa-remove")
+                    $(".xis").find("i").toggleClass("fa-search fa-remove");
                 }
-                obtn = !obtn
             }
 
             //移动端禁止侧边导航上下滚动start
@@ -800,8 +770,7 @@
             //移动端头部下拉搜索start
             $(".xis").on("touchstart", function () {
                 $(".os-headertop .site-search").slideToggle(100);
-                $(this).find("i").toggleClass("fa-search");
-                $(this).find("i").toggleClass("fa-remove")
+                $(this).find("i").toggleClass("fa-search fa-remove");
             });
             //移动端头部下拉搜索end
 
@@ -811,8 +780,7 @@
                 $(this).parents('li').siblings('li').find('.iconfont_click').removeClass('icon-shangjiantou').addClass('icon-xiajiantou');
 
                 $(this).siblings(".slide_slect").stop().slideToggle();
-                $(this).parent().find(".iconfont_click").toggleClass("icon-xiajiantou");
-                $(this).parent().find(".iconfont_click").toggleClass("icon-shangjiantou");
+                $(this).parent().find(".iconfont_click").toggleClass("icon-xiajiantou icon-shangjiantou");
             })
             // 移动端二级菜单导航end
         },

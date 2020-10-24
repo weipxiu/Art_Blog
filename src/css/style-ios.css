@@ -2881,11 +2881,8 @@
     top: 0;
     display: block;
     z-index: 99;
-    transition: all 0.25s;
-  }
-  
-  div.btn {
     transform: translateX(-3.21rem);
+    transition: all 0.25s;
   }
   
   .os-herder ul.slide-left {
