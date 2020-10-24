@@ -3,7 +3,7 @@
     <?php
         if (get_option('weipxiu_options')['side_video'] == 'on') {
             ?>
-                <video id="my-video" preload="none" class="video-js vjs-default-skin vjs-big-play-centered" controls preload width="308" height="173"
+                <video id="my-video" preload="none" class="video-js vjs-default-skin vjs-big-play-centered" controls width="308" height="173"
                     style="margin-top:0px" poster="<?php echo get_option('weipxiu_options')['video_cover']; ?>" width="308" height="173"
                     data-setup="{}">
                     <source src="<?php echo get_option('weipxiu_options')['video_url']; ?>" type="video/mp4">

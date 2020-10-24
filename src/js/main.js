@@ -655,12 +655,12 @@
                 };
 
                 //当视频播放完成后，重新加载渲染，随时准备第二次重播
-                myPlayer.on("ended", function () {
-                    myPlayer.play();
-                    setTimeout(function () {
-                        myPlayer.pause();
-                    }, 500);
-                });
+                // myPlayer.on("ended", function () {
+                //     myPlayer.play();
+                //     setTimeout(function () {
+                //         myPlayer.pause();
+                //     }, 500);
+                // });
             }
         },
         // 随机文章增加序列号
