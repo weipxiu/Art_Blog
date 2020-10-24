@@ -14,7 +14,7 @@ Template Name: 404页面
 	<title>很抱歉,未能找到你的女朋友&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
 	<meta name="Keywords" content="404、未找到内容">
 	<meta name="description" content="抱歉，当前访问的内容不存在！">
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
+	<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery-2.1.4.min.js"></script>
 	<style type="text/css">
 		* {
 			margin: 0px;
@@ -64,7 +64,7 @@ Template Name: 404页面
 
 <body>
 	<div class="container">
-		<img src="<?php bloginfo('template_url'); ?>/images/404.png" />
+		<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/404.png" />
 		<h3>很抱歉,未能找到你的女朋友</h3>
 		<p>请试试以下方法：</p>
 		<p>
@@ -75,7 +75,7 @@ Template Name: 404页面
 		</p>
 		<p>
 			<span>3、</span>页面将在<span class="autotime">5</span>
-			<span class="go_back">s</span>后自动跳转到<a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('description'); ?></a>首页
+			<span class="go_back">s</span>后自动跳转到<a href="<?php echo esc_url( home_url() ); ?>"><?php echo get_bloginfo('description'); ?></a>首页
 		</p>
 		<div>
 </body>

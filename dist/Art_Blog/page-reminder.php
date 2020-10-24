@@ -71,13 +71,13 @@ Template Name: 升级浏览器
 	</h3>
 	<p>
 		<a href="https://www.google.cn/chrome/" target="_blank"><img alt="chrome"
-				src="<?php bloginfo('template_url'); ?>/images/chrome.png"></a>
+				src="<?php echo esc_url(get_template_directory_uri()); ?>/images/chrome.png"></a>
 		<a href="https://www.firefox.com/" target="_blank"><img alt="safari"
-				src="<?php bloginfo('template_url'); ?>/images/firefox.png"></a>
+				src="<?php echo esc_url(get_template_directory_uri()); ?>/images/firefox.png"></a>
 		<a href="https://www.apple.com/safari" target="_blank"><img alt="safari"
-				src="<?php bloginfo('template_url'); ?>/images/safari.png"></a>
+				src="<?php echo esc_url(get_template_directory_uri()); ?>/images/safari.png"></a>
 		<a href="https://www.opera.com/zh-cn" target="_blank"><img alt="safari"
-				src="<?php bloginfo('template_url'); ?>/images/opera.png"></a>
+				src="<?php echo esc_url(get_template_directory_uri()); ?>/images/opera.png"></a>
 	</p>
 	<h4>Copyright © 2016-2020 <a href="/">WEIPXIU.COM</a> · 版权所有</h4>
 </body>

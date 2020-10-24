@@ -2,13 +2,13 @@
 <!-- 移动端头部start -->
 <div class="os-headertop">
 		<div class="btn_menu"><i class="iconfont icon-caidanlan"></i></div>
-		<a href="<?php echo home_url(); ?>" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
+		<a href="<?php echo esc_url( home_url() ); ?>" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
 		<div class="xis">
 			<i class="iconfont icon-sousuo"></i>
 		</div>
 		<div class="site-search active">
 			<div class="container">
-				<form role="search" method="get" id="searchform_os" class="site-search-form" action="<?php echo home_url(); ?>/">
+				<form role="search" method="get" id="searchform_os" class="site-search-form" action="<?php echo esc_url( home_url() ); ?>/">
 					<input class="search-input" name="s" value="" placeholder="输入关键字搜索" type="text" />
 					<button class="search-btn" type="submit" id="searchsubmit_os">
 						<i class="iconfont icon-sousuo"></i>
@@ -20,12 +20,12 @@
 <!--移动端头部end-->
 
 <header class="header">
-	<div style="height:2px;background:url(<?php bloginfo('template_url'); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
+	<div style="height:2px;background:url(<?php echo esc_url(get_template_directory_uri()); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
 	</div>
 	<div class="header-body">
 		<div class="header-conter">
 			<nav class="nav">
-					<a href="<?php echo home_url(); ?>" class="t-logo" id="Logo">
+					<a href="<?php echo esc_url( home_url() ); ?>" class="t-logo" id="Logo">
 							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>">
 					</a>
 					<div class="brand">
@@ -65,7 +65,7 @@
 	<!-- 搜索区域start -->
 	<div class="site-search active pc">
 		<div class="container">
-			<form role="search" method="get" id="searchform_pc" class="site-search-form" action="<?php echo home_url(); ?>/">
+			<form role="search" method="get" id="searchform_pc" class="site-search-form" action="<?php echo esc_url( home_url() ); ?>/">
 				<input class="search-input" name="s" type="text" value="" placeholder="输入关键字搜索">
 				<button class="search-btn" type="submit" id="searchsubmit_pc"><i class="iconfont icon-sousuo"></i></button>
 			</form>
@@ -78,7 +78,7 @@
 <!-- 移动端侧边栏导航start -->
 <div class="os-herder">
 	<!-- <ul class="slide-left">
-		<li><a href="<?php echo home_url(); ?>"><i class="iconfont">&#xe632;</i>首页</a></li>
+		<li><a href=""><i class="iconfont">&#xe632;</i>首页</a></li>
 		<li data-implement='element'>
 			<a href="javascript:void(0);" class="frontEnd"><i class="iconfont">&#xe64b;</i>前端开发<i class="iconfont iconfont_click icon-xiajiantou"></i></a>
 			<div class="slide_slect">

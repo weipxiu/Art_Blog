@@ -6,7 +6,7 @@
 		<?php if(have_posts()):?><?php the_title(); ?><?php else: ?>
 		Sorry,当前分类暂无文章！<?php endif; ?>-<?php echo get_bloginfo('description'); ?>
 	</title>
-	<?php require ('common.php'); ?>
+	<?php get_template_part('common'); ?>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
 	<!-- 正文区域start -->
 	<div class="continar">
-		<img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.png" alt="">
+		<img class="search_404" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/search_404.png" alt="">
 		<div class="continar-left" id="ajax_centent" style="border:0; padding:0; background: transparent;">
 			<!-- 文章start -->
 			<?php

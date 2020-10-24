@@ -3,7 +3,7 @@
 
 <head>
     <title><?php the_title(); ?>&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
-    <?php require ('common.php'); ?>
+    <?php get_template_part('common'); ?>
     <style>
         .bdcs-container .bdcs-search {
             width: 100%
@@ -48,7 +48,7 @@
 
     <!-- 正文区域start -->
     <div class="continar">
-        <img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.png" alt="">
+        <img class="search_404" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/search_404.png" alt="">
         <div class="continar-left" id="ajax_centent">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">

@@ -12,8 +12,8 @@
             $keywords = rtrim($keywords, ', ');
         }
     ?>
-    <?php require ('common.php'); ?>
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/codecolorer.css">
+    <?php get_template_part('common'); ?>
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/codecolorer.css">
 </head>
     <body>
         <!--头部文件引用start-->

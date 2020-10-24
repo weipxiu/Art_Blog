@@ -12,8 +12,8 @@
 		}
 	?>
 </title>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/swiper.min.css">
-<?php require ('common.php'); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/swiper.min.css">
+<?php get_template_part('common'); ?>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 		if (trim(get_option('weipxiu_options')['pc_banner'])) {
 		?>
 		<section class="mod-banner" id="js_banner">
-			<a href="<?php echo home_url(); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
+			<a href="<?php echo esc_url( home_url() ); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
 			<div class="mod-banner__navi">
 				<div class="js_banner_nav mod-banner_nav"></div>
 				<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -46,7 +46,7 @@
 
 	<!-- 正文区域start -->
 	<section class="continar" id="lazycontainer">
-		<img class="search_404" src="<?php bloginfo('template_url'); ?>/images/search_404.png" alt="">
+		<img class="search_404" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/search_404.png" alt="">
 		
 			<!--移动端轮播start-->
 			<?php
@@ -132,7 +132,7 @@
 						<a href="<?php the_permalink(); ?>" target="_blank">
 							<span>【今日焦点】</span>
 							<?php the_title(); ?>
-							<img src="<?php bloginfo('template_url'); ?>/images/new.gif" width="26" height="14" alt="24小时内最新" alt="<?php echo get_bloginfo('name'); ?>">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/new.gif" width="26" height="14" alt="24小时内最新" alt="<?php echo get_bloginfo('name'); ?>">
 						</a>
 					</h1>
 					<span>
@@ -301,8 +301,8 @@
 	<!-- 底部调用end -->
 </body>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/xfg_banner/banner-effect.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript">
 	$(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
@@ -332,7 +332,7 @@
 											if (Notification.permission == "granted") {
 													var notification = new Notification("友情提示：", {
 															body: '欢迎点击立即加入"Vue.js3.0技术栈"群互相学习、交流！',
-															icon: '<?php bloginfo('template_url'); ?>/images/notification.png'
+															icon: '<?php echo esc_url(get_template_directory_uri()); ?>/images/notification.png'
 													})
 
 													notification.onclick = function () {
@@ -425,7 +425,7 @@
 			// 当窗口改变时候end
 			
 			// pc轮播
-			if("<?php bloginfo('template_url'); ?>".indexOf('wp-content/themes/Art_Blog') == -1){
+			if("<?php echo esc_url(get_template_directory_uri()); ?>".indexOf('wp-content/themes/Art_Blog') == -1){
 						layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{
 						skin: 'layui',
 						title:"提示",

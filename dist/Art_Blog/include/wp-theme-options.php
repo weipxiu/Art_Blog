@@ -13,7 +13,7 @@ function themeoptions_page() {
   //加载css(wp自带)
   wp_enqueue_style('thickbox');
 ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/include/css/style.css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/css/style.css">
   <div class="wrap">
     <h2>唯品秀主题设置</h2>
     <ul class="nav-wrap clearfix">
@@ -456,7 +456,7 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="pc_banner">PC端Banner图：</label>
           <div class="fr right-wrap">
             <textarea id="pc_banner" name="pc_banner" rows="8" cols="100" placeholder="例如：&#10;[{url:'图片地址',link:'跳转地址'}]"><?php echo $a_options['pc_banner']; ?></textarea>
-            <span class="warn" style="display:block">*PC轮播图最佳尺寸：1200*300，多组数据用,分开，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/pc_slide.js">示例数据</a></span>
+            <span class="warn" style="display:block">*PC轮播图最佳尺寸：1200*300，多组数据用,分开，<a target="_blank" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/js/pc_slide.js">示例数据</a></span>
           </div>
         </div>
 
@@ -464,7 +464,7 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="pc_rotateNav_content">3D导航-左侧大图：</label>
           <div class="fr right-wrap">
             <textarea id="pc_rotateNav_content" name="pc_rotateNav_content" rows="5" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['pc_rotateNav_content']; ?></textarea>
-            <span class="warn" style="display:block">*PC轮播下方3D导航，指定左侧区域单图信息<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/nav_left.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
+            <span class="warn" style="display:block">*PC轮播下方3D导航，指定左侧区域单图信息<a target="_blank" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/js/nav_left.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
           </div>
         </div>
 
@@ -472,7 +472,7 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="rotateNav_content">3D导航详细数据：</label>
           <div class="fr right-wrap">
             <textarea id="rotateNav_content" name="rotateNav_content" rows="10" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['rotateNav_content']; ?></textarea>
-            <span class="warn" style="display:block">*PC轮播下方3D导航，规则为：左侧一张大图，右侧分上下两栏，每个栏目4个小模块，每个栏目其中任意(仅)一个模块可指定为较大图，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/nav.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
+            <span class="warn" style="display:block">*PC轮播下方3D导航，规则为：左侧一张大图，右侧分上下两栏，每个栏目4个小模块，每个栏目其中任意(仅)一个模块可指定为较大图，<a target="_blank" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/js/nav.json" >示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span></span>
           </div>
         </div>
 
@@ -480,7 +480,7 @@ function themeoptions_page() {
           <label class="fl left-wrap" for="mobile_banner">移动端Banner图：</label>
           <div class="fr right-wrap">
             <textarea id="mobile_banner" name="mobile_banner" rows="8" cols="100" placeholder="例如：&#10;点击下方查看'示例数据'"><?php echo $a_options['mobile_banner']; ?></textarea>
-            <span class="warn" style="display:block">*强调，该处数据格式特殊，<a target="_blank" href="<?php bloginfo('template_url'); ?>/include/js/mobile_slide.json">示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span>，注意双引号以及在目录层级前需要加<span style="color:red">反斜杠\</span></span>
+            <span class="warn" style="display:block">*强调，该处数据格式特殊，<a target="_blank" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/js/mobile_slide.json">示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span>，注意双引号以及在目录层级前需要加<span style="color:red">反斜杠\</span></span>
           </div>
         </div>
 
@@ -782,7 +782,7 @@ function themeoptions_page() {
       </div>
     </form>
   </div>
-  <script src="<?php bloginfo('template_url'); ?>/include/js/set.js"></script>
+  <script src="<?php echo esc_url(get_template_directory_uri()); ?>/include/js/set.js"></script>
 <?php
 	}
 	function themeoptions_update() {

@@ -36,7 +36,7 @@
       <tbody>
         <tr>
           <td id="navLog">
-            <img src="<?php bloginfo('template_url'); ?>/images/open_im.png" width="40" height="133" id="imgNav">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/open_im.png" width="40" height="133" id="imgNav">
           </td>
           <td>
             <table id="__01" width="105" class="customer-list" style="min-width:105px" border="0" cellpadding="0" cellspacing="0">
@@ -66,7 +66,7 @@
                       <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php 
                       echo trim(get_option('weipxiu_options')['QQ-number']);
                       ?>&site=qq&menu=yes">
-                        <img width="77" height="22" src="<?php bloginfo('template_url'); ?>/images/zaixian_qq.png" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
+                        <img width="77" height="22" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/zaixian_qq.png" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
                         />
                       </a>
                     </div>
@@ -79,7 +79,7 @@
                       <a target="_blank" href="<?php 
                       echo trim(get_option('weipxiu_options')['wangwang-link']);
                       ?>"style="position: relative; overflow: hidden;">
-                        <img src="<?php bloginfo('template_url'); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
                       </a>
                     </div>
                   </td>
@@ -123,9 +123,9 @@
 <div class="footer-banner__navi">
 </div>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.lazyload.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video/video.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main_min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/video/video.min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/main_min.js"></script>
 
 <!-- 调用wordpress核心函数 -->
 <?php wp_footer(); ?>

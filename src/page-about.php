@@ -7,7 +7,7 @@ Template Name: 关于博客
 <html lang="en">
 <head>
     <title>平凡有一点理想&nbsp;-&nbsp;渴望让世界不一样&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
-    <?php require ('common.php'); ?>
+    <?php get_template_part('common'); ?>
 </head>
     <body>
 	<?php get_header();?>
@@ -20,12 +20,12 @@ Template Name: 关于博客
                     <div class="head_user_a"> 
                      <div class="head_avatar"> 
                       <a href="javascript:;"> 
-                        <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
                         <span class="verify_1"></span>
                       </a> 
                      </div> 
                      <div class="head_avatar_a">
-                      <p>Admin<i class="img-icon icon_male"></i><a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
+                      <p>Admin<i class="img-icon icon_male"></i><a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
                      </div> 
                      <div class="head_avatar_b">
                         <p> 管理员 </p>

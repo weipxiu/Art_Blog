@@ -1,6 +1,6 @@
 <?php
 // 引入模板主题设置文件
-if (is_admin()) require ('include/wp-theme-options.php');
+if (is_admin()) get_template_part('include/wp-theme-options');
 
 //注册菜单
 register_nav_menus(array(
@@ -39,13 +39,13 @@ function _admin_comment_ctrlenter() {
 };
 
 //注册小工具
-if ( function_exists('register_sidebar') )
-register_sidebar(array(
-    'before_widget' => '<div class="sidebox">    ',
-    'after_widget' => '</div>',
-    'before_title' => '<h2>',
-    'after_title' => '</h2>',
-));
+// if ( function_exists('register_sidebar') )
+// register_sidebar(array(
+//     'before_widget' => '<div class="sidebox">    ',
+//     'after_widget' => '</div>',
+//     'before_title' => '<h2>',
+//     'after_title' => '</h2>',
+// ));
 
 //注册特色图像
 add_theme_support('post-thumbnails');

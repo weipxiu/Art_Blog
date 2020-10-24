@@ -7,7 +7,7 @@ Template Name: 关于博客-旧版
 <html lang="en">
 <head>
     <title>平凡有一点理想&nbsp;-&nbsp;渴望让世界不一样&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
-    <?php require ('common.php'); ?>
+    <?php get_template_part('common'); ?>
 </head>
     <body>
     <!--头部文件引用start-->
@@ -23,12 +23,12 @@ Template Name: 关于博客-旧版
                     <div class="head_user_a"> 
                      <div class="head_avatar"> 
                       <a href="javascript:;"> 
-                        <img src="<?php bloginfo('template_url'); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
                         <span class="verify_1"></span>
                       </a> 
                      </div> 
                      <div class="head_avatar_a">
-                      <p>Admin<i class="img-icon icon_male"></i><a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php bloginfo('template_url'); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
+                      <p>Admin<i class="img-icon icon_male"></i><a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
                      </div> 
                      <div class="head_avatar_b">
                         <p> 管理员 </p>
@@ -52,7 +52,7 @@ Template Name: 关于博客-旧版
                 <ul>
                         <!-- <li class="photo limit_w">
                             <a href="#" title="李俊">
-                                <img src="<?php bloginfo('template_url'); ?>/images/IMG_0028.JPG" width="150" alt="<?php echo get_bloginfo('name'); ?>" title="李俊">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/IMG_0028.JPG" width="150" alt="<?php echo get_bloginfo('name'); ?>" title="李俊">
                             </a>
                         </li> -->
                         <li class="limit_w"><span>姓名：李俊</span><span>名族：大汉</span></li>
@@ -115,7 +115,7 @@ Template Name: 关于博客-旧版
                     <h4 class="h4">博客介绍</h4>
                     <ul>
                         <li>
-                            此网站后台采用WordPress，前端模块完全自主开发(自主开发不代表不参考，如有雷同纯属巧合。。。)，运用大量js+css3运动，整体页面华丽的同时也会暗藏bug，尽管本人多次测试，但难免在众多设备或不同人不同见解下任有所不足之处，如有好的意见欢迎给我留言，博客会适当改进，慢慢改版。最后感谢大家的关注，尤其谢谢<a href="<?php bloginfo('template_url'); ?>/thanks.html">各位</a>提供的帮助！
+                            此网站后台采用WordPress，前端模块完全自主开发(自主开发不代表不参考，如有雷同纯属巧合。。。)，运用大量js+css3运动，整体页面华丽的同时也会暗藏bug，尽管本人多次测试，但难免在众多设备或不同人不同见解下任有所不足之处，如有好的意见欢迎给我留言，博客会适当改进，慢慢改版。最后感谢大家的关注，尤其谢谢<a href="<?php echo esc_url(get_template_directory_uri()); ?>/thanks.html">各位</a>提供的帮助！
                         </li>
                         <li>
                             唯品秀个人博客，是我首次创建的个人博客，主要用于记录学习前端学习、工作笔记、心得的地方，抒发自己情感的地方，在今后的岁月里会慢慢来打磨并持续更新维护。通过这个博客网站，时常勉励自己，一定不能偷懒，学无止境。同时，也因此认识了不少基友，互联网将我们团聚在一起，我们共同探讨工作、学习、生活，不仅增长技术，还可以释放压力。通过这个博客网站，我善待我的每一个朋友，如果是正在学习的学生，我希望我总结的文章，能帮到你们，少走一些弯路。

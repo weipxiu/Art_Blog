@@ -23,11 +23,11 @@
 <!-- Pre-parsing is currently on the site -->
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('weipxiu_options')['label_logo']; ?>" />
-<link rel="dns-prefetch" href="<?php echo home_url(); ?>">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/style_min.css">
+<link rel="dns-prefetch" href="<?php echo esc_url( home_url() ); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style_min.css">
 <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_rarmoz9v1il.css">
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/layer/layer.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/layer/layer.js"></script>
 <!-- 判断低版本IE -->
 <script>
 	 /*if ((navigator.userAgent.indexOf('MSIE') >= 0) 
@@ -35,7 +35,7 @@
 		window.location.href="<php bloginfo('template_url'); ?>/reminder.php";//判断IE5-10
 	 }*/
 		if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<9){
-		window.location.href="<?php bloginfo('template_url'); ?>/reminder";/*判断<IE9,此方法也可以判断<IE10*/
+		window.location.href="<?php echo esc_url(get_template_directory_uri()); ?>/reminder";/*判断<IE9,此方法也可以判断<IE10*/
 	}
 </script>
 
