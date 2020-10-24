@@ -72,12 +72,23 @@ gulp.task('miniHtml', () => {
 
 // 压缩css
 gulp.task("minCss", function () {
-    return gulp.src("src/css/*.css")
+    return gulp.src(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"])
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
+        //.pipe(gulp_minify_css({
+        //    advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
+        //    compatibility: '*'//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
+        //}))
+        .pipe(gulp.dest(target + "/css"))
+});
+
+// 多端压缩合并css
+gulp.task("mergeCss", function () {
+    return gulp.src(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"])
+        .pipe(concat("style_min.css"))
         .pipe(gulp_minify_css({
-            advanced: false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
-            compatibility: '*'//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
+            advanced: false,
+            compatibility: '*'
         }))
         .pipe(gulp.dest(target + "/css"))
 });
@@ -144,7 +155,8 @@ gulp.task('compressZip', function () {
 
 //监听文件是否发生改变
 gulp.task("Watch", function () {
-    gulp.watch(['./src/*.css', './src/css/**'], ['minCss']);
+    gulp.watch(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"], ['minCss']);
+    gulp.watch(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"], ['mergeCss']);
     gulp.watch(['./src/**/**.js'], ['jsConcat']);
     gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);
 })
@@ -157,6 +169,7 @@ gulp.task('default', function () {
         ["copyHtml"],
         ["miniHtml",],
         ["minCss"],
+        ["mergeCss"],
         ["jsConcat"],
         ["compressZip"],
         ["Watch"],

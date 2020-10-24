@@ -1,7 +1,7 @@
 <p align="center">
   <img width="160" height="55" src="https://www.weipxiu.com/wp-content/uploads/2019/06/weipxiu_logo_2.png">
 </p>
-<!-- 制作下面标签https://shields.io/#/ -->
+<!-- 下列标签如何制作？https://shields.io/#/ -->
 <p align="center">
   <a href="https://wordpress.org/">
     <img src="https://img.shields.io/badge/wordPress-5.2.3-brightgreen.svg" alt="wordPress">
@@ -74,9 +74,9 @@ I、wordPress主题制作有特别要求，例如主题根目录必须存在head
 
 II、为了用户最佳浏览体验，该主题对≤IE8作了屏蔽跳转，≥IE9版本可能无法完整展示CSS3效果，但会尽量兼容到不影响阅读
 
-III、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-ios.css、style-ipd.css两个文件，没错，三端样式完全独立，不重用，有利有弊，不予置评
+III、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-pc.css、style-ios.css、style-ipd.css两个文件，没错，三端样式完全独立，不重用，不过你完全不用过分担心，打包后多端样式会合并压缩，代价没你想象的那么大，有利有弊，不予置评
 
-IV、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>免费提供</p>
+IV、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
 V、主题不定期优化，如若在使用过程中出现问题自己无法解决可直接与我联系，免费在线技术支持QQ:343049466，微信同号，加好友请备注
 
@@ -85,7 +85,7 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │  page-time.php    //穿梭机（单页）
 │  page-about.php   //关于博客（单页）
 │  page-message.php    //碎言碎语（单页）
-│  page-reminder.php   //低版本浏览器重定向
+│  page-reminder.php   //低版本浏览器落地页
 │  category.php   //通用文章列表模板
 │  comments.php   //评论模板
 │  favicon.ico  //网页浏览器标签icon
@@ -93,7 +93,7 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │  header.php  //公共头部
 │  footer.php  //公共底部
 │  common.php  //公共引入文件（js、css）
-│  index.html  //测试页面
+│  index.html  //测试页面（忽略）
 │  index.php   //首页
 │  page.php    //通用单页模板
 │  screenshot.png //wordpress主题展示图
@@ -112,7 +112,7 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │      video-js.css    //视频插件     
 │   
 ├─font 
-│      sf-pro-text_regular.woff2 //字体文件 
+│      sf-pro-text_regular.woff2 //字体包 
 │ 
 ├─images  //公共图片资源（含表情包）
 │      
@@ -127,15 +127,9 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │  │  
 │  ├─video.js 
 │  │      video.min.js //视频插件
-│  │      videojs-ie8.min.js
-│  │      zh-CN.js
-│  │      zh-CN.json
 │  │      
 │  └─xfg_banner
 │          banner-effect.js //PC端首页banner
-│          banner.js
-│          effect.js
-│          utils.js
 │          
 └─music  //3D导航音频文件
  ```       
