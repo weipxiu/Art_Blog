@@ -31,26 +31,9 @@
 ## 主题后台配置预览
 ![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp_theme_config.png)
 
-## 哪些网站在使用(据百度受访问域名不完全统计，并非后门)
-
-|  网站名称 | 网站地址 | 
-| :----: | :----: | 
-| [张峰博客](http://www.feng01.top/) | http://www.feng01.top
-| [枯痕博客](https://www.xiaole.biz/) | https://www.xiaole.biz
-| [故城县历史](http://www.gaojibo.com/) | http://www.gaojibo.com
-| [前端笔记](http://younglee666.com/) | http://younglee666.com
-| [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
-| [大川渝个人博客](https://www.dcydz.com) | www.dcydz.com
-| [青幽](http://moxiaofei.com) | http://moxiaofei.com
-| [智慧博客网](https://www.llg.design) | www.llg.design 
-| [开源NetCore](http://www.netcore.pub) | http://netcore.pub
-| [狗蛋博客](https://www.xiaole.biz) | https://www.xiaole.biz
-| [苏州特个人博客](http://www.sutee.cn) | http://www.sutee.cn
-| [某小健博客](http://www.mouxj.com) | www.mouxj.com |
-
 ## 如何使用它
 
-I、方式一：直接下载项目，找到项目文件的Art_Blog.zip压缩包，即是已打包好的主题源码，通过后台主题上传，启用主题即可。方式二：将项目中dist文件夹命名为Art_Blog，然后将Art_Blog整个`文件夹`上传到线上：`/htdocs/wp-content/themes/`目录下，后台启用主题，推荐使用方式二
+I、方式一：直接下载项目，找到项目文件的Art_Blog.zip压缩包，即是已打包好的主题源码，通过后台主题上传，启用主题即可。方式二：将项目中dist文件夹下Art_Blog整个`文件夹`上传到线上：`/htdocs/wp-content/themes/`目录下，后台启用主题，推荐使用方式二
 
 II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v8.x为宜），dist里的文件就是Art_Blog.zip里的文件
 
@@ -134,3 +117,20 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 └─music  //3D导航音频文件
  ```       
 
+
+## 哪些网站在使用(据百度受访问域名不完全统计，并非后门)
+
+|  网站名称 | 网站地址 | 
+| :----: | :----: | 
+| [张峰博客](http://www.feng01.top/) | http://www.feng01.top
+| [枯痕博客](https://www.xiaole.biz/) | https://www.xiaole.biz
+| [故城县历史](http://www.gaojibo.com/) | http://www.gaojibo.com
+| [前端笔记](http://younglee666.com/) | http://younglee666.com
+| [非常前端](http://moxiaofei.com) | www.moxiaofei.com 
+| [大川渝个人博客](https://www.dcydz.com) | www.dcydz.com
+| [青幽](http://moxiaofei.com) | http://moxiaofei.com
+| [智慧博客网](https://www.llg.design) | www.llg.design 
+| [开源NetCore](http://www.netcore.pub) | http://netcore.pub
+| [狗蛋博客](https://www.xiaole.biz) | https://www.xiaole.biz
+| [苏州特个人博客](http://www.sutee.cn) | http://www.sutee.cn
+| [某小健博客](http://www.mouxj.com) | www.mouxj.com |
