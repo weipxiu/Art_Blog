@@ -741,8 +741,6 @@
   
   .continar .continar-left {
     width: 100%;
-    transform: translateX(0px);
-    -ms-transform: translateX(0px);
     float: none;
     border: 0 !important;
     margin-bottom: 0.4rem;
@@ -2879,7 +2877,6 @@
     position: fixed;
     left: 0;
     top: 0;
-    display: block;
     z-index: 99;
     transform: translateX(-3.21rem);
     transition: all 0.25s;
