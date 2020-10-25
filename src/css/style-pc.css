@@ -4200,10 +4200,11 @@
   
   #domo {
     display: block;
-    width: 100px;
+    width: 120px;
     height: 33px;
     color: #fff;
-    background: #49cc5b;
+    background: #1890ff;
+    background: var(--color,#1890ff);
     line-height: 33px;
     padding: 0;
     font-size: 15px;
@@ -4213,10 +4214,6 @@
     text-indent: 0;
     text-align: center;
     text-align-last: center;
-  }
-  
-  #domo:hover {
-    background: #265a88;
   }
   
   .img-left {
