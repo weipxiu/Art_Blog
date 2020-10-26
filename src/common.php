@@ -20,10 +20,10 @@
 <?php if (get_option('weipxiu_options')['switch_https'] == 'on'){ ?>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <?php } ?>
-<!-- Pre-parsing is currently on the site -->
+<!-- DNS预解析 -->
 <meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('weipxiu_options')['label_logo']; ?>" />
 <link rel="dns-prefetch" href="<?php echo esc_url( home_url() ); ?>">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('weipxiu_options')['label_logo']; ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style_min.css">
 <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_rarmoz9v1il.css">
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery-2.1.4.min.js"></script>
@@ -63,24 +63,24 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 
 <script>
 //移动端适配
-var sw = window.innerWidth;
+var win_width = 375;
 function setFontSize() {
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-		var pw = 750;
-		var f = 100 * sw / pw;
-		if (sw > 767 && sw < 1000) { f = 70 }
-		if (sw > 1000 && sw < 1200) { f = 100 }
-		document.documentElement.style.cssText = "font-size: "+f+'px'+";transtion: 0.15s";
+	win_width = window.innerWidth;
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || win_width < 1200) {
+		var w_init = 750;
+		var pro = 100 * win_width / w_init;
+		if (win_width > 767 && win_width < 1000) { pro = 70 }
+		if (win_width > 1000 && win_width < 1200) { pro = 100 }
+		console.log(pro)
+		document.documentElement.style.cssText = "font-size: "+pro+'px'+";transtion: 0.15s";
 	}
 }
 setFontSize()
-// $(window).resize(function () {
-// 		if (window.innerWidth != sw) {
-// 				setTimeout(function () {
-// 						setFontSize()
-// 				},100)
-// 		}
-// });
+$(window).resize(function () {
+		if (window.innerWidth != win_width) {
+			setFontSize()
+		}
+});
 </script>
 
 <!-- 自定义样式 -->
