@@ -222,7 +222,7 @@
                         $fp = fopen($counterFile,"a+");
                         $num = fgets($fp,10);
                         $num += 1;
-                        print ($num+8647865).' 次';
+                        print number_format($num+8647865).' 次';
                         fclose($fp);
                         $fpp=fopen($counterFile,"w");
                         fwrite($fpp, $num);
