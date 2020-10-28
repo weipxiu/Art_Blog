@@ -39,18 +39,13 @@ II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本�
 
 III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本，[阿里云虚拟主机升级php7.x报错处理](https://www.weipxiu.com/2909.html)，注意：[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html)
 
-IV、启用唯品秀Art_Blog主题后，在设置>常规中设置自己网站标题、副标题、邮箱等信息，然后到外观>唯品秀主题设置，设置站点域名地址、公告、底部等信息
+IV、更多详细教程点击：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
-V、在后台>外观>菜单中管理你的导航栏
-
-VI、更多详细教程点击：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
-
-Ⅶ、如若喜欢，请多多打赏，您的认可与支持将是我前进的最大动力！
+V、如若喜欢，请多多打赏，您的认可与支持将是我前进的最大动力！
 
 ![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/zhiwei.png)
 
 ## 碎言碎语
-
 
 I、wordPress主题制作有特别要求，例如主题根目录必须存在header.php、index.php、footer.php、style.css，否则主题视为"不完整"，无法安装。
 因此不用觉得某些文件摆放不合理，存在即有意义

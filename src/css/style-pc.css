@@ -6,15 +6,6 @@
     box-sizing: border-box;
     text-decoration: none;
     font: 14px sf-pro-text_regular, Montserrat, Microsoft Yahei;
-    font-weight: normal;
-  }
-  
-  :not(span){
-    color: #666;
-  }
-  
-  img[src=""], img:not([src]) {
-      display: none;
   }
   
   html {
@@ -87,11 +78,6 @@
   ::-moz-selection {
     background: #9c0;
     color: #fff;
-  }
-  
-  em,
-  i {
-    font-style: normal;
   }
   
   /*swiper轮播start*/
@@ -2623,11 +2609,6 @@
     height: 0;
   }
   
-  .continar-left p {
-    font-size: 14px;
-    color: #444;
-  }
-  
   .continar-left div.key-w,
   .continar-left p.text-post {
     text-indent: 0;
@@ -3036,8 +3017,7 @@
   }
   
   .log-text p {
-    font-size: 14px;
-    line-height: 28px;
+    line-height: 30px;
     margin: 10px auto;
     text-indent: 2em;
     color: #666;

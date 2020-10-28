@@ -9,9 +9,7 @@
     /*touch-callout: none;长时间按住页面出现闪退,
     如果启用，那么图片默认长按存储到相册功能被禁止*/
   }
-  :not(span){
-    color: #666;
-  }
+ 
   html,
   body,
   form,
@@ -48,9 +46,6 @@
     -ms-user-select: none;
     /*chrome、safari*/
     -moz-osx-font-smoothing: grayscale;
-  }
-  img {
-    transition: all 0.2s;
   }
   /*初始化代码end*/
   
