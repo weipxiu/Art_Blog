@@ -33,7 +33,7 @@ gulp.watch -- 观察文件是否发生改变
 var clear = function (href) {
     gulp.task("clean", function () {
         console.log('清空' + (href || target) + '目录下的资源')
-        return gulp.src((href || target + '/*'), {
+        return gulp.src([href || target + '/*', "Art_Blog.zip"], {
             read: false //设置参数read:false可以阻止访问文件,加快删除速度
         })
             .pipe(clean({
@@ -119,13 +119,16 @@ gulp.task("imageMin", function () {
         .pipe(gulp.dest(target + '/images'))
 })
 
+// js插件copy
+gulp.task("jsCopy", function () {
+    //特例
+    return gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js","src/js/jquery.lazyload.js"])
+        .pipe(gulp.dest(target + "/js"))
+})
+
 //ES6转换转ES5(babel-v8版本)、代码合并
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
-    //特例
-    gulp.src(["src/js/rem.js", 'src/js/share.js', "src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js", "src/js/jquery.lazyload.js"])
-        .pipe(gulp.dest(target + "/js"))
-
     //公共
     return gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
         .pipe(plumber())
@@ -170,6 +173,7 @@ gulp.task('default', function () {
         ["miniHtml",],
         ["minCss"],
         ["mergeCss"],
+        ["jsCopy"],
         ["jsConcat"],
         ["compressZip"],
         ["Watch"],

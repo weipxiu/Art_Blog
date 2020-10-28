@@ -71,7 +71,6 @@ function setFontSize() {
 		var pro = 100 * win_width / w_init;
 		if (win_width > 767 && win_width < 1000) { pro = 70 }
 		if (win_width > 1000 && win_width < 1200) { pro = 100 }
-		console.log(pro)
 		document.documentElement.style.cssText = "font-size: "+pro+'px'+";transtion: 0.15s";
 	}
 }
