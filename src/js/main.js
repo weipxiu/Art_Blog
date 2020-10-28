@@ -456,8 +456,6 @@
                     area: ['500px', '360px'], //宽高
                     shadeClose: true, // 点击遮罩层关闭弹窗
                     success: function (layero, index) {
-                        // layero[0].childNodes[1].childNodes[0].removeAttribute('href');
-                        // layero[0].childNodes[1].classList.add('cursorStyle');
                         layero[0].childNodes[1].childNodes[0].removeAttribute('href');
                         layero[0].childNodes[1].classList.add('cursorStyle');
                         layero[0].childNodes[1].childNodes[0].classList.remove('layui-layer-close2');
