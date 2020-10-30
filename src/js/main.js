@@ -160,13 +160,13 @@
                 //clearInterval(time); //清除鼠标离开li时候的定时器
                 if (localStorage.getItem("off_y") != 1) {
                     $(this).addClass("hover");
-                    $('.nav ul.music-nav li').addClass('on');
-                    $('.nav ul.music-nav li').removeClass('off');
+                    $(".nav ul.music-nav > li").addClass("on");
+                    $(".nav ul.music-nav > li").removeClass("off");
                     localStorage.setItem("off_y", 1);
-                    layer.msg('全站音频已开启~', {
+                    layer.msg("全站音频已开启~", {
                         time: 2000 //2秒关闭（如果不配置，默认是3秒）
                     }, function () {
-                        layer.msg('无需鼠标，导航音乐键盘A-K也可以体验哦~~');
+                        layer.msg("无需鼠标，导航音乐键盘A-K也可以体验哦~~");
                     });
                     that.readingAloud("全站音频已开启~")
                 } else {
@@ -232,7 +232,7 @@
                 localStorage.setItem("off_y", 0);
             } else {
                 localStorage.setItem("off_y", 1);
-                $(".nav ul.music-nav li").addClass("on");
+                $(".nav ul.music-nav > li").addClass("on");
                 $(".mod-header_music-icon").addClass('hover');
             }
         },
@@ -327,7 +327,7 @@
                         }
                     });
             } else {
-                layer.alert('亲，现在都什么时代了，你还在用这么土的浏览器~~', {
+                layer.alert('亲，这都什么年代了，您还在用这么土的浏览器吗~~', {
                     skin: 'layui',
                     title: "请更换浏览器",
                     closeBtn: 0,

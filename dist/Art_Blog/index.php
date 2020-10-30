@@ -307,7 +307,6 @@
 	$(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
 			var domain_name = window.location.protocol + "//" + window.location.host;
-			//网站预加载运动start
 			if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 					//IE浏览器屏蔽部分动效start
 					$(".mod-index__feature .img_list_6pic a").removeClass("word_display");
@@ -407,7 +406,6 @@
 					//navigator.vibrate([1000, 500, 1000]);
 					//手机震动功能，里面是数组-震动时间，第二个为间隔时间
 			}
-			//网站预加载运动end
 
 			//修改邮件订阅表单类型
 			$(".wpm_form .wpm_email input").attr("type", "email")
