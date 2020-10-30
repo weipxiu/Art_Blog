@@ -1,9 +1,4 @@
 <?php wp_head(); ?>
-<!-- 网站换肤start -->
-<script>
-	document.documentElement.style.setProperty('--color', '<?php echo get_option('weipxiu_options')['replace_skin']; ?>'.trim())
-</script>
-<!-- 网站换肤end -->
 
 <meta charset="UTF-8">
 <meta name="baidu-site-verification" content="cNP7vhhXuw" />
@@ -67,7 +62,10 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 ?>
 
 <script>
-//移动端适配
+// 网站换肤动态更换主色调
+document.documentElement.style.setProperty('--color', '<?php echo get_option('weipxiu_options')['replace_skin']; ?>'.trim())
+
+// 移动端适配
 var win_width = 375;
 function setFontSize() {
 	win_width = window.innerWidth;
