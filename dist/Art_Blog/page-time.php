@@ -6,7 +6,7 @@ Template Name: 时光机
 <!doctype html>
 <html>
 <head>
-<title><?php wp_title( '-', true, 'right' ); ?>不忘初心&nbsp;-&nbsp;方得始终&nbsp;|&nbsp;唯品秀前端技术博客</title>
+<title><?php wp_title( '-', true, 'right' ); ?>不忘初心方得始终&nbsp;|&nbsp;唯品秀前端技术博客</title>
 <?php get_template_part('common'); ?><style>
 html{height:auto;}
 body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
@@ -90,8 +90,8 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 <!-- 底部引用区域end -->
 <script>
 var date = [{
-		message:"抱歉",
-		reply:"该板块暂无数据哦~"
+		time:"抱歉",
+		text:"该板块暂无数据哦~"
 	}];
 <?php
 if (get_option('weipxiu_options')['time_machine']) {
@@ -159,7 +159,7 @@ function create(iNub)
 	iEnd=iEnd>date.length?date.length:iEnd;
 	for(var i=iStart;i<iEnd;i++)
 	{
-		sHtml+='<li><div class="box"><div class="pic"></div><div class="ico"></div><div class="content text">'+date[i].message+'</div><div class="reply text">'+date[i].reply+'</div></div></li>';
+		sHtml+='<li><div class="box"><div class="pic"></div><div class="ico"></div><div class="content text">'+date[i].time+'</div><div class="reply text">'+date[i].text+'</div></div></li>';
 	}
 	oList.innerHTML=sHtml;
 	footerShow(iNub);

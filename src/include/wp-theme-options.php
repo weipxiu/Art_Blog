@@ -771,7 +771,7 @@ function themeoptions_page() {
         <div class="row clearfix">
           <label for="time-machine" class="fl left-wrap">数据：</label>
           <div class="fr right-wrap">
-            <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{message: '时间', reply:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
+            <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{time: '时间', text:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
             <span class="warn">*该功能仅供作者使用，暂不对外开放，如有需要，自行更改源码获取拓展
           </div>
         </div>
