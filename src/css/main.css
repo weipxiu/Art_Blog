@@ -10,7 +10,7 @@
 }
 
 :root {
-	--color: #1890ff;
+	--color: transparent;
 }
 
 :not(span) {

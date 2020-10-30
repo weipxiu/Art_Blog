@@ -44,8 +44,6 @@
             this.randomArticles();
             // 文章详情页底部评论区域样式兼容
             this.commentStyle();
-            // 窗口改变事件
-            this.winResize();
         },
         // 头部3D导航DOM改造
         navReform: function () {
@@ -674,17 +672,6 @@
                     $("#reply-title").hide();
                 }
             })
-        },
-        // 窗口改变事件
-        winResize: function () {
-            $(window).resize(function () {
-                if ($(document).width() >= 1200) {
-                    // 当从移动端点开了侧边栏，然后改编窗口到pc端，关闭偏移
-                    $(".continar,.os-headertop").css({
-                        "transform": "translateX(0)"
-                    })
-                }
-            });
         },
         // 移动端执行函数
         mobileFnAll: function () {

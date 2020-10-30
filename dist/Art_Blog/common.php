@@ -62,9 +62,6 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 ?>
 
 <script>
-// 网站换肤动态更换主色调
-document.documentElement.style.setProperty('--color', '<?php echo get_option('weipxiu_options')['replace_skin']; ?>'.trim())
-
 // 移动端适配
 var win_width = 375;
 function setFontSize() {
@@ -74,14 +71,18 @@ function setFontSize() {
 		var pro = 100 * win_width / w_init;
 		if (win_width > 767 && win_width < 1000) { pro = 70 }
 		if (win_width > 1000 && win_width < 1200) { pro = 100 }
-		document.documentElement.style.cssText = "font-size: "+pro+'px'+";transtion: 0.15s";
+		document.documentElement.style.setProperty("font-size", pro+"px");
+		document.documentElement.style.setProperty("transition", "font-size 0.15s");
+	}else{
+		// 当从移动端点开了侧边栏，然后改变窗口到pc端，关闭偏移
+		$(".continar,.os-headertop").css({
+				"transform": "translateX(0)"
+		})
 	}
 }
 setFontSize()
 $(window).resize(function () {
-		if (window.innerWidth != win_width) {
-			setFontSize()
-		}
+	setFontSize()
 });
 </script>
 

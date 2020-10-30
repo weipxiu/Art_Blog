@@ -122,3 +122,19 @@
 <!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-start -->
 <div class="cover"></div>
 <!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-end -->
+
+<!-- 网站换肤start -->
+<script>
+	function getColor(){
+		<?php if (trim(get_option('weipxiu_options')['replace_skin'])){ ?>
+			document.documentElement.style.setProperty('--color', '<?php echo trim(get_option('weipxiu_options')['replace_skin']); ?>')
+		<?php }else{?>
+			document.documentElement.style.setProperty('--color', '#1890ff')
+		<?php }?>
+	}
+	getColor()
+	window.onresize = function(){
+		getColor()
+	}
+</script>
+<!-- 网站换肤end -->
