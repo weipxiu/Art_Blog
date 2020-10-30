@@ -6,7 +6,7 @@ Template Name: 给我留言
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>关于&留言 - 唯品秀 – 前端开发 | web前端技术博客</title>
+    <title><?php wp_title( '-', true, 'right' ); ?>唯品秀 – 前端开发 | web前端技术博客</title>
     <?php get_template_part('common'); ?>
 </head>
     <body>

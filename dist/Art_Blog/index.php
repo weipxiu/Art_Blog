@@ -4,7 +4,7 @@
 <head>
 <title>
 	<?php
-		$name = single_tag_title('', false);
+		$name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
 		} else {

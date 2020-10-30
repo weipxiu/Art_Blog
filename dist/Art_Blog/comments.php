@@ -11,8 +11,8 @@ if ( post_password_required() )
     </nav> -->
 
     <!-- 加载表情包start -->
-        <div id="smilies_modal" style="display:none">
-        <?php include(TEMPLATEPATH . '/smiley.php'); ?>
+    <div id="smilies_modal" style="display:none">
+        <?php get_template_part('smiley'); ?>
     </div>
 
     <!-- 加载表情包end -->

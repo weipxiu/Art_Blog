@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<title><?php wp_title( '-', true, 'right' ); ?></title>
 <head>
     <?php 
         $keywords = get_post_meta($post->ID, "keywords", true);

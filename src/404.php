@@ -11,7 +11,7 @@ Template Name: 404页面
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<?php wp_head(); ?>
-	<title>很抱歉,未能找到你的女朋友&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
+	<title><?php wp_title( '-', true, 'right' ); ?>很抱歉,未能找到你的女朋友&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
 	<meta name="Keywords" content="404、未找到内容">
 	<meta name="description" content="抱歉，当前访问的内容不存在！">
 	<script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery-2.1.4.min.js"></script>

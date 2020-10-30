@@ -562,7 +562,7 @@ function wheatv_breadcrumbs() {
 }
 
 //自定义表情路径和名称
-function custom_smilies_src($src, $img){return get_bloginfo('template_directory').'/images/smilies/' . $img;}
+function custom_smilies_src($src, $img){return esc_url(get_template_directory_uri()).'/images/smilies/' . $img;}
 add_filter('smilies_src', 'custom_smilies_src', 10, 2);
     if ( !isset( $wpsmiliestrans ) ) {
         $wpsmiliestrans = array(

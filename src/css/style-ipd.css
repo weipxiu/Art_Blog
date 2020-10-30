@@ -132,6 +132,8 @@
 	.site-search-form {
 		padding: 0.5rem 0.4rem;
 		overflow: hidden;
+		display: flex;
+    justify-content: center;
 	}
 	.search-input {
 		float: left;
@@ -144,6 +146,7 @@
 		font-size: 16px;
 		border-radius: 4px 0 0 4px;
 		outline: none;
+		font-size: 0.28rem;
 	}
 	.search-btn .iconfont {
 		width: 16px;
@@ -2609,7 +2612,7 @@
 		z-index: 97;
 		transition: all 0.25s;
 	}
-	.os-headertop * {
+	.os-headertop *:not(input) {
 		color: #fff;
 	}
 	.os-headertop .weipxiu_nav {

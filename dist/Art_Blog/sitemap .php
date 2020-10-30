@@ -9,7 +9,7 @@
 <html lang="zh-CN">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
-<title>站点地图 - <?php bloginfo('name'); ?></title>
+<title><?php wp_title( '-', true, 'right' ); ?><?php bloginfo('name'); ?></title>
 <meta name="keywords" content="站点地图,<?php bloginfo('name'); ?>" />
 <meta name="copyright" content="<?php bloginfo('name'); ?>" />
 <link rel="canonical" href="<?php echo get_permalink(); ?>" />
