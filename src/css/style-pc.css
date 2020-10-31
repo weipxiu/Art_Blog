@@ -46,7 +46,7 @@
 	body::-webkit-scrollbar-thumb {
 		border-radius: 10px;
 		background-color: #1890ff;
-		background-color: var(--color, #1890ff);
+		background-color: var(--color);
 	}
 
 	img {
@@ -499,7 +499,7 @@
 	.search-btn {
 		border: none;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		border-radius: 0 4px 4px 0;
 		width: 7%;
 		cursor: pointer;
@@ -769,7 +769,7 @@
 		bottom: -0;
 		left: 0;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		-webkit-transition: all 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
@@ -824,7 +824,7 @@
 
 	.nav ul.music-nav li:nth-of-type(4) p {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.nav ul.music-nav li:nth-of-type(5) p {
@@ -881,7 +881,7 @@
 
 	.nav ul li.off:hover a span {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav ul.music-nav li:hover a {
@@ -913,13 +913,13 @@
 	#nav_list li.current-category-parentt > a span,
 	#nav_list li.current-menu-item a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav ul li.action i,
 	.nav ul li.current-category-ancestor i {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav ul.music-nav li {
@@ -932,7 +932,7 @@
 		-o-transition: all 0.35s;
 		transition: all 0.35s;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav ul li:hover a span i {
@@ -945,7 +945,7 @@
 		-ms-transform: rotateX(180deg);
 		transform: rotateX(180deg);
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav {
@@ -1031,7 +1031,7 @@
 
 	.nav .nav-min a.action {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	/* .nav .nav-min::before {
@@ -1193,7 +1193,7 @@
 
 	.header .nav-min a:hover {
 		background: #ddd;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		-webkit-transition: all 0.1s;
 		-o-transition: all 0.1s;
 		transition: all 0.1s;
@@ -1479,7 +1479,7 @@
 		line-height: 64px;
 		text-align: center;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.aircraft:hover {
@@ -1552,12 +1552,12 @@
 	.continar .continar-left-top h1 a {
 		font-size: 18px;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.continar .continar-left-top h1 a:hover {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.continar .continar-left-top h1 a img {
@@ -1570,7 +1570,7 @@
 	.continar .continar-left-top h1 span {
 		margin-left: -8px;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		-webkit-transition: all 0.25s;
 		-o-transition: all 0.25s;
 		transition: all 0.25s;
@@ -1676,7 +1676,7 @@
 
 	.wpm_form .wpm_submit input {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		padding: 7px 15px 8px;
 		border: none;
@@ -1765,7 +1765,7 @@
 		width: 0;
 		height: 1px;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 	}
@@ -1800,7 +1800,7 @@
 	.text_right h2 span:nth-child(1) {
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		font-size: 12px;
 		display: inline-block;
 		position: relative;
@@ -1820,7 +1820,7 @@
 		height: 0;
 		vertical-align: middle;
 		border-left: 10px solid #1890ff;
-		border-left: 10px solid var(--color, #1890ff);
+		border-left: 10px solid var(--color);
 		border-top: 6px solid transparent;
 		border-bottom: 6px solid transparent;
 	}
@@ -1850,7 +1850,7 @@
 
 	.text h2 a:hover {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.con_info {
@@ -1868,7 +1868,7 @@
 		-o-transition: all 0.35s;
 		transition: all 0.35s;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		opacity: 0.8;
 		display: block;
@@ -1907,7 +1907,7 @@
 		top: 8px;
 		border: 8px dashed transparent;
 		border-left: 8px solid #1890ff;
-		border-left: 8px solid var(--color, #1890ff);
+		border-left: 8px solid var(--color);
 		border-right-width: 0;
 	}
 
@@ -2008,7 +2008,7 @@
 		padding: 4px 15px;
 		font-size: 14px;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.continar-right p.clearfix {
@@ -2023,12 +2023,12 @@
 		-o-transition: all 0.25s;
 		transition: all 0.25s;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.continar-right p.clearfix a:hover {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.widget {
@@ -2068,7 +2068,7 @@
 
 	.daily-list > p a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.widget-title {
@@ -2083,7 +2083,7 @@
 		width: 100px;
 		height: 2px;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		left: 0;
 		bottom: -1px;
 	}
@@ -2205,7 +2205,7 @@
 	.widget ul li:hover h3,
 	.widget ul li:hover span {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		-webkit-transition: all 0.35s;
 		-o-transition: all 0.35s;
 		transition: all 0.35s;
@@ -2213,9 +2213,9 @@
 
 	.widget ul li:hover span.daily-title:before {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		border: 2px solid #1890ff;
-		border: 2px solid var(--color, #1890ff);
+		border: 2px solid var(--color);
 		-webkit-transition: all 0.35s;
 		-o-transition: all 0.35s;
 		transition: all 0.35s;
@@ -2277,7 +2277,7 @@
 
 	.widget ul li:nth-child(3) em {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.classif {
@@ -2321,7 +2321,7 @@
 	.items a:hover {
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.pagination {
@@ -2392,7 +2392,7 @@
 
 	.footer a:hover {
 		color: #1890ff !important;
-		color: var(--color, #1890ff) !important;
+		color: var(--color) !important;
 		text-decoration: underline;
 	}
 	.footer span {
@@ -2421,7 +2421,7 @@
 	.container a:hover,
 	.container p a.highlight {
 		color: #1890ff !important;
-		color: var(--color, #1890ff) !important;
+		color: var(--color) !important;
 		text-decoration: underline;
 	}
 
@@ -2587,13 +2587,13 @@
 
 	#ds-recent-comments li.ds-comment a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 13px;
 	}
 
 	#ds-recent-comments li.ds-comment .ds-thread-title a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	#details .log-text {
@@ -2822,7 +2822,7 @@
 
 	div.nav-s a:nth-child(1) {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		padding: 0 25px 0 35px;
 		border-radius: 4px 0 0 4px;
@@ -2841,7 +2841,7 @@
 		border-top: 20px solid transparent;
 		border-right: 20px solid transparent;
 		border-left: 20px solid #1890ff;
-		border-left: 20px solid var(--color, #1890ff);
+		border-left: 20px solid var(--color);
 		border-bottom: 20px solid transparent;
 		position: absolute;
 		top: 0;
@@ -2971,7 +2971,7 @@
 	}
 	.article-items span.recommend a {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		padding: 2px 8px;
 		border-radius: 50px;
@@ -2983,7 +2983,7 @@
 
 	.continar-left .log-text a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.continar-left .log-text a:hover {
@@ -3069,7 +3069,7 @@
 	.continar-left .post-motto:hover {
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 	p.text-post {
 		width: 100%;
@@ -3844,12 +3844,12 @@
 	.wp-pagenavi a.current:hover {
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.wp-pagenavi a.current {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		text-decoration: none;
 		padding: 8px 14px;
 		margin: 0 2px;
@@ -4192,7 +4192,7 @@
 		height: 33px;
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		line-height: 33px;
 		padding: 0;
 		font-size: 15px;
@@ -4222,7 +4222,7 @@
 		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		opacity: 0.8;
 		text-align: center;
 	}
@@ -4273,9 +4273,9 @@
 	.log-text h4:nth-of-type(5n + 4),
 	.log-text h2:nth-of-type(5n + 4) {
 		border-left: 4px solid #1890ff;
-		border-left: 4px solid var(--color, #1890ff);
+		border-left: 4px solid var(--color);
 		border-bottom: 1px solid #1890ff;
-		border-bottom: 1px solid var(--color, #1890ff);
+		border-bottom: 1px solid var(--color);
 	}
 
 	/*在线客服start*/
@@ -4769,8 +4769,8 @@
 
 	.e-secret input.euc-y-s {
 		color: #fff;
-		background-color: var(--color, #1890ff);
-		border-color: var(--color, #1890ff);
+		background-color: var(--color);
+		border-color: var(--color);
 	}
 
 	.continar-left .log-text .e-secret p a,
@@ -5373,7 +5373,7 @@
 	}
 	.post-actions .action-like {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		font-size: 12px;
 	}
 	#reward-popup {
@@ -5435,12 +5435,12 @@
 		background: #fff;
 		border-radius: 2px;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.mod-breadcrumb a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 12px;
 	}
 
@@ -5867,7 +5867,7 @@
 	.leaving_message p a {
 		font-size: 14px;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	/* 留言板寄语end */
 
@@ -5891,7 +5891,7 @@
 		width: 100px;
 		height: 2px;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		position: absolute;
 		left: 0;
 		bottom: -1px;
@@ -5909,7 +5909,7 @@
 	}
 	#comments .respond .login_success a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	.commentlist {
 		padding-left: 40px;
@@ -6038,12 +6038,12 @@
 
 	.warning-text a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.warning-text .link-logout {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.link-logout {
@@ -6202,7 +6202,7 @@
 		padding: 8px 15px;
 		text-align: center;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		border: 0;
 		font-size: 12px;
@@ -6547,7 +6547,7 @@
 	.login_alert_box div a:nth-of-type(1) {
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		margin-left: 5px;
 	}
 

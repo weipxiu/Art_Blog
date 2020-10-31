@@ -81,7 +81,7 @@
 
 	.swiper-pagination-bullet-active {
 		background: #1890ff !important;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.swiper-container1,
@@ -194,7 +194,7 @@
 		color: #fff;
 		border: none;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		height: 0.8rem;
 		font-size: 16px;
 		padding: 0 12px;
@@ -215,7 +215,7 @@
 		animation: box 0.5s linear;
 		-ms-animation: box 0.5s linear;
 		border-bottom: 1px solid #1890ff;
-		border-bottom: 1px solid var(--color, #1890ff);
+		border-bottom: 1px solid var(--color);
 		background: rgba(40, 40, 40, 0.9);
 	}
 
@@ -388,12 +388,12 @@
 
 	.nav ul li a span.hover {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav ul li a span.hover i {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.nav {
@@ -704,7 +704,7 @@
 		line-height: 64px;
 		text-align: center;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	/*小飞机end*/
@@ -787,7 +787,7 @@
 	.continar .continar-left-top h1 span {
 		margin-left: -8px;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		transition: all 0.25s;
 		font-size: 0.3rem;
 	}
@@ -887,7 +887,7 @@
 
 	.wpm_form .wpm_submit input {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		border: none;
 		border-radius: 0 0.06rem 0.06rem 0;
@@ -953,7 +953,7 @@
 	.text_right h2 span:nth-child(1) {
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		padding: 2px 6px;
 		font-size: 12px;
 		float: left;
@@ -973,7 +973,7 @@
 		height: 0;
 		vertical-align: middle;
 		border-left: 4px solid #1890ff;
-		border-left: 4px solid var(--color, #1890ff);
+		border-left: 4px solid var(--color);
 		border-top: 4px solid transparent;
 		border-bottom: 4px solid transparent;
 	}
@@ -999,7 +999,7 @@
 		font-style: normal;
 		transition: all 0.35s;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		opacity: 0.8;
 		display: block;
@@ -1023,7 +1023,7 @@
 		top: 15px;
 		border: 8px dashed transparent;
 		border-left: 8px solid #1890ff;
-		border-left: 8px solid var(--color, #1890ff);
+		border-left: 8px solid var(--color);
 		border-right-width: 0;
 	}
 
@@ -1189,7 +1189,7 @@
 
 	p.clearfix a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 0.28rem;
 	}
 
@@ -1235,7 +1235,7 @@
 	}
 	.daily-list > p a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 0.28rem;
 	}
 	.widget ul li {
@@ -1347,7 +1347,7 @@
 
 	.widget ul li:nth-child(3) em {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 	}
 
 	.mouseover .widget-title {
@@ -1493,7 +1493,7 @@
 		font-size: 0.24rem;
 		line-height: 0.4rem;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		border-top: 1px solid #eaeaea;
 		transform: translateY(0px);
 		-ms-transform: translateY(0px);
@@ -1563,7 +1563,7 @@
 
 	#primary-sidebar #ds-recent-comments li.ds-comment div a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 12px;
 	}
 
@@ -1615,13 +1615,13 @@
 
 	#ds-recent-comments li.ds-comment a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 13px;
 	}
 
 	#ds-recent-comments li.ds-comment .ds-thread-title a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	/*评论模块end*/
 
@@ -1656,12 +1656,12 @@
 		background: #fff;
 		margin-bottom: 0.2rem;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	.continar-left .mod-breadcrumb a {
 		font-size: 0.32rem;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	.head_user_b {
 		display: none;
@@ -1704,7 +1704,7 @@
 		margin: 0 5px;
 		border-radius: 3px;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		float: left;
 	}
 
@@ -1777,7 +1777,7 @@
 
 	div.nav-s a:nth-child(1) {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		color: #fff;
 		padding: 0px 25px 0px 35px;
 		border-radius: 4px 0px 0px 4px;
@@ -1796,7 +1796,7 @@
 		border-top: 20px solid transparent;
 		border-right: 20px solid transparent;
 		border-left: 20px solid #1890ff;
-		border-left: 20px solid var(--color, #1890ff);
+		border-left: 20px solid var(--color);
 		border-bottom: 20px solid transparent;
 		position: absolute;
 		top: 0px;
@@ -1997,7 +1997,7 @@
 	}
 	.continar-left .log-text a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 
 	.codecolorer-container * {
@@ -2790,7 +2790,7 @@
 	}
 	.wp-pagenavi a.current {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		text-decoration: none;
 		color: #fff;
 		border: 0;
@@ -2874,7 +2874,7 @@
 		top: 0;
 		z-index: 99;
 		transform: translateX(-3.21rem);
-		transition: all 0.25s;
+		/* transition: all 0.25s; */
 	}
 
 	.os-herder ul.slide-left {
@@ -2945,7 +2945,7 @@
 		line-height: 1rem;
 		font-size: 0.44rem;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		line-height: 1rem;
 		text-align: center;
 		position: fixed;
@@ -3081,8 +3081,8 @@
 	}
 	.e-secret input.euc-y-s {
 		color: #fff;
-		background-color: var(--color, #1890ff);
-		border-color: var(--color, #1890ff);
+		background-color: var(--color);
+		border-color: var(--color);
 	}
 
 	.continar-left .log-text .e-secret p a,
@@ -3165,9 +3165,9 @@
 	.log-text h4:nth-of-type(5n + 4),
 	.log-text h2:nth-of-type(5n + 4) {
 		border-left: 4px solid #1890ff;
-		border-left: 4px solid var(--color, #1890ff);
+		border-left: 4px solid var(--color);
 		border-bottom: 1px solid #1890ff;
-		border-bottom: 1px solid var(--color, #1890ff);
+		border-bottom: 1px solid var(--color);
 	}
 
 	.log-text ul {
@@ -3206,7 +3206,7 @@
 	}
 	.post-actions .action-like {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		font-size: 0.24rem;
 		margin: 0 auto;
 		padding: 0.15rem 0.25rem;
@@ -3229,7 +3229,7 @@
 		height: 0.66rem;
 		color: #fff;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		line-height: 0.66rem;
 		padding: 0;
 		font-size: 0.28rem;
@@ -3442,7 +3442,7 @@
 	.leaving_message p a {
 		font-size: 0.28rem;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	/* 留言板寄语end */
 
@@ -3479,7 +3479,7 @@
 	}
 	.post_content #submit {
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		border-radius: 0.08rem;
 		color: #fff;
 		width: 100%;
@@ -3503,7 +3503,7 @@
 		width: 100px;
 		height: 2px;
 		background: #1890ff;
-		background: var(--color, #1890ff);
+		background: var(--color);
 		position: absolute;
 		left: 0;
 		bottom: -1px;
@@ -3523,7 +3523,7 @@
 	}
 	#comments .respond .login_success a {
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 		font-size: 0.28rem;
 	}
 
@@ -3597,7 +3597,7 @@
 	#comments .warning-text a {
 		font-size: 0.24rem;
 		color: #1890ff;
-		color: var(--color, #1890ff);
+		color: var(--color);
 	}
 	.media {
 		overflow: hidden;

@@ -211,7 +211,7 @@ function themeoptions_page() {
                 placeholder="请输入主题颜色值"
               >
               <input type="color" name="color" id="colorPicker" value="#1890ff">
-            <span class="warn">*可输入任意颜色格式，例如十六进制:#ed145b，单词：red，甚至rgba，默认值：#1890ff</span>
+            <span class="warn">*可输入任意颜色格式，例如：#ed145b、red、rgba(0,0,0,.5)，低端浏览器不支持情况下会展示主题默认颜色“#1890ff”</span>
           </div>
         </div>
 

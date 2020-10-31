@@ -77,24 +77,6 @@
 
 <!-- 移动端侧边栏导航start -->
 <div class="os-herder">
-	<!-- <ul class="slide-left">
-		<li><a href=""><i class="iconfont">&#xe632;</i>首页</a></li>
-		<li data-implement='element'>
-			<a href="javascript:void(0);" class="frontEnd"><i class="iconfont">&#xe64b;</i>前端开发<i class="iconfont iconfont_click icon-xiajiantou"></i></a>
-			<div class="slide_slect">
-				<a href="/category/frontend/htmlcss"><i class="iconfont">&#xe68c;</i>HTML/CSS</a>
-				<a href="/category/frontend/javascript"><i class="iconfont">&#xe898;</i>Javascript</a>
-				<a href="/category/frontend/js-frame"><i class="iconfont">&#xe89a;</i>Js框架</a>
-				<a href="/category/frontend/holdall"><i class="iconfont">&#xe6ad;</i>前端工具箱</a>
-				<a href="/works/h5-7_vip/index.html"><i class="iconfont">&#xe757;</i>作品案例</a>
-			</div>
-		</li>
-		<li><a href="/category/jqzy"><i class="iconfont">&#xe75c;</i>别具匠心</a></li>
-		<li><a href="/category/mood"><i class="iconfont">&#xe668;</i>心情小镇</a></li>
-		<li><a href="/message"><i class="iconfont">&#xe69f;</i>碎言碎语</a></li>
-		<li><a href="/about"><i class="iconfont">&#xe603;</i>关于博客</a></li>
-		<li><a href="/wp-login.php"><i class="iconfont">&#xe630;</i>用户登录</a></li>
-	</ul> -->
 	<?php 
 		// 列出顶部导航菜单，只列出一级菜单
 		wp_nav_menu( array( 

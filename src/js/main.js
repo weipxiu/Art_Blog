@@ -683,13 +683,13 @@
             // }, 500)
 
             //特色图片懒加载，移动端需要设置滚动事件，在资源完全加载后执行
-            window.onload = function () {
+            $(document).ready(function(){
                 $("img.Lazy_load").lazyload({
                     container: $("body > .continar"),
                     threshold: 100,
                     effects: "show"
                 });
-            };
+            })
 
             var obtn = true;
             $(".btn_menu,.cover").on("touchmove", function (event) {
@@ -698,6 +698,7 @@
             $(".btn_menu,.cover").on("touchstart", myFunction);
 
             function myFunction() {
+                $(".os-herder").css("transition", "all 0.25s")
                 $(".cover").toggle();
                 if (obtn) {
                     $(".os-herder").css({
