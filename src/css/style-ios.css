@@ -3296,6 +3296,9 @@
 		line-height: 0.4rem;
 		color: #5e5e5e;
 	}
+	.tuts_comments_user_avatars li img{
+		vertical-align: middle;
+	}
 	/* 侧边栏留言评论start */
 	/* ajax loading动画start */
 

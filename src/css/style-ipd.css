@@ -2923,6 +2923,9 @@
 		width: calc(100% - 0.92rem);
 		line-height: 0.4rem;
 	}
+	.tuts_comments_user_avatars li img{
+		vertical-align: middle;
+	}
 	/* 侧边栏留言评论start */
 
 	/* ajax loading动画start */
