@@ -823,8 +823,7 @@
 	}
 
 	.nav ul.music-nav li:nth-of-type(4) p {
-		background: #1890ff;
-		background: var(--color);
+		background: #409eff;
 	}
 
 	.nav ul.music-nav li:nth-of-type(5) p {
@@ -2276,8 +2275,7 @@
 	}
 
 	.widget ul li:nth-child(3) em {
-		background: #1890ff;
-		background: var(--color);
+		background: #409eff;
 	}
 
 	.classif {

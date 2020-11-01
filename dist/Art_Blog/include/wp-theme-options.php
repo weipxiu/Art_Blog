@@ -210,7 +210,7 @@ function themeoptions_page() {
                 value="<?php echo $a_options['replace_skin']; ?>"
                 placeholder="请输入主题颜色值"
               >
-              <input type="color" name="color" id="colorPicker" value="#1890ff">
+              <input type="color" name="color" id="colorPicker" value="<?php if ($a_options['replace_skin']) {echo $a_options['replace_skin'];} else {echo "#1890ff";}?>">
             <span class="warn">*可输入任意颜色格式，例如：#ed145b、red、rgba(0,0,0,.5)，低端浏览器不支持情况下会展示主题默认颜色“#1890ff”</span>
           </div>
         </div>
