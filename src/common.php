@@ -72,7 +72,7 @@ function setFontSize() {
 		if (win_width > 767 && win_width < 1000) { pro = 70 }
 		if (win_width > 1000 && win_width < 1200) { pro = 100 }
 		document.documentElement.style.setProperty("font-size", pro+"px");
-		document.documentElement.style.setProperty("transition", "font-size 0.15s");
+		// document.documentElement.style.setProperty("transition", "font-size 0.15s");
 	}else{
 		// 当从移动端点开了侧边栏，然后改变窗口到pc端，关闭偏移
 		$(".continar,.os-headertop").css({

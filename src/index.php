@@ -304,26 +304,10 @@
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.min.js"></script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript">
-	$(function () {
+$(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
 			var domain_name = window.location.protocol + "//" + window.location.host;
 			if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-					//IE浏览器屏蔽部分动效start
-					$(".mod-index__feature .img_list_6pic a").removeClass("word_display");
-					if (!!window.ActiveXObject || "ActiveXObject" in window) {
-							console.log("当前浏览器IE内核，部分效果不可展现！")
-					} else {
-							//首页轮播下sd导航start
-							$("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
-									$(this).addClass("word_display")
-							})
-							$("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
-									$(this).removeClass("word_display")
-							})
-							//首页轮播下sd导航end
-					}
-					//IE浏览器屏蔽部分动效end
-
 					// 桌面提醒功能
 					var set_desktop = function () {
 							if (window.Notification) {
@@ -407,6 +391,20 @@
 					//手机震动功能，里面是数组-震动时间，第二个为间隔时间
 			}
 
+			//首页轮播下sd导航start
+			$(".mod-index__feature .img_list_6pic a").removeClass("word_display");
+			if (!!window.ActiveXObject || "ActiveXObject" in window) {
+					console.log("当前浏览器IE内核，部分效果不可展现！")
+			} else {
+					$("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
+							$(this).addClass("word_display")
+					})
+					$("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
+							$(this).removeClass("word_display")
+					})
+			}
+			//首页轮播下sd导航end
+
 			//修改邮件订阅表单类型
 			$(".wpm_form .wpm_email input").attr("type", "email")
 
@@ -424,22 +422,21 @@
 			
 			// pc轮播
 			if("<?php echo esc_url(get_template_directory_uri()); ?>".indexOf('wp-content/themes/Art_Blog') == -1){
-						layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{
-						skin: 'layui',
-						title:"提示",
-						closeBtn: 1, //是否展示关闭x按钮
-						anim: 4,
-						btn: ['确认'],
-						yes:function(){
-							location.href="https://github.com/weipxiu/Art_Blog"
-						}
-					})
+				layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{
+				skin: 'layui',
+				title:"提示",
+				closeBtn: 1, //是否展示关闭x按钮
+				anim: 4,
+				btn: ['确认'],
+				yes:function(){
+					location.href="https://github.com/weipxiu/Art_Blog"
 				}
-				//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
-				var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
-				var randomNum = Math.floor(Math.random() * 3);
-				var bannerData = [];
-
+			})
+		}
+		//turnEffect（翻转）boomEffect（爆炸）pageEffect（翻页）skewEffect（扭曲）cubeEffect（立方体）
+		var flippingMode = ['turnEffect', 'boomEffect', 'pageEffect', 'skewEffect','cubeEffect'];
+		var randomNum = Math.floor(Math.random() * 3);
+		var bannerData = [];
 	<?php
 		if (trim(get_option('weipxiu_options')['pc_banner'])) {
 		?>
@@ -467,6 +464,6 @@
 		<?php
 		}
 	?>
-	})
+})
 </script>
 </html>

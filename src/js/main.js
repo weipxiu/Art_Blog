@@ -633,10 +633,6 @@
         // 播放视频
         playVideo: function () {
             if ($("#my-video").length) {
-                if ($('#my-video').is(':hidden')) {
-                    $('#my-video').remove()
-                    return
-                }
                 var myPlayer = videojs('my-video');
 
                 //播放失败时候处理
@@ -675,21 +671,14 @@
         },
         // 移动端执行函数
         mobileFnAll: function () {
-            // 移动端固定导航fixed-bug
-            // setTimeout(function () {
-            //     var objec = $('.footer').detach();
-            //     $("body > .continar").append(objec);
-            //     $(".footer").css({ "display": "block" });
-            // }, 500)
-
             //特色图片懒加载，移动端需要设置滚动事件，在资源完全加载后执行
-            $(document).ready(function(){
+            setTimeout(()=>{
                 $("img.Lazy_load").lazyload({
                     container: $("body > .continar"),
                     threshold: 100,
                     effects: "show"
                 });
-            })
+            },300)
 
             var obtn = true;
             $(".btn_menu,.cover").on("touchmove", function (event) {
@@ -722,7 +711,7 @@
                 obtn = !obtn
                 if ($(".site-search").is(":visible")) {
                     $(".os-headertop .site-search").slideToggle(100);
-                    $(".xis").find("i").toggleClass("fa-search fa-remove");
+                    $(".xis").find("i").toggleClass("icon-sousuo icon-guanbi3");
                 }
             }
 
@@ -731,11 +720,6 @@
                 event.preventDefault();
             });
             //移动端禁止侧边导航上下滚动end
-
-            //子元素允许局部滚动
-            $('.os-herder ul.slide-left li .slide_slect').on('touchmove', function (event) {
-                return true;
-            }, false);
 
             //禁止ios11自带浏览器缩放功能start
             document.addEventListener('touchstart', function (event) {
