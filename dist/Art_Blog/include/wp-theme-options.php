@@ -211,7 +211,7 @@ function themeoptions_page() {
                 placeholder="请输入主题颜色值"
               >
               <input type="color" name="color" id="colorPicker" value="<?php if ($a_options['replace_skin']) {echo $a_options['replace_skin'];} else {echo "#1890ff";}?>">
-            <span class="warn">*可输入任意颜色格式，例如：#ed145b、red、rgba(0,0,0,.5)，低端浏览器不支持情况下会展示主题默认颜色“#1890ff”</span>
+            <span class="warn">*可输入任意颜色格式，例如：#ed145b、red、rgba(0,0,0,.5)，默认或低端浏览器不支持情况下展示颜色值：#1890ff（Daybreak Blue / 拂晓蓝）</span>
           </div>
         </div>
 
@@ -281,7 +281,7 @@ function themeoptions_page() {
         <div class="row clearfix">
           <label for="key-word" class="fl left-wrap">头部关键词：</label>
           <div class="fr right-wrap">
-            <textarea id="key-word" name="key-word" rows="3" cols="100" placeholder="例如：&#10;<p>关注前端开发</p>&#10;<p>Html5、Vue、Node、Koa</p>"><?php echo $a_options['key_word']; ?></textarea>
+            <textarea id="key-word" name="key-word" rows="3" cols="100" placeholder="例如：&#10;&lt;p&gt;关注前端开发&lt;/p&gt;&#10;&lt;p&gt;Html5、Vue、Node、Koa&lt;/p&gt;"><?php echo $a_options['key_word']; ?></textarea>
             <span class="warn">*展示在PC端logo右侧的关键词、座右铭或经典语录</span>
           </div>
         </div>
@@ -319,7 +319,7 @@ function themeoptions_page() {
         <div class="row clearfix popular_show" style="display:none">
           <label class="fl left-wrap" for="custom_label">自定义热门标签：</label>
           <div class="fr right-wrap">
-            <textarea id="custom_label" name="custom_label" rows="8" cols="100" placeholder="例如：&#10;<a href='https://www.weipxiu.com'>唯品秀前端技术博客</a>"><?php echo $a_options['custom_label']; ?></textarea>
+            <textarea id="custom_label" name="custom_label" rows="8" cols="100" placeholder="例如：&#10;&lt;a href=&#x27;https://www.weipxiu.com&#x27;&gt;唯品秀前端技术博客&lt;/a&gt;"><?php echo $a_options['custom_label']; ?></textarea>
             <span class="warn" style="display:block">*每条链接占一行，中间不需要逗号","衔接</span>
           </div>
         </div>
@@ -719,7 +719,7 @@ function themeoptions_page() {
         <div class="row clearfix">
           <label for="leaving-message" class="fl left-wrap">留言板寄语：</label>
           <div class="fr right-wrap">
-            <textarea id="leaving-message" name="leaving-message" rows="5" cols="100" placeholder="例如：&#10;<p>留言板寄语</p>"><?php echo $a_options['leaving_message'] ?></textarea>
+            <textarea id="leaving-message" name="leaving-message" rows="5" cols="100" placeholder="例如：&#10;&lt;p&gt;留言板寄语&lt;/p&gt;"><?php echo $a_options['leaving_message'] ?></textarea>
           </div>
         </div>
       </div>
@@ -773,6 +773,7 @@ function themeoptions_page() {
           <div class="fr right-wrap">
             <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{time: '时间', text:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
             <span class="warn">*该功能仅供作者使用，暂不对外开放，如有需要，自行更改源码获取拓展
+            </span>
           </div>
         </div>
       </div>
