@@ -745,12 +745,14 @@
             //移动端头部下拉搜索end
 
             // 移动端二级菜单导航start
-            $("ul.slide-left li a").on("touchstart", function (e) {
+            $("ul.slide-left li.menu-item-type-custom a").on("touchstart", function (event) {
                 $(this).parents('li').siblings('li').find('.slide_slect').slideUp();
                 $(this).parents('li').siblings('li').find('.iconfont_click').removeClass('icon-shangjiantou').addClass('icon-xiajiantou');
 
                 $(this).siblings(".slide_slect").stop().slideToggle();
                 $(this).parent().find(".iconfont_click").toggleClass("icon-xiajiantou icon-shangjiantou");
+
+                event.stopPropagation();
             })
             // 移动端二级菜单导航end
         },

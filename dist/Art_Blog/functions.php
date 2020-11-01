@@ -352,6 +352,7 @@ function my_remove_recent_comments_style() {
         'recent_comments_style'
     ));
 }
+
 //禁止加载WP自带的jquery.js
 if (!is_admin()) { // 后台不禁止
     function my_init_method() {
