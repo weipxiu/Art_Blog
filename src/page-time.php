@@ -270,7 +270,7 @@ function showList() {
 function showLi() {
     var oList = document.getElementById("messageList");
     var aLi = oList.children;
-    var iTop = document.documentElement.scrollTop + document.documentElement.clientHeight + 350;
+    var iTop = (document.body.scrollTop || document.documentElement.scrollTop) + document.documentElement.clientHeight + 350;
     var iTime = 0;
     for (var i = 0; i < aLi.length; i++) {
         if (getTop(aLi[i]) < iTop && aLi[i].off) {
