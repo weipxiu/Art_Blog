@@ -36,11 +36,11 @@ II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本�
 
 III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本，[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html)
 
-IV、更多详细教程点击：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
+IV、更多详细教程点击：[主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥？[教程视频](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
 V、主题开源，唯一支持作者的方式就是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！
 <center class="half">
-<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" width="150" align=left><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png" width="150" align=left>
+<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" width="150"><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png" width="150">
 </center>
 
 ## 主题后台配置预览
@@ -53,7 +53,7 @@ I、wordPress主题制作有特别要求，例如主题根目录必须存在head
 
 II、为了用户最佳浏览体验，该主题对≤IE8作了屏蔽跳转，≥IE9版本可能无法完整展示CSS3效果，但会尽量兼容到不影响阅读
 
-III、基于css文件作了根据终端分割，所以你会看到主题目录dist>css文件夹中有style-pc.css、style-ios.css、style-ipd.css两个文件，没错，三端样式完全独立，不重用，不过你完全不用过分担心，打包后多端样式会合并压缩，代价没你想象的那么大，有利有弊，不予置评
+III、CSS文件基于终端做分割，所以你会看到主题目录dist>css文件夹中有style-pc.css、style-ios.css、style-ipd.css两个文件，没错，三端样式完全独立，不重用，不过你完全不用过分担心，打包后多端样式会合并压缩，代价没你想象的那么大，有利有弊，不予置评
 
 IV、源码开放供大家使用并修改，但在使用过程中底部请保留"唯品秀"版权说明，即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
