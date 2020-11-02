@@ -80,7 +80,8 @@ var setFontSize = function() {
         documen.querySelectorAll(".continar,.os-headertop").style.transform = "translateX(0)"
     }
 }
-setFontSize() window.onresize = function() {
+setFontSize(); 
+window.onresize = function() {
     setFontSize()
 }
 </script>
