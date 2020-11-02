@@ -63,6 +63,7 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 
 <script>
 var win_width = 375;
+var deviation = document.querySelectorAll(".continar,.os-headertop");
 var setFontSize = function() {
     win_width = window.innerWidth;
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || win_width < 1200) {
@@ -75,9 +76,8 @@ var setFontSize = function() {
             pro = 100
         }
         document.documentElement.style.setProperty("font-size", pro + "px");
-        // document.documentElement.style.setProperty("transition", "font-size 0.15s");
-    } else {
-        documen.querySelectorAll(".continar,.os-headertop").style.transform = "translateX(0)"
+    } else if(deviation.length) {
+				deviation[0].style.transform = "translateX(0)";
     }
 }
 setFontSize(); 
