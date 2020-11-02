@@ -40,7 +40,7 @@ IV、更多详细教程点击：[唯品秀前端技术博客主题使用教程](
 
 V、主题开源，唯一支持作者的方式就是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！
 <center class = "half">
-<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" align = left><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png"  align = right>
+<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" width="160" align = left><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png" width="160" align = right>
 </center>
 
 ## 主题后台配置预览
