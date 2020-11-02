@@ -38,9 +38,9 @@ III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2
 
 IV、更多详细教程点击：[主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥？[教程视频](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
-V、主题开源，唯一支持作者的方式就是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！
-<center class="half">
-<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" width="150"><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png" width="150">
+V、主题开源，唯一支持作者的方式是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！
+<center class="half" align="center">
+<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" width="150" align="center"><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png" width="150" align="center">
 </center>
 
 ## 主题后台配置预览
