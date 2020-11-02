@@ -26,10 +26,7 @@
   </a>
 </p>
 
-一款基于Js+jquery2.1.4+H5/CSS3开发，遵循黄金分割比例，努力把控每个元素每一个像素差的wordpress主题，[主题介绍](https://www.weipxiu.com/about)
-
-## 主题后台配置预览
-![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp_theme_config.png)
+一款精美的wordPress开源艺术主题，历时四年时光洗礼，每段代码都不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[主题介绍](https://www.weipxiu.com/about)
 
 ## 如何使用它
 
@@ -41,9 +38,13 @@ III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2
 
 IV、更多详细教程点击：[唯品秀前端技术博客主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥还是不知道说的啥？[简洁教程视频链接](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
-V、如若喜欢，请多多打赏，您的认可与支持将是我前进的最大动力！
+V、主题开源，唯一支持作者的方式就是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！
+<center class = "half">
+<img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" align = left><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png"  align = right>
+</center>
 
-![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/zhiwei.png)
+## 主题后台配置预览
+![avatar](https://www.weipxiu.com/wp-content/themes/Art_Blog/images/wp_theme_config.png)
 
 ## 碎言碎语
 
