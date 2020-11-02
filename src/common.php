@@ -62,28 +62,27 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 ?>
 
 <script>
-// 移动端适配
 var win_width = 375;
-function setFontSize() {
-	win_width = window.innerWidth;
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || win_width < 1200) {
-		var w_init = 750;
-		var pro = 100 * win_width / w_init;
-		if (win_width > 767 && win_width < 1000) { pro = 70 }
-		if (win_width > 1000 && win_width < 1200) { pro = 100 }
-		document.documentElement.style.setProperty("font-size", pro+"px");
-		// document.documentElement.style.setProperty("transition", "font-size 0.15s");
-	}else{
-		// 当从移动端点开了侧边栏，然后改变窗口到pc端，关闭偏移
-		$(".continar,.os-headertop").css({
-				"transform": "translateX(0)"
-		})
-	}
+var setFontSize = function() {
+    win_width = window.innerWidth;
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || win_width < 1200) {
+        var w_init = 750;
+        var pro = 100 * win_width / w_init;
+        if (win_width > 767 && win_width < 1000) {
+            pro = 70
+        }
+        if (win_width > 1000 && win_width < 1200) {
+            pro = 100
+        }
+        document.documentElement.style.setProperty("font-size", pro + "px");
+        // document.documentElement.style.setProperty("transition", "font-size 0.15s");
+    } else {
+        documen.querySelectorAll(".continar,.os-headertop").style.transform = "translateX(0)"
+    }
 }
-setFontSize()
-$(window).resize(function () {
-	setFontSize()
-});
+setFontSize() window.onresize = function() {
+    setFontSize()
+}
 </script>
 
 <!-- 自定义样式 -->
