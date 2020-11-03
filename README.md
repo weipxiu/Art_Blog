@@ -26,7 +26,7 @@
   </a>
 </p>
 
-一款精美绝伦的wordPress开源艺术主题，历时四年时光洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[主题介绍](https://www.weipxiu.com/about)
+一款精美绝伦的wordPress开源艺术主题，历时四年时光洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[下载安装](https://github.com/weipxiu/Art_Blog/tags)
 
 ## 如何使用它
 

@@ -115,7 +115,7 @@
 <footer class="footer">
     <?php 
         echo get_option('weipxiu_options')['footer_copyright'];
-    ?>&nbsp;本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>&nbsp;<a href="https://github.com/weipxiu/Art_Blog" target="_blank">免费提供</a>
+    ?>&nbsp;本站主题由<a href="https://www.weipxiu.com/" class="highlight">WEIPXIU.COM</a>&nbsp;<a href="https://github.com/weipxiu/Art_Blog/tags" target="_blank">免费提供</a>
 </footer>
 <!-- 底部区域end -->
 
