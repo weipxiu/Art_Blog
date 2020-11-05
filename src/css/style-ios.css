@@ -3017,7 +3017,7 @@
 		text-align: center;
 		background: #1890ff;
 		background: var(--color);
-		border-radius: 1rem;
+		border-radius: 0.08rem;
 		display: block;
 		margin-bottom: 0.25rem;
 	}

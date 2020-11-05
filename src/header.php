@@ -99,10 +99,21 @@
 		) );
 	?>
 	<!-- 移动端登录注册start -->
-	<div class="sign_up">
-				<a href="/wp-login.php"><i class="iconfont icon-denglu"></i>立即登录</a>
-				<a href="/wp-login.php?action=register"><i class="iconfont icon-zhuce"></i>马上注册</a>
-	</div>
+	<?php
+			if (get_option('weipxiu_options')['login_reg'] == 'on' && !is_user_logged_in()) {
+				?>
+					<div class="sign_up">
+							<a href="/wp-login.php"><i class="iconfont icon-denglu"></i>立即登录</a>
+							<a href="/wp-login.php?action=register"><i class="iconfont icon-zhuce"></i>马上注册</a>
+					</div>
+				<?php
+			}
+	?>
+	<?php
+	if (get_option('weipxiu_options')['login_reg'] == 'on' && is_user_logged_in()) {
+		echo "<div class='sign_up'> <a class='backstage' style='display:none' href='/wp-admin/admin.php?page=wp-theme-options.php'>后台管理</a></div>";
+	}
+	?>
 	<!-- 移动端登录注册end -->
 </div>
 <!-- 移动端侧边栏导航end -->
@@ -124,5 +135,13 @@
 	window.onresize = function(){
 		getColor()
 	}
+	// 登录状态下展示后台管理入口
+	<?php
+			if (get_option('weipxiu_options')['login_reg'] == 'on' && is_user_logged_in()) {
+				?>
+					$(".backstage").show()
+				<?php
+			}
+	?>
 </script>
 <!-- 网站换肤end -->
