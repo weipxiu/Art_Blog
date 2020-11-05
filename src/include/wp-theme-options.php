@@ -9,6 +9,7 @@ function themeoptions_page() {
   // 获取提交的数据
   $a_options = get_option('weipxiu_options');
   //加载上传图片的js(wp自带)
+  // media-upload、thickbox、my-upload
   wp_enqueue_script('thickbox');
   //加载css(wp自带)
   wp_enqueue_style('thickbox');
@@ -317,7 +318,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边收藏工具：</label>
+          <label class="fl left-wrap">侧边热门标签：</label>
           <div class="fr right-wrap">
             <label for="popular_on">开</label>
             <input
@@ -335,7 +336,7 @@ function themeoptions_page() {
               name="popular"
               value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*可自定义结构，以便于你更好的维护自己收藏的工具链接</span>
+            <span class="warn">*默认取文章标签列表，可自定义内容，以便于你更好的维护自己收藏的工具链接</span>
           </div>
         </div>
 
@@ -506,109 +507,8 @@ function themeoptions_page() {
             <span class="warn" style="display:block">*强调，该处数据格式特殊，<a target="_blank" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/js/mobile_slide.json">示例数据</a>，<span style="color:red">发现乱码请换个浏览器查看</span>，注意双引号以及在目录层级前需要加<span style="color:red">反斜杠\</span></span>
           </div>
         </div>
-
-        <div class="row" style="display:none">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">banner大图：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="big-banner"
-                id="big-banner"
-                value="<?php echo $a_options['banner']['big_banner']['path']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">banner标题：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="big-banner-text"
-                id="big-banner-text"
-                value="<?php echo $a_options['banner']['big_banner']['text']; ?>"
-              >
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">banner链接：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="big-banner-link"
-                id="big-banner-link"
-                value="<?php echo $a_options['banner']['big_banner']['link']; ?>"
-              >
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              banner大图预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['banner']['big_banner']['path']; ?>" class="preview-img" style="max-width: 400px; max-height: 200px;" alt="">
-            </div>
-          </div>
-        </div>
-				<?php
-					for ($i = 1; $i < 4; $i++) {
-				?>
-					<div class="row" style="display:none">
-	          <div class="margin-top-15 clearfix">
-	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>：</label>
-	            <div class="fr right-wrap">
-	              <input
-	                type="text"
-	                class="url-inp"
-	                name="small-banner-<?php echo $i; ?>"
-	                id="small-banner-<?php echo $i; ?>"
-	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['path']; ?>"
-	              >
-	              <input type="button" name="img-upload" value="选择文件">
-	            </div>
-	          </div>
-	          <div class="margin-top-15 clearfix">
-	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>标题：</label>
-	            <div class="fr right-wrap">
-	              <input
-	                type="text"
-	                class="url-inp"
-	                name="small-banner-text-<?php echo $i; ?>"
-	                id="small-banner-text-<?php echo $i; ?>"
-	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['text']; ?>"
-	              >
-	            </div>
-	          </div>
-	          <div class="margin-top-15 clearfix">
-	            <label class="fl left-wrap" for="">banner<?php echo $i; ?>链接：</label>
-	            <div class="fr right-wrap">
-	              <input
-	                type="text"
-	                class="url-inp"
-	                name="small-banner-link-<?php echo $i; ?>"
-	                id="small-banner-link-<?php echo $i; ?>"
-	                value="<?php echo $a_options['banner']['small_banner']['banner'. $i]['link']; ?>"
-	              >
-	            </div>
-	          </div>
-	          <div class="margin-top-15 clearfix">
-	            <div class="fl left-wrap">
-	              banner<?php echo $i; ?>大图预览：
-	            </div>
-	            <div class="fr right-wrap">
-	              <img src="<?php echo $a_options['banner']['small_banner']['banner'. $i]['path']; ?>" class="preview-img" style="max-width: 400px; max-height: 200px;" alt="">
-	            </div>
-	          </div>
-	        </div>
-				<?php
-					}
-				?>
-
       </div>
+
       <!-- 内容四 社交 -->
       <div class="content-wrap content4">
         <div class="row clearfix">
@@ -852,31 +752,7 @@ function themeoptions_page() {
       'phone-number' => $_POST['phone-number'],
       'reward_text' => $_POST['reward-text'],
       'alipay' => $_POST['alipay'],
-      'wechatpay' => $_POST['wechatpay'],
-			'banner' => array(
-				'big_banner' => array(
-					'path' => $_POST['big-banner'],
-					'text' => $_POST['big-banner-text'],
-					'link' => $_POST['big-banner-link'],
-				),
-				'small_banner' => array(
-					'banner1' => array(
-						'path' => $_POST['small-banner-1'],
-						'text' => $_POST['small-banner-text-1'],
-						'link' => $_POST['small-banner-link-1'],
-					),
-					'banner2' => array(
-						'path' => $_POST['small-banner-2'],
-						'text' => $_POST['small-banner-text-2'],
-						'link' => $_POST['small-banner-link-2'],
-					),
-					'banner3' => array(
-						'path' => $_POST['small-banner-3'],
-						'text' => $_POST['small-banner-text-3'],
-						'link' => $_POST['small-banner-link-3'],
-					)
-				)
-			)
+      'wechatpay' => $_POST['wechatpay']
     );
     update_option('weipxiu_options', stripslashes_deep($options));
 	}

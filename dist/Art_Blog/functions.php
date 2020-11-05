@@ -295,8 +295,12 @@ remove_filter('the_content', 'wptexturize');
 remove_filter('the_excerpt', 'wptexturize');
 //取消评论转义
 remove_filter('comment_text', 'wptexturize');
-//更改编辑器默认视图为HTML/文本
+//更改编辑器默认视图为HTML/文本start
+add_filter('use_block_editor_for_post', '__return_false');
+remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
 add_filter('wp_default_editor', create_function('', 'return "html";'));
+//更改编辑器默认视图为HTML/文本end
+
 //关闭wordpress各种更新，避免插件不兼容
 //add_filter('pre_site_transient_update_core',create_function('$a', "return null;")); // 关闭核心提示
 add_filter('pre_site_transient_update_plugins',create_function('$a', "return null;")); // 关闭插件提示(去小红点)
