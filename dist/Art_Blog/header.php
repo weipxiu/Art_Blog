@@ -111,7 +111,7 @@
 	?>
 	<?php
 	if (get_option('weipxiu_options')['login_reg'] == 'on' && is_user_logged_in()) {
-		echo "<div class='sign_up'> <a class='backstage' style='display:none' href='/wp-admin/admin.php?page=wp-theme-options.php'>后台管理</a></div>";
+		echo "<div class='sign_up'> <a class='backstage' style='display:none' href='/wp-admin/'>后台管理</a></div>";
 	}
 	?>
 	<!-- 移动端登录注册end -->

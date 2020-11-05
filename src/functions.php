@@ -278,7 +278,8 @@ function bigfa_like() {
     die;
 }
 
-function e_secret($atts, $content = null) { //输入密码查看
+//输入密码查看
+function e_secret($atts, $content = null) { 
     extract(shortcode_atts(array(
         'key' => null
     ) , $atts));
