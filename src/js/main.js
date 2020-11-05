@@ -672,13 +672,13 @@
         // 移动端执行函数
         mobileFnAll: function () {
             //特色图片懒加载，移动端需要设置滚动事件，在资源完全加载后执行
-            setTimeout(()=>{
+            setTimeout(() => {
                 $("img.Lazy_load").lazyload({
                     container: $("body > .continar"),
                     threshold: 100,
                     effects: "show"
                 });
-            },300)
+            }, 300)
 
             var obtn = true;
             $(".btn_menu,.cover").on("touchmove", function (event) {
@@ -758,6 +758,18 @@
         },
         // PC端执行函数
         pcFnAll: function () {
+            // 底部悬浮登录注册start
+            // if (localStorage.getItem("off_login") != 1) {
+            //     setTimeout(() => {
+            //         $(".login_alert").slideDown();
+            //     }, 1000)
+            // }
+            $(".login_alert_close").click(() => {
+                $(".login_alert").slideUp();
+                localStorage.setItem("off_login", 1)
+            })
+            // 底部悬浮登录注册end
+
             //文章分类没有资源时候404提示
             if ($(".continar-left .article_not").length > 0) {
                 $("body > .continar").css({ "height": "calc(100% - 280px)" });

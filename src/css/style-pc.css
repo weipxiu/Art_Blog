@@ -2153,6 +2153,10 @@
 		border-bottom: 0;
 	}
 
+	.friendship .daily-list ul li img{
+		display: none;
+	}
+
 	.friendship .daily-list ul li a {
 		margin-left: 0;
 		display: inline;

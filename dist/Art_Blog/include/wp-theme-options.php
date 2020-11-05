@@ -29,7 +29,7 @@ function themeoptions_page() {
       <!-- 内容一 基本 -->
       <div class="content-wrap content1">
         <div class="row clearfix">
-          <label class="fl left-wrap">PC轮播图效果：</label>
+          <label class="fl left-wrap">桌面轮播效果：</label>
           <div class="fr right-wrap">
             <label for="wheel_banner1">翻转</label>
             <input
@@ -77,6 +77,28 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label class="fl left-wrap">全站置灰哀悼：</label>
+          <div class="fr right-wrap">
+            <label for="mourning_on">开</label>
+            <input
+              type="radio"
+              id="mourning_on"
+              name="mourning"
+              value="on" <?php if($a_options['mourning'] == 'on') echo 'checked'; ?>
+            >
+            <label for="mourning_off">关</label>
+            <input
+              type="radio"
+              id="mourning_off"
+              name="mourning"
+              value="off" <?php if($a_options['mourning'] == 'off' || $a_options['mourning'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*该选项用于国际社会等突发重大事件进行哀悼活动</span>
+          </div>
+        </div>
+
+
+        <div class="row clearfix">
           <label class="fl left-wrap">全局友情链接：</label>
           <div class="fr right-wrap">
             <label for="friendlinks_on">开</label>
@@ -93,7 +115,7 @@ function themeoptions_page() {
               name="friend-links"
               value="off" <?php if($a_options['friendlinks'] == 'off' || $a_options['friendlinks'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*默认只在首页展示友情链接，开启后所有页面都会展示</span>
+            <span class="warn">*默认仅首页展示友情链接，开启后所有页面皆展示</span>
           </div>
         </div>
 
@@ -114,6 +136,7 @@ function themeoptions_page() {
               name="logo-flake"
               value="off" <?php if($a_options['login_reg'] == 'off' || $a_options['login_reg'] == '') echo 'checked'; ?>
             >
+            <span class="warn">*非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
           </div>
         </div>
 
@@ -178,8 +201,8 @@ function themeoptions_page() {
           </div>
         </div>
 
-        <div class="row clearfix" style="display:none">
-          <label class="fl left-wrap">全站https：</label>
+        <div class="row clearfix">
+          <label class="fl left-wrap">HTTPS安全项：</label>
           <div class="fr right-wrap">
             <label for="switch-https-on">开</label>
             <input
@@ -200,7 +223,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label for="replace-skin" class="fl left-wrap">网站换肤：</label>
+          <label for="replace-skin" class="fl left-wrap">更换主题色调：</label>
           <div class="fr right-wrap">
             <input
                 type="text"
@@ -216,7 +239,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边栏视频：</label>
+          <label class="fl left-wrap">侧边视频宣传：</label>
           <div class="fr right-wrap">
             <label for="video_on">开</label>
             <input
@@ -279,7 +302,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label for="key-word" class="fl left-wrap">头部关键词：</label>
+          <label for="key-word" class="fl left-wrap">Logo旁关键词：</label>
           <div class="fr right-wrap">
             <textarea id="key-word" name="key-word" rows="3" cols="100" placeholder="例如：&#10;&lt;p&gt;关注前端开发&lt;/p&gt;&#10;&lt;p&gt;Html5、Vue、Node、Koa&lt;/p&gt;"><?php echo $a_options['key_word']; ?></textarea>
             <span class="warn">*展示在PC端logo右侧的关键词、座右铭或经典语录</span>
@@ -287,14 +310,14 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label for="sidebar-notice" class="fl left-wrap">侧边栏公告：</label>
+          <label for="sidebar-notice" class="fl left-wrap">桌面侧边公告：</label>
           <div class="fr right-wrap">
             <textarea id="sidebar-notice" name="sidebar-notice" rows="3" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
           </div>
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边栏热门标签</label>
+          <label class="fl left-wrap">侧边收藏工具：</label>
           <div class="fr right-wrap">
             <label for="popular_on">开</label>
             <input
@@ -317,7 +340,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix popular_show" style="display:none">
-          <label class="fl left-wrap" for="custom_label">自定义热门标签：</label>
+          <label class="fl left-wrap" for="custom_label"></label>
           <div class="fr right-wrap">
             <textarea id="custom_label" name="custom_label" rows="8" cols="100" placeholder="例如：&#10;&lt;a href=&#x27;https://www.weipxiu.com&#x27;&gt;唯品秀前端技术博客&lt;/a&gt;"><?php echo $a_options['custom_label']; ?></textarea>
             <span class="warn" style="display:block">*每条链接占一行，中间不需要逗号","衔接</span>
@@ -791,13 +814,14 @@ function themeoptions_page() {
     $options = array(
       'update_themeoptions' => 'true',
       'wheel_banner' => $_POST['wheel-banner'],
+      'mourning' => $_POST['mourning'],
       'label_logo' => $_POST['label-logo'],
       'popular' => $_POST['popular'],
       'login_reg' => $_POST['logo-flake'],
       'snowflake' => $_POST['snow-flake'],
       'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],
-      // 'switch_https' => $_POST['switch_https'],
+      'switch_https' => $_POST['switch_https'],
       'replace_skin' => $_POST['replace-skin'],
       'side_video' => $_POST['side_video'],
       'video_url' => $_POST['video_url'],

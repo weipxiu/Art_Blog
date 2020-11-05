@@ -6,11 +6,32 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "7708032",
-      "name": "菜单",
-      "font_class": "caidan",
-      "unicode": "e61d",
-      "unicode_decimal": 58909
+      "icon_id": "7090090",
+      "name": "注册",
+      "font_class": "zhuce",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    },
+    {
+      "icon_id": "11872995",
+      "name": "登录",
+      "font_class": "denglu",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "2564397",
+      "name": "百度",
+      "font_class": "baidu",
+      "unicode": "e846",
+      "unicode_decimal": 59462
+    },
+    {
+      "icon_id": "2678578",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
     },
     {
       "icon_id": "9557785",
@@ -97,20 +118,6 @@
       "unicode_decimal": 58973
     },
     {
-      "icon_id": "7713906",
-      "name": "大拇指",
-      "font_class": "damuzhi",
-      "unicode": "e604",
-      "unicode_decimal": 58884
-    },
-    {
-      "icon_id": "634402",
-      "name": "箭头_arrow594",
-      "font_class": "jiantouarrow594",
-      "unicode": "e66a",
-      "unicode_decimal": 58986
-    },
-    {
       "icon_id": "791908",
       "name": "箭头",
       "font_class": "ai-arrow-down",
@@ -123,13 +130,6 @@
       "font_class": "jiantou",
       "unicode": "e612",
       "unicode_decimal": 58898
-    },
-    {
-      "icon_id": "2529702",
-      "name": "目录、导航",
-      "font_class": "menu2",
-      "unicode": "e609",
-      "unicode_decimal": 58889
     },
     {
       "icon_id": "5766810",
@@ -200,13 +200,6 @@
       "font_class": "suiji-copy",
       "unicode": "e600",
       "unicode_decimal": 58880
-    },
-    {
-      "icon_id": "3384349",
-      "name": "最新",
-      "font_class": "zuixin",
-      "unicode": "e6e2",
-      "unicode_decimal": 59106
     },
     {
       "icon_id": "3406937",

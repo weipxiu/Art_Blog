@@ -98,6 +98,12 @@
 			//'walker' => new Header_Menu_Walker()  //自定义walker
 		) );
 	?>
+	<!-- 移动端登录注册start -->
+	<div class="sign_up">
+				<a href="/wp-login.php"><i class="iconfont icon-denglu"></i>立即登录</a>
+				<a href="/wp-login.php?action=register"><i class="iconfont icon-zhuce"></i>马上注册</a>
+	</div>
+	<!-- 移动端登录注册end -->
 </div>
 <!-- 移动端侧边栏导航end -->
 
