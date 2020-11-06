@@ -70,7 +70,7 @@
             $(".header .sub-menu").addClass('nav-min');
             $(".os-herder .sub-menu").addClass('slide_slect');
             //追加音乐开关
-            var dom_node = "<li class='backstage' style='display:none'><a href='/wp-admin/'><span>后台管理</span><span>后台管理</span></a><p></p>"+ "<audio src='' autoplay='autoplay'></audio>"+"</li>"+"<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
+            var dom_node = "<li class='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>"+ "<audio src='' autoplay='autoplay'></audio>"+"</li>"+"<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
             $(".header .music-nav").append(dom_node);
         },
         // 3D导航跳动音符
