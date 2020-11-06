@@ -123,7 +123,7 @@
 <!-- 移动端遮盖层，防止导航出现页面上下滑动导致bug-end -->
 
 <!-- 网站换肤start -->
-<script>
+<script type="text/javascript">
 	function getColor(){
 		<?php if (trim(get_option('weipxiu_options')['replace_skin'])){ ?>
 			document.documentElement.style.setProperty('--color', '<?php echo trim(get_option('weipxiu_options')['replace_skin']); ?>')
@@ -135,13 +135,5 @@
 	window.onresize = function(){
 		getColor()
 	}
-	// 登录状态下展示后台管理入口
-	<?php
-			if (get_option('weipxiu_options')['login_reg'] == 'on' && is_user_logged_in()) {
-				?>
-					$(".backstage").show()
-				<?php
-			}
-	?>
 </script>
 <!-- 网站换肤end -->

@@ -129,3 +129,16 @@
 
 <!-- 调用wordpress核心函数 -->
 <?php wp_footer(); ?>
+
+<script type="text/javascript" defer="defer">
+	$(function(){
+		// 登录状态下展示后台管理入口
+		<?php
+			if (get_option('weipxiu_options')['login_reg'] == 'on' && is_user_logged_in()) {
+				?>
+					$("#backstage").show()
+				<?php
+			}
+		?>
+	})
+</script>
