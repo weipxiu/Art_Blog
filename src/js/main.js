@@ -49,7 +49,7 @@
         navReform: function () {
             var node_list = $(".header .music-nav").children('li');
             for (var i = 0; i < node_list.length; i++) {
-                var text = node_list.eq(i).children('a').text();
+                var text = node_list.eq(i).children('a').html();
                 node_list.eq(i).children('a').text('');
                 node_list.eq(i).children('a').append("<span>" + text + "</span>");
                 node_list.eq(i).children('a').append("<span>" + text + "</span>");
