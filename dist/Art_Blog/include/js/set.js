@@ -30,6 +30,19 @@ jQuery(function () {
     jQuery('.content-wrap').eq(jQuery(this).index()).show().siblings('.content-wrap').hide();
   });
 
+  //判断登录注册入口开关是否打开
+  if (jQuery("#reg-flake_on").is(':checked')) {
+    jQuery(".reg_flake_show").css("display", 'block');
+  } else {
+    jQuery(".reg_flake_show").css("display", 'none');
+  };
+  jQuery("#reg-flake_on").click(function () {
+    jQuery(".reg_flake_show").slideDown();
+  })
+  jQuery("#reg-flake_off").click(function () {
+    jQuery(".reg_flake_show").slideUp();
+  })
+
   //判断侧边栏热门标签开关是否打开
   if (jQuery(".popular_on").is(':checked')) {
     jQuery(".popular_show").css("display", 'block');

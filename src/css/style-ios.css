@@ -1706,6 +1706,7 @@
 		background: #1890ff;
 		background: var(--color);
 		float: left;
+		margin-bottom: 0.1rem;
 	}
 
 	div.key-w a:hover {

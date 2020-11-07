@@ -121,27 +121,6 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">登录注册入口：</label>
-          <div class="fr right-wrap">
-            <label for="reg-flake_on">开</label>
-            <input
-              type="radio"
-              id="reg-flake_on"
-              name="logo-flake"
-              value="on" <?php if($a_options['login_reg'] == 'on') echo 'checked'; ?>
-            >
-            <label for="reg-flake_off">关</label>
-            <input
-              type="radio"
-              id="reg-flake_off"
-              name="logo-flake"
-              value="off" <?php if($a_options['login_reg'] == 'off' || $a_options['login_reg'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
           <label class="fl left-wrap">雪花背景特效：</label>
           <div class="fr right-wrap">
             <label for="snow-flake_on">开</label>
@@ -220,6 +199,39 @@ function themeoptions_page() {
               value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
             >
             <span class="warn">*所有资源强制以https方式加载，必须确保网站支持https</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap">登录注册入口：</label>
+          <div class="fr right-wrap">
+            <label for="reg-flake_on">开</label>
+            <input
+              type="radio"
+              id="reg-flake_on"
+              name="logo-flake"
+              value="on" <?php if($a_options['login_reg'] == 'on') echo 'checked'; ?>
+            >
+            <label for="reg-flake_off">关</label>
+            <input
+              type="radio"
+              id="reg-flake_off"
+              name="logo-flake"
+              value="off" <?php if($a_options['login_reg'] == 'off' || $a_options['login_reg'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
+          </div>
+        </div>
+        <div class="row clearfix reg_flake_show" style="display:none">
+          <label class="fl left-wrap">入口提示文案：</label>
+          <div class="fr right-wrap">
+            <input  
+                type="text"
+                class="url-inp"
+                name="tips_sentence"
+                id="tips_sentence" 
+                value="<?php echo $a_options['tips_sentence']; ?>"
+                placeholder="程序世界并不孤单，我们一路同行相伴，注册会员分享你的前端经验，赶紧来试试~"></input>
           </div>
         </div>
 
@@ -722,6 +734,7 @@ function themeoptions_page() {
       'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
+      'tips_sentence' => $_POST['tips_sentence'],
       'replace_skin' => $_POST['replace-skin'],
       'side_video' => $_POST['side_video'],
       'video_url' => $_POST['video_url'],
