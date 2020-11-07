@@ -707,7 +707,7 @@ function themeoptions_page() {
           <label for="time-machine" class="fl left-wrap">数据：</label>
           <div class="fr right-wrap">
             <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{time: '时间', text:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
-            <span class="warn">*可记录网站历程，又或当作朋友圈、说说，记录生活琐碎，有些话不一定要说，但一定要记录在某个地方！
+            <span class="warn">*后台 > 页面 > 新建页面，指定该页面模板页"时光机"，最后添加到菜单即可。可记录网站历程，又或当作说说、朋友圈记录生活琐碎，有些话不一定要说，但一定要记录在某个地方！
             </span>
           </div>
         </div>
