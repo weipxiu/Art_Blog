@@ -707,7 +707,7 @@ function themeoptions_page() {
           <label for="time-machine" class="fl left-wrap">数据：</label>
           <div class="fr right-wrap">
             <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{time: '时间', text:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
-            <span class="warn">*该功能仅供作者使用，暂不对外开放，如有需要，自行更改源码获取拓展
+            <span class="warn">*可记录网站历程，又或当作朋友圈、说说，记录生活琐碎，有些话不一定要说，但一定要记录在某个地方！
             </span>
           </div>
         </div>

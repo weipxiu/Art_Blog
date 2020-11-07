@@ -16,10 +16,10 @@ jQuery(function () {
 
   //记录选中在哪个选项卡下的状态
   var $index = localStorage.getItem("active_index") ? Number(localStorage.getItem("active_index")) : 0;
-  var domain_name = window.location.protocol + "//" + window.location.host;
-  if (domain_name.indexOf('weipxiu.com') == '-1') {
-    jQuery('.nav-wrap .nav-list:last').hide()
-  }
+  // var domain_name = window.location.protocol + "//" + window.location.host;
+  // if (domain_name.indexOf('weipxiu.com') == '-1') {
+  //   jQuery('.nav-wrap .nav-list:last').hide()
+  // }
   jQuery('.nav-wrap .nav-list').eq($index).addClass('on').siblings().removeClass('on');
   jQuery('.content-wrap').eq($index).show().siblings('.content-wrap').hide();
 

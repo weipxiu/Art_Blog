@@ -745,9 +745,9 @@
             //移动端头部下拉搜索end
 
             // 移动端二级菜单导航start
-            $("ul.slide-left li.menu-item-type-custom a").on("touchstart", function (event) {
-                $(this).parents('li').siblings('li').find('.slide_slect').slideUp();
-                $(this).parents('li').siblings('li').find('.iconfont_click').removeClass('icon-shangjiantou').addClass('icon-xiajiantou');
+            $(".os-herder").on("touchstart", 'ul.slide-left li:has(.slide_slect) > a', function (event) {
+                $(this).parent().siblings('li').find('.slide_slect').slideUp();
+                $(this).parent().siblings('li').find('.iconfont_click').removeClass('icon-shangjiantou').addClass('icon-xiajiantou');
 
                 $(this).siblings(".slide_slect").stop().slideToggle();
                 $(this).parent().find(".iconfont_click").toggleClass("icon-xiajiantou icon-shangjiantou");
