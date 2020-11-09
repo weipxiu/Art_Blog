@@ -4,8 +4,17 @@ if ( post_password_required() )
 ?>
 
 <div id="comments" class="responsesWrapper">
-    <h3 class="comments-title">共 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span> 条评论关于"<?php the_title(); ?>"</h3>
-
+    <?php
+        if (comments_open()) {
+            ?>
+            <h3 class="comments-title">共 <span class="commentCount"><?php echo number_format_i18n( get_comments_number() );?></span> 条评论关于"<?php the_title(); ?>"</h3>
+            <?php
+        }else if(current_user_can('manage_options')){
+            ?>
+            <h3 class="comments-title">尊敬的管理员冕下，当前页面评论功能需要您手动方可开启，具体位置不懂的请百度！</h3>
+            <?php
+        }
+    ?>
     <!-- <nav class="navigation comment-navigation u-textAlignCenter" data-fuck="<? /**php the_ID();*/ ?>">
     <? /** php paginate_comments_links(array('prev_next'=>true)); */ ?>
     </nav> -->

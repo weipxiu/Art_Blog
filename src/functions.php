@@ -115,6 +115,7 @@ add_filter('preprocess_comment', 'refused_english_comments');
 // 	}function
 //     add_action('pre_get_posts','custom_posts_per_page');
 ?>
+
 <?php 
 //部分内容登录可见
 function login_to_read($atts, $content=null) {

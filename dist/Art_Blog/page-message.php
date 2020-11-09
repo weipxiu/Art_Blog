@@ -26,7 +26,9 @@ Template Name: 给我留言
 
               <!-- 评论 -->
               <div class="post_content">
-                  <?php comments_template( '', true ); ?>
+                  <?php 
+                    comments_template( '', true ); 
+                  ?>
               </div>
          </div>
          <!-- 左侧区域end -->
