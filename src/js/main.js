@@ -764,6 +764,13 @@
             //         $(".login_alert").slideDown();
             //     }, 1000)
             // }
+
+            // 顶部加载进度条
+            $("header .speed_bar").css({'width':'80%','transition':'width 2s'})
+            window.onload = function(){
+                $("header .speed_bar").css({'width':'100%','transition':'width 0.5s'})
+            }
+
             $(".login_alert_close").click(() => {
                 $(".login_alert").slideUp();
                 localStorage.setItem("off_login", 1)

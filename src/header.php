@@ -20,8 +20,7 @@
 <!--移动端头部end-->
 
 <header class="header">
-	<div style="height:2px;background:url(<?php echo esc_url(get_template_directory_uri()); ?>/images/header_bj.gif); animation: hue 20s infinite linear;overflow: hidden; width:100%;">
-	</div>
+	<div class="speed_bar"></div>
 	<div class="header-body">
 		<div class="header-conter">
 			<nav class="nav">

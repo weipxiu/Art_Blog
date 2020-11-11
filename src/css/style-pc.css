@@ -310,26 +310,6 @@
 
 	/* 轩枫轮播end */
 
-	@-webkit-keyframes hue {
-		0% {
-			-webkit-filter: hue-rotate(0deg);
-		}
-
-		to {
-			-webkit-filter: hue-rotate(-1turn);
-		}
-	}
-
-	@keyframes hue {
-		0% {
-			-webkit-filter: hue-rotate(0deg);
-		}
-
-		to {
-			-webkit-filter: hue-rotate(-1turn);
-		}
-	}
-
 	@-webkit-keyframes leftIn {
 		0%,
 		60%,
@@ -436,6 +416,13 @@
 		-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
 		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
 	}
+	header .speed_bar{
+		width:0%;
+		height:2px;
+		background:url(../images/header_bj.gif); 
+		overflow: hidden;
+	}
+
 	header.hover .header {
 		z-index: 12;
 	}
