@@ -211,11 +211,10 @@
             $(".navto-search a").click(function () {
                 if (searchShow) {
                     $('.header').css('z-index', '11');
-                    searchShow = false;
                 } else {
                     $('.header').css('z-index', '10');
-                    searchShow = true;
                 }
+                searchShow = !searchShow
                 $(".site-search.active.pc").toggle();
                 $(".site-search.active.pc").find('input').focus();
             });
@@ -758,13 +757,6 @@
         },
         // PC端执行函数
         pcFnAll: function () {
-            // 底部悬浮登录注册start
-            // if (localStorage.getItem("off_login") != 1) {
-            //     setTimeout(() => {
-            //         $(".login_alert").slideDown();
-            //     }, 1000)
-            // }
-
             // 顶部加载进度条
             $("header .speed_bar").css({'width':'80%','transition':'width 2s'})
             window.onload = function(){
@@ -773,9 +765,28 @@
 
             $(".login_alert_close").click(() => {
                 $(".login_alert").slideUp();
-                localStorage.setItem("off_login", 1)
             })
             // 底部悬浮登录注册end
+
+            // 二级菜单下拉列表个数兼容无限
+            var time = 50;
+            $(".nav ul.music-nav li .sub-menu").each(function (i) {
+                $(this).find('li').each(function (i) {
+                    $(this).css("transition-delay", i * time + 'ms')
+                })
+            })
+
+            $(".nav ul.music-nav li").hover(function () {
+                var that = $(this);
+                $(this).find('.sub-menu li').each(function (i) {
+                    $(this).css("transition-delay", (that.find('.sub-menu li').length * time - i * time) + 'ms')
+                })
+            }, function () {
+                $(this).find('.sub-menu li').each(function (i) {
+                    $(this).css("transition-delay", i * time + 'ms')
+                })
+            })
+
 
             //文章分类没有资源时候404提示
             if ($(".continar-left .article_not").length > 0) {
