@@ -1,6 +1,6 @@
 <?php wp_head(); ?>
 
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="baidu-site-verification" content="cNP7vhhXuw" />
 <meta name="Author" content="<?php echo get_bloginfo('description'); ?>" />
 <?php if (is_single()){ ?>

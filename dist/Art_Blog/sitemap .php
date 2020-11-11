@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><?php wp_title( '-', true, 'right' ); ?><?php bloginfo('name'); ?></title>
 <meta name="keywords" content="站点地图,<?php bloginfo('name'); ?>" />
 <meta name="copyright" content="<?php bloginfo('name'); ?>" />
