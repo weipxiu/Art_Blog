@@ -95,11 +95,6 @@
 						anim: 6 //动画类型
 					})
 					document.title="Sorry，当前分类没有任何文章！"
-					if (localStorage.getItem("off_y") == 1) {
-							new Audio(
-									'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + 'Sorry，当前分类没有任何文章！'
-							).play();                       
-					}
 				</script>
 				<?php endif; ?>
 				<?php lingfeng_pagenavi();?><!-- 分页调用 -->

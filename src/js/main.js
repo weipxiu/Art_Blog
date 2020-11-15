@@ -161,21 +161,19 @@
                     $(".nav ul.music-nav > li").addClass("on");
                     $(".nav ul.music-nav > li").removeClass("off");
                     localStorage.setItem("off_y", 1);
-                    layer.msg("全站音频已开启~", {
+                    layer.msg("菜单音乐已开启~", {
                         time: 2000 //2秒关闭（如果不配置，默认是3秒）
                     }, function () {
                         layer.msg("无需鼠标，导航音乐键盘A-K也可以体验哦~~");
                     });
-                    that.readingAloud("全站音频已开启~")
                 } else {
                     $(this).removeClass("hover");
                     $('.nav ul.music-nav li').addClass('off');
                     $('.nav ul.music-nav li').removeClass('on');
                     localStorage.setItem("off_y", 0);
-                    layer.msg('全站音频已关闭，期待您的下次体验！', {
+                    layer.msg('菜单音乐已关闭，期待您的下次体验！', {
                         time: 4000
                     });
-                    that.readingAloud("全站音频已关闭，期待您的下次体验！")
                 }
             });
             // 跳动音符end
@@ -232,12 +230,6 @@
                 $(".nav ul.music-nav > li").addClass("on");
                 $(".mod-header_music-icon").addClass('hover');
             }
-        },
-        // 语音播报
-        readingAloud: function (data) {
-            new Audio(
-                'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + data
-            ).play();
         },
         //文章分类没有资源时候404提示
         isNotResources: function () {

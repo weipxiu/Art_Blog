@@ -254,11 +254,6 @@
 								location.href="/wp-login.php"
 							}
 						})
-						if (localStorage.getItem("off_y") == 1) {
-							new Audio(
-									'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + 'Sorry，当前分类下没有一篇文章，是否去后台发布？'
-							).play();                        
-						}
 					}); 
 
 				</script>
@@ -322,13 +317,6 @@ $(function () {
 															window.open("https://jq.qq.com/?_wv=1027&k=aU2c7W76")
 															notification.close();
 													}
-													layer.ready(function(){
-															if (localStorage.getItem("off_y") == 1) {
-																	new Audio(
-																			'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=您有一条新的消息，请注意查收！'
-																	).play();
-															}
-													}) 
 											}
 									}
 

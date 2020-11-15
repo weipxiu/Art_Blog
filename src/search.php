@@ -145,11 +145,6 @@
                     anim: 3 //动画类型
                 })
                 document.title="Sorry，当前关键词下未找到相关信息！"
-                if (localStorage.getItem("off_y") == 1) {
-                    new Audio(
-                        'https://tts.baidu.com/text2audio?cuid=baiduid&lan=zh&ctp=1&pdt=311&tex=' + 'Sorry，当前关键词下未找到相关信息！'
-                    ).play();                       
-                }
             </script>
             <?php endif; ?>
             <?php lingfeng_pagenavi();?><!-- 分页调用 -->
