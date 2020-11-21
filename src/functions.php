@@ -38,6 +38,14 @@ function _admin_comment_ctrlenter() {
     </script>';
 };
 
+//分类描述删除p标签
+function ytkah_delete_cat_p($description) {
+    $description = trim($description);
+    $description = strip_tags($description,"");
+    return ($description);
+}
+add_filter('category_description', 'ytkah_delete_cat_p');
+
 //注册小工具
 // if ( function_exists('register_sidebar') )
 // register_sidebar(array(

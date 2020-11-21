@@ -3,7 +3,7 @@
 
 <head>
 	<title>
-		<?php if(have_posts()):?><?php wp_title( '-', true, 'right' ); ?><?php the_title(); ?><?php else: ?>
+		<?php if(have_posts()):?><?php wp_title( '-', true, 'right' ); ?><?php echo category_description( $category ); ?><?php else: ?>
 		Sorry,当前分类暂无文章！<?php endif; ?>-<?php echo get_bloginfo('description'); ?>
 	</title>
 	<?php get_template_part('common'); ?>
