@@ -1,3 +1,4 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const clean = require('gulp-clean');//清空目录下资源
 const htmlmin = require('gulp-htmlmin');//压缩html
@@ -19,6 +20,40 @@ const env = process.env.NODE_ENV === 'production' ? true : false
 
 let target = env ? './dist/Art_Blog' : 'D:/PHPTutorial/WWW/wp-content/themes/Art_Blog'
 console.log('当前环境：' + env + '对应打包地址：' + target)
+
+// 对Date的扩展，将 Date 转化为指定格式的String
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
+// 例子：
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423
+// (new Date()).Format("yyyy-M-d h:m:s.S") ==> 2006-7-2 8:9:4.18
+
+Date.prototype.Format = function (fmt) { // author: meizz
+    var o = {
+        "M+": this.getMonth() + 1, // 月份
+        "d+": this.getDate(), // 日
+        "h+": this.getHours(), // 小时
+        "m+": this.getMinutes(), // 分
+        "s+": this.getSeconds(), // 秒
+        "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+        "S": this.getMilliseconds() // 毫秒
+    };
+    if (/(y+)/.test(fmt))
+        fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+//每次打包往首页追加打包时间信息
+function writeFileToLine(ver, url) {
+    let data = fs.readFileSync(url, 'utf8').split(/\r\n|\n|\r/gm); //readFileSync的第一个参数是文件名
+    let _ver = ver || data[4].replace(/Version:/g, '');
+    console.log(data[4].replace(/Version:/g, ''))
+    data[4] = `<meta name='generator' content='Art_Blog v${new Date().Format("yyyy-MM-dd")}'>`;
+    fs.writeFileSync(url, data.join('\n'))
+}
+writeFileToLine('', './src/index.php')
 
 /*
 gulp.task -- 定义任务
@@ -122,7 +157,7 @@ gulp.task("imageMin", function () {
 // js插件copy
 gulp.task("jsCopy", function () {
     //特例
-    return gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js","src/js/jquery.lazyload.js"])
+    return gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js", "src/js/jquery.lazyload.js"])
         .pipe(gulp.dest(target + "/js"))
 })
 
