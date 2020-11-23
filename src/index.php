@@ -3,6 +3,7 @@
 
 <head>
 <meta name='generator' content='Art_Blog v2020-11-23'>
+<title>
 	<?php
 		$name = wp_title( '-', true, 'right' );
 		if ($name) {
