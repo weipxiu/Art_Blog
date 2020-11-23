@@ -10,11 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<title>唯品秀个人博客&nbsp;|&nbsp;关注WEB前端开发技术_关注用户体验</title>
+	<!-- 正式服展示 -->
 	<!-- @if NODE_ENV='production' -->
-	<!-- <script src="/wp-content/themes/Art_Blog/js/jquery-2.1.4.min.js"></script>  -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js?type=production"></script>
 	<!-- @endif -->
+
+	<!-- 测试服展示 -->
 	<!-- @if NODE_ENV!='production' -->
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js?type=preproduction"></script>
 	<!-- @endif -->
 	<style>
 		* {

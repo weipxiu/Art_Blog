@@ -3,15 +3,12 @@
 
 <head>
 <meta name='generator' content='Art_Blog v2020-11-23'>
-<title>
-	<?php
-		$name = wp_title( '-', true, 'right' );
+<title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
 		} else {
 			echo get_bloginfo('name');
-		}
-	?>
+		}?>
 </title>
 <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/swiper.min.css">
 <?php get_template_part('common'); ?>
