@@ -750,11 +750,11 @@
         // PC端执行函数
         pcFnAll: function () {
             // 顶部加载进度条
-            $("header .speed_bar").css({'width':'80%','transition':'width 2s'})
             window.onload = function(){
-                $("header .speed_bar").css({'width':'100%','transition':'width 0.5s'})
+                $("header .speed_bar").css({'animation':'speed_bar_animation_complete .5s ease-out','animation-fill-mode':'forwards'})
             }
 
+            // 登录注册悬浮入口
             $(".login_alert_close").click(() => {
                 $(".login_alert").slideUp();
             })
