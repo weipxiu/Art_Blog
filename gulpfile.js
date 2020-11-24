@@ -50,7 +50,7 @@ function writeFileToLine(ver, url) {
     let data = fs.readFileSync(url, 'utf8').split(/\r\n|\n|\r/gm); //readFileSync的第一个参数是文件名
     let _ver = ver || data[4].replace(/Version:/g, '');
     console.log(data[4].replace(/Version:/g, ''))
-    data[4] = `<meta name='generator' content='Art_Blog v${new Date().Format("yyyy-MM-dd")}'>`;
+    data[4] = `<meta name='generator' content='WordPress/Art_Blog v${new Date().Format("yyyy-MM-dd hh:mm:ss")}'>`;
     fs.writeFileSync(url, data.join('\n'))
 }
 writeFileToLine('', './src/index.php')
