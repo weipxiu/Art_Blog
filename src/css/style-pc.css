@@ -1895,11 +1895,16 @@
 		padding: 0;
 		top: 0;
 		bottom: auto;
+		position: absolute;
 	}
 
 	.img-left .read-more img {
 		height: auto;
 		width: auto;
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 	}
 
 	.read-more i {
@@ -5426,6 +5431,7 @@
 		float: left;
 		margin-left: 12px;
 		border-radius: 2px;
+		position: relative;
 	}
 
 	.hot_rticles ul li .hot_text {
@@ -5493,6 +5499,10 @@
 		width: auto!important;
 		height: auto!important;
 		max-width: 100%;
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 	}
 
 	.hot_rticles .widget-title {
