@@ -3,7 +3,7 @@
  * 全局js
  */
 !(function () {
-    function App() { }
+    function App() {}
     App.prototype = {
         init: function () {
             // 终端独立事件方法
@@ -18,6 +18,8 @@
                 // 随机文章列表钢琴效果
                 this.stringEffect();
             }
+            // 网页顶部加载进度条
+            this.loadBar();
             //头部3D导航DOM改造
             this.navReform();
             // 3D导航跳动音符
@@ -393,6 +395,19 @@
                 })
             }
 
+            // 滚动页面设置
+            var continar_right = $(window).height();
+            var offset_left = $('.continar-right').offset().left;
+            function elementInView(element) {
+                const rect = element.getBoundingClientRect()
+                
+                const yInView = rect.top < window.innerHeight && rect.bottom > 0
+                
+                const xInView = rect.left < window.innerWidth && rect.right > 0
+                
+                return yInView && xInView
+            }
+
             function scroll_height() {
                 scrollTop = $(document).scrollTop();
                 if (scrollTop > 500) {
@@ -413,12 +428,31 @@
                     $(".header").removeClass("Top")
                     $(".header").addClass("hover")
                 }
+                // 右侧区域跟随
+                if($(window).width() > 1200){
+                    if(
+                        (elementInView($(".continar-right > div:last-of-type")[0]) || (scrollTop > $('.continar-right').outerHeight()))
+                        && !(elementInView($(".footer")[0]))
+                    ){
+                        if(scrollTop > $('.continar-right').outerHeight()-$(window).height()+$(".continar-right > div:last-of-type").width()){
+                            $(".continar-right").css({"position":"fixed","bottom":"0","left":offset_left+"px"});
+                        }else{
+                            $(".continar-right").css({"position":"static","bottom":"auto","left":"auto"});
+                        } 
+                    }else if(elementInView($(".footer")[0])){
+                        $(".continar-right").css({"position":"fixed","bottom":25+$(".footer").outerHeight()+"px","left":offset_left+"px"});
+                    }
+                }
             }
             scroll_height()
             $(document).scroll(function () {
-                scroll_height()
+                scroll_height();
             });
-
+            window.onresize = function(){
+                continar_right = $(window).height();
+                offset_left = $('.continar-right').offset().left;
+                scroll_height();
+            }
         },
         // 在线客服
         customerService: function () {
@@ -747,13 +781,14 @@
             })
             // 移动端二级菜单导航end
         },
-        // PC端执行函数
-        pcFnAll: function () {
-            // 顶部加载进度条
+        // 网页顶部加载进度条
+        loadBar: function(){
             window.onload = function(){
                 $("header .speed_bar").css({'animation':'speed_bar_animation_complete .5s ease-out','animation-fill-mode':'forwards'})
             }
-
+        },
+        // PC端执行函数
+        pcFnAll: function () {
             // 登录注册悬浮入口
             $(".login_alert_close").click(() => {
                 $(".login_alert").slideUp();

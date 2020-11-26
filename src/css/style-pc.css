@@ -1163,6 +1163,7 @@
 		position: absolute;
 		right: 0px;
 		top: 19px;
+		transition: top .25s;
 	}
 
 	.navto-search a {
@@ -1677,6 +1678,10 @@
 		-webkit-transform: translate3d(0, 0px, 0);
 		transform: translate3d(0, 0px, 0);
 		position: relative;
+	}
+
+	.continar-left > article.text:last-of-type{
+		margin-bottom: 0;
 	}
 
 	.text .mod-category__article-time {
