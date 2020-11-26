@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2020-11-26 13:54:40'>
+<meta name='generator' content='WordPress/Art_Blog v2020-11-26 14:38:29'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -222,7 +222,7 @@
 				<script>
 					$("body, html").css("height","100%");
 					$(".search_404").show();
-					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+					if ($(window).width() < 1200) {
 						setTimeout(function(){
 							$('footer.footer').css({
 									"position": "fixed",
@@ -290,7 +290,7 @@
 $(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
 			var domain_name = window.location.protocol + "//" + window.location.host;
-			if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+			if (!($(window).width() < 1200)) {
 					// 桌面提醒功能
 					var set_desktop = function () {
 							if (window.Notification) {

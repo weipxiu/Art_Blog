@@ -88,21 +88,27 @@
                                 <a class="bds_youdao" target="_blank" data-cmd="youdao" title="分享到有道云笔记"></a>
                             </div>
                             <script>
+                                function clearSpace(testStr) {
+                                    var resultStr = testStr.replace(/\ +/g, ""); //去掉空格
+                                    resultStr = testStr.replace(/[ ]/g, "");    //去掉空格
+                                    resultStr = testStr.replace(/[\r\n]/g, ""); //去掉回车换行
+                                    return resultStr;
+                                }
                                 window._bd_share_config = {
                                     common: {
-                                        "bdText": "<?php the_title(); ?>", // 分享内容
-                                        "bdDesc": "<?php if (has_excerpt()) {
+                                        bdText: "<?php the_title(); ?>", // 分享内容
+                                        bdDesc: clearSpace(`<?php if (has_excerpt()) {
                                                     //文章编辑中的摘要
                                                   echo $description = get_the_excerpt(); 
                                                   }else {
                                                   //文章编辑中若无摘要，自定截取文章内容字数做为摘要
-                                                  echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,'\n...'); } ?>",
-                                        "bdUrl": document.location.href,
-                                        "bdMini": "2",
-                                        "bdMiniList": false,
-                                        "bdPic": "<?php echo catch_that_image() ?>", // 分享图片
-                                        "bdStyle": "0",
-                                        "bdSize": "24"
+                                                  echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,'...'); } ?>`),
+                                        bdUrl: document.location.href,
+                                        bdMini: "2",
+                                        bdMiniList: false,
+                                        bdPic: "<?php echo catch_that_image() ?>", // 分享图片
+                                        bdStyle: "0",
+                                        bdSize: "24"
                                     },
                                     share: [{
                                         bdCustomStyle: "<?php bloginfo('template_url'); ?>/css/share.css"

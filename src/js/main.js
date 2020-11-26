@@ -7,7 +7,7 @@
     App.prototype = {
         init: function () {
             // 终端独立事件方法
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            if ($(window).width() < 1200) {
                 // 移动端执行函数
                 this.mobileFnAll();
             } else {

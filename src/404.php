@@ -9,7 +9,7 @@ Template Name: 404页面
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<?php wp_head(); ?>
 	<title><?php wp_title( '-', true, 'right' ); ?>很抱歉,未能找到你的女朋友&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
 	<meta name="Keywords" content="404、未找到内容">
