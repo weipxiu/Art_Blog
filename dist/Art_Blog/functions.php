@@ -58,7 +58,7 @@ add_filter('category_description', 'ytkah_delete_cat_p');
 //注册特色图像
 add_theme_support('post-thumbnails');
 
-// 获取文章第一张缩略图 
+// 获取文章第一张缩略图url地址 
 function catch_that_image() {
 	global $post;
 	$first_img = '';
@@ -88,7 +88,8 @@ function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
 	if( $r_src ){
     	return sprintf('<img data-original="%s" src="/wp-content/themes/Art_Blog/images/Lazy_load.png" border="0" alt="%s" class="Lazy_load">', $r_src, $post->post_title.'-'.get_bloginfo('name'));
     }else{
-    	//return catch_that_image()
+        // 输出文章中的第一张图片
+    	return "<img src='". catch_that_image()."'"." alt='".get_the_title()."'>";
     }
 }
 set_post_thumbnail_size(220, 140, true); // 侧边栏最近更新特色图片宽度与高度

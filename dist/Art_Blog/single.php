@@ -90,16 +90,23 @@
                             <script>
                                 window._bd_share_config = {
                                     common: {
-                                        "bdText"     : "",
-                                        "bdMini"     : "2",
-                                        "bdMiniList" : false,
-                                        "bdPic"      : "",
-                                        "bdStyle"    : "0",
-                                        "bdSize"     : "24"
+                                        "bdText": "<?php the_title(); ?>", // 分享内容
+                                        "bdDesc": "<?php if (has_excerpt()) {
+                                                    //文章编辑中的摘要
+                                                  echo $description = get_the_excerpt(); 
+                                                  }else {
+                                                  //文章编辑中若无摘要，自定截取文章内容字数做为摘要
+                                                  echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,'\n...'); } ?>",
+                                        "bdUrl": document.location.href,
+                                        "bdMini": "2",
+                                        "bdMiniList": false,
+                                        "bdPic": "<?php echo catch_that_image() ?>", // 分享图片
+                                        "bdStyle": "0",
+                                        "bdSize": "24"
                                     },
                                     share: [{
                                         bdCustomStyle: "<?php bloginfo('template_url'); ?>/css/share.css"
-                                    }]
+                                    }],
                                 }
                                 with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="/static/api/js/share.js?cdnversion="+~(-new Date()/36e5)];
                                 </script>

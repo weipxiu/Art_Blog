@@ -63,12 +63,7 @@
                 </div>
                 <div class="img-left">
                     <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
-                        <?php
-                            if (has_post_thumbnail())
-                            echo _get_post_thumbnail();
-                        else
-                            echo "<img src='". catch_that_image()."'"." alt='".get_the_title()."'>";
-                        ?>
+                        <?php echo _get_post_thumbnail(); ?>
                     </a>
                 </div>
                 <div class="text_right">
@@ -78,12 +73,7 @@
                         <a href="<?php the_permalink(); ?>" target="_blank">
                             <?php the_title(); ?></a>
                     </h2>
-                    <?php
-                            if (has_post_thumbnail())
-                            echo _get_post_thumbnail();
-                        else
-                            echo "<img src='". catch_that_image()."'"." alt='".get_the_title()."'>";
-                    ?>
+                    <?php echo _get_post_thumbnail(); ?>
                     <h3>
                             <?php if (has_excerpt()) {
                                     //文章编辑中的摘要
