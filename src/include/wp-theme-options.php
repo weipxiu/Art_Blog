@@ -78,6 +78,48 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label class="fl left-wrap">雪花背景特效：</label>
+          <div class="fr right-wrap">
+            <label for="snow-flake_on">开</label>
+            <input
+              type="radio"
+              id="snow-flake_on"
+              name="snow-flake"
+              value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
+            >
+            <label for="snow-flake_off">关</label>
+            <input
+              type="radio"
+              id="snow-flake_off"
+              name="snow-flake"
+              value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*它是通过CSS3模拟的雪花动画，对性能消耗并不大</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap">站点信息统计：</label>
+          <div class="fr right-wrap">
+            <label for="aside-count-on">开</label>
+            <input
+              type="radio"
+              id="aside-count-on"
+              name="aside-count"
+              value="on" <?php if($a_options['aside_count'] == 'on') echo 'checked'; ?>
+            >
+            <label for="aside-count-off">关</label>
+            <input
+              type="radio"
+              id="aside-count-off"
+              name="aside-count"
+              value="off" <?php if($a_options['aside_count'] == 'off' || $a_options['aside_count'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*如果涉及到你网站一些敏感数据，可以不必理会它</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label class="fl left-wrap">全站置灰哀悼：</label>
           <div class="fr right-wrap">
             <label for="mourning_on">开</label>
@@ -121,42 +163,23 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">雪花背景特效：</label>
+          <label class="fl left-wrap">是否启用分享：</label>
           <div class="fr right-wrap">
-            <label for="snow-flake_on">开</label>
+            <label for="share_on">开</label>
             <input
               type="radio"
-              id="snow-flake_on"
-              name="snow-flake"
-              value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
+              id="share_on"
+              name="share"
+              value="on" <?php if($a_options['share'] == 'on') echo 'checked'; ?>
             >
-            <label for="snow-flake_off">关</label>
+            <label for="share_off">关</label>
             <input
               type="radio"
-              id="snow-flake_off"
-              name="snow-flake"
-              value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
+              id="share_off"
+              name="share"
+              value="off" <?php if($a_options['share'] == 'off' || $a_options['share'] == '') echo 'checked'; ?>
             >
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">站点信息统计：</label>
-          <div class="fr right-wrap">
-            <label for="aside-count-on">开</label>
-            <input
-              type="radio"
-              id="aside-count-on"
-              name="aside-count"
-              value="on" <?php if($a_options['aside_count'] == 'on') echo 'checked'; ?>
-            >
-            <label for="aside-count-off">关</label>
-            <input
-              type="radio"
-              id="aside-count-off"
-              name="aside-count"
-              value="off" <?php if($a_options['aside_count'] == 'off' || $a_options['aside_count'] == '') echo 'checked'; ?>
-            >
+            <span class="warn">*因百度分享功能不支持https，因此开启后你还需要手动将主题包里的static文件夹复制到网站根目录</span>
           </div>
         </div>
 
@@ -177,7 +200,7 @@ function themeoptions_page() {
               name="text-pic"
               value="off" <?php if($a_options['text_pic'] == 'off' || $a_options['text_pic'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*开启之前必须确保已安装WP Easy Post Mailer插件，并已配置好；部分网站无法发送邮件还需要借助wp-mail-smtp插件</span>
+            <span class="warn">*开启之前必须已安装WP Easy Post Mailer插件；部分网站无法发送邮件还需要借助wp-mail-smtp插件</span>
           </div>
         </div>
 
@@ -732,6 +755,7 @@ function themeoptions_page() {
       'label_logo' => $_POST['label-logo'],
       'popular' => $_POST['popular'],
       'login_reg' => $_POST['logo-flake'],
+      'share' => $_POST['share'],
       'snowflake' => $_POST['snow-flake'],
       'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],

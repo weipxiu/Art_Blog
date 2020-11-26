@@ -1,6 +1,6 @@
 {
   "name": "art_blog",
-  "version": "2.8.4",
+  "version": "2.8.5",
   "description": "一款基于jquery2.1.4开发的wordpress主题",
   "main": "index.js",
   "scripts": {

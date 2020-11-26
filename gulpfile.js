@@ -107,7 +107,7 @@ gulp.task('miniHtml', () => {
 
 // 压缩css
 gulp.task("minCss", function () {
-    return gulp.src(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"])
+    return gulp.src(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css","src/css/share.css"])
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
         //.pipe(gulp_minify_css({
