@@ -3,7 +3,7 @@
  * 全局js
  */
 !(function () {
-    function App() {}
+    function App() { }
     App.prototype = {
         init: function () {
             // 终端独立事件方法
@@ -72,7 +72,7 @@
             $(".header .sub-menu").addClass('nav-min');
             $(".os-herder .sub-menu").addClass('slide_slect');
             //追加音乐开关
-            var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>"+ "<audio src='' autoplay='autoplay'></audio>"+"</li>"+"<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
+            var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>" + "<audio src='' autoplay='autoplay'></audio>" + "</li>" + "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
             $(".header .music-nav").append(dom_node);
         },
         // 3D导航跳动音符
@@ -396,16 +396,12 @@
             }
 
             // 滚动页面设置
-            var continar_right = $(window).height();
-            var offset_left = $('.continar-right').offset().left;
+            var offset_left = $('.continar-right').offset() && $('.continar-right').offset().left;
             function elementInView(element) {
                 const rect = element.getBoundingClientRect()
-                
-                const yInView = rect.top < window.innerHeight && rect.bottom > 0
-                
-                const xInView = rect.left < window.innerWidth && rect.right > 0
-                
-                return yInView && xInView
+                const y = rect.top < window.innerHeight && rect.bottom > 0
+                const x = rect.left < window.innerWidth && rect.right > 0
+                return y && x
             }
 
             function scroll_height() {
@@ -429,18 +425,20 @@
                     $(".header").addClass("hover")
                 }
                 // 右侧区域跟随
-                if($(window).width() > 1200){
-                    if(
+                var roll_obj = $('.continar-right');
+                if ($(window).width() > 1200 && roll_obj.length) {
+                    offset_left = $('.continar-right').offset().left;
+                    if (
                         (elementInView($(".continar-right > div:last-of-type")[0]) || (scrollTop > $('.continar-right').outerHeight()))
                         && !(elementInView($(".footer")[0]))
-                    ){
-                        if(scrollTop > $('.continar-right').outerHeight()-$(window).height()+$(".continar-right > div:last-of-type").width()){
-                            $(".continar-right").css({"position":"fixed","bottom":"0","left":offset_left+"px"});
-                        }else{
-                            $(".continar-right").css({"position":"static","bottom":"auto","left":"auto"});
-                        } 
-                    }else if(elementInView($(".footer")[0])){
-                        $(".continar-right").css({"position":"fixed","bottom":25+$(".footer").outerHeight()+"px","left":offset_left+"px"});
+                    ) {
+                        if (scrollTop > $('.continar-right').outerHeight() - $(window).height() + $(".continar-right > div:last-of-type").width()) {
+                            roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
+                        } else {
+                            roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
+                        }
+                    } else if (elementInView($(".footer")[0])) {
+                        roll_obj.css({ "position": "fixed", "bottom": 25 + $(".footer").outerHeight() + "px", "left": offset_left + "px" });
                     }
                 }
             }
@@ -448,9 +446,7 @@
             $(document).scroll(function () {
                 scroll_height();
             });
-            window.onresize = function(){
-                continar_right = $(window).height();
-                offset_left = $('.continar-right').offset().left;
+            window.onresize = function () {
                 scroll_height();
             }
         },
@@ -688,11 +684,13 @@
         },
         // 文章详情页底部评论区域样式兼容
         commentStyle: function () {
-            setTimeout(function () {
-                if ($("#reply-title a").is(":hidden")) {
-                    $("#reply-title").hide();
-                }
-            })
+            if ($("#cancel-comment-reply-link").css('display') != 'none') {
+                console.log('显示',$("#cancel-comment-reply-link").css('display'))
+                $("#reply-title").show();
+            } else {
+                $("#reply-title").hide();
+                console.log('影藏',$("#cancel-comment-reply-link").css('display'))
+            }
         },
         // 移动端执行函数
         mobileFnAll: function () {
@@ -782,9 +780,9 @@
             // 移动端二级菜单导航end
         },
         // 网页顶部加载进度条
-        loadBar: function(){
-            window.onload = function(){
-                $("header .speed_bar").css({'animation':'speed_bar_animation_complete .5s ease-out','animation-fill-mode':'forwards'})
+        loadBar: function () {
+            window.onload = function () {
+                $("header .speed_bar").css({ 'animation': 'speed_bar_animation_complete .5s ease-out', 'animation-fill-mode': 'forwards' })
             }
         },
         // PC端执行函数
