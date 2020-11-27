@@ -685,11 +685,9 @@
         // 文章详情页底部评论区域样式兼容
         commentStyle: function () {
             if ($("#cancel-comment-reply-link").css('display') != 'none') {
-                console.log('显示',$("#cancel-comment-reply-link").css('display'))
                 $("#reply-title").show();
             } else {
                 $("#reply-title").hide();
-                console.log('影藏',$("#cancel-comment-reply-link").css('display'))
             }
         },
         // 移动端执行函数
