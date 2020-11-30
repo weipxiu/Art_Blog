@@ -299,7 +299,6 @@ function e_secret($atts, $content = null) {
         return '<form class="e-secret" action="' . get_permalink() . '" method="post" name="e-secret"><label>请输入密码：</label><input type="password" name="e_secret_key" class="euc-y-i" maxlength="50"><input type="submit" class="euc-y-s" value="确定"><div class="euc-clear"></div></form>';
     }
 }
-
 //取消内容转义
 remove_filter('the_content', 'wptexturize');
 //取消摘要转义
