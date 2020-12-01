@@ -430,9 +430,9 @@
                     offset_left = $('.continar-right').offset().left;
                     if (
                         (elementInView($(".continar-right > div:last-of-type")[0]) || (scrollTop > roll_obj.outerHeight()))
-                        && !(elementInView($(".footer")[0]))
+                        && !(elementInView($(".footer")[0]) )
                     ) {
-                        if (scrollTop > roll_obj.outerHeight() - $(window).height() + $(".continar-right > div:last-of-type").outerHeight() - 100) {
+                        if (scrollTop > roll_obj.outerHeight() - $(window).height() + $(".continar-right > div:last-of-type").outerHeight() - 100 && ($('.continar-left').outerHeight() >= roll_obj.outerHeight())) {
                             roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
                         } else {
                             roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
