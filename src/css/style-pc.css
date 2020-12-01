@@ -2958,7 +2958,7 @@
 		text-decoration: underline;
 	}
 
-	.log-text ul {
+	.log-text ul,.log-text ol {
 		padding-left: 30px;
 	}
 

@@ -2835,10 +2835,10 @@
 		border-bottom: 1px solid #1890ff;
 		border-bottom: 1px solid var(--color);
 	}
-	.log-text ul {
+	.log-text ul,.log-text ol {
 		padding-left: 0.3rem;
 	}
-	.log-text ul li {
+	.log-text ul li,.log-text ol li {
 		text-indent: 0;
 		margin-bottom: 0.5rem;
 		line-height: 0.7rem;
