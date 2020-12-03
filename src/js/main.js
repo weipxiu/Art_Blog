@@ -79,7 +79,6 @@
         navPianoEffect: function () {
             //PC二级菜单，钢琴导航start
             var that = this;
-            var time1 = null;
             var time2 = null;
             var $index = null;
             var musicObj = null;
@@ -88,12 +87,11 @@
                 $(this).css("z-index", "12");
             }, function () {
                 //如果出现搜索的情况下，头部层级自然还是要比轮播高
-                clearTimeout(time1);
                 if (!time2 && !$(".site-search").is(":visible")) {
-                    time1 = setTimeout(() => {
-                        //避免在正常时候下方轮播分割旋转时候被遮盖 
-                        $(".header").css("z-index", "10");
-                    }, 500);
+                    //避免在正常时候下方轮播分割旋转时候被遮盖 
+                    $(".header").css("z-index", "10");
+                } else {
+                    $(".header").css("z-index", "12");
                 }
             })
 
@@ -121,11 +119,11 @@
                     }, 250)
                 }
                 //避免在正常时候下方轮播分割旋转时候被遮盖 
-                if (!$(".site-search").is(":visible")) {
-                    time2 = setTimeout(() => {
+                time2 = setTimeout(() => {
+                    if (!$(".site-search").is(":visible")) {
                         $(".header").css("z-index", "10");
-                    }, 1000)
-                }
+                    }
+                }, 1000)
             })
 
             function musicdown(number) {
@@ -138,13 +136,12 @@
 
             // 键盘按下
             $(document).keydown(function (event) {
-                if (localStorage.getItem("off_y") == 1) {
-                    //a65 s83 d68 f70 g71 h72 j74 k75 l76
-                    var keyArr = [65, 83, 68, 70, 71, 72, 74, 75, 76]
-                    var _index = keyArr.indexOf(event.keyCode)
-                    if (_index >= 0) {
-                        musicdown(_index + 1)
-                    }
+                if (localStorage.getItem("off_y") != 1) return;
+                //a65 s83 d68 f70 g71 h72 j74 k75 l76
+                var keyArr = [65, 83, 68, 70, 71, 72, 74, 75, 76]
+                var _index = keyArr.indexOf(event.keyCode)
+                if (_index >= 0) {
+                    musicdown(_index + 1)
                 }
             });
             $(document).keyup(function () {
@@ -294,13 +291,11 @@
                     }
 
                     var typePrefixMethod = typeof element[prefix + method];
-
-                    if (typePrefixMethod + "" !== "undefined") {
-                        if (typePrefixMethod === "function") {
-                            usablePrefixMethod = element[prefix + method]();
-                        } else {
-                            usablePrefixMethod = element[prefix + method];
-                        }
+                    if (typePrefixMethod + "" == "undefined") return;
+                    if (typePrefixMethod === "function") {
+                        usablePrefixMethod = element[prefix + method]();
+                    } else {
+                        usablePrefixMethod = element[prefix + method];
                     }
                 });
 
@@ -430,7 +425,7 @@
                     offset_left = $('.continar-right').offset().left;
                     if (
                         (elementInView($(".continar-right > div:last-of-type")[0]) || (scrollTop > roll_obj.outerHeight()))
-                        && !(elementInView($(".footer")[0]) )
+                        && !(elementInView($(".footer")[0]))
                     ) {
                         if (scrollTop > roll_obj.outerHeight() - $(window).height() + $(".continar-right > div:last-of-type").outerHeight() - 100 && ($('.continar-left').outerHeight() >= roll_obj.outerHeight())) {
                             roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
