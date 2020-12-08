@@ -902,9 +902,9 @@
 	}
 
 	.nav ul.music-nav li:hover a {
-		-webkit-transform: rotateX(-89deg);
-		-ms-transform: rotateX(-89deg);
-		transform: rotateX(-89deg);
+		-webkit-transform: rotateX(-89.99deg);
+		-ms-transform: rotateX(-89.99deg);
+		transform: rotateX(-89.99deg);
 		transform: rotateX(0deg) \9;
 		margin-top: 2px;
 		margin-top: 0px\9;
@@ -5780,7 +5780,7 @@
 	}
 
 	.mod-index__feature .img_list_6pic .word_display {
-		transform: translateZ(0) rotateX(89deg);
+		transform: translateZ(0) rotateX(89.99deg);
 	}
 
 	.mod-index__feature .unsupport3d .img_list_6pic .carousel_pic_wrap .carousel_small_str,
