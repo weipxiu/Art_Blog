@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2020-12-08 09:51:24'>
+<meta name='generator' content='WordPress/Art_Blog v2020-12-09 17:37:01'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -21,7 +21,7 @@
 		if (trim(get_option('weipxiu_options')['pc_banner'])) {
 		?>
 		<section class="mod-banner" id="js_banner">
-			<a href="<?php echo esc_url( home_url() ); ?>" target="_blank" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
+			<a href="<?php echo esc_url( home_url() ); ?>" target="<?php echo esc_url( home_url() ); ?>" class="mod-banner__img banner_1" id="banner_img" style="background: url('<?php echo get_option('weipxiu_options')['pc_banner_default']; ?>') center center no-repeat;"></a>
 			<div class="mod-banner__navi">
 				<div class="js_banner_nav mod-banner_nav"></div>
 				<span class="mod-banner__nav-dot"><canvas id="dotCanvas"></canvas></span>
@@ -77,7 +77,7 @@
 							<?php $pc_rotateNav_content = json_decode(get_option('weipxiu_options')['pc_rotateNav_content'], true); ?>
 									<?php foreach ($pc_rotateNav_content as $item) { ?>
 										<div class="img_box">
-											<a href="<?php echo $item['link']?>" target="_blank">
+											<a href="<?php echo $item['link']?>" target="<?php echo $item['link']?>">
 												<img src="<?php echo $item['url']?>" width="280" height="180" alt="<?php echo get_bloginfo('name'); ?>" class="ui-d-b">
 												<div class="img_bg"></div>
 												<div class="img_txt">
@@ -96,7 +96,7 @@
 						?>
 						<?php $rotateNav_content = json_decode(get_option('weipxiu_options')['rotateNav_content'], true); ?>
 							<?php foreach ($rotateNav_content as $item) { ?>
-							<a href="<?php echo $item['link']?>" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display <?php if ($item['isWide']) { ?>small_pic_wrap_long<?php }?>" target="_blank">
+							<a href="<?php echo $item['link']?>" class="small_pic_wrap carousel_pic_wrap small_pic_wrap_small word_display <?php if ($item['isWide']) { ?>small_pic_wrap_long<?php }?>" target="<?php echo $item['link']?>">
 								<div class="carousel_small_str txt_bg01">
 									<h3 class="img_txt_title"><?php echo $item['top']?></h3>
 									<p class="img_p"><?php echo $item['bot']?></p>
@@ -127,7 +127,7 @@
 				while ($query_posts->have_posts()) {
 					$query_posts->the_post(); ?>
 					<h1>
-						<a href="<?php the_permalink(); ?>" target="_blank">
+						<a href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">
 							<span>【今日焦点】</span>
 							<?php the_title(); ?>
 							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/new.gif" width="26" height="14" alt="24小时内最新" alt="<?php echo get_bloginfo('name'); ?>">
@@ -181,7 +181,7 @@
 							<span><?php the_time('Y-m') ?></span>
 						</div>
 						<div class="img-left">
-							<a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
+							<a class="read-more" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">
 								<?php echo _get_post_thumbnail(); ?>
 							</a>
 						</div>
@@ -189,7 +189,7 @@
 							<h2>
 								<span>
 									<?php the_category() ?><i></i></span>
-								<a href="<?php the_permalink(); ?>" target="_blank">
+								<a href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">
 									<?php the_title(); ?></a>
 							</h2>
 							<?php echo _get_post_thumbnail(); ?>
@@ -202,7 +202,7 @@
 											echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); 
 									} ?>
 							</h3>
-							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
+							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
 							<p class="l">
 								<span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
 								<span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><span><?php the_time('Y-m-d D') ?></span>

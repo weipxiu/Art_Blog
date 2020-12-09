@@ -444,7 +444,6 @@
                 scroll_height();
             });
             window.onresize = function () {
-                console.log('测试')
                 scroll_height();
             }
         },

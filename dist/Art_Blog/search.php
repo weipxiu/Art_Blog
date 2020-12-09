@@ -62,7 +62,7 @@
                     <span><?php the_time('Y-m') ?></span>
                 </div>
                 <div class="img-left">
-                    <a class="read-more" href="<?php the_permalink(); ?>" target="_blank">
+                    <a class="read-more" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">
                         <?php echo _get_post_thumbnail(); ?>
                     </a>
                 </div>
@@ -70,7 +70,7 @@
                     <h2>
                         <span>
                             <?php the_category() ?><i></i></span>
-                        <a href="<?php the_permalink(); ?>" target="_blank">
+                        <a href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">
                             <?php the_title(); ?></a>
                     </h2>
                     <?php echo _get_post_thumbnail(); ?>
@@ -83,7 +83,7 @@
                                     echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); 
                             } ?>
                     </h3>
-                    <a class="read-more read_url" href="<?php the_permalink(); ?>" target="_blank">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
+                    <a class="read-more read_url" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
                     <p class="l">
                         <!-- <span>
                                     <a href="<?php /*the_permalink(); */?> ">
