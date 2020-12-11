@@ -2368,10 +2368,6 @@
 		font-size: 12px;
 	}
 
-	.footer p:last-of-type{
-		margin-bottom:0;
-	}
-
 	.container {
 		position: relative;
 		margin: 0 auto;
