@@ -123,7 +123,6 @@
 <div class="footer-banner__navi">
 </div>
 
-<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/video/video.min.js"></script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/main_min.js"></script>
 

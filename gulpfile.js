@@ -157,7 +157,7 @@ gulp.task("imageMin", function () {
 // js插件copy
 gulp.task("jsCopy", function () {
     //特例
-    return gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js", "src/js/jquery.lazyload.js"])
+    return gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js"])
         .pipe(gulp.dest(target + "/js"))
 })
 

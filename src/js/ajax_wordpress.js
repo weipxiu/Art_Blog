@@ -150,15 +150,6 @@ $(function () {
                             jQuery('#' + ajaxcontent).css("position", "");
                             jQuery('#' + ajaxcontent).css("left", "");
                             jQuery('#' + ajaxcontent).fadeTo("slow", 1, function () { });
-                            
-                            //PC端ajax成功后信息流图片懒加载
-                            $("img.Lazy_load").lazyload({
-                                effect:"show"  
-                            });
-                            //移动端ajax成功后信息流图片懒加载
-                            $("img.Lazy_load").lazyload({
-                                container: $("body > .continar")
-                            });
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
                             ajaxisLoad = false;
