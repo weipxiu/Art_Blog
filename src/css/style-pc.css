@@ -56,10 +56,6 @@
 		border: 0;
 	}
 
-	img:hover {
-		opacity: 0.9;
-	}
-
 	::-moz-selection {
 		background: #9c0;
 		color: #fff;
@@ -2370,6 +2366,10 @@
 	.footer p {
 		margin-bottom: 15px;
 		font-size: 12px;
+	}
+
+	.footer p:last-of-type{
+		margin-bottom:0;
 	}
 
 	.container {
