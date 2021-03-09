@@ -462,6 +462,8 @@
                         // 当出现底部时候，始终和左侧水平对齐
                         var position_bot = $(window).height() - ($(".continar-left").outerHeight() + ($(".continar-left").offset().top - $(document).scrollTop())); // 拿到“.continar-left”相对于屏幕底部的距离
                         roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
+                    }else{
+                        roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
                     }
                 }
             }
