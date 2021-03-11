@@ -313,9 +313,9 @@ add_filter('wp_default_editor', create_function('', 'return "html";'));
 
 //关闭wordpress各种更新，避免插件不兼容
 //add_filter('pre_site_transient_update_core',create_function('$a', "return null;")); // 关闭核心提示
-add_filter('pre_site_transient_update_plugins',create_function('$a', "return null;")); // 关闭插件提示(去小红点)
+// add_filter('pre_site_transient_update_plugins',create_function('$a', "return null;")); // 关闭插件提示(去小红点)
 //add_filter('pre_site_transient_update_themes',create_function('$a', "return null;")); // 关闭主题提示
-remove_action('admin_init', '_maybe_update_core');  //禁止 WordPress 自动检查更新
+// remove_action('admin_init', '_maybe_update_core');  //禁止 WordPress 自动检查更新
 //remove_action('admin_init', '_maybe_update_plugins'); // 禁止 WordPress 更新插件
 //remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
 
