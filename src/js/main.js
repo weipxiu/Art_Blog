@@ -49,6 +49,19 @@
             // 文章详情页底部评论区域样式兼容
             this.commentStyle();
         },
+        
+        // 初始化音乐导航菜单
+        inintMusicNav: function () {
+            if (localStorage.getItem("off_y") != 1) {
+                localStorage.setItem("off_y", 0);
+                $(".nav ul.music-nav > li").removeClass("on");
+                $(".mod-header_music-icon").removeClass('hover');
+            } else {
+                localStorage.setItem("off_y", 1);
+                $(".nav ul.music-nav > li").addClass("on");
+                $(".mod-header_music-icon").addClass('hover');
+            }
+        },
         // 网页顶部加载进度条
         loadBar: function () {
             window.onload = function () {
@@ -65,7 +78,7 @@
         // 信息流图片懒加载
         informationLazy_load: function () {
             var that = this;
-            function lazy_load(){
+            function lazy_load() {
                 var imgList = document.querySelectorAll(".continar-left .text img");
                 for (var i = 0; i < imgList.length; i++) {
                     if (that.elementInView(imgList[i]) && imgList[i].getAttribute('data-original')) {
@@ -253,14 +266,10 @@
 
             $(".header").addClass("Top");
 
-            // 根据缓存状态初始化音乐
-            if (localStorage.getItem("off_y") != 1) {
-                localStorage.setItem("off_y", 0);
-            } else {
-                localStorage.setItem("off_y", 1);
-                $(".nav ul.music-nav > li").addClass("on");
-                $(".mod-header_music-icon").addClass('hover');
-            }
+            // 初始化音乐导航菜单
+            that.inintMusicNav();
+            // 监听多页面改变音乐状态
+            window.onstorage = (e) => {that.inintMusicNav()}
         },
         //文章分类没有资源时候404提示
         isNotResources: function () {
@@ -462,7 +471,7 @@
                         // 当出现底部时候，始终和左侧水平对齐
                         var position_bot = $(window).height() - ($(".continar-left").outerHeight() + ($(".continar-left").offset().top - $(document).scrollTop())); // 拿到“.continar-left”相对于屏幕底部的距离
                         roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
-                    }else{
+                    } else {
                         roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
                     }
                 }
