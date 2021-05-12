@@ -49,7 +49,7 @@
             // 文章详情页底部评论区域样式兼容
             this.commentStyle();
         },
-        
+
         // 初始化音乐导航菜单
         inintMusicNav: function () {
             if (localStorage.getItem("off_y") != 1) {
@@ -105,13 +105,17 @@
                 if (node_list.eq(i).hasClass('current-menu-item')) {
                     node_list.eq(i).addClass('action');
                 }
+                // 针对有icon的菜单加上指定clsss
+                if (node_list.eq(i).find('i').length > 0 || node_list.eq(i).find('ul').length > 0) {
+                    node_list.eq(i).children('a').addClass('icon_show');
+                }
             }
             //追加音乐标签
             node_list.append("<audio src='' autoplay='autoplay'></audio>" + "<p></p>");
             //二级菜单父级禁止跳转
             $("#nav_list .sub-menu").siblings('a').attr('href', 'javascript:void(0);');
             //追加icon
-            $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou'></i>");
+            $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou menu_arrow'></i>");
             $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
             //追加二级菜单父级class
             $(".header .sub-menu").addClass('nav-min');
@@ -269,7 +273,7 @@
             // 初始化音乐导航菜单
             that.inintMusicNav();
             // 监听多页面改变音乐状态
-            window.onstorage = (e) => {that.inintMusicNav()}
+            window.onstorage = (e) => { that.inintMusicNav() }
         },
         //文章分类没有资源时候404提示
         isNotResources: function () {

@@ -643,12 +643,11 @@
 		font-size: 14px;
 	}
 
-	.header .nav ul li a span i {
-		margin-left: 3px;
-	}
-
 	.header .nav ul li a span i:nth-of-type(1) {
-		font-size: 14px;
+		font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+		margin-right: 3px;
 	}
 
 	.nav {
@@ -789,17 +788,17 @@
 		-webkit-transform-style: preserve-3d;
 		transform-style: preserve-3d;
 		transform-style: flat\9;
-		-webkit-transition: all 0.5s;
-		-o-transition: all 0.5s;
-		transition: all 0.5s;
 		-webkit-transform-origin: center center -14px;
 		-ms-transform-origin: center center -14px;
 		transform-origin: center center -14px;
 		height: 32px;
 		line-height: 32px;
+		transition: transform 0.5s;
 		z-index: 2;
 	}
-
+	.nav ul li > a.icon_show{
+		padding-right:5px;
+	}
 	.nav ul li audio {
 		display: none;
 	}

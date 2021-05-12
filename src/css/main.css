@@ -26,3 +26,7 @@ img[src=''],
 img:not([src]) {
 	display: none;
 }
+.header .nav ul li a span i.menu_arrow {
+	margin-left: 1px;
+	margin-right: 0;
+}
