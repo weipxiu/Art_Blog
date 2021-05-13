@@ -883,14 +883,6 @@
 		color: #fff;
 	}
 
-	.nav ul.music-nav li.active .iconfont{
-		display: inline-block;
-		transform:rotate(180deg);
-		-ms-transform:rotate(180deg); 
-		-moz-transform:rotate(180deg); 	
-		-webkit-transform:rotate(180deg); 
-		-o-transform:rotate(180deg); 
-	}
 	.nav ul li.off:hover a span {
 		color: #1890ff;
 		color: var(--color);
@@ -948,7 +940,12 @@
 	}
 
 	.nav ul li:hover a span i {
+		display: inline-block;
 		line-height: 30px;
+		color: #1890ff;
+		color: var(--color);
+	}
+	.nav ul li:hover a span i.menu_arrow{
 		-webkit-transition: all 0.5s;
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
@@ -956,10 +953,7 @@
 		transform: rotateX(180deg);
 		-ms-transform: rotateX(180deg);
 		transform: rotateX(180deg);
-		color: #1890ff;
-		color: var(--color);
 	}
-
 	.nav {
 		position: relative;
 	}
