@@ -107,7 +107,7 @@
     <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>热门标签</a></h3>
     <?php if (get_option('weipxiu_options')['popular'] != 'on'){ ?>
         <div class="items">
-            <?php wp_tag_cloud('number=24&orderby=name&order=DESC&smallest=12&largest=12&unit=px'); ?>
+            <?php wp_tag_cloud('number=24&orderby=count&order=DESC&smallest=12&largest=12.000001&unit=px'); ?>
         </div>
     <?php }else{?>
         <div class="items">
