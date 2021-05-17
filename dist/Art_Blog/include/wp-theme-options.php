@@ -78,6 +78,60 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label class="fl left-wrap">登录注册入口：</label>
+          <div class="fr right-wrap">
+            <label for="reg-flake_on">开</label>
+            <input
+              type="radio"
+              id="reg-flake_on"
+              name="logo-flake"
+              value="on" <?php if($a_options['login_reg'] == 'on') echo 'checked'; ?>
+            >
+            <label for="reg-flake_off">关</label>
+            <input
+              type="radio"
+              id="reg-flake_off"
+              name="logo-flake"
+              value="off" <?php if($a_options['login_reg'] == 'off' || $a_options['login_reg'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
+          </div>
+        </div>
+        <div class="row clearfix reg_flake_show" style="display:none">
+          <label class="fl left-wrap">入口提示文案：</label>
+          <div class="fr right-wrap">
+            <input  
+                type="text"
+                class="url-inp"
+                name="tips_sentence"
+                id="tips_sentence" 
+                value="<?php echo $a_options['tips_sentence']; ?>"
+                placeholder="程序世界并不孤单，我们一路同行相伴，注册会员分享你的前端经验，赶紧来试试~"></input>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label class="fl left-wrap">HTTPS安全项：</label>
+          <div class="fr right-wrap">
+            <label for="switch-https-on">开</label>
+            <input
+              type="radio"
+              id="switch-https-on"
+              name="switch_https"
+              value="on" <?php if($a_options['switch_https'] == 'on') echo 'checked'; ?>
+            >
+            <label for="switch-https-off">关</label>
+            <input
+              type="radio"
+              id="switch-https-off"
+              name="switch_https"
+              value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*所有资源强制以https方式加载，确保网站支持https</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label class="fl left-wrap">雪花背景特效：</label>
           <div class="fr right-wrap">
             <label for="snow-flake_on">开</label>
@@ -115,7 +169,7 @@ function themeoptions_page() {
               name="aside-count"
               value="off" <?php if($a_options['aside_count'] == 'off' || $a_options['aside_count'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*如果涉及到你网站一些敏感数据，可以不必理会它</span>
+            <span class="warn">*倘若涉及到网站一些敏感数据问题，可不必理会它</span>
           </div>
         </div>
 
@@ -201,60 +255,6 @@ function themeoptions_page() {
               value="off" <?php if($a_options['text_pic'] == 'off' || $a_options['text_pic'] == '') echo 'checked'; ?>
             >
             <span class="warn">*开启之前必须已安装WP Easy Post Mailer插件；部分网站无法发送邮件还需要借助wp-mail-smtp插件</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">HTTPS安全项：</label>
-          <div class="fr right-wrap">
-            <label for="switch-https-on">开</label>
-            <input
-              type="radio"
-              id="switch-https-on"
-              name="switch_https"
-              value="on" <?php if($a_options['switch_https'] == 'on') echo 'checked'; ?>
-            >
-            <label for="switch-https-off">关</label>
-            <input
-              type="radio"
-              id="switch-https-off"
-              name="switch_https"
-              value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*所有资源强制以https方式加载，必须确保网站支持https</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">登录注册入口：</label>
-          <div class="fr right-wrap">
-            <label for="reg-flake_on">开</label>
-            <input
-              type="radio"
-              id="reg-flake_on"
-              name="logo-flake"
-              value="on" <?php if($a_options['login_reg'] == 'on') echo 'checked'; ?>
-            >
-            <label for="reg-flake_off">关</label>
-            <input
-              type="radio"
-              id="reg-flake_off"
-              name="logo-flake"
-              value="off" <?php if($a_options['login_reg'] == 'off' || $a_options['login_reg'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
-          </div>
-        </div>
-        <div class="row clearfix reg_flake_show" style="display:none">
-          <label class="fl left-wrap">入口提示文案：</label>
-          <div class="fr right-wrap">
-            <input  
-                type="text"
-                class="url-inp"
-                name="tips_sentence"
-                id="tips_sentence" 
-                value="<?php echo $a_options['tips_sentence']; ?>"
-                placeholder="程序世界并不孤单，我们一路同行相伴，注册会员分享你的前端经验，赶紧来试试~"></input>
           </div>
         </div>
 

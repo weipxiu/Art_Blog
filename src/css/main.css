@@ -26,6 +26,9 @@ img[src=''],
 img:not([src]) {
 	display: none;
 }
+xmp{
+	display: initial;
+}
 .header .nav ul li a span i.menu_arrow {
 	margin-left: 1px;
 	margin-right: 0;
