@@ -97,10 +97,7 @@
             var node_list = $(".header .music-nav").children('li');
             for (var i = 0; i < node_list.length; i++) {
                 var text = node_list.eq(i).children('a').html();
-                node_list.eq(i).children('a').text('');
-                node_list.eq(i).children('a').append("<span>" + text + "</span>");
-                node_list.eq(i).children('a').append("<span>" + text + "</span>");
-
+                node_list.eq(i).children('a').text('').append("<span>" + text + "</span>"+"<span>" + text + "</span>");
                 //高亮
                 if (node_list.eq(i).hasClass('current-menu-item')) {
                     node_list.eq(i).addClass('action');
@@ -473,7 +470,7 @@
                         }
                     } else if (that.elementInView($(".footer")[0]) && ($('.continar-left').outerHeight() >= roll_obj.outerHeight())) {
                         // 当出现底部时候，始终和左侧水平对齐
-                        var position_bot = $(window).height() - ($(".continar-left").outerHeight() + ($(".continar-left").offset().top - $(document).scrollTop())); // 拿到“.continar-left”相对于屏幕底部的距离
+                        var position_bot = $(window).height() - ($(".continar-left").outerHeight() + ($(".continar-left").offset().top - $(document).scrollTop())); // 获取".continar-left"相对于屏幕底部的距离
                         roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
                     } else {
                         roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
@@ -513,10 +510,11 @@
                     area: ['500px', '360px'], //宽高
                     shadeClose: true, // 点击遮罩层关闭弹窗
                     success: function (layero, index) {
-                        layero[0].childNodes[1].childNodes[0].removeAttribute('href');
-                        layero[0].childNodes[1].classList.add('cursorStyle');
-                        layero[0].childNodes[1].childNodes[0].classList.remove('layui-layer-close2');
-                        layero[0].childNodes[1].childNodes[0].classList.add('layui-layer-close1');
+                        var layero_item = layero[0].childNodes[1];
+                        layero_item.childNodes[0].removeAttribute('href');
+                        layero_item.classList.add('cursorStyle');
+                        layero_item.childNodes[0].classList.remove('layui-layer-close2');
+                        layero_item.childNodes[0].classList;
                     }
                 });
             });
@@ -608,32 +606,23 @@
 
             function stringAnimate($ele, opt) {
                 var positionArr = $ele.data("stringPosition"); // 原始位置 
-
                 var startX = 0; // 初始x轴位置
                 var startY = 0; // 初始y轴位置 
-
                 $ele.mouseenter(function (ex) {
-
                     var offset = $ele.offset();
-
                     startX = ex.pageX - offset.left; // 鼠标在容器内 x 坐标
                     startY = ex.pageY - offset.top; // 鼠标在容器内 y 坐标
                 });
 
                 $ele.mousemove(function (ex) {
                     var offset = $ele.offset();
-
                     var xPos = ex.pageX - offset.left; // 鼠标在容器内 x 坐标
                     var yPos = ex.pageY - offset.top; // 鼠标在容器内 y 坐标
-
                     var offsetY = yPos - startY; // Y轴移动距离
-
                     if (Math.abs(offsetY) > opt.offset) { // 如果偏移超过最大值
                         return;
                     }
-
                     var ifDown = offsetY > 0; // 是否是向下移动
-
                     $ele.children("span").each(function (index) {
                         var $span = $(this); // 当前span
                         var position = positionArr[index]; // 当前原始position

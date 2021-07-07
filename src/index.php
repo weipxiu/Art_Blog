@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2021-05-17 10:31:53'>
+<meta name='generator' content='WordPress/Art_Blog v2021-07-07 17:02:18'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -386,13 +386,9 @@ $(function () {
 
 			// 当窗口改变时候start
 			$(window).resize(function () {
-					if ($(document).width() >= 1200) {
-							if (window.location.href == domain_name || window.location.href == domain_name + '/') {
-									$("#js_banner").show();
-							}
-					} else {
-
-					}
+					if ($(document).width() >= 1200 && (window.location.href == domain_name || window.location.href == domain_name + '/')) {
+						$("#js_banner").show();
+					} 
 			});
 			// 当窗口改变时候end
 			
