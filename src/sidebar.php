@@ -139,7 +139,7 @@
                     $com_excerpt = $comment->comment_content;
                     $excerpt_len = mb_strlen($comment->comment_content, 'utf-8');
                     if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
-                    $output .= "\n<li>". '<img src="https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=40"' . ' onerror="this.src=\'/wp-content/themes/Art_Blog/images/head_portrait.jpg\'">' .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_comment_link( $comment->comment_ID ) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
+                    $output .= "\n<li>".  (preg_match("/^[0-9]{5}/", get_comment_author_email())?'<img src="https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=40"' . ' onerror="this.src=\'/wp-content/themes/Art_Blog/images/head_portrait.jpg\'">': get_avatar(get_comment_author_email(), 50)) .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_comment_link( $comment->comment_ID ) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
                 $output .= $post_HTML;
                 $output = convert_smilies($output);
                 echo $output;
