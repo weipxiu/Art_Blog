@@ -4139,7 +4139,10 @@
 	ul.post-categories li:first-child {
 		display: block;
 	}
-
+	.post-actions .layui-layer-close{
+		background-position: 1px -40px;
+		cursor: pointer;
+	}
 	#domo {
 		display: block;
 		width: 120px;
@@ -5885,7 +5888,7 @@
 	}
 
 	.commentlist .media {
-		padding: 10px 15px 0;
+		padding: 0 15px;
 		/* background: #f0f2f7; */
 		/* border-bottom: 1px solid #eee; */
 		/* border-bottom: 1px dashed #eee; */
@@ -5903,7 +5906,7 @@
 	.commentlist > .comment {
 		background: #f0f2f7;
 		margin: 15px 0;
-		padding: 10px 15px;
+		padding: 18px 15px;
 	}
 	.commentlist ol {
 		padding-left: 40px;
@@ -5955,8 +5958,9 @@
 
 	.comment .media-body p {
 		font-size: 14px;
-		color: #777;
-		padding: 10px 0 6px;
+    color: #777;
+    padding: 8px 0;
+    line-height: 22px;
 	}
 	.comment .media-body .wp-smiley {
 		height: auto !important;
@@ -5965,7 +5969,7 @@
 	}
 	.comment .comment-metadata {
 		width: calc(100% - 50px);
-		margin: 2px auto 6px;
+		margin: 0 auto;
 	}
 	.comment .comment-metadata span {
 		font-size: 12px;

@@ -217,27 +217,6 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">是否启用分享：</label>
-          <div class="fr right-wrap">
-            <label for="share_on">开</label>
-            <input
-              type="radio"
-              id="share_on"
-              name="share"
-              value="on" <?php if($a_options['share'] == 'on') echo 'checked'; ?>
-            >
-            <label for="share_off">关</label>
-            <input
-              type="radio"
-              id="share_off"
-              name="share"
-              value="off" <?php if($a_options['share'] == 'off' || $a_options['share'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*因百度分享功能不支持https，因此开启后你还需要手动将主题包里的static文件夹复制到网站根目录</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
           <label class="fl left-wrap">电子邮箱订阅：</label>
           <div class="fr right-wrap">
             <label for="text-pic-on">开</label>
@@ -755,7 +734,6 @@ function themeoptions_page() {
       'label_logo' => $_POST['label-logo'],
       'popular' => $_POST['popular'],
       'login_reg' => $_POST['logo-flake'],
-      'share' => $_POST['share'],
       'snowflake' => $_POST['snow-flake'],
       'friendlinks' => $_POST['friend-links'],
       'aside_count' => $_POST['aside-count'],

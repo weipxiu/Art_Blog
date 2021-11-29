@@ -72,55 +72,6 @@
 
                         <p class="post-motto">「梦想一旦被付诸行动，就会变得神圣，如果觉得我的文章对您有用，请帮助本站成长」</p>
 
-                        <?php
-                        if (get_option('weipxiu_options')['share'] == 'on') {
-                        ?>
-                        <div class="action-share">
-                            <div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1603188228670">
-                                <span>分享到：</span>
-                                <a class="bds_qzone" target="_blank" data-cmd="qzone" title="分享到QQ空间"></a>
-                                <a class="bds_tsina" target="_blank" data-cmd="tsina" title="分享到新浪微博"></a>
-                                <a class="bds_weixin" target="_blank" data-cmd="weixin" title="分享到微信"></a>
-                                <a class="bds_tqq" target="_blank" data-cmd="tqq" title="分享到腾讯微博"></a>
-                                <a class="bds_sqq" target="_blank" data-cmd="sqq" title="分享到QQ好友"></a>
-                                <a class="bds_bdhome" target="_blank" data-cmd="bdhome" title="分享到百度新首页"></a>
-                                <a class="bds_tqf" target="_blank" data-cmd="tqf" title="分享到腾讯朋友"></a>
-                                <a class="bds_youdao" target="_blank" data-cmd="youdao" title="分享到有道云笔记"></a>
-                            </div>
-                            <script>
-                                function clearSpace(testStr) {
-                                    var resultStr = testStr.replace(/\ +/g, ""); //去掉空格
-                                    resultStr = testStr.replace(/[ ]/g, "");    //去掉空格
-                                    resultStr = testStr.replace(/[\r\n]/g, ""); //去掉回车换行
-                                    return resultStr;
-                                }
-                                window._bd_share_config = {
-                                    common: {
-                                        bdText: "<?php the_title(); ?>", // 分享内容
-                                        bdDesc: clearSpace(`<?php if (has_excerpt()) {
-                                                    //文章编辑中的摘要
-                                                  echo $description = get_the_excerpt(); 
-                                                  }else {
-                                                  //文章编辑中若无摘要，自定截取文章内容字数做为摘要
-                                                  echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,'...'); } ?>`),
-                                        bdUrl: document.location.href,
-                                        bdMini: "2",
-                                        bdMiniList: false,
-                                        bdPic: "<?php echo catch_that_image() ?>", // 分享图片
-                                        bdStyle: "0",
-                                        bdSize: "24"
-                                    },
-                                    share: [{
-                                        bdCustomStyle: "<?php bloginfo('template_url'); ?>/css/share.css"
-                                    }],
-                                }
-                                with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="/static/api/js/share.js?cdnversion="+~(-new Date()/36e5)];
-                                </script>
-                        </div>
-                            <?php
-                        }
-                        ?>
-
                         <!--文章打赏start-->
                         <div class="post-actions">
                             <span class="post-like reward action-like">

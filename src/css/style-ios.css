@@ -3233,6 +3233,7 @@
 		margin: 0 auto;
 		padding: 0.15rem 0.25rem;
 		border-radius: 0.04rem;
+		line-height: normal;
 	}
 	.post-actions .action-like .iconfont {
 		font-size: 0.24rem;
