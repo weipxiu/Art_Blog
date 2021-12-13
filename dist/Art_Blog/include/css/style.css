@@ -1,4 +1,4 @@
-body{
+body {
   background: #fff;
 }
 .fl {
@@ -56,7 +56,7 @@ textarea::-webkit-scrollbar-thumb {
 
 /* 导航切换页面 */
 .wrap h2 {
-  font-size: 24px!important;
+  font-size: 24px !important;
   text-align: center;
 }
 .nav-wrap {
@@ -127,7 +127,7 @@ textarea::-webkit-scrollbar-thumb {
   border: 0;
   outline: 0;
   color: #fff;
-  background: #67c23a;
+  background: #409eff;
   cursor: pointer;
   border-radius: 4px;
   margin: 30px auto;
@@ -162,9 +162,6 @@ input[type='radio'] {
   text-align: center;
   box-sizing: border-box;
   outline: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
   padding: 7px 12px;
   margin: 1px 0 0 5px;
   font-size: 12px;
@@ -178,60 +175,63 @@ input[type='radio'] {
   display: none;
 }
 
-@media screen and (max-width:1199px) {
-  .submit-btn{
+@media screen and (max-width: 1199px) {
+  .submit-btn {
     margin: 30px auto -100px;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  input, textarea{
-    font-size:14px;
+  input,
+  textarea {
+    font-size: 14px;
   }
-  .row{
+  .row {
     padding: 5px 0;
     margin: 0;
     border-top: 1px solid #f0f2f7;
   }
-  .row .row:nth-of-type(1){
-    border:0;
+  .row .row:nth-of-type(1) {
+    border: 0;
   }
   input[type='radio'] {
-      margin-right: 7px;
-      width: 16px;
-      height: 16px;
-      min-width: auto;
+    margin-right: 7px;
+    width: 16px;
+    height: 16px;
+    min-width: auto;
   }
-  input[type=radio]:checked::before{
+  input[type='radio']:checked::before {
     margin: 3px;
     width: 8px;
     height: 8px;
   }
-  .row .right-wrap{
-    width:auto;
+  .row .right-wrap {
+    width: auto;
     float: none;
   }
-  .row input.url-inp{
-    width:100%;
+  .row input.url-inp {
+    width: 100%;
     text-indent: 5px;
   }
-  .row .left-wrap{
+  .row .left-wrap {
     width: auto;
     min-width: 100px;
     text-align: left;
     margin-bottom: 5px;
   }
-  .row input[name='img-upload']{
+  .row input[name='img-upload'] {
     margin: 6px 0 0 5px;
   }
-  .nav-wrap .nav-list{
+  .nav-wrap .nav-list {
     margin: 0 6px 0 0;
     padding: 6px 0px;
     width: 60px;
     text-align: center;
   }
-  .row .right-wrap input[name="replace-skin"]{
+  .row .right-wrap input[name='replace-skin'] {
     width: calc(100% - 55px);
   }
-  input[type="text"]{
-    padding:0;
+  input[type='text'] {
+    padding: 0;
     min-height: 0;
   }
 }
@@ -239,4 +239,3 @@ input[type='radio'] {
 /* @media screen and (min-width:768px) and (max-width:1199px) {
 	
 } */
-

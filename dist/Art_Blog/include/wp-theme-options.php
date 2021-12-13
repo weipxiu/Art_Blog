@@ -181,16 +181,16 @@ function themeoptions_page() {
               type="radio"
               id="mourning_on"
               name="mourning"
-              value="on" <?php if($a_options['mourning'] == 'on') echo 'checked'; ?>
+              value="on" <?php if($a_options['mourning'] == 'on'|| (date("m/d") == '12/13')) echo 'checked'; ?>
             >
             <label for="mourning_off">关</label>
             <input
               type="radio"
               id="mourning_off"
               name="mourning"
-              value="off" <?php if($a_options['mourning'] == 'off' || $a_options['mourning'] == '') echo 'checked'; ?>
+              value="off" <?php if(($a_options['mourning'] == 'off' || $a_options['mourning'] == '') &&  (date("m/d") != '12/13') ) echo 'checked'; ?>
             >
-            <span class="warn">*该选项用于国际社会等突发重大事件进行哀悼活动</span>
+            <span class="warn">*国家公祭日（12月13）自动开启，其它时间需手动</span>
           </div>
         </div>
 

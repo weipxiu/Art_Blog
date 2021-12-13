@@ -90,7 +90,7 @@ window.onresize = function() {
 <style>
 	<?php echo get_option('weipxiu_options')['details_css']; ?>
 	<?php
-			if (get_option('weipxiu_options')['mourning'] == 'on') {
+			if (get_option('weipxiu_options')['mourning'] == 'on' || (date("m/d") == '12/13')) {
 					?>
 					html{filter: grayscale(100%);}
 				<?php
