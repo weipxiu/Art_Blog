@@ -82,7 +82,6 @@
                 var imgList = document.querySelectorAll(".continar-left .text .Lazy_load");
                 for (var i = 0; i < imgList.length; i++) {
                     if (that.elementInView(imgList[i]) && imgList[i].getAttribute('data-original')) {
-                        console.log('图片加载成功',i)
                         imgList[i].setAttribute('src', imgList[i].getAttribute('data-original'));
                         imgList[i].removeAttribute('data-original');
                     }
