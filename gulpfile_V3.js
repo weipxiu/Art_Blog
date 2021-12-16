@@ -1,6 +1,6 @@
 const fs = require('fs');
 const gulp = require('gulp');
-const del = require('del') // //清空目录下资源
+const clean = require('gulp-clean');//清空目录下资源
 const htmlmin = require('gulp-htmlmin');//压缩html
 //const imagemin = require('gulp-imagemin'); //引入图片压缩模块
 const scriptmin = require('gulp-uglify'); //引入js压缩模块
@@ -65,21 +65,29 @@ gulp.watch -- 观察文件是否发生改变
 */
 
 //清空dist目录
-gulp.task("del", async () => {
-    console.log('清空' + target + '目录下的资源')
-    await del([target + '/*', "./Art_Blog.zip"], { force: true, dryRun: true }); //force:强力删除，dryRun：允许删除当前工作目录和外部目录
-})
+var clear = function (href) {
+    gulp.task("clean", function () {
+        console.log('清空' + (href || target) + '目录下的资源')
+        return gulp.src([href || target + '/*', "Art_Blog.zip"], {
+            read: false //设置参数read:false可以阻止访问文件,加快删除速度
+        })
+            .pipe(clean({
+                force: true
+            }));
+    })
+}
+clear()
 
 // 拷贝文件
-gulp.task("copyHtml", async () => {
+gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    await gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
+    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
 });
 
 //压缩html
-gulp.task('miniHtml', async () => {
-    await gulp.src(['src/*.html'])
+gulp.task('miniHtml', () => {
+    return gulp.src(['src/*.html'])
         .pipe(preprocess({
             context: {
                 // 此处可接受来自调用命令的 NODE_ENV 参数，默认为 development 开发测试环境
@@ -98,8 +106,8 @@ gulp.task('miniHtml', async () => {
 });
 
 // 压缩css
-gulp.task("minCss", async () => {
-    await gulp.src(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"])
+gulp.task("minCss", function () {
+    return gulp.src(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css","src/css/share.css"])
         //.pipe(rev())//添加hash值防缓存
         //.pipe(gulpless())
         //.pipe(gulp_minify_css({
@@ -110,8 +118,8 @@ gulp.task("minCss", async () => {
 });
 
 // 多端压缩合并css
-gulp.task("mergeCss", async () => {
-    await gulp.src(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"])
+gulp.task("mergeCss", function () {
+    return gulp.src(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"])
         .pipe(concat("style_min.css"))
         .pipe(gulp_minify_css({
             advanced: false,
@@ -122,8 +130,8 @@ gulp.task("mergeCss", async () => {
 
 //图片压缩
 //安装模块 npm install --save-dev gulp-imagemin
-gulp.task("imageMin", async () => {
-    await gulp.src('src/images/*')
+gulp.task("imageMin", function () {
+    return gulp.src('src/images/*')
         .pipe(imagemin([
             imagemin.gifsicle({
                 interlaced: true
@@ -147,17 +155,17 @@ gulp.task("imageMin", async () => {
 })
 
 // js插件copy
-gulp.task("jsCopy", async () => {
+gulp.task("jsCopy", function () {
     //特例
-    await gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js"])
+    return gulp.src(["src/js/jquery-2.1.4.min.js", "src/js/swiper.min.js"])
         .pipe(gulp.dest(target + "/js"))
 })
 
 //ES6转换转ES5(babel-v8版本)、代码合并
 //安装 npm i gulp-concat --save-dev
-gulp.task("jsConcat", async () => {
+gulp.task("jsConcat", function () {
     //公共
-    await gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
+    return gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/preset-env']
@@ -168,9 +176,9 @@ gulp.task("jsConcat", async () => {
 })
 
 //打包zip
-gulp.task('compressZip', async () => {
+gulp.task('compressZip', function () {
     //,{ base: '.', follow: true }压缩当前dist文件夹
-    await gulp.src(['./dist/**'])
+    return gulp.src(['./dist/**'])
         .pipe(zip('Art_Blog.zip'))
         .pipe(gulp.dest('./'));
 });
@@ -184,18 +192,27 @@ gulp.task('compressZip', async () => {
 });*/
 
 //监听文件是否发生改变
-gulp.task("Watch", function (done) {
-    gulp.watch(["./src/css/codecolorer.css", "./src/css/swiper.min.css", "./src/css/login.css"], gulp.series('minCss'));
-    gulp.watch(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"], gulp.series('mergeCss'));
-    gulp.watch(["./src/**/**.js"], gulp.series('jsConcat'));
-    gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], gulp.series('copyHtml'));
-    done()
+gulp.task("Watch", function () {
+    gulp.watch(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"], ['minCss']);
+    gulp.watch(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"], ['mergeCss']);
+    gulp.watch(['./src/**/**.js'], ['jsConcat']);
+    gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);
 })
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则打包太慢，图片压缩还是单独处理比较好
-gulp.task('default', gulp.series('del', gulp.parallel('copyHtml', 'miniHtml', 'minCss', 'mergeCss', 'jsCopy', 'jsConcat', 'compressZip','Watch')
-, function (done) {
-    console.log('\n恭喜您，编译打包已完成，打包好文件存放在' + target + '文件夹！！！');
-    done(); //done回调函数的作用是在task完成时通知Gulp（而不是返回一个流），而task里的所有其他功能都纯粹依赖Node来实现
-}));
+gulp.task('default', function () {
+    runSequence(
+        ["clean"],
+        ["copyHtml"],
+        ["miniHtml",],
+        ["minCss"],
+        ["mergeCss"],
+        ["jsCopy"],
+        ["jsConcat"],
+        ["compressZip"],
+        ["Watch"],
+        function () {
+            console.log('\n恭喜您，编译打包已完成，打包好文件存放在' + target + '文件夹！！！');
+        })
+});

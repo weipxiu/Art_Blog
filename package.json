@@ -2,7 +2,7 @@
   "name": "art_blog",
   "version": "2.8.6",
   "description": "一款基于jquery2.1.4开发的wordpress主题",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=production gulp",
@@ -25,9 +25,9 @@
     "color-name": "^1.1.4",
     "cross-env": "^5.2.0",
     "escape-string-regexp": "^1.0.5",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-less": "^3.5.0",
@@ -44,6 +44,9 @@
   },
   "dependencies": {
     "browserslist": "^4.12.0",
+    "caniuse-lite": "^1.0.30001287",
+    "del": "^6.0.0",
+    "gulp-connect": "^5.7.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "^1.2.1"
   }

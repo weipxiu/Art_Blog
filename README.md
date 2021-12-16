@@ -32,7 +32,7 @@
 
 I、方式一：直接下载项目，找到项目文件的Art_Blog.zip压缩包，即是已打包好的主题源码，通过后台主题上传，启用主题即可。方式二：将项目中dist文件夹下Art_Blog整个`文件夹`上传到线上：`/根目录/wp-content/themes/`目录下，启用主题，`推荐使用方式二`
 
-II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v8.x为宜），dist里的文件就是Art_Blog.zip里的文件
+II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v12.x为宜，更多自测），dist里的文件就是Art_Blog.zip里的文件
 
 III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本，[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html)
 
