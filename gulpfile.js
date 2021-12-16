@@ -48,8 +48,7 @@ Date.prototype.Format = function (fmt) { // author: meizz
 //每次打包往首页追加打包时间信息
 function writeFileToLine(ver, url) {
     let data = fs.readFileSync(url, 'utf8').split(/\r\n|\n|\r/gm); //readFileSync的第一个参数是文件名
-    let _ver = ver || data[4].replace(/Version:/g, '');
-    console.log(data[4].replace(/Version:/g, ''))
+    console.log('\n' + data[4].replace(/Version:/g, '') + '\n')
     data[4] = `<meta name='generator' content='WordPress/Art_Blog v${new Date().Format("yyyy-MM-dd hh:mm:ss")}'>`;
     fs.writeFileSync(url, data.join('\n'))
 }
@@ -66,7 +65,7 @@ gulp.watch -- 观察文件是否发生改变
 
 //清空dist目录
 gulp.task("del", async () => {
-    console.log('清空' + target + '目录下的资源')
+    console.log('\n已成功清理' + target + '文件目录！！！！！！\n')
     await del([target + '/*', "./Art_Blog.zip"], { force: true, dryRun: true }); //force:强力删除，dryRun：允许删除当前工作目录和外部目录
 })
 
@@ -194,8 +193,8 @@ gulp.task("Watch", function (done) {
 
 //如果直接执行 gulp 那么就是运行任务名称为‘default’的任务,后面数组代表所需要执行的任务列表
 //"imageMin"不加入，否则打包太慢，图片压缩还是单独处理比较好
-gulp.task('default', gulp.series('del', gulp.parallel('copyHtml', 'miniHtml', 'minCss', 'mergeCss', 'jsCopy', 'jsConcat', 'compressZip','Watch')
-, function (done) {
-    console.log('\n恭喜您，编译打包已完成，打包好文件存放在' + target + '文件夹！！！');
-    done(); //done回调函数的作用是在task完成时通知Gulp（而不是返回一个流），而task里的所有其他功能都纯粹依赖Node来实现
-}));
+gulp.task('default', gulp.series('del', gulp.parallel('copyHtml', 'miniHtml', 'minCss', 'mergeCss', 'jsCopy', 'jsConcat', 'compressZip', 'Watch')
+    , function (done) {
+        console.log('\n恭喜您，打包成功，文件目录' + target + '\n');
+        done(); //done回调函数的作用是在task完成时通知Gulp（而不是返回一个流），而task里的所有其他功能都纯粹依赖Node来实现
+    }));
