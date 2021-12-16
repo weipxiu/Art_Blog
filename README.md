@@ -26,11 +26,11 @@
   </a>
 </p>
 
-一款精美绝伦的wordPress开源艺术主题，历时四年时光洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[下载安装](https://github.com/weipxiu/Art_Blog/tags)
+一款精美绝伦的wordPress开源艺术主题，历时五年光阴洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[立即下载安装](https://github.com/weipxiu/Art_Blog/tags)
 
 ## 如何使用它
 
-I、方式一：直接下载项目，找到项目文件的Art_Blog.zip压缩包，即是已打包好的主题源码，通过后台主题上传，启用主题即可。方式二：将项目中dist文件夹下Art_Blog整个`文件夹`上传到线上：`/根目录/wp-content/themes/`目录下，启用主题，`推荐使用方式二`
+I、方式一：直接下载，找到项目文件的Art_Blog.zip压缩包，即是已打包好的主题源码，通过后台主题上传，启用主题即可。方式二：将项目中dist文件夹下Art_Blog整个`文件夹`上传到线上：`/根目录/wp-content/themes/`目录下，启用主题，`推荐使用方式二`
 
 II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v12.x为宜，更多自测），dist里的文件就是Art_Blog.zip里的文件
 
@@ -38,7 +38,7 @@ III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2
 
 IV、更多详细教程点击：[主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥？[教程视频](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
-V、主题开源，唯一支持作者的方式是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！
+V、主题开源，唯一支持作者的方式是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！！！
 <p align="center">
 <img src="https://www.weipxiu.com/wp-content/uploads/2019/04/alipay.png" width="150"><img src="https://www.weipxiu.com/wp-content/uploads/2019/04/weixin.png" width="150">
 </p>
