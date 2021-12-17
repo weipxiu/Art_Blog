@@ -146,7 +146,7 @@
             }, function () {
                 //如果出现搜索的情况下，头部层级自然还是要比轮播高
                 if (!time2 && !$(".site-search").is(":visible")) {
-                    //避免在正常时候下方轮播分割旋转时候被遮盖 
+                    //避免在正常时候下方轮播分割旋转时候被遮盖
                     $header.css("z-index", "10");
                 } else {
                     $header.css("z-index", "12");
@@ -178,7 +178,7 @@
                         queue.shift();
                     }, 250)
                 }
-                //避免在正常时候下方轮播分割旋转时候被遮盖 
+                //避免在正常时候下方轮播分割旋转时候被遮盖
                 time2 = setTimeout(() => {
                     if (!$(".site-search").is(":visible")) {
                         $header.css("z-index", "10");
@@ -589,7 +589,7 @@
 
             function fillSpan($ele) {
                 //通过字符换算，尽可能让所有列长度一致
-                var baseContent = ''; //初始化字符串 
+                var baseContent = ''; //初始化字符串
                 var strLengh = 0; //初始化截取位数
                 if ($ele.text().trim().gblen() < 38) {
                     baseContent = $ele.text().trim();
@@ -626,9 +626,9 @@
             }
 
             function stringAnimate($ele, opt) {
-                var positionArr = $ele.data("stringPosition"); // 原始位置 
+                var positionArr = $ele.data("stringPosition"); // 原始位置
                 var startX = 0; // 初始x轴位置
-                var startY = 0; // 初始y轴位置 
+                var startY = 0; // 初始y轴位置
                 $ele.mouseenter(function (ex) {
                     var offset = $ele.offset();
                     startX = ex.pageX - offset.left; // 鼠标在容器内 x 坐标

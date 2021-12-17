@@ -30,7 +30,7 @@
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/layer/layer.js"></script>
 <!-- 判断低版本IE -->
 <script>
-	 /*if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+	 /*if ((navigator.userAgent.indexOf('MSIE') >= 0)
 		&& (navigator.userAgent.indexOf('Opera') < 0)){
 		window.location.href="echo esc_url(get_template_directory_uri()); /reminder.php";//判断IE5-10
 	 }*/
@@ -53,7 +53,7 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 	(function() {
 		var hm = document.createElement("script");
 		hm.src = "https://hm.baidu.com/hm.js?704cfdd415da41b2e884bbb16a5dd3f3";
-		var s = document.getElementsByTagName("script")[0]; 
+		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(hm, s);
 	})();
 </script>
@@ -80,7 +80,7 @@ var setFontSize = function() {
 				deviation[0].style.transform = "translateX(0)";
     }
 }
-setFontSize(); 
+setFontSize();
 window.onresize = function() {
     setFontSize()
 }

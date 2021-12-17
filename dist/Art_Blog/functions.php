@@ -16,11 +16,11 @@ if (!function_exists('remove_wp_open_sans')) :
     add_action('wp_enqueue_scripts', 'remove_wp_open_sans');
 endif;
 
-function remove_open_sans() {    
-    wp_deregister_style( 'open-sans' );    
-    wp_register_style( 'open-sans', false );    
-    wp_enqueue_style('open-sans','');    
-}    
+function remove_open_sans() {
+    wp_deregister_style( 'open-sans' );
+    wp_register_style( 'open-sans', false );
+    wp_enqueue_style('open-sans','');
+}
 add_action( 'init', 'remove_open_sans' );
 //RemoveOpenSans禁用谷歌字体end
 
@@ -58,27 +58,27 @@ add_filter('category_description', 'ytkah_delete_cat_p');
 //注册特色图像
 add_theme_support('post-thumbnails');
 
-// 获取文章第一张缩略图url地址 
+// 获取文章第一张缩略图url地址
 function catch_that_image() {
 	global $post;
 	$first_img = '';
 	ob_start();
 	ob_end_clean();
 	$output = preg_match_all('/<img*.+src=[\'"]([^\'"]+)[\'"].*>/iU', wp_unslash($post->post_content), $matches);
-	if(empty($output)){ 
+	if(empty($output)){
         $first_img =  get_option('weipxiu_options')['thumbnail'];
 	}else {
 		$first_img = $matches [1][0];
 	}
 	return $first_img;
-}  
+}
 //重写特色图像
 function _get_post_thumbnail($size = 'thumbnail', $class = 'thumb') {
 	global $post;
 	$r_src = '';
 	if (has_post_thumbnail()) { // 侧边栏最近更新特色图片
         $domsxe = get_the_post_thumbnail();
-        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $domsxe, $strResult, PREG_PATTERN_ORDER);  
+        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $domsxe, $strResult, PREG_PATTERN_ORDER);
         $images = $strResult[1];
         foreach($images as $src){
         	$r_src = $src;
@@ -124,7 +124,7 @@ add_filter('preprocess_comment', 'refused_english_comments');
 // 	}function
 //     add_action('pre_get_posts','custom_posts_per_page');
 ?>
-<?php 
+<?php
 //部分内容登录可见
 function login_to_read($atts, $content=null) {
     extract(shortcode_atts(array("notice" => '
@@ -140,7 +140,7 @@ function login_to_read($atts, $content=null) {
 * 因为wordpress默认仅仅提供简单分页
 * 所以要实现数字分页，需要自定义函数
 * @Param int $range            数字分页的宽度
-* @Return string|empty        输出分页的HTML代码        
+* @Return string|empty        输出分页的HTML代码
 */
 function lingfeng_pagenavi( $range = 4 ) {
     global $paged,$wp_query;
@@ -148,7 +148,7 @@ function lingfeng_pagenavi( $range = 4 ) {
         $max_page = $wp_query->max_num_pages;
     }
     if( $max_page >1 ) {
-        echo "<div class='fenye wp-pagenavi'>"; 
+        echo "<div class='fenye wp-pagenavi'>";
         if( !$paged ){
             $paged = 1;
         }
@@ -184,7 +184,7 @@ function lingfeng_pagenavi( $range = 4 ) {
             echo '<a href='.get_pagenum_link($max_page) .' class="last">共 '.$max_page.' 页</a>';
         }
         //echo '<span class="last">共'.$max_page.'页</span>';
-        echo "</div>\n";  
+        echo "</div>\n";
     }
 }
 
@@ -288,7 +288,7 @@ function bigfa_like() {
 }
 
 //输入密码查看
-function e_secret($atts, $content = null) { 
+function e_secret($atts, $content = null) {
     extract(shortcode_atts(array(
         'key' => null
     ) , $atts));
@@ -370,7 +370,7 @@ function my_remove_recent_comments_style() {
 if (!is_admin()) { // 后台不禁止
     function my_init_method() {
         wp_deregister_script('jquery'); // 取消原有的 jquery 定义
-        
+
     }
     add_action('init', 'my_init_method');
 }
@@ -378,7 +378,7 @@ wp_deregister_script('l10n');
 add_action('after_wp_tiny_mce', 'add_button_mce');
 
 //扩展发表文章编辑器的导航标签
-function add_button_mce($mce_settings) { 
+function add_button_mce($mce_settings) {
 ?>
     <script type="text/javascript">
         QTags.addButton( 'a', 'a', "<a href='' target='_blank'>", "</a>" );
@@ -501,7 +501,7 @@ add_action('login_form_login','login_val');
 // 面包屑导航注册代码
 function wheatv_breadcrumbs() {
     $delimiter = '<i>&gt;</i>';
-    $name = '当前位置:'; 
+    $name = '当前位置:';
     $currentBefore = '';
     $currentAfter = '';
     if (!is_home() && !is_front_page() || is_paged()) {
@@ -812,7 +812,7 @@ function simple_comment($comment, $args, $depth) {
                     'reply_text' => '回复',
                     'depth' => $depth,
                     'null' => $args['max_depth']
-                ))) ?> 
+                ))) ?>
             </span>
         </div>
     <?php
@@ -824,18 +824,18 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
     // 评论必须经过审核才会发送通知邮件
     if ($comment_status !== 'approve' && $comment_status !== 1)
       return;
-    
+
     $comment = get_comment($comment_id);
-  
+
     if ($comment->comment_parent != '0') {
       $parent_comment = get_comment($comment->comment_parent);
-  
-      // 邮件接收者email      
+
+      // 邮件接收者email
       $to = trim($parent_comment->comment_author_email);
-      
+
       // 邮件标题
       $subject = '您在[' . get_option("blogname") . ']的留言有了新的回复';
-  
+
       // 邮件内容，自行修改，支持HTML
       $message = '<div style="border-right:#666666 1px solid;border-radius:8px;color:#111;font-size:12px;width:702px;    border-bottom:#666666 1px solid;font-family:微软雅黑,arial;margin:10px auto 0px;border-top:#666666 1px solid;border-left:#666666 1px solid"><div class="adM">
         </div><div style="width:100%;background:#666666;min-height:60px;color:white;border-radius:6px 6px 0 0"><span style="line-height:60px;min-height:60px;margin-left:30px;font-size:12px">您在<a style="color:#00bbff;font-weight:600;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 上的留言有回复啦！</span> </div>
@@ -847,18 +847,18 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
         <p style="border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;padding-bottom:20px;background-color:#eee;margin:15px 0px;padding-left:20px;padding-right:20px;border-top:#ddd 1px solid;border-right:#ddd 1px solid;padding-top:20px">' . nl2br($comment->comment_content) . '</p>
         <p>您可以点击 <a style="color:#00bbff;text-decoration:none" href="' . htmlspecialchars(get_comment_link($comment->comment_parent)). '" target="_blank">查看回复的完整內容</a></p>
         <p>感谢您对 <a style="color:#00bbff;text-decoration:none" href="' . get_option('home') . '" target="_blank">' . get_option('blogname') . '</a> 的关注，如您有任何疑问，欢迎在博客留言，我都会一一解答，么么哒！！！</p><p>(此邮件由系统自动发出，请勿回复。)</p></div></div>';
-  
+
       $message_headers = "Content-Type: text/html; charset=\"".get_option('blog_charset')."\"\n";
-      
+
       // 不用给不填email的评论者和管理员发提醒邮件
       if($to != '' && $to != get_bloginfo('admin_email'))
         @wp_mail($to, $subject, $message, $message_headers);
     }
   }
-   
+
   // 编辑和管理员的回复直接发送提醒邮件，因为编辑和管理员的评论不需要审核
   add_action('comment_post', 'ludou_comment_mail_notify', 20, 2);
-  
+
   // 普通访客发表的评论，等博主审核后再发送提醒邮件
   add_action('wp_set_comment_status', 'ludou_comment_mail_notify', 20, 2);
 ?>

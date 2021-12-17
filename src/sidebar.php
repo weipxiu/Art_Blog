@@ -18,7 +18,7 @@
 
     <div class="textwidget">
         <p class="clearfix">
-            <?php 
+            <?php
                 echo get_option('weipxiu_options')['sidebar_notice'];
             ?>
         </p>
@@ -129,13 +129,13 @@
              -->
             <!-- 获取QQ头像
                  https://q1.qlogo.cn/g?b=qq&nk=343049466&s=40
-                 https://q2.qlogo.cn/headimg_dl?dst_uin=343049466&spec=40 
+                 https://q2.qlogo.cn/headimg_dl?dst_uin=343049466&spec=40
                  参数值：所有接口spec可选值:40、100、140、640
             -->
             <?php
                 $comments = get_comments('status=approve&number=6&order=modified');
                 $output = $pre_HTML;
-                foreach ($comments as $comment) { 
+                foreach ($comments as $comment) {
                     $com_excerpt = $comment->comment_content;
                     $excerpt_len = mb_strlen($comment->comment_content, 'utf-8');
                     if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
@@ -143,7 +143,7 @@
                 $output .= $post_HTML;
                 $output = convert_smilies($output);
                 echo $output;
-            ?> 
+            ?>
         </ul>
     </div>
 </div>

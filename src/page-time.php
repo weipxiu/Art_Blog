@@ -1,8 +1,8 @@
-<?php   
+<?php
 /*
-Template Name: 时光机  
-*/  
-?>  
+Template Name: 时光机
+*/
+?>
 <!doctype html>
 <html>
 <head>
@@ -59,7 +59,7 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 
 @media screen and (max-width:767px) {
 	#message{
-		width: auto; 
+		width: auto;
     margin: 0.9rem 0 0 0;
     overflow: hidden;
     padding: 0.3rem;

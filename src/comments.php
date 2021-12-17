@@ -27,7 +27,7 @@ if ( post_password_required() )
     <!-- 加载表情包end -->
     <?php if(comments_open()) : ?>
         <div class="respond" role="form">
-            <h2 id="reply-title" class="comments-title" style="display:none"><?php comment_form_title( '', '当前评论留言将回复给 - %s' ); ?> 
+            <h2 id="reply-title" class="comments-title" style="display:none"><?php comment_form_title( '', '当前评论留言将回复给 - %s' ); ?>
                 <small><?php cancel_comment_reply_link('点击取消'); ?></small>
             </h2>
             <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>

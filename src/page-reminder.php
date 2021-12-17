@@ -1,7 +1,7 @@
-<?php   
+<?php
 /*
-Template Name: 升级浏览器 
-*/  
+Template Name: 升级浏览器
+*/
 ?>
 <!doctype html>
 <html>

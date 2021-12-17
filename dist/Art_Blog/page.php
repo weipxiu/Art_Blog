@@ -2,12 +2,12 @@
 <html lang="en">
 <title><?php wp_title( '-', true, 'right' ); ?></title>
 <head>
-    <?php 
+    <?php
         $keywords = get_post_meta($post->ID, "keywords", true);
         if($keywords == '') {
-            $tags = wp_get_post_tags($post->ID);    
-            foreach ($tags as $tag ) {        
-                $keywords = $keywords . $tag->name . ", ";    
+            $tags = wp_get_post_tags($post->ID);
+            foreach ($tags as $tag ) {
+                $keywords = $keywords . $tag->name . ", ";
             }
             $keywords = rtrim($keywords, ', ');
         }

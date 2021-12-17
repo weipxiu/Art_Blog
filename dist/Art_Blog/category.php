@@ -43,10 +43,10 @@
 							<h3>
 									<?php if (has_excerpt()) {
 											//文章编辑中的摘要
-											echo $description = get_the_excerpt(); 
+											echo $description = get_the_excerpt();
 									}else {
 											//文章编辑中若无摘要，自定截取文章内容字数做为摘要
-											echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); 
+											echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"...");
 									} ?>
 							</h3>
 							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>

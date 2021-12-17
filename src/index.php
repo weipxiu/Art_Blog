@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2021-12-17 19:17:19'>
+<meta name='generator' content='WordPress/Art_Blog v2021-12-17 22:15:31'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -45,7 +45,7 @@
 	<!-- 正文区域start -->
 	<section class="continar" id="lazycontainer">
 		<img class="search_404" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/search_404.png" alt="">
-		
+
 			<!--移动端轮播start-->
 			<?php
 			if (trim(get_option('weipxiu_options')['mobile_banner'])) {
@@ -136,10 +136,10 @@
 					<span>
 							<?php if (has_excerpt()) {
 									//文章编辑中的摘要
-									echo $description = get_the_excerpt(); 
+									echo $description = get_the_excerpt();
 							}else {
 									//文章编辑中若无摘要，自定截取文章内容字数做为摘要
-									echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 300,"..."); 
+									echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 300,"...");
 							} ?>
 					</span>
 				<?php }
@@ -196,10 +196,10 @@
 							<h3>
 									<?php if (has_excerpt()) {
 											//文章编辑中的摘要
-											echo $description = get_the_excerpt(); 
+											echo $description = get_the_excerpt();
 									}else {
 											//文章编辑中若无摘要，自定截取文章内容字数做为摘要
-											echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"..."); 
+											echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 190,"...");
 									} ?>
 							</h3>
 							<a class="read-more read_url" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
@@ -242,7 +242,7 @@
 								location.href="/wp-login.php"
 							}
 						})
-					}); 
+					});
 
 				</script>
 				<?php endif; ?>
@@ -270,7 +270,7 @@
 								<div><?php echo get_option('weipxiu_options')['tips_sentence']; ?>
 											<a href="/wp-login.php" rel="nofollow">会员登录</a>
 											<span>或</span>
-											<a href="/wp-login.php?action=register" class="register" rel="nofollow">注册会员</a> 
+											<a href="/wp-login.php?action=register" class="register" rel="nofollow">注册会员</a>
 									</div>
 							</div>
 					</div>
@@ -388,10 +388,10 @@ $(function () {
 			$(window).resize(function () {
 					if ($(document).width() >= 1200 && (window.location.href == domain_name || window.location.href == domain_name + '/')) {
 						$("#js_banner").show();
-					} 
+					}
 			});
 			// 当窗口改变时候end
-			
+
 			// pc轮播
 			if("<?php echo esc_url(get_template_directory_uri()); ?>".indexOf('wp-content/themes/Art_Blog') == -1){
 				layer.alert('Sorry，当前主题安装路径不正确，详情点击确认查看主题使用说明！',{

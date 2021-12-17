@@ -30,9 +30,9 @@
 					<div class="brand">
 					<?php echo get_option('weipxiu_options')['key_word']; ?>
 				</div>
-				<?php 
+				<?php
 					// 列出顶部导航菜单，只列出一级菜单
-					wp_nav_menu( array( 
+					wp_nav_menu( array(
 						'theme_location'  => '',//导航别名
 						'menu'   => '', //期望显示的菜单
 						'container'  => '',  //容器标签
@@ -76,9 +76,9 @@
 
 <!-- 移动端侧边栏导航start -->
 <div class="os-herder">
-	<?php 
+	<?php
 		// 列出顶部导航菜单，只列出一级菜单
-		wp_nav_menu( array( 
+		wp_nav_menu( array(
 			'theme_location'  => '',//导航别名
 			'menu'   => '', //期望显示的菜单
 			'container'  => '',  //容器标签

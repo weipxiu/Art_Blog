@@ -1,8 +1,8 @@
-<?php   
+<?php
 /*
-Template Name: 关于博客-旧版  
-*/  
-?>  
+Template Name: 关于博客-旧版
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,33 +18,33 @@ Template Name: 关于博客-旧版
     <div class="continar">
          <div class="continar-left" id="details">
              <!-- 用户中心头部start -->
-             <div class="head_user_b"> 
-                   <div class="head_user"> 
-                    <div class="head_user_a"> 
-                     <div class="head_avatar"> 
-                      <a href="javascript:;"> 
+             <div class="head_user_b">
+                   <div class="head_user">
+                    <div class="head_user_a">
+                     <div class="head_avatar">
+                      <a href="javascript:;">
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/head_portrait.jpg" class="avatar" width="160" height="160" alt="<?php echo get_bloginfo('name'); ?>" />
                         <span class="verify_1"></span>
-                      </a> 
-                     </div> 
+                      </a>
+                     </div>
                      <div class="head_avatar_a">
                       <p>Admin<i class="img-icon icon_male"></i><a href="/author/0?info=vip#user_menu" title="VIP 6" class="vip_aa"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/vip9.png" class="vip_ico vip6" alt="<?php echo get_bloginfo('name'); ?>" /></a></p>
-                     </div> 
+                     </div>
                      <div class="head_avatar_b">
                         <p> 管理员 </p>
-                     </div> 
-                     <div class="head_avatar_c"> 
+                     </div>
+                     <div class="head_avatar_c">
                         <a href="https://jq.qq.com/?_wv=1027&k=4BemYKg">
                             <span class="follow-btn unfollowed" onclick="jinsom_pop_login_style();"><i class="fa fa-plus"></i> 关 注</span>
                         </a>
-                     </div> 
-                    </div> 
+                     </div>
+                    </div>
                     <div class="head_user_data">
-                         <span>人气：9999+</span> 
-                         <span>粉丝：998</span> 
+                         <span>人气：9999+</span>
+                         <span>粉丝：998</span>
                          <span>关注：1983</span>
-                    </div> 
-                   </div> 
+                    </div>
+                   </div>
              </div>
              <!-- 用户中心头部end -->
              <h4 class="h4">站长简介</h4>
@@ -139,7 +139,7 @@ Template Name: 关于博客-旧版
          <!-- 左侧区域end -->
     </div>
     <!-- 正文区域end -->
-    
+
 	<!-- 底部引用区域start -->
     <?php get_footer()?>
     <!-- 底部引用区域end -->

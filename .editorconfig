@@ -1,0 +1,16 @@
+# https://editorconfig.org
+root = true # 根目录的配置文件，编辑器会由当前目录向上查找，如果找到 `roor = true` 的文件，则不再查找
+
+# 格式规范，请直接复制使用，勿修改。
+[*] # 匹配所有文件
+charset = utf-8  # 文件编码utf-8
+end_of_line = lf # 文件换行符是 linux 的 `\n`
+indent_size = 2  # 使用2个空格缩进
+indent_style = space # 空格缩进
+insert_final_newline = true # 文件末尾添加一个空行
+max_line_length = 100 # 在指定的字符数后强制换行。off关闭此功能
+tab_width = 2 # tab缩进的列数。默认是indent_size
+quote_type = single # 字符串使用单引号
+trim_trailing_whitespace = true # 不保留行末的空格
+curly_bracket_next_line = false # 大括号不另起一行
+spaces_around_operators = true  # 运算符两遍都有空格

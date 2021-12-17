@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <?php 
+    <?php
         $keywords = get_post_meta($post->ID, "keywords", true);
         if($keywords == '') {
-            $tags = wp_get_post_tags($post->ID);    
-            foreach ($tags as $tag ) {        
-                $keywords = $keywords . $tag->name . ", ";    
+            $tags = wp_get_post_tags($post->ID);
+            foreach ($tags as $tag ) {
+                $keywords = $keywords . $tag->name . ", ";
             }
             $keywords = rtrim($keywords, ', ');
         }
@@ -53,7 +53,7 @@
                                 阅读（<?php echo getPostViews(get_the_ID()); ?>）
                             </span>
                             <!--
-                            检测改文章是否被百度收录，该功能谨慎开启，它将严重拖累详情页打开速度 
+                            检测改文章是否被百度收录，该功能谨慎开启，它将严重拖累详情页打开速度
                             <span class="recommend" style="display:none">
                             <?php /* baidu_record(); */?>
                             </span>
@@ -76,12 +76,12 @@
                         <div class="post-actions">
                             <span class="post-like reward action-like">
                                 <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
-                                    <i class="iconfont icon-xingxing"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){            
+                                    <i class="iconfont icon-xingxing"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
                                                 echo get_post_meta($post->ID,'bigfa_ding',true);
                                             } else {
                                                 echo '0';
-                                        }?></span>)  
-                                </a>   
+                                        }?></span>)
+                                </a>
                             </span>
                             <span class="reward js_reward">
                                 <i class="iconfont icon-jiage1"></i> 打赏
@@ -104,7 +104,7 @@
                         </div>
                         <!--文章打赏end-->
                     </div>
-                    
+
                     <div class="key-w">
                         <div class="single_lable">
                             <i class="iconfont icon-biaoqian" style="padding-right:7px"></i>标签：</div>
@@ -117,7 +117,7 @@
                     <p class="text-post">
                         <?php if (get_next_post()) { next_post_link('<span>下一篇：</span>%link');} else {echo "下一篇：没有了，已经是最新文章";} ?>
                     </p>
-                    
+
                     <!-- 相关文章推荐start -->
                     <h3 class="cat-title"><span>相关推荐</span></h3>
                     <?php
@@ -125,14 +125,14 @@
                         $args = array(
                             'posts_per_page' => 8, // 要显示的项目数
                             'post__not_in'   => array( get_the_ID() ), // 排除当前帖子
-                            'no_found_rows'  => true, 
+                            'no_found_rows'  => true,
                         );
 
                         // 检查当前的帖子类别，并将tax_query添加到查询参数中
-                        $cats = wp_get_post_terms( get_the_ID(), 'category' ); 
-                        $cats_ids = array();  
+                        $cats = wp_get_post_terms( get_the_ID(), 'category' );
+                        $cats_ids = array();
                         foreach( $cats as $wpex_related_cat ) {
-                            $cats_ids[] = $wpex_related_cat->term_id; 
+                            $cats_ids[] = $wpex_related_cat->term_id;
                         }
                         if ( ! empty( $cats_ids ) ) {
                             $args['category__in'] = $cats_ids;

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 404页面  
+Template Name: 404页面
 */
 ?>
 
