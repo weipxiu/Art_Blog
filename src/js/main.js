@@ -97,7 +97,7 @@
             var node_list = $(".header .music-nav").children('li');
             for (var i = 0; i < node_list.length; i++) {
                 var text = node_list.eq(i).children('a').html();
-                node_list.eq(i).children('a').text('').append("<span>" + text + "</span>"+"<span>" + text + "</span>");
+                node_list.eq(i).children('a').text('').append("<span>" + text + "</span>" + "<span>" + text + "</span>");
                 //高亮
                 if (node_list.eq(i).hasClass('current-menu-item')) {
                     node_list.eq(i).addClass('action');
@@ -260,10 +260,15 @@
                 searchShow = !searchShow
                 $(".site-search.active.pc").toggle();
                 $(".site-search.active.pc").find('input').focus();
+                
+                if ($(".site-search.active.pc").is(":visible")) {
+                    $(this).find("i").addClass("icon-guanbi");
+                    $(this).find("i").removeClass("icon-sousuo");
+                } else {
+                    $(this).find("i").addClass("icon-sousuo");
+                    $(this).find("i").removeClass("icon-guanbi");
+                }
             });
-            $(".xis,.navto-search a").click(function () {
-                $(this).find("i").toggleClass("icon-sousuo icon-guanbi3");
-            })
 
             $(".header").addClass("Top");
 
@@ -750,7 +755,8 @@
                 obtn = !obtn
                 if ($(".site-search").is(":visible")) {
                     $(".os-headertop .site-search").slideToggle(100);
-                    $(".xis").find("i").toggleClass("icon-sousuo icon-guanbi3");
+                    $(".xis").find("i").addClass("icon-guanbi");
+                    $(".xis").find("i").removeClass("icon-sousuo");
                 }
             }
 
@@ -778,8 +784,14 @@
 
             //移动端头部下拉搜索start
             $(".xis").on("touchstart", function () {
-                $(".os-headertop .site-search").slideToggle(100);
-                $(this).find("i").toggleClass("fa-search fa-remove");
+                $(".os-headertop .site-search").toggle();
+                if ($(".os-headertop .site-search").is(":visible")) {
+                    $(this).find("i").addClass("icon-guanbi");
+                    $(this).find("i").removeClass("icon-sousuo");
+                } else {
+                    $(this).find("i").addClass("icon-sousuo");
+                    $(this).find("i").removeClass("icon-guanbi");
+                }
             });
             //移动端头部下拉搜索end
 
