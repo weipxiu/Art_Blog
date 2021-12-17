@@ -11,7 +11,7 @@ const babel = require('gulp-babel'); //引入ES6转ES5模块
 //const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
 const zip = require('gulp-zip');;//打包后压缩zip
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
-const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
+// const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
 const plumber = require('gulp-plumber'); //阻止报错暂停
 //const browserSync = require('browser-sync').create(); //热更新模块
 
@@ -48,7 +48,6 @@ Date.prototype.Format = function (fmt) { // author: meizz
 //每次打包往首页追加打包时间信息
 function writeFileToLine(ver, url) {
     let data = fs.readFileSync(url, 'utf8').split(/\r\n|\n|\r/gm); //readFileSync的第一个参数是文件名
-    console.log('\n' + data[4].replace(/Version:/g, '') + '\n')
     data[4] = `<meta name='generator' content='WordPress/Art_Blog v${new Date().Format("yyyy-MM-dd hh:mm:ss")}'>`;
     fs.writeFileSync(url, data.join('\n'))
 }
@@ -86,7 +85,7 @@ gulp.task('miniHtml', async () => {
             },
         }))
         .pipe(htmlmin({
-            collapseWhitespace: false, // 折叠html节点间的空白
+            collapseWhitespace: true, // 折叠html节点间的空白
             minifyCSS: true, // 压缩css
             minifyJS: true, // 压缩js
             removeComments: true, // 去除注释
