@@ -1405,7 +1405,6 @@
 		margin-bottom: 0.2rem;
 		text-indent: 2em;
 		list-style: none;
-		display:flex;
 	}
 
 	#details ul li span {
@@ -1417,6 +1416,11 @@
 	#details ul li a {
 		font-size: 0.32rem;
 	}
+
+	#details ul li.limit_w{
+		display:flex;
+	}
+
 	.continar-left .mod-breadcrumb {
 		font-size: 0.32rem;
 		padding: 0.2rem 0.3rem;
