@@ -50,15 +50,15 @@ Template Name: 关于博客-旧版
              <h4 class="h4">站长简介</h4>
              <div class="log-text">
                 <ul>
-                        <!-- <li class="photo limit_w">
+                        <!-- <li class="photo esp">
                             <a href="#" title="李俊">
                                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/IMG_0028.JPG" width="150" alt="<?php echo get_bloginfo('name'); ?>" title="李俊">
                             </a>
                         </li> -->
-                        <li class="limit_w"><span>姓名：Mr. li</span><span>名族：大汉</span></li>
-                        <li class="limit_w"><span>星座：金牛座</span><span>学历：大专</span></li>
-                        <li class="limit_w"><span>籍贯：湖北黄冈</span><span>专业：移动通信技术</span></li>
-                        <li class="limit_w"><span>职业：前端开发工程师</span><span>坐标：上海浦东新区</span></li>
+                        <li class="esp"><span>姓名：Mr. li</span><span>名族：大汉</span></li>
+                        <li class="esp"><span>星座：金牛座</span><span>学历：大专</span></li>
+                        <li class="esp"><span>籍贯：湖北黄冈</span><span>专业：移动通信技术</span></li>
+                        <li class="esp"><span>职业：前端开发工程师</span><span>坐标：上海浦东新区</span></li>
                         <li>
                             <span class="zym" style="color: rebeccapurple;width: 100%;">
                                 原创座右铭：人与人的智商的确是存在差异的，但这绝不应该成为你不愿意去努力拼搏的理由 —— 天生我材必有用！
