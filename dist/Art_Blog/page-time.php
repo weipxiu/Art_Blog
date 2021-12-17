@@ -24,7 +24,7 @@ a:hover{text-decoration: underline;}
 #messageList .box{ -webkit-transform-origin:left 30px; -webkit-transform:rotateY(90deg);-webkit-transform-style:preserve-3d; transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450);}
 #messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(<?php echo get_option('weipxiu_options')['time_portrait'] ?>) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
 #messageList .ico{ width:12px;height:12px;background:#f7ebe6;border:3px solid #fff;border-radius:50%;box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); position:absolute;left:-6px;top:23px;}
-#messageList .text{margin:0 30px;background:#f7ebe6;line-height:26px;padding:10px;  height:auto;text-indent:2em; border:0}
+#messageList .text{margin: 0 30px; background: #f7ebe6; line-height: 32px; padding: 10px 20px; height: auto;}
 #messageList .text a{color: #1890ff;color: var(--color);}
 #messageList .content{height: 38px;background: #fff; border-radius: 4px 4px 0 0;box-shadow: 0 6px 10px -6px rgba(0,0,0,0.1);
 padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:center;text-indent: 0;}
