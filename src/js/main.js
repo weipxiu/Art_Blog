@@ -3,6 +3,18 @@
  * 全局js
  */
 !(function () {
+    // 全局变量
+    let $xis = $(".xis"),
+        $header = $(".header"),
+        $os_herder = $(".os-herder"),
+        $aircraft = $(".aircraft"),
+        $roll_obj = $('.continar-right'),
+        $continar_left = $(".continar-left"),
+        $scrollTop = $(document).scrollTop(),
+        $mouseover_ul_li = $(".mouseover ul li"),
+        $nav_ul_li = $(".nav ul.music-nav > li"),
+        $os_headertop_site_search = $(".os-headertop .site-search"),
+        $continar_right_div_last = $(".continar-right > div:last-of-type");
     function App() { }
     App.prototype = {
         init: function () {
@@ -54,11 +66,11 @@
         inintMusicNav: function () {
             if (localStorage.getItem("off_y") != 1) {
                 localStorage.setItem("off_y", 0);
-                $(".nav ul.music-nav > li").removeClass("on");
+                $nav_ul_li.removeClass("on");
                 $(".mod-header_music-icon").removeClass('hover');
             } else {
                 localStorage.setItem("off_y", 1);
-                $(".nav ul.music-nav > li").addClass("on");
+                $nav_ul_li.addClass("on");
                 $(".mod-header_music-icon").addClass('hover');
             }
         },
@@ -106,9 +118,9 @@
                 if (node_list.eq(i).find('i').length > 0 || node_list.eq(i).find('ul').length > 0) {
                     node_list.eq(i).children('a').addClass('icon_show');
                 }
+                //追加音乐标签
+                node_list.eq(i).append(`<audio src='/wp-content/themes/Art_Blog/music/nav_${i + 1}.mp3' preload='preload'></audio><p></p>`);
             }
-            //追加音乐标签
-            node_list.append("<audio src='' autoplay='autoplay'></audio>" + "<p></p>");
             //二级菜单父级禁止跳转
             $("#nav_list .sub-menu").siblings('a').attr('href', 'javascript:void(0);');
             //追加icon
@@ -118,7 +130,7 @@
             $(".header .sub-menu").addClass('nav-min');
             $(".os-herder .sub-menu").addClass('slide_slect');
             //追加音乐开关
-            var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>" + "<audio src='' autoplay='autoplay'></audio>" + "</li>" + "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' autoplay='autoplay'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
+            var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>" + `<audio src='/wp-content/themes/Art_Blog/music/nav_${node_list.length + 1}.mp3' preload='preload'></audio><p></p>` + "</li>" + "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' preload='preload'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
             $(".header .music-nav").append(dom_node);
         },
         // 3D导航跳动音符
@@ -129,15 +141,15 @@
             var $index = null;
             var musicObj = null;
             var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
-            $('.header').hover(function () {
+            $header.hover(function () {
                 $(this).css("z-index", "12");
             }, function () {
                 //如果出现搜索的情况下，头部层级自然还是要比轮播高
                 if (!time2 && !$(".site-search").is(":visible")) {
                     //避免在正常时候下方轮播分割旋转时候被遮盖 
-                    $(".header").css("z-index", "10");
+                    $header.css("z-index", "10");
                 } else {
-                    $(".header").css("z-index", "12");
+                    $header.css("z-index", "12");
                 }
             })
 
@@ -146,15 +158,17 @@
                 clearTimeout(time2)
                 $(this).addClass('active');
                 queue.push($(this).index())
-                $(".header").css("z-index", "12");
+                $header.css("z-index", "12");
                 $index = $(this).index();
                 musicObj = musicList.eq($index).find('audio');
                 if (localStorage.getItem("off_y") == 1) {
                     $(this).addClass("active");
-                    musicObj.get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + parseInt($index + 1) + ".mp3";
+                    musicObj.get(0).play();
 
                 } else {
-                    musicObj.get(0).src = "";
+                    setTimeout(() => {
+                        musicObj.get(0).load();
+                    }, 500)
                 }
             })
             musicList.mouseleave(function () {
@@ -167,34 +181,38 @@
                 //避免在正常时候下方轮播分割旋转时候被遮盖 
                 time2 = setTimeout(() => {
                     if (!$(".site-search").is(":visible")) {
-                        $(".header").css("z-index", "10");
+                        $header.css("z-index", "10");
                     }
                 }, 1000)
             })
 
             function musicdown(number) {
                 if (number <= musicList.length) {
-                    musicList.eq(number - 1).find('audio').get(0).src = "/wp-content/themes/Art_Blog/music/nav_" + (number) + ".mp3";
-                    musicList.eq(number - 1).addClass("active")
-                    musicList.eq(number - 1).addClass("keyboard_color");
+                    musicList.eq(number - 1).addClass("active keyboard_color")
+                    musicList.eq(number - 1).find('audio').get(0).play();
                 }
             }
 
             // 键盘按下
+            //a65 s83 d68 f70 g71 h72 j74 k75 l76
+            var keyArr = [65, 83, 68, 70, 71, 72, 74, 75, 76]
             $(document).keydown(function (event) {
                 if (localStorage.getItem("off_y") != 1) return;
-                //a65 s83 d68 f70 g71 h72 j74 k75 l76
-                var keyArr = [65, 83, 68, 70, 71, 72, 74, 75, 76]
                 var _index = keyArr.indexOf(event.keyCode)
                 if (_index >= 0) {
                     musicdown(_index + 1)
                 }
             });
-            $(document).keyup(function () {
-                setTimeout(function () {
-                    musicList.removeClass("active")
-                    musicList.removeClass("keyboard_color")
-                }, 150);
+            $(document).keyup(function (event) {
+                var _index = keyArr.indexOf(event.keyCode)
+                if (_index >= 0) {
+                    setTimeout(() => {
+                        musicList.removeClass("active keyboard_color")
+                    }, 600);
+                    setTimeout(() => {
+                        musicList.eq(_index).find('audio').get(0).load();
+                    }, 450)
+                }
             });
             //钢琴导航end
 
@@ -203,8 +221,8 @@
                 //clearInterval(time); //清除鼠标离开li时候的定时器
                 if (localStorage.getItem("off_y") != 1) {
                     $(this).addClass("hover");
-                    $(".nav ul.music-nav > li").addClass("on");
-                    $(".nav ul.music-nav > li").removeClass("off");
+                    $nav_ul_li.addClass("on");
+                    $nav_ul_li.removeClass("off");
                     localStorage.setItem("off_y", 1);
                     layer.msg("菜单音乐已开启~", {
                         time: 2000 //2秒关闭（如果不配置，默认是3秒）
@@ -213,8 +231,8 @@
                     });
                 } else {
                     $(this).removeClass("hover");
-                    $('.nav ul.music-nav li').addClass('off');
-                    $('.nav ul.music-nav li').removeClass('on');
+                    $nav_ul_li.addClass('off');
+                    $nav_ul_li.removeClass('on');
                     localStorage.setItem("off_y", 0);
                     layer.msg('菜单音乐已关闭，期待您的下次体验！', {
                         time: 4000
@@ -253,14 +271,14 @@
             var searchShow = true;
             $(".navto-search a").click(function () {
                 if (searchShow) {
-                    $('.header').css('z-index', '11');
+                    $header.css('z-index', '11');
                 } else {
-                    $('.header').css('z-index', '10');
+                    $header.css('z-index', '10');
                 }
                 searchShow = !searchShow
                 $(".site-search.active.pc").toggle();
                 $(".site-search.active.pc").find('input').focus();
-                
+
                 if ($(".site-search.active.pc").is(":visible")) {
                     $(this).find("i").addClass("icon-guanbi");
                     $(this).find("i").removeClass("icon-sousuo");
@@ -270,7 +288,7 @@
                 }
             });
 
-            $(".header").addClass("Top");
+            $header.addClass("Top");
 
             // 初始化音乐导航菜单
             that.inintMusicNav();
@@ -402,7 +420,7 @@
         //纸飞机
         paperPlane: function () {
             var that = this;
-            $(".aircraft").click(function () {
+            $aircraft.click(function () {
                 $(this).animate({
                     "bottom": "0",
                     "opacity": "1"
@@ -412,13 +430,13 @@
                             $('body,html').animate({
                                 scrollTop: 0
                             }, 1200);
-                            $(".aircraft").animate({
+                            $aircraft.animate({
                                 "top": "0",
                                 "bottom": "auto",
                                 "opacity": "0"
                             }, 700, function () {
                                 setTimeout(function () {
-                                    $(".aircraft").css({
+                                    $aircraft.css({
                                         "bottom": "50px",
                                         "top": "auto",
                                         "opacity": "1"
@@ -430,9 +448,8 @@
             })
 
             //回到顶部
-            var scrollTop = $(document).scrollTop();
-            if (scrollTop > 500) {
-                $(".aircraft").css({
+            if ($scrollTop > 500) {
+                $aircraft.css({
                     "display": "block",
                     "opacity": "1"
                 })
@@ -441,44 +458,43 @@
             // 滚动页面设置
             var offset_left = null;
             function scroll_height() {
-                scrollTop = $(document).scrollTop();
-                if (scrollTop > 500) {
-                    $(".aircraft").css({
+                $scrollTop = $(document).scrollTop();
+                if ($scrollTop > 500) {
+                    $aircraft.css({
                         "display": "block",
                         "opacity": "1"
                     })
                 } else {
-                    $(".aircraft").css({
+                    $aircraft.css({
                         "display": "none",
                         "opacity": "0"
                     })
                 }
-                if (scrollTop <= 0) {
-                    $(".header").addClass("Top")
-                    $(".header").removeClass("hover")
+                if ($scrollTop <= 0) {
+                    $header.addClass("Top")
+                    $header.removeClass("hover")
                 } else {
-                    $(".header").removeClass("Top")
-                    $(".header").addClass("hover")
+                    $header.removeClass("Top")
+                    $header.addClass("hover")
                 }
                 // 右侧区域跟随
-                var roll_obj = $('.continar-right');
-                if ($(window).width() > 1200 && roll_obj.length) {
-                    offset_left = $('.continar-left').offset().left + $('.continar-left').outerWidth() + 10;
+                if ($(window).width() > 1200 && $roll_obj.length) {
+                    offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
                     if (
-                        (that.elementInView($(".continar-right > div:last-of-type")[0]) || (scrollTop > roll_obj.outerHeight()))
+                        (that.elementInView($continar_right_div_last[0]) || ($scrollTop > $roll_obj.outerHeight()))
                         && !(that.elementInView($(".footer")[0]))
                     ) {
-                        if (scrollTop > roll_obj.outerHeight() - $(window).height() + $(".continar-right > div:last-of-type").outerHeight() - 100 && ($('.continar-left').outerHeight() >= roll_obj.outerHeight())) {
-                            roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
+                        if ($scrollTop > $roll_obj.outerHeight() - $(window).height() + $continar_right_div_last.outerHeight() - 100 && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
+                            $roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
                         } else {
-                            roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
+                            $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
                         }
-                    } else if (that.elementInView($(".footer")[0]) && ($('.continar-left').outerHeight() >= roll_obj.outerHeight())) {
+                    } else if (that.elementInView($(".footer")[0]) && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
                         // 当出现底部时候，始终和左侧水平对齐
-                        var position_bot = $(window).height() - ($(".continar-left").outerHeight() + ($(".continar-left").offset().top - $(document).scrollTop())); // 获取".continar-left"相对于屏幕底部的距离
-                        roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
+                        var position_bot = $(window).height() - ($continar_left.outerHeight() + ($continar_left.offset().top - $(document).scrollTop())); // 获取".continar-left"相对于屏幕底部的距离
+                        $roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
                     } else {
-                        roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
+                        $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
                     }
                 }
             }
@@ -659,7 +675,7 @@
                     });
                 });
             };
-            $(".mouseover ul li a").qin({
+            $mouseover_ul_li.find('a').qin({
                 offset: 20, // default , 最大偏移量
                 duration: 500, // default , 晃动时间
                 recline: 0.1 // default , 每像素偏移量，越小“琴弦绷的越紧”
@@ -710,8 +726,8 @@
         },
         // 随机文章增加序列号
         randomArticles: function () {
-            for (var i = 0; i <= $(".mouseover ul li").length; i++) {
-                $(".mouseover ul li").eq(i).find("em").html(i + 1)
+            for (var i = 0; i <= $mouseover_ul_li.length; i++) {
+                $mouseover_ul_li.eq(i).find("em").html(i + 1)
             }
         },
         // 文章详情页底部评论区域样式兼容
@@ -731,10 +747,10 @@
             $(".btn_menu,.cover").on("touchstart", myFunction);
 
             function myFunction() {
-                $(".os-herder").css("transition", "all 0.25s")
+                $os_herder.css("transition", "all 0.25s")
                 $(".cover").toggle();
                 if (obtn) {
-                    $(".os-herder").css({
+                    $os_herder.css({
                         "transform": "translateX(0)"
                     })
                     $(".continar,.os-headertop").css({
@@ -742,7 +758,7 @@
                     })
                     $(".weipxiu_nav").attr('href', 'javascript:void(0);')
                 } else {
-                    $(".os-herder").css({
+                    $os_herder.css({
                         "transform": "translateX(-3.21rem)"
                     })
                     $(".continar,.os-headertop").css({
@@ -754,9 +770,9 @@
                 }
                 obtn = !obtn
                 if ($(".site-search").is(":visible")) {
-                    $(".os-headertop .site-search").slideToggle(100);
-                    $(".xis").find("i").addClass("icon-sousuo");
-                    $(".xis").find("i").removeClass("icon-guanbi");
+                    $os_headertop_site_search.slideToggle(100);
+                    $xis.find("i").addClass("icon-sousuo");
+                    $xis.find("i").removeClass("icon-guanbi");
                 }
             }
 
@@ -783,9 +799,9 @@
             //禁止ios11自带浏览器缩放功能end
 
             //移动端头部下拉搜索start
-            $(".xis").on("touchstart", function () {
-                $(".os-headertop .site-search").toggle();
-                if ($(".os-headertop .site-search").is(":visible")) {
+            $xis.on("touchstart", function () {
+                $os_headertop_site_search.toggle();
+                if ($os_headertop_site_search.is(":visible")) {
                     $(this).find("i").addClass("icon-guanbi");
                     $(this).find("i").removeClass("icon-sousuo");
                 } else {
@@ -796,7 +812,7 @@
             //移动端头部下拉搜索end
 
             // 移动端二级菜单导航start
-            $(".os-herder").on("touchstart", 'ul.slide-left li:has(.slide_slect) > a', function (event) {
+            $os_herder.on("touchstart", 'ul.slide-left li:has(.slide_slect) > a', function (event) {
                 $(this).parent().siblings('li').find('.slide_slect').slideUp();
                 $(this).parent().siblings('li').find('.iconfont_click').removeClass('icon-shangjiantou').addClass('icon-xiajiantou');
 
@@ -817,13 +833,13 @@
 
             // 二级菜单下拉列表个数兼容无限
             var time = 50;
-            $(".nav ul.music-nav li .sub-menu").each(function (i) {
+            $nav_ul_li.find('.sub-menu').each(function (i) {
                 $(this).find('li').each(function (i) {
                     $(this).css("transition-delay", i * time + 'ms')
                 })
             })
 
-            $(".nav ul.music-nav li").hover(function () {
+            $nav_ul_li.hover(function () {
                 var that = $(this);
                 $(this).find('.sub-menu li').each(function (i) {
                     $(this).css("transition-delay", (that.find('.sub-menu li').length * time - i * time) + 'ms')

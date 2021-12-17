@@ -1630,15 +1630,17 @@
 	#details ul li {
 		width: 100%;
 		float: left;
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.1rem;
 		text-indent: 2em;
 		list-style: none;
+		display:flex;
 	}
 
 	#details ul li span {
 		display: block;
 		font-size: 0.28rem;
 		line-height: 0.6rem;
+		flex:1;
 	}
 
 	#details ul li {
