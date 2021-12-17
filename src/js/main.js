@@ -755,8 +755,8 @@
                 obtn = !obtn
                 if ($(".site-search").is(":visible")) {
                     $(".os-headertop .site-search").slideToggle(100);
-                    $(".xis").find("i").addClass("icon-guanbi");
-                    $(".xis").find("i").removeClass("icon-sousuo");
+                    $(".xis").find("i").addClass("icon-sousuo");
+                    $(".xis").find("i").removeClass("icon-guanbi");
                 }
             }
 
