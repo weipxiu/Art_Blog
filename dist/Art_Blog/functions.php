@@ -1,4 +1,6 @@
 <?php
+//设置服务器时区
+date_default_timezone_set('PRC'); // PRC:中国标准北京时间
 // 引入模板主题设置文件
 if (is_admin()) get_template_part('include/wp-theme-options');
 
