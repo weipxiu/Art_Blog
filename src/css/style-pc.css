@@ -1441,7 +1441,7 @@
     background: #fff;
   }
 
-  .continar #continar-left-top {
+  .continar .continar-left-top {
     width: 100%;
     padding: 15px 20px;
     overflow: hidden;
@@ -1453,11 +1453,11 @@
     border-bottom: 0;
   }
 
-  .continar #continar-left-top:empty {
+  .continar .continar-left-top:empty {
     display: none;
   }
 
-  .continar #continar-left-top h1 {
+  .continar .continar-left-top h1 {
     font-size: 18px;
     line-height: 24px;
     margin-top: 0;
@@ -1475,25 +1475,25 @@
       );
   }
 
-  .continar #continar-left-top h1 a {
+  .continar .continar-left-top h1 a {
     font-size: 18px;
     color: #1890ff;
     color: var(--color);
   }
 
-  .continar #continar-left-top h1 a:hover {
+  .continar .continar-left-top h1 a:hover {
     color: #1890ff;
     color: var(--color);
   }
 
-  .continar #continar-left-top h1 a img {
+  .continar .continar-left-top h1 a img {
     max-width: 100%;
     height: auto;
     vertical-align: baseline;
     border: 0;
   }
 
-  .continar #continar-left-top h1 span {
+  .continar .continar-left-top h1 span {
     margin-left: -8px;
     color: #1890ff;
     color: var(--color);
@@ -1503,7 +1503,7 @@
     font-size: 20px;
   }
 
-  .continar #continar-left-top p {
+  .continar .continar-left-top p {
     color: #666;
     line-height: 25px;
     margin: 0;
@@ -1517,7 +1517,7 @@
     width: 100%;
   }
 
-  .continar #continar-left-top > span {
+  .continar .continar-left-top > span {
     display: block;
     text-indent: 2em;
     height: 50px;

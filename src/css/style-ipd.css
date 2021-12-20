@@ -616,7 +616,7 @@
 	.continar #continar-left .mod-crumbs {
 		display: none;
 	}
-	.continar #continar-left-top {
+	.continar .continar-left-top {
 		width: 100%;
 		border: 1px solid #eaeaea;
 		padding: 0.2rem 0.26rem;
@@ -626,7 +626,7 @@
 		border-radius: 4px;
 		transition: all 0.35s;
 	}
-	.continar #continar-left-top h1 {
+	.continar .continar-left-top h1 {
 		font-size: 18px;
 		line-height: 24px;
 		font-weight: bold;
@@ -634,28 +634,28 @@
 		transition: all 0.35s;
 		display: none;
 	}
-	.continar #continar-left-top > span {
+	.continar .continar-left-top > span {
 		display: none;
 	}
-	.continar #continar-left-top h1:nth-child(1),
-	.continar #continar-left-top h1:nth-child(2) {
+	.continar .continar-left-top h1:nth-child(1),
+	.continar .continar-left-top h1:nth-child(2) {
 		display: block;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
-	.continar #continar-left-top h1 a {
+	.continar .continar-left-top h1 a {
 		font-size: 0.32rem;
 		font-weight: normal;
 	}
-	.continar #continar-left-top h1 span {
+	.continar .continar-left-top h1 span {
 		margin-left: -8px;
 		color: #1890ff;
 		color: var(--color);
 		transition: all 0.25s;
 		font-size: 0.32rem;
 	}
-	.continar #continar-left-top p {
+	.continar .continar-left-top p {
 		color: #666;
 		line-height: 25px;
 		margin: 0;
@@ -670,7 +670,7 @@
 		overflow: hidden;
 		width: 100%;
 	}
-	.continar #continar-left-top > span {
+	.continar .continar-left-top > span {
 		display: block;
 		text-indent: 2em;
 		height: 0.82rem;
@@ -685,7 +685,7 @@
 		overflow: hidden;
 		display: none;
 	}
-	.continar #continar-left-top > span:nth-of-type(1) {
+	.continar .continar-left-top > span:nth-of-type(1) {
 		display: block;
 	}
 
