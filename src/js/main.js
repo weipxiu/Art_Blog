@@ -4,17 +4,16 @@
  */
 !(function () {
     // 全局变量
-    let $xis = $(".xis"),
-        $header = $(".header"),
-        $os_herder = $(".os-herder"),
-        $aircraft = $(".aircraft"),
-        $roll_obj = $('.continar-right'),
-        $continar_left = $(".continar-left"),
+    let $xis = $("#m_search"),
+        $header = $("#header"),
+        $os_herder = $("#os-herder"),
+        $aircraft = $("#aircraft"),
+        $roll_obj = $('#continar-right'),
         $scrollTop = $(document).scrollTop(),
-        $mouseover_ul_li = $(".mouseover ul li"),
+        $continar_left = $("#continar-left"),
+        $mouseover_ul_li = $("#mouseover ul li"),
         $nav_ul_li = $(".nav ul.music-nav > li"),
-        $os_headertop_site_search = $(".os-headertop .site-search"),
-        $continar_right_div_last = $(".continar-right > div:last-of-type");
+        $os_headertop_site_search = $(".os-headertop .site-search");
     function App() { }
     App.prototype = {
         init: function () {
@@ -91,7 +90,7 @@
         informationLazy_load: function () {
             var that = this;
             function lazy_load() {
-                var imgList = document.querySelectorAll(".continar-left .text .Lazy_load");
+                var imgList = document.querySelectorAll("#continar-left .text .Lazy_load");
                 for (var i = 0; i < imgList.length; i++) {
                     if (that.elementInView(imgList[i]) && imgList[i].getAttribute('data-original')) {
                         imgList[i].setAttribute('src', imgList[i].getAttribute('data-original'));
@@ -106,7 +105,7 @@
         },
         // 头部3D导航DOM改造
         navReform: function () {
-            var node_list = $(".header .music-nav").children('li');
+            var node_list = $("#header .music-nav").children('li');
             for (var i = 0; i < node_list.length; i++) {
                 var text = node_list.eq(i).children('a').html();
                 node_list.eq(i).children('a').text('').append("<span>" + text + "</span>" + "<span>" + text + "</span>");
@@ -125,13 +124,13 @@
             $("#nav_list .sub-menu").siblings('a').attr('href', 'javascript:void(0);');
             //追加icon
             $("#nav_list .sub-menu").siblings('a').find('span').append("<i class='iconfont icon-jiantou menu_arrow'></i>");
-            $(".os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
+            $("#os-herder .sub-menu").siblings('a').append("<i class='iconfont iconfont_click icon-xiajiantou'></i>");
             //追加二级菜单父级class
-            $(".header .sub-menu").addClass('nav-min');
-            $(".os-herder .sub-menu").addClass('slide_slect');
+            $("#header .sub-menu").addClass('nav-min');
+            $("#os-herder .sub-menu").addClass('slide_slect');
             //追加音乐开关
             var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>" + `<audio src='/wp-content/themes/Art_Blog/music/nav_${node_list.length + 1}.mp3' preload='preload'></audio><p></p>` + "</li>" + "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' preload='preload'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
-            $(".header .music-nav").append(dom_node);
+            $("#header .music-nav").append(dom_node);
         },
         // 3D导航跳动音符
         navPianoEffect: function () {
@@ -297,7 +296,7 @@
         },
         //文章分类没有资源时候404提示
         isNotResources: function () {
-            if ($(".continar-left .article_not").length > 0) {
+            if ($("#continar-left .article_not").length > 0) {
                 $("body").css({ "background": "#fff" });
             }
         },
@@ -481,17 +480,17 @@
                 if ($(window).width() > 1200 && $roll_obj.length) {
                     offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
                     if (
-                        (that.elementInView($continar_right_div_last[0]) || ($scrollTop > $roll_obj.outerHeight()))
+                        (that.elementInView($("#continar-right > div:last-of-type")[0]) || ($scrollTop > $roll_obj.outerHeight()))
                         && !(that.elementInView($(".footer")[0]))
                     ) {
-                        if ($scrollTop > $roll_obj.outerHeight() - $(window).height() + $continar_right_div_last.outerHeight() - 100 && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
+                        if ($scrollTop > $roll_obj.outerHeight() - $(window).height() + $("#continar-right > div:last-of-type").outerHeight() - 100 && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
                             $roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
                         } else {
                             $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
                         }
                     } else if (that.elementInView($(".footer")[0]) && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
                         // 当出现底部时候，始终和左侧水平对齐
-                        var position_bot = $(window).height() - ($continar_left.outerHeight() + ($continar_left.offset().top - $(document).scrollTop())); // 获取".continar-left"相对于屏幕底部的距离
+                        var position_bot = $(window).height() - ($continar_left.outerHeight() + ($continar_left.offset().top - $(document).scrollTop())); // 获取"#continar-left"相对于屏幕底部的距离
                         $roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
                     } else {
                         $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
@@ -777,7 +776,7 @@
             }
 
             //移动端禁止侧边导航上下滚动start
-            $(".os-herder,.site-search").on("touchmove", function (event) {
+            $("#os-herder,.site-search").on("touchmove", function (event) {
                 event.preventDefault();
             });
             //移动端禁止侧边导航上下滚动end
@@ -852,7 +851,7 @@
 
 
             //文章分类没有资源时候404提示
-            if ($(".continar-left .article_not").length > 0) {
+            if ($("#continar-left .article_not").length > 0) {
                 $("body > .continar").css({ "height": "calc(100% - 280px)" });
             }
 

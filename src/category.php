@@ -17,7 +17,7 @@
 	<!-- 正文区域start -->
 	<div class="continar">
 		<img class="search_404" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/search_404.png" alt="">
-		<div class="continar-left" id="ajax_centent" style="border:0; padding:0; background: transparent;">
+		<div id="continar-left" style="border:0; padding:0; background: transparent;">
 			<!-- 文章start -->
 			<?php
 				if(have_posts()): while(have_posts()):the_post();
@@ -93,7 +93,7 @@
 
 		<!-- 右侧区域start -->
 		<?php if(have_posts()):?>
-			<div class="continar-right">
+			<div id="continar-right">
 				<?php get_sidebar( $name ); ?>
 			</div>
 		<?php endif; ?>

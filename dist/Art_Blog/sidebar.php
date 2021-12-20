@@ -74,7 +74,7 @@
 <!-- 最近更新文章end -->
 
 <!-- 随机文章start -->
-<div class="widget mouseover">
+<div class="widget" id="mouseover">
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-suiji-copy"></i>随机文章</a></h3>
         <ul>

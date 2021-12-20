@@ -7,7 +7,7 @@ $(function () {
     // 第七行 ajaxloading_error_code 加载失败时显示的内容，可以设定动画
     var domain_name = window.location.protocol+"//"+window.location.host;
     var ajaxhome = domain_name+'/';
-    var ajaxcontent = 'ajax_centent';
+    var ajaxcontent = 'continar-left';
     var ajaxsearch_class = 'searchform';
     var ajaxignore_string = new String('/page/');
     var ajaxignore = ajaxignore_string.split(', ');

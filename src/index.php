@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2021-12-20 10:48:31'>
+<meta name='generator' content='WordPress/Art_Blog v2021-12-20 18:25:46'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -66,7 +66,7 @@
 			?>
 			<!--移动端轮播end-->
 
-		<div class="continar-left" id="ajax_centent">
+		<div id="continar-left">
 			<!-- PC正文3d导航start -->
 			<div class="mod-index__feature">
 				<div class="img_list_6pic ui-clearfix">
@@ -251,7 +251,7 @@
 		<!-- 左侧区域end -->
 
 		<!-- 右侧区域start -->
-		<section class="continar-right">
+		<section id="continar-right">
 			<?php get_sidebar($name); ?>
 		</section>
 		<!-- 右侧区域end -->
@@ -345,7 +345,7 @@ $(function () {
 			} else {
 					//排除PC端执行下列代码
 					//移动端只在首页展示sidebar.php模块
-					$(".continar-right").show();
+					$("#continar-right").show();
 
 					//swiper核心三要素：依赖swiper.js、swiper.css，外面父亲盒子高度
 					var swiper1 = new Swiper('.swiper-container1', {
