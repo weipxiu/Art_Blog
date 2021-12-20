@@ -3,7 +3,7 @@
 <div class="os-headertop">
 		<div class="btn_menu"><i class="iconfont icon-caidanlan"></i></div>
 		<a href="<?php echo esc_url( home_url() ); ?>" class="weipxiu_nav"><?php echo get_bloginfo('description'); ?></a>
-		<div class="xis">
+		<div id="m_search">
 			<i class="iconfont icon-sousuo"></i>
 		</div>
 		<div class="site-search active">
@@ -19,7 +19,7 @@
 </div>
 <!--移动端头部end-->
 
-<header class="header">
+<header id="header">
 	<div class="speed_bar"></div>
 	<div class="header-body">
 		<div class="header-conter">
@@ -75,7 +75,7 @@
 <!-- 头部end -->
 
 <!-- 移动端侧边栏导航start -->
-<div class="os-herder">
+<div id="os-herder">
 	<?php
 		// 列出顶部导航菜单，只列出一级菜单
 		wp_nav_menu( array(

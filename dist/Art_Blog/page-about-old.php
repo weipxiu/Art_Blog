@@ -15,8 +15,8 @@ Template Name: 关于博客-旧版
 	<!--头部文件引用end-->
 
     <!-- 正文区域start -->
-    <div class="continar">
-         <div class="continar-left" id="details">
+    <div class="continar" id="details">
+         <div id="continar-left">
              <!-- 用户中心头部start -->
              <div class="head_user_b">
                    <div class="head_user">

@@ -16,7 +16,7 @@ Template Name: 给我留言
 
     <!-- 正文区域start -->
     <div class="continar" id="leaving_message">
-         <div class="continar-left" id="details">
+         <div id="continar-left">
               <div class="leaving_message">
                 <h1>留言板</h1>
 

@@ -49,7 +49,7 @@
     <!-- 正文区域start -->
     <div class="continar">
         <img class="search_404" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/search_404.png" alt="">
-        <div class="continar-left" id="ajax_centent">
+        <div id="continar-left">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
                 <?php wheatv_breadcrumbs(); ?>

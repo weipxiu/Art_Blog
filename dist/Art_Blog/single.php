@@ -25,7 +25,7 @@
             <?php
 		  if (have_posts()) : while (have_posts()) : the_post();setPostViews(get_the_ID());
 		 ?>
-                <div class="continar-left single" id="ajax_centent">
+                <div class="single" id="continar-left">
                     <!-- 面包屑导航 -->
                     <div class="mod-crumbs">
                         <span class="mod-breadcrumb">
@@ -162,7 +162,7 @@
                 <!-- 左侧区域end -->
 
                 <!-- 右侧区域start -->
-                <div class="continar-right">
+                <div id="continar-right">
                     <?php get_sidebar( $name ); ?>
                 </div>
                 <!-- 右侧区域end -->

@@ -15,14 +15,14 @@
     <?php get_template_part('common'); ?>
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/codecolorer.css">
     <style>
-        .continar-left {
+        #continar-left {
             border-radius: 5px;
             background: #fff;
             padding: 15px;
             border: 1px solid #e6e6e6;
         }
         @media screen and (min-width:980px) {
-            .continar-left {
+            #continar-left {
                 margin-top: 50px;
             }
         }

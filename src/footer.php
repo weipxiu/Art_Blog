@@ -1,5 +1,5 @@
 <!-- 小飞机start -->
-<div class="aircraft">
+<div id="aircraft">
   <font class="iconfont icon-huojian-copy"></font>
 </div>
 <!-- 小飞机end -->
