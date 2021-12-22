@@ -666,7 +666,7 @@
     float: left\9;
   }
 
-  header.hover .brand {
+  #header.hover .brand {
     margin: 7px 0 0 150px;
   }
 
@@ -716,16 +716,11 @@
   .nav ul li.active .sub-menu li {
     pointer-events: auto;
   }
-  header.hover .nav ul .sub-menu li {
+  #header.hover .nav ul .sub-menu li {
     padding: 0;
   }
   .nav ul .sub-menu li:last-of-type a {
     border: 0;
-  }
-
-  .nav ul .sub-menu li a {
-    height: 40px;
-    line-height: 40px;
   }
 
   .nav ul.music-nav {
@@ -749,7 +744,7 @@
     padding: 15px 0px;
   }
 
-  header.hover .nav ul li {
+  #header.hover .nav ul li {
     padding: 7px 0;
   }
 
@@ -981,10 +976,10 @@
     cursor: pointer;
   }
 
-  header.hover .mod-header_music-icon {
+  #header.hover .mod-header_music-icon {
     top: 7px;
   }
-  header.hover .navto-search {
+  #header.hover .navto-search {
     top: 12px;
   }
   .mod-header_music-icon i:nth-of-type(1) {
@@ -1102,7 +1097,8 @@
   }
 
   #header .nav-min a {
-    line-height: 32px;
+    height: 40px;
+    line-height: 40px;
     display: block;
     text-align: center;
     font-size: 13px;
@@ -1351,7 +1347,7 @@
     -o-transition: all 0.25s;
     transition: all 0.25s;
   }
-  header.hover #Logo > img {
+  #header.hover #Logo > img {
     margin-top: 0;
   }
   @-webkit-keyframes searchLights {
@@ -2309,7 +2305,7 @@
 
   .footer {
     position: relative;
-    z-index: 100;
+    z-index: 10;
     clear: both;
     padding: 20px 0;
     font-size: 12px;
@@ -2317,7 +2313,6 @@
     text-align: center;
     width: 100%;
     background: url(../images/footer_bg.jpg) center center repeat-x;
-    position: relative;
   }
 
   .footer a {

@@ -127,5 +127,4 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 | [北漂程序员](https://blog.zoux.xin/) | https://blog.zoux.xin
 | [小初博客](http://youerdianxian.com/) | http://youerdianxian.com
 | [智慧博客网](https://www.llg.design) | www.llg.design
-| [开源NetCore](http://www.netcore.pub) | http://netcore.pub
 | [青幽](http://moxiaofei.com) | http://moxiaofei.com |
