@@ -775,9 +775,6 @@
     transition: transform 0.5s;
     z-index: 2;
   }
-  .nav ul li > a.icon_show {
-    padding-right: 5px;
-  }
   .nav ul li audio {
     display: none;
   }
