@@ -883,17 +883,13 @@
 
   .nav ul li.action > a span,
   #nav_list li.current-category-ancestor > a span,
+  #nav_list ul li.current-category-ancestor .iconfont,
   #nav_list li.current-menu-ancestorm > a span,
-  header li.current-menu-parent > a span,
+  #header li.current-menu-parent > a span,
   #nav_list li.current-menu-parent > a span i,
   #nav_list li.current-category-parentt > a span,
-  #nav_list li.current-menu-item a {
-    color: #1890ff;
-    color: var(--color);
-  }
-
-  .nav ul li.action i,
-  .nav ul li.current-category-ancestor i {
+  #nav_list li.current-menu-item a,
+  #nav_list li.current-menu-item a .iconfont {
     color: #1890ff;
     color: var(--color);
   }

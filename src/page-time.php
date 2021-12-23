@@ -14,7 +14,7 @@ html{height:auto;}
 body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
 a:hover{text-decoration: underline;}
 #message{width:1200px;margin:80px auto 45px;overflow:hidden;padding:0 50px;}
-#header{ height:48px;background:#fff; border-radius:5px; line-height:48px; font-size:16px; font-weight:bold; text-align:center; box-shadow:0 5px 7px rgba(0,0,0,0.2); color:#ed145b;}
+#header{ background:#fff; border-radius:5px; line-height:48px; font-size:16px; font-weight:bold; text-align:center; box-shadow:0 5px 7px rgba(0,0,0,0.2); color:#ed145b;}
 #footer{ height:30px; border-radius:5px; line-height:30px; text-align:center; position:relative;z-index:10; margin-top:40px}
 #footer a,#footer p{ display:inline-block;}
 #footer a{ text-decoration:none;background:#d5ccc8;line-height:22px;padding:0 10px; color:#555; border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.5);margin:0 5px; opacity:0; transition:.5s;}
