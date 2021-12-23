@@ -652,14 +652,11 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
-    display: flex;
-    /* justify-content: space-around; */
-    justify-content: space-between;
   }
 
   .brand {
     float: left;
-    margin: 15px 0 0 150px;
+    margin: 15px 0 0 15px;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
@@ -667,7 +664,7 @@
   }
 
   #header.hover .brand {
-    margin: 7px 0 0 150px;
+    margin-top: 7px;
   }
 
   .brand::before {
@@ -691,11 +688,6 @@
 
   .brand p:hover {
     color: #666;
-  }
-
-  .nav ul {
-    float: right;
-    height: 100%;
   }
 
   .nav ul .sub-menu {
@@ -725,6 +717,7 @@
 
   .nav ul.music-nav {
     margin-right: 70px;
+    float: right;
   }
 
   .nav ul.music-nav > li > a {
@@ -921,9 +914,6 @@
     transform: rotateX(180deg);
     -ms-transform: rotateX(180deg);
     transform: rotateX(180deg);
-  }
-  .nav {
-    position: relative;
   }
 
   .nav .nav-min {
@@ -1321,28 +1311,24 @@
   }
 
   #Logo {
+    float: left;
     width: 135px;
     height: 60px;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -0;
     overflow: hidden;
+    display:flex;
+    align-items:center;/*垂直居中*/
   }
 
   #Logo > img {
     width: 100%;
-    margin-top: 7px;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
   }
-  #header.hover #Logo > img {
-    margin-top: 0;
-  }
+
   @-webkit-keyframes searchLights {
     0% {
       left: -100px;
