@@ -1313,7 +1313,7 @@
   #Logo {
     float: left;
     width: 135px;
-    height: 60px;
+    height: 100%;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -4952,8 +4952,8 @@
   /*用户中心start*/
 
   .head_user_b {
-    width: 100%;
-    margin: 0 auto;
+    width: calc(100% + 60px);
+    margin: 0 0 0 -30px;
     background: url('../images/about_page.jpg') no-repeat center center;
     background-size: 100% 100%;
   }
@@ -5102,7 +5102,7 @@
     z-index: 1;
     background: #fff;
     margin-top: -29px;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 12px;
     border-radius: 0 10px 0px 0;
   }
 
@@ -5797,6 +5797,34 @@
     color: var(--color);
   }
   /* 留言板寄语end */
+
+  /* page单页start */
+  .single_page{
+    background: #fff;
+    padding: 15px 30px;
+  }
+  .single_page h1 {
+    text-align: center;
+    color: #666;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #f0f2f7;
+    padding: 20px 0 15px;
+    margin-bottom: 20px;
+  }
+  .single_page p,.single_page ul li {
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 30px;
+    margin: 5px 0;
+  }
+
+  .single_page p a {
+    font-size: 14px;
+    color: #1890ff;
+    color: var(--color);
+  }
+  /* page单页end */
 
   /*comments留言评论框*/
   .comment {

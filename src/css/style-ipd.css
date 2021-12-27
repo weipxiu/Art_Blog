@@ -3105,6 +3105,35 @@
 	}
 	/* 留言板寄语end */
 
+  /* page单页start */
+  .single_page {
+    background: #fff;
+    padding: 0.2rem 0.25rem;
+		margin-bottom: 0.25rem;
+	}
+ .single_page h1 {
+		text-align: center;
+		color: #666;
+		font-size: 0.36rem;
+		font-weight: normal;
+		border-bottom: 1px solid #f0f2f7;
+		padding: 0.3rem 0;
+		margin-bottom: 0.3rem;
+	}
+ .single_page p,.single_page ul li {
+		font-size: 0.28rem;
+		text-indent: 2em;
+		line-height: 0.52rem;
+		margin: 0.15rem 0;
+	}
+
+ .single_page p a {
+		font-size: 0.28rem;
+		color: #1890ff;
+		color: var(--color);
+	}
+  /* page单页end */
+
 	/* 文章评论框start */
 	.post_content h3.comments-title {
 		text-align: center;
