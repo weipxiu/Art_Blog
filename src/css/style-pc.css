@@ -1,5 +1,36 @@
 ﻿@media screen and (min-width: 1200px) {
-  * {
+  body,
+  p,
+  ul,
+  ol,
+  li,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  em,
+  a,
+  strong,
+  form,
+  button,
+  input,
+  select,
+  textarea,
+  table,
+  td,
+  img,
+  div,
+  font,
+  i,
+  sup,
+  table,
+  header,
+  footer,
+  article,
+  section {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1318,8 +1349,8 @@
     -o-transition: 0.5s;
     transition: 0.5s;
     overflow: hidden;
-    display:flex;
-    align-items:center;/*垂直居中*/
+    display: flex;
+    align-items: center; /*垂直居中*/
   }
 
   #Logo > img {
@@ -1921,6 +1952,14 @@
     background: var(--color);
   }
 
+  #continar-right .aside .textwidget a {
+    font: inherit;
+  }
+
+  #continar-right .aside .textwidget a svg{
+    vertical-align: text-bottom;
+  }
+  
   #continar-right p.clearfix {
     margin: 10px 0 0;
     line-height: 24px;
@@ -2205,7 +2244,6 @@
     transition: all 0.35s;
     border-bottom: 0;
   }
-
   .items {
     overflow: hidden;
     padding: 5px 15px 12px 15px;
@@ -2521,14 +2559,14 @@
     text-indent: 2em;
   }
 
-  #details ul li span{
-    flex:1;
+  #details ul li span {
+    flex: 1;
     padding: 5px 0;
   }
 
-  #details ul li.esp{
-		display:flex;
-	}
+  #details ul li.esp {
+    display: flex;
+  }
 
   .clearfix:after {
     visibility: hidden;
@@ -2710,7 +2748,8 @@
     margin-bottom: 20px;
   }
 
-  #details #continar-left, #leaving_message #continar-left{
+  #details #continar-left,
+  #leaving_message #continar-left {
     border-radius: 4px;
     background: #fff;
     width: auto !important;
@@ -5799,7 +5838,7 @@
   /* 留言板寄语end */
 
   /* page单页start */
-  .single_page{
+  .single_page {
     background: #fff;
     padding: 15px 30px;
   }
@@ -5812,7 +5851,8 @@
     padding: 20px 0 15px;
     margin-bottom: 20px;
   }
-  .single_page p,.single_page ul li {
+  .single_page p,
+  .single_page ul li {
     font-size: 14px;
     text-indent: 2em;
     line-height: 30px;
