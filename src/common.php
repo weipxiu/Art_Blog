@@ -52,6 +52,7 @@ if (get_option('weipxiu_options')['baidu_statistics']) {
 	var _hmt = _hmt || [];
 	(function() {
 		var hm = document.createElement("script");
+    hm.setAttribute("rel","preconnect")
 		hm.src = "https://hm.baidu.com/hm.js?704cfdd415da41b2e884bbb16a5dd3f3";
 		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(hm, s);

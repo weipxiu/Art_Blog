@@ -13,6 +13,7 @@
   h6,
   em,
   a,
+  span,
   strong,
   form,
   button,
@@ -1959,7 +1960,7 @@
   #continar-right .aside .textwidget a svg{
     vertical-align: text-bottom;
   }
-  
+
   #continar-right p.clearfix {
     margin: 10px 0 0;
     line-height: 24px;

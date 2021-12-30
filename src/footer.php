@@ -123,7 +123,39 @@
 <div class="footer-banner__navi">
 </div>
 
-<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/video/video.min.js"></script>
+<!-- <script type="text/javascript" src="/js/video/video.min.js"></script> -->
+<script type="text/javascript" >
+  if (window.screen.width > 1200 && $("#my-video").length) {
+    var promise1 = new Promise(function(resolve, reject) {
+      var create_element = document.createElement("script");
+      create_element.src = "<?php echo esc_url(get_template_directory_uri()); ?>/js/video/video.min.js";
+      document.body.appendChild(create_element);
+      setTimeout(() => {
+        resolve(true);
+      }, 2000);
+    });
+    Promise.all([promise1]).then(() => {
+      var myPlayer = videojs('my-video'); // 初始化视频
+      //播放失败时候处理
+      var errVideo = document.getElementById('my-video_html5_api');
+      errVideo.onerror = function () {
+          layer.alert('通常是由于视频地址错误或未添加视频封面图引起，请检查！', {
+              skin: 'layui',
+              title: "视频初始化失败",
+              closeBtn: 0,
+              anim: 4 //动画类型
+          })
+      };
+      //当视频播放完成后，重新加载渲染，随时准备第二次重播
+      // myPlayer.on("ended", function () {
+      //     myPlayer.play();
+      //     setTimeout(function () {
+      //         myPlayer.pause();
+      //     }, 500);
+      // });
+    });
+  }
+</script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/main_min.js"></script>
 
 <!-- 调用wordpress核心函数 -->
