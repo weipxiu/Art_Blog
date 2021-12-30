@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2021-12-23 11:04:22'>
+<meta name='generator' content='WordPress/Art_Blog v2021-12-30 13:00:58'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -285,6 +285,13 @@
 </body>
 
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.min.js"></script>
+<script>
+  if (window.screen.width < 1200) {
+      var create_element = document.createElement("script");
+      create_element.src = "<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.min.js";
+      document.body.appendChild(create_element);
+  }
+</script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/xfg_banner/banner-effect.js"></script>
 <script type="text/javascript">
 $(function () {

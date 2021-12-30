@@ -1,5 +1,37 @@
 ﻿@media screen and (min-width: 1200px) {
-  * {
+  body,
+  p,
+  ul,
+  ol,
+  li,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  em,
+  a,
+  span,
+  strong,
+  form,
+  button,
+  input,
+  select,
+  textarea,
+  table,
+  td,
+  img,
+  div,
+  font,
+  i,
+  sup,
+  table,
+  header,
+  footer,
+  article,
+  section {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -652,14 +684,11 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
-    display: flex;
-    /* justify-content: space-around; */
-    justify-content: space-between;
   }
 
   .brand {
     float: left;
-    margin: 15px 0 0 150px;
+    margin: 15px 0 0 15px;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
@@ -667,7 +696,7 @@
   }
 
   #header.hover .brand {
-    margin: 7px 0 0 150px;
+    margin-top: 7px;
   }
 
   .brand::before {
@@ -691,11 +720,6 @@
 
   .brand p:hover {
     color: #666;
-  }
-
-  .nav ul {
-    float: right;
-    height: 100%;
   }
 
   .nav ul .sub-menu {
@@ -725,6 +749,7 @@
 
   .nav ul.music-nav {
     margin-right: 70px;
+    float: right;
   }
 
   .nav ul.music-nav > li > a {
@@ -921,9 +946,6 @@
     transform: rotateX(180deg);
     -ms-transform: rotateX(180deg);
     transform: rotateX(180deg);
-  }
-  .nav {
-    position: relative;
   }
 
   .nav .nav-min {
@@ -1321,28 +1343,24 @@
   }
 
   #Logo {
+    float: left;
     width: 135px;
-    height: 60px;
+    height: 100%;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -0;
     overflow: hidden;
+    display: flex;
+    align-items: center; /*垂直居中*/
   }
 
   #Logo > img {
     width: 100%;
-    margin-top: 7px;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
   }
-  #header.hover #Logo > img {
-    margin-top: 0;
-  }
+
   @-webkit-keyframes searchLights {
     0% {
       left: -100px;
@@ -1935,6 +1953,14 @@
     background: var(--color);
   }
 
+  #continar-right .aside .textwidget a {
+    font: inherit;
+  }
+
+  #continar-right .aside .textwidget a svg{
+    vertical-align: text-bottom;
+  }
+
   #continar-right p.clearfix {
     margin: 10px 0 0;
     line-height: 24px;
@@ -2219,7 +2245,6 @@
     transition: all 0.35s;
     border-bottom: 0;
   }
-
   .items {
     overflow: hidden;
     padding: 5px 15px 12px 15px;
@@ -2535,14 +2560,14 @@
     text-indent: 2em;
   }
 
-  #details ul li span{
-    flex:1;
+  #details ul li span {
+    flex: 1;
     padding: 5px 0;
   }
 
-  #details ul li.esp{
-		display:flex;
-	}
+  #details ul li.esp {
+    display: flex;
+  }
 
   .clearfix:after {
     visibility: hidden;
@@ -2724,7 +2749,8 @@
     margin-bottom: 20px;
   }
 
-  #details #continar-left, #leaving_message #continar-left{
+  #details #continar-left,
+  #leaving_message #continar-left {
     border-radius: 4px;
     background: #fff;
     width: auto !important;
@@ -4966,8 +4992,8 @@
   /*用户中心start*/
 
   .head_user_b {
-    width: 100%;
-    margin: 0 auto;
+    width: calc(100% + 60px);
+    margin: 0 0 0 -30px;
     background: url('../images/about_page.jpg') no-repeat center center;
     background-size: 100% 100%;
   }
@@ -5116,7 +5142,7 @@
     z-index: 1;
     background: #fff;
     margin-top: -29px;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 12px;
     border-radius: 0 10px 0px 0;
   }
 
@@ -5811,6 +5837,35 @@
     color: var(--color);
   }
   /* 留言板寄语end */
+
+  /* page单页start */
+  .single_page {
+    background: #fff;
+    padding: 15px 30px;
+  }
+  .single_page h1 {
+    text-align: center;
+    color: #666;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #f0f2f7;
+    padding: 20px 0 15px;
+    margin-bottom: 20px;
+  }
+  .single_page p,
+  .single_page ul li {
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 30px;
+    margin: 5px 0;
+  }
+
+  .single_page p a {
+    font-size: 14px;
+    color: #1890ff;
+    color: var(--color);
+  }
+  /* page单页end */
 
   /*comments留言评论框*/
   .comment {
