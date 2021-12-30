@@ -132,7 +132,7 @@
       document.body.appendChild(create_element);
       setTimeout(() => {
         resolve(true);
-      }, 2000);
+      }, 10000);
     });
     Promise.all([promise1]).then(() => {
       var myPlayer = videojs('my-video'); // 初始化视频
