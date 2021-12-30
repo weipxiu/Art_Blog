@@ -18,7 +18,7 @@
     App.prototype = {
         init: function () {
             // 终端独立事件方法
-            if ($(window).width() < 1200) {
+            if (window.screen.width < 1200) {
                 // 移动端执行函数
                 this.mobileFnAll();
             } else {
@@ -47,8 +47,6 @@
             this.pageDetailsFabulous();
             //纸飞机
             this.paperPlane();
-            // 侧边栏视频播放器
-            this.playVideo();
             // 在线客服
             this.customerService();
             // 友情链接加背景颜色
@@ -697,31 +695,6 @@
                     $(this).attr('src', $(this).attr('data-src'))
                 });
             })
-        },
-        // 播放视频
-        playVideo: function () {
-            if ($("#my-video").length) {
-                var myPlayer = videojs('my-video');
-
-                //播放失败时候处理
-                var errVideo = document.getElementById('my-video_html5_api');
-                errVideo.onerror = function () {
-                    layer.alert('通常是由于视频地址错误或未添加视频封面图引起，请检查！', {
-                        skin: 'layui',
-                        title: "视频初始化失败",
-                        closeBtn: 0,
-                        anim: 4 //动画类型
-                    })
-                };
-
-                //当视频播放完成后，重新加载渲染，随时准备第二次重播
-                // myPlayer.on("ended", function () {
-                //     myPlayer.play();
-                //     setTimeout(function () {
-                //         myPlayer.pause();
-                //     }, 500);
-                // });
-            }
         },
         // 随机文章增加序列号
         randomArticles: function () {
