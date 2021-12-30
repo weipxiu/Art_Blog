@@ -4239,432 +4239,64 @@
     border-bottom: 1px solid var(--color);
   }
 
-  /*在线客服start*/
-
-  #wuyousujian-kefuDv .qqnum {
-    text-align: center;
-    font-size: 12px;
-    width: 100%;
-    padding: 0 0 10px 0;
+  /*在线交流start*/
+  .communication{
+    position:fixed;
+    top:35%;
+    right:-85px;
+    z-index:999999;
   }
-
-  #wuyousujian-kefuDv .qqnum:last-child {
-    text-align: center;
-    font-size: 12px;
-    width: 100%;
-    padding: 0;
+  .communication .suspended {
+    margin-top: 35%;
+    position: absolute;
+    right: 85px;
   }
-
-  #wuyousujian-kefuDv .telNo {
-    padding-left: 4px;
-    font-size: 12px;
-    color: #f60;
-    width: 100px;
-    height: 17px;
-    line-height: 28px;
+  .communication ul{
+    background:#fff;
+    border-radius: 4px 0 0 4px;
   }
-
-  #wuyousujian-kefuDv table {
-    border: 0;
-    width: auto;
+  .communication ul li{
+    border-bottom:1px solid #eee;
+    padding:5px 0 5px 5px;
   }
-
-  #wuyousujian-kefuDv #navLog {
-    width: 40px;
-    height: 1px;
-    display: block;
-  }
-
-  #wuyousujian-kefuDv table tr {
+  .communication ul li img{
+    display:block;
     border: 0;
   }
-
-  #wuyousujian-kefuDv img {
-    border: 0;
-    display: inline-block;
-  }
-
-  #wuyousujian-kefuDv table td {
-    border: 0;
-    padding: 0;
-  }
-
-  #wuyousujian-kefuDv .kefu1 {
+  .communication ul li .service{
     font-size: 14px;
-    font-weight: bold;
-    padding-left: 10px;
+    font-weight: 700;
     padding-top: 10px;
   }
-
-  #wuyousujian-kefuDv .kefu3 {
-    width: 105px;
-    height: 10px;
+  .telephone{
+    font-size: 12px;
+    color: #f60;
   }
-
-  #wuyousujian-kefuDv .kefu4 {
-    background: url(../images/qq.png) center no-repeat;
-    background-size: contain;
-    width: 105px;
-    height: 68px;
-  }
-
-  #wuyousujian-kefuDv .kefu4gray {
-    background: url(../images/qq-grey.png) center no-repeat;
-    background-size: contain;
-    width: 105px;
-    height: 68px;
-  }
-
-  #wuyousujian-kefuDv .line {
-    width: 105px;
-    height: 9px;
-  }
-
-  #wuyousujian-kefuDv .wangwang-names {
-    margin: 0;
-    margin-left: 5px;
+  .communication ul li.qq p,.communication ul li .wechat p {
     font-size: 13px;
+    line-height:22px;
     color: #333;
   }
-
-  #wuyousujian-kefuDv .qqSmall {
+  .communication ul li.qq a{
     width: 100px;
     height: 29px;
     line-height: 29px;
     vertical-align: middle;
-    margin-left: 5px;
-    white-space: nowrap;
-    overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-  }
-
-  #wuyousujian-kefuDv a {
     font-size: 13px;
     text-decoration: none;
-    color: #333;
   }
-
-  #wuyousujian-kefuDv a:hover {
-    text-decoration: none;
-    color: black;
+  .communication ul li.wechat{
+    padding-left:0;
   }
-
-  #wuyousujian-kefuDv .kefu10 {
-    width: 105px;
-    height: 28px;
+  .communication ul li.wechat p{
+    padding-left:5px;
   }
-
-  #qqAdmin .panel1 {
-    border: 1px solid gray;
-    width: 500px;
-    margin-top: 13px;
+  .communication ul li.wechat img{
+    width:100%;
   }
-
-  #qqAdmin .dtl {
-    color: gray;
-    font-style: italic;
-  }
-
-  .qqSmall a {
-    margin-left: 4%;
-  }
-
-  .qqClearFix {
-    clear: both;
-  }
-
-  .rm_wrap {
-    width: 560px;
-  }
-
-  .qqkefu_section {
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 5px;
-  }
-
-  .rm_opts label {
-    font-size: 12px;
-    width: 200px;
-    display: block;
-    float: left;
-  }
-
-  .rm_input {
-    padding: 5px 10px;
-  }
-
-  .rm_opts small {
-    display: block;
-    padding: 4px;
-    width: 630px;
-    font-size: 12px;
-    color: #666;
-    line-height: 20px;
-  }
-
-  .rm_opts input [type='text'],
-  .rm_opts select {
-    width: 280px;
-    font-size: 12px;
-    padding: 4px;
-    color: #333;
-    line-height: 20px;
-    background: #fff;
-  }
-
-  .rm_input input:focus,
-  .rm_input textarea:focus {
-    background: #f2f2f2;
-  }
-
-  #swt_qq,
-  #swt_cat_slider,
-  #swt_emailid,
-  #swt_twitter,
-  #swt_qqmblog,
-  #swt_sinamblog,
-  #swt_rsssub,
-  #swt_email,
-  #swt_search_link,
-  #swt_cat,
-  #swt_new_exclude,
-  #swt_search_ID,
-  #swt_link_s {
-    border: 1px solid #dadada;
-    width: 280px;
-    padding: 2px;
-  }
-
-  .rm_input textarea {
-    width: 280px;
-    height: 150px;
-    font-size: 12px;
-    padding: 4px;
-    color: #333;
-    line-height: 20px;
-    background: #fff;
-  }
-
-  .rm_title h3 {
-    cursor: pointer;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-    font-weight: bold;
-    color: #232323;
-    float: left;
-    width: 80%;
-    padding: 14px 4px;
-  }
-
-  .rm_title {
-    cursor: pointer;
-    border-bottom: 1px solid #dadada;
-    padding: 0;
-    height: 50px;
-  }
-
-  .rm_title h3 img.inactive {
-    margin: -1px 10px 0 2px;
-    width: 19px;
-    height: 19px;
-    background: url(../images/collapse.png) no-repeat 0 0;
-    float: left;
-  }
-
-  .rm_title h3 img.active {
-    margin: -1px 10px 0 2px;
-    width: 19px;
-    height: 19px;
-    background: url(../images/collapse.png) no-repeat 0 -19px;
-    float: left;
-  }
-
-  .rm_title span.submit {
-    display: block;
-    float: right;
-    margin: 0;
-    padding: 0;
-    width: 15%;
-    padding: 14px 0;
-  }
-
-  .clearfix {
-    clear: both;
-  }
-
-  .rm_table th,
-  .rm_table td {
-    border: 1px solid #bbb;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .rm_table th,
-  .rm_table td.feature {
-    border-color: #888;
-  }
-
-  .child {
-    padding-left: 40px;
-  }
-
-  #all_cat {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  #all_cat h4 {
-    line-height: 23px;
-    margin: 0;
-  }
-
-  #all_cat span {
-    display: inline-block;
-    white-space: nowrap;
-    margin-right: 10px;
-    font-size: 12px;
-  }
-
-  #all_cat em {
-    font-weight: bold;
-    color: #2e64fe;
-    font-style: normal;
-  }
-
-  #all_cat small {
-    font-size: 12px;
-    color: #666;
-    line-height: 23px;
-  }
-
-  .show_id {
-    display: block;
-    width: 250px;
-    margin-right: -500px;
-    position: fixed;
-    right: 50%;
-    top: 15%;
-    line-height: 23px;
-    padding: 10px;
-    list-style: square inside;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  #imgNav {
-    margin-top: 30%;
-    position: absolute;
-    right: 194px;
-  }
-
-  .rm_options {
-    padding: 20px;
-  }
-
-  .qq-cus-label {
-    display: inline-block;
-    width: 110px;
-    font-weight: bold;
-  }
-
-  .qq-cus-title {
-    padding: 20px 20px;
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .wuyousujian-add {
-    padding: 10px;
-    background-color: #eee;
-  }
-
-  .wuyousujian-update {
-    margin: 0;
-    display: none;
-  }
-
-  .submit {
-    padding-left: 20px;
-    padding-bottom: 20px;
-  }
-
-  .customer-list {
-    background-color: #fff;
-    min-height: 200px;
-    margin-right: 41px;
-    position: absolute;
-    border-radius: 4px 0 0 4px;
-    left: -150px;
-    top: -40px;
-  }
-
-  #wuyousujian-kefuDv .qq-kefu-fun-box {
-    width: 100%;
-    position: relative;
-  }
-
-  #wuyousujian-kefuDv .qq-kefu-backUp {
-    display: block;
-    width: 100%;
-    height: 62px;
-    border: none;
-    border-top: 1px solid #ccc;
-    text-align: center;
-    background: url(../images/rocket.png) center center no-repeat;
-  }
-
-  #wuyousujian-kefuDv .qq-kefu-backUp-2 {
-    display: block;
-    width: 50%;
-    height: 62px;
-    border-top: 1px solid #ccc;
-    text-align: center;
-    background: url(../images/rocket.png) -8px center no-repeat;
-    float: left;
-    background-size: cover;
-  }
-
-  #wuyousujian-kefuDv .qq-kefu-qrCode {
-    display: block;
-    width: 50%;
-    height: 62px;
-    border-right: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    text-align: center;
-    float: left;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    background-size: cover;
-  }
-
-  #wuyousujian-kefuDv .qq-kefu-qrCode img {
-    display: block;
-    width: 100%;
-    height: 56px;
-    margin: 2px auto 0;
-  }
-
-  #wuyousujian-kefuDv .qqkefu-qrcode-box {
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    z-index: 999;
-    background-color: #eee;
-    position: absolute;
-    top: 0;
-    display: none;
-    box-sizing: border-box;
-    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  /*在线客服end*/
+  /*在线交流end*/
 
   /*文章加密内容start*/
 

@@ -47,7 +47,7 @@
             this.pageDetailsFabulous();
             //纸飞机
             this.paperPlane();
-            // 在线客服
+            // 在线交流
             this.customerService();
             // 友情链接加背景颜色
             this.friendshipLink();
@@ -503,17 +503,17 @@
                 scroll_height();
             }
         },
-        // 在线客服
+        // 在线交流
         customerService: function () {
-            $("#wuyousujian-kefuDv").hover(function () {
-                $("#wuyousujian-kefuDv").stop().animate({
-                    "right": "-100px"
-                }, 500)
+            $(".communication").hover(function () {
+              $(this).stop().animate({
+                    "right": "0"
+                }, 350)
             },
                 function () {
-                    $("#wuyousujian-kefuDv").stop().animate({
-                        "right": "-196px"
-                    }, 500)
+                    $(this).stop().animate({
+                        "right": "-85px"
+                    }, 350)
                 });
         },
         // 文章详情页打赏

@@ -100,11 +100,11 @@ function themeoptions_page() {
         <div class="row clearfix reg_flake_show" style="display:none">
           <label class="fl left-wrap">入口提示文案：</label>
           <div class="fr right-wrap">
-            <input  
+            <input
                 type="text"
                 class="url-inp"
                 name="tips_sentence"
-                id="tips_sentence" 
+                id="tips_sentence"
                 value="<?php echo $a_options['tips_sentence']; ?>"
                 placeholder="程序世界并不孤单，我们一路同行相伴，注册会员分享你的前端经验，赶紧来试试~"></input>
           </div>
@@ -526,34 +526,6 @@ function themeoptions_page() {
       <!-- 内容四 社交 -->
       <div class="content-wrap content4">
         <div class="row clearfix">
-          <label for="QQ-number" class="fl left-wrap">QQ账号：</label>
-          <div class="fr right-wrap">
-						<input
-							type="text"
-							class="url-inp"
-							name="QQ-number"
-							id="QQ-number"
-							value="<?php echo $a_options['QQ-number']; ?>"
-						>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label for="wangwang-link" class="fl left-wrap">旺旺链接：</label>
-          <div class="fr right-wrap">
-						<input
-							type="text"
-							class="url-inp"
-							name="wangwang-link"
-							id="wangwang-link"
-              placeholder="https://amos.alicdn.com/getcid.aw?&uid=xxx"
-							value="<?php echo $a_options['wangwang-link']; ?>"
-						>
-            <span class="warn">*只需要旺旺的http链接，不需要a标签</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
           <label for="phone-number" class="fl left-wrap">手机号码：</label>
           <div class="fr right-wrap">
 						<input
@@ -562,6 +534,19 @@ function themeoptions_page() {
 							name="phone-number"
 							id="phone-number"
 							value="<?php echo $a_options['phone-number']; ?>"
+						>
+          </div>
+        </div>
+
+        <div class="row clearfix">
+          <label for="QQ-number" class="fl left-wrap">QQ账号：</label>
+          <div class="fr right-wrap">
+						<input
+							type="text"
+							class="url-inp"
+							name="QQ-number"
+							id="QQ-number"
+							value="<?php echo $a_options['QQ-number']; ?>"
 						>
           </div>
         </div>
@@ -591,7 +576,7 @@ function themeoptions_page() {
         </div>
 
 				<div class="row clearfix">
-          <label for="reward-text" class="fl left-wrap">打赏欢迎语：</label>
+          <label for="reward-text" class="fl left-wrap">打赏乞讨语：</label>
           <div class="fr right-wrap">
 						<input
 							type="text"
@@ -603,35 +588,11 @@ function themeoptions_page() {
           </div>
         </div>
 
-				<div class="row">
-          <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">支付宝收账二维码：</label>
-            <div class="fr right-wrap">
-              <input
-                type="text"
-                class="url-inp"
-                name="alipay"
-                id="alipay"
-                value="<?php echo $a_options['alipay']; ?>"
-              >
-              <input type="button" name="img-upload" value="选择文件">
-            </div>
-          </div>
-          <div class="margin-top-15 clearfix">
-            <div class="fl left-wrap">
-              收账二维码预览：
-            </div>
-            <div class="fr right-wrap">
-              <img src="<?php echo $a_options['alipay']; ?>" class="preview-img" style="max-width: 100px;" alt="">
-            </div>
-          </div>
-        </div>
-
 				<!-- 微信付款二维码 -->
 				<div class="row">
 					<!-- 支付宝付款二维码 -->
           <div class="margin-top-15 clearfix">
-            <label class="fl left-wrap" for="">微信收账二维码：</label>
+            <label class="fl left-wrap" for="">微信收款码：</label>
             <div class="fr right-wrap">
               <input
                 type="text"
@@ -645,10 +606,34 @@ function themeoptions_page() {
           </div>
           <div class="margin-top-15 clearfix">
             <div class="fl left-wrap">
-              收账二维码预览：
+              收款码预览：
             </div>
             <div class="fr right-wrap">
               <img src="<?php echo $a_options['wechatpay']; ?>" class="preview-img" style="max-width: 100px;" alt="">
+            </div>
+          </div>
+        </div>
+
+				<div class="row">
+          <div class="margin-top-15 clearfix">
+            <label class="fl left-wrap" for="">支付宝收款码：</label>
+            <div class="fr right-wrap">
+              <input
+                type="text"
+                class="url-inp"
+                name="alipay"
+                id="alipay"
+                value="<?php echo $a_options['alipay']; ?>"
+              >
+              <input type="button" name="img-upload" value="选择文件">
+            </div>
+          </div>
+          <div class="margin-top-15 clearfix">
+            <div class="fl left-wrap">
+              收款码预览：
+            </div>
+            <div class="fr right-wrap">
+              <img src="<?php echo $a_options['alipay']; ?>" class="preview-img" style="max-width: 100px;" alt="">
             </div>
           </div>
         </div>
@@ -764,7 +749,6 @@ function themeoptions_page() {
       'rotateNav_content' => $_POST['rotateNav_content'],
       'mobile_banner' => $_POST['mobile_banner'],
       'QQ-number' => $_POST['QQ-number'],
-      'wangwang-link' => $_POST['wangwang-link'],
       'weChat-number' => $_POST['weChat-number'],
       'phone-number' => $_POST['phone-number'],
       'reward_text' => $_POST['reward-text'],

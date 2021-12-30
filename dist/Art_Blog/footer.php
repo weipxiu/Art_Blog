@@ -25,91 +25,33 @@
 ?>
 <!-- 雪花end -->
 
-<!-- 在线客服start -->
-<div id="divStayTopright" style="position:fixed;z-index:999999;top:40%;right:0px;height:16px;">
-  <div id="wuyousujian-kefuDv" style="right: -196px; position: fixed;">
-    <script>
-      var isIn = true;
-      var isLeft = "right";
-    </script>
-    <table>
-      <tbody>
-        <tr>
-          <td id="navLog">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/open_im.png" width="40" height="133" id="imgNav">
-          </td>
-          <td>
-            <table id="__01" width="105" class="customer-list" style="min-width:105px" border="0" cellpadding="0" cellspacing="0">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="kefu1">服务热线：</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="telNo" id="txtTelNo">&nbsp;<?php
-                      echo trim(get_option('weipxiu_options')['phone-number']);
-                      ?>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="kefu3"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="wangwang-names" style="margin-bottom:7px">&nbsp;QQ在线交流</p>
-                    <div class="qqSmall">
-                      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php
-                      echo trim(get_option('weipxiu_options')['QQ-number']);
-                      ?>&site=qq&menu=yes">
-                        <img width="77" height="22" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/zaixian_qq.png" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
-                        />
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p class="wangwang-names">&nbsp;旺旺在线</p>
-                    <div class="qqSmall">
-                      <a target="_blank" href="<?php
-                      echo trim(get_option('weipxiu_options')['wangwang-link']);
-                      ?>"style="position: relative; overflow: hidden;">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/zaixian_ww.gif" alt="点击这里给我发消息" width="77" height="19" style="vertical-align:middle;">
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="line"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="qq-kefu-fun-box">
-                      <a class="qq-kefu-qrCode" id="qq-kefu-qrCode" href="javascript:;">
-                        <img src="<?php echo trim(get_option('weipxiu_options')['weChat-number']); ?>" alt="">
-                      </a>
-                      <a class="qq-kefu-backUp-2" id="qq-kefu-backUp" href="javascript:;"></a>
-                      <div class="qqkefu-qrcode-box" pos="2">
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<!-- 在线交流start -->
+<div class="communication">
+  <img class="suspended" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/open_im.png" width="40" height="133">
+  <ul>
+    <li>
+      <p class="service">电话支持</p>
+      <span class="telephone"><?php
+        echo trim(get_option('weipxiu_options')['phone-number']);
+        ?>
+      </span>
+    </li>
+    <li class="qq">
+      <p>在线交流</p>
+      <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=<?php
+      echo trim(get_option('weipxiu_options')['QQ-number']);
+      ?>&site=qq&menu=yes">
+        <img width="77" height="22" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/zaixian_qq.png" width="77" height="22" alt="点击这里给我发消息" title="点击这里给我发消息"
+        />
+      </a>
+    </li>
+    <li class="wechat">
+      <p>微信添加</p>
+      <img src="<?php echo trim(get_option('weipxiu_options')['weChat-number']); ?>" alt="">
+    </li>
+  </ul>
 </div>
-<!-- 在线客服end -->
+<!-- 在线交流end -->
 
 <!-- 底部区域start -->
 <footer class="footer">
