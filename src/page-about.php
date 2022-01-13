@@ -32,7 +32,7 @@ Template Name: 关于博客
                      </div>
                      <div class="head_avatar_c">
                         <a href="https://jq.qq.com/?_wv=1027&k=4BemYKg">
-                            <span class="follow-btn unfollowed" onclick="jinsom_pop_login_style();"><i class="fa fa-plus"></i> 关 注</span>
+                            <span class="follow-btn unfollowed" onclick="jinsom_pop_login_style();"><i class="iconfont icon-jiahao"></i> 关 注</span>
                         </a>
                      </div>
                     </div>
