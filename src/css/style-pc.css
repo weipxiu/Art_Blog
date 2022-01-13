@@ -1957,7 +1957,7 @@
     font: inherit;
   }
 
-  #continar-right .aside .textwidget a svg{
+  #continar-right .aside .textwidget a svg {
     vertical-align: text-bottom;
   }
 
@@ -4240,44 +4240,45 @@
   }
 
   /*在线交流start*/
-  .communication{
-    position:fixed;
-    top:35%;
-    right:-85px;
-    z-index:999999;
+  .communication {
+    position: fixed;
+    top: 35%;
+    right: -85px;
+    z-index: 999999;
   }
   .communication .suspended {
     margin-top: 35%;
     position: absolute;
     right: 85px;
   }
-  .communication ul{
-    background:#fff;
+  .communication ul {
+    background: #fff;
     border-radius: 4px 0 0 4px;
   }
-  .communication ul li{
-    border-bottom:1px solid #eee;
-    padding:5px 0 5px 5px;
+  .communication ul li {
+    border-bottom: 1px solid #eee;
+    padding: 5px 0 5px 5px;
   }
-  .communication ul li img{
-    display:block;
+  .communication ul li img {
+    display: block;
     border: 0;
   }
-  .communication ul li .service{
+  .communication ul li .service {
     font-size: 14px;
     font-weight: 700;
     padding-top: 10px;
   }
-  .telephone{
+  .telephone {
     font-size: 12px;
     color: #f60;
   }
-  .communication ul li.qq p,.communication ul li .wechat p {
+  .communication ul li.qq p,
+  .communication ul li .wechat p {
     font-size: 13px;
-    line-height:22px;
+    line-height: 22px;
     color: #333;
   }
-  .communication ul li.qq a{
+  .communication ul li.qq a {
     width: 100px;
     height: 29px;
     line-height: 29px;
@@ -4287,14 +4288,14 @@
     font-size: 13px;
     text-decoration: none;
   }
-  .communication ul li.wechat{
-    padding-left:0;
+  .communication ul li.wechat {
+    padding-left: 0;
   }
-  .communication ul li.wechat p{
-    padding-left:5px;
+  .communication ul li.wechat p {
+    padding-left: 5px;
   }
-  .communication ul li.wechat img{
-    width:100%;
+  .communication ul li.wechat img {
+    width: 100%;
   }
   /*在线交流end*/
 
@@ -4645,15 +4646,14 @@
 
   .head_avatar {
     text-align: center;
-    padding: 27px 0 15px;
+    padding: 27px 0 10px;
   }
 
   .head_avatar_a {
-    text-align: center;
-    font-size: 24px;
-    line-height: 30px;
-    color: #fff;
     position: relative;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
   }
 
   .head_avatar_a p {
@@ -4661,6 +4661,10 @@
     font-size: 25px;
     line-height: 30px;
     color: #fff;
+  }
+
+  .head_avatar_a .vip_aa img {
+    vertical-align: inherit;
   }
 
   span.verify_1 {
@@ -4677,17 +4681,10 @@
   }
 
   .head_avatar img {
-    width: 130px;
-    height: 130px;
+    width: 125px;
+    height: 125px;
     border-radius: 100%;
     border: 3px solid rgba(255, 255, 255, 0.53);
-  }
-
-  .head_avatar_a {
-    text-align: center;
-    font-size: 25px;
-    line-height: 30px;
-    color: #fff;
   }
 
   .icon_male {
@@ -4707,39 +4704,16 @@
     background-image: url('../images/icon_a.png');
   }
 
-  .lv45 {
-    background-position: -199px -335px;
-  }
-
-  .lv {
-    display: inline-block;
-    background: url(../images/lv.png) no-repeat;
-    width: 33px;
-    height: 17px;
-    vertical-align: sub;
-  }
-
-  .head_avatar_a {
-    text-align: center;
-    font-size: 25px;
-    line-height: 30px;
-    color: #fff;
-  }
-
-  .head_avatar_a .vip_aa img {
-    vertical-align: inherit;
-  }
-
   .head_avatar_b p {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #fff;
-    line-height: 16px;
+    line-height: 30px;
   }
 
   .head_avatar_c {
     text-align: center;
-    margin: 25px;
+    margin-top: 10px;
   }
 
   span.follow-btn.unfollowed {
@@ -4753,15 +4727,12 @@
 
   .head_avatar_c span {
     padding: 4px 12px;
-    background-color: #fafafa;
     margin: 15px;
     border-radius: 4px;
     font-size: 15px;
-    border: 1px solid #2196f3;
-    background: #2196f3;
-    color: #ffffff;
+    color: #fff;
     cursor: pointer;
-  }
+}
 
   Inherited from div.head_avatar_c .head_avatar_c {
     text-align: center;
@@ -4771,15 +4742,23 @@
   .head_user_data {
     position: absolute;
     left: 0;
+    bottom: 0;
     z-index: 1;
     background: #fff;
-    margin-top: -29px;
     padding: 5px 10px 5px 12px;
     border-radius: 0 10px 0px 0;
   }
 
   .head_user_data span {
     margin-right: 20px;
+  }
+
+  .lv {
+    display: inline-block;
+    background: url(../images/lv.png) no-repeat;
+    width: 33px;
+    height: 17px;
+    vertical-align: sub;
   }
 
   .lv45 {
