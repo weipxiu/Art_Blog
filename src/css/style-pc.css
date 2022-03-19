@@ -4887,7 +4887,7 @@
     clear: both;
   }
 
-  #continar-left .log-text .post-actions *,
+  #continar-left .log-text .post-actions .iconfont,
   #continar-left .log-text .post-like a.done:hover span.count {
     color: #fff;
   }
@@ -4904,10 +4904,14 @@
 
   #continar-left .log-text .post-actions a {
     text-decoration: none;
+    color: #fff;
   }
 
   #continar-left .log-text .post-actions a .iconfont {
     font-size: 12px;
+  }
+  #continar-left .log-text .post-actions a.favorite .iconfont{
+    font-size:14px;
   }
 
   .post-actions .reward {
@@ -4948,13 +4952,13 @@
     background: var(--color);
     font-size: 12px;
   }
-  #reward-popup {
+  #continar-left #reward-popup {
     width: 100%;
     height: 100%;
     padding: 20px;
     display: none;
   }
-  #reward-popup .title {
+  #continar-left #reward-popup .title {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -4964,26 +4968,26 @@
     padding: 10px 0 20px;
     box-sizing: content-box;
   }
-  #reward-popup .reward_item {
+  #continar-left #reward-popup .reward_item {
     height: calc(100% - 60px);
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
   }
-  #reward-popup .reward_item p {
+  #continar-left #reward-popup .reward_item p {
     font-size: 15px;
     text-align: center;
     color: #333;
     margin: 0px 0 12px;
     text-indent: 0;
   }
-  #reward-popup .reward_item img {
+  #continar-left #reward-popup .reward_item img {
     display: block;
     margin: 0 auto;
     max-width: 85%;
     border: 5px solid #eee;
   }
-  #reward-popup .reward_item > div {
+  #continar-left #reward-popup .reward_item > div {
     width: 50%;
   }
   /* PC详情页打赏end */
