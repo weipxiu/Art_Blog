@@ -390,7 +390,7 @@ function add_button_mce($mce_settings) {
         QTags.addButton( '视频', '视频', "[embed]", "[/embed]" );
         QTags.addButton( '登录可见', '登录可见', "[login_success]", "[/login_success]" );
         QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
-        QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='domo'>", "在线预览</a>" );
+        QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='demo'>", "在线预览</a>" );
         QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "\n[/cc]" );
         QTags.addButton( 'CSS代码', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
         QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "\n[/cc]" );

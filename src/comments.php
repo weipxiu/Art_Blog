@@ -11,7 +11,7 @@ if ( post_password_required() )
             <?php
         }else if(current_user_can('manage_options')){
             ?>
-            <h3 class="comments-title">尊敬的管理员冕下，当前页面评论功能需要您手动方可开启，具体位置不懂的请百度！</h3>
+            <h3 class="comments-title">尊敬的管理员冕下，当前页面评论功能需要后台手动开启方可使用</h3>
             <?php
         }
     ?>

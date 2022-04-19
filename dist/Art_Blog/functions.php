@@ -101,7 +101,7 @@ function refused_english_comments($incoming_comment) {
   $pattern = '/[一-龥]/u';
   // 禁止全英文评论
   if(!preg_match($pattern, $incoming_comment['comment_content'])) {
-    wp_die( "您的评论中必须包含汉字!" );
+    wp_die( "您的评论中必须包含汉字，否则系统将视您为机器人!" );
   }
   $pattern = '/[あ-んア-ン]/u';
   // 禁止日文评论
