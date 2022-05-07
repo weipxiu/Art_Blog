@@ -1904,10 +1904,17 @@
     padding: 0.2em 0.4em;
   }
   #continar-left .post-motto {
-    text-align-last: center;
-    background-color: #eee;
-    color: #aaa;
-    margin-top: 0.2rem;
+    transition: all 0.3s;
+    line-height: 2;
+    border-radius: 2px;
+    padding: 0.2rem 0.25rem;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    text-indent: 0;
+    font-size: 0.25rem;
+    font-weight: bold;
+    margin: 0.3rem 0;
   }
   .codecolorer-container * {
     text-indent: 0;

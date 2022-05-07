@@ -3017,22 +3017,19 @@
   }
 
   #continar-left .post-motto {
-    margin: 25px 0;
-    opacity: 0.8;
-    text-align-last: center;
+    margin: 15px 0 20px;
     transition: all 0.3s;
-    line-height: 30px;
-    text-align: center;
-    background-color: #eee;
+    line-height: 2;
     border-radius: 2px;
-    font-size: 12px;
-    color: #aaa;
+    padding: 0.75rem 1.25rem;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    text-indent: 0;
+    font-size: 90%;
+    font-weight: bold;
   }
-  #continar-left .post-motto:hover {
-    color: #fff;
-    background: #1890ff;
-    background: var(--color);
-  }
+
   p.text-post {
     width: 100%;
     line-height: 30px;

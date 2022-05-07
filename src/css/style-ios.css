@@ -2100,13 +2100,17 @@
     text-align-last: left;
   }
   #continar-left .post-motto {
-    line-height: 0.4rem;
-    font-size: 0.24rem;
+    transition: all 0.3s;
+    line-height: 2;
+    border-radius: 2px;
+    padding: 0.2rem 0.25rem;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
     text-indent: 0;
-    text-align-last: center;
-    background-color: #eee;
-    color: #aaa;
-    padding: 0.1rem 0;
+    font-size: 0.25rem;
+    font-weight: bold;
+    margin: 0.3rem 0;
   }
   .log-text .beCareful {
     color: #d14;
