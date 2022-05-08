@@ -1662,18 +1662,15 @@
   }
 
   #continar-left .mod-breadcrumb {
-    font-size: 0.32rem;
+    font-size: 0.3rem;
     padding: 0.2rem 0.3rem;
     background: #fff;
-    margin-bottom: 0.2rem;
-    color: #1890ff;
-    color: var(--color);
+    color: #8f8f8f;
   }
 
   #continar-left .mod-breadcrumb a {
-    font-size: 0.32rem;
-    color: #1890ff;
-    color: var(--color);
+    font-size: 0.3rem;
+    color: #8f8f8f;
   }
 
   .clearfix:after {

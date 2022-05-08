@@ -534,9 +534,9 @@ function wheatv_breadcrumbs() {
             $cat = get_the_category();
             $cat = $cat[0];
             echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-            echo $currentBefore;
-            the_title();
-            echo $currentAfter;
+            // echo $currentBefore;
+            // the_title();
+            // echo $currentAfter;
         } elseif (is_page() && !$post->post_parent) {
             echo $currentBefore;
             the_title();
