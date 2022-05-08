@@ -195,7 +195,7 @@
   }
   #header.hover .site-search.active {
     top: 80px;
-    background: #eee;
+    background: var(--gray_shallow);
   }
   #header.hover .navto-search a {
     margin-top: 2px;
@@ -350,7 +350,7 @@
     text-align: center;
     padding: 10px 10px;
     font-size: 13px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     color: #444;
   }
   #header .nav-min a:last-child {
@@ -973,7 +973,7 @@
     margin-bottom: 0.2rem;
     position: relative;
     text-indent: 0.2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.16rem;
   }
   aside h3:before {
@@ -1015,7 +1015,7 @@
   }
   .widget-title {
     margin-bottom: 0.26rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.16rem;
   }
   .widget-title a {
@@ -1029,7 +1029,7 @@
     color: #444;
     font-weight: normal;
     font-size: 0.26rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.2rem;
     margin-bottom: 0.2rem;
     line-height: 0.4rem;
@@ -1146,7 +1146,7 @@
     margin-bottom: 0;
   }
   #mouseover ul li {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding: 0.2rem 0;
     margin-bottom: 0;
     box-sizing: content-box;
@@ -1206,7 +1206,7 @@
   }
   .items a {
     color: #999;
-    background-color: #eee;
+    background-color: var(--gray_shallow);
     float: left;
     width: 31.3333%;
     margin: 0 1% 1%;
@@ -1430,16 +1430,19 @@
   #details ul li.esp {
     display: flex;
   }
-
+  .mod-breadcrumb i.iconfont {
+    font-size: 0.3rem;
+    color: var(--gray);
+  }
   #continar-left .mod-breadcrumb {
     font-size: 0.3rem;
     padding: 0.2rem 0.3rem;
     background: #fff;
-    color: #8f8f8f;
+    color: var(--gray);
   }
   #continar-left .mod-breadcrumb a {
     font-size: 0.3rem;
-    color: #8f8f8f;
+    color: var(--gray);
   }
 
   .clearfix:after {
@@ -1824,7 +1827,7 @@
     text-align: center;
     margin: 0 auto;
     padding-bottom: 0.7rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
   }
   .article-items > span {
     margin: 0px 5px;
@@ -3047,7 +3050,7 @@
     display: block;
     overflow: hidden;
     padding: 0.15rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     font-size: 0.3rem;
   }
   .tuts_comments_user_avatars li:last-of-type {
@@ -3266,7 +3269,7 @@
   }
   .post_content .form-control {
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray_shallow);
     height: 2rem;
     margin: 0.2rem auto 0;
     padding: 0.1rem;
@@ -3277,7 +3280,7 @@
   }
   .post_content .commentform-info input {
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray_shallow);
     margin: 0.1rem auto;
     padding: 0.32rem;
     height: 0.5rem;
@@ -3289,7 +3292,7 @@
     border-radius: 0.08rem;
     color: #fff;
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray_shallow);
     margin: 0.1rem auto;
     font-size: 0.3rem;
     padding: 0.14rem;
@@ -3381,7 +3384,7 @@
   }
   ol.children {
     margin-top: 0.6rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.2rem;
   }
   .commentlist ol {
