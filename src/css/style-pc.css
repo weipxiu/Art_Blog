@@ -2985,8 +2985,11 @@
     margin: -10px auto 10px;
   }
 
+  .codecolorer,
+  .codecolorer *,
+  .codecolorer-container,
   .codecolorer-container * {
-    text-indent: 0;
+    font: 14px/1.8 sf-pro-text_regular, Montserrat, Microsoft Yahei!important;
   }
 
   .codecolorer-container table td.line-numbers div {

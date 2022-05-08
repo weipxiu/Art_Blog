@@ -610,7 +610,7 @@
   }
   .continar .single {
     background: #fff;
-    padding: 0.3rem;
+    padding: 0.25rem;
     border: 1px solid #e6e6e6;
   }
   .continar #continar-left .mod-crumbs {
@@ -762,7 +762,7 @@
   #continar-left .text {
     background: #fff;
     height: auto;
-    padding: 0 0.26rem 0.175rem;
+    padding: 0 0.25rem 0.175rem;
     margin-bottom: 0.2rem;
     overflow: hidden;
     position: relative;
@@ -1828,9 +1828,10 @@
     margin: 0 auto;
     padding-bottom: 0.7rem;
     border-bottom: 1px solid var(--gray_shallow);
+    display: flex;
+    justify-content: space-evenly;
   }
   .article-items > span {
-    margin: 0px 5px;
     color: #666;
   }
   .article-items span span {
@@ -1843,9 +1844,9 @@
   .article-items > span i {
     color: #999;
   }
-  .codecolorer-container.solarized-dark table td.line-numbers {
+  /* .codecolorer-container.solarized-dark table td.line-numbers {
     display: none !important;
-  }
+  } */
   .codecolorer-container table {
     width: 100%;
     background-color: #272822;
@@ -1876,9 +1877,6 @@
   }
   .codecolorer-container {
     margin: 0 auto;
-  }
-  .codecolorer-container * {
-    font: 12px/20px 'courier new';
   }
   .log-text * {
     line-height: 25px;
@@ -1915,9 +1913,6 @@
     font-size: 0.25rem;
     font-weight: bold;
     margin: 0.3rem 0;
-  }
-  .codecolorer-container * {
-    text-indent: 0;
   }
   .log-text img {
     display: block;
@@ -3455,7 +3450,7 @@
   .codecolorer *,
   .codecolorer-container,
   .codecolorer-container * {
-    font: 0.28rem/0.45rem Monaco, Lucida Console, monospace !important;
+    font: 0.28rem/0.45rem sf-pro-text_regular, Montserrat, Microsoft Yahei!important;
   }
 
   /* 屏蔽底部登录注册悬浮窗 */
