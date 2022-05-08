@@ -29,6 +29,7 @@
               <!-- 面包屑导航 -->
               <div class="mod-crumbs">
                   <span class="mod-breadcrumb">
+                      <i class="iconfont icon-weizhi"></i>
                       <?php wheatv_breadcrumbs(); ?>
                   </span>
               </div>

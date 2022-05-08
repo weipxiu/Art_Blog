@@ -240,7 +240,7 @@
 
   #header.hover .site-search.active {
     top: 80px;
-    background: #eee;
+    background: var(--gray_shallow);
   }
 
   #header.hover .navto-search a {
@@ -417,7 +417,7 @@
     text-align: center;
     padding: 10px 10px;
     font-size: 13px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     color: #444;
   }
 
@@ -1174,7 +1174,7 @@
     font-weight: normal;
     margin-bottom: 0.2rem;
     position: relative;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.16rem;
   }
 
@@ -1208,7 +1208,7 @@
 
   .widget-title {
     margin-bottom: 0.26rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.16rem;
   }
 
@@ -1223,7 +1223,7 @@
   .daily-list > p {
     font-weight: normal;
     font-size: 0.28rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.12rem;
     margin-bottom: 0.2rem;
     line-height: 0.56rem;
@@ -1353,7 +1353,7 @@
     margin-bottom: 0;
   }
   #mouseover ul li {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding: 0.2rem 0;
     margin-bottom: 0;
     box-sizing: content-box;
@@ -1412,7 +1412,7 @@
 
   .items a {
     color: #999;
-    background-color: #eee;
+    background-color: var(--gray_shallow);
     float: left;
     width: 31.3333%;
     margin: 0 1% 1% 1%;
@@ -1661,16 +1661,21 @@
     display: flex;
   }
 
+  .mod-breadcrumb i.iconfont {
+    font-size: 0.3rem;
+    color: var(--gray);
+  }
+
   #continar-left .mod-breadcrumb {
     font-size: 0.3rem;
     padding: 0.2rem 0.3rem;
     background: #fff;
-    color: #8f8f8f;
+    color: var(--gray);
   }
 
   #continar-left .mod-breadcrumb a {
     font-size: 0.3rem;
-    color: #8f8f8f;
+    color: var(--gray);
   }
 
   .clearfix:after {
@@ -2020,7 +2025,7 @@
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     padding: 0.15rem 0 0.25rem;
   }
 
@@ -3422,7 +3427,7 @@
     display: block;
     overflow: hidden;
     padding: 0.15rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray_shallow);
     font-size: 0.28rem;
   }
   .tuts_comments_user_avatars li:last-of-type {
@@ -3637,7 +3642,7 @@
   }
   .post_content .form-control {
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray_shallow);
     height: 2rem;
     margin: 0.2rem auto 0;
     padding: 0.1rem;
@@ -3648,7 +3653,7 @@
   }
   .post_content .commentform-info input {
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray_shallow);
     margin: 0.1rem auto;
     padding: 0.32rem;
     height: 0.5rem;
@@ -3660,7 +3665,7 @@
     border-radius: 0.08rem;
     color: #fff;
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray_shallow);
     margin: 0.1rem auto;
     font-size: 0.3rem;
     padding: 0.14rem;
@@ -3752,8 +3757,8 @@
   }
   ol.children {
     margin-top: 0.6rem;
-    /* border-top: 1px solid #eee; */
-    border-bottom: 1px solid #eee;
+    /* border-top: 1px solid var(--gray_shallow); */
+    border-bottom: 1px solid var(--gray_shallow);
     padding-bottom: 0.2rem;
   }
   .commentlist ol {

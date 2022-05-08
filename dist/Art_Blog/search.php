@@ -52,6 +52,7 @@
         <div id="continar-left">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
+                <i class="iconfont icon-weizhi"></i>
                 <?php wheatv_breadcrumbs(); ?>
             </div>
 
