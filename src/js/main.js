@@ -75,7 +75,7 @@
         },
         // 面包屑优化
         crumbsRestructure: function(){
-          var crumbs_data = $('.mod-breadcrumb').html().trim();
+          var crumbs_data = $('.mod-breadcrumb').html()?$('.mod-breadcrumb').html().trim():'';
           $('.mod-breadcrumb').html(crumbs_data.charAt(crumbs_data.length-1) == '>'?crumbs_data.slice(0,-11):crumbs_data);
         },
         // 网页顶部加载进度条
