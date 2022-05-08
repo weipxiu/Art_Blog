@@ -29,6 +29,8 @@
                 // 随机文章列表钢琴效果
                 this.stringEffect();
             }
+            // 面包屑优化
+            this.crumbsRestructure();
             // 网页顶部加载进度条
             this.loadBar();
             // 信息流图片懒加载
@@ -70,6 +72,11 @@
                 $nav_ul_li.addClass("on");
                 $(".mod-header_music-icon").addClass('hover');
             }
+        },
+        // 面包屑优化
+        crumbsRestructure: function(){
+          var crumbs_data = $('.mod-breadcrumb').text().trim();
+          $('.mod-breadcrumb').html(crumbs_data.charAt(crumbs_data.length-1) == '>'?crumbs_data.slice(0,-1):crumbs_data);
         },
         // 网页顶部加载进度条
         loadBar: function () {
