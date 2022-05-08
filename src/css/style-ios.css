@@ -1346,7 +1346,8 @@
     line-height: normal;
   }
   #piano ul li a{
-    margin-left: 0.45rem;
+    margin-left: 0.42rem;
+    line-height: normal;
   }
   #piano ul li:last-of-type {
     border: 0;
@@ -1357,9 +1358,6 @@
     color: #808695;
     vertical-align: middle;
     margin-top: 0.1rem;
-  }
-  #piano ul li a {
-    line-height: normal;
   }
   /*热门文章end*/
 
