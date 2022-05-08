@@ -11,7 +11,7 @@
         $roll_obj = $('#continar-right'),
         $scrollTop = $(document).scrollTop(),
         $continar_left = $("#continar-left"),
-        $mouseover_ul_li = $("#mouseover ul li"),
+        $mouseover_ul_li = $("#piano ul li"),
         $nav_ul_li = $(".nav ul.music-nav > li"),
         $os_headertop_site_search = $(".os-headertop .site-search");
     function App() { }
@@ -595,11 +595,12 @@
                 //通过字符换算，尽可能让所有列长度一致
                 var baseContent = ''; //初始化字符串
                 var strLengh = 0; //初始化截取位数
-                if ($ele.text().trim().gblen() < 38) {
+                var initLengh = 41;
+                if ($ele.text().trim().gblen() < initLengh) {
                     baseContent = $ele.text().trim();
                 } else {
-                    for (var k = 0; k < 38; k++) {
-                        if (baseContent.gblen() < 38) {
+                    for (var k = 0; k < initLengh; k++) {
+                        if (baseContent.gblen() < initLengh) {
                             baseContent = $ele.text().trim().slice(0, strLengh) + '...';
                         } else {
                             break;

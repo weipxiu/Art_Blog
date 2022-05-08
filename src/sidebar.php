@@ -57,7 +57,6 @@
                         echo "<img src='". catch_that_image()."'"." alt='".get_the_title()."'>";
                     ?>
                 </a>
-                <!-- <em></em> -->
                 <div class="hot_text">
                     <a href="<?php the_permalink(); ?>" class="hot_title">
                         <?php the_title(); ?>
@@ -74,7 +73,7 @@
 <!-- 最近更新文章end -->
 
 <!-- 随机文章start -->
-<div class="widget" id="mouseover">
+<div class="widget" id="piano">
     <div class="daily-list">
         <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-suiji-copy"></i>随机文章</a></h3>
         <ul>
@@ -85,13 +84,14 @@
                   'post__not_in' => array($post->ID),//排除当前文章
                   'caller_get_posts' => 1, // 排除置頂文章.
                   'orderby' => 'rand', // 随机排序.
-                  'posts_per_page' => 10 // 设置调用条数
+                  'posts_per_page' => 6 // 设置调用条数
               );
               $query_posts = new WP_Query();
               $query_posts->query($args);
               while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
             <li>
-                <em></em>
+                <!-- <em></em> -->
+                <i class="iconfont icon-jiantou"></i>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?>
                 </a>
@@ -107,7 +107,7 @@
     <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>热门标签</a></h3>
     <?php if (get_option('weipxiu_options')['popular'] != 'on'){ ?>
         <div class="items">
-            <?php wp_tag_cloud('number=24&orderby=count&order=DESC&smallest=12&largest=12.000001&unit=px'); ?>
+            <?php wp_tag_cloud('number=24&orderby=count&order=DESC&smallest=12&largest=14&unit=px'); ?>
         </div>
     <?php }else{?>
         <div class="items">

@@ -1332,53 +1332,33 @@
     display: inline;
     line-height: normal;
   }
-
-  .widget ul li:nth-child(1) em {
-    background: #fd8c84;
-  }
-
-  .widget ul li:nth-child(2) em {
-    background: #7fd75a;
-  }
-
-  .widget ul li:nth-child(3) em {
-    background: #1890ff;
-    background: var(--color);
-  }
-
-  #mouseover .widget-title {
+  #piano .widget-title {
     margin-bottom: 0.1rem;
   }
-  #mouseover .daily-list {
+  #piano .daily-list {
     margin-bottom: 0;
   }
-  #mouseover ul li {
-    border-bottom: 1px solid var(--gray_shallow);
+  #piano ul li {
     padding: 0.2rem 0;
     margin-bottom: 0;
     box-sizing: content-box;
     height: auto;
     line-height: normal;
   }
-  #mouseover ul li:last-of-type {
+  #piano ul li a{
+    margin-left: 0.45rem;
+  }
+  #piano ul li:last-of-type {
     border: 0;
   }
-  #mouseover ul li em {
-    background: #ccc;
-    color: #fff;
-    border-radius: 0.04rem;
-    width: 0.38rem;
-    height: 0.38rem;
-    line-height: 0.4rem;
-    font-style: normal;
-    position: absolute;
-    top: auto;
-    left: 0;
-    text-align: center;
-    font-weight: normal;
-    font-size: 0.26rem;
+  #piano ul li i.icon-jiantou{
+    transform: rotate(270deg);
+    font-size: 0.32rem;
+    color: #808695;
+    vertical-align: middle;
+    margin-top: 0.1rem;
   }
-  #mouseover ul li a {
+  #piano ul li a {
     line-height: normal;
   }
   /*热门文章end*/
@@ -1417,7 +1397,7 @@
     width: 31.3333%;
     margin: 0 1% 1% 1%;
     padding: 0 8px;
-    font-size: 0.26rem;
+    font-size: 0.26rem!important;
     height: 0.65rem;
     line-height: 0.65rem;
     overflow: hidden;
