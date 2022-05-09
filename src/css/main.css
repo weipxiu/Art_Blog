@@ -12,6 +12,10 @@
 
 :root {
   --color: transparent;
+  --dark: #343a40;
+  --gray: #666;
+  --gray-dark: #999;
+  --gray_shallow: #eee;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -23,9 +27,6 @@
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
-  --gray: #666666;
-  --gray_shallow: #eeeeee;
-  --gray-dark: #343a40;
   --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
@@ -33,7 +34,6 @@
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
-  --dark: #343a40;
 }
 
 :not(span) {

@@ -84,7 +84,7 @@
                   'post__not_in' => array($post->ID),//排除当前文章
                   'caller_get_posts' => 1, // 排除置頂文章.
                   'orderby' => 'rand', // 随机排序.
-                  'posts_per_page' => 6 // 设置调用条数
+                  'posts_per_page' => 8 // 设置调用条数
               );
               $query_posts = new WP_Query();
               $query_posts->query($args);
@@ -105,14 +105,23 @@
 <!-- 热门标签start -->
 <div class="classif">
     <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-leimupinleifenleileibie"></i>热门标签</a></h3>
-    <?php if (get_option('weipxiu_options')['popular'] != 'on'){ ?>
-        <div class="items">
-            <?php wp_tag_cloud('number=24&orderby=count&order=DESC&smallest=12&largest=14&unit=px'); ?>
-        </div>
-    <?php }else{?>
+    <div id="tagCollection">
+      <!-- 热门标签 -->
+      <div class="items">
+        <?php wp_tag_cloud('number=30&orderby=count&order=DESC&smallest=12&largest=14&unit=px'); ?>
+      </div>
+      <?php if (get_option('weipxiu_options')['popular'] == 'on'){ ?>
+        <!-- 个人收藏 -->
         <div class="items">
             <?php echo get_option('weipxiu_options')['custom_label']; ?>
         </div>
+      <?php }?>
+    </div>
+    <?php if (get_option('weipxiu_options')['popular'] == 'on'){ ?>
+      <div class="page_switch">
+        <span class="btn_previous active"></span>
+        <span class="btn_next"></span>
+      </div>
     <?php }?>
 </div>
 <!-- 热门标签end -->
