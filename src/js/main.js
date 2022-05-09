@@ -386,6 +386,8 @@
                     skin: 'layui',
                     title: "请更换浏览器",
                     closeBtn: 0,
+                    shade:0.5,
+                    shadeClose:true,
                     anim: 4 //动画类型
                 })
             }

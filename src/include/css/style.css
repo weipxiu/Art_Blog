@@ -1,6 +1,7 @@
 body {
   background: #fff;
 }
+
 .fl {
   float: left;
 }
@@ -8,9 +9,11 @@ body {
 .fr {
   float: right;
 }
+
 .left-wrap {
   cursor: default;
 }
+
 .clearfix:after {
   content: '';
   display: block;
@@ -31,11 +34,13 @@ input,
 textarea {
   vertical-align: middle;
 }
+
 textarea {
   padding: 5px;
   border: 1px solid #ccc;
   width: 100%;
 }
+
 textarea::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -50,6 +55,7 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #bbb;
 }
+
 .url-inp {
   width: calc(100% - 100px);
 }
@@ -59,6 +65,7 @@ textarea::-webkit-scrollbar-thumb {
   font-size: 24px !important;
   text-align: center;
 }
+
 .nav-wrap {
   padding-bottom: 15px;
   margin-bottom: 0;
@@ -107,6 +114,7 @@ textarea::-webkit-scrollbar-thumb {
 .row .right-wrap {
   width: calc(100% - 135px);
 }
+
 .row .right-wrap input.url-inp {
   border: 1px solid #ccc;
 }
@@ -132,22 +140,27 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 4px;
   margin: 30px auto;
 }
+
 .warn {
   color: #e6a23c;
   transform: translateY(2px);
   display: inline-block;
   color: darkgoldenrod;
 }
+
 .danger {
   color: #f56c6c;
 }
+
 input[type='checkbox'],
 input[type='radio'] {
   margin-top: 0;
 }
+
 .border_none {
   border-bottom: none;
 }
+
 input[type='radio'] {
   margin-right: 7px;
 }
@@ -171,6 +184,7 @@ input[type='radio'] {
   border: 1px solid #409eff;
   box-shadow: none;
 }
+
 .update-nag {
   display: none;
 }
@@ -181,61 +195,93 @@ input[type='radio'] {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
   input,
   textarea {
     font-size: 14px;
   }
+
   .row {
     padding: 5px 0;
     margin: 0;
     border-top: 1px solid #f0f2f7;
   }
+
   .row .row:nth-of-type(1) {
     border: 0;
   }
+
   input[type='radio'] {
     margin-right: 7px;
     width: 16px;
     height: 16px;
     min-width: auto;
   }
+
   input[type='radio']:checked::before {
     margin: 3px;
     width: 8px;
     height: 8px;
   }
+
   .row .right-wrap {
     width: auto;
     float: none;
   }
+
   .row input.url-inp {
     width: 100%;
     text-indent: 5px;
   }
+
   .row .left-wrap {
     width: auto;
     min-width: 100px;
     text-align: left;
     margin-bottom: 5px;
   }
+
   .row input[name='img-upload'] {
     margin: 6px 0 0 5px;
   }
+
   .nav-wrap .nav-list {
     margin: 0 6px 0 0;
     padding: 6px 0px;
     width: 60px;
     text-align: center;
   }
+
   .row .right-wrap input[name='replace-skin'] {
     width: calc(100% - 55px);
   }
+
   input[type='text'] {
     padding: 0;
     min-height: 0;
   }
 }
 
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
 /* @media screen and (min-width:768px) and (max-width:1199px) {
-	
+
 } */

@@ -332,6 +332,14 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
+          <label for="copyright-notice" class="fl left-wrap">文章版权申明：</label>
+          <div class="fr right-wrap">
+            <textarea id="copyright-notice" name="copyright-notice" rows="3" cols="100" placeholder="例如：本站所有文章、图片、资源等如无特殊说明或标注，均为来自互联网或者站长原创；版权归原作者所有，仅作为个人学习、研究以及欣赏！如若本站内容侵犯了原著者的合法权益，可联系我们进行处理"><?php echo $a_options['copyright_notice']; ?></textarea>
+            <span class="warn">*文章详情页底部版权申明</span>
+          </div>
+        </div>
+
+        <div class="row clearfix">
           <label class="fl left-wrap">侧边热门标签：</label>
           <div class="fr right-wrap">
             <label for="popular_on">开</label>
@@ -733,6 +741,7 @@ function themeoptions_page() {
       'thumbnail' => $_POST['thumbnail-img'],
       'key_word' => $_POST['key-word'],
       'sidebar_notice' => $_POST['sidebar-notice'],
+      'copyright_notice' => $_POST['copyright-notice'],
       'footer_copyright' => $_POST['footer-copyright'],
       'login_css'  => $_POST['login-css'],
       'leaving_message'  => $_POST['leaving-message'],

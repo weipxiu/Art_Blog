@@ -82,6 +82,8 @@
 						skin: 'layui',
 						icon: 5,
 						closeBtn: 1,
+            shade:0.5,
+            shadeClose:true,
 						anim: 6 //动画类型
 					})
 					document.title="Sorry，当前分类没有任何文章！"
