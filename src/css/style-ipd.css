@@ -882,7 +882,7 @@
   .text h3 {
     width: calc(100% - 2rem);
     float: right;
-    line-height: 0.38rem;
+    line-height: 0.5rem;
     font-size: 0.26rem;
     font-weight: normal;
     display: -webkit-box;
@@ -3050,6 +3050,10 @@
     float: right;
     width: calc(100% - 0.92rem);
     line-height: 0.4rem;
+    font-size: 0.26rem;
+  }
+  .tuts_comments_user_avatars li a{
+    color:var(--color)
   }
   .tuts_comments_user_avatars li img {
     vertical-align: middle;

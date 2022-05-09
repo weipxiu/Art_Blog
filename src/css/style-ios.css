@@ -1322,7 +1322,7 @@
     animation-delay: 0.1s;
     float: left;
     margin: 0 1.5% 0.15rem 0;
-    padding: 0.14rem 0.18rem;
+    padding: 0.12rem 0.16rem;
   }
 
   .friendship .daily-list ul li a {
@@ -1395,7 +1395,6 @@
     width: 31.3333%;
     margin: 0 1% 1% 1%;
     padding: 0 8px;
-    font-size: 0.26rem!important;
     height: 0.65rem;
     line-height: 0.65rem;
     overflow: hidden;
@@ -3224,6 +3223,7 @@
     width: 50%;
     overflow: hidden;
     margin-bottom: 0.04rem;
+    font-size: 0.26rem;
   }
 
   .widget-title a i {
@@ -3418,6 +3418,10 @@
     width: calc(100% - 0.92rem);
     line-height: 0.4rem;
     color: #5e5e5e;
+    font-size: 0.26rem;
+  }
+  .tuts_comments_user_avatars li a{
+    color:var(--color)
   }
   .tuts_comments_user_avatars li img {
     vertical-align: middle;
