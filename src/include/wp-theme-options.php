@@ -340,7 +340,7 @@ function themeoptions_page() {
         </div>
 
         <div class="row clearfix">
-          <label class="fl left-wrap">侧边热门标签：</label>
+          <label class="fl left-wrap">热门标签收藏：</label>
           <div class="fr right-wrap">
             <label for="popular_on">开</label>
             <input
@@ -358,7 +358,7 @@ function themeoptions_page() {
               name="popular"
               value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*默认取文章标签列表，可自定义内容，以便于你更好的维护自己收藏的工具链接</span>
+            <span class="warn">*默认获取文章标签，开启后可自定义内容，以便于你更好的维护自己收藏的工具链接（支持30个）</span>
           </div>
         </div>
 
