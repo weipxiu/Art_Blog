@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-05-09 10:21:56'>
+<meta name='generator' content='WordPress/Art_Blog v2022-05-09 14:44:21'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -236,6 +236,8 @@
 							skin: 'layui',
 							title:"提示",
 							closeBtn: 1, //是否展示关闭x按钮
+              shade:0.5,
+              shadeClose:true,
 							anim: 4,
 							btn: ['确认'],
 							yes:function(){
@@ -405,6 +407,8 @@ $(function () {
 				skin: 'layui',
 				title:"提示",
 				closeBtn: 1, //是否展示关闭x按钮
+        shade:0.5,
+        shadeClose:true,
 				anim: 4,
 				btn: ['确认'],
 				yes:function(){

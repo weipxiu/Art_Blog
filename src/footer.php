@@ -85,6 +85,8 @@
               skin: 'layui',
               title: "视频初始化失败",
               closeBtn: 0,
+              shade:0.5,
+              shadeClose:true,
               anim: 4 //动画类型
           })
       };
