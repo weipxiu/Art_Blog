@@ -5732,7 +5732,6 @@
     box-shadow: none;
     background: #f0f2f7;
     font-weight: normal;
-    transition: background 0.5s;
     outline: none;
     border-radius: 4px;
   }
@@ -5811,9 +5810,9 @@
     box-shadow: none;
     padding: 10px;
     border-radius: 5px;
-    transition: background 0.3s;
     outline: none;
-    height: 100px;
+    height: auto;
+    line-height: 1.8;
   }
 
   .commentform-info {

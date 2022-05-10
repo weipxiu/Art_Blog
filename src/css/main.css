@@ -38,7 +38,27 @@
 }
 
 :not(span) {
-  color: #666;
+  color: var(--gray);
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: var(--gray_dark);
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: var(--gray_dark);;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: var(--gray_dark);;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: var(--gray_dark);;
 }
 
 strong,
