@@ -14,8 +14,10 @@
   --color: transparent;
   --dark: #343a40;
   --gray: #666;
-  --gray-dark: #999;
+  --gray_dark: #999;
+  --gray_light: #cccc;
   --gray_shallow: #eee;
+  --white: #fff;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -26,7 +28,6 @@
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
-  --white: #fff;
   --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
