@@ -703,7 +703,7 @@ function themeoptions_page() {
         <div class="row clearfix">
           <label for="time-machine" class="fl left-wrap">数据：</label>
           <div class="fr right-wrap">
-            <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[{time: '时间', text:'文案'}]"><?php echo $a_options['time_machine'] ?></textarea>
+            <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[&#10;{time: '时间1', text:'文案1'},&#10;{time: '时间2', text:'文案2'},&#10;]"><?php echo $a_options['time_machine'] ?></textarea>
             <span class="warn">*想要启用“时光机”页面，需要在后台 > 页面 > 新建页面，指定该页面模板为"时光机"，最后添加到菜单即可。可记录网站历程，又或当作说说、朋友圈记录生活琐碎。
             </span>
           </div>

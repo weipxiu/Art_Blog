@@ -531,7 +531,12 @@
       }
 
       // 滚动页面设置
-      var offset_left = null;
+      var windowHeight = $(window).height();
+      var obj_outerHeight = $roll_obj.outerHeight();
+      var continarLeftOuterHeight = $continar_left.outerHeight(true);
+      var referentHeight = $("#continar-right > div:last-of-type").outerHeight(true);
+      var isFixed = continarLeftOuterHeight >= obj_outerHeight; //左侧内容高度>右侧高度
+      var offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
       function scroll_height() {
         $scrollTop = $(document).scrollTop();
         if ($scrollTop > 500) {
@@ -552,21 +557,19 @@
           $header.removeClass("Top")
           $header.addClass("hover")
         }
-        // 右侧区域跟随
+        // 侧边栏域跟随
         if ($(window).width() > 1200 && $roll_obj.length) {
-          offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
           if (
-            (that.elementInView($("#continar-right > div:last-of-type")[0]) || ($scrollTop > $roll_obj.outerHeight()))
-            && !(that.elementInView($(".footer")[0]))
+            !(that.elementInView($(".footer")[0]))
           ) {
-            if ($scrollTop > $roll_obj.outerHeight() - $(window).height() + $("#continar-right > div:last-of-type").outerHeight() - 100 && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
-              $roll_obj.css({ "position": "fixed", "bottom": "0", "left": offset_left + "px" });
+            if ($scrollTop - (referentHeight * 2 - 10) > (obj_outerHeight - windowHeight) && isFixed) {
+              $roll_obj.css({ "position": "fixed", "bottom": "10px", "left": offset_left + "px" });
             } else {
               $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
             }
-          } else if (that.elementInView($(".footer")[0]) && ($continar_left.outerHeight() >= $roll_obj.outerHeight())) {
+          } else if (that.elementInView($(".footer")[0]) && (continarLeftOuterHeight >= obj_outerHeight)) {
             // 当出现底部时候，始终和左侧水平对齐
-            var position_bot = $(window).height() - ($continar_left.outerHeight() + ($continar_left.offset().top - $(document).scrollTop())); // 获取"#continar-left"相对于屏幕底部的距离
+            var position_bot = windowHeight - (continarLeftOuterHeight + ($continar_left.offset().top - $(document).scrollTop())); // 获取"#continar-left"相对于屏幕底部的距离
             $roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
           } else {
             $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
@@ -578,6 +581,12 @@
         scroll_height();
       });
       window.onresize = function () {
+        windowHeight = $(window).height();
+        obj_outerHeight = $roll_obj.outerHeight();
+        continarLeftOuterHeight = $continar_left.outerHeight(true);
+        referentHeight = $("#continar-right > div:last-of-type").outerHeight(true);
+        isFixed = continarLeftOuterHeight >= obj_outerHeight; //左侧内容高度>右侧高度
+        offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
         scroll_height();
       }
     },
