@@ -142,7 +142,7 @@
                  参数值：所有接口spec可选值:40、100、140、640
             -->
             <?php
-                $comments = get_comments('status=approve&number=6&order=modified');
+                $comments = get_comments('status=approve&number=5&order=modified');
                 $output = $pre_HTML;
                 foreach ($comments as $comment) {
                     $com_excerpt = $comment->comment_content;
