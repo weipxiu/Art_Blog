@@ -112,6 +112,10 @@
             else {
               leftCallBack && leftCallBack.call(this, e);
             }
+          }else{
+            $(dom).css({
+              "transform": `translateX(${parseInt(transformX)}px)`
+            })
           }
           // 重置参数
           isMove = false;
@@ -293,9 +297,9 @@
       $(".mod-header_music-icon").click(function () {
         //clearInterval(time); //清除鼠标离开li时候的定时器
         if (localStorage.getItem("off_y") != 1) {
+          // $nav_ul_li.addClass("on");
+          // $nav_ul_li.removeClass("off");
           $(this).addClass("hover");
-          $nav_ul_li.addClass("on");
-          $nav_ul_li.removeClass("off");
           localStorage.setItem("off_y", 1);
           layer.msg("菜单音乐已开启~", {
             time: 2000 //2秒关闭（如果不配置，默认是3秒）
@@ -303,9 +307,9 @@
             layer.msg("无需鼠标，导航音乐键盘A-K也可以体验哦~~");
           });
         } else {
+          // $nav_ul_li.removeClass("on");
+          // $nav_ul_li.addClass("off");
           $(this).removeClass("hover");
-          $nav_ul_li.addClass('off');
-          $nav_ul_li.removeClass('on');
           localStorage.setItem("off_y", 0);
           layer.msg('菜单音乐已关闭，期待您的下次体验！', {
             time: 4000
@@ -317,13 +321,13 @@
       //导航音乐title设置start
       $('.js_piano_nav_icon').mouseenter(function () {
         if (localStorage.getItem("off_y") != 1) {
-          layer.tips('开启全站音频', '.js_piano_nav_icon', {
+          layer.tips('开启菜单音乐', '.js_piano_nav_icon', {
             tips: 3, //3表示下面
             tipsMore: false,
             time: 2000
           });
         } else {
-          layer.tips('关闭全站音频', '.js_piano_nav_icon', {
+          layer.tips('关闭菜单音乐', '.js_piano_nav_icon', {
             tips: 3,
             tipsMore: false,
             time: 2000
