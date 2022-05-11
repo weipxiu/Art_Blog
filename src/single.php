@@ -29,6 +29,7 @@
               <!-- 面包屑导航 -->
               <div class="mod-crumbs">
                   <span class="mod-breadcrumb">
+                      <i class="iconfont icon-weizhi"></i>
                       <?php wheatv_breadcrumbs(); ?>
                   </span>
               </div>
@@ -70,7 +71,9 @@
                   </h2>
                   <?php endif; ?>
 
-                  <div class="post-motto">本站所有文章、图片、资源等如无特殊说明或标注，均为来自互联网或者站长原创；版权归原作者所有，仅作为个人学习、研究以及欣赏！如若本站内容侵犯了原著者的合法权益，可联系我们进行处理，邮箱：343049466@qq.com</div>
+                  <div class="post-motto">
+                    <?php echo get_option('weipxiu_options')['copyright_notice']; ?>
+                  </div>
 
                   <!--文章打赏start-->
                   <div class="post-actions">

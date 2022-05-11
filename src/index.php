@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-05-07 20:15:49'>
+<meta name='generator' content='WordPress/Art_Blog v2022-05-11 13:50:22'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -236,6 +236,8 @@
 							skin: 'layui',
 							title:"提示",
 							closeBtn: 1, //是否展示关闭x按钮
+              shade:0.5,
+              shadeClose:true,
 							anim: 4,
 							btn: ['确认'],
 							yes:function(){
@@ -292,7 +294,7 @@
       document.body.appendChild(create_element);
   }
 </script>
-<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/xfg_banner/banner-effect.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/banner/banner-effect.js"></script>
 <script type="text/javascript">
 $(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
@@ -405,6 +407,8 @@ $(function () {
 				skin: 'layui',
 				title:"提示",
 				closeBtn: 1, //是否展示关闭x按钮
+        shade:0.5,
+        shadeClose:true,
 				anim: 4,
 				btn: ['确认'],
 				yes:function(){

@@ -52,6 +52,7 @@
         <div id="continar-left">
             <!-- 面包屑导航 -->
             <div class="mod-breadcrumb">
+                <i class="iconfont icon-weizhi"></i>
                 <?php wheatv_breadcrumbs(); ?>
             </div>
 
@@ -132,6 +133,8 @@
                     title:"提示",
                     icon: 5,
                     closeBtn: 1,
+                    shade:0.5,
+                    shadeClose:true,
                     anim: 3 //动画类型
                 })
                 document.title="Sorry，当前关键词下未找到相关信息！"
