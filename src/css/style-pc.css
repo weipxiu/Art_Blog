@@ -865,14 +865,14 @@
 
   .nav ul.music-nav li>p {
     z-index: 0;
-    opacity: 0;
+    /* opacity: 0; */
     display: block !important;
     pointer-events: none;
   }
 
-  .nav ul.music-nav li.on>p {
+  /* .nav ul.music-nav li.on>p {
     opacity: 1;
-  }
+  } */
 
   .nav ul.music-nav li:hover p,
   .nav ul.music-nav li.active p {
@@ -4453,7 +4453,7 @@
   .footer-banner__navi {
     position: fixed;
     width: 100%;
-    height: 30px;
+    height: 20px;
     bottom: 0;
     left: 0;
     right: 0;

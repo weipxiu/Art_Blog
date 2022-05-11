@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-05-10 16:59:18'>
+<meta name='generator' content='WordPress/Art_Blog v2022-05-11 12:21:46'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -294,7 +294,7 @@
       document.body.appendChild(create_element);
   }
 </script>
-<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/xfg_banner/banner-effect.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/banner/banner-effect.js"></script>
 <script type="text/javascript">
 $(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
