@@ -72,7 +72,8 @@ var clear = function (href) {
             read: false //设置参数read:false可以阻止访问文件,加快删除速度
         })
             .pipe(clean({
-                force: true
+                force: true,
+                dryRun: true
             }));
     })
 }

@@ -312,6 +312,9 @@ remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
 add_filter('wp_default_editor', create_function('', 'return "html";'));
 //更改编辑器默认视图为HTML/文本end
 
+//去除WordPress文章中图片自动加的srcset属性
+add_filter( 'max_srcset_image_width', create_function('', 'return 1;'));
+
 //关闭wordpress各种更新，避免插件不兼容
 //add_filter('pre_site_transient_update_core',create_function('$a', "return null;")); // 关闭核心提示
 // add_filter('pre_site_transient_update_plugins',create_function('$a', "return null;")); // 关闭插件提示(去小红点)
