@@ -321,13 +321,13 @@
       //导航音乐title设置start
       $('.js_piano_nav_icon').mouseenter(function () {
         if (localStorage.getItem("off_y") != 1) {
-          layer.tips('开启全站音频', '.js_piano_nav_icon', {
+          layer.tips('开启菜单音乐', '.js_piano_nav_icon', {
             tips: 3, //3表示下面
             tipsMore: false,
             time: 2000
           });
         } else {
-          layer.tips('关闭全站音频', '.js_piano_nav_icon', {
+          layer.tips('关闭菜单音乐', '.js_piano_nav_icon', {
             tips: 3,
             tipsMore: false,
             time: 2000
