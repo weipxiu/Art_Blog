@@ -1425,10 +1425,7 @@
   .items a {
     color: var(--gray_dark);
     background-color: var(--gray_shallow);
-    float: left;
-    width: 31.3333%;
-    margin: 0 1% 1% 1%;
-    padding: 0 8px;
+    padding: 0 0.16rem;
     height: 0.65rem;
     line-height: 0.65rem;
     overflow: hidden;
@@ -3938,6 +3935,9 @@
   #tagCollection .items {
     width: 50%;
     float: left;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 0.1rem;
   }
 
   .page_switch {
