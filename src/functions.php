@@ -155,9 +155,9 @@ function lingfeng_pagenavi( $range = 4 ) {
             $paged = 1;
         }
         if( $paged != 1 ) {
-            echo "<a href='".get_pagenum_link(1) ."' class='extend' title='跳转到首页'>首页</a>";
+            echo "<a href='".get_pagenum_link(1) ."' class='home_page' title='跳转到首页'>首页</a>";
         }
-        previous_posts_link('上一页');
+        previous_posts_link('< 上一页');
         if ( $max_page >$range ) {
             if( $paged <$range ) {
                 for( $i = 1; $i <= ($range +1); $i++ ) {
@@ -180,14 +180,25 @@ function lingfeng_pagenavi( $range = 4 ) {
                     if($i==$paged)echo " class='current'";echo ">$i</a>";
                 }
             }
-        next_posts_link('下一页');
+        next_posts_link('下一页 >');
         if($paged != $max_page){
             //echo '<a href=".get_pagenum_link($max_page) ." class="extend" title='跳转到最后一页'>共'.$max_page.'页</a>';
-            echo '<a href='.get_pagenum_link($max_page) .' class="last">共 '.$max_page.' 页</a>';
+            echo '<a href='.get_pagenum_link($max_page) .' class="pagecount">共 '.$max_page.' 页</a>';
         }
         //echo '<span class="last">共'.$max_page.'页</span>';
         echo "</div>\n";
     }
+}
+//给上/下一页按钮添加指定class
+add_filter('previous_posts_link_attributes', 'prev_attributes');
+add_filter('next_posts_link_attributes', 'next_attributes');
+function prev_attributes()
+{
+    return 'class="prev"';
+}
+function next_attributes()
+{
+    return 'class="next"';
 }
 
 //文章分类统计

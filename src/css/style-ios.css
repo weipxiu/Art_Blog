@@ -45,7 +45,6 @@
   }
 
   body {
-    background-color: #f6f6f6;
     height: 100%;
     -moz-user-select: none;
     user-select: none;
@@ -737,11 +736,10 @@
 
   .continar #continar-left {
     width: 100%;
-    float: none;
-    border: 0 !important;
-    margin-bottom: 0.4rem;
   }
-
+  /* .continar .article_list{
+    padding: 0 0.26rem;
+  } */
   .continar .single {
     background: var(--white);
     padding: 0.3rem;
@@ -756,8 +754,8 @@
     padding: 0.2rem 0.26rem;
     overflow: hidden;
     background-color: var(--white);
-    margin-bottom: 0.2rem;
     transition: all 0.35s;
+    border-bottom: 1px solid var(--gray_shallow);
   }
 
   .continar .continar-left-top h1 {
@@ -835,9 +833,10 @@
 
   .continar .inner-box {
     background: var(--white);
-    padding: 0.2rem;
+    padding: 0.3rem 0.2rem;
     border-radius: 4px;
     transition: all 0.35s;
+    border-bottom: 1px solid var(--gray_shallow);
   }
 
   .continar .rssbook {
@@ -920,29 +919,28 @@
 
   /*邮件订阅end*/
 
-  #continar-left .text {
+  #continar-left .article_list article {
     background: var(--white);
     height: auto;
-    padding: 0 0.26rem 0.175rem;
-    margin-bottom: 0.2rem;
+    padding: 0.15rem 0.26rem;
     overflow: hidden;
     position: relative;
     transition: all 0.35s;
+    border-bottom: 1px solid var(--gray_shallow);
   }
 
-  #continar-left .text:nth-of-type(1) {
+  #continar-left .article_list article:nth-of-type(1) {
     margin-top: 0.2rem;
   }
 
-  #continar-left .text .text_right {
+  #continar-left .article_list article .text_right {
     float: none;
     width: 100%;
   }
 
-  #continar-left .text .text_right>h2 {
+  #continar-left .article_list article .text_right>h2 {
     word-wrap: break-word;
-    height: 0.7rem;
-    line-height: 0.7rem;
+    margin-bottom:0.15rem;
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -993,7 +991,7 @@
     display: block;
   }
 
-  .text h2 a {
+  .article_list article h2 a {
     font-size: 0.32rem;
     font-weight: normal;
     color: #444;
@@ -1001,7 +999,7 @@
     color: var(--dark);
   }
 
-  .text em {
+  .article_list article em {
     position: absolute;
     right: 15px;
     top: 149px;
@@ -1015,7 +1013,7 @@
     display: none;
   }
 
-  .text em a {
+  .article_list article em a {
     display: block;
     height: 100%;
     text-align: center;
@@ -1023,7 +1021,7 @@
     padding: 2px 12px;
   }
 
-  .text em:after {
+  .article_list article em:after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -1043,7 +1041,7 @@
     font-style: normal;
   }
 
-  .text h3 {
+  .article_list article h3 {
     width: calc(100% - 2rem);
     float: right;
     line-height: 0.38rem;
@@ -1059,8 +1057,8 @@
     overflow: hidden;
   }
 
-  .text .img-left img,
-  .text .text_right .read-more {
+  .article_list article .img-left img,
+  .article_list article .text_right .read-more {
     display: none !important;
   }
 
@@ -1168,6 +1166,7 @@
   .text_right>h2+img {
     max-width: 1.8rem;
     max-height: 1.2rem;
+    border-radius: 4px;
     float: left;
   }
 
@@ -1193,7 +1192,6 @@
 
   aside {
     background: var(--white);
-    margin-bottom: 0.2rem;
     padding: 0.26rem;
     color: var(--gray);
     transition: all 0.35s;
@@ -1223,8 +1221,6 @@
   /*热门文章start*/
   .widget {
     background: var(--white);
-    margin-bottom: 0.2rem;
-    padding: 0.26rem 0.3rem 0.08rem 0.3rem;
     transition: all 0.35s;
     border-bottom: 0;
     overflow: hidden;
@@ -1234,13 +1230,13 @@
     font-size: 0.3rem;
     color: var(--gray);
     font-weight: 700;
-    margin-bottom: 0.2rem;
+    padding: 0 0.2rem;
   }
 
   .widget-title {
-    margin-bottom: 0.26rem;
-    border-bottom: 1px solid var(--gray_shallow);
-    padding-bottom: 0.16rem;
+    background-color: #fbfbfb;
+    margin: 0;
+    padding: 0.22rem 0.3rem 0.2rem 0;
   }
 
   .widget-title a {
@@ -1343,6 +1339,10 @@
     font-size: 0.28rem;
   }
 
+  .friendship .daily-list ul {
+    overflow: hidden;
+  }
+
   .friendship ul li a {
     margin-left: 0.5rem;
   }
@@ -1368,10 +1368,6 @@
 
   #piano .widget-title {
     margin-bottom: 0.1rem;
-  }
-
-  #piano .daily-list {
-    margin-bottom: 0;
   }
 
   #piano ul li {
@@ -1406,21 +1402,19 @@
   .classif {
     clear: both;
     position: relative;
-    margin-bottom: 0.2rem;
     background-color: var(--white);
     overflow: hidden;
     transition: all 0.35s;
   }
 
-  .classif h3 {
+  .classif h3,
+  .widget h3 {
     font-size: 0.32rem;
     color: var(--gray);
-    border-bottom: 1px solid #eaeaea;
     background-color: #fbfbfb;
     margin: 0;
-    padding: 0.22rem 0.3rem 0.2rem 0;
+    padding: 0.22rem 0.14rem 0.2rem;
     position: relative;
-    text-indent: 0.14rem;
   }
 
   .items {
@@ -2138,7 +2132,7 @@
     border-radius: 2px;
     padding: 0.2rem 0.25rem;
     color: #856404;
-    background-color: var(--white)3cd;
+    background-color: #fff3cd;
     border-color: #ffeeba;
     text-indent: 0;
     font-size: 0.25rem;
@@ -2915,33 +2909,36 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin: 0.6rem 0;
+    margin: 0.45rem 0;
     text-align: -moz-center;
     *text-align: center;
     text-align: center;
   }
 
+  .wp-pagenavi a,
   .pages {
     display: none;
+  }
+
+  .wp-pagenavi a.prev,
+  .wp-pagenavi a.next {
+    display: inline-block;
   }
 
   .wp-pagenavi a,
   .pages {
     text-decoration: none;
-    background-color: #ddd;
+    background-color: #f0f4f5;
     color: var(--gray);
     padding: 0.12rem 0.3rem;
-    margin: 0;
-    font-size: 0.28rem;
-    border-radius: 2px;
-    border-left: 2px solidvar(--white);
+    font-size: .28rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin: 0 0.05rem;
   }
 
-  .wp-pagenavi a.extend {
-    display: none;
-  }
-
-  .wp-pagenavi a.last {
+  .wp-pagenavi a.pagecount,
+  .wp-pagenavi a.home_page {
     display: none;
   }
 
@@ -3290,7 +3287,11 @@
     display: none;
   }
 
-  #web-tj ul li {
+  #site_statis {
+    margin-bottom: 0.2rem;
+  }
+
+  #site_statis ul li {
     float: left;
     font-weight: normal;
     width: 50%;
@@ -3473,14 +3474,14 @@
   /* 侧边栏留言评论start */
   .tuts_comments_user_avatars {
     overflow: hidden;
-    padding: 0.26rem 0.2rem 0.24rem;
+    padding: 0.26rem 0.2rem;
   }
 
   .tuts_comments_user_avatars li {
     display: block;
     overflow: hidden;
     padding: 0.15rem 0;
-    border-bottom: 1px solid var(--gray_shallow);
+    border-bottom: 1px dashed var(--gray_shallow);
     font-size: 0.28rem;
   }
 
@@ -3504,10 +3505,6 @@
     line-height: 0.4rem;
     color: #5e5e5e;
     font-size: 0.26rem;
-  }
-
-  .tuts_comments_user_avatars li a {
-    color: var(--color)
   }
 
   .tuts_comments_user_avatars li img {

@@ -74,8 +74,8 @@
 
 <!-- 随机文章start -->
 <div class="widget" id="piano">
+    <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-suiji-copy"></i>随机文章</a></h3>
     <div class="daily-list">
-        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-suiji-copy"></i>随机文章</a></h3>
         <ul>
             <?php
               $args = array(
@@ -164,8 +164,8 @@
         if (is_home()) {
             ?>
                 <div class="widget friendship">
+                  <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
                     <div class="daily-list">
-                        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
                         <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
                         </p>
                         <ul class="friendsChain">
@@ -178,14 +178,14 @@
     ?>
 <?php }else{?>
     <div class="widget friendship">
-        <div class="daily-list">
-            <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
-            <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
-            </p>
-            <ul class="friendsChain">
-                <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
-            </ul>
-        </div>
+      <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
+      <div class="daily-list">
+          <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
+          </p>
+          <ul class="friendsChain">
+              <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+          </ul>
+      </div>
     </div>
 <?php }?>
 <!-- 友情链接end -->
@@ -194,9 +194,9 @@
 <?php
   if (get_option('weipxiu_options')['aside_count'] == 'on') {
     ?>
-      <div class="widget" id="web-tj">
+      <div class="widget" id="site_statis">
+        <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-icon"></i>站点统计</a></h3>
         <div class="daily-list">
-            <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-icon"></i>站点统计</a></h3>
             <ul>
                 <li>文章总数：
                     <?php $count_posts = wp_count_posts(); echo $published_posts = $count_posts->publish; ?> 篇

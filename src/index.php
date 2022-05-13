@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-05-11 13:50:22'>
+<meta name='generator' content='WordPress/Art_Blog v2022-05-13 11:59:54'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -171,11 +171,11 @@
 			<?php
 			if(have_posts()): while(have_posts()):the_post();*/
 			?> -->
-
+      <div class="article_list">
 				<?php
 				if(have_posts()): while(have_posts()):the_post();
 				?>
-					<article class="text">
+					<article>
 						<div class="mod-category__article-time">
 							<span><?php the_time('d') ?></span>
 							<span><?php the_time('Y-m') ?></span>
@@ -248,7 +248,8 @@
 
 				</script>
 				<?php endif; ?>
-				<?php lingfeng_pagenavi();?><!-- 分页调用 -->
+      </div>
+      <?php lingfeng_pagenavi();?><!-- 分页调用 -->
 		</div>
 		<!-- 左侧区域end -->
 
