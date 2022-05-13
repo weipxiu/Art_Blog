@@ -2559,27 +2559,27 @@
     color: var(--color);
   }
 
-  #details .log-text {
+  #about_page .log-text {
     padding-top: 0;
   }
 
-  #details ul {
+  #about_page ul {
     padding-left: 0;
   }
 
-  #details ul li {
+  #about_page ul li {
     line-height: 34px;
     font-size: 14px;
     list-style: none;
     text-indent: 2em;
   }
 
-  #details ul li span {
+  #about_page ul li span {
     flex: 1;
     padding: 5px 0;
   }
 
-  #details ul li.esp {
+  #about_page ul li.esp {
     display: flex;
   }
 
@@ -2759,18 +2759,19 @@
     background: transparent;
   }
 
-  #details #continar-left,
-  #leaving_message #continar-left {
+  #about_page #continar-left,
+  #leaving_message #continar-left,
+  .single {
     border-radius: 4px;
     background: var(--white);
-    width: auto !important;
+    width: auto!important;
     overflow: hidden;
     border-radius: 0;
     padding: 0 30px 10px;
-    float: none;
+    float: none!important;
   }
 
-  #details>div:nth-of-type(1) {
+  #about_page>div:nth-of-type(1) {
     margin-bottom: 20px;
   }
 
@@ -5872,11 +5873,17 @@
     position: relative;
   }
 
-  #commentform .iconfont {
+  #commentform .expression {
     position: absolute;
     bottom: 50px;
     left: 8px;
     cursor: pointer;
+    color: var(--gray_dark);
+  }
+
+  #commentform .iconfont {
+    padding-right:3px;
+    color: var(--gray_dark);
   }
 
   /* 评论框end */

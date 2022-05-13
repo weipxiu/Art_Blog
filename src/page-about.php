@@ -13,7 +13,7 @@ Template Name: 关于博客
 	<?php get_header();?>
 
     <!-- 正文区域start -->
-    <div class="continar" id="details">
+    <div class="continar" id="about_page">
          <div id="continar-left">
              <div class="head_user_b">
                    <div class="head_user">

@@ -108,7 +108,7 @@
     <div id="tagCollection">
       <!-- 热门标签 -->
       <div class="items">
-        <?php wp_tag_cloud('number=30&orderby=count&order=DESC&smallest=12&largest=14&unit=px'); ?>
+        <?php wp_tag_cloud('number=24&orderby=count&order=DESC&smallest=12&largest=14&unit=px'); ?>
       </div>
       <?php if (get_option('weipxiu_options')['popular'] == 'on'){ ?>
         <!-- 个人收藏 -->

@@ -34,13 +34,12 @@ if ( post_password_required() )
                 <p class="login_success">您必须<a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">登录</a>才可以发表评论！</p>
             <?php else : ?>
                 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="commentform" id="commentform">
+                    <span class="expression"><i class="iconfont icon-biaoqing"></i>表情</span>
                     <?php if ( is_user_logged_in() ) : ?>
                         <textarea class="form-control" rows="5" cols="100" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="评论提交即成功，审核后显示，请勿重复提交&#10;如您的留言有新的回复，系统会自动发送邮件通知&#10;请填写正确QQ邮箱，以便于更好的与您取得联系，否则您的留言可能会被删除！" class="form-control" tabindex="1" name="comment"></textarea>
-                        <i class="iconfont icon-biaoqing"></i>
                         <span class="warning-text">通过<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>身份已登录&nbsp;|&nbsp;<a class="link-logout" href="<?php echo wp_logout_url(get_permalink()); ?>">注销</a></span>
                     <?php else : ?>
                         <textarea class="form-control" rows="5" cols="100" id="comment" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="评论提交即成功，审核后显示，请勿重复提交；如您的留言有新的回复，系统会自动发送邮件通知。请填写正确QQ邮箱，以便于更好的与您取得联系，否则您的留言可能会被删除！" tabindex="1" name="comment"></textarea>
-                        <i class="iconfont icon-biaoqing"></i>
                         <div class="commentform-info">
                             <label id="author_name" for="author">
                                 <input class="form-control" id="author" type="text" tabindex="2" value="<?php echo $comment_author; ?>" name="author" placeholder="昵称[必填]" required>
