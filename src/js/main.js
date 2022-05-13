@@ -80,6 +80,9 @@
     // 标签、个人收藏滑动事件(移动端)
     mobileLabelSlideTab: function () {
       var bindSwiperEvent = function (dom, leftCallBack, rightCallback) {
+        if(!dom){
+          return
+        }
         var isMove = false; // 判断手势的条件
         var startX = 0; // 当前像素位置
         var distanceX = 0; // 必须滑动 滑动距离超过10px
@@ -781,7 +784,7 @@
     },
     // 表情包
     smiliesEmoticon: function () {
-      $("#commentform .iconfont").click(function () {
+      $("#commentform .expression").click(function () {
         $('#smilies_modal').toggle()
         $("#smilies_modal img").each(function () {
           $(this).attr('src', $(this).attr('data-src'))

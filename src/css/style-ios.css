@@ -4,7 +4,7 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font: 0.24rem sf-pro-text_regular, Montserrat, Microsoft Yahei;
+    font: 0.28rem sf-pro-text_regular, Montserrat, Microsoft Yahei;
     text-decoration: none;
     /*-webkit-touch-callout: none;长时间按住页面出现闪退,
     如果启用，那么图片默认长按存储到相册功能被禁止*/
@@ -742,7 +742,7 @@
   } */
   .continar .single {
     background: var(--white);
-    padding: 0.3rem;
+    padding: 0.26rem;
   }
 
   .continar #continar-left .mod-crumbs {
@@ -1108,7 +1108,6 @@
 
   .live a {
     text-decoration: none;
-    font-size: 0.26rem;
   }
 
   .live a:hover {
@@ -1637,7 +1636,7 @@
   /*----------------------------------------------------------------------------------------------*/
 
   /*关于我页面start*/
-  #details #continar-left,
+  #about_page #continar-left,
   #leaving_message #continar-left {
     border-radius: 0.1rem;
     background: var(--white);
@@ -1648,11 +1647,11 @@
     float: none;
   }
 
-  #details ul {
+  #about_page ul {
     padding-left: 0;
   }
 
-  #details ul li {
+  #about_page ul li {
     width: 100%;
     float: left;
     margin-bottom: 0.1rem;
@@ -1660,19 +1659,19 @@
     list-style: none;
   }
 
-  #details ul li span {
+  #about_page ul li span {
     display: block;
     font-size: 0.28rem;
     line-height: 0.6rem;
     flex: 1;
   }
 
-  #details ul li {
+  #about_page ul li {
     clear: both;
     font-size: 0.28rem;
   }
 
-  #details ul li.esp {
+  #about_page ul li.esp {
     display: flex;
   }
 
@@ -1702,10 +1701,6 @@
     height: 0;
   }
 
-  #continar-left p {
-    font-size: 0.36rem;
-  }
-
   #continar-left div.key-w,
   #continar-left p.text-post {
     text-indent: 0;
@@ -1717,7 +1712,8 @@
   }
 
   div.key-w {
-    margin: 0rem 0 0.85rem;
+    overflow: hidden;
+    margin-bottom:0.2rem;
   }
 
   div.key-w+.text-post {
@@ -2173,9 +2169,6 @@
     line-height: 0.36rem;
     color: var(--gray);
     font-size: 0.26rem;
-  }
-
-  p.text-post {
     overflow: hidden;
   }
 
@@ -3041,7 +3034,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  #os-herder ul.slide-left li.current-menu-item a {
+  #os-herder ul.slide-left li.current-menu-item a,#os-herder ul.slide-left li.current-menu-item .iconfont {
     color: moccasin;
   }
 
@@ -3090,7 +3083,7 @@
   }
 
   #os-herder #nav_list .sub-menu li a {
-    padding: 0;
+    padding: 0 0 0 0.46rem;
     height: 100%;
     line-height: 0.76rem;
   }
@@ -3309,7 +3302,7 @@
     border-left: 4px solid #39c;
     border-bottom: 1px solid #39c;
     color: #444;
-    width: calc(100% + 0.5rem);
+    width: calc(100% + 0.52rem);
     margin: 0.15rem 0 0.15rem -0.26rem;
     text-indent: 0;
     height: 0.8rem;
@@ -3900,14 +3893,8 @@
     font-size: 12px;
   }
 
-  #commentform {
-    position: relative;
-  }
-
   #commentform .iconfont {
-    position: absolute;
-    bottom: 1.1rem;
-    left: 0.15rem;
+    padding-right:0.1rem;
   }
 
   /* 文章评论框end */

@@ -1559,7 +1559,7 @@
   /*----------------------------------------------------------------------------------------------*/
 
   /*关于我页面start*/
-  #details #continar-left,
+  #about_page #continar-left,
   #leaving_message #continar-left {
     border-radius: 0.1rem;
     background: var(--white);
@@ -1570,11 +1570,11 @@
     float: none;
   }
 
-  #details ul {
+  #about_page ul {
     padding-left: 0;
   }
 
-  #details ul li {
+  #about_page ul li {
     width: 100%;
     font-size: 0.32rem;
     float: left;
@@ -1583,18 +1583,18 @@
     list-style: none;
   }
 
-  #details ul li span {
+  #about_page ul li span {
     display: block;
     font-size: 0.36rem;
     line-height: 0.6rem;
     flex: 1;
   }
 
-  #details ul li a {
+  #about_page ul li a {
     font-size: 0.32rem;
   }
 
-  #details ul li.esp {
+  #about_page ul li.esp {
     display: flex;
   }
 
@@ -3019,7 +3019,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  #os-herder ul.slide-left li.current-menu-item a {
+  #os-herder ul.slide-left li.current-menu-item a,#os-herder ul.slide-left li.current-menu-item .iconfont {
     color: moccasin;
   }
 
@@ -3053,8 +3053,8 @@
 
   #os-herder ul.slide-left li i {
     display: inline-block;
-    padding-right: 5px;
-    font-size: 14px;
+    padding-right: 0.1rem;
+    font-size: 0.32rem;
     color: rgba(255, 255, 255, 0.8);
   }
 
@@ -3064,7 +3064,7 @@
   }
 
   #os-herder #nav_list .sub-menu li a {
-    padding: 0;
+    padding: 0 0 0 0.5rem;
     height: 100%;
     line-height: 0.76rem;
   }
@@ -3857,14 +3857,8 @@
     font-size: 0.24rem;
   }
 
-  #commentform {
-    position: relative;
-  }
-
   #commentform .iconfont {
-    position: absolute;
-    bottom: 1.1rem;
-    left: 0.15rem;
+    padding-right:0.1rem;
     font-size: 0.28rem;
   }
 

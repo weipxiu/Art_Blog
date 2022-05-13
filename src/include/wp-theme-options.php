@@ -358,7 +358,7 @@ function themeoptions_page() {
               name="popular"
               value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*默认获取文章标签，开启后可自定义内容，以便于你更好的维护自己收藏的工具链接（支持30个）</span>
+            <span class="warn">*默认获取文章标签，开启后可自定义内容，以便于你更好的维护自己收藏的工具链接（支持24个，超出隐藏）</span>
           </div>
         </div>
 

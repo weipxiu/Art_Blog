@@ -81,3 +81,7 @@ xmp {
   margin-left: 1px;
   margin-right: 0;
 }
+
+.items a:nth-of-type(n+25) {
+  display: none;
+}

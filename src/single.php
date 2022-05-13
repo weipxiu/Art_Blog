@@ -163,12 +163,6 @@
                   </div>
           </div>
           <!-- 左侧区域end -->
-
-          <!-- 右侧区域start -->
-          <div id="continar-right">
-              <?php get_sidebar( $name ); ?>
-          </div>
-          <!-- 右侧区域end -->
         </div>
 
         <!-- 正文区域end -->
