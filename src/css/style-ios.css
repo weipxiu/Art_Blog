@@ -2067,7 +2067,7 @@
   }
 
   .article-items i.icon-liuyan1 {
-    vertical-align: middle;
+    vertical-align: text-top;
   }
 
   /* 屏蔽代码块左侧序号列表，占空间 */
