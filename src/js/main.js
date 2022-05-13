@@ -168,7 +168,7 @@
     informationLazy_load: function () {
       var that = this;
       function lazy_load() {
-        var imgList = document.querySelectorAll("#continar-left .text .Lazy_load");
+        var imgList = document.querySelectorAll("#continar-left .article_list article .Lazy_load");
         for (var i = 0; i < imgList.length; i++) {
           if (that.elementInView(imgList[i]) && imgList[i].getAttribute('data-original')) {
             imgList[i].setAttribute('src', imgList[i].getAttribute('data-original'));
