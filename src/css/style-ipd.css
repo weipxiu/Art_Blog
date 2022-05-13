@@ -1346,10 +1346,7 @@
   .items a {
     color: var(--gray_dark);
     background-color: var(--gray_shallow);
-    float: left;
-    width: 31.3333%;
-    margin: 0 1% 2%;
-    padding: 0 8px;
+    padding: 0 0.16rem;
     font-size: 0.26rem !important;
     height: 0.6rem;
     line-height: 0.6rem;
@@ -3896,6 +3893,9 @@
   #tagCollection .items {
     width: 50%;
     float: left;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 0.15rem;
   }
 
   .page_switch {
