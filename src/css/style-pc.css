@@ -2906,12 +2906,12 @@
   }
 
   h1.title {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     line-height: 40px;
     color: #555;
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   .article-items {
@@ -2921,7 +2921,7 @@
   }
 
   .article-items>span {
-    margin: 0 5px;
+    margin: 0 4px;
     color: var(--gray);
   }
 
@@ -4787,14 +4787,13 @@
     display: none;
   }
 
-  .article-items i.iconfont,
-  i.icon-zuozhe {
-    color: var(--gray);
-    font-size: 14px;
-  }
-
   .article-items i.iconfont {
-    margin-right: 2px;
+    color: var(--gray);
+    vertical-align: initial;
+    font-size: 16px;
+  }
+  .article-items i.icon-liuyan1{
+    vertical-align: middle;
   }
 
   pre {
@@ -5053,8 +5052,8 @@
   }
 
   .article-items span {
-    font-size: 12px;
     color: var(--gray);
+    font-size: 14px;
   }
 
   /* 面包屑导航end */

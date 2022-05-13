@@ -39,7 +39,12 @@
                   </h1>
                   <div class="article-items">
                       <span>
-                          <?php echo the_time('Y-m-d')?>
+                        <i class="iconfont icon-zuozhe2"></i>
+                        作者：<?php the_author_nickname(); ?>
+                      </span>
+                      <span>
+                        <i class="iconfont icon-rili1"></i>
+                        <?php echo the_time('Y-m-d')?>
                       </span>
                       <span>
                           分类：<?php
@@ -48,10 +53,12 @@
                           ?>
                       </span>
                       <span>
-                          作者：<?php the_author_nickname(); ?>
+                        <i class="iconfont icon-huo"></i>
+                        阅读（<?php echo getPostViews(get_the_ID()); ?>）
                       </span>
                       <span>
-                          阅读（<?php echo getPostViews(get_the_ID()); ?>）
+                        <i class="iconfont icon-liuyan1"></i>
+                        <?php echo number_format_i18n( get_comments_number() );?>
                       </span>
                       <!--
                       检测改文章是否被百度收录，该功能谨慎开启，它将严重拖累详情页打开速度

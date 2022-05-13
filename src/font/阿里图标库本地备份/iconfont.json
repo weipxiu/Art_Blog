@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5168535",
+      "name": "作者",
+      "font_class": "zuozhe2",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "631375",
+      "name": "火",
+      "font_class": "huo",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
       "icon_id": "478791",
       "name": "位置",
       "font_class": "weizhi",
@@ -340,13 +354,6 @@
       "font_class": "shijian",
       "unicode": "e663",
       "unicode_decimal": 58979
-    },
-    {
-      "icon_id": "1541536",
-      "name": "作者",
-      "font_class": "zuozhe",
-      "unicode": "e614",
-      "unicode_decimal": 58900
     }
   ]
 }
