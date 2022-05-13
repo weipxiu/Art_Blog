@@ -737,6 +737,7 @@
   .continar #continar-left {
     width: 100%;
   }
+
   /* .continar .article_list{
     padding: 0 0.26rem;
   } */
@@ -940,7 +941,7 @@
 
   #continar-left .article_list article .text_right>h2 {
     word-wrap: break-word;
-    margin-bottom:0.15rem;
+    margin-bottom: 0.15rem;
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -1713,7 +1714,7 @@
 
   div.key-w {
     overflow: hidden;
-    margin-bottom:0.2rem;
+    margin-bottom: 0.2rem;
   }
 
   div.key-w+.text-post {
@@ -2045,12 +2046,14 @@
     border-bottom: 1px solid var(--gray_shallow);
     padding: 0.2rem 0 0.25rem;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .article-items>span {
     color: var(--gray);
     font-size: 0.24rem;
+    margin: 0.05rem 0.1rem;
   }
 
   .article-items>span.recommend {
@@ -2059,7 +2062,12 @@
 
   .article-items>span i {
     color: var(--gray);
-    font-size: 0.24rem;
+    font-size: 0.28rem;
+    vertical-align: bottom;
+  }
+
+  .article-items i.icon-liuyan1 {
+    vertical-align: middle;
   }
 
   /* 屏蔽代码块左侧序号列表，占空间 */
@@ -3034,7 +3042,8 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  #os-herder ul.slide-left li.current-menu-item a,#os-herder ul.slide-left li.current-menu-item .iconfont {
+  #os-herder ul.slide-left li.current-menu-item a,
+  #os-herder ul.slide-left li.current-menu-item .iconfont {
     color: moccasin;
   }
 
@@ -3894,7 +3903,7 @@
   }
 
   #commentform .iconfont {
-    padding-right:0.1rem;
+    padding-right: 0.1rem;
   }
 
   /* 文章评论框end */
@@ -3923,7 +3932,7 @@
     width: 50%;
     float: left;
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3, auto);
     grid-gap: 0.1rem;
   }
 
