@@ -179,6 +179,11 @@
 <?php }else{?>
     <div class="widget friendship">
       <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
+      <!-- 获取邮箱用户地址 -->
+      <!-- <?php
+        $current_user = get_currentuserinfo();
+        echo $current_user->user_email;
+      ?> -->
       <div class="daily-list">
           <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
           </p>

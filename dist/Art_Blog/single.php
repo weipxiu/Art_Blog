@@ -3,14 +3,14 @@
 
 <head>
     <?php
-        $keywords = get_post_meta($post->ID, "keywords", true);
-        if($keywords == '') {
-            $tags = wp_get_post_tags($post->ID);
-            foreach ($tags as $tag ) {
-                $keywords = $keywords . $tag->name . ", ";
-            }
-            $keywords = rtrim($keywords, ', ');
+      $keywords = get_post_meta($post->ID, "keywords", true);
+      if($keywords == '') {
+        $tags = wp_get_post_tags($post->ID);
+        foreach ($tags as $tag ) {
+            $keywords = $keywords . $tag->name . ", ";
         }
+        $keywords = rtrim($keywords, ', ');
+      }
     ?>
     <?php get_template_part('common'); ?>
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/codecolorer.css">
@@ -28,45 +28,45 @@
           <div class="single" id="continar-left">
               <!-- 面包屑导航 -->
               <div class="mod-crumbs">
-                  <span class="mod-breadcrumb">
-                      <i class="iconfont icon-weizhi"></i>
-                      <?php wheatv_breadcrumbs(); ?>
-                  </span>
+                <span class="mod-breadcrumb">
+                  <i class="iconfont icon-weizhi"></i>
+                  <?php wheatv_breadcrumbs(); ?>
+                </span>
               </div>
               <div class="article-meta">
-                  <h1 class="title">
-                      <?php the_title(); ?>
-                  </h1>
-                  <div class="article-items">
-                      <span>
-                        <i class="iconfont icon-zuozhe2"></i>
-                        作者：<?php the_author_nickname(); ?>
-                      </span>
-                      <span>
-                        <i class="iconfont icon-rili1"></i>
-                        <?php echo the_time('Y-m-d G:i:s')?>
-                      </span>
-                      <span>
-                          分类：<?php
-                              $category = get_the_category();
-                              echo $category[0]->cat_name;
-                          ?>
-                      </span>
-                      <span>
-                        <i class="iconfont icon-huo"></i>
-                        阅读（<?php echo getPostViews(get_the_ID()); ?>）
-                      </span>
-                      <span>
-                        <i class="iconfont icon-pinglun1"></i>
-                        <?php echo number_format_i18n( get_comments_number() );?>
-                      </span>
-                      <!--
-                      检测改文章是否被百度收录，该功能谨慎开启，它将严重拖累详情页打开速度
-                      <span class="recommend" style="display:none">
-                      <?php /* baidu_record(); */?>
-                      </span>
-                      -->
-                  </div>
+                <h1 class="title">
+                    <?php the_title(); ?>
+                </h1>
+                <div class="article-items">
+                    <span>
+                      <i class="iconfont icon-zuozhe2"></i>
+                      作者：<?php the_author_nickname(); ?>
+                    </span>
+                    <span>
+                      <i class="iconfont icon-rili1"></i>
+                      <?php echo the_time('Y-m-d G:i:s')?>
+                    </span>
+                    <span>
+                      分类：<?php
+                        $category = get_the_category();
+                        echo $category[0]->cat_name;
+                      ?>
+                    </span>
+                    <span>
+                      <i class="iconfont icon-huo"></i>
+                      阅读（<?php echo getPostViews(get_the_ID()); ?>）
+                    </span>
+                    <span>
+                      <i class="iconfont icon-pinglun1"></i>
+                      <?php echo number_format_i18n( get_comments_number() );?>
+                    </span>
+                    <!--
+                    检测改文章是否被百度收录，该功能谨慎开启，它将严重拖累详情页打开速度
+                    <span class="recommend" style="display:none">
+                    <?php /* baidu_record(); */?>
+                    </span>
+                    -->
+                </div>
               </div>
 
               <div class="log-text">
@@ -74,7 +74,7 @@
                   <!--文章内容-->
                   <?php endwhile; else : ?>
                   <h2>
-                      <?php _e('Not Found'); ?>
+                     <?php _e('Not Found'); ?>
                   </h2>
                   <?php endif; ?>
 
@@ -87,10 +87,10 @@
                       <span class="post-like reward action-like">
                           <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if(isset($_COOKIE['bigfa_ding_'.$post->ID])) echo ' done';?>">
                               <i class="iconfont icon-xingxing"></i>赞(<span class="count"><?php if( get_post_meta($post->ID,'bigfa_ding',true) ){
-                                          echo get_post_meta($post->ID,'bigfa_ding',true);
-                                      } else {
-                                          echo '0';
-                                  }?></span>)
+                                      echo get_post_meta($post->ID,'bigfa_ding',true);
+                                  } else {
+                                      echo '0';
+                              }?></span>)
                           </a>
                       </span>
                       <span class="reward js_reward">

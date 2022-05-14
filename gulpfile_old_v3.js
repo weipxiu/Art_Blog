@@ -6,10 +6,11 @@ const htmlmin = require('gulp-htmlmin');//压缩html
 const scriptmin = require('gulp-uglify'); //引入js压缩模块
 //const gulpless = require('gulp-less'); //引入less转换模块
 const gulp_minify_css = require('gulp-minify-css'); //压缩css
+const phpMinify = require('@aquafadas/gulp-php-minify'); // 压缩php文件
 const concat = require('gulp-concat'); //引入合并代码模块
 const babel = require('gulp-babel'); //引入ES6转ES5模块
 //const rev = require('gulp-rev');//给静态文件资源添加hash值防缓存
-const zip = require('gulp-zip');;//打包后压缩zip
+const zip = require('gulp-zip');//打包后压缩zip
 const preprocess = require("gulp-preprocess"); //区分html,js环境变量
 const runSequence = require('run-sequence'); //流程控制，控制任务执行顺序
 const plumber = require('gulp-plumber'); //阻止报错暂停
@@ -83,7 +84,7 @@ clear()
 gulp.task("copyHtml", function () {
     //pipe后面对应的地址就是将前面路径文件拷贝复制到哪里去
     console.log('\n正在打包编译中，请稍后......................\n');
-    return gulp.src(["src/**", "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
+    return gulp.src(["src/**",'!src/*.php', "!src/*.html", "!src/js/*", "!src/css/*"]).pipe(gulp.dest(target))
 });
 
 //压缩html
@@ -127,6 +128,14 @@ gulp.task("mergeCss", function () {
             compatibility: '*'
         }))
         .pipe(gulp.dest(target + "/css"))
+});
+
+// 压缩php
+gulp.task("minPhp", function () {
+  console.log('压缩php')
+  return gulp.src('src/*.php', {read: false})
+  .pipe(phpMinify())
+  .pipe(gulp.dest(target + "/css"))
 });
 
 //图片压缩
@@ -196,6 +205,7 @@ gulp.task('compressZip', function () {
 gulp.task("Watch", function () {
     gulp.watch(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"], ['minCss']);
     gulp.watch(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"], ['mergeCss']);
+    gulp.watch(["./src/*.php"], ['minPhp']);
     gulp.watch(['./src/**/**.js'], ['jsConcat']);
     gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);
 })
@@ -209,6 +219,7 @@ gulp.task('default', function () {
         ["miniHtml",],
         ["minCss"],
         ["mergeCss"],
+        ["minPhp"],
         ["jsCopy"],
         ["jsConcat"],
         ["compressZip"],
