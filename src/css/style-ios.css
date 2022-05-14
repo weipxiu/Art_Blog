@@ -1151,13 +1151,6 @@
     vertical-align: middle;
   }
 
-  #continar-left p.l .icon-icon-eyes {
-    transform: scale(0.8);
-    display: inline-block;
-    margin-right: 0;
-    margin-bottom: -1px;
-  }
-
   #continar-left p.l .icon-liuyan1 {
     display: inline-block;
     margin-bottom: -1px;
@@ -2040,7 +2033,7 @@
   }
 
   .article-items {
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin: 0 auto;
     border-bottom: 1px solid var(--gray_shallow);
@@ -2056,6 +2049,10 @@
     margin: 0.05rem 0.1rem;
   }
 
+  .article-items>span:last-of-type{
+    display: none;
+  }
+
   .article-items>span.recommend {
     display: none;
   }
@@ -2064,10 +2061,6 @@
     color: var(--gray);
     font-size: 0.28rem;
     vertical-align: bottom;
-  }
-
-  .article-items i.icon-liuyan1 {
-    vertical-align: text-top;
   }
 
   /* 屏蔽代码块左侧序号列表，占空间 */

@@ -55,7 +55,7 @@
                   <span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
                   <span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><span><?php the_time('Y-m-d D') ?></span>
                   </span>
-                  <span><a href="<?php the_permalink(); ?> "><i class="iconfont icon-icon-eyes"></i><span><?php echo getPostViews(get_the_ID()); ?></span></a></span>
+                  <span><a href="<?php the_permalink(); ?> "><i class="iconfont icon-huo"></i><span><?php echo getPostViews(get_the_ID()); ?></span></a></span>
                   <span class="comm"><a href="<?php the_permalink(); ?> "><i class="iconfont icon-liuyan1"></i><span><?php echo number_format_i18n(get_comments_number()); ?></span></a></span>
                   <span class="post-like"><a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite<?php if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' done'; ?>"><i class="iconfont icon-xingxing"></i><span class="count"><?php if (get_post_meta($post->ID, 'bigfa_ding', true)) {echo get_post_meta($post->ID, 'bigfa_ding', true);} else {echo '0';
                     } ?></span>

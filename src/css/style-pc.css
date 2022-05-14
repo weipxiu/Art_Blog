@@ -2687,13 +2687,7 @@
   #continar-left p.l .iconfont {
     margin-right: 5px;
     font-size: 13px;
-    color: #e0e0e0;
-  }
-
-  #continar-left p.l .icon-icon-eyes {
-    display: inline-block;
-    transform: scale(0.9);
-    margin-right: 2px;
+    color: var(--gray_light);
   }
 
   #continar-left p.l * {
@@ -4789,7 +4783,7 @@
 
   .article-items i.iconfont {
     color: var(--gray);
-    vertical-align: initial;
+    vertical-align: text-bottom;
     font-size: 16px;
   }
   .article-items i.icon-liuyan1{

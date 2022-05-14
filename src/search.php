@@ -96,7 +96,7 @@
                           <span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
                           <span>
                               <a href="<?php the_permalink(); ?> ">
-                                  <i class="iconfont icon-icon-eyes"></i><?php echo getPostViews(get_the_ID()); ?>
+                                  <i class="iconfont icon-huo"></i><?php echo getPostViews(get_the_ID()); ?>
                               </a>
                           </span>
                           <span class="comm">

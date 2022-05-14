@@ -44,7 +44,7 @@
                       </span>
                       <span>
                         <i class="iconfont icon-rili1"></i>
-                        <?php echo the_time('Y-m-d')?>
+                        <?php echo the_time('Y-m-d G:i:s')?>
                       </span>
                       <span>
                           分类：<?php
@@ -57,7 +57,7 @@
                         阅读（<?php echo getPostViews(get_the_ID()); ?>）
                       </span>
                       <span>
-                        <i class="iconfont icon-liuyan1"></i>
+                        <i class="iconfont icon-pinglun1"></i>
                         <?php echo number_format_i18n( get_comments_number() );?>
                       </span>
                       <!--

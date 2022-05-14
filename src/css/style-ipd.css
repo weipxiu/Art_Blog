@@ -1063,12 +1063,6 @@
     vertical-align: middle;
   }
 
-  #continar-left p.l .icon-icon-eyes {
-    transform: scale(0.9);
-    display: inline-block;
-    margin-right: 0;
-  }
-
   .text_right>h2+img {
     max-width: 1.8rem;
     max-height: 1.2rem;
@@ -2051,6 +2045,10 @@
     margin: 0.05rem 0.1rem;
   }
 
+  .article-items>span:last-of-type{
+    display: none;
+  }
+
   .article-items>span.recommend {
     display: none;
   }
@@ -2059,10 +2057,6 @@
     color: var(--gray);
     font-size: 0.28rem;
     vertical-align: initial;
-  }
-
-  .article-items i.icon-liuyan1 {
-    vertical-align: text-top;
   }
 
   /* .codecolorer-container.solarized-dark table td.line-numbers {
