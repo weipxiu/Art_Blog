@@ -125,9 +125,9 @@
 <script type="text/javascript">
 	function getColor(){
 		<?php if (trim(get_option('weipxiu_options')['replace_skin'])){ ?>
-			document.documentElement.style.setProperty('--color', '<?php echo trim(get_option('weipxiu_options')['replace_skin']); ?>')
+			document.documentElement.style.setProperty('--color-theme', '<?php echo trim(get_option('weipxiu_options')['replace_skin']); ?>')
 		<?php }else{?>
-			document.documentElement.style.setProperty('--color', '#1890ff')
+			document.documentElement.style.setProperty('--color-theme', 'var(--color-primary)')
 		<?php }?>
 	}
 	getColor()

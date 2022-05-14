@@ -11,54 +11,62 @@
 }
 
 :root {
-  --color: transparent;
-  --dark: #343a40;
-  --gray: #666;
-  --gray_dark: #999;
-  --gray_light: #cccc;
-  --gray_shallow: #eee;
-  --white: #fff;
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
+  --color-theme: transparent;
+  --color-primary: #1890ff;
+  --color-dark: #343a40;
+  --color-gray: #666;
+  --color-gray_dark: #999;
+  --color-gray_light: #cccc;
+  --color-gray_shallow: #eee;
+  --color-white: #fff;
+  /* 导航 */
+  --color-red_shallow: #f17559;
+  --color-yellow_shallow: #f2b25b;
+  --color-golden: #f0dc59;
+  --color-silver_yellow: #bbf15b;
+  --color-violetred: #59e5f2;
+  --color-blue: #5b9ff2;
+  --color-purple: #6c59f1;
+
+  /* 备用选项 */
+  --color-main-background: #f8f8f9;
+  --color-border: #e9eaed;
+  --color-indigo: #6610f2;
+  --color-pink: #e83e8c;
+  --color-orange: #fd7e14;
+  --color-yellow: #ffc107;
+  --color-green: #28a745;
+  --color-teal: #20c997;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-info: #17a2b8;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-light: #f8f9fa;
 }
 
 :not(span) {
-  color: var(--gray);
+  color: var(--color-gray);
 }
 
 ::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: var(--gray_dark);
+  color: var(--color-gray_dark);
 }
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: var(--gray_dark);;
+  color: var(--color-gray_dark);;
 }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: var(--gray_dark);;
+  color: var(--color-gray_dark);;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: var(--gray_dark);;
+  color: var(--color-gray_dark);;
 }
 
 strong,

@@ -22,6 +22,11 @@ $(function () {
     var ajaxsearchPath = null;
     var ajaxua = jQuery.browser;
 
+    // 没有指定的dom时候不执行
+    if (!jQuery('#' + ajaxcontent).length) {
+      return
+    }
+
     jQuery(document).ready(function () {
         ajaxloadPageInit("");
     });
@@ -80,8 +85,7 @@ $(function () {
                 } else {
                 }
             }
-            if (!jQuery('#' + ajaxcontent)) {
-            }
+
             // jQuery('#' + ajaxcontent).append(ajaxloading_code);
             jQuery('#loading').show()
             jQuery('#' + ajaxcontent).fadeTo("slow", 1, function () {

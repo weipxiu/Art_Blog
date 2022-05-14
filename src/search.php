@@ -25,7 +25,7 @@
         .bdcs-container .bdcs-search-form-submit {
             color: #fff;
             border: none;
-            background: #1890ff;
+            background: var(--color-primary);
             font-size: 16px;
             padding: 0 12px;
             border-radius: 0 2px 2px 0;

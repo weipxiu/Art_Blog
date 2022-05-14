@@ -8,7 +8,7 @@ Template Name: 时光机
 <head>
 <title><?php wp_title( '-', true, 'right' ); ?>不忘初心方得始终&nbsp;|&nbsp;唯品秀前端技术博客</title>
 <?php get_template_part('common'); ?><style>
-a{color: #1890ff;text-decoration: none;}
+a{color: var(--color-primary);text-decoration: none;}
 :not(span){color: #666;}
 html{height:auto;}
 body{background-image:-webkit-linear-gradient(180deg, #FFFEF9, #EED6CC);background-image:linear-gradient(180deg,#FFFEF9,#EED6CC);}
@@ -17,7 +17,7 @@ a:hover{text-decoration: underline;}
 #header{ background:#fff; border-radius:5px; line-height:48px; font-size:16px; font-weight:bold;  box-shadow:0 5px 7px rgba(0,0,0,0.2); color:#ed145b;}
 #footer{ height:30px; border-radius:5px; line-height:30px; text-align:center; position:relative;z-index:10; margin-top:40px}
 #footer a,#footer p{ display:inline-block;}
-#footer a{ text-decoration:none;background:#d5ccc8;line-height:22px;padding:0 10px; color:#555; border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.5);margin:0 5px; opacity:0; transition:.5s;}
+#footer a{ text-decoration:none;background:#d5ccc8;line-height:22px;padding:3px 15px; color:#555; border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.5);margin:0 5px; opacity:0; transition:.5s;}
 #footer a:active,#footer .active{box-shadow: 0 1px 3px rgba(0,0,0,0.5);color: #fff;}
 #messageList{margin-left:100px;border-left:1px solid #fff;height:0; transition:1s;}
 #messageList li{padding:5px 0; position:relative; min-height:100px; -webkit-perspective:800px; -webkit-perspective-origin:left 30px; }
@@ -25,7 +25,7 @@ a:hover{text-decoration: underline;}
 #messageList .pic{width:60px;height:60px;border:5px solid #fff;border-radius:50%; position:absolute;left:-100px;top:0;background:url(<?php echo get_option('weipxiu_options')['time_portrait'] ?>) center no-repeat; box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); background-size:60px 60px}
 #messageList .ico{ width:12px;height:12px;background:#f7ebe6;border:3px solid #fff;border-radius:50%;box-shadow:inset 0 2px 5px rgba(0,0,0,0.2),0 5px 7px rgba(0,0,0,0.2); position:absolute;left:-6px;top:23px;}
 #messageList .text{margin: 0 30px; background: #f7ebe6; line-height: 32px; padding: 10px 20px; height: auto;}
-#messageList .text a{color: #1890ff;color: var(--color);}
+#messageList .text a{color: var(--color-primary);color: var(--color--theme);}
 #messageList .content{height: 38px;background: #fff; border-radius: 4px 4px 0 0;box-shadow: 0 6px 10px -6px rgba(0,0,0,0.1);
 padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:center;text-indent: 0;}
 #messageList .reply{ -webkit-transform-origin:center -5px; -webkit-transform:rotateX(-180deg);opacity:0;transition:.6s cubic-bezier(0.280, 0.695, 0.580, 1.450); border: 1px solid #fff;box-shadow: 0 3px 7px rgba(0,0,0,0.1);}
