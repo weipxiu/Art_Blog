@@ -52,7 +52,7 @@
       // 文章详情页点赞
       this.pageDetailsFabulous();
       //纸飞机
-      // this.paperPlane();
+      this.paperPlane();
       // 在线交流
       this.customerService();
       // 友情链接加背景颜色
@@ -538,7 +538,7 @@
       }
 
       // 滚动页面设置，不是列表页面不执行
-      if (!jQuery('#continar-left').length) {
+      if (!$('#continar-left').length) {
         return
       }
       var windowHeight = $(window).height();
