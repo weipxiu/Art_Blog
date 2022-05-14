@@ -1,0 +1,287 @@
+body {
+  background: #fff;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.left-wrap {
+  cursor: default;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.highlighted {
+  background: #d4d4d4;
+  color: #d8296d;
+}
+
+input,
+textarea {
+  vertical-align: middle;
+}
+
+textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f1f1ef;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1ef;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #bbb;
+}
+
+.url-inp {
+  width: calc(100% - 100px);
+}
+
+/* 导航切换页面 */
+.wrap h2 {
+  font-size: 24px !important;
+  text-align: center;
+}
+
+.nav-wrap {
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-wrap .nav-list {
+  float: left;
+  font-size: 12px;
+  margin: 0 10px 0 0;
+  padding: 6px 20px;
+  border-radius: 2px;
+  background: #409eff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.nav-wrap .nav-list.on {
+  background: #67c23a;
+}
+
+/*  */
+
+.content-wrap {
+  display: none;
+}
+
+.content-wrap:first-of-type {
+  display: block;
+}
+
+.row {
+  padding-bottom: 5px;
+  /* border-bottom: 1px dashed #ccc; */
+  line-height: 26px;
+  margin: 5px 0;
+}
+
+.row .left-wrap {
+  width: 125px;
+  text-align: right;
+}
+
+.row .right-wrap {
+  width: calc(100% - 135px);
+}
+
+.row .right-wrap input.url-inp {
+  border: 1px solid #ccc;
+}
+
+.row .fixed-wrap input[type='text'] {
+  border: 1px solid #ccc;
+}
+
+.btn-wrap {
+  border: 0;
+}
+
+.submit-btn {
+  display: block;
+  padding: 9px 15px;
+  line-height: 1;
+  font-size: 14px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background: #409eff;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 30px auto;
+}
+
+.warn {
+  color: #e6a23c;
+  transform: translateY(2px);
+  display: inline-block;
+  color: darkgoldenrod;
+}
+
+.danger {
+  color: #f56c6c;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  margin-top: 0;
+}
+
+.border_none {
+  border-bottom: none;
+}
+
+input[type='radio'] {
+  margin-right: 7px;
+}
+
+.row input[name='img-upload'] {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  padding: 7px 12px;
+  margin: 1px 0 0 5px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #409eff;
+  border: 1px solid #409eff;
+  box-shadow: none;
+}
+
+.update-nag {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .submit-btn {
+    margin: 30px auto -100px;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  .row {
+    padding: 5px 0;
+    margin: 0;
+    border-top: 1px solid #f0f2f7;
+  }
+
+  .row .row:nth-of-type(1) {
+    border: 0;
+  }
+
+  input[type='radio'] {
+    margin-right: 7px;
+    width: 16px;
+    height: 16px;
+    min-width: auto;
+  }
+
+  input[type='radio']:checked::before {
+    margin: 3px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .row .right-wrap {
+    width: auto;
+    float: none;
+  }
+
+  .row input.url-inp {
+    width: 100%;
+    text-indent: 5px;
+  }
+
+  .row .left-wrap {
+    width: auto;
+    min-width: 100px;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .row input[name='img-upload'] {
+    margin: 6px 0 0 5px;
+  }
+
+  .nav-wrap .nav-list {
+    margin: 0 6px 0 0;
+    padding: 6px 0px;
+    width: 60px;
+    text-align: center;
+  }
+
+  .row .right-wrap input[name='replace-skin'] {
+    width: calc(100% - 55px);
+  }
+
+  input[type='text'] {
+    padding: 0;
+    min-height: 0;
+  }
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
+/* @media screen and (min-width:768px) and (max-width:1199px) {
+
+} */
