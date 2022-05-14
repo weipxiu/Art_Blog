@@ -1346,11 +1346,11 @@
     background-color: var(--color-gray_shallow);
     padding: 0 0.16rem;
     font-size: 0.26rem !important;
-    height: 0.6rem;
-    line-height: 0.6rem;
+    line-height: 0.7rem;
     overflow: hidden;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
+    font-size: 0.24rem!important;
   }
 
   /*技术分类end*/

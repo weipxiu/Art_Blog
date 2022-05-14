@@ -1423,6 +1423,7 @@
     line-height: 0.65rem;
     overflow: hidden;
     transition: all 0.35s;
+    font-size: 0.24rem!important;
   }
 
   /*技术分类end*/
