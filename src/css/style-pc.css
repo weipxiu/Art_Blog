@@ -876,7 +876,7 @@
 
   .nav ul.music-nav li:hover p,
   .nav ul.music-nav li.active p {
-    height: 64px;
+    height: 65px;
     border-radius: 0;
   }
 
@@ -4361,6 +4361,7 @@
     margin: 0;
     transition: 0.1s;
     font-weight: 500;
+    user-select:none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;

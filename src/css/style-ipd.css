@@ -45,6 +45,7 @@
     border-top: 1px solid transparent;
     overflow-x: hidden;
     width: 100%;
+    user-select:none;
     -moz-user-select: none;
     user-select: none;
     -ms-user-select: none;
@@ -3229,6 +3230,7 @@
     margin: 0;
     transition: 0.1s;
     font-weight: 500;
+    user-select:none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
