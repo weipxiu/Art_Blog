@@ -919,14 +919,15 @@
   }
 
   .nav ul li.action>a span,
+  .nav li.current-menu-item a i,
   #nav_list li.current-category-ancestor>a span,
   #nav_list ul li.current-category-ancestor .iconfont,
   #nav_list li.current-menu-ancestorm>a span,
   #header li.current-menu-parent>a span,
   #nav_list li.current-menu-parent>a span i,
   #nav_list li.current-category-parentt>a span,
-  #nav_list li.current-menu-item a,
-  #nav_list li.current-menu-item a .iconfont {
+  #nav_list li.current-menu-item a
+  {
     color: var(--color-primary);
     color: var(--color-theme);
   }
@@ -936,19 +937,17 @@
     z-index: 13;
   }
 
-  .nav ul li:hover a span {
+  .nav ul#nav_list li:hover a span {
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s;
-    color: var(--color-primary);
-    color: var(--color-theme);
+    color: var(--color-white);
   }
 
-  .nav ul li:hover a span i {
+  .nav ul#nav_list li:hover a span i {
     display: inline-block;
     line-height: 30px;
-    color: var(--color-primary);
-    color: var(--color-theme);
+    color: var(--color-white);
   }
 
   .nav ul li:hover a span i.menu_arrow {

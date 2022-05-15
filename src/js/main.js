@@ -8,6 +8,7 @@
     $header = $("#header"),
     $os_herder = $("#os-herder"),
     $aircraft = $("#aircraft"),
+    $header_music_ico = $(".mod-header_music-icon"),
     $roll_obj = $('#continar-right'),
     $scrollTop = $(document).scrollTop(),
     $continar_left = $("#continar-left"),
@@ -70,11 +71,11 @@
       if (localStorage.getItem("off_y") != 1) {
         localStorage.setItem("off_y", 0);
         $nav_ul_li.removeClass("on");
-        $(".mod-header_music-icon").removeClass('hover');
+        $header_music_ico.removeClass('hover');
       } else {
         localStorage.setItem("off_y", 1);
         $nav_ul_li.addClass("on");
-        $(".mod-header_music-icon").addClass('hover');
+        $header_music_ico.addClass('hover');
       }
     },
     // 标签、个人收藏滑动事件(移动端)
@@ -297,7 +298,7 @@
       //钢琴导航end
 
       // 跳动音符start
-      $(".mod-header_music-icon").click(function () {
+      $header_music_ico.click(function () {
         //clearInterval(time); //清除鼠标离开li时候的定时器
         if (localStorage.getItem("off_y") != 1) {
           // $nav_ul_li.addClass("on");
