@@ -30,7 +30,10 @@
 
 ## 如何使用它
 
-I、方式一：直接下载，找到项目文件的Art_Blog.zip压缩包，即是已打包好的主题源码，通过后台主题上传，启用主题即可。方式二：将项目中dist文件夹下Art_Blog整个`文件夹`上传到线上：`/根目录/wp-content/themes/`目录下，启用主题，`推荐使用方式二`
+I、基本用法
+- 方式一：[点击下载Zip压缩包](https://github.com/weipxiu/Art_Blog/releases)，后台上传主题包，启用主题即可。
+- 方式二：将项目下载，根目录找到dist文件夹下Art_Blog整个`文件夹`、通过FTP上传至：`/根目录/wp-content/themes/`目录下，启用主题
+- 注：`推荐使用方式二`
 
 II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v12.x为宜，更多自测），dist里的文件就是Art_Blog.zip里的文件
 
