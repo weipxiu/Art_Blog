@@ -4,7 +4,7 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font: 0.28rem sf-pro-text_regular, Montserrat, Microsoft Yahei;
+    font: 0.26rem sf-pro-text_regular, Montserrat, Microsoft Yahei;
     text-decoration: none;
     /*-webkit-touch-callout: none;长时间按住页面出现闪退,
     如果启用，那么图片默认长按存储到相册功能被禁止*/
@@ -817,7 +817,7 @@
     margin-top: 0.12rem;
     line-height: 0.5rem;
     color: var(--color-gray);
-    font-size: 0.28rem;
+    font-size: 0.27rem;
     line-height: 0.42rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -857,7 +857,7 @@
   }
 
   .rssbook p {
-    font-size: 0.28rem !important;
+    font-size: 0.27rem !important;
     margin: 0.1rem auto;
     line-height: 0.48rem;
     color: var(--color-gray);
@@ -993,7 +993,7 @@
   }
 
   .article_list article h2 a {
-    font-size: 0.32rem;
+    font-size: 0.3rem;
     font-weight: normal;
     color: #444;
     transition: all 0.35s;
@@ -1046,7 +1046,7 @@
     width: calc(100% - 2rem);
     float: right;
     line-height: 0.38rem;
-    font-size: 0.26rem;
+    font-size: 0.25rem;
     font-weight: normal;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -1242,11 +1242,11 @@
 
   .daily-list>p {
     font-weight: normal;
-    font-size: 0.28rem;
+    font-size: 0.26rem;
     border-bottom: 1px solid var(--color-gray_shallow);
     padding-bottom: 0.12rem;
     margin-bottom: 0.2rem;
-    line-height: 0.56rem;
+    line-height: 0.54rem;
     color: #5e5e5e;
   }
 
@@ -1329,7 +1329,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
-    font-size: 0.28rem;
+    font-size: 0.27rem;
   }
 
   .friendship .daily-list ul {
@@ -1423,7 +1423,7 @@
     line-height: 0.65rem;
     overflow: hidden;
     transition: all 0.35s;
-    font-size: 0.24rem!important;
+    font-size: 0.25rem!important;
   }
 
   /*技术分类end*/
@@ -2923,7 +2923,7 @@
     background-color: #f0f4f5;
     color: var(--color-gray);
     padding: 0.12rem 0.3rem;
-    font-size: .28rem;
+    font-size: .24rem;
     border-radius: 4px;
     border: 1px solid #dee2e6;
     margin: 0 0.05rem;

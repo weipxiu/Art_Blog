@@ -791,7 +791,7 @@
     margin: 0.15rem 0 0rem;
     line-height: 0.5rem;
     color: var(--color-gray);
-    font-size: 0.3rem;
+    font-size: 0.28rem;
     line-height: 0.42rem;
     line-clamp: 2;
     box-orient: vertical;
@@ -825,7 +825,7 @@
   }
 
   .rssbook p {
-    font-size: 0.3rem !important;
+    font-size: 0.28rem !important;
     margin: 5px auto 10px;
     line-height: 24px;
     color: var(--color-gray);
@@ -1084,7 +1084,6 @@
     height: auto;
     float: none;
     margin-bottom: 0px;
-    margin-top: 0.3rem;
     transform: translateX(0px);
     -ms-transform: translateX(0px);
     display: none;
@@ -1268,7 +1267,7 @@
     animation-delay: 0.1s;
     float: left;
     margin: 0 2% 0.2rem 0;
-    padding: 0.16rem 0.2rem;
+    padding: 0.14rem 0.2rem;
   }
 
   .friendship .daily-list ul li a {
@@ -1277,6 +1276,7 @@
     color: var(--color-white);
     display: inline;
     line-height: normal;
+    font-size: 0.26rem;
   }
 
   #piano .widget-title {
@@ -1350,7 +1350,7 @@
     overflow: hidden;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
-    font-size: 0.24rem!important;
+    font-size: 0.26rem!important;
   }
 
   /*技术分类end*/
