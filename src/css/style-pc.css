@@ -2096,28 +2096,18 @@
 
   .friendship .daily-list ul {
     padding: 0 15px 4px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 8px;
   }
 
   .friendship .daily-list ul li {
     line-height: 26px;
-    height: 27px;
-    margin: 0 4px 10px 0;
-    padding: 5px;
     text-align: center;
     border-radius: 5px;
-    animation-delay: 0.1s;
-    float: left;
-    margin-bottom: 8px;
-    padding: 0px 6px;
-    width: auto;
-    border-bottom: 0;
-  }
-
-  .friendship .daily-list ul li img {
-    display: none;
+    animation-delay: .1s;
+    padding: 2px 0;
+    margin-bottom:0;
   }
 
   .friendship .daily-list ul li a {
@@ -2127,7 +2117,7 @@
     padding: 0;
     line-height: 100%;
     color: var(--color-white);
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .friendship .daily-list ul li a:hover {
