@@ -4291,7 +4291,8 @@
   }
 
   .communication ul li.wechat img {
-    width: 100%;
+    width: 85px;
+    height: 85px;
   }
 
   /*在线交流end*/
