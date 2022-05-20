@@ -8,7 +8,7 @@
     $header = $("#header"),
     $os_herder = $("#os-herder"),
     $aircraft = $("#aircraft"),
-    $header_music_ico = $(".mod-header_music-icon"),
+    $header_music_icon = $(".mod-header_music-icon"),
     $roll_obj = $('#continar-right'),
     $scrollTop = $(document).scrollTop(),
     $continar_left = $("#continar-left"),
@@ -69,19 +69,15 @@
     // 初始化音乐导航菜单
     inintMusicNav: function () {
       if (localStorage.getItem("off_y") != 1) {
-        localStorage.setItem("off_y", 0);
-        $nav_ul_li.removeClass("on");
-        $header_music_ico.removeClass('hover');
+        $header_music_icon.removeClass('hover');
       } else {
-        localStorage.setItem("off_y", 1);
-        $nav_ul_li.addClass("on");
-        $header_music_ico.addClass('hover');
+        $header_music_icon.addClass('hover');
       }
     },
     // 标签、个人收藏滑动事件(移动端)
     mobileLabelSlideTab: function () {
       var bindSwiperEvent = function (dom, leftCallBack, rightCallback) {
-        if(!dom){
+        if (!dom) {
           return
         }
         var isMove = false; // 判断手势的条件
@@ -116,7 +112,7 @@
             else {
               leftCallBack && leftCallBack.call(this, e);
             }
-          }else{
+          } else {
             $(dom).css({
               "transform": `translateX(${parseInt(transformX)}px)`
             })
@@ -298,12 +294,11 @@
       //钢琴导航end
 
       // 跳动音符start
-      $header_music_ico.click(function () {
+      $header_music_icon = $(".mod-header_music-icon");
+      $('#nav_list').on('click', $header_music_icon, function (e) {
         //clearInterval(time); //清除鼠标离开li时候的定时器
         if (localStorage.getItem("off_y") != 1) {
-          // $nav_ul_li.addClass("on");
-          // $nav_ul_li.removeClass("off");
-          $(this).addClass("hover");
+          $header_music_icon.addClass("hover");
           localStorage.setItem("off_y", 1);
           layer.msg("菜单音乐已开启~", {
             time: 2000 //2秒关闭（如果不配置，默认是3秒）
@@ -311,9 +306,7 @@
             layer.msg("无需鼠标，导航音乐键盘A-K也可以体验哦~~");
           });
         } else {
-          // $nav_ul_li.removeClass("on");
-          // $nav_ul_li.addClass("off");
-          $(this).removeClass("hover");
+          $header_music_icon.removeClass("hover");
           localStorage.setItem("off_y", 0);
           layer.msg('菜单音乐已关闭，期待您的下次体验！', {
             time: 4000

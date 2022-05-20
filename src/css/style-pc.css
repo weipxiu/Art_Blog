@@ -865,14 +865,9 @@
 
   .nav ul.music-nav li>p {
     z-index: 0;
-    /* opacity: 0; */
     display: block !important;
     pointer-events: none;
   }
-
-  /* .nav ul.music-nav li.on>p {
-    opacity: 1;
-  } */
 
   .nav ul.music-nav li:hover p,
   .nav ul.music-nav li.active p {
@@ -885,8 +880,6 @@
     height: 48px;
   }
 
-  .nav ul li.on:hover a span,
-  .nav ul li.on:hover a span i,
   #header .nav ul li.keyboard_color>a span,
   #header .nav ul li.keyboard_color>a span i {
     color: var(--color-white);
