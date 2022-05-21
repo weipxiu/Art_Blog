@@ -6,14 +6,14 @@
   // 全局变量
   let $xis = $("#m_search"),
     $header = $("#header"),
-    $os_herder = $("#os-herder"),
     $aircraft = $("#aircraft"),
-    $header_music_icon = $(".mod-header_music-icon"),
+    $os_herder = $("#os-herder"),
+    $nav_ul_li = $("#nav_list > li"),
     $roll_obj = $('#continar-right'),
     $scrollTop = $(document).scrollTop(),
     $continar_left = $("#continar-left"),
     $mouseover_ul_li = $("#piano ul li"),
-    $nav_ul_li = $(".nav ul.music-nav > li"),
+    $header_music_icon = $(".mod-header_music-icon"),
     $os_headertop_site_search = $(".os-headertop .site-search");
   function App() { }
   App.prototype = {
@@ -295,8 +295,7 @@
 
       // 跳动音符start
       $header_music_icon = $(".mod-header_music-icon");
-      $('#nav_list').on('click', $header_music_icon, function (e) {
-        //clearInterval(time); //清除鼠标离开li时候的定时器
+      $header_music_icon.click(function (event) {
         if (localStorage.getItem("off_y") != 1) {
           $header_music_icon.addClass("hover");
           localStorage.setItem("off_y", 1);
@@ -312,7 +311,8 @@
             time: 4000
           });
         }
-      });
+        event.stopPropagation();
+      })
       // 跳动音符end
 
       //导航音乐title设置start
