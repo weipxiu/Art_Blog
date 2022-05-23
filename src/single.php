@@ -39,7 +39,7 @@
                 </h1>
                 <div class="article-items">
                     <span>
-                      <i class="iconfont icon-zuozhe2"></i>
+                      <i class="iconfont icon-zuozhe_custom"></i>
                       作者：<?php the_author_nickname(); ?>
                     </span>
                     <span>
