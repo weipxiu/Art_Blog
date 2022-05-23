@@ -241,7 +241,6 @@
         if (localStorage.getItem("off_y") == 1) {
           $(this).addClass("active");
           musicObj.get(0).play();
-
         } else {
           setTimeout(() => {
             musicObj.get(0).load();
