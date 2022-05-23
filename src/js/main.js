@@ -196,7 +196,7 @@
           node_list.eq(i).children('a').addClass('icon_show');
         }
         //追加音乐标签
-        node_list.eq(i).append(`<audio src='/wp-content/themes/Art_Blog/music/nav_${i + 1}.mp3' preload='preload'></audio><p></p>`);
+        node_list.eq(i).append(`<audio src='/wp-content/themes/Art_Blog/music/nav_${i + 1}.mp3' preload='meta'></audio>`);
       }
       //二级菜单父级禁止跳转
       $("#nav_list .sub-menu").siblings('a').attr('href', 'javascript:void(0);');
@@ -207,7 +207,7 @@
       $("#header .sub-menu").addClass('nav-min');
       $("#os-herder .sub-menu").addClass('slide_slect');
       //追加音乐开关
-      var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a><p></p>" + `<audio src='/wp-content/themes/Art_Blog/music/nav_${node_list.length + 1}.mp3' preload='preload'></audio><p></p>` + "</li>" + "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' preload='preload'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
+      var dom_node = "<li id='backstage' style='display:none'><a href='/wp-admin/' target='_blank'><span>后台管理</span><span>后台管理</span></a>" + `<audio src='/wp-content/themes/Art_Blog/music/nav_${node_list.length + 1}.mp3' preload='meta'></audio>` + "</li>" + "<li class='js_piano_nav_icon mod-header_music-icon'>" + "<audio src='' preload='meta'></audio>" + "<i></i><i></i><i></i><i></i><i></i></li>"
       $("#header .music-nav").append(dom_node);
     },
     // 3D导航跳动音符
@@ -231,26 +231,25 @@
       })
 
       var queue = [];
+      var musicType = localStorage.getItem("off_y");
       musicList.mouseenter(function () {
         clearTimeout(time2)
         $(this).addClass('active');
-        queue.push($(this).index())
+        queue.push({
+          index: $(this).index(),
+          element: musicList.eq($index).find('audio')
+        });
         $header.css("z-index", "12");
         $index = $(this).index();
-        musicObj = musicList.eq($index).find('audio');
-        if (localStorage.getItem("off_y") == 1) {
-          $(this).addClass("active");
-          musicObj.get(0).play();
-        } else {
-          setTimeout(() => {
-            musicObj.get(0).load();
-          }, 500)
+        if (musicType == 1) {
+          queue[queue.length - 1].element.get(0).load();
+          queue[queue.length - 1].element.get(0).play();
         }
       })
       musicList.mouseleave(function () {
         if (queue.length > 0) {
           setTimeout(() => {
-            musicList.eq(queue[0]).removeClass('active');
+            musicList.eq(queue[0].index).removeClass('active');
             queue.shift();
           }, 250)
         }
@@ -895,7 +894,7 @@
       // 底部悬浮登录注册end
 
       // 二级菜单下拉列表个数兼容无限
-      var time = 50;
+      var time = 45;
       $nav_ul_li.find('.sub-menu').each(function (i) {
         $(this).find('li').each(function (i) {
           $(this).css("transition-delay", i * time + 'ms')
