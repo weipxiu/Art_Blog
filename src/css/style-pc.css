@@ -479,7 +479,6 @@
 
   .header-body {
     height: 100%;
-    border-top: 1px solid var(--color-white);
     box-sizing: border-box;
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-white)), to(#d4d7db));
     background: -moz-linear-gradient(top, var(--color-white), #d4d7db);
@@ -761,6 +760,7 @@
   }
 
   .nav ul.music-nav {
+    height:100%;
     margin-right: 75px;
     float: right;
     max-width: calc(100% - 430px);
