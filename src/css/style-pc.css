@@ -690,11 +690,13 @@
 
   .brand {
     float: left;
-    margin: 15px 0 0 15px;
+    max-width: 185px;
+    margin: 16px 0 0 15px;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
     float: left\9;
+    position: relative;
   }
 
   #header.hover .brand {
@@ -708,7 +710,9 @@
     content: '';
     border-left: 1px solid #bbb;
     height: 30px;
-    float: left;
+    position: absolute;
+    top: 1px;
+    left: 0;
   }
 
   .brand p {
@@ -718,6 +722,10 @@
     color: var(--color-gray_dark);
     -webkit-transition: all 0.6s;
     transition: all 0.6s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    width:100%;
   }
 
   .brand p:hover {
@@ -753,8 +761,11 @@
   }
 
   .nav ul.music-nav {
-    margin-right: 70px;
+    margin-right: 75px;
     float: right;
+    max-width: calc(100% - 430px);
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav ul.music-nav>li>a {
@@ -819,7 +830,10 @@
     height: 32px;
     line-height: 32px;
     color: var(--color-gray);
-    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
   }
 
   .nav ul.music-nav li:nth-child(1) p {
@@ -901,7 +915,7 @@
 
   .nav ul li a span:nth-of-type(2) {
     position: absolute;
-    left: 10px;
+    left: 0px;
     top: -22px;
     -webkit-transform-origin: bottom;
     transform-origin: bottom;
@@ -955,10 +969,10 @@
 
   .nav .nav-min {
     position: absolute;
-    width: 100px;
+    width: 100%;
     height: auto;
     max-height: 0;
-    left: calc(50% - 50px);
+    left: 0;
     top: 63px;
     z-index: 13;
   }
@@ -1406,7 +1420,7 @@
 
   #aircraft {
     position: fixed;
-    bottom: 50px;
+    bottom: 60px;
     right: 25px;
     width: 38px;
     height: 64px;
@@ -6123,7 +6137,7 @@
     bottom: 0px;
     left: 0px;
     width: 100%;
-    z-index: 9999;
+    z-index: 15;
   }
 
   .login_alert_close {
@@ -6149,15 +6163,15 @@
 
   .login_alert_box {
     background-color: rgba(0, 0, 0, 0.6);
-    height: 80px;
+    height: 70px;
     width: 100%;
     text-align: center;
   }
 
   .login_alert_box div {
     color: var(--color-white);
-    font-size: 24px;
-    line-height: 80px;
+    font-size: 22px;
+    line-height: 70px;
     cursor: default;
   }
 
@@ -6165,7 +6179,7 @@
     text-decoration: none;
     display: inline-block;
     padding: 5px 15px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     border-radius: 4px;
   }

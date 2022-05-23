@@ -513,7 +513,7 @@
               }, 700, function () {
                 setTimeout(function () {
                   $aircraft.css({
-                    "bottom": "50px",
+                    "bottom": "60px",
                     "top": "auto",
                     "opacity": "1"
                   })
