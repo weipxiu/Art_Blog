@@ -1028,10 +1028,11 @@
     height: 15px;
     position: absolute;
     bottom: 8px;
-    background-color: var(--color-gray);
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 40%);
   }
 
   i {
