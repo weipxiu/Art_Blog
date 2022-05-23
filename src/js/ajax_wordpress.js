@@ -180,8 +180,9 @@ $(function () {
         }
     }
 
+    //成功回调
     function ajaxreload_code() {
-        //add code here
+      jQuery(".mod-index__feature .img_list_6pic a").removeClass("word_display");
     }
 
     function ajaxclick_code(thiss) {
