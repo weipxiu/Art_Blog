@@ -231,7 +231,6 @@
       })
 
       var queue = [];
-      var musicType = localStorage.getItem("off_y");
       musicList.mouseenter(function () {
         clearTimeout(time2)
         $(this).addClass('active');
@@ -241,7 +240,7 @@
         });
         $header.css("z-index", "12");
         $index = $(this).index();
-        if (musicType == 1) {
+        if (localStorage.getItem("off_y") == 1) {
           queue[queue.length - 1].element.get(0).load();
           queue[queue.length - 1].element.get(0).play();
         }
