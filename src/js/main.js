@@ -532,12 +532,41 @@
       if (!$('#continar-left').length) {
         return
       }
-      var windowHeight = $(window).height();
-      var obj_outerHeight = $roll_obj.outerHeight();
-      var continarLeftOuterHeight = $continar_left.outerHeight(true);
-      var referentHeight = $("#continar-right > div:last-of-type").outerHeight(true);
-      var isFixed = continarLeftOuterHeight >= obj_outerHeight; //左侧内容高度>右侧高度
-      var offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
+      var windowHeight = 0;
+      var obj_outerHeight = 0;
+      var continarLeftOuterHeight = 0;
+      var referentHeight = 0;
+      var isFixed = 0; //左侧内容高度>右侧高度
+      var offset_left = 0;
+
+      function inintGetdata() {
+        windowHeight = $(window).height();
+        obj_outerHeight = $roll_obj.outerHeight();
+        continarLeftOuterHeight = $continar_left.outerHeight(true);
+        referentHeight = $("#continar-right > div:last-of-type").outerHeight(true);
+        isFixed = continarLeftOuterHeight >= obj_outerHeight; //左侧内容高度>右侧高度
+        offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
+      }
+
+      // 函数节流
+      function conduct(fn, delay, masExac) {
+        var timer;
+        var lastTime = new Date();
+        return function (arg) {
+          var now = new Date();
+          clearTimeout(timer)
+          if (now - lastTime < masExac) {
+            timer = setTimeout(() => {
+              fn(arg);
+              lastTime = now;
+            }, delay)
+          } else {
+            fn(arg);
+            lastTime = now;
+          }
+        }
+      }
+
       function scroll_height() {
         $scrollTop = $(document).scrollTop();
         if ($scrollTop > 500) {
@@ -577,17 +606,15 @@
           }
         }
       }
-      scroll_height()
+
+      scroll_height();
+      var throttle = conduct(inintGetdata, 1000, 2000)
       $(document).scroll(function () {
+        throttle();
         scroll_height();
       });
       window.onresize = function () {
-        windowHeight = $(window).height();
-        obj_outerHeight = $roll_obj.outerHeight();
-        continarLeftOuterHeight = $continar_left.outerHeight(true);
-        referentHeight = $("#continar-right > div:last-of-type").outerHeight(true);
-        isFixed = continarLeftOuterHeight >= obj_outerHeight; //左侧内容高度>右侧高度
-        offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
+        throttle();
         scroll_height();
       }
     },
