@@ -1479,6 +1479,7 @@
   .continar .continar-left-top {
     width: 100%;
     padding: 15px 20px;
+    box-sizing: border-box;
     overflow: hidden;
     background-color: var(--color-white);
     border-radius: 4px 4px 0 0;
