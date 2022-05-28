@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-05-26 08:50:52'>
+<meta name='generator' content='WordPress/Art_Blog v2022-05-28 21:03:57'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -115,7 +115,7 @@
 			<aside class="continar-left-top">
 				<?php
 				$args = array(
-					'post_password' => '',
+					'post_password' => '', // 文章密码
 					'post_status' => 'publish', // 只选公开的文章.
 					//'post__not_in' => array($post->ID),//排除当前文章
 					'caller_get_posts' => 1, // 排除置頂文章.

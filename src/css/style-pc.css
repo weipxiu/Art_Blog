@@ -815,6 +815,7 @@
     line-height: 32px;
     transition: transform 0.5s;
     z-index: 2;
+    text-decoration: none;
   }
 
   .nav ul li audio {
