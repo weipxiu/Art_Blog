@@ -48,7 +48,9 @@
 
   body {
     background: #f6f6f6;
-    background-repeat: repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*background-repeat: repeat;
     background-attachment: scroll;
     background-clip: border-box;
     background-origin: padding-box;
@@ -58,12 +60,12 @@
     overflow-x: hidden;
     border-top: 1px solid transparent;
     width: 100%;
-    /* -webkit-user-select: none;
+    禁止文字选中
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+     */
   }
 
   body::-webkit-scrollbar {
