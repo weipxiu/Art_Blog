@@ -711,7 +711,7 @@
 
   .continar {
     width: 100%;
-    margin: 1rem auto 0 !important;
+    margin: 0 auto;
     -webkit-transition: -webkit-transform 0.25s;
     transition: -webkit-transform 0.25s;
     transition: transform 0.25s;
@@ -3101,7 +3101,7 @@
     background: var(--color-theme);
     line-height: 1rem;
     text-align: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 97;
