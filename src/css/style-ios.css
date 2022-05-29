@@ -3670,6 +3670,13 @@
     margin-bottom: 0.2rem;
   }
 
+  .single video{
+    width: 100%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
+
   .single_page h1 {
     text-align: center;
     color: var(--color-gray);

@@ -719,6 +719,13 @@
     border: 1px solid #e6e6e6;
   }
 
+  .single video{
+    width: 100%;
+    height:auto;
+    margin: 0 auto;
+    display: block;
+  }
+
   .continar #continar-left .mod-crumbs {
     display: none;
   }

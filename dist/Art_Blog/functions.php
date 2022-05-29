@@ -396,23 +396,29 @@ add_action('after_wp_tiny_mce', 'add_button_mce');
 //扩展发表文章编辑器的导航标签
 function add_button_mce($mce_settings) {
 ?>
-    <script type="text/javascript">
-        QTags.addButton( 'a', 'a', "<a href='' target='_blank'>", "</a>" );
-        QTags.addButton( 'span', 'span', "<span>", "</span>" );
-        QTags.addButton( '重点', '重点', "<span class='beCareful'>", "</span>" );
-        QTags.addButton( '加密内容', '加密内容', "[secret key='123']", "[/secret]" );
-        QTags.addButton( '视频', '视频', "[embed]", "[/embed]" );
-        QTags.addButton( '登录可见', '登录可见', "[login_success]", "[/login_success]" );
-        QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
-        QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='demo'>", "在线预览</a>" );
-        QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "\n[/cc]" );
-        QTags.addButton( 'CSS代码', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
-        QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "\n[/cc]" );
-        QTags.addButton( 'PHP代码', 'PHP代码', "[cc lang='php']\n", "\n[/cc]" );
-        QTags.addButton( 'p', 'p', "<p>", "</p>" );
-        QTags.addButton( 'h2', 'h2', "<h2>", "</h2>" );
-        QTags.addButton( 'h3', 'h3', "<h3>", "</h3>" );
-    </script>
+<script type="text/javascript">
+QTags.addButton( '自定义扩展>>>', "", "", "" );
+QTags.addButton( 'a', 'a', "<a href='' target='_blank'>", "</a>" );
+QTags.addButton( 'span', 'span', "<span>", "</span>" );
+QTags.addButton( '重点', '重点', "<span class='beCareful'>", "</span>" );
+QTags.addButton( '加密内容', '加密内容', "[secret key='密码']", "[/secret]" );
+QTags.addButton( '登录可见', '登录可见', "[login_success]", "[/login_success]" );
+QTags.addButton( '视频', '视频',
+  `<video height="300" controls poster="视频封面地址(不设置的话pc浏览器一般会获取视频第一帧作为封面，移动端空白)">
+  <source src="" type="video/mp4">`,
+"\n</video>" );
+QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
+QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='demo'>", "在线预览</a>" );
+QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "\n[/cc]" );
+QTags.addButton( 'CSS代码', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
+QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "\n[/cc]" );
+QTags.addButton( 'ul', 'ul', "<ul>\n", "\n</ul>" );
+QTags.addButton( 'ol', 'ol', "<ol>\n", "\n</ol>" );
+QTags.addButton( 'li', 'li', "  <li>", "</li>" );
+QTags.addButton( 'p', 'p', "<p>", "</p>" );
+QTags.addButton( 'h2', 'h2', "<h2>", "</h2>" );
+QTags.addButton( 'h3', 'h3', "<h3>", "</h3>" );
+</script>
 <?php
 }
 
