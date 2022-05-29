@@ -691,7 +691,7 @@
   .continar {
     width: 100%;
     height: calc(100% - 1rem);
-    margin: 1.2rem auto 0 !important;
+    margin: 0 auto;
     overflow: hidden;
   }
 
@@ -3091,7 +3091,7 @@
     background: var(--color-theme);
     background-size: 100% 100%;
     text-align: center;
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 97;

@@ -503,6 +503,7 @@
               $('body,html').animate({
                 scrollTop: 0
               }, 1200);
+              $header.css("z-index", "10");
               $aircraft.animate({
                 "top": "0",
                 "bottom": "auto",
@@ -582,10 +583,12 @@
         }
         if ($scrollTop <= 0) {
           $header.addClass("Top")
-          $header.removeClass("hover")
+          $header.removeClass("hover");
+          $header.css("z-index", "10");
         } else {
-          $header.removeClass("Top")
-          $header.addClass("hover")
+          $header.removeClass("Top");
+          $header.addClass("hover");
+          $header.css("z-index", "12");
         }
         // 侧边栏域跟随
         if ($(window).width() > 1200 && $roll_obj.length) {
