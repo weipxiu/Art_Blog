@@ -49,7 +49,7 @@
   body {
     width: 100%;
     overflow-x: hidden;
-    background: #f8f8f8;
+    background: #f6f6f6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /*background-repeat: repeat;
@@ -447,11 +447,10 @@
     /* background: var(--color-white); */
     /* background: -webkit-gradient(linear,left top,left bottom,from(var(--color-white)),to(#d4d7db));
     background: -moz-linear-gradient(top,var(--color-white),#d4d7db); */
-    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background: -webkit-gradient(linear, left top, left bottom, from(var(--color-white)), to(#eee));
-    background: -moz-linear-gradient(top, var(--color-white), #eee);
-    background: linear-gradient(var(--color-white), #eee);
+    /* background: -moz-linear-gradient(top, var(--color-white), #eee);
+    background: linear-gradient(var(--color-white), #eee); */
   }
 
   @keyframes speed_bar_animation {
