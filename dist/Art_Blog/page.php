@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
     <title><?php wp_title( '-', true, 'right' ); ?><?php echo get_bloginfo('description'); ?></title>
     <?php get_template_part('common'); ?>

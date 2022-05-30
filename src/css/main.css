@@ -1,95 +1,144 @@
 ﻿/**
  * 多端全局css
  */
-@charset "utf-8";
+ @charset "utf-8";
 
-@font-face {
-  font-family: 'sf-pro-text_regular';
-  font-style: normal;
-  font-weight: 400;
-  src: local('☺︎'), url('../font/sf-pro-text_regular.woff2') format('woff2');
-}
+ @font-face {
+   font-family: 'sf-pro-text_regular';
+   font-style: normal;
+   font-weight: 400;
+   src: local('☺︎'), url('../font/sf-pro-text_regular.woff2') format('woff2');
+ }
 
-:root {
-  --color-theme: transparent;
-  --color-primary: #1890ff;
-  --color-dark: #343a40;
-  --color-gray: #666;
-  --color-gray_dark: #999;
-  --color-gray_light: #cccc;
-  --color-gray_shallow: #eee;
-  --color-white: #fff;
-  /* 导航 */
-  --color-red_shallow: #f17559;
-  --color-yellow_shallow: #f2b25b;
-  --color-golden: #f0dc59;
-  --color-silver_yellow: #bbf15b;
-  --color-violetred: #59e5f2;
-  --color-blue: #5b9ff2;
-  --color-purple: #6c59f1;
+ .light {
+   --color-theme: transparent;
+   --color-primary: #1890ff;
+   --color-dark: #343a40;
+   --color-gray: #666;
+   --color-gray_dark: #999;
+   --color-gray_light: #cccc;
+   --color-gray_shallow: #eee;
+   --color-white: #fff;
+   --color-background: #f6f6f6;
+   --background-secondary: #f5f5f5;
+   --img-opcity:1;
+   /* 导航 */
+   --color-red_shallow: #f17559;
+   --color-yellow_shallow: #f2b25b;
+   --color-golden: #f0dc59;
+   --color-silver_yellow: #bbf15b;
+   --color-violetred: #59e5f2;
+   --color-blue: #5b9ff2;
+   --color-purple: #6c59f1;
 
-  /* 备用选项 */
-  --color-main-background: #f8f8f9;
-  --color-border: #e9eaed;
-  --color-indigo: #6610f2;
-  --color-pink: #e83e8c;
-  --color-orange: #fd7e14;
-  --color-yellow: #ffc107;
-  --color-green: #28a745;
-  --color-teal: #20c997;
-  --color-secondary: #6c757d;
-  --color-success: #28a745;
-  --color-info: #17a2b8;
-  --color-warning: #ffc107;
-  --color-danger: #dc3545;
-  --color-light: #f8f9fa;
-}
+   /* 备用选项 */
+   --color-main-background: #f8f8f9;
+   --color-border: #e9eaed;
+   --color-indigo: #6610f2;
+   --color-pink: #e83e8c;
+   --color-orange: #fd7e14;
+   --color-yellow: #ffc107;
+   --color-green: #28a745;
+   --color-teal: #20c997;
+   --color-secondary: #6c757d;
+   --color-success: #28a745;
+   --color-info: #17a2b8;
+   --color-warning: #ffc107;
+   --color-danger: #dc3545;
+   --color-light: #f8f9fa;
+   color-scheme: light;
+ }
 
-:not(span) {
-  color: var(--color-gray);
-}
+ .dark {
+   --color-theme: #fff;
+   --color-primary: #1b1b1b;
+   --color-dark: #fff;
+   --color-gray: #cdcdcd;
+   --color-gray_dark: #cdcdcda6;
+   --color-gray_light: #cccc;
+   --color-gray_shallow: #eee;
+   --color-white: #343434;
+   --color-background: #1b1b1b;
+   --img-opcity:0.6;
+   --background-secondary: transparent;
+   /* 导航 */
+   --color-red_shallow: #f17559;
+   --color-yellow_shallow: #f2b25b;
+   --color-golden: #f0dc59;
+   --color-silver_yellow: #bbf15b;
+   --color-violetred: #59e5f2;
+   --color-blue: #5b9ff2;
+   --color-purple: #6c59f1;
+   color-scheme: dark;
+ }
 
-::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: var(--color-gray_dark);
-}
+ :not(span) {
+   color: var(--color-gray);
+ }
 
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: var(--color-gray_dark);;
-}
+ ::-webkit-input-placeholder {
+   /* WebKit browsers */
+   color: var(--color-gray_dark);
+ }
 
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: var(--color-gray_dark);;
-}
+ :-moz-placeholder {
+   /* Mozilla Firefox 4 to 18 */
+   color: var(--color-gray_dark);;
+ }
 
-:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: var(--color-gray_dark);;
-}
+ ::-moz-placeholder {
+   /* Mozilla Firefox 19+ */
+   color: var(--color-gray_dark);;
+ }
 
-strong,
-b {
-  font-weight: bold;
-  font-size: 115%;
-  line-height: 2.4;
-}
+ :-ms-input-placeholder {
+   /* Internet Explorer 10+ */
+   color: var(--color-gray_dark);;
+ }
 
-img[src=''],
-img:not([src]) {
+ strong,
+ b {
+   font-weight: bold;
+   font-size: 115%;
+   line-height: 2.4;
+ }
+
+ img{
+   opacity: var(--img-opcity);
+ }
+
+ img[src=''],
+ img:not([src]) {
+   display: none;
+ }
+
+ xmp {
+   display: initial;
+ }
+
+ #header .nav ul li a span i.menu_arrow {
+   margin-left: 1px;
+   margin-right: 0;
+ }
+
+ .items a:nth-of-type(n+25) {
+   display: none;
+ }
+
+ /* 暗黑模式 */
+ .dark .footer-banner__navi{
   display: none;
-}
+ }
 
-xmp {
-  display: initial;
-}
+ .dark .header-body{
+  background: var(--color-background);
+ }
 
-#header .nav ul li a span i.menu_arrow {
-  margin-left: 1px;
-  margin-right: 0;
-}
+ .dark .footer{
+  background: var(--color-background);
+ }
 
-.items a:nth-of-type(n+25) {
-  display: none;
-}
+ .dark  #continar-left .post-motto{
+  background: var(--color-background);
+  color: var(--color-dark);
+ }

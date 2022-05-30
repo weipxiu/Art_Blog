@@ -5,7 +5,7 @@ Template Name: 404页面
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

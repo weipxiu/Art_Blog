@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="baidu-site-verification" content="cNP7vhhXuw" />
 <meta name="Author" content="<?php echo get_bloginfo('description'); ?>" />
+<meta name="color-scheme" content="light dark">
 <?php if (is_single()){ ?>
 <title><?php the_title(); ?>&nbsp;-&nbsp;<?php echo get_bloginfo('description'); ?></title>
 <?php } ?>

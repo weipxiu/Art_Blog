@@ -4,7 +4,7 @@ Template Name: 关于博客
 */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
     <title><?php wp_title( '-', true, 'right' ); ?>平凡有一点理想&nbsp;-&nbsp;渴望让世界不一样&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
     <?php get_template_part('common'); ?>

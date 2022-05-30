@@ -51,6 +51,7 @@
     -ms-user-select: none;
     /*chrome、safari*/
     -moz-osx-font-smoothing: grayscale;
+    background: var(--color-background);
   }
 
   /*初始化代码end*/

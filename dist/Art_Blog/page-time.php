@@ -4,7 +4,7 @@ Template Name: 时光机
 */
 ?>
 <!doctype html>
-<html>
+<html class="light">
 <head>
 <title><?php wp_title( '-', true, 'right' ); ?>不忘初心方得始终&nbsp;|&nbsp;唯品秀前端技术博客</title>
 <?php get_template_part('common'); ?><style>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-05-29 22:25:13'>
+<meta name='generator' content='WordPress/Art_Blog v2022-05-30 10:36:06'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');

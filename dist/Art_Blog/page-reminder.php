@@ -4,7 +4,7 @@ Template Name: 升级浏览器
 */
 ?>
 <!doctype html>
-<html>
+<html class="light">
 
 <head>
 	<title>温馨提示：您的浏览器需要更新才能访问哦^_^</title>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 
 <head>
     <title><?php the_title(); ?>&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
