@@ -25,7 +25,7 @@
 <link rel="dns-prefetch" href="<?php echo esc_url( home_url() ); ?>">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_option('weipxiu_options')['label_logo']; ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style_min.css">
-<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_6bl3hg7mcq4.css">
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_385244_89q3fa9ye2q.css">
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/layer/layer.js"></script>
 <!-- 判断低版本IE -->

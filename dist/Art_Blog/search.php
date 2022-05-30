@@ -92,8 +92,8 @@
                                           <i class="">&nbsp;</i><?php /*echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); */?>
                                       </a>
                                   </span> -->
-                          <span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
-                          <span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
+                          <span class="p_time"><i class="iconfont icon-shijian1" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
+                          <span class="i_time"><i class="iconfont icon-shijian1" aria-hidden="true"></i><?php the_time('Y-m-d D') ?></span>
                           <span>
                               <a href="<?php the_permalink(); ?> ">
                                   <i class="iconfont icon-huo"></i><?php echo getPostViews(get_the_ID()); ?>

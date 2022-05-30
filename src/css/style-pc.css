@@ -49,7 +49,7 @@
   body {
     width: 100%;
     overflow-x: hidden;
-    background: #f6f6f6;
+    background: #f8f8f8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /*background-repeat: repeat;
@@ -154,6 +154,7 @@
 
   .mod-banner {
     position: relative;
+    z-index:10;
     width: 100%;
     /*max-height: 300px;*/
     margin-top: 10px;
@@ -447,7 +448,10 @@
     /* background: -webkit-gradient(linear,left top,left bottom,from(var(--color-white)),to(#d4d7db));
     background: -moz-linear-gradient(top,var(--color-white),#d4d7db); */
     -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-white)), to(#eee));
+    background: -moz-linear-gradient(top, var(--color-white), #eee);
+    background: linear-gradient(var(--color-white), #eee);
   }
 
   @keyframes speed_bar_animation {
@@ -482,10 +486,6 @@
   .header-body {
     height: 100%;
     box-sizing: border-box;
-    background: -webkit-gradient(linear, left top, left bottom, from(var(--color-white)), to(#d4d7db));
-    background: -moz-linear-gradient(top, var(--color-white), #d4d7db);
-    background: linear-gradient(var(--color-white), #d4d7db);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   }
 
   .site-search.active {
@@ -551,9 +551,6 @@
     height: 48px;
     opacity: 1;
     z-index: 100 !important;
-    background: rgba(255, 255, 255, 0.9);
-    -webkit-box-shadow: 0 0 10px var(--color-gray_light);
-    box-shadow: 0 0 10px var(--color-gray_light);
   }
 
   #header.hover .site-search.active {
