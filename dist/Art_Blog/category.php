@@ -52,8 +52,8 @@
                 </h3>
                 <a class="read-more read_url" href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">阅读全文<i class="iconfont icon-jiantou-you-cuxiantiao-fill"></i></a>
                 <p class="l">
-                  <span class="p_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
-                  <span class="i_time"><i class="iconfont icon-shijian" aria-hidden="true"></i><span><?php the_time('Y-m-d D') ?></span>
+                  <span class="p_time"><i class="iconfont icon-shijian1" aria-hidden="true"></i><?php the_time('Y年m月d日 H:i:s D') ?></span>
+                  <span class="i_time"><i class="iconfont icon-shijian1" aria-hidden="true"></i><span><?php the_time('Y-m-d D') ?></span>
                   </span>
                   <span><a href="<?php the_permalink(); ?> "><i class="iconfont icon-huo"></i><span><?php echo getPostViews(get_the_ID()); ?></span></a></span>
                   <span class="comm"><a href="<?php the_permalink(); ?> "><i class="iconfont icon-liuyan1"></i><span><?php echo number_format_i18n(get_comments_number()); ?></span></a></span>
