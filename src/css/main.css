@@ -92,7 +92,11 @@ img:not([src]) {
 xmp {
   display: initial;
 }
-
+.log-text .beCareful{
+  color: #d14;
+  font-size:95%;
+  background-color: #f9f2f4;
+}
 #header .nav ul li a span i.menu_arrow {
   margin-left: 1px;
   margin-right: 0;
