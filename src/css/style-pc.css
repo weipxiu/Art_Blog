@@ -421,6 +421,10 @@
     height: 300px;
     margin: 0 auto;
     z-index: 10;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   #js_banner #banner_img div{
@@ -1471,6 +1475,10 @@
   .continar #continar-left {
     width: 850px;
     float: left;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .continar .single {
@@ -1968,6 +1976,10 @@
   #continar-right {
     width: 340px;
     float: right;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   #continar-right .aside {
@@ -3041,7 +3053,7 @@
   }
 
   #continar-left .post-motto {
-    margin: 30px 0 20px;
+    margin: 25px 0;
     transition: all 0.3s;
     line-height: 2;
     border-radius: 2px;

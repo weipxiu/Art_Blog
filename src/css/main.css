@@ -69,12 +69,13 @@
   color: var(--color-gray_dark);;
 }
 
-body{
+ body{
   /* 开启硬件加速，让3d动画更流畅，防止页面出现空白/闪烁 */
-  -webkit-transform: translate3d(0,0,0);
+  /* 该方法影响子元素position:fixed定位 */
+ /* -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); */
 }
 
 strong,
