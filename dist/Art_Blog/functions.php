@@ -409,11 +409,11 @@ QTags.addButton( '视频', '视频',
 "\n</video>" );
 QTags.addButton( '前言', '前言', "<p class='con_info'>", "</p>" );
 QTags.addButton( '在线预览', '在线预览', "<a href='' target='_blank' id='demo'>", "在线预览</a>" );
-QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "\n[/cc]" );
-QTags.addButton( 'CSS代码', 'CSS代码', "[cc lang='css']\n", "\n[/cc]" );
-QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "\n[/cc]" );
-QTags.addButton( 'ul', 'ul', "<ul>\n", "\n</ul>" );
-QTags.addButton( 'ol', 'ol', "<ol>\n", "\n</ol>" );
+QTags.addButton( 'HTML代码', 'HTML代码', "[cc lang='html']\n", "[/cc]" );
+QTags.addButton( 'CSS代码', 'CSS代码', "[cc lang='css']\n", "[/cc]" );
+QTags.addButton( 'JavaScript代码', 'JavaScript代码', "[cc lang='javascript']\n", "[/cc]" );
+QTags.addButton( 'ul', 'ul', "<ul>\n", "</ul>" );
+QTags.addButton( 'ol', 'ol', "<ol>\n", "</ol>" );
 QTags.addButton( 'li', 'li', "  <li>", "</li>" );
 QTags.addButton( 'p', 'p', "<p>", "</p>" );
 QTags.addButton( 'h2', 'h2', "<h2>", "</h2>" );
