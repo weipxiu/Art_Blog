@@ -423,6 +423,10 @@
     z-index: 10;
   }
 
+  #js_banner #banner_img div{
+    pointer-events: none;
+  }
+
   #js_banner+.continar {
     margin-top: 10px;
   }

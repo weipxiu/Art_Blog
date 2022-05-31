@@ -159,7 +159,7 @@
     },
     // dom是否在可视区内
     elementInView: function (element) {
-      const rect = element.getBoundingClientRect()
+      const rect = element.getBoundingClientRect();//获取元素位置，这个方法没有参数
       const y = rect.top < window.innerHeight && rect.bottom > 0
       const x = rect.left < window.innerWidth && rect.right > 0
       return y && x
