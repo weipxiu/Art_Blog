@@ -2373,6 +2373,9 @@
     text-align: center;
     width: 100%;
     background: url(../images/footer_bg.jpg) center center repeat-x;
+    /* 避免因为轮播动画导致页面闪烁，详情参考：https://www.weipxiu.com/8506.html */
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
   }
 
   .footer a {
