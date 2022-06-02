@@ -153,9 +153,9 @@
     },
     // 网页顶部加载进度条
     loadBar: function () {
-      window.onload = function () {
+      $(document).ready(function () {
         $("header .speed_bar").css({ 'animation': 'speed_bar_animation_complete .5s ease-out', 'animation-fill-mode': 'forwards' })
-      }
+      })
     },
     // dom是否在可视区内
     elementInView: function (element) {
@@ -216,15 +216,20 @@
       var that = this;
       var time2 = null;
       var $index = null;
-      var musicObj = null;
       var musicList = $(".nav ul.music-nav > li:not(.mod-header_music-icon)");
       $header.hover(function () {
+        clearTimeout(time2);
         $(this).css("z-index", "12");
       }, function () {
         //如果出现搜索的情况下，头部层级自然还是要比轮播高
-        if (!time2 && !$(".site-search").is(":visible")) {
+        if (!$(".site-search").is(":visible")) {
           //避免在正常时候下方轮播分割旋转时候被遮盖
-          $header.css("z-index", "10");
+          clearTimeout(time2);
+          time2 = setTimeout(() => {
+            if (!$(".site-search").is(":visible")) {
+              $header.css("z-index", "10");
+            }
+          }, 1500)
         } else {
           $header.css("z-index", "12");
         }
@@ -232,13 +237,13 @@
 
       var queue = [];
       musicList.mouseenter(function () {
-        clearTimeout(time2)
+        clearTimeout(time2);
+        $header.css("z-index", "12");
         $(this).addClass('active');
         queue.push({
           index: $(this).index(),
           element: musicList.eq($index).find('audio')
         });
-        $header.css("z-index", "12");
         $index = $(this).index();
         if (localStorage.getItem("off_y") == 1) {
           queue[queue.length - 1].element.get(0).load();
@@ -252,12 +257,6 @@
             queue.shift();
           }, 250)
         }
-        //避免在正常时候下方轮播分割旋转时候被遮盖
-        time2 = setTimeout(() => {
-          if (!$(".site-search").is(":visible")) {
-            $header.css("z-index", "10");
-          }
-        }, 1000)
       })
 
       function musicdown(number) {
@@ -529,10 +528,6 @@
         })
       }
 
-      // 滚动页面设置，不是列表页面不执行
-      if (!$('#continar-left').length) {
-        return
-      }
       var windowHeight = 0;
       var obj_outerHeight = 0;
       var continarLeftOuterHeight = 0;
@@ -604,14 +599,20 @@
             // 当出现底部时候，始终和左侧水平对齐
             var position_bot = windowHeight - (continarLeftOuterHeight + ($continar_left.offset().top - $(document).scrollTop())); // 获取"#continar-left"相对于屏幕底部的距离
             $roll_obj.css({ "position": "fixed", "bottom": position_bot + "px", "left": offset_left + "px" });
+
           } else {
             $roll_obj.css({ "position": "static", "bottom": "auto", "left": "auto" });
           }
         }
       }
 
-      scroll_height();
       var throttle = conduct(inintGetdata, 1000, 2000)
+      window.onload = function () {
+        if ($scrollTop > 200) {
+          throttle();
+          scroll_height();
+        }
+      }
       $(document).scroll(function () {
         throttle();
         scroll_height();
