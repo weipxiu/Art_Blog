@@ -1653,12 +1653,11 @@
     position: relative;
     width: 100%;
     margin: 0px auto 0.12rem;
-    border:1px solid #ccc;
   }
 
   .head_user_b {
     width: calc(100% + 0.5rem);
-    margin: -1px 0 0 -0.25rem;
+    margin-left: -0.25rem;
     background: url(../images/about_page.jpg) no-repeat center left;
     background-size: auto 100%;
   }
