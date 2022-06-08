@@ -643,8 +643,7 @@
           content: $("#reward-popup"),
           type: 1,
           title: false,
-          closeBtn: 0, // 不展示关闭x
-          skin: 'layui-layer-demo', //样式类名
+          skin: 'reward_model', //样式类名
           area: ['500px', '360px'], //宽高
           shadeClose: true, // 点击遮罩层关闭弹窗
           success: function (layero, index) {

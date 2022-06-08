@@ -4243,6 +4243,9 @@
   #reward-popup .reward_item>div {
     width: 50%;
   }
+  .reward_model .layui-layer-ico {
+    background-position: 1px -38px;
+  }
   /* PC详情页打赏end */
 
   /* 面包屑导航start */
