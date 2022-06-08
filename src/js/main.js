@@ -643,7 +643,7 @@
           content: $("#reward-popup"),
           type: 1,
           title: false,
-          skin: 'layui-layer-demo', //样式类名
+          skin: 'reward_model', //样式类名
           area: ['500px', '360px'], //宽高
           shadeClose: true, // 点击遮罩层关闭弹窗
           success: function (layero, index) {
@@ -941,7 +941,6 @@
           $(this).css("transition-delay", i * time + 'ms')
         })
       })
-
 
       //文章分类没有资源时候404提示
       if ($("#continar-left .article_not").length > 0) {

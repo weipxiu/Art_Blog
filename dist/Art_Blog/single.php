@@ -96,21 +96,6 @@
                       <span class="reward js_reward">
                           <i class="iconfont icon-jiage1"></i> 打赏
                       </span>
-                      <div id="reward-popup">
-                          <div class="title">
-                              <?php echo get_option('weipxiu_options')['reward_text'];?>
-                          </div>
-                          <div class="reward_item">
-                              <div>
-                                  <p>支付宝扫一扫打赏</p>
-                                  <img src="<?php echo get_option('weipxiu_options')['alipay'];?>" alt="">
-                              </div>
-                              <div>
-                                  <p>微信扫一扫打赏</p>
-                                  <img src="<?php echo get_option('weipxiu_options')['wechatpay'];?>" alt="">
-                              </div>
-                          </div>
-                      </div>
                   </div>
                   <!--文章打赏end-->
               </div>
@@ -173,6 +158,24 @@
         </div>
 
         <!-- 正文区域end -->
+
+        <!-- 打赏弹窗模块start -->
+        <div id="reward-popup">
+            <div class="title">
+                <?php echo get_option('weipxiu_options')['reward_text'];?>
+            </div>
+            <div class="reward_item">
+                <div>
+                    <p>支付宝扫一扫打赏</p>
+                    <img src="<?php echo get_option('weipxiu_options')['alipay'];?>" alt="">
+                </div>
+                <div>
+                    <p>微信扫一扫打赏</p>
+                    <img src="<?php echo get_option('weipxiu_options')['wechatpay'];?>" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 打赏弹窗模块end -->
 
         <!-- 底部引用区域start -->
         <?php get_footer()?>
