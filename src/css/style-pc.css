@@ -4200,14 +4200,14 @@
     font-size: 12px;
   }
 
-  #continar-left #reward-popup {
+  #reward-popup {
     width: 100%;
     height: 100%;
     padding: 20px;
     display: none;
   }
 
-  #continar-left #reward-popup .title {
+  #reward-popup .title {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -4218,14 +4218,14 @@
     box-sizing: content-box;
   }
 
-  #continar-left #reward-popup .reward_item {
+  #reward-popup .reward_item {
     height: calc(100% - 60px);
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
   }
 
-  #continar-left #reward-popup .reward_item p {
+  #reward-popup .reward_item p {
     font-size: 15px;
     text-align: center;
     color: var(--color-dark);
@@ -4233,17 +4233,16 @@
     text-indent: 0;
   }
 
-  #continar-left #reward-popup .reward_item img {
+  #reward-popup .reward_item img {
     display: block;
     margin: 0 auto;
     max-width: 85%;
     border: 5px solid var(--color-gray_shallow);
   }
 
-  #continar-left #reward-popup .reward_item>div {
+  #reward-popup .reward_item>div {
     width: 50%;
   }
-
   /* PC详情页打赏end */
 
   /* 面包屑导航start */
