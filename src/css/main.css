@@ -56,23 +56,23 @@
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: var(--color-gray_dark);;
+  color: var(--color-gray_dark);
 }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: var(--color-gray_dark);;
+  color: var(--color-gray_dark);
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: var(--color-gray_dark);;
+  color: var(--color-gray_dark);
 }
 
- body{
+body {
   /* 开启硬件加速，让3d动画更流畅，防止页面出现空白/闪烁 */
   /* 该方法影响子元素position:fixed定位 */
- /* -webkit-transform: translate3d(0,0,0);
+  /* -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); */
@@ -93,9 +93,9 @@ img:not([src]) {
 xmp {
   display: initial;
 }
-.log-text .beCareful{
+.log-text .beCareful {
   color: #d14;
-  font-size:95%;
+  font-size: 95%;
   background-color: #f9f2f4;
 }
 #header .nav ul li a span i.menu_arrow {
@@ -103,6 +103,10 @@ xmp {
   margin-right: 0;
 }
 
-.items a:nth-of-type(n+25) {
+.items a:nth-of-type(n + 25) {
   display: none;
+}
+
+#continar-left .log-text a {
+  margin: 0 2px;
 }

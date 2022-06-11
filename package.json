@@ -8,7 +8,8 @@
     "build": "cross-env NODE_ENV=production gulp",
     "pre": "cross-env NODE_ENV=preproduction gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "cross-env NODE_ENV=development node --inspect-brk ./gulpfile.js"
+    "debug": "cross-env NODE_ENV=development node --inspect-brk ./gulpfile.js",
+    "lint": "eslint \"src/js/main.js\" --fix --cache --cache-location \"./node_modules/.cache/.eslintcache\""
   },
   "author": "唯品秀前端个人博客",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "color-name": "^1.1.4",
     "cross-env": "^5.2.0",
     "escape-string-regexp": "^1.0.5",
+    "eslint": "^8.17.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.3.0",
