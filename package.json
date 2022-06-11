@@ -9,7 +9,7 @@
     "pre": "cross-env NODE_ENV=preproduction gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "cross-env NODE_ENV=development node --inspect-brk ./gulpfile.js",
-    "lint": "eslint --ext \".js\" \"src/js\" --fix --cache --cache-location \"./node_modules/.cache/.eslintcache\""
+    "lint": "eslint \"src/js/main.js\" --fix --cache --cache-location \"./node_modules/.cache/.eslintcache\""
   },
   "author": "唯品秀前端个人博客",
   "license": "ISC",

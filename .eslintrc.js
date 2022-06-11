@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "jquery": true,
+        "es2015": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -16,19 +17,19 @@ module.exports = {
       // --以下是Best Practices 最佳实践
       'default-case': 'error', // 强制switch要有default分支
       'dot-location': ['error', 'property'], // 要求对象的点要跟属性同一行
-      'eqeqeq': 'error', // 要求使用 === 和 !==
+      'eqeqeq': 'off', // 要求使用 === 和 !==
       'no-else-return': 'error', // 禁止在else前有return，return和else不能同时存在
       'no-empty-function': 'error', // 禁止出现空函数，有意而为之的可以在函数内部加条注释
       'no-multi-spaces': 'error', // 禁止出现多个空格，如===前后可以有一个空格，但是不能有多个空格
       'no-multi-str': 'error', // 禁止出现多行字符串，可以使用模板字符串换行
       'no-self-compare': 'error', // 禁止自身比较
       'no-unmodified-loop-condition': 'error', // 禁止一成不变的循环条件，如while条件，防止死循环
-      'no-useless-concat': 'error', // 禁止没有必要的字符串拼接，如'a'+'b'应该写成'ab'
+      'no-useless-concat': 'off', // 禁止没有必要的字符串拼接，如'a'+'b'应该写成'ab'
       'require-await': 'error', // 禁止使用不带await的async表达式
       // --以下是Stylistic Issues 主观的代码风格
       'array-element-newline': ['error', 'consistent'], // 数组元素要一致的换行或者不换行
       'block-spacing': 'error', // 强制函数/循环等块级作用域中的花括号内前后有一个空格（对象除外）
-      'brace-style': ['error', '1tbs', { 'allowSingleLine': true }], // if/elseif/else左花括号要跟if..同行，右花括号要换行；或者全部同一行
+      // 'brace-style': ['error', '1tbs', { 'allowSingleLine': true }], // if/elseif/else左花括号要跟if..同行，右花括号要换行；或者全部同一行
       'comma-dangle': ['error', 'only-multiline'], // 允许在对象或数组的最后一项（不与结束括号同行）加个逗号
       'comma-spacing': 'error', // 要求在逗号后面加个空格，禁止在逗号前面加一个空格
       'comma-style': 'error', // 要求逗号放在数组元素、对象属性或变量声明之后，且在同一行
@@ -50,7 +51,7 @@ module.exports = {
       'no-unneeded-ternary': 'error', // 禁止多余的三元表达式，如a === 1 ? true : false应缩写为a === 1
       'no-whitespace-before-property': 'error', // 禁止属性前有空白，如console. log(obj['a'])，log前面的空白有问题
       'nonblock-statement-body-position': 'error', // 强制单行语句不换行
-      'object-curly-newline': ['error', { 'multiline': true }], // 对象数属性要有一致的换行，都换行或都不换行
+      // 'object-curly-newline': ['error', { 'multiline': true }], // 对象数属性要有一致的换行，都换行或都不换行
       'object-curly-spacing': ['error', 'always'], // 强制对象/解构赋值/import等花括号前后有空格
       'object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true }], // 强制对象的属性在同一行或全换行
       'one-var-declaration-per-line': 'error', // 强制变量初始化语句换行
@@ -75,7 +76,7 @@ module.exports = {
       'prefer-destructuring': ['error', {
           'array': false,
           'object': true
-      }, { 'enforceForRenamedProperties': true }], // 要求优先使用结构赋值,enforceForRenamedProperties为true将规则应用于重命名的变量
+      }, { 'enforceForRenamedProperties': false }], // 要求优先使用结构赋值,enforceForRenamedProperties为true将规则应用于重命名的变量
       'prefer-template': 'error', // 使用模板字符串，而不是字符串拼接
       'rest-spread-spacing': 'error', // 扩展运算符...和表达式之间不允许有空格，如... re1错误，应该是...re1
       'template-curly-spacing': 'error', // 禁止模板字符串${}内前后有空格

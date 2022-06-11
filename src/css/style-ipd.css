@@ -2008,8 +2008,8 @@
   }
 
   #continar-left .log-text p {
-    text-align: justify;
-    text-align-last: left;
+    /* text-align: justify;
+    text-align-last: left; */
   }
 
   #continar-left .log-text p.reward-p {

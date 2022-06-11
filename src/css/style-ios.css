@@ -2010,8 +2010,8 @@
 
   #continar-left .log-text p {
     text-indent: 2em;
-    text-align: justify;
-    text-align-last: left;
+    /* text-align: justify;
+    text-align-last: left; */
   }
 
   #continar-left .post-motto {
