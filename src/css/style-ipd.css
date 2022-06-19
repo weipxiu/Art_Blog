@@ -2007,11 +2007,6 @@
     color: var(--color-theme);
   }
 
-  #continar-left .log-text p {
-    /* text-align: justify;
-    text-align-last: left; */
-  }
-
   #continar-left .log-text p.reward-p {
     text-align-last: center;
   }

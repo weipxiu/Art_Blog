@@ -1,4 +1,11 @@
 <?php
+// 后台引入自定义样式
+// add_action('admin_head', 'admin_style');
+function admin_mycss() {
+    wp_enqueue_style( "admin-my", get_template_directory_uri() . "/css/style-admin.css" );
+}
+add_action('admin_head', 'admin_mycss');
+
 //设置服务器时区
 date_default_timezone_set('PRC'); // PRC:中国标准北京时间
 // 引入模板主题设置文件
