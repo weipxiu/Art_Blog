@@ -110,3 +110,15 @@ xmp {
 #continar-left .log-text a {
   margin: 0 2px;
 }
+
+/* 文章页table */
+#continar-left table {
+  width: 100%;
+}
+#continar-left table th,
+#continar-left table td {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  line-height: 2.6em;
+  padding: 0 2px;
+  text-align: center;
+}
