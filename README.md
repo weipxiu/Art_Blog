@@ -35,9 +35,9 @@ I、基本用法
 - 方式二：将项目下载，根目录找到dist文件夹下Art_Blog整个`文件夹`、通过FTP上传至：`/根目录/wp-content/themes/`目录下，启用主题
 - 注：`推荐使用方式二`
 
-II、当然，本项目采用gulp自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v12.x为宜，更多自测），dist里的文件就是Art_Blog.zip里的文件
+II、当然，本项目采用gulp4自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v12.x为宜，更多自测），dist里的文件就是Art_Blog.zip里的文件
 
-III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本，[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html)
+III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本（自测v7.2最优），[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html)
 
 IV、更多详细教程点击：[主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥？[教程视频](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
@@ -54,9 +54,9 @@ V、主题开源，唯一支持作者的方式是下方打赏[支付宝/微信]�
 I、wordPress主题制作有独特规范，如主题根目录必须存在header.php、index.php、footer.php、style.css，否则主题视为"不完整"，无法安装。
 因此不用觉得某些文件不合理，存在即有意义
 
-II、```v2.9.0后不再对IE支持```，如需兼容IE9及以上可下载之前老版本
+II、```v2.9.0后不再对IE额外兼容```，如需兼容IE9及以上系列可下载之前老版本
 
-III、CSS文件基于终端做分割，因此你会看到主题目录dist > css文件夹中有style-pc.css、style-ios.css、style-ipd.css三个文件，没错，三端样式完全独立不重用，不过你完全不用过分担心，打包后多端样式会合并压缩到style_min.css，代价没你想象的那么大，有利有弊，不予置评
+III、CSS文件基于终端做分割，因此你会看到主题目录dist > css文件夹中有style-pc.css、style-ios.css、style-ipd.css三个文件，没错，三端样式完全独立不重用，不过你完全不用过分担心，打包后多端样式会合并压缩到style_min.css，代价可控，有利有弊，不予置评
 
 IV、源码开放供大家使用并修改，但在主题使用过程中底部请保留"唯品秀"版权字样，即：在footer.php源码中请不要去掉：<p>本站主题由<a href="https://www.weipxiu.com" class="highlight">WEIPXIU.COM</a>免费提供</p>
 
@@ -92,6 +92,9 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │      style-ipd.css    //ipd端
 │      swiper.min.css   //移动端轮播
 │      video-js.css    //视频插件
+│      codecolorer.css    //文章页代码高亮
+│      login.css    //后台登录页面
+│      style-admin.css    //后台系统自定义
 │
 ├─font
 │      sf-pro-text_regular.woff2 //字体包
@@ -110,7 +113,7 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 │  ├─video.js
 │  │      video.min.js //视频插件
 │  │
-│  └─xfg_banner
+│  └─banner
 │          banner-effect.js //PC端首页banner
 │
 └─music  //3D导航音频文件
