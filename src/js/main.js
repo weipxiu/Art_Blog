@@ -608,7 +608,7 @@
           $header.css('z-index', '12');
         }
         // 侧边栏域跟随
-        if ($(window).width() > 1200 && $roll_obj.length) {
+        if ($(window).width() > 1200 && $roll_obj.length && ($continar_left.height()-$roll_obj.height() > 0)) {
           if (
             !that.elementInView($('.footer')[0])
           ) {
