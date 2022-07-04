@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-07-03 20:11:00'>
+<meta name='generator' content='WordPress/Art_Blog v2022-07-04 14:40:48'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -117,8 +117,7 @@
 				$args = array(
 					'post_password' => '', // 文章密码
 					'post_status' => 'publish', // 只选公开的文章.
-					//'post__not_in' => array($post->ID),//排除当前文章
-					'caller_get_posts' => 1, // 排除置頂文章.
+          'post__not_in' => get_option('sticky_posts'), // 排除置頂文章.
 					//'orderby' => 'rand', // 依评论数排序.
 					'showposts' => 1 // 设置调用条数
 				);
@@ -186,7 +185,7 @@
 							</a>
 						</div>
 						<div class="text_right">
-							<h2>
+							<h2 class="<?php if (is_sticky()) echo 'topping' ?>">
 								<span>
 									<?php the_category() ?><i></i></span>
 								<a href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">

@@ -37,12 +37,13 @@
         随机排序 orderby=rand -->
         <ul>
             <?php
+            $sticky=get_option('sticky_posts');
                   $args = array(
                       'post_password' => '',
                       'post_status' => 'publish', // 只选公开的文章.
-                      'post__not_in' => array($post->ID),//排除当前文章
-                      'caller_get_posts' => 1, // 排除置頂文章.
-                      'orderby' => 'modified', // 依ID排序.
+                      // 'caller_get_posts' => 1, // 排除返回的文章上方的置顶文章，但在返回文章列表时，以自然顺序将曾经置顶的文章安插在列表中
+                      'post__not_in' => get_option('sticky_posts'), // 排除置頂文章.
+                      'orderby' => 'modified', // 按修改时间排序
                       'posts_per_page' => 5 // 设置调用条数
                   );
                   $query_posts = new WP_Query();
@@ -81,8 +82,7 @@
               $args = array(
                   'post_password' => '',
                   'post_status' => 'publish', // 只选公开的文章.
-                  'post__not_in' => array($post->ID),//排除当前文章
-                  'caller_get_posts' => 1, // 排除置頂文章.
+                  'post__not_in' => get_option('sticky_posts'), // 排除置頂文章.
                   'orderby' => 'rand', // 随机排序.
                   'posts_per_page' => 8 // 设置调用条数
               );
