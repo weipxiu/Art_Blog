@@ -2337,6 +2337,7 @@
     font-size: 0.4rem;
     line-height: 1rem;
     display: inline-block;
+    text-decoration: none;
   }
 
   .btn_menu {
