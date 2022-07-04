@@ -1785,7 +1785,7 @@
     font-size: 12px;
     display: inline-block;
     position: relative;
-    margin-right: 6px;
+    margin-right: 8px;
     border-radius: 2px;
     padding: 0px 6px 3px;
     top: -4px;
@@ -1809,6 +1809,10 @@
   .text_right h2 span:nth-child(1) a {
     color: var(--color-white);
     font-size: 12px;
+  }
+
+  .article_list article h2.topping {
+    width: calc(100% - 30px);
   }
 
   .article_list article h2 {
