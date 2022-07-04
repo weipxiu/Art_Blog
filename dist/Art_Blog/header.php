@@ -25,7 +25,7 @@
 		<div class="header-conter">
 			<nav class="nav">
 					<a href="<?php echo esc_url( home_url() ); ?>" class="t-logo" id="Logo">
-							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>">
+							<img src="<?php echo get_option('weipxiu_options')['logo']; ?>" width="135" height="45">
 					</a>
 					<div class="brand">
 					<?php echo get_option('weipxiu_options')['key_word']; ?>
