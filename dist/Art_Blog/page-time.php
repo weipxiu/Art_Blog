@@ -85,7 +85,7 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
 <!--头部文件引用start-->
 	<?php get_header(); ?>
 <!--头部文件引用end-->
-<div id="message">
+<div class="continar" id="message">
     <ul id="messageList">
     	<!--<li>
         	<div class="box">
