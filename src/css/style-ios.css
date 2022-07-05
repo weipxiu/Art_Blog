@@ -769,8 +769,9 @@
   .continar .continar-left-top > span {
     display: none;
   }
-
-  .continar .continar-left-top h1:nth-child(1),
+  .continar .continar-left-top h1:nth-child(1) {
+    display: block;
+  }
   .continar .continar-left-top h1:nth-child(2) {
     display: block;
     overflow: hidden;
@@ -1326,7 +1327,9 @@
   }
 
   .friendship .daily-list ul {
-    overflow: hidden;
+    display: grid;
+    grid-gap: 0.1rem 0.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
 
   .friendship ul li a {
@@ -1340,7 +1343,6 @@
     border-radius: 0.08rem;
     animation-delay: 0.1s;
     float: left;
-    margin: 0 1.5% 0.15rem 0;
     padding: 0.12rem 0.16rem;
   }
 

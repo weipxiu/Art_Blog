@@ -428,7 +428,7 @@
         const timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         const currentTime = secondToDate(timestamp - create_time);
         const currentTimeHtml = `${currentTime[0]}年${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]
-        }秒`;
+          }秒`;
         $('#htmer_time').html(currentTimeHtml);
       }
       setInterval(setTime, 1000);
@@ -608,7 +608,7 @@
           $header.css('z-index', '12');
         }
         // 侧边栏域跟随
-        if ($(window).width() > 1200 && $roll_obj.length && ($continar_left.height()-$roll_obj.height() > 0)) {
+        if ($(window).width() > 1200 && $roll_obj.length && ($continar_left.height() - $roll_obj.height() > 0)) {
           if (
             !that.elementInView($('.footer')[0])
           ) {
@@ -621,7 +621,6 @@
             // 当出现底部时候，始终和左侧水平对齐
             const position_bot = windowHeight - (continarLeftOuterHeight + ($continar_left.offset().top - $(document).scrollTop())); // 获取"#continar-left"相对于屏幕底部的距离
             $roll_obj.css({ 'position': 'fixed', 'bottom': `${position_bot}px`, 'left': `${offset_left}px` });
-
           } else {
             $roll_obj.css({ 'position': 'static', 'bottom': 'auto', 'left': 'auto' });
           }
@@ -629,11 +628,16 @@
       }
 
       const throttle = conduct(inintGetdata, 1000, 2000);
+      let count = 0;
       window.onload = function () {
-        if ($scrollTop > 200) {
+        let clearTime = setInterval(() => {
+          count++
           throttle();
           scroll_height();
-        }
+          if (count > 5) {
+            clearInterval(clearTime)
+          }
+        }, 500)
       };
       $(document).scroll(function () {
         throttle();
