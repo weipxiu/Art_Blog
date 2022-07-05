@@ -1740,8 +1740,9 @@
   #continar-left .article_list article:after {
     content: '';
     position: absolute;
-    bottom: -1px;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 0;
     height: 1px;
     background: var(--color-primary);
@@ -2148,7 +2149,7 @@
     display: grid;
     grid-gap: 8px;
     /* 可以通过minmax()函数来创建网格轨道的最小或最大尺寸。minmax()函数接受两个参数：第一个参数定义网格轨道的最小值，第二个参数定义网格轨道的最大值。可以接受任何长度值，也接受auto值。auto值允许网格轨道基于内容的尺寸拉伸或挤压,fr单位为每个item分配的份额/比例 */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     /* grid-template-columns: repeat(3,100px); */
   }
 
@@ -2157,8 +2158,12 @@
     text-align: center;
     border-radius: 5px;
     animation-delay: 0.1s;
-    padding: 2px 0;
+    padding: 2px 5px;
     margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-white);
   }
 
   .friendship .daily-list ul li a {

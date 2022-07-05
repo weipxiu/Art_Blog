@@ -1256,7 +1256,9 @@
   }
 
   .friendship .daily-list ul {
-    overflow: hidden;
+    display: grid;
+    grid-gap: 0.1rem 0.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   }
 
   .friendship ul li a {
@@ -1270,7 +1272,6 @@
     border-radius: 0.08rem;
     animation-delay: 0.1s;
     float: left;
-    margin: 0 2% 0.2rem 0;
     padding: 0.14rem 0.2rem;
   }
 
