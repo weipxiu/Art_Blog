@@ -28,6 +28,8 @@
 
 一款精美绝伦的wordPress开源艺术主题，历时五年光阴洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[立即下载安装](https://github.com/weipxiu/Art_Blog/tags)
 
+## 温馨提示
+- 因Github访问问题，该仓库于2022年7月5日起停止更新，[新gitee码云仓库地址](https://gitee.com/weipxiu/Art_Blog)
 ## 如何使用它
 
 I、基本用法
