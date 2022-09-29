@@ -26,19 +26,22 @@
   </a>
 </p>
 
-一款精美绝伦的wordPress开源艺术主题，历时五年光阴洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心
+一款精美绝伦的wordPress开源艺术主题，历时五年光阴洗礼，每段代码皆不忘初心，炫彩夺目奢华外表的同时，更有一颗懂你的心，[立即下载安装](https://github.com/weipxiu/Art_Blog/tags)
+
+## 温馨提示
+- <font color='red'>因Github访问问题，该仓库于2022年7月5日起停止更新，仓库代码迁移至gitee码云</font>，[地址](https://gitee.com/weipxiu/Art_Blog)
 ## 如何使用它
 
 I、基本用法
-- 方式一：[点击下载Zip压缩包](https://gitee.com/weipxiu/Art_Blog/blob/master/Art_Blog.zip?_blank)，后台上传主题包，启用主题即可。
+- 方式一：[点击下载Zip压缩包](https://github.com/weipxiu/Art_Blog/releases)，后台上传主题包，启用主题即可。
 - 方式二：将项目下载，根目录找到dist文件夹下Art_Blog整个`文件夹`、通过FTP上传至：`/根目录/wp-content/themes/`目录下，启用主题
 - 注：`推荐使用方式二`
 
 II、当然，本项目采用gulp4自动化构建，推荐通过git克隆到本地，电脑全局安装gulp，然后运行`npm install`安装依赖，接着运行npm run build即可压缩打包整个项目到`dist`文件夹（显然，这一切需要你电脑安装了Node.js以及git工具，node版本控制在v12.x为宜，更多自测），dist里的文件就是Art_Blog.zip里的文件
 
-III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本（自测v7.2最优），[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html?_blank)
+III、运行环境条件：1、优先采用云服务器而不是虚拟主机，2、wordPress版本≥4.0，服务器php版本≥5.6，3、如果出现意外报错，可尝试切换php版本（自测v7.2最优），[论一个网站服务器性能重要性](https://www.weipxiu.com/3246.html)
 
-IV、更多详细教程点击：[主题使用教程](https://www.weipxiu.com/3355.html?_blank)；文档枯燥？[教程视频](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g?_blank)，`4drw`
+IV、更多详细教程点击：[主题使用教程](https://www.weipxiu.com/3355.html)；文档枯燥？[教程视频](https://pan.baidu.com/s/1WdiCn__A6xQC3V9ddRSN6g)，`4drw`
 
 V、主题开源，唯一支持作者的方式是下方打赏[支付宝/微信]，您的认可与支持将是我前进的最大动力！！！
 <p align="center">
@@ -101,7 +104,7 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 ├─images  //公共图片资源（含表情包）
 │
 ├─js
-│  │  ajax_load.js    //分页ajax刷新
+│  │  ajax_wordpress.js    //分页ajax刷新
 │  │  canvas-nest.min.js   //canvas背景图插件
 │  │  index.js    //整个网站全局js
 │  │  javascript.js  //只针对首页js文件
@@ -120,7 +123,6 @@ V、主题不定期优化，如若在使用过程中出现问题自己无法解�
 
 
 <!-- ## 哪些网站在使用(据百度受访问域名不完全统计，并非后门)
-
 |  网站名称 | 网站地址 |
 | :----: | :----: |
 | [小菜菜博客](https://cikop.com/) | https://cikop.com
