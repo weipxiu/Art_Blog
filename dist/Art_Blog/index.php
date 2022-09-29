@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-07-05 12:40:19'>
+<meta name='generator' content='WordPress/Art_Blog v2022-09-29 16:05:16'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
