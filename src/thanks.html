@@ -1,123 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="Author" content="" />
-	<meta name="description" content="唯品秀个人博客，关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与" />
-	<meta name="keywords" content="个人博客,唯品秀个人博客,个人博客网站,唯品秀，web前端博客，网页制作，博客，HTML5/CSS3，Javascript" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<meta http-equiv="x-dns-prefetch-control" content="on">
-	<title>唯品秀个人博客&nbsp;|&nbsp;关注WEB前端开发技术_关注用户体验</title>
-	<!-- 正式服展示 -->
-	<!-- @if NODE_ENV='production' -->
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js?type=production"></script>
-	<!-- @endif -->
+  <meta charset="UTF-8">
+  <meta name="Author" content="" />
+  <meta name="description" content="唯品秀个人博客，关注Web前端开发技术，移动前端开发，前端资讯，同时分享前端资源和工具等，期待你的参与" />
+  <meta name="keywords" content="个人博客,唯品秀个人博客,个人博客网站,唯品秀，web前端博客，网页制作，博客，HTML5/CSS3，Javascript" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <title>唯品秀个人博客&nbsp;|&nbsp;关注WEB前端开发技术_关注用户体验</title>
+  <!-- 正式服展示 -->
+  <!-- @if NODE_ENV='production' -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js?type=production"></script>
+  <!-- @endif -->
 
-	<!-- 测试服展示 -->
-	<!-- @if NODE_ENV!='production' -->
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js?type=preproduction"></script>
-	<!-- @endif -->
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			box-sizing: border-box;
-			color: #666;
-			font-weight: normal;
-			text-decoration: none;
-			font-size: 14px;
-			font: 14px Montserrat, Microsoft Yahei;
-		}
+  <!-- 测试服展示 -->
+  <!-- @if NODE_ENV!='production' -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js?type=preproduction"></script>
+  <!-- @endif -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font: 14px 'Montserrat', 'Microsoft Yahei', sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      color: #666;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
 
-		html,
-		body {
-			width: 100%;
-			height: 100%;
-			background-repeat: repeat;
-			background-attachment: scroll;
-			background-clip: border-box;
-			background-origin: padding-box;
-			background-position-x: 0%;
-			background-position-y: 0%;
-		}
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-attachment: scroll;
+      background-repeat: repeat;
+      background-clip: border-box;
+      background-origin: padding-box;
+      background-position-x: 0%;
+      background-position-y: 0%;
+    }
 
-		em,
-		i {
-			font-style: normal;
-		}
+    em,
+    i {
+      font-style: normal;
+    }
 
-		h1 {
-			text-align: center;
-			font-size: 22px;
-			line-height: 70px;
-			margin-top: 15px
-		}
+    h1 {
+      margin-top: 15px;
+      font-size: 22px;
+      line-height: 70px;
+      text-align: center
+    }
 
-		.contaner {
-			width: 1000px;
-			margin: 0 auto 50px;
-		}
+    .contaner {
+      width: 1000px;
+      margin: 0 auto 50px;
+    }
 
-		.contaner em {
-			display: block;
-			text-align: right;
-			margin-right: 50px;
-			margin-bottom: 25px;
-		}
+    .contaner em {
+      display: block;
+      margin-right: 50px;
+      margin-bottom: 25px;
+      text-align: right;
+    }
 
-		.contaner p {
-			text-indent: 28px;
-			line-height: 34px
-		}
+    .contaner p {
+      line-height: 34px;
+      text-indent: 28px
+    }
 
-		.contaner h2 {
-			margin: 20px 0 5px;
-			font-size: 15px
-		}
+    .contaner h2 {
+      margin: 20px 0 5px;
+      font-size: 15px
+    }
 
-		::-webkit-scrollbar {
-			width: 6px;
-			height: 6px;
-			background-color: #F5F5F5
-		}
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: #F5F5F5
+    }
 
-		::-webkit-scrollbar-track {
-			box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-			border-radius: 7px;
-			background-color: #eee
-		}
+    ::-webkit-scrollbar-track {
+      background-color: #eee;
+      border-radius: 7px;
+      box-shadow: inset 0 0 6px rgb(0 0 0 / 30%)
+    }
 
-		::-webkit-scrollbar-thumb {
-			border-radius: 10px;
-			box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-			background-color: #999
-		}
-	</style>
+    ::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgb(0 0 0 / 30%)
+    }
+  </style>
 </head>
 
 <body>
-	<!-- @if NODE_ENV='production' -->
-	<h1>特别鸣谢</h1>
-	<!-- @endif -->
-	<div class="contaner">
-		<em> —— 有些话不一定要说出来，但一定要记录在某个地方！</em>
-		<h2>I、网名 - 物竞天择 适者生存 </h2>
-		<p>
-			物竞天择 适者生存，一位UI应届生（2016年），同时对web前端行业充满热爱，感谢网名"物竞天择 适者生存"提供设计帮助！
-		</p>
-		<h2>II、网名 - Ｓomnus丶焱焰 </h2>
-		<p>
-			妹子、妹子、妹子，重要的事情说三遍，名字带"火"，人称："火娃"、"火姐"; 谢谢在此期间对博客整个架构提出的宝贵意见，2018年下准备结婚，预祝新婚快乐！
-		</p>
-		<h2>III、各位朋友 </h2>
-		<p>
-			最后感谢各位朋友对博客的关注与支持，同时也要感谢各位前端大牛分享的技术帖子，欢迎大家在本站注册会员，共同维护博客的发展，让它成为我们共同的学习分享家园！
-		</p>
-		<em style="margin:20px 80px 0 0;">2016年11月16日</em>
-	</div>
+  <!-- @if NODE_ENV='production' -->
+  <h1>特别鸣谢</h1>
+  <!-- @endif -->
+  <div class="contaner">
+    <em> —— 有些话不一定要说出来，但一定要记录在某个地方！</em>
+    <h2>I、网名 - 物竞天择 适者生存 </h2>
+    <p>
+      物竞天择 适者生存，一位UI应届生（2016年），同时对web前端行业充满热爱，感谢网名"物竞天择 适者生存"提供设计帮助！
+    </p>
+    <h2>II、网名 - Ｓomnus丶焱焰 </h2>
+    <p>
+      妹子、妹子、妹子，重要的事情说三遍，名字带"火"，人称："火娃"、"火姐"; 谢谢在此期间对博客整个架构提出的宝贵意见，2018年下准备结婚，预祝新婚快乐！
+    </p>
+    <h2>III、各位朋友 </h2>
+    <p>
+      最后感谢各位朋友对博客的关注与支持，同时也要感谢各位前端大牛分享的技术帖子，欢迎大家在本站注册会员，共同维护博客的发展，让它成为我们共同的学习分享家园！
+    </p>
+    <em style="margin: 20px 80px 0 0;">2016年11月16日</em>
+  </div>
 </body>
 <!-- <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script> -->
 

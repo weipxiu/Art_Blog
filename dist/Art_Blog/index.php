@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-<meta name='generator' content='WordPress/Art_Blog v2022-09-29 16:05:16'>
+<meta name='generator' content='WordPress/Art_Blog v2022-09-22 15:48:32'>
 <title><?php $name = wp_title( '-', true, 'right' );
 		if ($name) {
 			echo $name . "&nbsp;-&nbsp;" . get_bloginfo('description');
@@ -286,15 +286,15 @@
 	<!-- 底部调用end -->
 </body>
 
-<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/lib/swiper.min.js"></script>
 <script>
   if (window.screen.width < 1200) {
       var create_element = document.createElement("script");
-      create_element.src = "<?php echo esc_url(get_template_directory_uri()); ?>/js/swiper.min.js";
+      create_element.src = "<?php echo esc_url(get_template_directory_uri()); ?>/js/lib/swiper.min.js";
       document.body.appendChild(create_element);
   }
 </script>
-<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/banner/banner-effect.js"></script>
+<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/lib/banner/banner-effect.js"></script>
 <script type="text/javascript">
 $(function () {
 			//var domain_name = window.location.origin;//https://www.weipxiu.com（不兼容IE10及以下）
@@ -378,16 +378,12 @@ $(function () {
 
 			//首页轮播下sd导航start
 			$(".mod-index__feature .img_list_6pic a").removeClass("word_display");
-			if (!!window.ActiveXObject || "ActiveXObject" in window) {
-					console.log("当前浏览器IE内核，部分效果不可展现！")
-			} else {
-					$("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
-							$(this).addClass("word_display")
-					})
-					$("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
-							$(this).removeClass("word_display")
-					})
-			}
+			$("body").on("mouseenter",".mod-index__feature .img_list_6pic a",function(){
+          $(this).addClass("word_display")
+      })
+      $("body").on("mouseleave",".mod-index__feature .img_list_6pic a",function(){
+          $(this).removeClass("word_display")
+      })
 			//首页轮播下sd导航end
 
 			//修改邮件订阅表单类型
@@ -412,7 +408,7 @@ $(function () {
 				anim: 4,
 				btn: ['确认'],
 				yes:function(){
-					location.href="https://github.com/weipxiu/Art_Blog"
+					location.href="https://gitee.com/weipxiu/Art_Blog"
 				}
 			})
 		}

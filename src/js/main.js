@@ -1,4 +1,4 @@
-/* global layer */
+/* global layer, $ */
 /**
  * @license
  * 全局js
@@ -16,7 +16,9 @@
   const $mouseover_ul_li = $('#piano ul li');
   let $header_music_icon = $('.mod-header_music-icon');
   const $os_headertop_site_search = $('.os-headertop .site-search');
-  function App() { } // eslint-disable-line
+  function App() { // eslint-disable-line
+    this.count = 0;
+  }
   App.prototype = {
     init() {
       // 终端独立事件方法
@@ -57,14 +59,14 @@
       this.paperPlane();
       // 在线交流
       this.customerService();
-      // 友情链接加背景颜色
-      this.friendshipLink();
       // 表情包
       this.smiliesEmoticon();
       // 随机文章增加序列号
       this.randomArticles();
       // 文章详情页底部评论区域样式兼容
       this.commentStyle();
+      // 评论区地理位置
+      this.getUserAddress();
     },
 
     // 初始化音乐导航菜单
@@ -228,6 +230,7 @@
       const musicList = $('.nav ul.music-nav > li:not(.mod-header_music-icon)');
       $header.hover(function () {
         clearTimeout(time2);
+        that.count = 100;
         $(this).css('z-index', '12');
       }, function () {
         // 如果出现搜索的情况下，头部层级自然还是要比轮播高
@@ -428,7 +431,7 @@
         const timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         const currentTime = secondToDate(timestamp - create_time);
         const currentTimeHtml = `${currentTime[0]}年${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]
-          }秒`;
+        }秒`;
         $('#htmer_time').html(currentTimeHtml);
       }
       setInterval(setTime, 1000);
@@ -563,7 +566,7 @@
         continarLeftOuterHeight = $continar_left.outerHeight(true);
         referentHeight = $('#continar-right > div:last-of-type').outerHeight(true);
         isFixed = continarLeftOuterHeight >= obj_outerHeight; // 左侧内容高度>右侧高度
-        offset_left = $continar_left.offset().left + $continar_left.outerWidth() + 10;
+        offset_left = $continar_left.offset() ? $continar_left.offset().left + $continar_left.outerWidth() + 10 : 0;
       }
 
       // 函数节流
@@ -608,7 +611,7 @@
           $header.css('z-index', '12');
         }
         // 侧边栏域跟随
-        if ($(window).width() > 1200 && $roll_obj.length && ($continar_left.height() - $roll_obj.height() > 0)) {
+        if ($(window).width() > 1200 && $roll_obj.length && $continar_left.height() - $roll_obj.height() > 0) {
           if (
             !that.elementInView($('.footer')[0])
           ) {
@@ -628,16 +631,16 @@
       }
 
       const throttle = conduct(inintGetdata, 1000, 2000);
-      let count = 0;
       window.onload = function () {
-        let clearTime = setInterval(() => {
-          count++
-          throttle();
-          scroll_height();
-          if (count > 5) {
-            clearInterval(clearTime)
+        const clearTime = setInterval(() => {
+          that.count++;
+          if (that.count > 5) {
+            clearInterval(clearTime);
+          } else {
+            throttle();
+            scroll_height();
           }
-        }, 500)
+        }, 500);
       };
       $(document).scroll(function () {
         throttle();
@@ -825,15 +828,6 @@
         recline: 0.1 // default , 每像素偏移量，越小“琴弦绷的越紧”
       });
     },
-    // 友情链接加背景颜色
-    friendshipLink() {
-      function randomColor(option) {
-        for (let i = 0; i < option.length; i++) {
-          option.eq(i).addClass(`color-${parseInt(Math.random() * 8, 10) + 1}`);
-        }
-      }
-      randomColor($('.friendship .daily-list ul li'));
-    },
     // 表情包
     smiliesEmoticon() {
       $('#commentform .expression').click(function () {
@@ -856,6 +850,25 @@
         $('#reply-title').show();
       } else {
         $('#reply-title').hide();
+      }
+    },
+    // 评论区用户地理位置
+    getUserAddress() {
+      // 显示评论ip归属地
+      let user_ip = document.querySelectorAll('.comment-ipFrom');
+      for (let i = 0; i < user_ip.length; i++) {
+        let user_ip_item = user_ip[i].innerText;
+        let rose_xhr = new XMLHttpRequest();
+        rose_xhr.open('GET', `https://player.lzti.com/open/ip?key=fd8c10003902479d81b747b83009f0b4&type=json&ip=${user_ip_item}`);
+        rose_xhr.onload = () => {
+          let user_address = JSON.parse(rose_xhr.responseText).data.ad_info;
+          if (user_address.nation != '中国') {
+            user_ip[i].innerHTML = `<i class="iconfont icon-dizhi"></i> 来自${user_address.nation}${user_address.province}`;
+          } else {
+            user_ip[i].innerHTML = `<i class="iconfont icon-dizhi"></i> 来自${user_address.province}`;
+          }
+        };
+        rose_xhr.send();
       }
     },
     // 移动端执行函数

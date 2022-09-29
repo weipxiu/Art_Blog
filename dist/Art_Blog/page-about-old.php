@@ -4,7 +4,7 @@ Template Name: 关于博客-旧版
 */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <title><?php wp_title( '-', true, 'right' ); ?>平凡有一点理想&nbsp;-&nbsp;渴望让世界不一样&nbsp;|&nbsp;<?php echo get_bloginfo('description'); ?></title>
     <?php get_template_part('common'); ?>
@@ -50,11 +50,6 @@ Template Name: 关于博客-旧版
              <h4 class="h4">站长简介</h4>
              <div class="log-text">
                 <ul>
-                        <!-- <li class="photo esp">
-                            <a href="#" title="李俊">
-                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/IMG_0028.JPG" width="150" alt="<?php echo get_bloginfo('name'); ?>" title="李俊">
-                            </a>
-                        </li> -->
                         <li class="esp"><span>姓名：Mr. li</span><span>名族：大汉</span></li>
                         <li class="esp"><span>星座：金牛座</span><span>学历：大专</span></li>
                         <li class="esp"><span>籍贯：湖北黄冈</span><span>专业：移动通信技术</span></li>
@@ -122,15 +117,6 @@ Template Name: 关于博客-旧版
                             既没什么收益，又耗费时间，何不去把这些时间去用于更高级的技术层面研究上。其实这个问题问的一针见血，开发维护这个网站确实占用了很大一部分业余时间，但是，
                             既然当初花那么大的精力做出来了，为啥不继续维护好呢？毕竟很多时候你会发现，养了一只巴掌大宠物时间久了，也会有感情的，尤其是：
                             你能独立做一个网站和你独立做成过一个网站其实是两回事。还可以通过博客这个平台，还可以让全世界的人有更多机会认识到自己和了解自己，互相有所交流，也是一件有趣的事情。
-                        </li>
-                    </ul>
-                    <h4 class="h4">后记</h4>
-                    <ul>
-                        <li>
-                            有些同学觉得，做技术类博客就要做似乎很牛逼的，让别人看了懵逼的，看完似乎懂了，又好像什么都不会的。但事实上，个人博客首先只是记录个人笔记。其次，在工作过程中，遇到问题你是先百度当前问题急需寻找解决答案？又或者是找学术性文章研究源码追溯本源？
-                        </li>
-                        <li>
-                            其实无论是牛逼的，还是基础的，语文功底100分，59的，这不是重点，重点是只要你能用最直白简单的语言表达出了你想说的意思，那就是优秀文章，你要做的只是让需要这篇文章的不同层级阶段的小伙伴能看到后快速学习并解决掉当前问题，那就是优秀的博客。
                         </li>
                     </ul>
                 </div>

@@ -1,6 +1,7 @@
-﻿/**
+/**
  * 多端全局css
  */
+
 @charset "utf-8";
 
 @font-face {
@@ -80,8 +81,8 @@ body {
 
 strong,
 b {
-  font-weight: bold;
   font-size: 115%;
+  font-weight: bold;
   line-height: 2.4;
 }
 
@@ -94,13 +95,13 @@ xmp {
   display: initial;
 }
 .log-text .beCareful {
-  color: #d14;
   font-size: 95%;
+  color: #d14;
   background-color: #f9f2f4;
 }
 #header .nav ul li a span i.menu_arrow {
-  margin-left: 1px;
   margin-right: 0;
+  margin-left: 1px;
 }
 
 .items a:nth-of-type(n + 25) {
@@ -117,8 +118,176 @@ xmp {
 }
 #continar-left table th,
 #continar-left table td {
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  line-height: 2.6em;
   padding: 0 2px;
+  line-height: 2.6em;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
+
+/* 雪花start */
+
+@keyframes snow {
+  0% {
+    background-position: 0 0, 15vw -100px, 20vw -200px;
+  }
+
+  100% {
+    background-position: 15vw 100vh, 30vw 100vh, 50vw 100vh;
+  }
+}
+
+#snowMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none\0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snow_size,
+.snow_size1 {
+  background: url('../images/snow1.png');
+  animation: 10s snow linear infinite;
+}
+
+.snow_size2 {
+  background: url('../images/snow1.png'), url('../images/snow2.png'), url('../images/snow3.png');
+  animation: 8s snow linear infinite;
+}
+
+.snow_size3 {
+  background: url('../images/snow1.png'), url('../images/snow2.png'), url('../images/snow3.png');
+  animation: 6s snow linear infinite;
+}
+
+/* 雪花end */
+
+/* 雨水start */
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 15px;
+  height: 55px;
+  pointer-events: none;
+  animation: drop 0.5s linear infinite;
+  /* border: 1px solid greenyellow; */
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  75% {
+    transform: translateY(90vh);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.stem {
+  width: 1px;
+  height: 100%;
+  margin-left: 7px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+  0% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.snow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  background: url('../images/snow_big.png') no-repeat center center;
+  animation: 2s rain_snow linear infinite;
+}
+
+.snow:nth-of-type(2n) {
+  background: url('../images/snow_mini.png') no-repeat center center;
+}
+
+@keyframes rain_snow {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+
+  100% {
+    transform: translate(15vw, 100vh);
+  }
+}
+
+.splat {
+  width: 15px;
+  height: 10px;
+  border-top: 2px dotted rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+  animation: splat 0.5s linear infinite;
+}
+
+@keyframes splat {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  90% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+/* 雨水end */
+
+/* 闪电start */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  pointer-events: none;
+}
+/* 闪电end */

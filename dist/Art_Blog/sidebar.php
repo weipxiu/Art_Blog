@@ -3,15 +3,7 @@
     <?php
         if (get_option('weipxiu_options')['side_video'] == 'on') {
             ?>
-                <video id="my-video" preload="none" class="video-js vjs-default-skin vjs-big-play-centered" controls width="308" height="173"
-                    style="margin-top:0px" poster="<?php echo get_option('weipxiu_options')['video_cover']; ?>" width="308" height="173"
-                    data-setup="{}">
-                    <source src="<?php echo get_option('weipxiu_options')['video_url']; ?>" type="video/mp4">
-                    </source>
-                    <p class="vjs-no-js"> 要查看此视频，请启用JavaScript，并考虑升级到Web浏览器版本。
-                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                    </p>
-                </video>
+                <div id="my-video" preload="none" style="width:308px;height:172px;"></div>
             <?php
         }
     ?>
@@ -148,7 +140,7 @@
                     $com_excerpt = $comment->comment_content;
                     $excerpt_len = mb_strlen($comment->comment_content, 'utf-8');
                     if ($excerpt_len > 46) $com_excerpt = mb_substr($com_excerpt, 0, 46, 'utf-8').'...';
-                    $output .= "\n<li>".  (preg_match("/^[0-9]{5}/", get_comment_author_email())?'<img src="https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=40"' . ' onerror="this.src=\'/wp-content/themes/Art_Blog/images/head_portrait.jpg\'">': get_avatar(get_comment_author_email(), 50)) .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_comment_link( $comment->comment_ID ) ."#comment-" . $comment->comment_ID . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
+                    $output .= "\n<li>".  (preg_match("/^[0-9]{5}/", get_comment_author_email())?'<img src="https://q.qlogo.cn/headimg_dl?bs=qq&dst_uin='.get_comment_author_email().'&src_uin=qq.feixue.me&fid=blog&spec=40"' . ' onerror="this.src=\'/wp-content/themes/Art_Blog/images/head_portrait.jpg\'">': get_avatar(get_comment_author_email(), 50)) .strip_tags($comment->comment_author) . "<span>（" . timeago($comment->comment_date_gmt) . "）</span>" . "<p>". $com_excerpt ."</p>" . "<a href=\"" . get_comment_link( $comment->comment_ID ) . "\" title=\"查看 " .$comment->post_title . "\">评：".$comment->post_title ."</a></li>";}
                 $output .= $post_HTML;
                 $output = convert_smilies($output);
                 echo $output;
@@ -157,43 +149,6 @@
     </div>
 </div>
 <!-- 评论模块end -->
-
-<!-- 友情链接start -->
-<?php if (get_option('weipxiu_options')['friendlinks'] != 'on'){ ?>
-    <?php
-        if (is_home()) {
-            ?>
-                <div class="widget friendship">
-                  <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
-                    <div class="daily-list">
-                        <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
-                        </p>
-                        <ul class="friendsChain">
-                            <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
-                        </ul>
-                    </div>
-                </div>
-            <?php
-        }
-    ?>
-<?php }else{?>
-    <div class="widget friendship">
-      <h3 class="widget-title"><a href="javascript:()"><i class="iconfont icon-pengyouwang"></i>友情链接</a></h3>
-      <!-- 获取邮箱用户地址 -->
-      <!-- <?php
-        $current_user = get_currentuserinfo();
-        echo $current_user->user_email;
-      ?> -->
-      <div class="daily-list">
-          <p>他们同样是一群网虫，却不是每天泡在网上游走在淘宝和网游之间、刷着本来就快要透支的信用卡。他们或许没有踏出国门一步，但同学却不局限在一国一校，而是遍及全球！<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=<?php echo get_option('weipxiu_options')['QQ-number'];?>@qq.com" target="_blank">申请交换友链</a>
-          </p>
-          <ul class="friendsChain">
-              <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
-          </ul>
-      </div>
-    </div>
-<?php }?>
-<!-- 友情链接end -->
 
 <!-- 网站统计start -->
 <?php

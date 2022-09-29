@@ -6,11 +6,32 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5657520",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "8826772",
+      "name": "时间",
+      "font_class": "shijian1",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    },
+    {
       "icon_id": "5168535",
       "name": "作者",
       "font_class": "zuozhe2",
       "unicode": "e6b3",
       "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "29920323",
+      "name": "作者",
+      "font_class": "zuozhe_custom",
+      "unicode": "f21b",
+      "unicode_decimal": 61979
     },
     {
       "icon_id": "631375",
@@ -88,13 +109,6 @@
       "font_class": "shangcheng",
       "unicode": "e61f",
       "unicode_decimal": 58911
-    },
-    {
-      "icon_id": "4308465",
-      "name": "时间",
-      "font_class": "tubiaozhizuomoban",
-      "unicode": "e607",
-      "unicode_decimal": 58887
     },
     {
       "icon_id": "10060836",

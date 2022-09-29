@@ -91,8 +91,8 @@ padding-top: 3px;color: #585858;line-height: 34px;font-size: 14px;text-align:cen
         	<div class="box">
             	<div class="pic"></div>
                 <div class="ico"></div>
-                <div class="content text">好好学习</div>
-                <div class="reply text">好好学习，天天向上~~</div>
+                <div class="content text">time</div>
+                <div class="reply text">value</div>
             </div>
         </li>-->
     </ul>

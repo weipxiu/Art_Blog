@@ -345,12 +345,18 @@ add_filter( 'max_srcset_image_width', create_function('', 'return 1;'));
 add_filter( 'automatic_updater_disabled', '__return_true' );
 
 //禁用REST API功能代码
-add_filter('rest_enabled', '__return_false');
-add_filter('rest_jsonp_enabled', '__return_false');
-
+// add_filter('rest_enabled', '__return_false');
+// add_filter('rest_jsonp_enabled', '__return_false');
 //移除wp-json链接的代码
-remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+// remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+// remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+/*此外，对于 WP 4.7 以上版本，还有种通过rest_api_init这个钩子来禁用 REST API 的方法，禁用未登录的用户*/
+// add_filter( 'rest_api_init', 'lxtx_rest_only_for_authorized_users', 99 );
+// function lxtx_rest_only_for_authorized_users($wp_rest_server){
+//   if ( !is_user_logged_in() ) {
+//     wp_die('非法操作，用户未登录！');
+//   }
+// }
 
 // WordPress Emoji Delete
 remove_action( 'admin_print_scripts' , 'print_emoji_detection_script');
@@ -606,43 +612,43 @@ function wheatv_breadcrumbs() {
 //自定义表情路径和名称
 function custom_smilies_src($src, $img){return esc_url(get_template_directory_uri()).'/images/smilies/' . $img;}
 add_filter('smilies_src', 'custom_smilies_src', 10, 2);
-    if ( !isset( $wpsmiliestrans ) ) {
-        $wpsmiliestrans = array(
-        ':cy:' => 'cy.gif',
-        ':hanx:' => 'hanx.gif',
-        ':huaix:' => 'huaix.gif',
-        ':tx:' => 'tx.gif',
-        ':se:' => 'se.gif',
-        ':wx:' => 'wx.gif',
-        ':zk:' => 'zk.gif',
-        ':shui:' => 'shui.gif',
-        ':kuk:' => 'kuk.gif',
-        ':lh:' => 'lh.gif',
-        ':gz:' => 'gz.gif',
-        ':ku:' => 'ku.gif',
-        ':kel:' => 'kel.gif',
-        ':yiw:' => 'yiw.gif',
-        ':yun:' => 'yun.gif',
-        ':jy:' => 'jy.gif',
-        ':dy:' => 'dy.gif',
-        ':gg:' => 'gg.gif',
-        ':fn:' => 'fn.gif',
-        ':fendou:' => 'fendou.gif',
-        ':shuai:' => 'shuai.gif',
-        ':kl:' => 'kl.gif',
-        ':pj:' => 'pj.gif',
-        ':fan:' => 'fan.gif',
-        ':lw:' => 'lw.gif',
-        ':qiang:' => 'qiang.gif',
-        ':ruo:' => 'ruo.gif',
-        ':ws:' => 'ws.gif',
-        ':ok:' => 'ok.gif',
-        ':gy:' => 'gy.gif',
-        ':qt:' => 'qt.gif',
-        ':cj:' => 'cj.gif',
-        ':aini:' => 'aini.gif',
-        ':bu:' => 'bu.gif',
-    );
+if ( !isset( $wpsmiliestrans ) ) {
+    $wpsmiliestrans = array(
+    ':cy:' => 'cy.gif',
+    ':hanx:' => 'hanx.gif',
+    ':huaix:' => 'huaix.gif',
+    ':tx:' => 'tx.gif',
+    ':se:' => 'se.gif',
+    ':wx:' => 'wx.gif',
+    ':zk:' => 'zk.gif',
+    ':shui:' => 'shui.gif',
+    ':kuk:' => 'kuk.gif',
+    ':lh:' => 'lh.gif',
+    ':gz:' => 'gz.gif',
+    ':ku:' => 'ku.gif',
+    ':kel:' => 'kel.gif',
+    ':yiw:' => 'yiw.gif',
+    ':yun:' => 'yun.gif',
+    ':jy:' => 'jy.gif',
+    ':dy:' => 'dy.gif',
+    ':gg:' => 'gg.gif',
+    ':fn:' => 'fn.gif',
+    ':fendou:' => 'fendou.gif',
+    ':shuai:' => 'shuai.gif',
+    ':kl:' => 'kl.gif',
+    ':pj:' => 'pj.gif',
+    ':fan:' => 'fan.gif',
+    ':lw:' => 'lw.gif',
+    ':qiang:' => 'qiang.gif',
+    ':ruo:' => 'ruo.gif',
+    ':ws:' => 'ws.gif',
+    ':ok:' => 'ok.gif',
+    ':gy:' => 'gy.gif',
+    ':qt:' => 'qt.gif',
+    ':cj:' => 'cj.gif',
+    ':aini:' => 'aini.gif',
+    ':bu:' => 'bu.gif',
+  );
 }
 
 //评论 VIP 标志
@@ -798,7 +804,7 @@ function dedewp_comment_add_at($comment_text, $comment = '') {
 add_filter('get_comment_text', 'dedewp_comment_add_at', 20, 2);
 function simple_comment($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
-    <li class="comment" id="li-comment-<?php
+    <li class="comment" id="comment-<?php
     comment_ID(); ?>">
         <div class="media">
             <div class="media-left">
@@ -831,6 +837,10 @@ function simple_comment($comment, $args, $depth) {
             </div>
         </div>
         <div class="comment-metadata">
+          <!-- 评论区地理位置 -->
+          <span class="comment-ipFrom">
+              <?php echo get_comment_author_ip(); ?>
+          </span>
             <span class="comment-pub-time">
                 <?php
                     echo get_comment_time('Y-m-d H:i'); ?>
@@ -890,4 +900,9 @@ function ludou_comment_mail_notify($comment_id, $comment_status) {
 
   // 普通访客发表的评论，等博主审核后再发送提醒邮件
   add_action('wp_set_comment_status', 'ludou_comment_mail_notify', 20, 2);
+
+  // 后台用户头像显示修复
+  function wpyou_get_ssl_avatar($avatar) {
+    $avatar = preg_replace('/.*\/avatar\/(.*)\?s=([\d]+)&.*/','<img src="https://gravatar.loli.net/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2">',$avatar);    return $avatar;}
+  add_filter('get_avatar', 'wpyou_get_ssl_avatar');
 ?>

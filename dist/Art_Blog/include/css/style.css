@@ -1,7 +1,30 @@
 body {
   background: #fff;
+  height: 100vh;
+  overflow: hidden;
 }
-
+form {
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+form::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f1f1ef;
+}
+form::-webkit-scrollbar-track {
+  background-color: #f1f1ef;
+}
+form::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.submit-btn {
+  position: fixed;
+  bottom: 0px;
+  left: calc(50% + 75px);
+  transform: translate(-50%, -50%);
+}
 .fl {
   float: left;
 }
@@ -89,8 +112,6 @@ textarea::-webkit-scrollbar-thumb {
   background: #67c23a;
 }
 
-/*  */
-
 .content-wrap {
   display: none;
 }
@@ -99,11 +120,12 @@ textarea::-webkit-scrollbar-thumb {
   display: block;
 }
 
-.row {
-  padding-bottom: 5px;
-  /* border-bottom: 1px dashed #ccc; */
+.content-wrap > .row {
+  padding: 10px 0;
   line-height: 26px;
-  margin: 5px 0;
+  margin: 0 0 -1px;
+  border: 1px solid #eee;
+  border-bottom: none;
 }
 
 .row .left-wrap {
@@ -157,12 +179,13 @@ input[type='radio'] {
   margin-top: 0;
 }
 
-.border_none {
-  border-bottom: none;
+input[type='radio'] {
+  margin-right: 10px;
 }
 
-input[type='radio'] {
-  margin-right: 7px;
+.content-wrap > .border_none {
+  border-bottom: none;
+  border-top: none;
 }
 
 .row input[name='img-upload'] {

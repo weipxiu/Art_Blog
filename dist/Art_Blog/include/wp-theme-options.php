@@ -2,7 +2,7 @@
 function themeoptions_admin_menu() {
   // 在控制面板的侧边栏添加设置选项页链接
   // add_theme_page(添加到外观下) add_menu_page(添加到主菜单下)
-	add_menu_page('唯品秀主题配置', '唯品秀主题配置','edit_themes', basename(__FILE__), 'themeoptions_page', '',80);
+	add_menu_page('主题配置', '主题配置','edit_themes', basename(__FILE__), 'themeoptions_page', '',81);
 }
 if ( isset($_POST['update_themeoptions']) && $_POST['update_themeoptions'] == 'true' ) themeoptions_update();
 function themeoptions_page() {
@@ -16,7 +16,7 @@ function themeoptions_page() {
 ?>
   <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/include/css/style.css">
   <div class="wrap">
-    <h2>唯品秀主题设置</h2>
+    <h2>Art_Blog主题设置</h2>
     <ul class="nav-wrap clearfix">
       <li class="nav-list on">基础</li>
       <li class="nav-list">SEO</li>
@@ -77,6 +77,75 @@ function themeoptions_page() {
           </div>
         </div>
 
+        <div class="row clearfix" id='snow'>
+          <label class="fl left-wrap">天气背景特效：</label>
+          <div class="fr right-wrap">
+            <label for="snow-flake_on">开</label>
+            <input
+              type="radio"
+              id="snow-flake_on"
+              name="snow-flake"
+              value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
+            >
+            <label for="snow-flake_off">关</label>
+            <input
+              type="radio"
+              id="snow-flake_off"
+              name="snow-flake"
+              value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
+            >
+            <span class="warn">*  特效越是惊艳对网站及设备自身性能越有明显消耗</span>
+          </div>
+        </div>
+
+        <div class="row clearfix snow-flake_show border_none" style="display:none">
+          <label class="fl left-wrap">选择天气状况：</label>
+          <div class="fr right-wrap">
+            <label for="snow_size_1">小雪</label>
+            <input
+              type="radio"
+              id="snow_size_1"
+              name="snow_size"
+              value="1" <?php if($a_options['snow_size'] == '1') echo 'checked'; ?>
+            >
+            <label for="snow_size_2">中雪</label>
+            <input
+              type="radio"
+              id="snow_size_2"
+              name="snow_size"
+              value="2" <?php if($a_options['snow_size'] == '2') echo 'checked';?>
+            >
+            <label for="snow_size_3">大雪</label>
+            <input
+              type="radio"
+              id="snow_size_3"
+              name="snow_size"
+              value="3" <?php if($a_options['snow_size'] == '3') echo 'checked';?>
+            >
+            <label for="snow_size_4">雨夹雪</label>
+            <input
+              type="radio"
+              id="snow_size_4"
+              name="snow_size"
+              value="4" <?php if($a_options['snow_size'] == '4') echo 'checked';?>
+            >
+            <label for="snow_size_5">雷/雨</label>
+            <input
+              type="radio"
+              id="snow_size_5"
+              name="snow_size"
+              value="5" <?php if($a_options['snow_size'] == '5') echo 'checked';?>
+            >
+            <label for="snow_size_6">实时</label>
+            <input
+              type="radio"
+              id="snow_size_6"
+              name="snow_size"
+              value="6" <?php if($a_options['snow_size'] == '6' || $a_options['snow_size'] == '') echo 'checked';?>
+            >
+          </div>
+        </div>
+
         <div class="row clearfix">
           <label class="fl left-wrap">登录注册入口：</label>
           <div class="fr right-wrap">
@@ -94,7 +163,7 @@ function themeoptions_page() {
               name="logo-flake"
               value="off" <?php if($a_options['login_reg'] == 'off' || $a_options['login_reg'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
+            <span class="warn">* 非登陆状态下，移动端侧边栏展示，PC仅首页展示</span>
           </div>
         </div>
         <div class="row clearfix reg_flake_show" style="display:none">
@@ -127,28 +196,7 @@ function themeoptions_page() {
               name="switch_https"
               value="off" <?php if($a_options['switch_https'] == 'off' || $a_options['switch_https'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*所有资源强制以https方式加载，确保网站支持https</span>
-          </div>
-        </div>
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">雪花背景特效：</label>
-          <div class="fr right-wrap">
-            <label for="snow-flake_on">开</label>
-            <input
-              type="radio"
-              id="snow-flake_on"
-              name="snow-flake"
-              value="on" <?php if($a_options['snowflake'] == 'on') echo 'checked'; ?>
-            >
-            <label for="snow-flake_off">关</label>
-            <input
-              type="radio"
-              id="snow-flake_off"
-              name="snow-flake"
-              value="off" <?php if($a_options['snowflake'] == 'off' || $a_options['snowflake'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*它是通过CSS3模拟的雪花动画，对性能消耗并不大</span>
+            <span class="warn">* 所有资源强制以https方式加载, 确保网站支持https</span>
           </div>
         </div>
 
@@ -169,7 +217,7 @@ function themeoptions_page() {
               name="aside-count"
               value="off" <?php if($a_options['aside_count'] == 'off' || $a_options['aside_count'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*倘若涉及到网站一些敏感数据问题，可不必理会它</span>
+            <span class="warn">* 倘若涉及到网站一些敏感数据问题，可不必理会它</span>
           </div>
         </div>
 
@@ -190,29 +238,7 @@ function themeoptions_page() {
               name="mourning"
               value="off" <?php if(($a_options['mourning'] == 'off' || $a_options['mourning'] == '') &&  (date("m/d") != '12/13') ) echo 'checked'; ?>
             >
-            <span class="warn">*国家公祭日（12月13）自动开启，其它时间需手动</span>
-          </div>
-        </div>
-
-
-        <div class="row clearfix">
-          <label class="fl left-wrap">全局友情链接：</label>
-          <div class="fr right-wrap">
-            <label for="friendlinks_on">开</label>
-            <input
-              type="radio"
-              id="friendlinks_on"
-              name="friend-links"
-              value="on" <?php if($a_options['friendlinks'] == 'on') echo 'checked'; ?>
-            >
-            <label for="friendlinks_off">关</label>
-            <input
-              type="radio"
-              id="friendlinks_off"
-              name="friend-links"
-              value="off" <?php if($a_options['friendlinks'] == 'off' || $a_options['friendlinks'] == '') echo 'checked'; ?>
-            >
-            <span class="warn">*默认仅首页展示友情链接，开启后所有页面皆展示</span>
+            <span class="warn">* 国家公祭日（12月13）自动开启，其它时间需手动</span>
           </div>
         </div>
 
@@ -233,7 +259,7 @@ function themeoptions_page() {
               name="text-pic"
               value="off" <?php if($a_options['text_pic'] == 'off' || $a_options['text_pic'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*开启之前必须已安装WP Easy Post Mailer插件；部分网站无法发送邮件还需要借助wp-mail-smtp插件</span>
+            <span class="warn">* 开启之前必须已安装WP Easy Post Mailer插件；部分网站无法发送邮件还需要借助wp-mail-smtp插件</span>
           </div>
         </div>
 
@@ -249,7 +275,7 @@ function themeoptions_page() {
                 placeholder="请输入主题颜色值"
               >
               <input type="color" name="color" id="colorPicker" value="<?php if ($a_options['replace_skin']) {echo $a_options['replace_skin'];} else {echo "#1890ff";}?>">
-            <span class="warn">*可输入任意颜色格式，例如：#ed145b、red、rgba(0,0,0,.5)，默认或低端浏览器不支持情况下展示颜色值：#1890ff（Daybreak Blue / 拂晓蓝）</span>
+            <span class="warn">* 可输入任意颜色格式，例如：#ed145b、red、rgba(0,0,0,.5)，默认或低端浏览器不支持情况下展示颜色值：#1890ff（Daybreak Blue / 拂晓蓝）</span>
           </div>
         </div>
 
@@ -275,7 +301,7 @@ function themeoptions_page() {
           </div>
         </div>
 
-        <div class="row clearfix row_content border_none" style="display:none">
+        <div class="row clearfix video_show border_none" style="display:none">
           <div class="row clearfix border_none" >
             <label for="video-url" class="fl left-wrap">视频播放地址：</label>
             <div class="fixed-wrap fr right-wrap">
@@ -286,7 +312,7 @@ function themeoptions_page() {
                 id="video-url"
                 value="<?php echo $a_options['video_url']; ?>"
               >
-              <span class="warn">*请写入.mp4视频文件地址</span>
+              <span class="warn">* 请写入.mp4视频文件地址</span>
             </div>
           </div>
 
@@ -320,14 +346,14 @@ function themeoptions_page() {
           <label for="key-word" class="fl left-wrap">Logo旁关键词：</label>
           <div class="fr right-wrap">
             <textarea id="key-word" name="key-word" rows="3" cols="100" placeholder="例如：&#10;&lt;p&gt;关注前端开发&lt;/p&gt;&#10;&lt;p&gt;Html5、Vue、Node、Koa&lt;/p&gt;"><?php echo $a_options['key_word']; ?></textarea>
-            <span class="warn">*展示在PC端logo右侧的关键词、座右铭或经典语录</span>
+            <span class="warn">* 展示在PC端logo右侧的关键词、座右铭或经典语录</span>
           </div>
         </div>
 
         <div class="row clearfix">
           <label for="sidebar-notice" class="fl left-wrap">桌面侧边公告：</label>
           <div class="fr right-wrap">
-            <textarea id="sidebar-notice" name="sidebar-notice" rows="3" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
+            <textarea id="sidebar-notice" name="sidebar-notice" rows="5" cols="100"><?php echo $a_options['sidebar_notice']; ?></textarea>
           </div>
         </div>
 
@@ -335,7 +361,7 @@ function themeoptions_page() {
           <label for="copyright-notice" class="fl left-wrap">文章版权申明：</label>
           <div class="fr right-wrap">
             <textarea id="copyright-notice" name="copyright-notice" rows="3" cols="100" placeholder="例如：本站所有文章、图片、资源等如无特殊说明或标注，均为来自互联网或者站长原创；版权归原作者所有，仅作为个人学习、研究以及欣赏！如若本站内容侵犯了原著者的合法权益，可联系我们进行处理"><?php echo $a_options['copyright_notice']; ?></textarea>
-            <span class="warn">*文章详情页底部版权申明</span>
+            <span class="warn">* 文章详情页底部版权申明</span>
           </div>
         </div>
 
@@ -358,7 +384,7 @@ function themeoptions_page() {
               name="popular"
               value="off" <?php if($a_options['popular'] == 'off' || $a_options['popular'] == '') echo 'checked'; ?>
             >
-            <span class="warn">*默认获取文章标签，开启后可自定义内容，以便于你更好的维护自己收藏的工具链接（支持24个，超出隐藏）</span>
+            <span class="warn">* 默认获取文章标签，开启后可自定义内容，以便于你更好的维护自己收藏的工具链接（支持24个，超出隐藏）</span>
           </div>
         </div>
 
@@ -392,9 +418,9 @@ function themeoptions_page() {
           </div>
         </div>
         <div class="row clearfix">
-          <label for="baidu-statistics" class="fl left-wrap">百度统计代码：</label>
+          <label for="baidu-statistics" class="fl left-wrap">网站统计代码：</label>
           <div class="fr right-wrap">
-            <textarea id="baidu-statistics" name="baidu-statistics" rows="10" cols="100" placeholder="用于分析网站流量"><?php echo $a_options['baidu_statistics'] ?></textarea>
+            <textarea id="baidu-statistics" name="baidu-statistics" rows="10" cols="100" placeholder="用于分析网站流量，例如——百度统计"><?php echo $a_options['baidu_statistics'] ?></textarea>
           </div>
         </div>
       </div>
@@ -650,7 +676,7 @@ function themeoptions_page() {
           <label for="leaving-message" class="fl left-wrap">留言板寄语：</label>
           <div class="fr right-wrap">
             <textarea id="leaving-message" name="leaving-message" rows="5" cols="100" placeholder="例如：&#10;&lt;p&gt;留言板寄语&lt;/p&gt;"><?php echo $a_options['leaving_message'] ?></textarea>
-            <span class="warn">*想要启用“留言板”页面，需要在后台 > 页面 > 新建页面，指定该页面模板为"给我留言"，最后添加到菜单即可。
+            <span class="warn">* 想要启用“留言板”页面，需要在后台 > 页面 > 新建页面，指定该页面模板为"给我留言"，最后添加到菜单即可。
             </span>
           </div>
         </div>
@@ -662,14 +688,14 @@ function themeoptions_page() {
           <label for="details-css" class="fl left-wrap">前台页面样式：</label>
           <div class="fr right-wrap">
             <textarea id="details-css" name="details-css" rows="8" cols="100"><?php echo $a_options['details_css'] ?></textarea>
-            <span class="warn">*无需style标签，支持媒体查询，个别样式无法覆盖情况下可以加!important权重，仅供熟悉css用户使用，不懂的请忽略</span>
+            <span class="warn">* 无需style标签，支持媒体查询，个别样式无法覆盖情况下可以加!important权重，仅供熟悉css用户使用，不懂的请忽略</span>
           </div>
         </div>
         <div class="row clearfix">
           <label for="login-css" class="fl left-wrap">登录注册样式：</label>
           <div class="fr right-wrap">
             <textarea id="login-css" name="login-css" rows="8" cols="100"><?php echo $a_options['login_css'] ?></textarea>
-            <span class="warn">*无需style标签，支持媒体查询，个别样式无法覆盖情况下可以加!important权重，仅供熟悉css用户使用，不懂的请忽略</span>
+            <span class="warn">* 无需style标签，支持媒体查询，个别样式无法覆盖情况下可以加!important权重，仅供熟悉css用户使用，不懂的请忽略</span>
           </div>
         </div>
       </div>
@@ -704,7 +730,7 @@ function themeoptions_page() {
           <label for="time-machine" class="fl left-wrap">数据：</label>
           <div class="fr right-wrap">
             <textarea id="time-machine" name="time-machine" rows="20" cols="100" placeholder="例如：&#10;[&#10;{time: '时间1', text:'文案1'},&#10;{time: '时间2', text:'文案2'},&#10;]"><?php echo $a_options['time_machine'] ?></textarea>
-            <span class="warn">*想要启用“时光机”页面，需要在后台 > 页面 > 新建页面，指定该页面模板为"时光机"，最后添加到菜单即可。可记录网站历程，又或当作说说、朋友圈记录生活琐碎。
+            <span class="warn">* 想要启用“时光机”页面，需要在后台 > 页面 > 新建页面，指定该页面模板为"时光机"，最后添加到菜单即可。可记录网站历程，又或当作说说、朋友圈记录生活琐碎。
             </span>
           </div>
         </div>
@@ -728,7 +754,7 @@ function themeoptions_page() {
       'popular' => $_POST['popular'],
       'login_reg' => $_POST['logo-flake'],
       'snowflake' => $_POST['snow-flake'],
-      'friendlinks' => $_POST['friend-links'],
+      'snow_size' => $_POST['snow_size'],
       'aside_count' => $_POST['aside-count'],
       'switch_https' => $_POST['switch_https'],
       'tips_sentence' => $_POST['tips_sentence'],

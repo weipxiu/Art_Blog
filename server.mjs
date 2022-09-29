@@ -22,7 +22,8 @@ app.use(
     '/api',
     createProxyMiddleware({
         target: 'https://www.weipxiu.com/', //代理域名或ip
-        changeOrigin: true,
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        changeOrigin: true, // 
         logLevel: 'debug', // node终端可以查看转发过程
         pathRewrite: {
             '^/api': '',

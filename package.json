@@ -6,16 +6,22 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=\"development\" PORT=\"3001\" STATIC_DIR=\"static\" node server.mjs",
     "build": "cross-env NODE_ENV=production gulp",
-    "pre": "cross-env NODE_ENV=preproduction gulp",
+    "pre": "cross-env NODE_ENV=prediction gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "cross-env NODE_ENV=development node --inspect-brk ./gulpfile.js",
-    "lint": "eslint \"src/js/main.js\" --fix --cache --cache-location \"./node_modules/.cache/.eslintcache\""
+    "lint:js": "eslint --ext \".js,.vue,.jsx,.tsx\" src --cache --cache-location \"./node_modules/.cache/.eslintcache\"",
+    "lint:css": "npx stylelint \"src/**/*.{html,css,less,sass,scss,vue}\" --cache --cache-location ./node_modules/.cache/.stylelintcache --rd",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:fix": "npm run lint:js -- --fix & npm run lint:css -- --fix",
+    "prepare": "husky install"
   },
   "author": "唯品秀前端个人博客",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "ansi-styles": "^3.2.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -25,12 +31,14 @@
     "color-convert": "^1.9.3",
     "color-name": "^1.1.4",
     "cross-env": "^5.2.0",
+    "del": "^6.1.1",
     "escape-string-regexp": "^1.0.5",
     "eslint": "^8.17.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
@@ -40,23 +48,30 @@
     "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
     "gulp-zip": "^5.0.2",
-    "md5": "^2.2.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "orchestrator": "^0.3.8",
-    "run-sequence": "^2.2.1"
+    "os": "^0.1.2",
+    "postcss-html": "^1.5.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-order": "^5.0.0"
   },
   "dependencies": {
     "browserslist": "^4.12.0",
-    "caniuse-lite": "^1.0.30001287",
+    "caniuse-lite": "^1.0.30001387",
     "chalk": "^5.0.1",
     "connect-livereload": "^0.6.1",
-    "del": "^6.0.0",
     "express": "^4.18.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-plumber": "^1.2.1",
     "http-proxy-middleware": "^2.0.6",
     "internal-ip": "^7.0.0",
-    "livereload": "^0.9.3"
+    "livereload": "^0.9.3",
+    "qiankun": "^2.7.5"
   },
   "engines": {
     "node": ">=12.0",
@@ -65,5 +80,13 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "lint-staged": {
+    "src/**/*.{js,vue,jsx,ts,tsx}": [
+      "npm run lint:js -- --fix"
+    ],
+    "src/**/*.{css,less,scss,html}": [
+      "npm run lint:css -- --fix"
+    ]
+  }
 }

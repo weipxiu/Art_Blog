@@ -73,8 +73,7 @@ var clear = function (href) {
             read: false //设置参数read:false可以阻止访问文件,加快删除速度
         })
             .pipe(clean({
-                force: true,
-                dryRun: true
+                force: true
             }));
     })
 }
@@ -121,7 +120,7 @@ gulp.task("minCss", function () {
 
 // 多端压缩合并css
 gulp.task("mergeCss", function () {
-    return gulp.src(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"])
+    return gulp.src(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css"])
         .pipe(concat("style_min.css"))
         .pipe(gulp_minify_css({
             advanced: false,
@@ -175,7 +174,7 @@ gulp.task("jsCopy", function () {
 //安装 npm i gulp-concat --save-dev
 gulp.task("jsConcat", function () {
     //公共
-    return gulp.src(["src/js/main.js", "src/js/ajax_wordpress.js"])
+    return gulp.src(["src/js/main.js", "src/js/ajax_load.js"])
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/preset-env']
@@ -204,7 +203,7 @@ gulp.task('compressZip', function () {
 //监听文件是否发生改变
 gulp.task("Watch", function () {
     gulp.watch(["src/css/codecolorer.css", "src/css/swiper.min.css", "src/css/login.css"], ['minCss']);
-    gulp.watch(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css", "src/css/video-js.css"], ['mergeCss']);
+    gulp.watch(["src/css/main.css", "src/css/style-pc.css", "src/css/style-ios.css", "src/css/style-ipd.css"], ['mergeCss']);
     gulp.watch(["./src/*.php"], ['minPhp']);
     gulp.watch(['./src/**/**.js'], ['jsConcat']);
     gulp.watch(["./src/**", "!src/*.html", "!/src/js/*", "!/src/**.css"], ["copyHtml"]);

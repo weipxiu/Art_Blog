@@ -1,1 +1,17 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta http-equiv="x-dns-prefetch-control" content="on"><title>唯品秀个人博客</title><style>p{text-align:center;font-size:20px;line-height:200px}</style></head><body><p>欢迎访问，当前为引导页！！！!</p></body></html>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta http-equiv="x-dns-prefetch-control" content="on"><title>唯品秀个人博客</title><style>p{font-size:20px;line-height:200px;text-align:center}</style></head><body><p>欢迎访问，当前为引导页！！！</p></body><script src="./js/lib/jquery-2.1.4.min.js"></script><script>$.getJSON('https://www.tianqiapi.com/api/?version=v9&appid=23035354&appsecret=8YvlPNrz', function (result) {
+    // 天气接口wea_img状态值：xue、lei、shachen、wu、bingbao、yun、yu、yin、qing
+    // wea返回值：https://yikeapi.com/help/wea
+    let dataType = 100; // 默认晴空万里
+    let h = new Date().getHours();
+    h = h < 10 ? '0' + h + '时' : h == '24' ? '00' + '时' : h + '时';
+    console.log('时钟', h, result.data[0].hours)
+    let d = result.data[0].hours.filter(function (item) {
+      return item.hours == h
+    })[0];
+    dataType = /xue$/.test(d.wea_img) ? 4 : /(yu|lei|bingbao)$/.test(d.wea_img) ? 5 : 100
+    if (/雷阵雨/.test(d.wea)) {
+      dataType += 'lei'
+    }
+    console.log('dataType', dataType)
+
+  })</script></html>

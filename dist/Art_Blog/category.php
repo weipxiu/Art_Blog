@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="zh-CN" >
 
 <head>
 	<title>
@@ -34,7 +34,7 @@
                 </a>
               </div>
               <div class="text_right">
-                <h2>
+                <h2 class="<?php if (is_sticky()) echo 'topping' ?>">
                   <span>
                     <?php the_category() ?><i></i></span>
                   <a href="<?php the_permalink(); ?>" target="<?php the_permalink(); ?>">

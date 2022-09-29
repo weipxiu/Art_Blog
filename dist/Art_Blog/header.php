@@ -123,6 +123,11 @@
 
 <!-- 网站换肤start -->
 <script type="text/javascript">
+  if (!!window.ActiveXObject || "ActiveXObject" in window) {
+    layer.msg('抱歉，当前浏览器比较Low，部分效果无法展示！', {
+      time: false // 2秒关闭（如果不配置，默认是3秒）
+    })
+  }
 	function getColor(){
 		<?php if (trim(get_option('weipxiu_options')['replace_skin'])){ ?>
 			document.documentElement.style.setProperty('--color-theme', '<?php echo trim(get_option('weipxiu_options')['replace_skin']); ?>')

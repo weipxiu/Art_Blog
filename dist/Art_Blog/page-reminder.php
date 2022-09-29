@@ -79,7 +79,7 @@ Template Name: 升级浏览器
 		<a href="https://www.opera.com/zh-cn" target="_blank"><img alt="safari"
 				src="<?php echo esc_url(get_template_directory_uri()); ?>/images/opera.png"></a>
 	</p>
-	<h4>Copyright © 2016-2020 <a href="/">WEIPXIU.COM</a> · 版权所有</h4>
+	<h4>Copyright © 2016-2022 <a href="/">WEIPXIU.COM</a> · 版权所有</h4>
 </body>
 
 </html>
